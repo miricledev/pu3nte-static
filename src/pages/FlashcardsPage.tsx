@@ -131,31 +131,33 @@ export function FlashcardsPage() {
   return (
     <PageContainer>
       <ActivityHeader {...deck} />
-      <div className="mb-4 grid gap-3 md:grid-cols-2">
+      <div className="mb-3 grid grid-cols-2 gap-2 sm:mb-4 sm:gap-3">
         <button
-          className={`rounded-xl border p-4 text-left transition ${mode === "flashcards" || mode === "review-complete" ? "border-pu3nte-cyan bg-pu3nte-cyan/10 shadow-glow" : "border-white/10 bg-white/[0.04] hover:bg-white/[0.08]"}`}
+          className={`rounded-xl border p-3 text-left transition sm:p-4 ${mode === "flashcards" || mode === "review-complete" ? "border-pu3nte-cyan bg-pu3nte-cyan/10 shadow-glow" : "border-white/10 bg-white/[0.04] hover:bg-white/[0.08]"}`}
           type="button"
           onClick={() => { setMode("flashcards"); setReviewOnlyMissed(false); setIndex(0); setFlipped(false); }}
         >
           <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-cyan">{copy.step} 1</p>
-          <p className="mt-1 text-xl font-black">{copy.reviewFlashcards}</p>
-          <p className="mt-1 text-sm text-pu3nte-secondary">{copy.reviewFlashcardsHelp}</p>
+          <p className="mt-1 text-base font-black sm:text-xl">{copy.reviewFlashcards}</p>
+          <p className="mt-1 hidden text-sm text-pu3nte-secondary sm:block">{copy.reviewFlashcardsHelp}</p>
         </button>
         <button
-          className={`rounded-xl border p-4 text-left transition ${mode === "learn" || mode === "results" ? "border-pu3nte-gold bg-pu3nte-gold/10 shadow-glow" : "border-white/10 bg-white/[0.04] hover:bg-white/[0.08]"}`}
+          className={`rounded-xl border p-3 text-left transition sm:p-4 ${mode === "learn" || mode === "results" ? "border-pu3nte-gold bg-pu3nte-gold/10 shadow-glow" : "border-white/10 bg-white/[0.04] hover:bg-white/[0.08]"}`}
           type="button"
           onClick={() => { setMode("learn"); setReviewOnlyMissed(false); setIndex(0); setFlipped(false); }}
         >
           <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-gold">{copy.step} 2</p>
-          <p className="mt-1 text-xl font-black">{copy.practiceRecall}</p>
-          <p className="mt-1 text-sm text-pu3nte-secondary">{copy.practiceRecallHelp}</p>
+          <p className="mt-1 text-base font-black sm:text-xl">{copy.practiceRecall}</p>
+          <p className="mt-1 hidden text-sm text-pu3nte-secondary sm:block">{copy.practiceRecallHelp}</p>
         </button>
       </div>
-      <InstructionPanel title={copy.instructions} body={copy.flashcardGuide} />
-      <div className="mt-4">
+      <div className="hidden sm:block">
+        <InstructionPanel title={copy.instructions} body={copy.flashcardGuide} />
+      </div>
+      <div className="mt-4 hidden sm:block">
         <ProgressBar value={progressValue} label={copy.deckMastery} />
       </div>
-      <div className="mt-6 grid gap-6 xl:grid-cols-[1fr_320px]">
+      <div className="mt-3 grid gap-4 sm:mt-6 sm:gap-6 xl:grid-cols-[1fr_320px]">
         <GlassCard>
           <div className="mb-4 flex justify-end"><CardStatusBadge status={cardProgress?.status} labels={copy} /></div>
           {mode === "flashcards" && (
@@ -263,6 +265,10 @@ export function FlashcardsPage() {
               </GradientButton>
             </div>
           )}
+          <details className="mt-4 rounded-lg border border-pu3nte-cyan/20 bg-pu3nte-cyan/10 p-3 sm:hidden">
+            <summary className="cursor-pointer text-sm font-black text-pu3nte-cyan">{copy.instructions}</summary>
+            <p className="mt-2 text-sm text-pu3nte-secondary">{copy.flashcardGuide}</p>
+          </details>
         </GlassCard>
         <StudySettingsPanel settings={settings} onChange={setSettings} hasStarred={deck.data.cards.some((item) => item.starred)} labels={copy} onReset={() => resetProgress()} />
       </div>
