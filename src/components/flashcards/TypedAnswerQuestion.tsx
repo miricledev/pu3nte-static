@@ -29,20 +29,25 @@ export function TypedAnswerQuestion({
     almostCheckPunctuation?: string;
     almostCheckAccents?: string;
     incorrectReviewAnswer?: string;
+    correctAnswer?: string;
+    next?: string;
   };
 }) {
   const [answer, setAnswer] = useState("");
   const [feedback, setFeedback] = useState("");
+  const [checkedResult, setCheckedResult] = useState<boolean | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const prompt = direction === "term-definition" ? card.term : card.definition;
   const correct = direction === "term-definition" ? card.definition : card.term;
 
   function submit() {
+    if (!answer.trim()) return;
     const result = compareAnswers(answer, correct, {
-      acceptedAnswers: card.acceptedAnswers,
+      acceptedAnswers: direction === "term-definition" ? card.acceptedAnswers : undefined,
       accentSensitive: accentMode,
       punctuationSensitive: punctuationMode,
     });
+    const accepted = result.isCorrect || result.isAlmostCorrect;
     setFeedback(
       result.isCorrect
         ? labels?.correct ?? result.feedbackMessage
@@ -52,7 +57,12 @@ export function TypedAnswerQuestion({
             ? labels?.almostCheckAccents ?? result.feedbackMessage
             : labels?.incorrectReviewAnswer ?? result.feedbackMessage,
     );
-    onResult(result.isCorrect || result.isAlmostCorrect);
+    setCheckedResult(accepted);
+  }
+
+  function revealDontKnow() {
+    setFeedback(labels?.incorrectReviewAnswer ?? "Incorrect. Review the correct answer and try it again later.");
+    setCheckedResult(false);
   }
 
   return (
@@ -67,14 +77,35 @@ export function TypedAnswerQuestion({
         value={answer}
         onChange={(event) => setAnswer(event.target.value)}
         onKeyDown={(event) => event.key === "Enter" && submit()}
+        disabled={checkedResult !== null}
       />
       <SpecialCharacterKeyboard characters={characters} inputRef={inputRef} onChange={setAnswer} />
       <div className="flex flex-wrap gap-3">
-        <GradientButton onClick={submit}>{labels?.check ?? "Check"}</GradientButton>
-        <GradientButton variant="ghost" onClick={() => onResult(true)}>{labels?.correctOverride ?? "I was correct"}</GradientButton>
-        <GradientButton variant="ghost" onClick={() => onResult(false)}>{labels?.dontKnow ?? "I don't know"}</GradientButton>
+        {checkedResult === null ? (
+          <>
+            <GradientButton onClick={submit} disabled={!answer.trim()}>{labels?.check ?? "Check"}</GradientButton>
+            <GradientButton variant="ghost" onClick={() => onResult(true)}>{labels?.correctOverride ?? "I was correct"}</GradientButton>
+            <GradientButton variant="ghost" onClick={revealDontKnow}>{labels?.dontKnow ?? "I don't know"}</GradientButton>
+          </>
+        ) : (
+          <GradientButton onClick={() => onResult(checkedResult)}>{labels?.next ?? "Next"}</GradientButton>
+        )}
       </div>
-      {feedback && <p className="rounded-md border border-white/10 bg-white/[0.04] p-3 text-sm text-pu3nte-secondary" aria-live="polite">{feedback}</p>}
+      {feedback && (
+        <div
+          className={`rounded-xl border p-4 ${
+            checkedResult ? "border-pu3nte-success/60 bg-pu3nte-success/10" : "border-pu3nte-error/60 bg-pu3nte-error/10"
+          }`}
+          aria-live="polite"
+        >
+          <p className={`text-lg font-black ${checkedResult ? "text-pu3nte-success" : "text-pu3nte-error"}`}>{feedback}</p>
+          {!checkedResult && (
+            <p className="mt-2 text-pu3nte-secondary">
+              {labels?.correctAnswer ?? "Correct answer"}: <span className="font-bold text-white">{correct}</span>
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 }

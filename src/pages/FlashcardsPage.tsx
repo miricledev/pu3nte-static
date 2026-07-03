@@ -209,8 +209,8 @@ export function FlashcardsPage() {
                 cards={cards}
                 direction={direction}
                 selected={selected}
-                labels={{ chooseMatch: copy.chooseMatch, correctAnswer: copy.correctAnswer }}
-                onAnswer={(answer, correct) => { setSelected(answer); setTimeout(() => markCard(correct), 500); }}
+                labels={{ chooseMatch: copy.chooseMatch, correctAnswer: copy.correctAnswer, correct: copy.correct, incorrect: copy.incorrect }}
+                onAnswer={(answer, correct) => { setSelected(answer); setTimeout(() => markCard(correct), 1800); }}
               />
             </div>
           )}
@@ -231,6 +231,8 @@ export function FlashcardsPage() {
                 almostCheckPunctuation: copy.almostCheckPunctuation,
                 almostCheckAccents: copy.almostCheckAccents,
                 incorrectReviewAnswer: copy.incorrectReviewAnswer,
+                correctAnswer: copy.correctAnswer,
+                next: copy.next,
               }}
               onResult={(correct) => markCard(correct, true)}
             />
