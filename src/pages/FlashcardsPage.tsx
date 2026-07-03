@@ -20,6 +20,14 @@ import { getProgress, markCompleted, markOpened, resetProgress, updateFlashcardP
 import { getUiLanguage, uiText } from "../utils/uiText";
 import { NotFoundPage } from "./NotFoundPage";
 
+type CardDirection = "term-definition" | "definition-term";
+
+function getCardDirection(direction: StudySettings["direction"], cardId: string, index: number): CardDirection {
+  if (direction !== "random") return direction;
+  const hash = Array.from(cardId).reduce((sum, character) => sum + character.charCodeAt(0), index);
+  return hash % 2 === 0 ? "term-definition" : "definition-term";
+}
+
 export function FlashcardsPage() {
   const { deckId } = useParams();
   const navigate = useNavigate();
@@ -79,7 +87,8 @@ export function FlashcardsPage() {
   const deckProgress = getProgress().flashcards[deck.id];
   const mastered = deckProgress?.cardsMastered ?? 0;
   const progressValue = Math.round((mastered / deck.data.cards.length) * 100);
-  const direction = settings.direction === "random" ? (Math.random() > 0.5 ? "term-definition" : "definition-term") : settings.direction;
+  const direction = getCardDirection(settings.direction, card.id, index);
+  const isSpanishToEnglish = direction === "term-definition";
   const cardProgress = deckProgress?.cards[card.id];
   const useTyped = settings.typed && (!settings.multipleChoice || (cardProgress?.correctCount ?? 0) > 0);
   const activeCardCounter = copy.cardCounter
@@ -128,6 +137,14 @@ export function FlashcardsPage() {
     next();
   }
 
+  function updateSettings(nextSettings: StudySettings) {
+    setSettings(nextSettings);
+    setIndex(0);
+    setSelected(undefined);
+    setFlipped(false);
+    setReviewOnlyMissed(false);
+  }
+
   return (
     <PageContainer>
       <ActivityHeader {...deck} />
@@ -164,6 +181,7 @@ export function FlashcardsPage() {
             <Flashcard
               card={card}
               flipped={flipped}
+              direction={direction}
               onFlip={() => setFlipped((value) => !value)}
               onKnow={() => markCard(true)}
               onLearning={() => markCard(false)}
@@ -174,9 +192,10 @@ export function FlashcardsPage() {
                 stillLearning: copy.stillLearning,
                 know: copy.know,
                 shortcuts: copy.flashcardShortcuts,
-                flashcardReviewStepFront: copy.flashcardReviewStepFront,
-                flashcardReviewStepBack: copy.flashcardReviewStepBack,
+                flashcardReviewStepFront: isSpanishToEnglish ? copy.flashcardReviewStepFront : copy.flashcardReviewStepFrontReverse,
+                flashcardReviewStepBack: isSpanishToEnglish ? copy.flashcardReviewStepBack : copy.flashcardReviewStepBackReverse,
                 englishMeaning: copy.englishMeaning,
+                backSideLabel: isSpanishToEnglish ? copy.englishMeaning : copy.spanishTerm,
                 exampleInSpanish: copy.exampleInSpanish,
                 exampleInEnglish: copy.exampleInEnglish,
                 tapCardToFlip: copy.tapCardToFlip,
@@ -270,7 +289,7 @@ export function FlashcardsPage() {
             <p className="mt-2 text-sm text-pu3nte-secondary">{copy.flashcardGuide}</p>
           </details>
         </GlassCard>
-        <StudySettingsPanel settings={settings} onChange={setSettings} hasStarred={deck.data.cards.some((item) => item.starred)} labels={copy} onReset={() => resetProgress()} />
+        <StudySettingsPanel settings={settings} onChange={updateSettings} hasStarred={deck.data.cards.some((item) => item.starred)} labels={copy} onReset={() => resetProgress()} />
       </div>
     </PageContainer>
   );

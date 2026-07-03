@@ -6,6 +6,7 @@ import type { FlashcardItem } from "../../types";
 export function Flashcard({
   card,
   flipped,
+  direction,
   onFlip,
   onKnow,
   onLearning,
@@ -13,6 +14,7 @@ export function Flashcard({
 }: {
   card: FlashcardItem;
   flipped: boolean;
+  direction: "term-definition" | "definition-term";
   onFlip: () => void;
   onKnow: () => void;
   onLearning: () => void;
@@ -30,8 +32,12 @@ export function Flashcard({
     exampleInEnglish?: string;
     tapCardToFlip?: string;
     cardCounter?: string;
+    backSideLabel?: string;
   };
 }) {
+  const frontText = direction === "term-definition" ? card.term : card.definition;
+  const backText = direction === "term-definition" ? card.definition : card.term;
+
   return (
     <div className="space-y-4">
       <div className="rounded-lg border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-4">
@@ -71,10 +77,10 @@ export function Flashcard({
           <div className="w-full">
             {flipped && (
               <p className="mb-2 text-xs font-black uppercase tracking-[0.18em] text-pu3nte-gold">
-                {labels?.englishMeaning ?? "English meaning"}
+                {labels?.backSideLabel ?? labels?.englishMeaning ?? "English meaning"}
               </p>
             )}
-            <p className="text-4xl font-extrabold">{flipped ? card.definition : card.term}</p>
+            <p className="text-4xl font-extrabold">{flipped ? backText : frontText}</p>
             {flipped && card.exampleSentence && (
               <div className="mx-auto mt-5 grid max-w-2xl gap-3 text-left sm:grid-cols-2">
                 <div className="rounded-lg border border-white/10 bg-white/5 p-4">
