@@ -233,6 +233,9 @@ export function FlashcardsPage() {
                 incorrectReviewAnswer: copy.incorrectReviewAnswer,
                 correctAnswer: copy.correctAnswer,
                 next: copy.next,
+                typeCorrectToContinue: copy.typeCorrectToContinue,
+                correctionPracticePlaceholder: copy.correctionPracticePlaceholder,
+                correctionNotYet: copy.correctionNotYet,
               }}
               onResult={(correct) => markCard(correct, true)}
             />

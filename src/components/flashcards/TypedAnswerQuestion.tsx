@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { FlashcardItem } from "../../types";
 import { compareAnswers, type SensitivityMode } from "../../utils/answer";
 import { GradientButton } from "../ui/GradientButton";
@@ -31,14 +31,32 @@ export function TypedAnswerQuestion({
     incorrectReviewAnswer?: string;
     correctAnswer?: string;
     next?: string;
+    typeCorrectToContinue?: string;
+    correctionPracticePlaceholder?: string;
+    correctionNotYet?: string;
   };
 }) {
   const [answer, setAnswer] = useState("");
   const [feedback, setFeedback] = useState("");
   const [checkedResult, setCheckedResult] = useState<boolean | null>(null);
+  const [correctionAnswer, setCorrectionAnswer] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const correctionInputRef = useRef<HTMLInputElement>(null);
   const prompt = direction === "term-definition" ? card.term : card.definition;
   const correct = direction === "term-definition" ? card.definition : card.term;
+  const correctionComparison = compareAnswers(correctionAnswer, correct, {
+    accentSensitive: accentMode,
+    punctuationSensitive: punctuationMode,
+  });
+  const needsCorrectionPractice = checkedResult === false;
+  const correctionAccepted = !needsCorrectionPractice || correctionComparison.isCorrect || correctionComparison.isAlmostCorrect;
+
+  useEffect(() => {
+    setAnswer("");
+    setFeedback("");
+    setCheckedResult(null);
+    setCorrectionAnswer("");
+  }, [card.id, direction]);
 
   function submit() {
     if (!answer.trim()) return;
@@ -58,11 +76,14 @@ export function TypedAnswerQuestion({
             : labels?.incorrectReviewAnswer ?? result.feedbackMessage,
     );
     setCheckedResult(accepted);
+    if (accepted) setCorrectionAnswer("");
   }
 
   function revealDontKnow() {
     setFeedback(labels?.incorrectReviewAnswer ?? "Incorrect. Review the correct answer and try it again later.");
     setCheckedResult(false);
+    setCorrectionAnswer("");
+    requestAnimationFrame(() => correctionInputRef.current?.focus());
   }
 
   return (
@@ -88,7 +109,7 @@ export function TypedAnswerQuestion({
             <GradientButton variant="ghost" onClick={revealDontKnow}>{labels?.dontKnow ?? "I don't know"}</GradientButton>
           </>
         ) : (
-          <GradientButton onClick={() => onResult(checkedResult)}>{labels?.next ?? "Next"}</GradientButton>
+          <GradientButton onClick={() => onResult(checkedResult)} disabled={!correctionAccepted}>{labels?.next ?? "Next"}</GradientButton>
         )}
       </div>
       {feedback && (
@@ -100,9 +121,31 @@ export function TypedAnswerQuestion({
         >
           <p className={`text-lg font-black ${checkedResult ? "text-pu3nte-success" : "text-pu3nte-error"}`}>{feedback}</p>
           {!checkedResult && (
-            <p className="mt-2 text-pu3nte-secondary">
-              {labels?.correctAnswer ?? "Correct answer"}: <span className="font-bold text-white">{correct}</span>
-            </p>
+            <div className="mt-3 space-y-3">
+              <p className="text-pu3nte-secondary">
+                {labels?.correctAnswer ?? "Correct answer"}: <span className="font-bold text-white">{correct}</span>
+              </p>
+              <label className="block text-sm font-bold text-pu3nte-secondary" htmlFor="correction-answer">
+                {labels?.typeCorrectToContinue ?? "Type the correct answer once to unlock Next."}
+              </label>
+              <input
+                ref={correctionInputRef}
+                id="correction-answer"
+                className={`w-full rounded-lg border bg-white/[0.06] px-4 py-3 text-lg text-pu3nte-text ${
+                  correctionAnswer && !correctionAccepted ? "border-pu3nte-error" : "border-white/10"
+                }`}
+                value={correctionAnswer}
+                onChange={(event) => setCorrectionAnswer(event.target.value)}
+                onKeyDown={(event) => event.key === "Enter" && correctionAccepted && onResult(false)}
+                placeholder={labels?.correctionPracticePlaceholder ?? "Type the correct answer here..."}
+              />
+              <SpecialCharacterKeyboard characters={characters} inputRef={correctionInputRef} onChange={setCorrectionAnswer} />
+              {correctionAnswer && !correctionAccepted && (
+                <p className="text-sm font-semibold text-pu3nte-error">
+                  {labels?.correctionNotYet ?? "Not yet — copy the correct answer exactly, then press Next."}
+                </p>
+              )}
+            </div>
           )}
         </div>
       )}
