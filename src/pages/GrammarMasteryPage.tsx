@@ -72,6 +72,7 @@ export function GrammarMasteryPage() {
   const copy = uiText(getUiLanguage(lesson.languageTarget, lesson.learnerNativeLanguage));
   const currentSection = sections[sectionIndex];
   const currentItem = currentSection.items[itemIndex];
+  const showTargetPrompt = Boolean(currentItem.targetLanguagePrompt && (feedback || currentSection.type !== "error-correction"));
   const totalItems = sections.reduce((sum, section) => sum + section.items.length, 0);
   const answeredItems = sections.slice(0, sectionIndex).reduce((sum, section) => sum + section.items.length, 0) + itemIndex;
   const progressValue = stage === "results" ? 100 : Math.round((answeredItems / Math.max(1, totalItems)) * 100);
@@ -247,7 +248,7 @@ export function GrammarMasteryPage() {
                   </div>
                 )}
                 <h3 className="text-xl font-bold">{currentItem.prompt}</h3>
-                {(currentItem.nativeLanguagePrompt || currentItem.targetLanguagePrompt) && (
+                {(currentItem.nativeLanguagePrompt || showTargetPrompt) && (
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
                     {currentItem.nativeLanguagePrompt && (
                       <div className="rounded-md border border-pu3nte-gold/25 bg-pu3nte-gold/10 p-3">
@@ -255,7 +256,7 @@ export function GrammarMasteryPage() {
                         <p className="mt-1 font-semibold text-pu3nte-text">{currentItem.nativeLanguagePrompt}</p>
                       </div>
                     )}
-                    {currentItem.targetLanguagePrompt && (
+                    {showTargetPrompt && (
                       <div className="rounded-md border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-3">
                         <p className="text-xs font-bold uppercase tracking-[0.16em] text-pu3nte-cyan">{copy.targetPrompt}</p>
                         <p className="mt-1 font-semibold text-pu3nte-text">{currentItem.targetLanguagePrompt}</p>
