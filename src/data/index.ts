@@ -5,6 +5,7 @@ import { demoStories } from "./demo/demoStories";
 import { demoQuizzes } from "./demo/demoQuizzes";
 import { demoReadings } from "./demo/demoReadings";
 import { demoGrammarLessons } from "./demo/demoGrammar";
+import { spanishGrammarLesson1MasculineFeminine } from "./grammar/spanishGrammarLesson1MasculineFeminine";
 import type { ActivityType } from "../types";
 
 export const flashcardDecks = [...demoFlashcardDecks];
@@ -13,7 +14,7 @@ export const verbTrainerSets = [...demoVerbSets];
 export const whatsappStories = [...demoStories];
 export const checkpointQuizzes = [...demoQuizzes];
 export const readingComprehensions = [...demoReadings];
-export const grammarMasteryLessons = [...demoGrammarLessons];
+export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];
 
 export const allActivities = [
   ...flashcardDecks,
