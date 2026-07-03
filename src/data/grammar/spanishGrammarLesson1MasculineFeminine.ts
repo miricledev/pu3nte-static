@@ -123,6 +123,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-el-la-1",
             prompt: "Choose the correct article: ___ libro",
+            nativeLanguagePrompt: "the book",
+            targetLanguagePrompt: "___ libro",
             options: ["el", "la"],
             correctOption: "el",
             explanation: "Libro ends in -o, so it is masculine: el libro.",
@@ -132,6 +134,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-el-la-2",
             prompt: "Choose the correct article: ___ casa",
+            nativeLanguagePrompt: "the house",
+            targetLanguagePrompt: "___ casa",
             options: ["el", "la"],
             correctOption: "la",
             explanation: "Casa ends in -a, so it is feminine: la casa.",
@@ -141,6 +145,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-el-la-3",
             prompt: "Choose the correct article: ___ curso",
+            nativeLanguagePrompt: "the course",
+            targetLanguagePrompt: "___ curso",
             options: ["el", "la"],
             correctOption: "el",
             explanation: "Curso ends in -o, so it is masculine: el curso.",
@@ -150,6 +156,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-el-la-4",
             prompt: "Choose the correct article: ___ mesa",
+            nativeLanguagePrompt: "the table",
+            targetLanguagePrompt: "___ mesa",
             options: ["el", "la"],
             correctOption: "la",
             explanation: "Mesa ends in -a, so it is feminine: la mesa.",
@@ -159,6 +167,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-el-la-5",
             prompt: "Choose the correct article: ___ café",
+            nativeLanguagePrompt: "the coffee",
+            targetLanguagePrompt: "___ café",
             options: ["el", "la"],
             correctOption: "el",
             explanation: "Café does not end in -o, but it is masculine: el café. Learn it with el.",
@@ -168,6 +178,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-el-la-6",
             prompt: "Choose the correct article: ___ clase",
+            nativeLanguagePrompt: "the class",
+            targetLanguagePrompt: "___ clase",
             options: ["el", "la"],
             correctOption: "la",
             explanation: "Clase is feminine: la clase. Learn it with la.",
@@ -177,6 +189,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-el-la-7",
             prompt: "Choose the correct article: ___ problema",
+            nativeLanguagePrompt: "the problem",
+            targetLanguagePrompt: "___ problema",
             options: ["el", "la"],
             correctOption: "el",
             explanation: "Problema ends in -a, but it is masculine because many Greek-origin -ma words are masculine: el problema.",
@@ -195,6 +209,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-un-una-1",
             prompt: "Choose the correct article: ___ amigo",
+            nativeLanguagePrompt: "a male friend",
+            targetLanguagePrompt: "___ amigo",
             options: ["un", "una"],
             correctOption: "un",
             explanation: "Amigo is masculine, so we say un amigo.",
@@ -204,6 +220,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-un-una-2",
             prompt: "Choose the correct article: ___ amiga",
+            nativeLanguagePrompt: "a female friend",
+            targetLanguagePrompt: "___ amiga",
             options: ["un", "una"],
             correctOption: "una",
             explanation: "Amiga is feminine, so we say una amiga.",
@@ -213,6 +231,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-un-una-3",
             prompt: "Choose the correct article: ___ ciudad",
+            nativeLanguagePrompt: "a city",
+            targetLanguagePrompt: "___ ciudad",
             options: ["un", "una"],
             correctOption: "una",
             explanation: "Ciudad is feminine, so we say una ciudad.",
@@ -222,6 +242,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-un-una-4",
             prompt: "Choose the correct article: ___ viaje",
+            nativeLanguagePrompt: "a trip",
+            targetLanguagePrompt: "___ viaje",
             options: ["un", "una"],
             correctOption: "un",
             explanation: "Words ending in -aje are usually masculine: un viaje.",
@@ -231,6 +253,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-un-una-5",
             prompt: "Choose the correct article: ___ información",
+            nativeLanguagePrompt: "a piece of information",
+            targetLanguagePrompt: "___ información",
             options: ["un", "una"],
             correctOption: "una",
             explanation: "Información ends in -ción, so it is feminine: una información.",
@@ -249,6 +273,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-fill-1",
             prompt: "Write the correct article: ___ información",
+            nativeLanguagePrompt: "the information",
+            targetLanguagePrompt: "___ información",
             targetAnswer: "la",
             acceptedAnswers: ["la"],
             explanation: "Información ends in -ción, so it is feminine: la información.",
@@ -258,6 +284,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-fill-2",
             prompt: "Write the correct article: ___ sistema",
+            nativeLanguagePrompt: "the system",
+            targetLanguagePrompt: "___ sistema",
             targetAnswer: "el",
             acceptedAnswers: ["el"],
             explanation: "Sistema is masculine. Many Greek-origin -ma words are masculine: el sistema.",
@@ -267,6 +295,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-fill-3",
             prompt: "Write the correct article: ___ televisión",
+            nativeLanguagePrompt: "the television",
+            targetLanguagePrompt: "___ televisión",
             targetAnswer: "la",
             acceptedAnswers: ["la"],
             explanation: "Televisión ends in -sión, so it is feminine: la televisión.",
@@ -276,6 +306,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-fill-4",
             prompt: "Write the correct article: ___ mensaje",
+            nativeLanguagePrompt: "the message",
+            targetLanguagePrompt: "___ mensaje",
             targetAnswer: "el",
             acceptedAnswers: ["el"],
             explanation: "Mensaje ends in -aje, so it is masculine: el mensaje.",
@@ -285,6 +317,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-fill-5",
             prompt: "Write the correct article: ___ mano",
+            nativeLanguagePrompt: "the hand",
+            targetLanguagePrompt: "___ mano",
             targetAnswer: "la",
             acceptedAnswers: ["la"],
             explanation: "Mano ends in -o, but it is feminine: la mano.",
@@ -303,6 +337,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-correct-1",
             prompt: "Correct the sentence: La problema es grande.",
+            nativeLanguagePrompt: "The problem is big.",
+            targetLanguagePrompt: "El problema es grande.",
             sourceSentence: "La problema es grande.",
             targetAnswer: "El problema es grande.",
             acceptedAnswers: ["el problema es grande", "El problema es grande"],
@@ -313,6 +349,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-correct-2",
             prompt: "Correct the sentence: El moto es rápido.",
+            nativeLanguagePrompt: "The motorcycle is fast.",
+            targetLanguagePrompt: "La moto es rápida.",
             sourceSentence: "El moto es rápido.",
             targetAnswer: "La moto es rápida.",
             acceptedAnswers: ["la moto es rápida", "La moto es rápida", "la moto es rapida", "La moto es rapida"],
@@ -323,6 +361,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
           {
             id: "mf-correct-3",
             prompt: "Correct the sentence: El canción es bonita.",
+            nativeLanguagePrompt: "The song is pretty.",
+            targetLanguagePrompt: "La canción es bonita.",
             sourceSentence: "El canción es bonita.",
             targetAnswer: "La canción es bonita.",
             acceptedAnswers: ["la canción es bonita", "La canción es bonita", "la cancion es bonita", "La cancion es bonita"],
@@ -397,6 +437,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
         {
           id: "mf-final-1",
           prompt: "Choose the correct article: ___ idioma",
+          nativeLanguagePrompt: "the language",
+          targetLanguagePrompt: "___ idioma",
           options: ["el", "la"],
           correctOption: "el",
           explanation: "Idioma is another masculine Greek-origin -ma word: el idioma.",
@@ -406,6 +448,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
         {
           id: "mf-final-2",
           prompt: "Type the correct article only: ___ juventud",
+          nativeLanguagePrompt: "the youth",
+          targetLanguagePrompt: "___ juventud",
           targetAnswer: "la",
           acceptedAnswers: ["la"],
           explanation: "Juventud ends in -tud, a strong feminine ending: la juventud.",
@@ -415,6 +459,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
         {
           id: "mf-final-3",
           prompt: "Choose the correct article: ___ programa",
+          nativeLanguagePrompt: "the program",
+          targetLanguagePrompt: "___ programa",
           options: ["el", "la"],
           correctOption: "el",
           explanation: "Programa ends in -a, but it is masculine: el programa.",
@@ -424,6 +470,8 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
         {
           id: "mf-final-4",
           prompt: "Type the correct article only: ___ costumbre",
+          nativeLanguagePrompt: "the custom",
+          targetLanguagePrompt: "___ costumbre",
           targetAnswer: "la",
           acceptedAnswers: ["la"],
           explanation: "Costumbre ends in -umbre, which is a strong feminine ending: la costumbre.",

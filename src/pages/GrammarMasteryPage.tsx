@@ -247,6 +247,22 @@ export function GrammarMasteryPage() {
                   </div>
                 )}
                 <h3 className="text-xl font-bold">{currentItem.prompt}</h3>
+                {(currentItem.nativeLanguagePrompt || currentItem.targetLanguagePrompt) && (
+                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                    {currentItem.nativeLanguagePrompt && (
+                      <div className="rounded-md border border-pu3nte-gold/25 bg-pu3nte-gold/10 p-3">
+                        <p className="text-xs font-bold uppercase tracking-[0.16em] text-pu3nte-gold">{copy.nativeMeaning}</p>
+                        <p className="mt-1 font-semibold text-pu3nte-text">{currentItem.nativeLanguagePrompt}</p>
+                      </div>
+                    )}
+                    {currentItem.targetLanguagePrompt && (
+                      <div className="rounded-md border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-3">
+                        <p className="text-xs font-bold uppercase tracking-[0.16em] text-pu3nte-cyan">{copy.targetPrompt}</p>
+                        <p className="mt-1 font-semibold text-pu3nte-text">{currentItem.targetLanguagePrompt}</p>
+                      </div>
+                    )}
+                  </div>
+                )}
                 {currentItem.hint && <p className="mt-2 text-sm text-pu3nte-muted">{copy.hint}: {currentItem.hint}</p>}
                 <div className="mt-5">
                   <GrammarQuestionRenderer
