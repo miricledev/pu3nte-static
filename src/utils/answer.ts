@@ -21,7 +21,8 @@ export interface AnswerComparison {
   feedbackMessage: string;
 }
 
-const punctuationRegex = /[.,!?;:'"’‘`()¿¡-]/g;
+const punctuationRegex = /[.,!?;:'"\u2019\u2018`()¿¡-]/g;
+const terminalPunctuationRegex = /[.!?]+$/g;
 
 export function removeAccents(value: string) {
   return value.normalize("NFD").replace(/\p{Diacritic}/gu, "");
@@ -29,6 +30,10 @@ export function removeAccents(value: string) {
 
 export function normalizePunctuation(value: string) {
   return value.replace(punctuationRegex, "");
+}
+
+function removeTerminalPunctuation(value: string) {
+  return value.trim().replace(terminalPunctuationRegex, "").trim();
 }
 
 export function normalizeAnswer(value: string, options: CompareAnswerOptions = {}) {
@@ -64,10 +69,13 @@ function findAccentIssues(userAnswer: string, correctAnswer: string) {
 
 function hasForgivenPunctuationIssue(userAnswer: string, correctAnswer: string, options: CompareAnswerOptions) {
   if (options.punctuationSensitive !== "forgiving") return false;
-  return (
-    normalizeAnswer(userAnswer, { ...options, punctuationSensitive: "strict" }) !==
-    normalizeAnswer(correctAnswer, { ...options, punctuationSensitive: "strict" })
-  );
+
+  const strictUser = normalizeAnswer(userAnswer, { ...options, punctuationSensitive: "strict" });
+  const strictCorrect = normalizeAnswer(correctAnswer, { ...options, punctuationSensitive: "strict" });
+
+  if (strictUser === strictCorrect) return false;
+  if (removeTerminalPunctuation(strictUser) === removeTerminalPunctuation(strictCorrect)) return false;
+  return true;
 }
 
 export function compareAnswers(userAnswer: string, correctAnswer: string, options: CompareAnswerOptions = {}): AnswerComparison {
@@ -124,10 +132,10 @@ export function insertAtCursor(input: HTMLInputElement | HTMLTextAreaElement | n
 
 export function getSpecialCharactersForLanguage(language: LanguageTarget | "french" | "portuguese", custom: string[] = []) {
   const defaults: Record<string, string[]> = {
-    spanish: ["á", "é", "í", "ó", "ú", "ü", "ñ", "¿", "¡"],
+    spanish: ["\u00e1", "\u00e9", "\u00ed", "\u00f3", "\u00fa", "\u00fc", "\u00f1", "\u00bf", "\u00a1"],
     english: ["'"],
-    french: ["à", "â", "ç", "é", "è", "ê", "ë", "î", "ï", "ô", "û", "ù", "ü", "ÿ", "œ"],
-    portuguese: ["á", "â", "ã", "à", "ç", "é", "ê", "í", "ó", "ô", "õ", "ú"],
+    french: ["\u00e0", "\u00e2", "\u00e7", "\u00e9", "\u00e8", "\u00ea", "\u00eb", "\u00ee", "\u00ef", "\u00f4", "\u00fb", "\u00f9", "\u00fc", "\u00ff", "\u0153"],
+    portuguese: ["\u00e1", "\u00e2", "\u00e3", "\u00e0", "\u00e7", "\u00e9", "\u00ea", "\u00ed", "\u00f3", "\u00f4", "\u00f5", "\u00fa"],
   };
   return Array.from(new Set([...(defaults[language] ?? []), ...custom]));
 }
