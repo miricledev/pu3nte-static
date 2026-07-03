@@ -24,9 +24,10 @@ export function FlashcardsPage() {
   const { deckId } = useParams();
   const navigate = useNavigate();
   const deck = flashcardDecks.find((item) => item.id === deckId);
-  const [mode, setMode] = useState<"flashcards" | "learn" | "results">("flashcards");
+  const [mode, setMode] = useState<"flashcards" | "review-complete" | "learn" | "results">("flashcards");
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const [reviewOnlyMissed, setReviewOnlyMissed] = useState(false);
   const [selected, setSelected] = useState<string>();
   const [stats, setStats] = useState({ correct: 0, incorrect: 0 });
   const [missed, setMissed] = useState<string[]>([]);
@@ -52,16 +53,20 @@ export function FlashcardsPage() {
       : base;
     return settings.shuffle ? shuffleArray(sorted) : sorted;
   }, [deck, mode, settings.shuffle, settings.starredOnly]);
+  const reviewCards = useMemo(() => {
+    if (mode === "flashcards" && reviewOnlyMissed) return cards.filter((item) => missed.includes(item.id));
+    return cards;
+  }, [cards, missed, mode, reviewOnlyMissed]);
 
   useEffect(() => {
     function handleKey(event: KeyboardEvent) {
       if (event.target instanceof HTMLInputElement) return;
-      if (event.code === "Space") {
+      if (event.code === "Space" && mode === "flashcards") {
         event.preventDefault();
         setFlipped((value) => !value);
       }
-      if (event.key === "1") markCard(false);
-      if (event.key === "2") markCard(true);
+      if (event.key === "1" && mode === "flashcards") markCard(false);
+      if (event.key === "2" && mode === "flashcards") markCard(true);
     }
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
@@ -69,7 +74,8 @@ export function FlashcardsPage() {
 
   if (!deck || cards.length === 0) return <NotFoundPage />;
   const copy = uiText(getUiLanguage(deck.languageTarget, deck.learnerNativeLanguage));
-  const card = cards[index] ?? cards[0];
+  const activeCards = mode === "flashcards" ? reviewCards : cards;
+  const card = activeCards[index] ?? activeCards[0] ?? cards[0];
   const deckProgress = getProgress().flashcards[deck.id];
   const mastered = deckProgress?.cardsMastered ?? 0;
   const progressValue = Math.round((mastered / deck.data.cards.length) * 100);
@@ -80,8 +86,12 @@ export function FlashcardsPage() {
   function next() {
     setSelected(undefined);
     setFlipped(false);
-    if (index >= cards.length - 1) {
+    if (index >= activeCards.length - 1) {
       if (mode === "learn") setMode("results");
+      if (mode === "flashcards") {
+        setMode("review-complete");
+        setReviewOnlyMissed(false);
+      }
       setIndex(0);
     } else {
       setIndex((value) => value + 1);
@@ -99,18 +109,44 @@ export function FlashcardsPage() {
     setStats((value) => ({ correct: value.correct + (correct ? 1 : 0), incorrect: value.incorrect + (correct ? 0 : 1) }));
     if (!correct) setMissed((value) => Array.from(new Set([...value, card.id])));
     if (correct && status === "mastered" && getProgress().flashcards[activeDeck.id]?.cardsMastered === activeDeck.data.cards.length) markCompleted(activeDeck.id);
+    if (mode === "flashcards" && reviewOnlyMissed && correct) {
+      const remainingMissed = missed.filter((id) => id !== card.id);
+      setMissed(remainingMissed);
+      setSelected(undefined);
+      setFlipped(false);
+      if (remainingMissed.length === 0 || index >= remainingMissed.length) {
+        setMode("review-complete");
+        setReviewOnlyMissed(false);
+        setIndex(0);
+      }
+      return;
+    }
+    if (correct) setMissed((value) => value.filter((id) => id !== card.id));
     next();
   }
 
   return (
     <PageContainer>
       <ActivityHeader {...deck} />
-      <div className="mb-4 grid gap-2 sm:flex sm:flex-wrap">
-        {(["flashcards", "learn"] as const).map((tab) => (
-          <GradientButton key={tab} variant={mode === tab ? "primary" : "ghost"} onClick={() => { setMode(tab); setIndex(0); }}>
-            {tab === "flashcards" ? copy.reviewFlashcards : copy.practiceRecall}
-          </GradientButton>
-        ))}
+      <div className="mb-4 grid gap-3 md:grid-cols-2">
+        <button
+          className={`rounded-xl border p-4 text-left transition ${mode === "flashcards" || mode === "review-complete" ? "border-pu3nte-cyan bg-pu3nte-cyan/10 shadow-glow" : "border-white/10 bg-white/[0.04] hover:bg-white/[0.08]"}`}
+          type="button"
+          onClick={() => { setMode("flashcards"); setReviewOnlyMissed(false); setIndex(0); setFlipped(false); }}
+        >
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-cyan">{copy.step} 1</p>
+          <p className="mt-1 text-xl font-black">{copy.reviewFlashcards}</p>
+          <p className="mt-1 text-sm text-pu3nte-secondary">{copy.reviewFlashcardsHelp}</p>
+        </button>
+        <button
+          className={`rounded-xl border p-4 text-left transition ${mode === "learn" || mode === "results" ? "border-pu3nte-gold bg-pu3nte-gold/10 shadow-glow" : "border-white/10 bg-white/[0.04] hover:bg-white/[0.08]"}`}
+          type="button"
+          onClick={() => { setMode("learn"); setReviewOnlyMissed(false); setIndex(0); setFlipped(false); }}
+        >
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-gold">{copy.step} 2</p>
+          <p className="mt-1 text-xl font-black">{copy.practiceRecall}</p>
+          <p className="mt-1 text-sm text-pu3nte-secondary">{copy.practiceRecallHelp}</p>
+        </button>
       </div>
       <InstructionPanel title={copy.instructions} body={copy.flashcardGuide} />
       <div className="mt-4">
@@ -138,8 +174,33 @@ export function FlashcardsPage() {
                 englishMeaning: copy.englishMeaning,
                 exampleInSpanish: copy.exampleInSpanish,
                 exampleInEnglish: copy.exampleInEnglish,
+                tapCardToFlip: copy.tapCardToFlip,
               }}
             />
+          )}
+          {mode === "review-complete" && (
+            <div className="space-y-5 text-center">
+              <div className="rounded-2xl border border-pu3nte-success/40 bg-pu3nte-success/10 p-6">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-pu3nte-success">{copy.done}</p>
+                <h2 className="mt-2 text-3xl font-black">{copy.flashcardReviewComplete}</h2>
+                <p className="mx-auto mt-2 max-w-2xl text-pu3nte-secondary">
+                  {missed.length > 0 ? copy.flashcardReviewMissedSummary.replace("{count}", String(missed.length)) : copy.flashcardReviewNoMisses}
+                </p>
+              </div>
+              <div className="grid gap-3 md:grid-cols-2">
+                {missed.length > 0 && (
+                  <GradientButton
+                    variant="ghost"
+                    onClick={() => { setMode("flashcards"); setReviewOnlyMissed(true); setIndex(0); setFlipped(false); }}
+                  >
+                    {copy.reviewStillLearning}
+                  </GradientButton>
+                )}
+                <GradientButton onClick={() => { setMode("learn"); setReviewOnlyMissed(false); setIndex(0); setFlipped(false); }}>
+                  {copy.moveToLearnMode}
+                </GradientButton>
+              </div>
+            </div>
           )}
           {mode === "learn" && !useTyped && (
             <div className="space-y-4">

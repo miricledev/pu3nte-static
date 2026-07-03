@@ -1,4 +1,4 @@
-import { RotateCcw } from "lucide-react";
+import { Hand, RotateCcw } from "lucide-react";
 import { motion } from "framer-motion";
 import { GradientButton } from "../ui/GradientButton";
 import type { FlashcardItem } from "../../types";
@@ -28,6 +28,7 @@ export function Flashcard({
     englishMeaning?: string;
     exampleInSpanish?: string;
     exampleInEnglish?: string;
+    tapCardToFlip?: string;
   };
 }) {
   return (
@@ -43,14 +44,18 @@ export function Flashcard({
         </p>
       </div>
       <button
-        className="glass-panel min-h-64 w-full rounded-lg p-6 text-left transition hover:border-pu3nte-cyan/40"
+        className="glass-panel group relative min-h-64 w-full overflow-hidden rounded-lg p-6 text-left transition hover:border-pu3nte-cyan/40"
         onClick={onFlip}
         type="button"
         aria-label={labels?.flipFlashcard ?? "Flip flashcard"}
       >
+        <div className="absolute right-4 top-4 z-10 flex items-center gap-2 rounded-full border border-pu3nte-cyan/30 bg-pu3nte-bg/85 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-pu3nte-cyan shadow-glow transition group-hover:scale-105">
+          <Hand size={16} />
+          <span>{labels?.tapCardToFlip ?? "Tap card to flip"}</span>
+        </div>
         <div className="mb-4 flex items-center justify-between text-xs font-bold uppercase tracking-[0.18em] text-pu3nte-secondary">
           <span>{flipped ? labels?.back ?? "Back" : labels?.front ?? "Front"}</span>
-          <RotateCcw size={16} />
+          <RotateCcw className="mr-36 sm:mr-40" size={16} />
         </div>
         <motion.div initial={false} animate={{ rotateX: flipped ? 0 : 0 }} className="grid min-h-40 place-items-center text-center">
           <div className="w-full">
