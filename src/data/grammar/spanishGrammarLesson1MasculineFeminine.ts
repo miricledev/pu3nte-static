@@ -9,6 +9,7 @@ export const spanishGrammarLesson1MasculineFeminine: GrammarMasteryLesson = {
   level: "beginner",
   tags: ["spanish", "grammar", "nouns", "gender", "articles", "el", "la", "un", "una"],
   estimatedMinutes: 12,
+  skoolReturnUrl: "https://www.skool.com/agedown-transform-after-50-7367/classroom/c115e7cc?md=8e0cefa9d2c7471d92ac427fb5c5666c",
   activityType: "grammar",
   data: {
     grammarTopic: "Masculine and Feminine Nouns",
