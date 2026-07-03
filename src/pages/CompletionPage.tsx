@@ -23,7 +23,7 @@ export function CompletionPage() {
   const copy = activity ? uiText(getUiLanguage(activity.languageTarget, activity.learnerNativeLanguage)) : uiText("en");
 
   return (
-    <PageContainer className="grid min-h-screen place-items-center">
+    <PageContainer className="grid min-h-[calc(100vh-80px)] place-items-center">
       <GlassCard className="w-full max-w-3xl overflow-hidden p-0">
         <div className="relative p-6 sm:p-8">
           <div className="absolute inset-x-0 top-0 h-1 bg-bridge" />

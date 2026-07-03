@@ -6,7 +6,7 @@ import { GlassCard } from "../components/ui/GlassCard";
 
 export function NotFoundPage() {
   return (
-    <PageContainer className="grid min-h-screen place-items-center">
+    <PageContainer className="grid min-h-[calc(100vh-80px)] place-items-center">
       <GlassCard className="w-full max-w-2xl text-center">
         <div className="flex justify-center">
           <BrandLogo size="hero" />

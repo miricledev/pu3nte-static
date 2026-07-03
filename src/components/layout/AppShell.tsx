@@ -1,11 +1,13 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import type { PropsWithChildren } from "react";
+import { Header } from "./Header";
 
 export function AppShell({ children }: PropsWithChildren) {
   const location = useLocation();
   return (
     <div className="min-h-screen text-pu3nte-text">
+      <Header />
       <AnimatePresence mode="wait">
         <motion.div
           key={location.pathname}
