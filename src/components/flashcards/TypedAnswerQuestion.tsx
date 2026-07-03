@@ -34,6 +34,7 @@ export function TypedAnswerQuestion({
     typeCorrectToContinue?: string;
     correctionPracticePlaceholder?: string;
     correctionNotYet?: string;
+    cardCounter?: string;
   };
 }) {
   const [answer, setAnswer] = useState("");
@@ -88,7 +89,14 @@ export function TypedAnswerQuestion({
 
   return (
     <div className="space-y-4">
-      <p className="text-sm font-bold uppercase tracking-[0.18em] text-pu3nte-secondary">{labels?.typeAnswer ?? "Type the answer"}</p>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-pu3nte-secondary">{labels?.typeAnswer ?? "Type the answer"}</p>
+        {labels?.cardCounter && (
+          <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-sm font-black text-white">
+            {labels.cardCounter}
+          </span>
+        )}
+      </div>
       <h2 className="text-3xl font-extrabold">{prompt}</h2>
       <label className="block text-sm font-semibold text-pu3nte-secondary" htmlFor="typed-answer">{labels?.yourAnswer ?? "Your answer"}</label>
       <input

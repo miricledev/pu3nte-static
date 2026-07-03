@@ -29,19 +29,29 @@ export function Flashcard({
     exampleInSpanish?: string;
     exampleInEnglish?: string;
     tapCardToFlip?: string;
+    cardCounter?: string;
   };
 }) {
   return (
     <div className="space-y-4">
       <div className="rounded-lg border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-4">
-        <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-cyan">
-          {labels?.flipFlashcard ?? "Flip flashcard"}
-        </p>
-        <p className="mt-1 text-sm font-semibold text-white">
-          {flipped
-            ? labels?.flashcardReviewStepBack ?? "Check the meaning, read the example, then choose if you knew it."
-            : labels?.flashcardReviewStepFront ?? "Read the card. Try to remember the meaning before you flip it."}
-        </p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-cyan">
+              {labels?.flipFlashcard ?? "Flip flashcard"}
+            </p>
+            <p className="mt-1 text-sm font-semibold text-white">
+              {flipped
+                ? labels?.flashcardReviewStepBack ?? "Check the meaning, read the example, then choose if you knew it."
+                : labels?.flashcardReviewStepFront ?? "Read the card. Try to remember the meaning before you flip it."}
+            </p>
+          </div>
+          {labels?.cardCounter && (
+            <span className="rounded-full border border-white/10 bg-pu3nte-bg/60 px-3 py-1 text-sm font-black text-white">
+              {labels.cardCounter}
+            </span>
+          )}
+        </div>
       </div>
       <button
         className="glass-panel group relative min-h-64 w-full overflow-hidden rounded-lg p-6 text-left transition hover:border-pu3nte-cyan/40"

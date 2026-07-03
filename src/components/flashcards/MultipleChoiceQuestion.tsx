@@ -15,7 +15,7 @@ export function MultipleChoiceQuestion({
   direction: "term-definition" | "definition-term";
   selected?: string;
   onAnswer: (answer: string, correct: boolean) => void;
-  labels?: { chooseMatch?: string; correctAnswer?: string; correct?: string; incorrect?: string };
+  labels?: { chooseMatch?: string; correctAnswer?: string; correct?: string; incorrect?: string; cardCounter?: string };
 }) {
   const prompt = direction === "term-definition" ? card.term : card.definition;
   const correct = direction === "term-definition" ? card.definition : card.term;
@@ -23,7 +23,14 @@ export function MultipleChoiceQuestion({
   const selectedIsCorrect = selected === correct;
   return (
     <div className="space-y-4">
-      <p className="text-sm font-bold uppercase tracking-[0.18em] text-pu3nte-secondary">{labels?.chooseMatch ?? "Choose the match"}</p>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-pu3nte-secondary">{labels?.chooseMatch ?? "Choose the match"}</p>
+        {labels?.cardCounter && (
+          <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-sm font-black text-white">
+            {labels.cardCounter}
+          </span>
+        )}
+      </div>
       <h2 className="text-3xl font-extrabold">{prompt}</h2>
       <div className="grid gap-3">
         {options.map((option) => {

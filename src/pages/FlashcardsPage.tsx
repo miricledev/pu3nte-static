@@ -82,6 +82,9 @@ export function FlashcardsPage() {
   const direction = settings.direction === "random" ? (Math.random() > 0.5 ? "term-definition" : "definition-term") : settings.direction;
   const cardProgress = deckProgress?.cards[card.id];
   const useTyped = settings.typed && (!settings.multipleChoice || (cardProgress?.correctCount ?? 0) > 0);
+  const activeCardCounter = copy.cardCounter
+    .replace("{current}", String(Math.min(index + 1, activeCards.length)))
+    .replace("{total}", String(activeCards.length));
 
   function next() {
     setSelected(undefined);
@@ -175,6 +178,7 @@ export function FlashcardsPage() {
                 exampleInSpanish: copy.exampleInSpanish,
                 exampleInEnglish: copy.exampleInEnglish,
                 tapCardToFlip: copy.tapCardToFlip,
+                cardCounter: activeCardCounter,
               }}
             />
           )}
@@ -209,7 +213,7 @@ export function FlashcardsPage() {
                 cards={cards}
                 direction={direction}
                 selected={selected}
-                labels={{ chooseMatch: copy.chooseMatch, correctAnswer: copy.correctAnswer, correct: copy.correct, incorrect: copy.incorrect }}
+                labels={{ chooseMatch: copy.chooseMatch, correctAnswer: copy.correctAnswer, correct: copy.correct, incorrect: copy.incorrect, cardCounter: activeCardCounter }}
                 onAnswer={(answer, correct) => { setSelected(answer); setTimeout(() => markCard(correct), 1800); }}
               />
             </div>
@@ -236,6 +240,7 @@ export function FlashcardsPage() {
                 typeCorrectToContinue: copy.typeCorrectToContinue,
                 correctionPracticePlaceholder: copy.correctionPracticePlaceholder,
                 correctionNotYet: copy.correctionNotYet,
+                cardCounter: activeCardCounter,
               }}
               onResult={(correct) => markCard(correct, true)}
             />
