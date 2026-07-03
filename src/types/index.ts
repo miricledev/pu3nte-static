@@ -24,6 +24,7 @@ export interface FlashcardItem {
   term: string;
   definition: string;
   exampleSentence?: string;
+  exampleTranslation?: string;
   audioUrl?: string;
   imageUrl?: string;
   acceptedAnswers?: string[];

@@ -10,6 +10,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Libro ends in -o, so it is masculine. Learn it with el.",
     exampleSentence: "El libro es interesante.",
+    exampleTranslation: "The book is interesting.",
     starred: true,
   },
   {
@@ -21,6 +22,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Casa ends in -a, so it is feminine. Learn it with la.",
     exampleSentence: "La casa es bonita.",
+    exampleTranslation: "The house is pretty.",
     starred: true,
   },
   {
@@ -32,6 +34,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Carro ends in -o, so it is masculine.",
     exampleSentence: "El carro es rojo.",
+    exampleTranslation: "The car is red.",
   },
   {
     id: "el-curso",
@@ -42,6 +45,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Curso ends in -o, so it is masculine.",
     exampleSentence: "El curso es útil.",
+    exampleTranslation: "The course is useful.",
   },
   {
     id: "la-mesa",
@@ -52,6 +56,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Mesa ends in -a, so it is feminine.",
     exampleSentence: "La mesa es grande.",
+    exampleTranslation: "The table is big.",
   },
   {
     id: "la-palabra",
@@ -62,6 +67,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Palabra ends in -a, so it is feminine.",
     exampleSentence: "La palabra es nueva.",
+    exampleTranslation: "The word is new.",
   },
   {
     id: "el-amigo",
@@ -72,6 +78,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Amigo is masculine. Use el or un.",
     exampleSentence: "El amigo estudia español.",
+    exampleTranslation: "The male friend studies Spanish.",
   },
   {
     id: "la-amiga",
@@ -82,6 +89,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Amiga is feminine. Use la or una.",
     exampleSentence: "La amiga practica conmigo.",
+    exampleTranslation: "The female friend practises with me.",
   },
   {
     id: "el-cafe",
@@ -92,6 +100,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Café is masculine. Learn it with el.",
     exampleSentence: "El café está caliente.",
+    exampleTranslation: "The coffee is hot.",
   },
   {
     id: "la-clase",
@@ -102,6 +111,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Clase is feminine. Learn it with la.",
     exampleSentence: "La clase empieza ahora.",
+    exampleTranslation: "The class starts now.",
   },
   {
     id: "la-cancion",
@@ -112,6 +122,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Words ending in -ción are usually feminine.",
     exampleSentence: "La canción es bonita.",
+    exampleTranslation: "The song is pretty.",
     starred: true,
   },
   {
@@ -123,6 +134,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Words ending in -ción are usually feminine.",
     exampleSentence: "La información es importante.",
+    exampleTranslation: "The information is important.",
   },
   {
     id: "la-television",
@@ -133,6 +145,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Words ending in -sión are usually feminine.",
     exampleSentence: "La televisión está en la sala.",
+    exampleTranslation: "The television is in the living room.",
   },
   {
     id: "la-decision",
@@ -143,6 +156,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Words ending in -sión are usually feminine.",
     exampleSentence: "La decisión es difícil.",
+    exampleTranslation: "The decision is difficult.",
   },
   {
     id: "la-ciudad",
@@ -153,6 +167,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Words ending in -dad are usually feminine.",
     exampleSentence: "La ciudad es grande.",
+    exampleTranslation: "The city is big.",
   },
   {
     id: "la-verdad",
@@ -163,6 +178,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Words ending in -dad are usually feminine.",
     exampleSentence: "La verdad es importante.",
+    exampleTranslation: "The truth is important.",
   },
   {
     id: "la-libertad",
@@ -173,6 +189,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Words ending in -tad are usually feminine.",
     exampleSentence: "La libertad es valiosa.",
+    exampleTranslation: "Freedom is valuable.",
   },
   {
     id: "la-juventud",
@@ -183,6 +200,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Words ending in -tud are usually feminine.",
     exampleSentence: "La juventud aprende rápido.",
+    exampleTranslation: "The youth learns quickly.",
   },
   {
     id: "la-costumbre",
@@ -193,6 +211,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Words ending in -umbre are usually feminine.",
     exampleSentence: "La costumbre es antigua.",
+    exampleTranslation: "The custom is old.",
   },
   {
     id: "el-viaje",
@@ -203,6 +222,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Words ending in -aje are usually masculine.",
     exampleSentence: "El viaje es largo.",
+    exampleTranslation: "The trip is long.",
     starred: true,
   },
   {
@@ -214,6 +234,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Words ending in -aje are usually masculine.",
     exampleSentence: "El mensaje es claro.",
+    exampleTranslation: "The message is clear.",
   },
   {
     id: "el-problema",
@@ -224,6 +245,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Problema ends in -a, but it is masculine. Many Greek-origin -ma words are masculine.",
     exampleSentence: "El problema es grande.",
+    exampleTranslation: "The problem is big.",
     starred: true,
   },
   {
@@ -235,6 +257,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Sistema ends in -a, but it is masculine.",
     exampleSentence: "El sistema funciona bien.",
+    exampleTranslation: "The system works well.",
   },
   {
     id: "el-idioma",
@@ -245,6 +268,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Idioma ends in -a, but it is masculine.",
     exampleSentence: "El idioma es español.",
+    exampleTranslation: "The language is Spanish.",
   },
   {
     id: "el-programa",
@@ -255,6 +279,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Programa ends in -a, but it is masculine.",
     exampleSentence: "El programa es útil.",
+    exampleTranslation: "The program is useful.",
   },
   {
     id: "el-tema",
@@ -265,6 +290,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Tema ends in -a, but it is masculine.",
     exampleSentence: "El tema es interesante.",
+    exampleTranslation: "The topic is interesting.",
   },
   {
     id: "la-mano",
@@ -275,6 +301,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Mano ends in -o, but it is feminine.",
     exampleSentence: "La mano está limpia.",
+    exampleTranslation: "The hand is clean.",
     starred: true,
   },
   {
@@ -286,6 +313,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Moto is feminine because it is short for motocicleta.",
     exampleSentence: "La moto es rápida.",
+    exampleTranslation: "The motorcycle is fast.",
   },
   {
     id: "la-foto",
@@ -296,6 +324,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Foto is feminine because it is short for fotografía.",
     exampleSentence: "La foto es bonita.",
+    exampleTranslation: "The photo is pretty.",
   },
   {
     id: "la-radio",
@@ -306,6 +335,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Radio is commonly feminine: la radio.",
     exampleSentence: "La radio está encendida.",
+    exampleTranslation: "The radio is on.",
   },
   {
     id: "el-dia",
@@ -316,6 +346,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Día ends in -a, but it is masculine.",
     exampleSentence: "El día es perfecto.",
+    exampleTranslation: "The day is perfect.",
   },
   {
     id: "el-mapa",
@@ -326,6 +357,7 @@ const cards: FlashcardItem[] = [
     languageTo: "english",
     notes: "Mapa ends in -a, but it is masculine.",
     exampleSentence: "El mapa está en la mesa.",
+    exampleTranslation: "The map is on the table.",
   },
 ];
 

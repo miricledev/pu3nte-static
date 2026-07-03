@@ -26,6 +26,9 @@ export function StudySettingsPanel({
   return (
     <div className="glass-panel rounded-lg p-4">
       <h2 className="font-bold">{labels?.studySettings ?? "Study Settings"}</h2>
+      <p className="mt-1 text-sm text-pu3nte-muted">
+        {labels?.studySettingsHelp ?? "You can ignore these. They only change how the practice quiz behaves."}
+      </p>
       <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         <label className="text-sm text-pu3nte-secondary">
           {labels?.direction ?? "Direction"}

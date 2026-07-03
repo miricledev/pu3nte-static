@@ -23,10 +23,25 @@ export function Flashcard({
     stillLearning?: string;
     know?: string;
     shortcuts?: string;
+    flashcardReviewStepFront?: string;
+    flashcardReviewStepBack?: string;
+    englishMeaning?: string;
+    exampleInSpanish?: string;
+    exampleInEnglish?: string;
   };
 }) {
   return (
     <div className="space-y-4">
+      <div className="rounded-lg border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-4">
+        <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-cyan">
+          {labels?.flipFlashcard ?? "Flip flashcard"}
+        </p>
+        <p className="mt-1 text-sm font-semibold text-white">
+          {flipped
+            ? labels?.flashcardReviewStepBack ?? "Check the meaning, read the example, then choose if you knew it."
+            : labels?.flashcardReviewStepFront ?? "Read the card. Try to remember the meaning before you flip it."}
+        </p>
+      </div>
       <button
         className="glass-panel min-h-64 w-full rounded-lg p-6 text-left transition hover:border-pu3nte-cyan/40"
         onClick={onFlip}
@@ -38,9 +53,31 @@ export function Flashcard({
           <RotateCcw size={16} />
         </div>
         <motion.div initial={false} animate={{ rotateX: flipped ? 0 : 0 }} className="grid min-h-40 place-items-center text-center">
-          <div>
+          <div className="w-full">
+            {flipped && (
+              <p className="mb-2 text-xs font-black uppercase tracking-[0.18em] text-pu3nte-gold">
+                {labels?.englishMeaning ?? "English meaning"}
+              </p>
+            )}
             <p className="text-4xl font-extrabold">{flipped ? card.definition : card.term}</p>
-            {flipped && card.exampleSentence && <p className="mt-4 text-pu3nte-secondary">{card.exampleSentence}</p>}
+            {flipped && card.exampleSentence && (
+              <div className="mx-auto mt-5 grid max-w-2xl gap-3 text-left sm:grid-cols-2">
+                <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                  <p className="text-xs font-black uppercase tracking-[0.16em] text-pu3nte-cyan">
+                    {labels?.exampleInSpanish ?? "Spanish example"}
+                  </p>
+                  <p className="mt-2 text-pu3nte-secondary">{card.exampleSentence}</p>
+                </div>
+                {card.exampleTranslation && (
+                  <div className="rounded-lg border border-pu3nte-gold/20 bg-pu3nte-gold/10 p-4">
+                    <p className="text-xs font-black uppercase tracking-[0.16em] text-pu3nte-gold">
+                      {labels?.exampleInEnglish ?? "English translation"}
+                    </p>
+                    <p className="mt-2 text-pu3nte-secondary">{card.exampleTranslation}</p>
+                  </div>
+                )}
+              </div>
+            )}
             {flipped && card.notes && <p className="mt-2 text-sm text-pu3nte-muted">{card.notes}</p>}
           </div>
         </motion.div>

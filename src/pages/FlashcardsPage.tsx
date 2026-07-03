@@ -106,7 +106,11 @@ export function FlashcardsPage() {
     <PageContainer>
       <ActivityHeader {...deck} />
       <div className="mb-4 grid gap-2 sm:flex sm:flex-wrap">
-        {(["flashcards", "learn"] as const).map((tab) => <GradientButton key={tab} variant={mode === tab ? "primary" : "ghost"} onClick={() => { setMode(tab); setIndex(0); }}>{tab}</GradientButton>)}
+        {(["flashcards", "learn"] as const).map((tab) => (
+          <GradientButton key={tab} variant={mode === tab ? "primary" : "ghost"} onClick={() => { setMode(tab); setIndex(0); }}>
+            {tab === "flashcards" ? copy.reviewFlashcards : copy.practiceRecall}
+          </GradientButton>
+        ))}
       </div>
       <InstructionPanel title={copy.instructions} body={copy.flashcardGuide} />
       <div className="mt-4">
@@ -129,6 +133,11 @@ export function FlashcardsPage() {
                 stillLearning: copy.stillLearning,
                 know: copy.know,
                 shortcuts: copy.flashcardShortcuts,
+                flashcardReviewStepFront: copy.flashcardReviewStepFront,
+                flashcardReviewStepBack: copy.flashcardReviewStepBack,
+                englishMeaning: copy.englishMeaning,
+                exampleInSpanish: copy.exampleInSpanish,
+                exampleInEnglish: copy.exampleInEnglish,
               }}
             />
           )}
@@ -175,6 +184,13 @@ export function FlashcardsPage() {
               onRetry={() => { setMode("learn"); setIndex(0); }}
               onFinish={() => { markCompleted(deck.id, progressValue); navigate(`/complete/${deck.id}`); }}
             />
+          )}
+          {mode === "flashcards" && (
+            <div className="mt-5 flex justify-center">
+              <GradientButton onClick={() => { setMode("learn"); setIndex(0); setFlipped(false); }}>
+                {copy.startRecallPractice}
+              </GradientButton>
+            </div>
           )}
         </GlassCard>
         <StudySettingsPanel settings={settings} onChange={setSettings} hasStarred={deck.data.cards.some((item) => item.starred)} labels={copy} onReset={() => resetProgress()} />
