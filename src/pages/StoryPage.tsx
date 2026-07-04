@@ -11,6 +11,7 @@ import { StoryProgress } from "../components/story/StoryProgress";
 import { StorySummary } from "../components/story/StorySummary";
 import { getProgress, markCompleted, markOpened, saveProgress } from "../utils/progress";
 import { shuffleArray } from "../utils/study";
+import { canUseSpeech, primeSpeech, speakText, stopSpeech } from "../utils/speech";
 import { getUiLanguage, uiText } from "../utils/uiText";
 import { NotFoundPage } from "./NotFoundPage";
 
@@ -33,6 +34,7 @@ export function StoryPage() {
   const [selectedCheckOption, setSelectedCheckOption] = useState<string>();
   const [checkFeedback, setCheckFeedback] = useState("");
   const [shuffledCheckOptions, setShuffledCheckOptions] = useState<Record<string, string[]>>({});
+  const [audioNotice, setAudioNotice] = useState("");
   const scrollRef = useRef<HTMLDivElement>(null);
   const messages = story?.data.messages.slice(0, visible) ?? [];
   const activeCheck = story?.data.comprehensionChecks?.find((check) => {
@@ -60,7 +62,7 @@ export function StoryPage() {
     if (!story || !audioEnabled || (autoPlay && !activeCheck)) return;
     const lastMessage = story.data.messages[visible - 1];
     if (lastMessage) speak(lastMessage.text);
-    return () => window.speechSynthesis?.cancel();
+    return () => stopSpeech();
   }, [activeCheck, audioEnabled, autoPlay, story, visible]);
 
   useEffect(() => {
@@ -75,8 +77,7 @@ export function StoryPage() {
       });
       return () => {
         if (nextTimer) window.clearTimeout(nextTimer);
-        if (fallbackTimer) window.clearTimeout(fallbackTimer);
-        window.speechSynthesis?.cancel();
+        fallbackTimer?.();
       };
     }
 
@@ -86,27 +87,17 @@ export function StoryPage() {
 
   function speak(text: string, onDone?: () => void) {
     if (!story) return undefined;
-    if (!("speechSynthesis" in window)) {
-      if (onDone) return globalThis.setTimeout(onDone, getLearnerReadingDelay(text));
-      return undefined;
+    if (!canUseSpeech()) {
+      setAudioNotice("This browser does not expose text-to-speech. Try Safari/Chrome, or enable speech/audio permissions.");
+    } else {
+      setAudioNotice("");
     }
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = story.data.targetLanguage === "spanish" ? "es-ES" : "en-US";
-    utterance.rate = 0.78;
-    let fallbackTimer: number | undefined;
-    let finished = false;
-    const finish = () => {
-      if (finished) return;
-      finished = true;
-      if (fallbackTimer) window.clearTimeout(fallbackTimer);
-      onDone?.();
-    };
-    utterance.onend = finish;
-    window.speechSynthesis.speak(utterance);
-    if (!onDone) return undefined;
-    fallbackTimer = window.setTimeout(finish, getLearnerReadingDelay(text) + 2500);
-    return fallbackTimer;
+    return speakText(text, {
+      lang: story.data.targetLanguage === "spanish" ? "es-ES" : "en-US",
+      rate: 0.78,
+      onDone,
+      fallbackDelayMs: getLearnerReadingDelay(text) + 2500,
+    });
   }
 
   function saveStory(nextVisible: number) {
@@ -135,6 +126,7 @@ export function StoryPage() {
   }
 
   function answerCheck(option: string) {
+    primeSpeech();
     if (!activeCheck) return;
     const correct = option === activeCheck.question.correctAnswer;
     setSelectedCheckOption(option);
@@ -220,7 +212,12 @@ export function StoryPage() {
               ) : visible < story.data.messages.length ? (
                 <GradientButton onClick={revealNext}>{copy.revealNextMessage}</GradientButton>
               ) : (
-                <StorySummary learnedVocab={story.data.learnedVocab} labels={copy} onFinish={() => navigate(`/complete/${story.id}`)} />
+                <StorySummary
+                  learnedVocab={story.data.learnedVocab}
+                  labels={copy}
+                  onPracticeFlashcards={() => navigate(`/flashcards/${story.id}-flashcards`)}
+                  onFinish={() => navigate(`/complete/${story.id}`)}
+                />
               )}
             </div>
           </div>
@@ -229,7 +226,8 @@ export function StoryPage() {
           <h2 className="font-bold">{copy.storyControls}</h2>
           <label className="mt-4 flex items-center gap-2 text-sm text-pu3nte-secondary"><input type="checkbox" checked={translations} onChange={(event) => setTranslations(event.target.checked)} /> {copy.showTranslations}</label>
           <label className="mt-3 flex items-center gap-2 text-sm text-pu3nte-secondary"><input type="checkbox" checked={autoPlay} onChange={(event) => setAutoPlay(event.target.checked)} /> {copy.autoplay}</label>
-          <label className="mt-3 flex items-center gap-2 text-sm text-pu3nte-secondary"><input type="checkbox" checked={audioEnabled} onChange={(event) => setAudioEnabled(event.target.checked)} /> {copy.readAloud}</label>
+          <label className="mt-3 flex items-center gap-2 text-sm text-pu3nte-secondary"><input type="checkbox" checked={audioEnabled} onChange={(event) => { setAudioEnabled(event.target.checked); if (event.target.checked && !primeSpeech()) setAudioNotice("This browser does not expose text-to-speech. Try Safari/Chrome, or enable speech/audio permissions."); }} /> {copy.readAloud}</label>
+          {audioNotice && <p className="mt-3 rounded-md border border-pu3nte-warning/30 bg-pu3nte-warning/10 p-3 text-xs text-pu3nte-secondary">{audioNotice}</p>}
           <GradientButton className="mt-5 w-full" variant="ghost" onClick={() => { setVisible(1); setAnsweredChecks({}); setSelectedCheckOption(undefined); setCheckFeedback(""); setShuffledCheckOptions({}); saveStory(1); }}>{copy.restartStory}</GradientButton>
         </div>
       </div>

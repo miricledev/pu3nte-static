@@ -10,9 +10,10 @@ import { demoReadings } from "./demo/demoReadings";
 import { demoGrammarLessons } from "./demo/demoGrammar";
 import { spanishGrammarLesson1MasculineFeminine } from "./grammar/spanishGrammarLesson1MasculineFeminine";
 import { spanishGrammarLesson1VocabularyDeck } from "./flashcards/spanishGrammarLesson1Vocabulary";
+import { spanishTextingStoryFlashcards } from "./flashcards/spanishTextingStoryFlashcards";
 import type { ActivityType } from "../types";
 
-export const flashcardDecks = [...demoFlashcardDecks, spanishGrammarLesson1VocabularyDeck];
+export const flashcardDecks = [...demoFlashcardDecks, spanishGrammarLesson1VocabularyDeck, ...spanishTextingStoryFlashcards];
 export const sentenceBuilderLessons = [...demoSentenceBuilderLessons, ...englishSentenceBuilderLessons, ...spanishSentenceBuilderLessons];
 export const verbTrainerSets = [...demoVerbSets];
 export const whatsappStories = [...demoStories, ...spanishTextingStories];

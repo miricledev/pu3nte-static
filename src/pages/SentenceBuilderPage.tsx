@@ -16,6 +16,7 @@ import { StageStepper } from "../components/sentence-builder/StageStepper";
 import { VocabGuideModal } from "../components/sentence-builder/VocabGuideModal";
 import { compareAnswers, getSpecialCharactersForLanguage, normalizeAnswer, type AnswerComparison } from "../utils/answer";
 import { getProgress, markCompleted, markOpened, saveProgress } from "../utils/progress";
+import { canUseSpeech, primeSpeech, speakText, stopSpeech } from "../utils/speech";
 import { getUiLanguage, uiText } from "../utils/uiText";
 import { NotFoundPage } from "./NotFoundPage";
 
@@ -33,6 +34,7 @@ export function SentenceBuilderPage() {
   const [flow, setFlow] = useState<StageFlow>("try");
   const [checkResult, setCheckResult] = useState<AnswerComparison>();
   const [guideWord, setGuideWord] = useState<string>();
+  const [audioNotice, setAudioNotice] = useState("");
   const [retryQueue, setRetryQueue] = useState<number[]>([]);
   const [retryMode, setRetryMode] = useState(false);
   const [retryPosition, setRetryPosition] = useState(0);
@@ -41,6 +43,10 @@ export function SentenceBuilderPage() {
   useEffect(() => {
     if (lesson) markOpened(lesson.id, lesson.activityType, lesson.title);
   }, [lesson]);
+
+  useEffect(() => {
+    return () => stopSpeech();
+  }, []);
 
   if (!lesson) return <NotFoundPage />;
 
@@ -69,15 +75,19 @@ export function SentenceBuilderPage() {
 
   function speakAnswer() {
     const activeLesson = lesson!;
-    if (!("speechSynthesis" in window)) return;
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(stage.targetAnswer);
-    utterance.lang = activeLesson.languageTarget === "spanish" ? "es-ES" : "en-US";
-    utterance.rate = 0.82;
-    window.speechSynthesis.speak(utterance);
+    if (!canUseSpeech()) {
+      setAudioNotice("This browser does not expose text-to-speech. Try Safari/Chrome, or enable speech/audio permissions.");
+    } else {
+      setAudioNotice("");
+    }
+    speakText(stage.targetAnswer, {
+      lang: activeLesson.languageTarget === "spanish" ? "es-ES" : "en-US",
+      rate: 0.82,
+    });
   }
 
   function checkAnswer() {
+    primeSpeech();
     if (showAnswer) return;
     const activeLesson = lesson!;
     const result = compareAnswers(answer, stage.targetAnswer, {
@@ -266,8 +276,9 @@ export function SentenceBuilderPage() {
         {showAnswer && (
           <div className="hidden rounded-lg border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-4 sm:block">
             <p className="font-bold">{copy.shadowingStep}</p>
-            <p className="mt-1 text-sm text-pu3nte-secondary">{copy.shadowInstruction}</p>
-            <div className="mt-4 flex flex-wrap gap-3">
+              <p className="mt-1 text-sm text-pu3nte-secondary">{copy.shadowInstruction}</p>
+              {audioNotice && <p className="mt-3 rounded-md border border-pu3nte-warning/30 bg-pu3nte-warning/10 p-3 text-xs text-pu3nte-secondary">{audioNotice}</p>}
+              <div className="mt-4 flex flex-wrap gap-3">
               <GradientButton variant="ghost" onClick={speakAnswer}>{copy.playAudioAgain}</GradientButton>
               {flow !== "shadow" ? (
                 <GradientButton onClick={() => setFlow("shadow")}>{copy.shadowedIt}</GradientButton>
@@ -310,6 +321,7 @@ export function SentenceBuilderPage() {
             <div className="sticky bottom-0 mt-4 rounded-xl border border-pu3nte-cyan/25 bg-pu3nte-bg/95 p-4">
               <p className="font-bold">{copy.shadowingStep}</p>
               <p className="mt-1 text-sm text-pu3nte-secondary">{copy.shadowInstruction}</p>
+              {audioNotice && <p className="mt-3 rounded-md border border-pu3nte-warning/30 bg-pu3nte-warning/10 p-3 text-xs text-pu3nte-secondary">{audioNotice}</p>}
               <div className="mt-4 grid gap-3">
                 <GradientButton variant="ghost" onClick={speakAnswer}>{copy.playAudioAgain}</GradientButton>
                 {flow !== "shadow" ? (
