@@ -9,6 +9,7 @@ type StageSpec = {
   explanation: string;
   hints?: string[];
   acceptedAnswers?: string[];
+  answerCatches?: NonNullable<SentenceStage["answerCatches"]>;
   wordBreakdown?: NonNullable<SentenceStage["wordBreakdown"]>;
 };
 
@@ -31,6 +32,7 @@ function makeStages(coreVocab: string[], specs: StageSpec[]): SentenceStage[] {
       prompt: spec.prompt,
       targetAnswer: spec.targetAnswer,
       acceptedAnswers: spec.acceptedAnswers,
+      answerCatches: spec.answerCatches,
       hints: spec.hints,
       explanation: spec.explanation,
       wordBreakdown: spec.wordBreakdown,
@@ -267,6 +269,13 @@ export const spanishSentenceBuilderLessons: SentenceBuilderLesson[] = [
         prompt: "After work today, I need and want to practise more Spanish because it helps me.",
         targetAnswer: "Después de mi trabajo hoy, necesito y quiero practicar más español porque me ayuda.",
         explanation: "Después de means after. Más usually goes before the thing you want more of: más español.",
+        answerCatches: [
+          {
+            pattern: "después de trabajar hoy",
+            explanation:
+              "Catch: “Después de trabajar hoy” means “After working today.” The prompt says “After work today,” where work is a noun, so “Después de mi trabajo hoy” is closer. Your sentence is understandable, but it changes the structure slightly.",
+          },
+        ],
         hints: ["Use después de before the noun phrase.", "Más español = more Spanish."],
       },
       {

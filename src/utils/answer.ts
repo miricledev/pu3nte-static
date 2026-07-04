@@ -153,6 +153,12 @@ function getSafeOptionalSpanishSubjectPronouns(correctAnswer: string) {
   return allowed;
 }
 
+export function isSafeOptionalSpanishSubjectPronounToken(token: string, correctAnswer: string) {
+  const allowedPronouns = getSafeOptionalSpanishSubjectPronouns(correctAnswer);
+  if (!allowedPronouns.size) return false;
+  return allowedPronouns.has(normalizedForSpanishPronounRules(token));
+}
+
 function stripSafeOptionalSpanishSubjectPronouns(userAnswer: string, correctAnswer: string, options: CompareAnswerOptions) {
   if (options.languageTarget !== "spanish" || !options.allowSpanishSubjectPronounFlex) return undefined;
   const allowedPronouns = getSafeOptionalSpanishSubjectPronouns(correctAnswer);

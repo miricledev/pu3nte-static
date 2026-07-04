@@ -55,6 +55,7 @@ export interface SentenceStage {
   prompt: string;
   targetAnswer: string;
   acceptedAnswers?: string[];
+  answerCatches?: Array<{ pattern: string; explanation: string }>;
   hints?: string[];
   explanation?: string;
   audioUrl?: string;

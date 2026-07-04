@@ -14,7 +14,7 @@ import { AnswerReveal } from "../components/sentence-builder/AnswerReveal";
 import { WordBreakdown } from "../components/sentence-builder/WordBreakdown";
 import { StageStepper } from "../components/sentence-builder/StageStepper";
 import { VocabGuideModal } from "../components/sentence-builder/VocabGuideModal";
-import { compareAnswers, getSpecialCharactersForLanguage, type AnswerComparison } from "../utils/answer";
+import { compareAnswers, getSpecialCharactersForLanguage, normalizeAnswer, type AnswerComparison } from "../utils/answer";
 import { getProgress, markCompleted, markOpened, saveProgress } from "../utils/progress";
 import { getUiLanguage, uiText } from "../utils/uiText";
 import { NotFoundPage } from "./NotFoundPage";
@@ -48,6 +48,12 @@ export function SentenceBuilderPage() {
   const stage = lesson.data.stages[stageIndex];
   const selectedGuide = stage.vocabGuide?.find((item) => item.word === guideWord);
   const specialCharacters = getSpecialCharactersForLanguage(lesson.languageTarget);
+  const normalizedCurrentAnswer = normalizeAnswer(answer, { accentSensitive: "ignore", punctuationSensitive: "ignore" });
+  const answerCatchNotes = showAnswer
+    ? (stage.answerCatches ?? [])
+      .filter((catchItem) => normalizedCurrentAnswer.includes(normalizeAnswer(catchItem.pattern, { accentSensitive: "ignore", punctuationSensitive: "ignore" })))
+      .map((catchItem) => catchItem.explanation)
+    : [];
   const stageCounter = retryMode
     ? copy.retryStage.replace("{current}", String(retryPosition + 1)).replace("{total}", String(retryQueue.length))
     : `${copy.step} ${stageIndex + 1} / ${lesson.data.stages.length}`;
@@ -250,6 +256,9 @@ export function SentenceBuilderPage() {
               correctLabel={copy.correctAnswer}
               comparisonLabel={copy.answerComparison}
               highlightDifferences={!checkResult?.isCorrect}
+              catchNotes={answerCatchNotes}
+              catchLabel={copy.catchNote}
+              languageTarget={lesson.languageTarget}
             />
           </div>
         )}
@@ -291,6 +300,9 @@ export function SentenceBuilderPage() {
               correctLabel={copy.correctAnswer}
               comparisonLabel={copy.answerComparison}
               highlightDifferences={!checkResult?.isCorrect}
+              catchNotes={answerCatchNotes}
+              catchLabel={copy.catchNote}
+              languageTarget={lesson.languageTarget}
             />
             <div className="mt-4">
               <WordBreakdown items={stage.wordBreakdown} />
