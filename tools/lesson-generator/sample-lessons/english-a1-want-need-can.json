@@ -1,0 +1,285 @@
+{
+  "id": "english-a1-want-need-can",
+  "title": "English A1 Speaking Drill: Want, Need & Can",
+  "subtitle": "Practica frases útiles en inglés en voz alta.",
+  "course": "English Speaking Drills",
+  "level": "A1-A2",
+  "targetLanguage": "english",
+  "learnerNativeLanguage": "spanish",
+  "estimatedMinutes": 4,
+  "durationGoalMinutes": 4,
+  "outputSlug": "english-a1-want-need-can",
+  "branding": {
+    "logoText": "PU3NTE",
+    "theme": "default",
+    "showLogo": true
+  },
+  "voices": {
+    "narrator": "local:spanish",
+    "english_male": "env:ELEVENLABS_ENGLISH_MALE_VOICE_ID",
+    "english_female": "env:ELEVENLABS_ENGLISH_FEMALE_VOICE_ID"
+  },
+  "voiceSettings": {
+    "stability": 0.55,
+    "similarityBoost": 0.8,
+    "style": 0.25,
+    "useSpeakerBoost": true
+  },
+  "settings": {
+    "defaultPauseAfterMs": 1000,
+    "defaultResponsePauseMs": 5000,
+    "subtitleMode": "line",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "fps": 30,
+    "backgroundMusic": false
+  },
+  "segments": [
+    {
+      "id": "001",
+      "type": "intro",
+      "role": "narrator",
+      "text": "Bienvenido a este ejercicio de habla de PU3NTE. En esta lección vas a practicar frases básicas con want, need, and can. Escucha, responde en voz alta y repite la voz nativa.",
+      "subtitle": "Bienvenido a este ejercicio de habla de PU3NTE.",
+      "visualTitle": "English A1 Speaking Drill",
+      "visualSubtitle": "Want, Need & Can",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    },
+    {
+      "id": "002",
+      "type": "prompt",
+      "role": "narrator",
+      "text": "Di en inglés: Quiero practicar hoy.",
+      "subtitle": "Di en inglés: Quiero practicar hoy.",
+      "targetAnswer": "I want to practice today.",
+      "visualMode": "your_turn",
+      "responsePauseMs": 9000,
+      "showTimer": true
+    },
+    {
+      "id": "003",
+      "type": "answer",
+      "role": "english_female",
+      "text": "I want to practice today.",
+      "subtitle": "I want to practice today.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    },
+    {
+      "id": "004",
+      "type": "repeat",
+      "role": "narrator",
+      "text": "Repite la frase.",
+      "subtitle": "Repite la frase.",
+      "targetAnswer": "I want to practice today.",
+      "visualMode": "repeat",
+      "responsePauseMs": 6000,
+      "showTimer": true
+    },
+    {
+      "id": "005",
+      "type": "prompt",
+      "role": "narrator",
+      "text": "Di en inglés: Necesito más tiempo.",
+      "subtitle": "Di en inglés: Necesito más tiempo.",
+      "targetAnswer": "I need more time.",
+      "visualMode": "your_turn",
+      "responsePauseMs": 9000,
+      "showTimer": true
+    },
+    {
+      "id": "006",
+      "type": "answer",
+      "role": "english_male",
+      "text": "I need more time.",
+      "subtitle": "I need more time.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    },
+    {
+      "id": "007",
+      "type": "repeat",
+      "role": "narrator",
+      "text": "Repite la frase.",
+      "subtitle": "Repite la frase.",
+      "targetAnswer": "I need more time.",
+      "visualMode": "repeat",
+      "responsePauseMs": 6000,
+      "showTimer": true
+    },
+    {
+      "id": "008",
+      "type": "prompt",
+      "role": "narrator",
+      "text": "Di en inglés: Puedo hablar un poco.",
+      "subtitle": "Di en inglés: Puedo hablar un poco.",
+      "targetAnswer": "I can speak a little.",
+      "visualMode": "your_turn",
+      "responsePauseMs": 9000,
+      "showTimer": true
+    },
+    {
+      "id": "009",
+      "type": "answer",
+      "role": "english_female",
+      "text": "I can speak a little.",
+      "subtitle": "I can speak a little.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    },
+    {
+      "id": "010",
+      "type": "repeat",
+      "role": "narrator",
+      "text": "Repite la frase.",
+      "subtitle": "Repite la frase.",
+      "targetAnswer": "I can speak a little.",
+      "visualMode": "repeat",
+      "responsePauseMs": 6000,
+      "showTimer": true
+    },
+    {
+      "id": "011",
+      "type": "prompt",
+      "role": "narrator",
+      "text": "Di en inglés: Quiero aprender inglés.",
+      "subtitle": "Di en inglés: Quiero aprender inglés.",
+      "targetAnswer": "I want to learn English.",
+      "visualMode": "your_turn",
+      "responsePauseMs": 9000,
+      "showTimer": true
+    },
+    {
+      "id": "012",
+      "type": "answer",
+      "role": "english_male",
+      "text": "I want to learn English.",
+      "subtitle": "I want to learn English.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    },
+    {
+      "id": "013",
+      "type": "repeat",
+      "role": "narrator",
+      "text": "Repite la frase.",
+      "subtitle": "Repite la frase.",
+      "targetAnswer": "I want to learn English.",
+      "visualMode": "repeat",
+      "responsePauseMs": 6000,
+      "showTimer": true
+    },
+    {
+      "id": "014",
+      "type": "prompt",
+      "role": "narrator",
+      "text": "Di en inglés: Necesito practicar todos los días.",
+      "subtitle": "Di en inglés: Necesito practicar todos los días.",
+      "targetAnswer": "I need to practice every day.",
+      "visualMode": "your_turn",
+      "responsePauseMs": 9000,
+      "showTimer": true
+    },
+    {
+      "id": "015",
+      "type": "answer",
+      "role": "english_female",
+      "text": "I need to practice every day.",
+      "subtitle": "I need to practice every day.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    },
+    {
+      "id": "015a",
+      "type": "repeat",
+      "role": "narrator",
+      "text": "Repite la frase una vez más.",
+      "subtitle": "Repite la frase una vez más.",
+      "targetAnswer": "I need to practice every day.",
+      "visualMode": "repeat",
+      "responsePauseMs": 6000,
+      "showTimer": true
+    },
+    {
+      "id": "016",
+      "type": "review",
+      "role": "narrator",
+      "text": "Repaso rápido. Di: Quiero practicar hoy.",
+      "subtitle": "Repaso rápido: Quiero practicar hoy.",
+      "targetAnswer": "I want to practice today.",
+      "visualMode": "review",
+      "responsePauseMs": 8000,
+      "showTimer": true
+    },
+    {
+      "id": "017",
+      "type": "answer",
+      "role": "english_male",
+      "text": "I want to practice today.",
+      "subtitle": "I want to practice today.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1200,
+      "showTimer": false
+    },
+    {
+      "id": "018",
+      "type": "review",
+      "role": "narrator",
+      "text": "Ahora di: Puedo hablar un poco.",
+      "subtitle": "Repaso: Puedo hablar un poco.",
+      "targetAnswer": "I can speak a little.",
+      "visualMode": "review",
+      "responsePauseMs": 8000,
+      "showTimer": true
+    },
+    {
+      "id": "019",
+      "type": "answer",
+      "role": "english_female",
+      "text": "I can speak a little.",
+      "subtitle": "I can speak a little.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1200,
+      "showTimer": false
+    },
+    {
+      "id": "019a",
+      "type": "final_challenge",
+      "role": "narrator",
+      "text": "Reto final. Di en inglés: Quiero aprender inglés y necesito practicar todos los días.",
+      "subtitle": "Reto final: Quiero aprender inglés y necesito practicar todos los días.",
+      "targetAnswer": "I want to learn English, and I need to practice every day.",
+      "visualMode": "final_challenge",
+      "responsePauseMs": 10000,
+      "showTimer": true
+    },
+    {
+      "id": "019b",
+      "type": "answer",
+      "role": "english_male",
+      "text": "I want to learn English, and I need to practice every day.",
+      "subtitle": "I want to learn English, and I need to practice every day.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1800,
+      "showTimer": false
+    },
+    {
+      "id": "020",
+      "type": "outro",
+      "role": "narrator",
+      "text": "Muy buen trabajo. Practicaste want, need, and can en inglés. Repite esta lección y responde un poco más rápido cada vez.",
+      "subtitle": "Muy buen trabajo. Repite esta lección y responde más rápido cada vez.",
+      "visualTitle": "Practice Complete",
+      "visualSubtitle": "Want, Need & Can",
+      "visualMode": "outro",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { englishSentenceBuilderLessons } from "./sentence-builder/englishSentenc
 import { spanishSentenceBuilderLessons } from "./sentence-builder/spanishSentenceBuilderLessons";
 import { demoVerbSets } from "./demo/demoVerbs";
 import { demoStories } from "./demo/demoStories";
+import { spanishTextingStories } from "./stories/spanishTextingStories";
 import { demoQuizzes } from "./demo/demoQuizzes";
 import { demoReadings } from "./demo/demoReadings";
 import { demoGrammarLessons } from "./demo/demoGrammar";
@@ -14,7 +15,7 @@ import type { ActivityType } from "../types";
 export const flashcardDecks = [...demoFlashcardDecks, spanishGrammarLesson1VocabularyDeck];
 export const sentenceBuilderLessons = [...demoSentenceBuilderLessons, ...englishSentenceBuilderLessons, ...spanishSentenceBuilderLessons];
 export const verbTrainerSets = [...demoVerbSets];
-export const whatsappStories = [...demoStories];
+export const whatsappStories = [...demoStories, ...spanishTextingStories];
 export const checkpointQuizzes = [...demoQuizzes];
 export const readingComprehensions = [...demoReadings];
 export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];

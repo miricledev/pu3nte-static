@@ -4,3 +4,10 @@ dist/
 .env
 .env.*
 !.env.example
+!.env.lesson-generator.example
+tools/lesson-generator/output/*
+!tools/lesson-generator/output/.gitkeep
+tools/lesson-generator/cache/audio/*
+!tools/lesson-generator/cache/audio/.gitkeep
+tools/lesson-generator/sample-lessons/studio-generated/*
+!tools/lesson-generator/sample-lessons/studio-generated/.gitkeep

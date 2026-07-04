@@ -1,0 +1,285 @@
+{
+  "id": "spanish-a1-want-need-can",
+  "title": "Spanish A1 Speaking Drill: Want, Need & Can",
+  "subtitle": "Practise useful beginner Spanish sentences out loud.",
+  "course": "Spanish Speaking Drills",
+  "level": "A1-A2",
+  "targetLanguage": "spanish",
+  "learnerNativeLanguage": "english",
+  "estimatedMinutes": 4,
+  "durationGoalMinutes": 4,
+  "outputSlug": "spanish-a1-want-need-can",
+  "branding": {
+    "logoText": "PU3NTE",
+    "theme": "default",
+    "showLogo": true
+  },
+  "voices": {
+    "narrator": "local:english",
+    "native_male": "env:ELEVENLABS_SPANISH_MALE_VOICE_ID",
+    "native_female": "env:ELEVENLABS_SPANISH_FEMALE_VOICE_ID"
+  },
+  "voiceSettings": {
+    "stability": 0.55,
+    "similarityBoost": 0.8,
+    "style": 0.25,
+    "useSpeakerBoost": true
+  },
+  "settings": {
+    "defaultPauseAfterMs": 1000,
+    "defaultResponsePauseMs": 5000,
+    "subtitleMode": "line",
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "fps": 30,
+    "backgroundMusic": false
+  },
+  "segments": [
+    {
+      "id": "001",
+      "type": "intro",
+      "role": "narrator",
+      "text": "Welcome to this PU3NTE speaking drill. In this lesson, you will practise saying what you want, need, and can do in Spanish. Listen, answer out loud, then repeat the native speaker.",
+      "subtitle": "Welcome to this PU3NTE speaking drill.",
+      "visualTitle": "Spanish A1 Speaking Drill",
+      "visualSubtitle": "Want, Need & Can",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    },
+    {
+      "id": "002",
+      "type": "prompt",
+      "role": "narrator",
+      "text": "Say in Spanish: I want to practise today.",
+      "subtitle": "Say in Spanish: I want to practise today.",
+      "visualMode": "your_turn",
+      "targetAnswer": "Quiero practicar hoy.",
+      "responsePauseMs": 9000,
+      "showTimer": true
+    },
+    {
+      "id": "003",
+      "type": "answer",
+      "role": "native_female",
+      "text": "Quiero practicar hoy.",
+      "subtitle": "Quiero practicar hoy.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    },
+    {
+      "id": "004",
+      "type": "repeat",
+      "role": "narrator",
+      "text": "Repeat it.",
+      "subtitle": "Repeat it.",
+      "targetAnswer": "Quiero practicar hoy.",
+      "visualMode": "repeat",
+      "responsePauseMs": 6000,
+      "showTimer": true
+    },
+    {
+      "id": "005",
+      "type": "prompt",
+      "role": "narrator",
+      "text": "Say in Spanish: I need more time.",
+      "subtitle": "Say in Spanish: I need more time.",
+      "targetAnswer": "Necesito más tiempo.",
+      "visualMode": "your_turn",
+      "responsePauseMs": 9000,
+      "showTimer": true
+    },
+    {
+      "id": "006",
+      "type": "answer",
+      "role": "native_male",
+      "text": "Necesito más tiempo.",
+      "subtitle": "Necesito más tiempo.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    },
+    {
+      "id": "007",
+      "type": "repeat",
+      "role": "narrator",
+      "text": "Repeat it.",
+      "subtitle": "Repeat it.",
+      "targetAnswer": "Necesito más tiempo.",
+      "visualMode": "repeat",
+      "responsePauseMs": 6000,
+      "showTimer": true
+    },
+    {
+      "id": "008",
+      "type": "prompt",
+      "role": "narrator",
+      "text": "Say in Spanish: I can speak a little.",
+      "subtitle": "Say in Spanish: I can speak a little.",
+      "targetAnswer": "Puedo hablar un poco.",
+      "visualMode": "your_turn",
+      "responsePauseMs": 9000,
+      "showTimer": true
+    },
+    {
+      "id": "009",
+      "type": "answer",
+      "role": "native_female",
+      "text": "Puedo hablar un poco.",
+      "subtitle": "Puedo hablar un poco.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    },
+    {
+      "id": "010",
+      "type": "repeat",
+      "role": "narrator",
+      "text": "Repeat it.",
+      "subtitle": "Repeat it.",
+      "targetAnswer": "Puedo hablar un poco.",
+      "visualMode": "repeat",
+      "responsePauseMs": 6000,
+      "showTimer": true
+    },
+    {
+      "id": "011",
+      "type": "prompt",
+      "role": "narrator",
+      "text": "Say in Spanish: I want to learn Spanish.",
+      "subtitle": "Say in Spanish: I want to learn Spanish.",
+      "targetAnswer": "Quiero aprender español.",
+      "visualMode": "your_turn",
+      "responsePauseMs": 9000,
+      "showTimer": true
+    },
+    {
+      "id": "012",
+      "type": "answer",
+      "role": "native_male",
+      "text": "Quiero aprender español.",
+      "subtitle": "Quiero aprender español.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    },
+    {
+      "id": "013",
+      "type": "repeat",
+      "role": "narrator",
+      "text": "Repeat it.",
+      "subtitle": "Repeat it.",
+      "targetAnswer": "Quiero aprender español.",
+      "visualMode": "repeat",
+      "responsePauseMs": 6000,
+      "showTimer": true
+    },
+    {
+      "id": "014",
+      "type": "prompt",
+      "role": "narrator",
+      "text": "Say in Spanish: I need to practise every day.",
+      "subtitle": "Say in Spanish: I need to practise every day.",
+      "targetAnswer": "Necesito practicar todos los días.",
+      "visualMode": "your_turn",
+      "responsePauseMs": 9000,
+      "showTimer": true
+    },
+    {
+      "id": "015",
+      "type": "answer",
+      "role": "native_female",
+      "text": "Necesito practicar todos los días.",
+      "subtitle": "Necesito practicar todos los días.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    },
+    {
+      "id": "015a",
+      "type": "repeat",
+      "role": "narrator",
+      "text": "Repeat it one more time.",
+      "subtitle": "Repeat it one more time.",
+      "targetAnswer": "Necesito practicar todos los días.",
+      "visualMode": "repeat",
+      "responsePauseMs": 6000,
+      "showTimer": true
+    },
+    {
+      "id": "016",
+      "type": "review",
+      "role": "narrator",
+      "text": "Quick review. Say: I want to practise today.",
+      "subtitle": "Quick review: I want to practise today.",
+      "targetAnswer": "Quiero practicar hoy.",
+      "visualMode": "review",
+      "responsePauseMs": 8000,
+      "showTimer": true
+    },
+    {
+      "id": "017",
+      "type": "answer",
+      "role": "native_male",
+      "text": "Quiero practicar hoy.",
+      "subtitle": "Quiero practicar hoy.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1200,
+      "showTimer": false
+    },
+    {
+      "id": "018",
+      "type": "review",
+      "role": "narrator",
+      "text": "Now say: I can speak a little.",
+      "subtitle": "Review: I can speak a little.",
+      "targetAnswer": "Puedo hablar un poco.",
+      "visualMode": "review",
+      "responsePauseMs": 8000,
+      "showTimer": true
+    },
+    {
+      "id": "019",
+      "type": "answer",
+      "role": "native_female",
+      "text": "Puedo hablar un poco.",
+      "subtitle": "Puedo hablar un poco.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1200,
+      "showTimer": false
+    },
+    {
+      "id": "019a",
+      "type": "final_challenge",
+      "role": "narrator",
+      "text": "Final challenge. Say in Spanish: I want to learn Spanish, and I need to practise every day.",
+      "subtitle": "Final challenge: I want to learn Spanish, and I need to practise every day.",
+      "targetAnswer": "Quiero aprender español y necesito practicar todos los días.",
+      "visualMode": "final_challenge",
+      "responsePauseMs": 10000,
+      "showTimer": true
+    },
+    {
+      "id": "019b",
+      "type": "answer",
+      "role": "native_male",
+      "text": "Quiero aprender español y necesito practicar todos los días.",
+      "subtitle": "Quiero aprender español y necesito practicar todos los días.",
+      "visualMode": "answer",
+      "pauseAfterMs": 1800,
+      "showTimer": false
+    },
+    {
+      "id": "020",
+      "type": "outro",
+      "role": "narrator",
+      "text": "Excellent work. You have practised want, need, and can in Spanish. Replay this lesson and answer a little faster each time.",
+      "subtitle": "Excellent work. Replay this lesson and answer a little faster each time.",
+      "visualTitle": "Practice Complete",
+      "visualSubtitle": "Want, Need & Can",
+      "visualMode": "outro",
+      "pauseAfterMs": 1500,
+      "showTimer": false
+    }
+  ]
+}
