@@ -33,6 +33,9 @@ export function SentenceBuilderPage() {
   const [flow, setFlow] = useState<StageFlow>("try");
   const [checkResult, setCheckResult] = useState<AnswerComparison>();
   const [guideWord, setGuideWord] = useState<string>();
+  const [retryQueue, setRetryQueue] = useState<number[]>([]);
+  const [retryMode, setRetryMode] = useState(false);
+  const [retryPosition, setRetryPosition] = useState(0);
   const answerRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
@@ -45,6 +48,18 @@ export function SentenceBuilderPage() {
   const stage = lesson.data.stages[stageIndex];
   const selectedGuide = stage.vocabGuide?.find((item) => item.word === guideWord);
   const specialCharacters = getSpecialCharactersForLanguage(lesson.languageTarget);
+  const stageCounter = retryMode
+    ? copy.retryStage.replace("{current}", String(retryPosition + 1)).replace("{total}", String(retryQueue.length))
+    : `${copy.step} ${stageIndex + 1} / ${lesson.data.stages.length}`;
+
+  function resetStageState() {
+    setShowVocab(false);
+    setShowAnswer(false);
+    setAnswer("");
+    setCheckResult(undefined);
+    setFlow("try");
+    setGuideWord(undefined);
+  }
 
   function speakAnswer() {
     const activeLesson = lesson!;
@@ -57,6 +72,7 @@ export function SentenceBuilderPage() {
   }
 
   function checkAnswer() {
+    if (showAnswer) return;
     const activeLesson = lesson!;
     const result = compareAnswers(answer, stage.targetAnswer, {
       acceptedAnswers: stage.acceptedAnswers,
@@ -76,6 +92,7 @@ export function SentenceBuilderPage() {
     const progress = getProgress();
     const previous = progress.sentenceBuilder[activeLesson.id] ?? { attempts: 0, completedStages: [], updatedAt: new Date().toISOString() };
     const completedStages = rating === "practice" ? previous.completedStages : Array.from(new Set([...previous.completedStages, stage.id]));
+    const nextRetryQueue = !retryMode && rating === "practice" ? Array.from(new Set([...retryQueue, stageIndex])) : retryQueue;
     saveProgress({
       ...progress,
       sentenceBuilder: {
@@ -84,17 +101,35 @@ export function SentenceBuilderPage() {
       },
       percentages: { ...progress.percentages, [activeLesson.id]: Math.round((completedStages.length / activeLesson.data.stages.length) * 100) },
     });
+
+    if (retryMode) {
+      if (retryPosition < retryQueue.length - 1) {
+        const nextRetryPosition = retryPosition + 1;
+        setRetryPosition(nextRetryPosition);
+        setStageIndex(retryQueue[nextRetryPosition]);
+        resetStageState();
+      } else {
+        markCompleted(activeLesson.id);
+        navigate(`/complete/${activeLesson.id}`);
+      }
+      return;
+    }
+
     if (stageIndex === activeLesson.data.stages.length - 1) {
-      markCompleted(activeLesson.id);
-      navigate(`/complete/${activeLesson.id}`);
+      if (nextRetryQueue.length > 0) {
+        setRetryQueue(nextRetryQueue);
+        setRetryMode(true);
+        setRetryPosition(0);
+        setStageIndex(nextRetryQueue[0]);
+        resetStageState();
+      } else {
+        markCompleted(activeLesson.id);
+        navigate(`/complete/${activeLesson.id}`);
+      }
     } else {
       setStageIndex((value) => value + 1);
-      setShowVocab(false);
-      setShowAnswer(false);
-      setAnswer("");
-      setCheckResult(undefined);
-      setFlow("try");
-      setGuideWord(undefined);
+      setRetryQueue(nextRetryQueue);
+      resetStageState();
     }
   }
 
@@ -130,9 +165,14 @@ export function SentenceBuilderPage() {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-gold">
-              {copy.step} {stageIndex + 1} / {lesson.data.stages.length}
+              {stageCounter}
             </p>
             <h2 className="mt-1 text-xl font-bold sm:text-2xl">{stage.title}</h2>
+            {retryMode && (
+              <p className="mt-1 inline-flex rounded-full border border-pu3nte-warning/40 bg-pu3nte-warning/10 px-3 py-1 text-xs font-bold text-pu3nte-warning">
+                {copy.retryRound}
+              </p>
+            )}
             <p className="mt-1 text-sm text-pu3nte-secondary">
               {flow === "try" && copy.stepTry}
               {flow === "checked" && copy.stepChecked}
@@ -166,10 +206,11 @@ export function SentenceBuilderPage() {
           value={answer}
           onChange={(event) => setAnswer(event.target.value)}
           placeholder={copy.typeTranslation}
+          disabled={showAnswer}
         />
-        <SpecialCharacterKeyboard characters={specialCharacters} inputRef={answerRef} onChange={setAnswer} label={copy.specialChars} />
+        {!showAnswer && <SpecialCharacterKeyboard characters={specialCharacters} inputRef={answerRef} onChange={setAnswer} label={copy.specialChars} />}
         <div className="grid gap-3 sm:flex sm:flex-wrap">
-          <GradientButton className="w-full sm:w-auto" disabled={!answer.trim()} onClick={checkAnswer}>{copy.check}</GradientButton>
+          <GradientButton className="w-full sm:w-auto" disabled={!answer.trim() || showAnswer} onClick={checkAnswer}>{copy.check}</GradientButton>
           <GradientButton className="w-full sm:w-auto" variant="ghost" onClick={() => setShowVocab(true)}>{showVocab ? copy.mixedVocabShown : copy.showMixedVocab}</GradientButton>
         </div>
         <details className="rounded-lg border border-white/10 bg-white/[0.04] p-3 sm:hidden">
@@ -188,28 +229,33 @@ export function SentenceBuilderPage() {
           </div>
         )}
         {checkResult && (
-          <div className={`rounded-lg border p-4 ${checkResult.isCorrect ? "border-pu3nte-success/40 bg-pu3nte-success/10" : checkResult.isAlmostCorrect ? "border-pu3nte-warning/40 bg-pu3nte-warning/10" : "border-pu3nte-error/40 bg-pu3nte-error/10"}`} aria-live="polite">
+          <div className={`hidden rounded-lg border p-4 sm:block ${checkResult.isCorrect ? "border-pu3nte-success/40 bg-pu3nte-success/10" : checkResult.isAlmostCorrect ? "border-pu3nte-warning/40 bg-pu3nte-warning/10" : "border-pu3nte-error/40 bg-pu3nte-error/10"}`} aria-live="polite">
             <p className="font-bold">
               {checkResult.isCorrect ? copy.correct : checkResult.isAlmostCorrect ? copy.acceptedRemember : copy.notQuiteYet}
             </p>
             <p className="mt-1 text-sm text-pu3nte-secondary">{getLocalizedFeedbackMessage(checkResult)}</p>
+            {!checkResult.isCorrect && !checkResult.isAlmostCorrect && !retryMode && (
+              <p className="mt-2 text-sm font-semibold text-pu3nte-warning">{copy.retryQueued}</p>
+            )}
           </div>
         )}
         {showAnswer && (
-          <AnswerReveal
-            answer={stage.targetAnswer}
-            explanation={stage.explanation}
-            label={copy.answer}
-            userAnswer={answer}
-            userLabel={copy.yourAnswer}
-            correctLabel={copy.correctAnswer}
-            comparisonLabel={copy.answerComparison}
-            highlightDifferences={!checkResult?.isCorrect}
-          />
+          <div className="hidden sm:block">
+            <AnswerReveal
+              answer={stage.targetAnswer}
+              explanation={stage.explanation}
+              label={copy.answer}
+              userAnswer={answer}
+              userLabel={copy.yourAnswer}
+              correctLabel={copy.correctAnswer}
+              comparisonLabel={copy.answerComparison}
+              highlightDifferences={!checkResult?.isCorrect}
+            />
+          </div>
         )}
-        {showAnswer && <WordBreakdown items={stage.wordBreakdown} />}
+        {showAnswer && <div className="hidden sm:block"><WordBreakdown items={stage.wordBreakdown} /></div>}
         {showAnswer && (
-          <div className="rounded-lg border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-4">
+          <div className="hidden rounded-lg border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-4 sm:block">
             <p className="font-bold">{copy.shadowingStep}</p>
             <p className="mt-1 text-sm text-pu3nte-secondary">{copy.shadowInstruction}</p>
             <div className="mt-4 flex flex-wrap gap-3">
@@ -224,6 +270,47 @@ export function SentenceBuilderPage() {
           </div>
         )}
       </GlassCard>
+      {showAnswer && checkResult && (
+        <div className="fixed inset-0 z-50 flex items-end bg-pu3nte-bg/80 p-3 backdrop-blur-sm sm:hidden" role="dialog" aria-modal="true">
+          <div className="max-h-[88vh] w-full overflow-y-auto rounded-2xl border border-white/10 bg-pu3nte-card p-4 shadow-2xl">
+            <div className={`mb-4 rounded-xl border p-4 ${checkResult.isCorrect ? "border-pu3nte-success/40 bg-pu3nte-success/10" : checkResult.isAlmostCorrect ? "border-pu3nte-warning/40 bg-pu3nte-warning/10" : "border-pu3nte-error/40 bg-pu3nte-error/10"}`}>
+              <p className="text-lg font-black">
+                {checkResult.isCorrect ? copy.correct : checkResult.isAlmostCorrect ? copy.acceptedRemember : copy.notQuiteYet}
+              </p>
+              <p className="mt-1 text-sm text-pu3nte-secondary">{getLocalizedFeedbackMessage(checkResult)}</p>
+              {!checkResult.isCorrect && !checkResult.isAlmostCorrect && !retryMode && (
+                <p className="mt-2 text-sm font-semibold text-pu3nte-warning">{copy.retryQueued}</p>
+              )}
+            </div>
+            <AnswerReveal
+              answer={stage.targetAnswer}
+              explanation={stage.explanation}
+              label={copy.answer}
+              userAnswer={answer}
+              userLabel={copy.yourAnswer}
+              correctLabel={copy.correctAnswer}
+              comparisonLabel={copy.answerComparison}
+              highlightDifferences={!checkResult?.isCorrect}
+            />
+            <div className="mt-4">
+              <WordBreakdown items={stage.wordBreakdown} />
+            </div>
+            <div className="sticky bottom-0 mt-4 rounded-xl border border-pu3nte-cyan/25 bg-pu3nte-bg/95 p-4">
+              <p className="font-bold">{copy.shadowingStep}</p>
+              <p className="mt-1 text-sm text-pu3nte-secondary">{copy.shadowInstruction}</p>
+              <div className="mt-4 grid gap-3">
+                <GradientButton variant="ghost" onClick={speakAnswer}>{copy.playAudioAgain}</GradientButton>
+                {flow !== "shadow" ? (
+                  <GradientButton onClick={() => setFlow("shadow")}>{copy.shadowedIt}</GradientButton>
+                ) : (
+                  <GradientButton onClick={continueWithRating}>{copy.continueNextStage}</GradientButton>
+                )}
+                <GradientButton variant="ghost" onClick={() => completeStage("practice")}>{copy.markForPractice}</GradientButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       <VocabGuideModal
         guide={selectedGuide}
         labels={{ miniGuide: copy.miniGuide, closeMiniGuide: copy.closeMiniGuide, examples: copy.examples, backToSentence: copy.backToSentence }}
