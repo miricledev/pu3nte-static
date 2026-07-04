@@ -167,6 +167,15 @@ export type WhatsAppStory = ContentMeta<"story", {
   comprehensionChecks?: StoryComprehensionCheck[];
   endQuiz?: CheckpointQuestion[];
   learnedVocab?: string[];
+  finalReview?: {
+    keyPhrases: string[];
+    grammarPatterns: string[];
+    speakingPrompts: string[];
+  };
+  completionTask?: {
+    title: string;
+    instructions: string;
+  };
 }>;
 
 export type QuestionType =

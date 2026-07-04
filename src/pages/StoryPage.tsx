@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { whatsappStories } from "../data";
+import { flashcardDecks, whatsappStories } from "../data";
 import { ActivityHeader } from "../components/practice/ActivityHeader";
 import { PageContainer } from "../components/layout/PageContainer";
 import { GradientButton } from "../components/ui/GradientButton";
@@ -154,6 +154,8 @@ export function StoryPage() {
 
   if (!story) return <NotFoundPage />;
   const copy = uiText(getUiLanguage(story.languageTarget, story.learnerNativeLanguage));
+  const preparationDeck = flashcardDecks.find((deck) => deck.id === `${story.id}-flashcards`);
+  const isEnglishForSpanishSpeakers = story.languageTarget === "english" && story.learnerNativeLanguage === "spanish";
 
   return (
     <PageContainer>
@@ -161,6 +163,24 @@ export function StoryPage() {
       <div className="mb-5">
         <InstructionPanel title={copy.instructions} body={copy.storyGuide} />
       </div>
+      {preparationDeck && (
+        <div className="mb-5 rounded-lg border border-pu3nte-gold/30 bg-pu3nte-gold/10 p-5">
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-gold">
+            {isEnglishForSpanishSpeakers ? "Historias por Chat en Inglés — A1 a C2" : "Vocabulary Prep"}
+          </p>
+          <h2 className="mt-2 text-xl font-bold">
+            {isEnglishForSpanishSpeakers ? "Paso 1: Prepara el vocabulario" : "Step 1: Prepare the vocabulary"}
+          </h2>
+          <p className="mt-2 text-sm text-pu3nte-secondary">
+            {isEnglishForSpanishSpeakers
+              ? "Haz estas flashcards antes de leer la historia. No necesitas memorizar todo perfecto, pero intenta reconocer el vocabulario principal. Después verás estas frases dentro de la conversación."
+              : "Practice these flashcards before reading the story so the key phrases feel familiar in context."}
+          </p>
+          <GradientButton className="mt-4" onClick={() => navigate(`/flashcards/${preparationDeck.id}`)}>
+            {isEnglishForSpanishSpeakers ? "Abrir flashcards" : "Open flashcards"}
+          </GradientButton>
+        </div>
+      )}
       <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_360px]">
         <PhoneFrame>
           <div className="flex h-full flex-col">
@@ -214,6 +234,9 @@ export function StoryPage() {
               ) : (
                 <StorySummary
                   learnedVocab={story.data.learnedVocab}
+                  finalReview={story.data.finalReview}
+                  completionTask={story.data.completionTask}
+                  skoolReturnUrl={story.skoolReturnUrl}
                   labels={copy}
                   onPracticeFlashcards={() => navigate(`/flashcards/${story.id}-flashcards`)}
                   onFinish={() => navigate(`/complete/${story.id}`)}
