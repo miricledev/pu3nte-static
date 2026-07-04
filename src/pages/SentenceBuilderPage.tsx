@@ -57,10 +57,13 @@ export function SentenceBuilderPage() {
   }
 
   function checkAnswer() {
+    const activeLesson = lesson!;
     const result = compareAnswers(answer, stage.targetAnswer, {
       acceptedAnswers: stage.acceptedAnswers,
       accentSensitive: "forgiving",
       punctuationSensitive: "forgiving",
+      languageTarget: activeLesson.languageTarget,
+      allowSpanishSubjectPronounFlex: true,
     });
     setCheckResult(result);
     setShowAnswer(true);
@@ -168,7 +171,18 @@ export function SentenceBuilderPage() {
             <p className="mt-1 text-sm text-pu3nte-secondary">{getLocalizedFeedbackMessage(checkResult)}</p>
           </div>
         )}
-        {showAnswer && <AnswerReveal answer={stage.targetAnswer} explanation={stage.explanation} label={copy.answer} />}
+        {showAnswer && (
+          <AnswerReveal
+            answer={stage.targetAnswer}
+            explanation={stage.explanation}
+            label={copy.answer}
+            userAnswer={answer}
+            userLabel={copy.yourAnswer}
+            correctLabel={copy.correctAnswer}
+            comparisonLabel={copy.answerComparison}
+            highlightDifferences={!checkResult?.isCorrect}
+          />
+        )}
         {showAnswer && <WordBreakdown items={stage.wordBreakdown} />}
         {showAnswer && (
           <div className="rounded-lg border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-4">

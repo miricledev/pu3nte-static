@@ -9,6 +9,8 @@ export interface CompareAnswerOptions {
   whitespaceSensitive?: boolean;
   acceptedAnswers?: string[];
   allowMinorTypos?: boolean;
+  languageTarget?: LanguageTarget;
+  allowSpanishSubjectPronounFlex?: boolean;
 }
 
 export interface AnswerComparison {
@@ -78,16 +80,109 @@ function hasForgivenPunctuationIssue(userAnswer: string, correctAnswer: string, 
   return true;
 }
 
+function normalizedForSpanishPronounRules(value: string) {
+  return normalizeAnswer(value, { accentSensitive: "ignore", punctuationSensitive: "ignore" });
+}
+
+function hasCue(value: string, cues: string[]) {
+  return cues.some((cue) => new RegExp(`(^|\\s)${cue}(\\s|$)`, "i").test(value));
+}
+
+function getSafeOptionalSpanishSubjectPronouns(correctAnswer: string) {
+  const normalized = normalizedForSpanishPronounRules(correctAnswer);
+  const allowed = new Set<string>();
+
+  if (hasCue(normalized, [
+    "quiero",
+    "necesito",
+    "puedo",
+    "trabajo",
+    "prefiero",
+    "entiendo",
+    "siento",
+    "estoy",
+    "soy",
+    "he",
+    "fui",
+    "tenia",
+    "tuve",
+    "conoci",
+    "hablo",
+    "cometo",
+    "diria",
+    "voy",
+    "tengo",
+    "queria",
+  ])) {
+    allowed.add("yo");
+  }
+
+  if (hasCue(normalized, [
+    "vamos",
+    "necesitamos",
+    "podemos",
+    "queremos",
+    "preferimos",
+    "entendemos",
+    "consideramos",
+    "tenemos",
+    "somos",
+    "estamos",
+  ])) {
+    allowed.add("nosotros");
+    allowed.add("nosotras");
+  }
+
+  if (hasCue(normalized, [
+    "quieres",
+    "necesitas",
+    "puedes",
+    "prefieres",
+    "entiendes",
+    "trabajas",
+    "hablas",
+    "tienes",
+    "eres",
+    "estas",
+    "vas",
+  ])) {
+    allowed.add("tu");
+    allowed.add("tú");
+  }
+
+  return allowed;
+}
+
+function stripSafeOptionalSpanishSubjectPronouns(userAnswer: string, correctAnswer: string, options: CompareAnswerOptions) {
+  if (options.languageTarget !== "spanish" || !options.allowSpanishSubjectPronounFlex) return undefined;
+  const allowedPronouns = getSafeOptionalSpanishSubjectPronouns(correctAnswer);
+  if (!allowedPronouns.size) return undefined;
+
+  const userTokens = userAnswer.trim().split(/\s+/);
+  const strippedTokens = userTokens.filter((token) => {
+    const normalizedToken = normalizedForSpanishPronounRules(token);
+    return !allowedPronouns.has(normalizedToken);
+  });
+
+  if (strippedTokens.length === userTokens.length || strippedTokens.length === 0) return undefined;
+
+  const strippedAnswer = strippedTokens.join(" ");
+  if (normalizeAnswer(strippedAnswer, options) === normalizeAnswer(correctAnswer, options)) return strippedAnswer;
+  return undefined;
+}
+
 export function compareAnswers(userAnswer: string, correctAnswer: string, options: CompareAnswerOptions = {}): AnswerComparison {
   const candidates = [correctAnswer, ...(options.acceptedAnswers ?? [])];
   const normalizedUserAnswer = normalizeAnswer(userAnswer, options);
 
   for (const candidate of candidates) {
     const normalizedCorrectAnswer = normalizeAnswer(candidate, options);
-    if (normalizedUserAnswer === normalizedCorrectAnswer) {
-      const missingAccents = findAccentIssues(userAnswer, candidate);
+    const pronounFlexibleUserAnswer = stripSafeOptionalSpanishSubjectPronouns(userAnswer, candidate, options);
+    if (normalizedUserAnswer === normalizedCorrectAnswer || pronounFlexibleUserAnswer) {
+      const answerForIssueCheck = pronounFlexibleUserAnswer ?? userAnswer;
+      const missingAccents = findAccentIssues(answerForIssueCheck, candidate);
       const almostAccent = missingAccents.length > 0 && options.accentSensitive === "forgiving";
-      const punctuationIssues = hasForgivenPunctuationIssue(userAnswer, candidate, options) ? ["Check punctuation."] : [];
+      const punctuationIssues = hasForgivenPunctuationIssue(answerForIssueCheck, candidate, options) ? ["Check punctuation."] : [];
       const almostPunctuation = punctuationIssues.length > 0;
 
       return {
