@@ -9,6 +9,7 @@ import { InstructionPanel } from "../components/ui/InstructionPanel";
 import { ReadingText } from "../components/reading/ReadingText";
 import { ReadingSettings } from "../components/reading/ReadingSettings";
 import { ReadingQuestionInput } from "../components/reading/ReadingQuestionInput";
+import { SyncedReadingAudioPlayer } from "../components/reading/SyncedReadingAudioPlayer";
 import { getProgress, markCompleted, markOpened, saveProgress } from "../utils/progress";
 import { NotFoundPage } from "./NotFoundPage";
 import { compareAnswers, getSpecialCharactersForLanguage } from "../utils/answer";
@@ -69,6 +70,9 @@ export function ReadingPage() {
         <GlassCard className="space-y-5">
           <InstructionPanel title={copy.instructions} body={copy.readingGuide} />
           <ReadingSettings fontSize={fontSize} setFontSize={setFontSize} focus={focus} setFocus={setFocus} labels={{ focusMode: copy.focusMode }} />
+          {reading.data.audioUrl && reading.data.audioAlignmentUrl && (
+            <SyncedReadingAudioPlayer audioUrl={reading.data.audioUrl} alignmentUrl={reading.data.audioAlignmentUrl} />
+          )}
           <ReadingText paragraphs={reading.data.paragraphs} fontSize={fontSize} labels={{ showTranslation: copy.showTranslation, hideTranslation: copy.hideTranslation, shadow: copy.shadow }} />
           <div className="rounded-lg border border-white/10 bg-white/[0.04] p-4">
             <h2 className="font-bold">{copy.comprehension}</h2>

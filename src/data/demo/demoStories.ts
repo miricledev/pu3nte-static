@@ -22,6 +22,13 @@ export const demoStories: WhatsAppStory[] = [
       ],
       messages: [
         {
+          id: "n1",
+          speakerId: "narrator",
+          messageType: "narrator",
+          text: "Story guide: a tiny WhatsApp chat. Tap the voice note when it appears, or use Aa to reveal the text.",
+          translation: "Story guide: a tiny WhatsApp chat. Tap the voice note when it appears, or use Aa to reveal the text.",
+        },
+        {
           id: "m1",
           speakerId: "ana",
           text: "Hola, Leo.",
@@ -38,8 +45,10 @@ export const demoStories: WhatsAppStory[] = [
         {
           id: "m3",
           speakerId: "maya",
+          messageType: "voice-note",
           text: "Sí, por favor. Yo también.",
           translation: "Yes, please. Me too.",
+          audioUrl: "/audio/stories/demo-whatsapp-cafe-story/m3.mp3",
           vocabHighlights: [{ phrase: "por favor", meaning: "please" }],
           grammarHighlights: [{ phrase: "también", explanation: "Also / too." }],
         },

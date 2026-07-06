@@ -16,15 +16,36 @@ type CheckSeed = {
   skill: string;
 };
 
-function messages(seeds: MessageSeed[]): StoryMessage[] {
-  return seeds.map((seed, index) => ({
+function messages(storyId: string, title: string, seeds: MessageSeed[]): StoryMessage[] {
+  const chatMessages = seeds.map((seed, index) => ({
     id: `m${index + 1}`,
     speakerId: seed.speakerId,
+    messageType: (index + 1) % 5 === 0 ? "voice-note" as const : "text" as const,
     text: seed.text,
     translation: seed.translation,
+    audioUrl: (index + 1) % 5 === 0 ? `/audio/stories/${storyId}/m${index + 1}.mp3` : undefined,
     vocabHighlights: [{ phrase: seed.vocab[0], meaning: seed.vocab[1], note: seed.vocab[2] }],
     grammarHighlights: seed.grammar ? [{ phrase: seed.grammar[0], explanation: seed.grammar[1] }] : undefined,
   }));
+
+  return [
+    {
+      id: "n1",
+      speakerId: "narrator",
+      messageType: "narrator",
+      text: `Story guide: ${title}. Read the chat like a real WhatsApp exchange. Some messages are voice notes; tap play first, or tap Aa if you need the text.`,
+      translation: `Story guide: ${title}. Read the chat like a real WhatsApp exchange. Some messages are voice notes; tap play first, or tap Aa if you need the text.`,
+    },
+    ...chatMessages.slice(0, 12),
+    {
+      id: "n2",
+      speakerId: "narrator",
+      messageType: "narrator",
+      text: "Quick pause: notice the repeated chunks. The goal is to recognise them instantly when they appear in real chats.",
+      translation: "Quick pause: notice the repeated chunks. The goal is to recognise them instantly when they appear in real chats.",
+    },
+    ...chatMessages.slice(12),
+  ];
 }
 
 function checks(seeds: CheckSeed[]): StoryComprehensionCheck[] {
@@ -82,7 +103,7 @@ function story({
       targetLanguage: "spanish",
       nativeLanguage: "english",
       characters,
-      messages: messages(messageSeeds),
+      messages: messages(id, title, messageSeeds),
       comprehensionChecks: checks(checkSeeds),
       learnedVocab,
     },

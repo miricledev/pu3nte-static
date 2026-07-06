@@ -223,6 +223,7 @@ export type ReadingComprehension = ContentMeta<"reading", {
   glossary: Highlight[];
   questions: CheckpointQuestion[];
   audioUrl?: string;
+  audioAlignmentUrl?: string;
 }>;
 
 export interface GrammarHighlight {

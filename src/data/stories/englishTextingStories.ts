@@ -26,15 +26,36 @@ function grammarHighlights(seeds?: HighlightSeed[]): Highlight[] | undefined {
   return seeds?.map(([phrase, meaning, note]) => ({ phrase, explanation: `${meaning}${note ? ` ${note}` : ""}` }));
 }
 
-function messages(seeds: MessageSeed[]): StoryMessage[] {
-  return seeds.map((seed, index) => ({
+function messages(storyId: string, title: string, seeds: MessageSeed[]): StoryMessage[] {
+  const chatMessages = seeds.map((seed, index) => ({
     id: `m${index + 1}`,
     speakerId: seed.speakerId,
+    messageType: (index + 1) % 5 === 0 ? "voice-note" as const : "text" as const,
     text: seed.text,
     translation: seed.translation,
+    audioUrl: (index + 1) % 5 === 0 ? `/audio/stories/${storyId}/m${index + 1}.mp3` : undefined,
     vocabHighlights: highlights(seed.vocab),
     grammarHighlights: grammarHighlights(seed.grammar),
   }));
+
+  return [
+    {
+      id: "n1",
+      speakerId: "narrator",
+      messageType: "narrator",
+      text: `Guía de historia: ${title}. Lee el chat como una conversación real de WhatsApp. Algunos mensajes son notas de voz; toca play primero, o Aa si necesitas ver el texto.`,
+      translation: `Story guide: ${title}. Read the chat like a real WhatsApp conversation. Some messages are voice notes; tap play first, or Aa if you need the text.`,
+    },
+    ...chatMessages.slice(0, 12),
+    {
+      id: "n2",
+      speakerId: "narrator",
+      messageType: "narrator",
+      text: "Pausa rápida: fíjate en los chunks que se repiten. La meta es reconocerlos rápido cuando aparezcan en conversaciones reales.",
+      translation: "Quick pause: notice the repeated chunks. The goal is to recognise them quickly when they appear in real conversations.",
+    },
+    ...chatMessages.slice(12),
+  ];
 }
 
 function checks(seeds: CheckSeed[]): StoryComprehensionCheck[] {
@@ -99,7 +120,7 @@ function story({
       targetLanguage: "english",
       nativeLanguage: "spanish",
       characters,
-      messages: messages(messageSeeds),
+      messages: messages(id, title, messageSeeds),
       comprehensionChecks: checks(checkSeeds),
       learnedVocab,
       finalReview: { keyPhrases, grammarPatterns, speakingPrompts },

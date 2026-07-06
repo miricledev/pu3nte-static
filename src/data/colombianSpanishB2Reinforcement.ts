@@ -434,6 +434,8 @@ export const colombianSpanishB2Reading: ReadingComprehension = {
   activityType: "reading",
   data: {
     targetLanguage: "spanish",
+    audioUrl: "/audio/readings/colombian-spanish-b2-reading-aguacero/full.mp3",
+    audioAlignmentUrl: "/audio/readings/colombian-spanish-b2-reading-aguacero/timings.json",
     paragraphs: readingParagraphs,
     glossary: colombianVocab.map((item) => ({ phrase: item.term, meaning: item.meaning, note: item.example })),
     questions: readingQuestions,
