@@ -13,14 +13,26 @@ import { spanishGrammarLesson1MasculineFeminine } from "./grammar/spanishGrammar
 import { spanishGrammarLesson1VocabularyDeck } from "./flashcards/spanishGrammarLesson1Vocabulary";
 import { englishTextingStoryFlashcards } from "./flashcards/englishTextingStoryFlashcards";
 import { spanishTextingStoryFlashcards } from "./flashcards/spanishTextingStoryFlashcards";
+import {
+  colombianSpanishB2FlashcardDeck,
+  colombianSpanishB2Quiz,
+  colombianSpanishB2Reading,
+  colombianSpanishB2WhatsAppStory,
+} from "./colombianSpanishB2Reinforcement";
 import type { ActivityType } from "../types";
 
-export const flashcardDecks = [...demoFlashcardDecks, spanishGrammarLesson1VocabularyDeck, ...spanishTextingStoryFlashcards, ...englishTextingStoryFlashcards];
+export const flashcardDecks = [
+  ...demoFlashcardDecks,
+  spanishGrammarLesson1VocabularyDeck,
+  ...spanishTextingStoryFlashcards,
+  ...englishTextingStoryFlashcards,
+  colombianSpanishB2FlashcardDeck,
+];
 export const sentenceBuilderLessons = [...demoSentenceBuilderLessons, ...englishSentenceBuilderLessons, ...spanishSentenceBuilderLessons];
 export const verbTrainerSets = [...demoVerbSets];
-export const whatsappStories = [...demoStories, ...spanishTextingStories, ...englishTextingStories];
-export const checkpointQuizzes = [...demoQuizzes];
-export const readingComprehensions = [...demoReadings];
+export const whatsappStories = [...demoStories, ...spanishTextingStories, ...englishTextingStories, colombianSpanishB2WhatsAppStory];
+export const checkpointQuizzes = [...demoQuizzes, colombianSpanishB2Quiz];
+export const readingComprehensions = [...demoReadings, colombianSpanishB2Reading];
 export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];
 
 export const allActivities = [
