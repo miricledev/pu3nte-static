@@ -25,9 +25,9 @@ export function ReadingQuestionInput({
 
   if (question.type === "multiple-choice" || question.type === "true-false") {
     return (
-      <div className="space-y-3">
-        <p className="text-sm font-semibold text-pu3nte-secondary">{question.prompt}</p>
-        <div className="grid gap-2">
+      <div className="min-w-0 space-y-3">
+        <p className="break-words text-sm font-semibold text-pu3nte-secondary">{question.prompt}</p>
+        <div className="grid min-w-0 gap-2">
           {shuffledOptions.map((option) => (
             <QuizOption
               key={option}
@@ -44,8 +44,8 @@ export function ReadingQuestionInput({
 
   if (question.type === "order-words") {
     return (
-      <div className="space-y-3">
-        <p className="text-sm font-semibold text-pu3nte-secondary">{question.prompt}</p>
+      <div className="min-w-0 space-y-3">
+        <p className="break-words text-sm font-semibold text-pu3nte-secondary">{question.prompt}</p>
         <OrderWordsInput
           words={question.wordBank ?? question.correctAnswer?.split(/\s+/) ?? []}
           selectedWords={value ? value.split(/\s+/) : []}

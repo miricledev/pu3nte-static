@@ -19,6 +19,7 @@ export function SyncedReadingAudioPlayer({
   const activeWordRef = useRef<HTMLSpanElement | null>(null);
   const [words, setWords] = useState<TimedWord[]>([]);
   const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [rateIndex, setRateIndex] = useState(2);
   const [loadError, setLoadError] = useState(false);
@@ -58,7 +59,7 @@ export function SyncedReadingAudioPlayer({
   }, [rateIndex]);
 
   useEffect(() => {
-    activeWordRef.current?.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+    activeWordRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
   }, [activeWordIndex]);
 
   function syncTime() {
@@ -83,18 +84,32 @@ export function SyncedReadingAudioPlayer({
     syncTime();
   }
 
+  function seek(nextTime: number) {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.currentTime = nextTime;
+    setCurrentTime(nextTime);
+  }
+
+  function formatTime(seconds: number) {
+    if (!Number.isFinite(seconds)) return "0:00";
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60).toString().padStart(2, "0");
+    return `${minutes}:${remainingSeconds}`;
+  }
+
   return (
-    <div className="rounded-2xl border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-4 shadow-inner">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div>
+    <div className="min-w-0 overflow-hidden rounded-2xl border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-3 shadow-inner sm:p-4">
+      <div className="flex min-w-0 flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+        <div className="min-w-0">
           <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-cyan">Synced audio reading</p>
-          <h2 className="mt-1 text-lg font-black text-pu3nte-text">Listen and follow the highlighted word</h2>
+          <h2 className="mt-1 break-words text-base font-black text-pu3nte-text sm:text-lg">Listen and follow the highlighted word</h2>
         </div>
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="grid w-full min-w-0 grid-cols-3 gap-2 sm:flex sm:w-auto sm:flex-wrap sm:items-center">
           <button type="button" className="rounded-full border border-white/10 px-3 py-2 text-sm font-bold text-pu3nte-secondary transition hover:bg-white/[0.08] hover:text-pu3nte-text" onClick={() => jump(-5)}>
             -5s
           </button>
-          <button type="button" className="rounded-full bg-pu3nte-cyan px-5 py-2 text-sm font-black text-pu3nte-bg transition hover:scale-105" onClick={togglePlayback}>
+          <button type="button" className="rounded-full bg-pu3nte-cyan px-4 py-2 text-sm font-black text-pu3nte-bg transition hover:scale-105" onClick={togglePlayback}>
             {isPlaying ? "Pause" : "Play"}
           </button>
           <button type="button" className="rounded-full border border-white/10 px-3 py-2 text-sm font-bold text-pu3nte-secondary transition hover:bg-white/[0.08] hover:text-pu3nte-text" onClick={() => jump(5)}>
@@ -108,14 +123,31 @@ export function SyncedReadingAudioPlayer({
         src={audioUrl}
         preload="metadata"
         onTimeUpdate={syncTime}
+        onLoadedMetadata={() => setDuration(audioRef.current?.duration ?? 0)}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         onEnded={() => setIsPlaying(false)}
-        className="mt-4 w-full"
-        controls
+        className="hidden"
       />
 
-      <div className="mt-4 rounded-xl border border-white/10 bg-black/15 p-3">
+      <div className="mt-4 min-w-0 rounded-xl border border-white/10 bg-black/15 p-3">
+        <div className="flex items-center gap-3">
+          <span className="w-10 shrink-0 text-xs font-bold tabular-nums text-pu3nte-secondary">{formatTime(currentTime)}</span>
+          <input
+            type="range"
+            min={0}
+            max={duration || 0}
+            step={0.05}
+            value={Math.min(currentTime, duration || currentTime)}
+            onChange={(event) => seek(Number(event.target.value))}
+            aria-label="Reading audio position"
+            className="min-w-0 flex-1 accent-pu3nte-cyan"
+          />
+          <span className="w-10 shrink-0 text-right text-xs font-bold tabular-nums text-pu3nte-secondary">{formatTime(duration)}</span>
+        </div>
+      </div>
+
+      <div className="mt-3 min-w-0 rounded-xl border border-white/10 bg-black/15 p-3">
         <label htmlFor="reading-playback-speed" className="text-sm font-bold text-pu3nte-text">
           Speed: {playbackRates[rateIndex]}x
         </label>
@@ -129,7 +161,7 @@ export function SyncedReadingAudioPlayer({
           onChange={(event) => setRateIndex(Number(event.target.value))}
           className="mt-2 w-full accent-pu3nte-cyan"
         />
-        <div className="mt-1 flex justify-between text-[11px] font-bold text-pu3nte-secondary">
+        <div className="mt-1 grid grid-cols-6 text-center text-[10px] font-bold text-pu3nte-secondary sm:text-[11px]">
           {playbackRates.map((rate) => <span key={rate}>{rate}x</span>)}
         </div>
       </div>
@@ -139,12 +171,12 @@ export function SyncedReadingAudioPlayer({
           Audio loaded, but the word timing file could not be loaded.
         </p>
       ) : (
-        <div className="mt-4 max-h-56 overflow-y-auto rounded-xl border border-white/10 bg-pu3nte-bg/70 p-4 leading-8">
+        <div className="mt-4 max-h-56 min-w-0 overflow-y-auto overflow-x-hidden rounded-xl border border-white/10 bg-pu3nte-bg/70 p-3 leading-8 sm:p-4">
           {words.map((word, index) => (
             <span
               key={`${word.text}-${word.start}-${index}`}
               ref={index === activeWordIndex ? activeWordRef : undefined}
-              className={`mx-0.5 rounded-md px-1 transition ${index === activeWordIndex ? "bg-pu3nte-gold text-pu3nte-bg shadow-lg shadow-pu3nte-gold/20" : "text-pu3nte-secondary"}`}
+              className={`mx-0.5 inline-block max-w-full break-words rounded-md px-1 transition ${index === activeWordIndex ? "bg-pu3nte-gold text-pu3nte-bg shadow-lg shadow-pu3nte-gold/20" : "text-pu3nte-secondary"}`}
             >
               {word.text}
             </span>

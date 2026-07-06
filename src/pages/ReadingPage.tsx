@@ -66,19 +66,19 @@ export function ReadingPage() {
   return (
     <PageContainer className={focus ? "max-w-3xl" : ""}>
       <ActivityHeader {...reading} />
-      <div className="grid gap-6 xl:grid-cols-[1fr_320px]">
-        <GlassCard className="space-y-5">
+      <div className="grid min-w-0 gap-6 xl:grid-cols-[minmax(0,1fr)_320px]">
+        <GlassCard className="min-w-0 space-y-5 overflow-hidden">
           <InstructionPanel title={copy.instructions} body={copy.readingGuide} />
           <ReadingSettings fontSize={fontSize} setFontSize={setFontSize} focus={focus} setFocus={setFocus} labels={{ focusMode: copy.focusMode }} />
           {reading.data.audioUrl && reading.data.audioAlignmentUrl && (
             <SyncedReadingAudioPlayer audioUrl={reading.data.audioUrl} alignmentUrl={reading.data.audioAlignmentUrl} />
           )}
           <ReadingText paragraphs={reading.data.paragraphs} fontSize={fontSize} labels={{ showTranslation: copy.showTranslation, hideTranslation: copy.hideTranslation, shadow: copy.shadow }} />
-          <div className="rounded-lg border border-white/10 bg-white/[0.04] p-4">
+          <div className="min-w-0 rounded-lg border border-white/10 bg-white/[0.04] p-4">
             <h2 className="font-bold">{copy.comprehension}</h2>
             <div className="mt-4 grid gap-4">
               {reading.data.questions.map((question) => (
-                <div key={question.id} className="rounded-lg border border-white/10 bg-white/[0.04] p-4">
+                <div key={question.id} className="min-w-0 rounded-lg border border-white/10 bg-white/[0.04] p-4">
                 <ReadingQuestionInput
                   key={question.id}
                   question={question}
@@ -103,10 +103,10 @@ export function ReadingPage() {
             {score !== null && <p className="mt-3 text-sm text-pu3nte-secondary" aria-live="polite">Reading score: {score}%</p>}
           </div>
         </GlassCard>
-        <GlassCard>
+        <GlassCard className="min-w-0 overflow-hidden">
           <h2 className="font-bold">{copy.newVocabulary}</h2>
-          <ul className="mt-3 grid gap-2 text-sm text-pu3nte-secondary">
-            {reading.data.glossary.map((item) => <li key={item.phrase}><strong className="text-pu3nte-text">{item.phrase}</strong>: {item.meaning}</li>)}
+          <ul className="mt-3 grid min-w-0 gap-2 text-sm text-pu3nte-secondary">
+            {reading.data.glossary.map((item) => <li key={item.phrase} className="min-w-0 break-words"><strong className="text-pu3nte-text">{item.phrase}</strong>: {item.meaning}</li>)}
           </ul>
         </GlassCard>
       </div>
