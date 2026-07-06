@@ -9,10 +9,12 @@ import { PhoneFrame } from "../components/story/PhoneFrame";
 import { ChatBubble } from "../components/story/ChatBubble";
 import { StoryProgress } from "../components/story/StoryProgress";
 import { StorySummary } from "../components/story/StorySummary";
+import { TypedLanguageInput } from "../components/practice/TypedLanguageInput";
 import { getProgress, markCompleted, markOpened, saveProgress } from "../utils/progress";
 import { shuffleArray } from "../utils/study";
 import { canUseSpeech, primeSpeech, speakText, stopSpeech } from "../utils/speech";
 import { getUiLanguage, uiText } from "../utils/uiText";
+import { compareAnswers, getSpecialCharactersForLanguage } from "../utils/answer";
 import { NotFoundPage } from "./NotFoundPage";
 
 function getLearnerReadingDelay(text: string) {
@@ -35,12 +37,14 @@ export function StoryPage() {
   const [checkFeedback, setCheckFeedback] = useState("");
   const [shuffledCheckOptions, setShuffledCheckOptions] = useState<Record<string, string[]>>({});
   const [audioNotice, setAudioNotice] = useState("");
+  const [summaryOpen, setSummaryOpen] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const messages = story?.data.messages.slice(0, visible) ?? [];
   const activeCheck = story?.data.comprehensionChecks?.find((check) => {
     const lastVisibleMessage = story.data.messages[visible - 1];
     return lastVisibleMessage?.id === check.afterMessageId && !answeredChecks[check.id];
   });
+  const storyComplete = Boolean(story && visible >= story.data.messages.length && !activeCheck);
 
   useEffect(() => {
     if (story) markOpened(story.id, story.activityType, story.title);
@@ -85,6 +89,10 @@ export function StoryPage() {
     return () => window.clearTimeout(id);
   });
 
+  useEffect(() => {
+    if (storyComplete) setSummaryOpen(true);
+  }, [storyComplete]);
+
   function speak(text: string, onDone?: () => void) {
     if (!story) return undefined;
     if (!canUseSpeech()) {
@@ -128,7 +136,15 @@ export function StoryPage() {
   function answerCheck(option: string) {
     primeSpeech();
     if (!activeCheck) return;
-    const correct = option === activeCheck.question.correctAnswer;
+    const correct =
+      activeCheck.question.type === "multiple-choice" || activeCheck.question.type === "true-false"
+        ? option === activeCheck.question.correctAnswer
+        : compareAnswers(option, activeCheck.question.correctAnswer ?? "", {
+            acceptedAnswers: activeCheck.question.correctAnswers,
+            accentSensitive: "ignore",
+            punctuationSensitive: "ignore",
+            languageTarget: story?.languageTarget,
+          }).isCorrect;
     setSelectedCheckOption(option);
     setCheckFeedback(correct ? activeCheck.question.explanation : `Not quite. ${activeCheck.question.explanation}`);
   }
@@ -154,8 +170,9 @@ export function StoryPage() {
 
   if (!story) return <NotFoundPage />;
   const copy = uiText(getUiLanguage(story.languageTarget, story.learnerNativeLanguage));
-  const preparationDeck = flashcardDecks.find((deck) => deck.id === `${story.id}-flashcards`);
+  const preparationDeck = flashcardDecks.find((deck) => deck.id === `${story.id}-flashcards` || deck.relatedCourse === story.id);
   const isEnglishForSpanishSpeakers = story.languageTarget === "english" && story.learnerNativeLanguage === "spanish";
+  const specialCharacters = getSpecialCharactersForLanguage(story.languageTarget);
 
   return (
     <PageContainer>
@@ -202,45 +219,67 @@ export function StoryPage() {
                 <div className="rounded-lg border border-pu3nte-cyan/30 bg-pu3nte-cyan/10 p-4">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-pu3nte-cyan">{copy.comprehensionCheck}</p>
                   <h3 className="mt-2 font-bold">{activeCheck.question.prompt}</h3>
-                  <div className="mt-3 grid gap-2 sm:grid-cols-3">
-                    {(shuffledCheckOptions[activeCheck.id] ?? activeCheck.question.options ?? []).map((option) => {
-                      const selected = selectedCheckOption === option;
-                      const correct = option === activeCheck.question.correctAnswer;
-                      return (
-                        <button
-                          key={option}
-                          type="button"
-                          className={`rounded-md border px-3 py-2 text-sm font-bold transition ${
-                            selected
-                              ? correct
-                                ? "border-pu3nte-success bg-pu3nte-success/15"
-                                : "border-pu3nte-error bg-pu3nte-error/15"
-                              : "border-white/10 bg-white/[0.04] hover:border-pu3nte-cyan/40"
-                          }`}
-                          onClick={() => answerCheck(option)}
-                        >
-                          {option}
-                        </button>
-                      );
-                    })}
-                  </div>
+                  {activeCheck.question.type === "multiple-choice" || activeCheck.question.type === "true-false" ? (
+                    <div className="mt-3 grid gap-2 sm:grid-cols-3">
+                      {(shuffledCheckOptions[activeCheck.id] ?? activeCheck.question.options ?? []).map((option) => {
+                        const selected = selectedCheckOption === option;
+                        const correct = option === activeCheck.question.correctAnswer;
+                        return (
+                          <button
+                            key={option}
+                            type="button"
+                            className={`rounded-md border px-3 py-2 text-sm font-bold transition ${
+                              selected
+                                ? correct
+                                  ? "border-pu3nte-success bg-pu3nte-success/15"
+                                  : "border-pu3nte-error bg-pu3nte-error/15"
+                                : "border-white/10 bg-white/[0.04] hover:border-pu3nte-cyan/40"
+                            }`}
+                            onClick={() => answerCheck(option)}
+                          >
+                            {option}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div className="mt-3">
+                      <TypedLanguageInput
+                        id={`story-check-answer-${activeCheck.id}`}
+                        label="Your answer"
+                        value={selectedCheckOption ?? ""}
+                        onChange={(value) => {
+                          setSelectedCheckOption(value);
+                          setCheckFeedback("");
+                        }}
+                        onSubmit={() => selectedCheckOption?.trim() && answerCheck(selectedCheckOption)}
+                        characters={specialCharacters}
+                        placeholder="Type the phrase from the story..."
+                      />
+                    </div>
+                  )}
                   {checkFeedback && <p className="mt-3 text-sm text-pu3nte-secondary" aria-live="polite">{checkFeedback}</p>}
-                  <GradientButton className="mt-3 w-full" disabled={!selectedCheckOption} onClick={continueAfterCheck}>
-                    {copy.continueStory}
+                  <GradientButton
+                    className="mt-3 w-full"
+                    disabled={!selectedCheckOption?.trim()}
+                    onClick={() => (checkFeedback ? continueAfterCheck() : answerCheck(selectedCheckOption ?? ""))}
+                  >
+                    {checkFeedback ? copy.continueStory : "Check answer"}
                   </GradientButton>
                 </div>
               ) : visible < story.data.messages.length ? (
                 <GradientButton onClick={revealNext}>{copy.revealNextMessage}</GradientButton>
               ) : (
-                <StorySummary
-                  learnedVocab={story.data.learnedVocab}
-                  finalReview={story.data.finalReview}
-                  completionTask={story.data.completionTask}
-                  skoolReturnUrl={story.skoolReturnUrl}
-                  labels={copy}
-                  onPracticeFlashcards={() => navigate(`/flashcards/${story.id}-flashcards`)}
-                  onFinish={() => navigate(`/complete/${story.id}`)}
-                />
+                <div className="rounded-lg border border-pu3nte-success/30 bg-pu3nte-success/10 p-4">
+                  <h3 className="font-bold">{copy.storyComplete}</h3>
+                  <p className="mt-2 text-sm text-pu3nte-secondary">
+                    {copy.learnedPhrases}: {(story.data.learnedVocab ?? []).slice(0, 6).join(", ")}
+                    {(story.data.learnedVocab?.length ?? 0) > 6 ? "..." : ""}
+                  </p>
+                  <GradientButton className="mt-4 w-full" onClick={() => setSummaryOpen(true)}>
+                    Ver resumen final
+                  </GradientButton>
+                </div>
               )}
             </div>
           </div>
@@ -251,9 +290,38 @@ export function StoryPage() {
           <label className="mt-3 flex items-center gap-2 text-sm text-pu3nte-secondary"><input type="checkbox" checked={autoPlay} onChange={(event) => setAutoPlay(event.target.checked)} /> {copy.autoplay}</label>
           <label className="mt-3 flex items-center gap-2 text-sm text-pu3nte-secondary"><input type="checkbox" checked={audioEnabled} onChange={(event) => { setAudioEnabled(event.target.checked); if (event.target.checked && !primeSpeech()) setAudioNotice("This browser does not expose text-to-speech. Try Safari/Chrome, or enable speech/audio permissions."); }} /> {copy.readAloud}</label>
           {audioNotice && <p className="mt-3 rounded-md border border-pu3nte-warning/30 bg-pu3nte-warning/10 p-3 text-xs text-pu3nte-secondary">{audioNotice}</p>}
-          <GradientButton className="mt-5 w-full" variant="ghost" onClick={() => { setVisible(1); setAnsweredChecks({}); setSelectedCheckOption(undefined); setCheckFeedback(""); setShuffledCheckOptions({}); saveStory(1); }}>{copy.restartStory}</GradientButton>
+          <GradientButton className="mt-5 w-full" variant="ghost" onClick={() => { setVisible(1); setAnsweredChecks({}); setSelectedCheckOption(undefined); setCheckFeedback(""); setShuffledCheckOptions({}); setSummaryOpen(false); saveStory(1); }}>{copy.restartStory}</GradientButton>
         </div>
       </div>
+      {storyComplete && summaryOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-pu3nte-bg/85 p-3 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="story-summary-title">
+          <div className="max-h-[88dvh] w-full max-w-3xl overflow-y-auto rounded-2xl border border-white/10 bg-pu3nte-card p-4 shadow-2xl sm:p-6">
+            <div className="mb-4 flex items-center justify-between gap-4">
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-success">100% complete</p>
+                <h2 id="story-summary-title" className="mt-1 text-2xl font-black">{copy.storyComplete}</h2>
+              </div>
+              <button
+                type="button"
+                className="rounded-full border border-white/10 px-3 py-2 text-sm font-bold text-pu3nte-secondary transition hover:bg-white/[0.08] hover:text-pu3nte-text"
+                onClick={() => setSummaryOpen(false)}
+                aria-label="Close story summary"
+              >
+                ✕
+              </button>
+            </div>
+            <StorySummary
+              learnedVocab={story.data.learnedVocab}
+              finalReview={story.data.finalReview}
+              completionTask={story.data.completionTask}
+              skoolReturnUrl={story.skoolReturnUrl}
+              labels={copy}
+              onPracticeFlashcards={() => navigate(`/flashcards/${preparationDeck?.id ?? `${story.id}-flashcards`}`)}
+              onFinish={() => navigate(`/complete/${story.id}`)}
+            />
+          </div>
+        </div>
+      )}
     </PageContainer>
   );
 }

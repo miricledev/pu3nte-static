@@ -2,13 +2,16 @@ type CountdownCircleProps = {
   totalMs: number;
   remainingMs: number;
   label: string;
+  size?: number;
+  dimmed?: boolean;
 };
 
-export const CountdownCircle = ({ totalMs, remainingMs, label }: CountdownCircleProps) => {
-  const radius = 162;
+export const CountdownCircle = ({ totalMs, remainingMs, label, size = 360, dimmed = false }: CountdownCircleProps) => {
+  const radius = size * 0.45;
   const circumference = 2 * Math.PI * radius;
   const progress = totalMs <= 0 ? 0 : remainingMs / totalMs;
   const seconds = Math.max(0, Math.ceil(remainingMs / 1000));
+  const center = size / 2;
 
   return (
     <aside
@@ -20,18 +23,21 @@ export const CountdownCircle = ({ totalMs, remainingMs, label }: CountdownCircle
     >
       <div
         style={{
-          width: 360,
-          height: 360,
+          width: size,
+          height: size,
           position: "relative",
           display: "grid",
           placeItems: "center",
+          filter: dimmed ? "saturate(0.82)" : "saturate(1.1)",
         }}
       >
-        <svg width="360" height="360" viewBox="0 0 360 360" style={{ position: "absolute", inset: 0 }}>
-          <circle cx="180" cy="180" r={radius} stroke="rgba(255,255,255,0.12)" strokeWidth="18" fill="none" />
+        <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} style={{ position: "absolute", inset: 0 }}>
+          <circle cx={center} cy={center} r={radius * 0.72} stroke="rgba(255,255,255,0.08)" strokeWidth="2" fill="none" />
+          <circle cx={center} cy={center} r={radius * 0.86} stroke="rgba(255,255,255,0.08)" strokeWidth="2" fill="none" />
+          <circle cx={center} cy={center} r={radius} stroke="rgba(255,255,255,0.12)" strokeWidth="18" fill="rgba(5,8,20,0.34)" />
           <circle
-            cx="180"
-            cy="180"
+            cx={center}
+            cy={center}
             r={radius}
             stroke="url(#timerGradient)"
             strokeWidth="18"
@@ -39,7 +45,8 @@ export const CountdownCircle = ({ totalMs, remainingMs, label }: CountdownCircle
             strokeLinecap="round"
             strokeDasharray={circumference}
             strokeDashoffset={circumference * (1 - progress)}
-            transform="rotate(-90 180 180)"
+            transform={`rotate(-90 ${center} ${center})`}
+            opacity={dimmed ? 0.62 : 1}
           />
           <defs>
             <linearGradient id="timerGradient" x1="0" x2="1" y1="0" y2="1">
@@ -51,9 +58,10 @@ export const CountdownCircle = ({ totalMs, remainingMs, label }: CountdownCircle
         </svg>
         <div
           style={{
-            fontSize: 104,
+            fontSize: size * 0.29,
             fontWeight: 800,
             lineHeight: 1,
+            textShadow: "0 0 26px rgba(0,186,242,0.45)",
           }}
         >
           {seconds}
@@ -62,7 +70,7 @@ export const CountdownCircle = ({ totalMs, remainingMs, label }: CountdownCircle
       <div
         style={{
           color: "rgba(255,255,255,0.74)",
-          fontSize: 26,
+          fontSize: size * 0.072,
           textAlign: "center",
           textTransform: "uppercase",
           letterSpacing: 0,

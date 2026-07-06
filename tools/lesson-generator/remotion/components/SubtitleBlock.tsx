@@ -9,18 +9,18 @@ export const SubtitleBlock = ({ title, subtitle, text, phaseProgress }: Subtitle
   const opacity = Math.min(1, 0.72 + phaseProgress * 0.28);
 
   return (
-    <div style={{ marginTop: 30, opacity }}>
+    <div style={{ marginTop: 22, opacity }}>
       {title ? (
-        <div style={{ fontSize: 58, lineHeight: 1.05, fontWeight: 800, marginBottom: 18 }}>{title}</div>
+        <div style={{ fontSize: 48, lineHeight: 1.05, fontWeight: 800, marginBottom: 14 }}>{title}</div>
       ) : null}
       {subtitle ? (
-        <div style={{ fontSize: 34, lineHeight: 1.2, color: "rgba(255,255,255,0.68)", marginBottom: 38 }}>
+        <div style={{ fontSize: 28, lineHeight: 1.2, color: "rgba(255,255,255,0.68)", marginBottom: 26 }}>
           {subtitle}
         </div>
       ) : null}
       <div
         style={{
-          fontSize: title ? 54 : 70,
+          fontSize: title ? 46 : 58,
           lineHeight: 1.12,
           fontWeight: 760,
           overflowWrap: "break-word",

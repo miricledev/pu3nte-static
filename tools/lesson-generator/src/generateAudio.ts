@@ -21,7 +21,7 @@ function getSegmentVoiceSettings(script: LessonScript, segment: LessonSegment): 
 }
 
 export function resolveVoiceId(script: LessonScript, segment: LessonSegment): string {
-  const voiceReference = script.voices[segment.role];
+  const voiceReference = segment.voiceId ?? script.voices[segment.role];
 
   if (!voiceReference) {
     throw new Error(`Missing voice mapping for segment ${segment.id} role "${segment.role}".`);
@@ -152,7 +152,7 @@ export async function generateAudioClips(
 export function buildEstimatedAudioClips(script: LessonScript): GeneratedAudioClip[] {
   return script.segments.map((segment) => ({
     segmentId: segment.id,
-    voiceId: script.voices[segment.role] ?? segment.role,
+    voiceId: segment.voiceId ?? script.voices[segment.role] ?? segment.role,
     filePath: "",
     durationMs: estimateSpokenDurationMs(segment.text),
     cacheHit: false,

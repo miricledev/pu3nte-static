@@ -45,13 +45,31 @@ ELEVENLABS_SPANISH_MALE_VOICE_ID=
 ELEVENLABS_SPANISH_FEMALE_VOICE_ID=
 ELEVENLABS_ENGLISH_MALE_VOICE_ID=
 ELEVENLABS_ENGLISH_FEMALE_VOICE_ID=
+ELEVENLABS_SPANISH_NARRATOR_VOICE_ID=
+ELEVENLABS_ENGLISH_NARRATOR_VOICE_ID=
+ELEVENLABS_COLOMBIAN_SPANISH_MALE_VOICE_ID=
+ELEVENLABS_COLOMBIAN_SPANISH_FEMALE_VOICE_ID=
+ELEVENLABS_ARGENTINIAN_SPANISH_MALE_VOICE_ID=
+ELEVENLABS_ARGENTINIAN_SPANISH_FEMALE_VOICE_ID=
+ELEVENLABS_MEXICAN_SPANISH_MALE_VOICE_ID=
+ELEVENLABS_MEXICAN_SPANISH_FEMALE_VOICE_ID=
+ELEVENLABS_DOMINICAN_SPANISH_MALE_VOICE_ID=
+ELEVENLABS_DOMINICAN_SPANISH_FEMALE_VOICE_ID=
+ELEVENLABS_BRITISH_ENGLISH_MALE_VOICE_ID=
+ELEVENLABS_BRITISH_ENGLISH_FEMALE_VOICE_ID=
+ELEVENLABS_AMERICAN_ENGLISH_MALE_VOICE_ID=
+ELEVENLABS_AMERICAN_ENGLISH_FEMALE_VOICE_ID=
+ELEVENLABS_IRISH_ENGLISH_MALE_VOICE_ID=
+ELEVENLABS_IRISH_ENGLISH_FEMALE_VOICE_ID=
+ELEVENLABS_AUSTRALIAN_ENGLISH_MALE_VOICE_ID=
+ELEVENLABS_AUSTRALIAN_ENGLISH_FEMALE_VOICE_ID=
 LOCAL_TTS_ENGLISH_VOICE_NAME=
 LOCAL_TTS_SPANISH_VOICE_NAME=
 ```
 
 Never commit real API keys. The generator reads env values only in local Node.js scripts.
 
-Narrator segments can use local system TTS to avoid spending ElevenLabs credits:
+Narrator segments default to ElevenLabs env voices in the Lesson Studio copied prompts. If you want to save credits for a generic lesson, you can still use local system TTS:
 
 ```json
 "voices": {
@@ -60,6 +78,26 @@ Narrator segments can use local system TTS to avoid spending ElevenLabs credits:
 ```
 
 Use `local:english` for English narration and `local:spanish` for Spanish narration. On Windows, the generator chooses the first installed matching speech voice. If you want a specific installed voice, set `LOCAL_TTS_ENGLISH_VOICE_NAME` or `LOCAL_TTS_SPANISH_VOICE_NAME` in `.env.lesson-generator`.
+
+Keep local narrator lines monolingual. For example, avoid Spanish local TTS saying `Ahora di: I want coffee` or English local TTS saying `Say: Quiero café`, because system voices pronounce the other language badly. Instead:
+
+- Narrator text: `Ahora di esta frase en inglés.`
+- `showOnScreenText` / `targetAnswer`: `I want coffee.`
+- Answer or repeat segment: use an English ElevenLabs voice to pronounce `I want coffee.`
+
+This keeps narrator clips free/local while only the native answer clips use ElevenLabs.
+
+Dialect/accent lessons use ElevenLabs narrator voices too. The Lesson Studio dialect/accent picker maps narrator and speaker roles to env variables like this:
+
+```json
+"voices": {
+  "narrator": "env:ELEVENLABS_ENGLISH_NARRATOR_VOICE_ID",
+  "native_male": "env:ELEVENLABS_COLOMBIAN_SPANISH_MALE_VOICE_ID",
+  "native_female": "env:ELEVENLABS_COLOMBIAN_SPANISH_FEMALE_VOICE_ID"
+}
+```
+
+Spanish dialect courses use an English narrator plus `native_male` / `native_female` Spanish voices. English accent courses use a Spanish narrator plus `english_male` / `english_female` English voices. Changing voice IDs does not change video timing logic: the generator measures each rendered clip duration, builds the timeline from the real durations, and inserts exact FFmpeg silence for pauses.
 
 ## Commands
 
@@ -146,7 +184,7 @@ narrator, native_male, native_female, english_male, english_female,
 spanish_male, spanish_female, speaker_1, speaker_2
 ```
 
-Each segment requires `id`, `type`, `role`, and `text`. Optional fields include `subtitle`, `visualTitle`, `visualSubtitle`, `visualMode`, `pauseAfterMs`, `responsePauseMs`, `showTimer`, `timerLabel`, `speakerName`, `showOnScreenText`, and `targetAnswer`.
+Each segment requires `id`, `type`, `role`, and `text`. Optional fields include `voiceId`, `subtitle`, `visualTitle`, `visualSubtitle`, `visualMode`, `pauseAfterMs`, `responsePauseMs`, `showTimer`, `timerLabel`, `speakerName`, `showOnScreenText`, and `targetAnswer`. Use `voiceId` only for a per-segment override, such as ElevenLabs intro narration while the rest of the narrator role stays local TTS.
 
 ## Timing
 
@@ -159,6 +197,13 @@ spoken audio duration + pauseAfterMs or responsePauseMs
 ```
 
 When `showTimer` is true, the countdown appears during the pause portion. For example, `responsePauseMs: 5000` creates a five-second animated timer after the spoken prompt.
+
+If pacing feels slow, reduce JSON pauses rather than editing audio manually. Good starting ranges:
+
+- `defaultPauseAfterMs`: 500-900
+- short prompt `responsePauseMs`: 3000-4500
+- longer final challenge `responsePauseMs`: 6000-7000
+- answer/repeat `pauseAfterMs`: 600-1200
 
 ## Subtitles And Transcript
 

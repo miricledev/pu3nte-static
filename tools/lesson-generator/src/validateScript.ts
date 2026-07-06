@@ -53,6 +53,7 @@ const segmentSchema = z
     id: z.string().min(1),
     type: z.enum(segmentTypes),
     role: z.enum(segmentRoles),
+    voiceId: z.string().min(1).optional(),
     text: z.string().min(1),
     subtitle: z.string().optional(),
     visualTitle: z.string().optional(),

@@ -1,4 +1,5 @@
 import { AbsoluteFill, Audio, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import { AudioMixer } from "./components/AudioMixer";
 import { CountdownCircle } from "./components/CountdownCircle";
 import { LessonHeader } from "./components/LessonHeader";
 import { ModeBadge } from "./components/ModeBadge";
@@ -67,7 +68,13 @@ export const Pu3nteLessonVideo = ({ timeline, audioSrc }: RemotionLessonProps) =
       : 0;
   const timerRemainingMs =
     timerIsVisible && activeSegment.timerEndMs !== null ? Math.max(0, activeSegment.timerEndMs - currentMs) : 0;
+  const segmentTotalMs = activeSegment.segmentEndMs - activeSegment.segmentStartMs;
+  const segmentRemainingMs = Math.max(0, activeSegment.segmentEndMs - currentMs);
+  const displayTimerTotalMs = timerIsVisible ? timerTotalMs : segmentTotalMs;
+  const displayTimerRemainingMs = timerIsVisible ? timerRemainingMs : segmentRemainingMs;
+  const displayTimerLabel = timerIsVisible ? activeSegment.timerLabel ?? "Respond out loud" : getModeLabel(activeSegment);
   const overallProgress = currentMs / timeline.totalDurationMs;
+  const visualIntensity = timerIsVisible ? 1 : activeSegment.visualMode === "answer" || activeSegment.visualMode === "repeat" ? 0.84 : 0.52;
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#050814", color: "white", fontFamily: "Inter, Arial, sans-serif" }}>
@@ -86,17 +93,41 @@ export const Pu3nteLessonVideo = ({ timeline, audioSrc }: RemotionLessonProps) =
         <main
           style={{
             display: "grid",
-            gridTemplateColumns: timerIsVisible ? "1fr 420px" : "1fr",
+            gridTemplateRows: "270px minmax(0, 1fr)",
             alignItems: "center",
-            gap: 72,
+            gap: 28,
           }}
         >
           <section
             style={{
+              position: "relative",
+              minHeight: 270,
+              display: "grid",
+              placeItems: "center",
+              border: "1px solid rgba(255,255,255,0.1)",
+              borderRadius: 22,
+              background:
+                "radial-gradient(circle at 50% 48%, rgba(0,186,242,0.18), transparent 38%), linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.025))",
+              boxShadow: "0 24px 80px rgba(0,0,0,0.26)",
+              overflow: "hidden",
+            }}
+          >
+            <AudioMixer frame={frame} intensity={visualIntensity} />
+            <CountdownCircle
+              totalMs={displayTimerTotalMs}
+              remainingMs={displayTimerRemainingMs}
+              label={displayTimerLabel}
+              size={220}
+              dimmed={!timerIsVisible}
+            />
+          </section>
+          <section
+            style={{
               minWidth: 0,
-              padding: "60px 64px",
+              alignSelf: "stretch",
+              padding: "34px 52px",
               border: "1px solid rgba(255,255,255,0.14)",
-              borderRadius: 8,
+              borderRadius: 18,
               background: "linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.035))",
               boxShadow: "0 28px 90px rgba(0,0,0,0.34)",
               backdropFilter: "blur(18px)",
@@ -111,14 +142,6 @@ export const Pu3nteLessonVideo = ({ timeline, audioSrc }: RemotionLessonProps) =
             />
             <SpeakerLabel role={activeSegment.role} speakerName={activeSegment.speakerName} />
           </section>
-
-          {timerIsVisible ? (
-            <CountdownCircle
-              totalMs={timerTotalMs}
-              remainingMs={timerRemainingMs}
-              label={activeSegment.timerLabel ?? "Respond out loud"}
-            />
-          ) : null}
         </main>
 
         <ProgressBar

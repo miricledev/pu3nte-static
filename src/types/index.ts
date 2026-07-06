@@ -143,6 +143,7 @@ export interface StoryChoice {
 export interface StoryMessage {
   id: string;
   speakerId: string;
+  messageType?: "text" | "narrator" | "voice-note";
   text: string;
   translation?: string;
   vocabHighlights?: Highlight[];
