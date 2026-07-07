@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { StoryCharacter, StoryMessage } from "../../types";
 import { HighlightedPhrase } from "./HighlightedPhrase";
 
@@ -50,19 +50,56 @@ export function ChatBubble({
 }) {
   const [showVoiceText, setShowVoiceText] = useState(false);
   const [isPlayingVoiceNote, setIsPlayingVoiceNote] = useState(false);
+  const [voiceNoteRate, setVoiceNoteRate] = useState<0.5 | 1>(1);
+  const [voiceNoteCurrentTime, setVoiceNoteCurrentTime] = useState(0);
+  const [voiceNoteDuration, setVoiceNoteDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const isNarrator = message.messageType === "narrator" || (!character && message.speakerId === "narrator");
   const isVoiceNote = message.messageType === "voice-note";
+  const waveformBars = useMemo(
+    () => Array.from({ length: 36 }, (_, index) => 8 + ((index * 13 + message.text.length * 7) % 24)),
+    [message.text.length],
+  );
+  const voiceNoteProgress = voiceNoteDuration > 0 ? Math.min(1, voiceNoteCurrentTime / voiceNoteDuration) : 0;
+
+  function getVoiceAudio() {
+    if (!message.audioUrl) return;
+    if (audioRef.current) return audioRef.current;
+
+    const audio = new Audio(message.audioUrl);
+    audio.preload = "metadata";
+    audio.playbackRate = voiceNoteRate;
+    audio.addEventListener("loadedmetadata", () => setVoiceNoteDuration(audio.duration || 0));
+    audio.addEventListener("timeupdate", () => setVoiceNoteCurrentTime(audio.currentTime || 0));
+    audio.addEventListener("ended", () => {
+      setIsPlayingVoiceNote(false);
+      setVoiceNoteCurrentTime(0);
+      audio.currentTime = 0;
+    });
+    audio.addEventListener("error", () => setIsPlayingVoiceNote(false));
+    audioRef.current = audio;
+    return audio;
+  }
 
   function playVoiceNote() {
-    if (!message.audioUrl) return;
-    audioRef.current?.pause();
-    const audio = new Audio(message.audioUrl);
-    audioRef.current = audio;
+    const audio = getVoiceAudio();
+    if (!audio) return;
+
+    if (!audio.paused) {
+      audio.pause();
+      setIsPlayingVoiceNote(false);
+      return;
+    }
+
+    audio.playbackRate = voiceNoteRate;
     setIsPlayingVoiceNote(true);
-    audio.addEventListener("ended", () => setIsPlayingVoiceNote(false), { once: true });
-    audio.addEventListener("error", () => setIsPlayingVoiceNote(false), { once: true });
     void audio.play().catch(() => setIsPlayingVoiceNote(false));
+  }
+
+  function toggleVoiceNoteRate() {
+    const nextRate = voiceNoteRate === 1 ? 0.5 : 1;
+    setVoiceNoteRate(nextRate);
+    if (audioRef.current) audioRef.current.playbackRate = nextRate;
   }
 
   useEffect(() => {
@@ -98,20 +135,48 @@ export function ChatBubble({
           )}
         </div>
         {isVoiceNote ? (
-          <div className="rounded-xl border border-white/10 bg-black/15 p-3">
+          <div className="rounded-2xl border border-white/10 bg-black/20 p-3 shadow-inner">
             <div className="flex items-center gap-3">
               <button
                 type="button"
-                className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-pu3nte-cyan text-sm font-black text-pu3nte-bg transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-50"
+                className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-pu3nte-cyan text-sm font-black text-pu3nte-bg shadow-lg shadow-pu3nte-cyan/20 transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-50"
                 onClick={playVoiceNote}
                 disabled={!message.audioUrl}
                 aria-label={message.audioUrl ? "Play voice note" : "Voice note audio not available yet"}
               >
                 {isPlayingVoiceNote ? "Ⅱ" : "▶"}
               </button>
-              <div className="h-8 flex-1 overflow-hidden rounded-full border border-white/10 bg-white/[0.05]">
-                <div className="h-full w-2/3 rounded-full bg-gradient-to-r from-pu3nte-cyan/70 via-pu3nte-gold/70 to-pu3nte-red/70 opacity-70" />
+              <div className="min-w-0 flex-1">
+                <div className="flex h-12 min-w-0 items-center gap-[3px] overflow-hidden rounded-full border border-white/10 bg-white/[0.06] px-3">
+                  {waveformBars.map((height, index) => {
+                    const isPlayed = index / waveformBars.length <= voiceNoteProgress;
+                    const pulseHeight = isPlayingVoiceNote ? height + ((index % 3) - 1) * 4 : height;
+                    return (
+                      <span
+                        key={`${message.id}-wave-${index}`}
+                        className={`w-[3px] shrink-0 rounded-full transition-all duration-200 ${isPlayed ? "bg-pu3nte-cyan" : "bg-white/30"}`}
+                        style={{ height: `${Math.max(6, pulseHeight)}px` }}
+                      />
+                    );
+                  })}
+                </div>
+                <div className="mt-1 flex items-center justify-between gap-2 text-[10px] font-bold text-pu3nte-secondary">
+                  <span>{voiceNoteRate === 0.5 ? "Half speed" : "Normal speed"}</span>
+                  {voiceNoteDuration > 0 && <span>{Math.max(0, Math.ceil(voiceNoteDuration - voiceNoteCurrentTime))}s</span>}
+                </div>
               </div>
+              <button
+                type="button"
+                className={`rounded-full border px-2 py-1 text-[11px] font-black transition ${
+                  voiceNoteRate === 0.5
+                    ? "border-pu3nte-gold/60 bg-pu3nte-gold/20 text-pu3nte-gold"
+                    : "border-white/10 text-pu3nte-secondary hover:bg-white/[0.08] hover:text-pu3nte-text"
+                }`}
+                onClick={toggleVoiceNoteRate}
+                aria-label={voiceNoteRate === 0.5 ? "Play voice note at normal speed" : "Play voice note at half speed"}
+              >
+                0.5x
+              </button>
               <button
                 type="button"
                 className="rounded-full border border-white/10 px-2 py-1 text-[11px] font-black text-pu3nte-secondary transition hover:bg-white/[0.08] hover:text-pu3nte-text"
