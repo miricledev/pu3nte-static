@@ -37,6 +37,12 @@ import {
   americanEnglishB2AgreementsReading,
   americanEnglishB2AgreementsWhatsAppStory,
 } from "./americanEnglishB2AgreementsReinforcement";
+import {
+  americanEnglishC1EmotionalHonestyFlashcardDeck,
+  americanEnglishC1EmotionalHonestyQuiz,
+  americanEnglishC1EmotionalHonestyReading,
+  americanEnglishC1EmotionalHonestyWhatsAppStory,
+} from "./americanEnglishC1EmotionalHonestyReinforcement";
 import type { ActivityType } from "../types";
 
 export const flashcardDecks = [
@@ -48,12 +54,13 @@ export const flashcardDecks = [
   colombianSpanishB2PracticalFlashcardDeck,
   americanEnglishB2FlashcardDeck,
   americanEnglishB2AgreementsFlashcardDeck,
+  americanEnglishC1EmotionalHonestyFlashcardDeck,
 ];
 export const sentenceBuilderLessons = [...demoSentenceBuilderLessons, ...englishSentenceBuilderLessons, ...spanishSentenceBuilderLessons];
 export const verbTrainerSets = [...demoVerbSets];
-export const whatsappStories = [...demoStories, ...spanishTextingStories, ...englishTextingStories, colombianSpanishB2WhatsAppStory, colombianSpanishB2PracticalWhatsAppStory, americanEnglishB2WhatsAppStory, americanEnglishB2AgreementsWhatsAppStory];
-export const checkpointQuizzes = [...demoQuizzes, colombianSpanishB2Quiz, colombianSpanishB2PracticalQuiz, americanEnglishB2Quiz, americanEnglishB2AgreementsQuiz];
-export const readingComprehensions = [...demoReadings, colombianSpanishB2Reading, colombianSpanishB2PracticalReading, americanEnglishB2Reading, americanEnglishB2AgreementsReading];
+export const whatsappStories = [...demoStories, ...spanishTextingStories, ...englishTextingStories, colombianSpanishB2WhatsAppStory, colombianSpanishB2PracticalWhatsAppStory, americanEnglishB2WhatsAppStory, americanEnglishB2AgreementsWhatsAppStory, americanEnglishC1EmotionalHonestyWhatsAppStory];
+export const checkpointQuizzes = [...demoQuizzes, colombianSpanishB2Quiz, colombianSpanishB2PracticalQuiz, americanEnglishB2Quiz, americanEnglishB2AgreementsQuiz, americanEnglishC1EmotionalHonestyQuiz];
+export const readingComprehensions = [...demoReadings, colombianSpanishB2Reading, colombianSpanishB2PracticalReading, americanEnglishB2Reading, americanEnglishB2AgreementsReading, americanEnglishC1EmotionalHonestyReading];
 export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];
 
 export const allActivities = [
