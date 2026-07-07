@@ -19,6 +19,12 @@ import {
   colombianSpanishB2Reading,
   colombianSpanishB2WhatsAppStory,
 } from "./colombianSpanishB2Reinforcement";
+import {
+  colombianSpanishB2PracticalFlashcardDeck,
+  colombianSpanishB2PracticalQuiz,
+  colombianSpanishB2PracticalReading,
+  colombianSpanishB2PracticalWhatsAppStory,
+} from "./colombianSpanishB2PracticalReinforcement";
 import type { ActivityType } from "../types";
 
 export const flashcardDecks = [
@@ -27,12 +33,13 @@ export const flashcardDecks = [
   ...spanishTextingStoryFlashcards,
   ...englishTextingStoryFlashcards,
   colombianSpanishB2FlashcardDeck,
+  colombianSpanishB2PracticalFlashcardDeck,
 ];
 export const sentenceBuilderLessons = [...demoSentenceBuilderLessons, ...englishSentenceBuilderLessons, ...spanishSentenceBuilderLessons];
 export const verbTrainerSets = [...demoVerbSets];
-export const whatsappStories = [...demoStories, ...spanishTextingStories, ...englishTextingStories, colombianSpanishB2WhatsAppStory];
-export const checkpointQuizzes = [...demoQuizzes, colombianSpanishB2Quiz];
-export const readingComprehensions = [...demoReadings, colombianSpanishB2Reading];
+export const whatsappStories = [...demoStories, ...spanishTextingStories, ...englishTextingStories, colombianSpanishB2WhatsAppStory, colombianSpanishB2PracticalWhatsAppStory];
+export const checkpointQuizzes = [...demoQuizzes, colombianSpanishB2Quiz, colombianSpanishB2PracticalQuiz];
+export const readingComprehensions = [...demoReadings, colombianSpanishB2Reading, colombianSpanishB2PracticalReading];
 export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];
 
 export const allActivities = [
