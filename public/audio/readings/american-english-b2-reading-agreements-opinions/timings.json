@@ -1,0 +1,2532 @@
+[
+  {
+    "text": "Hey,",
+    "start": 0,
+    "end": 0.302
+  },
+  {
+    "text": "quick",
+    "start": 0.372,
+    "end": 0.58
+  },
+  {
+    "text": "question:",
+    "start": 0.615,
+    "end": 1.254
+  },
+  {
+    "text": "how",
+    "start": 1.637,
+    "end": 1.788
+  },
+  {
+    "text": "do",
+    "start": 1.834,
+    "end": 1.892
+  },
+  {
+    "text": "you",
+    "start": 1.939,
+    "end": 2.009
+  },
+  {
+    "text": "disagree",
+    "start": 2.067,
+    "end": 2.438
+  },
+  {
+    "text": "with",
+    "start": 2.473,
+    "end": 2.589
+  },
+  {
+    "text": "friends",
+    "start": 2.635,
+    "end": 2.868
+  },
+  {
+    "text": "in",
+    "start": 2.902,
+    "end": 2.972
+  },
+  {
+    "text": "English",
+    "start": 3.053,
+    "end": 3.46
+  },
+  {
+    "text": "without",
+    "start": 3.518,
+    "end": 3.785
+  },
+  {
+    "text": "sounding",
+    "start": 3.82,
+    "end": 4.122
+  },
+  {
+    "text": "rude?",
+    "start": 4.214,
+    "end": 4.748
+  },
+  {
+    "text": "Honestly,",
+    "start": 5.259,
+    "end": 5.793
+  },
+  {
+    "text": "my",
+    "start": 5.817,
+    "end": 5.921
+  },
+  {
+    "text": "take",
+    "start": 5.991,
+    "end": 6.246
+  },
+  {
+    "text": "is…",
+    "start": 6.304,
+    "end": 6.653
+  },
+  {
+    "text": "you",
+    "start": 6.827,
+    "end": 6.966
+  },
+  {
+    "text": "need",
+    "start": 7.047,
+    "end": 7.233
+  },
+  {
+    "text": "a",
+    "start": 7.291,
+    "end": 7.326
+  },
+  {
+    "text": "few",
+    "start": 7.396,
+    "end": 7.57
+  },
+  {
+    "text": "soft",
+    "start": 7.639,
+    "end": 7.895
+  },
+  {
+    "text": "phrases",
+    "start": 7.93,
+    "end": 8.359
+  },
+  {
+    "text": "before",
+    "start": 8.429,
+    "end": 8.719
+  },
+  {
+    "text": "you",
+    "start": 8.754,
+    "end": 8.824
+  },
+  {
+    "text": "give",
+    "start": 8.882,
+    "end": 9.021
+  },
+  {
+    "text": "the",
+    "start": 9.044,
+    "end": 9.114
+  },
+  {
+    "text": "real",
+    "start": 9.172,
+    "end": 9.346
+  },
+  {
+    "text": "opinion.",
+    "start": 9.404,
+    "end": 10.019
+  },
+  {
+    "text": "If",
+    "start": 10.461,
+    "end": 10.588
+  },
+  {
+    "text": "someone",
+    "start": 10.635,
+    "end": 10.89
+  },
+  {
+    "text": "says",
+    "start": 10.925,
+    "end": 11.099
+  },
+  {
+    "text": "a",
+    "start": 11.146,
+    "end": 11.18
+  },
+  {
+    "text": "rooftop",
+    "start": 11.25,
+    "end": 11.622
+  },
+  {
+    "text": "spot",
+    "start": 11.68,
+    "end": 11.935
+  },
+  {
+    "text": "is",
+    "start": 11.993,
+    "end": 12.074
+  },
+  {
+    "text": "perfect,",
+    "start": 12.144,
+    "end": 12.748
+  },
+  {
+    "text": "you",
+    "start": 13.026,
+    "end": 13.108
+  },
+  {
+    "text": "do",
+    "start": 13.154,
+    "end": 13.224
+  },
+  {
+    "text": "not",
+    "start": 13.293,
+    "end": 13.41
+  },
+  {
+    "text": "have",
+    "start": 13.445,
+    "end": 13.561
+  },
+  {
+    "text": "to",
+    "start": 13.596,
+    "end": 13.642
+  },
+  {
+    "text": "say,",
+    "start": 13.7,
+    "end": 14.176
+  },
+  {
+    "text": "'That",
+    "start": 14.42,
+    "end": 14.884
+  },
+  {
+    "text": "is",
+    "start": 14.954,
+    "end": 15.082
+  },
+  {
+    "text": "a",
+    "start": 15.14,
+    "end": 15.175
+  },
+  {
+    "text": "terrible",
+    "start": 15.221,
+    "end": 15.662
+  },
+  {
+    "text": "idea.'",
+    "start": 15.697,
+    "end": 16.277
+  },
+  {
+    "text": "You",
+    "start": 16.521,
+    "end": 16.649
+  },
+  {
+    "text": "can",
+    "start": 16.695,
+    "end": 16.812
+  },
+  {
+    "text": "say,",
+    "start": 16.87,
+    "end": 17.369
+  },
+  {
+    "text": "'Fair",
+    "start": 17.497,
+    "end": 17.891
+  },
+  {
+    "text": "point'",
+    "start": 17.961,
+    "end": 18.541
+  },
+  {
+    "text": "or",
+    "start": 18.716,
+    "end": 18.983
+  },
+  {
+    "text": "'That’s",
+    "start": 19.226,
+    "end": 19.679
+  },
+  {
+    "text": "a",
+    "start": 19.714,
+    "end": 19.737
+  },
+  {
+    "text": "fair",
+    "start": 19.795,
+    "end": 19.969
+  },
+  {
+    "text": "point.'",
+    "start": 20.028,
+    "end": 20.608
+  },
+  {
+    "text": "Then",
+    "start": 20.887,
+    "end": 21.212
+  },
+  {
+    "text": "you",
+    "start": 21.328,
+    "end": 21.444
+  },
+  {
+    "text": "can",
+    "start": 21.502,
+    "end": 21.618
+  },
+  {
+    "text": "add,",
+    "start": 21.688,
+    "end": 22.222
+  },
+  {
+    "text": "'I’m",
+    "start": 22.547,
+    "end": 22.802
+  },
+  {
+    "text": "with",
+    "start": 22.872,
+    "end": 23.046
+  },
+  {
+    "text": "you",
+    "start": 23.104,
+    "end": 23.185
+  },
+  {
+    "text": "on",
+    "start": 23.267,
+    "end": 23.348
+  },
+  {
+    "text": "that",
+    "start": 23.394,
+    "end": 23.534
+  },
+  {
+    "text": "part,",
+    "start": 23.58,
+    "end": 24.126
+  },
+  {
+    "text": "but",
+    "start": 24.277,
+    "end": 24.532
+  },
+  {
+    "text": "I",
+    "start": 24.706,
+    "end": 24.776
+  },
+  {
+    "text": "see",
+    "start": 24.892,
+    "end": 25.055
+  },
+  {
+    "text": "it",
+    "start": 25.089,
+    "end": 25.159
+  },
+  {
+    "text": "a",
+    "start": 25.206,
+    "end": 25.229
+  },
+  {
+    "text": "little",
+    "start": 25.275,
+    "end": 25.496
+  },
+  {
+    "text": "differently.'",
+    "start": 25.519,
+    "end": 26.25
+  },
+  {
+    "text": "That",
+    "start": 26.529,
+    "end": 26.75
+  },
+  {
+    "text": "sounds",
+    "start": 26.819,
+    "end": 27.319
+  },
+  {
+    "text": "much",
+    "start": 27.528,
+    "end": 27.748
+  },
+  {
+    "text": "more",
+    "start": 27.795,
+    "end": 27.946
+  },
+  {
+    "text": "natural.",
+    "start": 27.992,
+    "end": 28.619
+  },
+  {
+    "text": "In",
+    "start": 29.13,
+    "end": 29.269
+  },
+  {
+    "text": "my",
+    "start": 29.327,
+    "end": 29.42
+  },
+  {
+    "text": "group,",
+    "start": 29.478,
+    "end": 29.687
+  },
+  {
+    "text": "we",
+    "start": 29.71,
+    "end": 29.803
+  },
+  {
+    "text": "were",
+    "start": 29.838,
+    "end": 29.966
+  },
+  {
+    "text": "trying",
+    "start": 29.989,
+    "end": 30.198
+  },
+  {
+    "text": "to",
+    "start": 30.233,
+    "end": 30.279
+  },
+  {
+    "text": "stay",
+    "start": 30.326,
+    "end": 30.535
+  },
+  {
+    "text": "on",
+    "start": 30.581,
+    "end": 30.639
+  },
+  {
+    "text": "the",
+    "start": 30.674,
+    "end": 30.744
+  },
+  {
+    "text": "same",
+    "start": 30.79,
+    "end": 31.034
+  },
+  {
+    "text": "page",
+    "start": 31.08,
+    "end": 31.382
+  },
+  {
+    "text": "about",
+    "start": 31.417,
+    "end": 31.614
+  },
+  {
+    "text": "dinner.",
+    "start": 31.661,
+    "end": 32.241
+  },
+  {
+    "text": "Zoe",
+    "start": 32.52,
+    "end": 32.822
+  },
+  {
+    "text": "said,",
+    "start": 32.88,
+    "end": 33.391
+  },
+  {
+    "text": "'The",
+    "start": 33.669,
+    "end": 33.902
+  },
+  {
+    "text": "place",
+    "start": 33.96,
+    "end": 34.25
+  },
+  {
+    "text": "is",
+    "start": 34.285,
+    "end": 34.366
+  },
+  {
+    "text": "awesome.'",
+    "start": 34.424,
+    "end": 35.063
+  },
+  {
+    "text": "I",
+    "start": 35.214,
+    "end": 35.272
+  },
+  {
+    "text": "said,",
+    "start": 35.388,
+    "end": 35.806
+  },
+  {
+    "text": "'I",
+    "start": 35.922,
+    "end": 36.073
+  },
+  {
+    "text": "hear",
+    "start": 36.189,
+    "end": 36.363
+  },
+  {
+    "text": "you.",
+    "start": 36.433,
+    "end": 36.839
+  },
+  {
+    "text": "I",
+    "start": 36.99,
+    "end": 37.048
+  },
+  {
+    "text": "get",
+    "start": 37.141,
+    "end": 37.257
+  },
+  {
+    "text": "what",
+    "start": 37.28,
+    "end": 37.385
+  },
+  {
+    "text": "you’re",
+    "start": 37.419,
+    "end": 37.594
+  },
+  {
+    "text": "saying,",
+    "start": 37.617,
+    "end": 38.035
+  },
+  {
+    "text": "and",
+    "start": 38.058,
+    "end": 38.302
+  },
+  {
+    "text": "I",
+    "start": 38.453,
+    "end": 38.511
+  },
+  {
+    "text": "see",
+    "start": 38.627,
+    "end": 38.766
+  },
+  {
+    "text": "what",
+    "start": 38.801,
+    "end": 38.906
+  },
+  {
+    "text": "you",
+    "start": 38.952,
+    "end": 39.033
+  },
+  {
+    "text": "mean",
+    "start": 39.126,
+    "end": 39.289
+  },
+  {
+    "text": "about",
+    "start": 39.323,
+    "end": 39.521
+  },
+  {
+    "text": "the",
+    "start": 39.544,
+    "end": 39.614
+  },
+  {
+    "text": "view.",
+    "start": 39.66,
+    "end": 40.183
+  },
+  {
+    "text": "Here’s",
+    "start": 40.693,
+    "end": 40.949
+  },
+  {
+    "text": "the",
+    "start": 40.972,
+    "end": 41.042
+  },
+  {
+    "text": "thing…",
+    "start": 41.088,
+    "end": 41.657
+  },
+  {
+    "text": "it’s",
+    "start": 41.831,
+    "end": 42.052
+  },
+  {
+    "text": "kind",
+    "start": 42.121,
+    "end": 42.365
+  },
+  {
+    "text": "of",
+    "start": 42.423,
+    "end": 42.493
+  },
+  {
+    "text": "overpriced.'",
+    "start": 42.737,
+    "end": 44.014
+  },
+  {
+    "text": "It",
+    "start": 44.71,
+    "end": 44.827
+  },
+  {
+    "text": "was",
+    "start": 44.861,
+    "end": 44.943
+  },
+  {
+    "text": "not",
+    "start": 45.001,
+    "end": 45.14
+  },
+  {
+    "text": "an",
+    "start": 45.187,
+    "end": 45.256
+  },
+  {
+    "text": "attack.",
+    "start": 45.302,
+    "end": 45.941
+  },
+  {
+    "text": "It",
+    "start": 46.115,
+    "end": 46.231
+  },
+  {
+    "text": "was",
+    "start": 46.266,
+    "end": 46.336
+  },
+  {
+    "text": "just",
+    "start": 46.382,
+    "end": 46.533
+  },
+  {
+    "text": "a",
+    "start": 46.568,
+    "end": 46.591
+  },
+  {
+    "text": "budget",
+    "start": 46.649,
+    "end": 46.939
+  },
+  {
+    "text": "point.",
+    "start": 46.986,
+    "end": 47.462
+  },
+  {
+    "text": "At",
+    "start": 47.903,
+    "end": 48.019
+  },
+  {
+    "text": "the",
+    "start": 48.054,
+    "end": 48.123
+  },
+  {
+    "text": "same",
+    "start": 48.158,
+    "end": 48.356
+  },
+  {
+    "text": "time…",
+    "start": 48.391,
+    "end": 49.041
+  },
+  {
+    "text": "I",
+    "start": 49.424,
+    "end": 49.493
+  },
+  {
+    "text": "do",
+    "start": 49.644,
+    "end": 49.842
+  },
+  {
+    "text": "see",
+    "start": 49.935,
+    "end": 50.109
+  },
+  {
+    "text": "the",
+    "start": 50.155,
+    "end": 50.225
+  },
+  {
+    "text": "other",
+    "start": 50.271,
+    "end": 50.445
+  },
+  {
+    "text": "side:",
+    "start": 50.492,
+    "end": 51.026
+  },
+  {
+    "text": "a",
+    "start": 51.235,
+    "end": 51.305
+  },
+  {
+    "text": "nice",
+    "start": 51.386,
+    "end": 51.56
+  },
+  {
+    "text": "place",
+    "start": 51.583,
+    "end": 51.781
+  },
+  {
+    "text": "can",
+    "start": 51.804,
+    "end": 51.897
+  },
+  {
+    "text": "make",
+    "start": 51.943,
+    "end": 52.059
+  },
+  {
+    "text": "the",
+    "start": 52.082,
+    "end": 52.152
+  },
+  {
+    "text": "whole",
+    "start": 52.21,
+    "end": 52.442
+  },
+  {
+    "text": "night",
+    "start": 52.477,
+    "end": 52.651
+  },
+  {
+    "text": "feel",
+    "start": 52.686,
+    "end": 52.837
+  },
+  {
+    "text": "special.",
+    "start": 52.884,
+    "end": 53.569
+  },
+  {
+    "text": "Ryan",
+    "start": 53.952,
+    "end": 54.242
+  },
+  {
+    "text": "said,",
+    "start": 54.3,
+    "end": 54.532
+  },
+  {
+    "text": "'True,",
+    "start": 54.555,
+    "end": 54.95
+  },
+  {
+    "text": "but",
+    "start": 54.985,
+    "end": 55.194
+  },
+  {
+    "text": "fifty",
+    "start": 55.287,
+    "end": 55.589
+  },
+  {
+    "text": "bucks",
+    "start": 55.635,
+    "end": 55.833
+  },
+  {
+    "text": "is",
+    "start": 55.856,
+    "end": 55.937
+  },
+  {
+    "text": "not",
+    "start": 55.995,
+    "end": 56.123
+  },
+  {
+    "text": "crazy",
+    "start": 56.169,
+    "end": 56.518
+  },
+  {
+    "text": "for",
+    "start": 56.564,
+    "end": 56.645
+  },
+  {
+    "text": "that",
+    "start": 56.692,
+    "end": 56.819
+  },
+  {
+    "text": "neighborhood.'",
+    "start": 56.866,
+    "end": 57.609
+  },
+  {
+    "text": "I",
+    "start": 58.05,
+    "end": 58.12
+  },
+  {
+    "text": "answered,",
+    "start": 58.236,
+    "end": 58.909
+  },
+  {
+    "text": "'I",
+    "start": 59.292,
+    "end": 59.559
+  },
+  {
+    "text": "wouldn’t",
+    "start": 59.652,
+    "end": 59.943
+  },
+  {
+    "text": "say",
+    "start": 60.012,
+    "end": 60.256
+  },
+  {
+    "text": "that",
+    "start": 60.314,
+    "end": 60.512
+  },
+  {
+    "text": "exactly.",
+    "start": 60.581,
+    "end": 61.441
+  },
+  {
+    "text": "I",
+    "start": 61.684,
+    "end": 61.766
+  },
+  {
+    "text": "wouldn’t",
+    "start": 61.847,
+    "end": 62.137
+  },
+  {
+    "text": "say",
+    "start": 62.184,
+    "end": 62.416
+  },
+  {
+    "text": "it",
+    "start": 62.485,
+    "end": 62.555
+  },
+  {
+    "text": "was",
+    "start": 62.59,
+    "end": 62.694
+  },
+  {
+    "text": "worth",
+    "start": 62.752,
+    "end": 62.961
+  },
+  {
+    "text": "fifty",
+    "start": 62.996,
+    "end": 63.252
+  },
+  {
+    "text": "bucks,",
+    "start": 63.31,
+    "end": 63.913
+  },
+  {
+    "text": "especially",
+    "start": 64.088,
+    "end": 64.726
+  },
+  {
+    "text": "if",
+    "start": 64.784,
+    "end": 64.854
+  },
+  {
+    "text": "we",
+    "start": 64.889,
+    "end": 64.958
+  },
+  {
+    "text": "can",
+    "start": 65.005,
+    "end": 65.121
+  },
+  {
+    "text": "pick",
+    "start": 65.167,
+    "end": 65.365
+  },
+  {
+    "text": "a",
+    "start": 65.423,
+    "end": 65.458
+  },
+  {
+    "text": "cheaper",
+    "start": 65.516,
+    "end": 65.817
+  },
+  {
+    "text": "spot.'",
+    "start": 65.864,
+    "end": 66.514
+  },
+  {
+    "text": "He",
+    "start": 66.955,
+    "end": 67.106
+  },
+  {
+    "text": "laughed",
+    "start": 67.222,
+    "end": 67.582
+  },
+  {
+    "text": "and",
+    "start": 67.617,
+    "end": 67.71
+  },
+  {
+    "text": "said,",
+    "start": 67.791,
+    "end": 68.395
+  },
+  {
+    "text": "'Fair",
+    "start": 68.604,
+    "end": 69.033
+  },
+  {
+    "text": "enough.",
+    "start": 69.091,
+    "end": 69.521
+  },
+  {
+    "text": "Sounds",
+    "start": 69.544,
+    "end": 69.846
+  },
+  {
+    "text": "good",
+    "start": 69.893,
+    "end": 70.067
+  },
+  {
+    "text": "to",
+    "start": 70.113,
+    "end": 70.183
+  },
+  {
+    "text": "me.'",
+    "start": 70.252,
+    "end": 70.856
+  },
+  {
+    "text": "That",
+    "start": 71.46,
+    "end": 71.704
+  },
+  {
+    "text": "small",
+    "start": 71.773,
+    "end": 72.029
+  },
+  {
+    "text": "exchange",
+    "start": 72.075,
+    "end": 72.516
+  },
+  {
+    "text": "taught",
+    "start": 72.551,
+    "end": 72.795
+  },
+  {
+    "text": "me",
+    "start": 72.83,
+    "end": 72.934
+  },
+  {
+    "text": "something:",
+    "start": 73.004,
+    "end": 73.828
+  },
+  {
+    "text": "bucks",
+    "start": 74.107,
+    "end": 74.386
+  },
+  {
+    "text": "sounds",
+    "start": 74.409,
+    "end": 74.664
+  },
+  {
+    "text": "casual,",
+    "start": 74.722,
+    "end": 75.419
+  },
+  {
+    "text": "spot",
+    "start": 75.535,
+    "end": 75.883
+  },
+  {
+    "text": "sounds",
+    "start": 75.941,
+    "end": 76.208
+  },
+  {
+    "text": "natural,",
+    "start": 76.278,
+    "end": 76.986
+  },
+  {
+    "text": "and",
+    "start": 77.137,
+    "end": 77.381
+  },
+  {
+    "text": "fair",
+    "start": 77.462,
+    "end": 77.671
+  },
+  {
+    "text": "enough",
+    "start": 77.717,
+    "end": 77.95
+  },
+  {
+    "text": "keeps",
+    "start": 77.996,
+    "end": 78.217
+  },
+  {
+    "text": "the",
+    "start": 78.251,
+    "end": 78.321
+  },
+  {
+    "text": "conversation",
+    "start": 78.356,
+    "end": 78.902
+  },
+  {
+    "text": "friendly.",
+    "start": 78.948,
+    "end": 79.529
+  },
+  {
+    "text": "Then",
+    "start": 79.97,
+    "end": 80.225
+  },
+  {
+    "text": "we",
+    "start": 80.283,
+    "end": 80.388
+  },
+  {
+    "text": "argued",
+    "start": 80.446,
+    "end": 80.736
+  },
+  {
+    "text": "about",
+    "start": 80.759,
+    "end": 80.922
+  },
+  {
+    "text": "a",
+    "start": 80.945,
+    "end": 80.968
+  },
+  {
+    "text": "video",
+    "start": 81.003,
+    "end": 81.27
+  },
+  {
+    "text": "edit.",
+    "start": 81.328,
+    "end": 81.792
+  },
+  {
+    "text": "I",
+    "start": 82.118,
+    "end": 82.164
+  },
+  {
+    "text": "said,",
+    "start": 82.28,
+    "end": 82.663
+  },
+  {
+    "text": "'I",
+    "start": 83.104,
+    "end": 83.313
+  },
+  {
+    "text": "could",
+    "start": 83.395,
+    "end": 83.534
+  },
+  {
+    "text": "be",
+    "start": 83.557,
+    "end": 83.638
+  },
+  {
+    "text": "wrong,",
+    "start": 83.685,
+    "end": 84.323
+  },
+  {
+    "text": "but",
+    "start": 84.474,
+    "end": 84.707
+  },
+  {
+    "text": "I",
+    "start": 84.881,
+    "end": 84.962
+  },
+  {
+    "text": "have",
+    "start": 85.043,
+    "end": 85.159
+  },
+  {
+    "text": "a",
+    "start": 85.183,
+    "end": 85.206
+  },
+  {
+    "text": "different",
+    "start": 85.241,
+    "end": 85.508
+  },
+  {
+    "text": "take.'",
+    "start": 85.531,
+    "end": 86.077
+  },
+  {
+    "text": "Leo",
+    "start": 86.402,
+    "end": 86.692
+  },
+  {
+    "text": "said,",
+    "start": 86.762,
+    "end": 87.307
+  },
+  {
+    "text": "'I’d",
+    "start": 87.69,
+    "end": 87.992
+  },
+  {
+    "text": "push",
+    "start": 88.039,
+    "end": 88.259
+  },
+  {
+    "text": "back",
+    "start": 88.329,
+    "end": 88.549
+  },
+  {
+    "text": "a",
+    "start": 88.608,
+    "end": 88.631
+  },
+  {
+    "text": "little",
+    "start": 88.689,
+    "end": 88.933
+  },
+  {
+    "text": "on",
+    "start": 88.967,
+    "end": 89.06
+  },
+  {
+    "text": "that.'",
+    "start": 89.095,
+    "end": 89.699
+  },
+  {
+    "text": "He",
+    "start": 90.14,
+    "end": 90.279
+  },
+  {
+    "text": "was",
+    "start": 90.337,
+    "end": 90.465
+  },
+  {
+    "text": "not",
+    "start": 90.558,
+    "end": 90.802
+  },
+  {
+    "text": "being",
+    "start": 90.848,
+    "end": 91.08
+  },
+  {
+    "text": "rude;",
+    "start": 91.197,
+    "end": 91.87
+  },
+  {
+    "text": "to",
+    "start": 92.114,
+    "end": 92.23
+  },
+  {
+    "text": "push",
+    "start": 92.288,
+    "end": 92.474
+  },
+  {
+    "text": "back",
+    "start": 92.52,
+    "end": 92.683
+  },
+  {
+    "text": "on",
+    "start": 92.741,
+    "end": 92.81
+  },
+  {
+    "text": "something",
+    "start": 92.869,
+    "end": 93.17
+  },
+  {
+    "text": "can",
+    "start": 93.228,
+    "end": 93.484
+  },
+  {
+    "text": "mean",
+    "start": 93.554,
+    "end": 93.809
+  },
+  {
+    "text": "to",
+    "start": 93.902,
+    "end": 94.088
+  },
+  {
+    "text": "disagree",
+    "start": 94.215,
+    "end": 94.738
+  },
+  {
+    "text": "softly.",
+    "start": 94.773,
+    "end": 95.492
+  },
+  {
+    "text": "To",
+    "start": 95.934,
+    "end": 96.061
+  },
+  {
+    "text": "be",
+    "start": 96.131,
+    "end": 96.224
+  },
+  {
+    "text": "fair…",
+    "start": 96.282,
+    "end": 96.99
+  },
+  {
+    "text": "he",
+    "start": 97.315,
+    "end": 97.396
+  },
+  {
+    "text": "had",
+    "start": 97.466,
+    "end": 97.582
+  },
+  {
+    "text": "a",
+    "start": 97.617,
+    "end": 97.64
+  },
+  {
+    "text": "good",
+    "start": 97.675,
+    "end": 97.803
+  },
+  {
+    "text": "reason.",
+    "start": 97.849,
+    "end": 98.441
+  },
+  {
+    "text": "I",
+    "start": 98.952,
+    "end": 99.068
+  },
+  {
+    "text": "agree",
+    "start": 99.219,
+    "end": 99.509
+  },
+  {
+    "text": "up",
+    "start": 99.544,
+    "end": 99.649
+  },
+  {
+    "text": "to",
+    "start": 99.684,
+    "end": 99.753
+  },
+  {
+    "text": "a",
+    "start": 99.835,
+    "end": 99.858
+  },
+  {
+    "text": "point,",
+    "start": 99.927,
+    "end": 100.322
+  },
+  {
+    "text": "and",
+    "start": 100.357,
+    "end": 100.589
+  },
+  {
+    "text": "I’m",
+    "start": 100.717,
+    "end": 100.891
+  },
+  {
+    "text": "not",
+    "start": 100.949,
+    "end": 101.1
+  },
+  {
+    "text": "against",
+    "start": 101.135,
+    "end": 101.39
+  },
+  {
+    "text": "the",
+    "start": 101.425,
+    "end": 101.495
+  },
+  {
+    "text": "idea",
+    "start": 101.541,
+    "end": 101.785
+  },
+  {
+    "text": "of",
+    "start": 101.843,
+    "end": 101.901
+  },
+  {
+    "text": "a",
+    "start": 101.948,
+    "end": 101.971
+  },
+  {
+    "text": "longer",
+    "start": 102.017,
+    "end": 102.296
+  },
+  {
+    "text": "intro.",
+    "start": 102.366,
+    "end": 102.934
+  },
+  {
+    "text": "I",
+    "start": 103.445,
+    "end": 103.492
+  },
+  {
+    "text": "just",
+    "start": 103.573,
+    "end": 103.689
+  },
+  {
+    "text": "think",
+    "start": 103.712,
+    "end": 103.84
+  },
+  {
+    "text": "we",
+    "start": 103.875,
+    "end": 103.956
+  },
+  {
+    "text": "gotta",
+    "start": 104.014,
+    "end": 104.235
+  },
+  {
+    "text": "think",
+    "start": 104.304,
+    "end": 104.537
+  },
+  {
+    "text": "it",
+    "start": 104.595,
+    "end": 104.676
+  },
+  {
+    "text": "through",
+    "start": 104.722,
+    "end": 105.094
+  },
+  {
+    "text": "because",
+    "start": 105.21,
+    "end": 105.872
+  },
+  {
+    "text": "online",
+    "start": 106.023,
+    "end": 106.475
+  },
+  {
+    "text": "attention",
+    "start": 106.499,
+    "end": 106.882
+  },
+  {
+    "text": "is",
+    "start": 106.94,
+    "end": 107.044
+  },
+  {
+    "text": "short.",
+    "start": 107.102,
+    "end": 107.648
+  },
+  {
+    "text": "When",
+    "start": 108.089,
+    "end": 108.275
+  },
+  {
+    "text": "someone",
+    "start": 108.321,
+    "end": 108.588
+  },
+  {
+    "text": "gave",
+    "start": 108.611,
+    "end": 108.762
+  },
+  {
+    "text": "a",
+    "start": 108.797,
+    "end": 108.82
+  },
+  {
+    "text": "vague",
+    "start": 108.878,
+    "end": 109.099
+  },
+  {
+    "text": "opinion,",
+    "start": 109.122,
+    "end": 109.691
+  },
+  {
+    "text": "we",
+    "start": 109.749,
+    "end": 109.923
+  },
+  {
+    "text": "asked,",
+    "start": 110.005,
+    "end": 110.597
+  },
+  {
+    "text": "'What",
+    "start": 111.038,
+    "end": 111.34
+  },
+  {
+    "text": "do",
+    "start": 111.363,
+    "end": 111.409
+  },
+  {
+    "text": "you",
+    "start": 111.433,
+    "end": 111.502
+  },
+  {
+    "text": "mean",
+    "start": 111.537,
+    "end": 111.665
+  },
+  {
+    "text": "by",
+    "start": 111.711,
+    "end": 111.804
+  },
+  {
+    "text": "that?'",
+    "start": 111.851,
+    "end": 112.373
+  },
+  {
+    "text": "and",
+    "start": 112.617,
+    "end": 113.035
+  },
+  {
+    "text": "'Can",
+    "start": 113.151,
+    "end": 113.697
+  },
+  {
+    "text": "you",
+    "start": 113.755,
+    "end": 113.836
+  },
+  {
+    "text": "say",
+    "start": 113.882,
+    "end": 114.022
+  },
+  {
+    "text": "a",
+    "start": 114.056,
+    "end": 114.08
+  },
+  {
+    "text": "little",
+    "start": 114.114,
+    "end": 114.312
+  },
+  {
+    "text": "more",
+    "start": 114.335,
+    "end": 114.486
+  },
+  {
+    "text": "about",
+    "start": 114.509,
+    "end": 114.695
+  },
+  {
+    "text": "that?'",
+    "start": 114.73,
+    "end": 115.334
+  },
+  {
+    "text": "Those",
+    "start": 115.775,
+    "end": 116.042
+  },
+  {
+    "text": "questions",
+    "start": 116.077,
+    "end": 116.576
+  },
+  {
+    "text": "changed",
+    "start": 116.645,
+    "end": 117.017
+  },
+  {
+    "text": "everything.",
+    "start": 117.063,
+    "end": 117.725
+  },
+  {
+    "text": "Not",
+    "start": 118.236,
+    "end": 118.422
+  },
+  {
+    "text": "gonna",
+    "start": 118.457,
+    "end": 118.619
+  },
+  {
+    "text": "lie,",
+    "start": 118.689,
+    "end": 119.258
+  },
+  {
+    "text": "I",
+    "start": 119.467,
+    "end": 119.525
+  },
+  {
+    "text": "think",
+    "start": 119.606,
+    "end": 119.757
+  },
+  {
+    "text": "clarification",
+    "start": 119.792,
+    "end": 120.5
+  },
+  {
+    "text": "is",
+    "start": 120.558,
+    "end": 120.639
+  },
+  {
+    "text": "underrated.",
+    "start": 120.755,
+    "end": 121.673
+  },
+  {
+    "text": "Someone",
+    "start": 122.183,
+    "end": 122.532
+  },
+  {
+    "text": "might",
+    "start": 122.567,
+    "end": 122.741
+  },
+  {
+    "text": "say,",
+    "start": 122.799,
+    "end": 123.391
+  },
+  {
+    "text": "'I",
+    "start": 123.832,
+    "end": 124.065
+  },
+  {
+    "text": "kind",
+    "start": 124.181,
+    "end": 124.366
+  },
+  {
+    "text": "of",
+    "start": 124.413,
+    "end": 124.482
+  },
+  {
+    "text": "agree,'",
+    "start": 124.529,
+    "end": 125.226
+  },
+  {
+    "text": "but",
+    "start": 125.469,
+    "end": 125.678
+  },
+  {
+    "text": "you",
+    "start": 125.771,
+    "end": 125.899
+  },
+  {
+    "text": "do",
+    "start": 125.969,
+    "end": 126.038
+  },
+  {
+    "text": "not",
+    "start": 126.12,
+    "end": 126.236
+  },
+  {
+    "text": "know",
+    "start": 126.282,
+    "end": 126.421
+  },
+  {
+    "text": "if",
+    "start": 126.479,
+    "end": 126.537
+  },
+  {
+    "text": "they",
+    "start": 126.572,
+    "end": 126.688
+  },
+  {
+    "text": "mean",
+    "start": 126.758,
+    "end": 126.955
+  },
+  {
+    "text": "yes,",
+    "start": 127.072,
+    "end": 127.664
+  },
+  {
+    "text": "no,",
+    "start": 127.826,
+    "end": 128.372
+  },
+  {
+    "text": "or",
+    "start": 128.604,
+    "end": 128.883
+  },
+  {
+    "text": "maybe.",
+    "start": 128.999,
+    "end": 129.544
+  },
+  {
+    "text": "So",
+    "start": 130.032,
+    "end": 130.195
+  },
+  {
+    "text": "we",
+    "start": 130.264,
+    "end": 130.346
+  },
+  {
+    "text": "said,",
+    "start": 130.427,
+    "end": 130.914
+  },
+  {
+    "text": "'We",
+    "start": 131.344,
+    "end": 131.53
+  },
+  {
+    "text": "should",
+    "start": 131.565,
+    "end": 131.739
+  },
+  {
+    "text": "probably",
+    "start": 131.785,
+    "end": 132.203
+  },
+  {
+    "text": "cut",
+    "start": 132.261,
+    "end": 132.412
+  },
+  {
+    "text": "the",
+    "start": 132.447,
+    "end": 132.517
+  },
+  {
+    "text": "intro,",
+    "start": 132.575,
+    "end": 133.051
+  },
+  {
+    "text": "but",
+    "start": 133.097,
+    "end": 133.353
+  },
+  {
+    "text": "not",
+    "start": 133.561,
+    "end": 133.817
+  },
+  {
+    "text": "remove",
+    "start": 133.863,
+    "end": 134.165
+  },
+  {
+    "text": "all",
+    "start": 134.212,
+    "end": 134.351
+  },
+  {
+    "text": "the",
+    "start": 134.409,
+    "end": 134.467
+  },
+  {
+    "text": "context.'",
+    "start": 134.514,
+    "end": 135.431
+  },
+  {
+    "text": "At",
+    "start": 135.698,
+    "end": 135.814
+  },
+  {
+    "text": "the",
+    "start": 135.849,
+    "end": 135.918
+  },
+  {
+    "text": "end",
+    "start": 135.953,
+    "end": 136.034
+  },
+  {
+    "text": "of",
+    "start": 136.081,
+    "end": 136.127
+  },
+  {
+    "text": "the",
+    "start": 136.162,
+    "end": 136.232
+  },
+  {
+    "text": "day…",
+    "start": 136.278,
+    "end": 136.87
+  },
+  {
+    "text": "we",
+    "start": 137.242,
+    "end": 137.381
+  },
+  {
+    "text": "wanted",
+    "start": 137.439,
+    "end": 137.729
+  },
+  {
+    "text": "a",
+    "start": 137.776,
+    "end": 137.811
+  },
+  {
+    "text": "decision,",
+    "start": 137.869,
+    "end": 138.577
+  },
+  {
+    "text": "not",
+    "start": 138.74,
+    "end": 138.96
+  },
+  {
+    "text": "a",
+    "start": 139.007,
+    "end": 139.03
+  },
+  {
+    "text": "fight.",
+    "start": 139.088,
+    "end": 139.575
+  },
+  {
+    "text": "Zoe",
+    "start": 140.005,
+    "end": 140.295
+  },
+  {
+    "text": "said,",
+    "start": 140.365,
+    "end": 140.806
+  },
+  {
+    "text": "'For",
+    "start": 141.003,
+    "end": 141.27
+  },
+  {
+    "text": "sure,",
+    "start": 141.34,
+    "end": 141.572
+  },
+  {
+    "text": "we",
+    "start": 141.607,
+    "end": 141.7
+  },
+  {
+    "text": "can",
+    "start": 141.758,
+    "end": 141.886
+  },
+  {
+    "text": "agree",
+    "start": 141.921,
+    "end": 142.176
+  },
+  {
+    "text": "to",
+    "start": 142.211,
+    "end": 142.269
+  },
+  {
+    "text": "disagree",
+    "start": 142.327,
+    "end": 142.733
+  },
+  {
+    "text": "about",
+    "start": 142.768,
+    "end": 142.931
+  },
+  {
+    "text": "the",
+    "start": 142.954,
+    "end": 143.024
+  },
+  {
+    "text": "rooftop.'",
+    "start": 143.058,
+    "end": 143.825
+  },
+  {
+    "text": "I",
+    "start": 143.999,
+    "end": 144.057
+  },
+  {
+    "text": "said,",
+    "start": 144.173,
+    "end": 144.672
+  },
+  {
+    "text": "'I’m",
+    "start": 144.881,
+    "end": 145.171
+  },
+  {
+    "text": "down",
+    "start": 145.241,
+    "end": 145.462
+  },
+  {
+    "text": "to",
+    "start": 145.496,
+    "end": 145.554
+  },
+  {
+    "text": "go",
+    "start": 145.601,
+    "end": 145.717
+  },
+  {
+    "text": "out,",
+    "start": 145.798,
+    "end": 146.019
+  },
+  {
+    "text": "and",
+    "start": 146.054,
+    "end": 146.17
+  },
+  {
+    "text": "I’m",
+    "start": 146.286,
+    "end": 146.518
+  },
+  {
+    "text": "down",
+    "start": 146.588,
+    "end": 146.797
+  },
+  {
+    "text": "to",
+    "start": 146.843,
+    "end": 146.901
+  },
+  {
+    "text": "try",
+    "start": 146.948,
+    "end": 147.133
+  },
+  {
+    "text": "the",
+    "start": 147.191,
+    "end": 147.261
+  },
+  {
+    "text": "cheaper",
+    "start": 147.296,
+    "end": 147.586
+  },
+  {
+    "text": "place.'",
+    "start": 147.633,
+    "end": 148.376
+  },
+  {
+    "text": "Ryan",
+    "start": 148.654,
+    "end": 148.956
+  },
+  {
+    "text": "added,",
+    "start": 149.014,
+    "end": 149.572
+  },
+  {
+    "text": "'I",
+    "start": 149.781,
+    "end": 150.001
+  },
+  {
+    "text": "don’t",
+    "start": 150.094,
+    "end": 150.245
+  },
+  {
+    "text": "wanna",
+    "start": 150.28,
+    "end": 150.477
+  },
+  {
+    "text": "spend",
+    "start": 150.535,
+    "end": 150.814
+  },
+  {
+    "text": "a",
+    "start": 150.872,
+    "end": 150.907
+  },
+  {
+    "text": "ton",
+    "start": 150.988,
+    "end": 151.255
+  },
+  {
+    "text": "of",
+    "start": 151.313,
+    "end": 151.359
+  },
+  {
+    "text": "money",
+    "start": 151.418,
+    "end": 151.673
+  },
+  {
+    "text": "either.",
+    "start": 151.743,
+    "end": 152.311
+  },
+  {
+    "text": "A",
+    "start": 152.439,
+    "end": 152.52
+  },
+  {
+    "text": "ton",
+    "start": 152.59,
+    "end": 152.753
+  },
+  {
+    "text": "of",
+    "start": 152.799,
+    "end": 152.846
+  },
+  {
+    "text": "money",
+    "start": 152.88,
+    "end": 153.055
+  },
+  {
+    "text": "for",
+    "start": 153.101,
+    "end": 153.205
+  },
+  {
+    "text": "dinner",
+    "start": 153.263,
+    "end": 153.519
+  },
+  {
+    "text": "is",
+    "start": 153.589,
+    "end": 153.67
+  },
+  {
+    "text": "too",
+    "start": 153.728,
+    "end": 153.844
+  },
+  {
+    "text": "much.'",
+    "start": 153.914,
+    "end": 154.599
+  },
+  {
+    "text": "Either",
+    "start": 155.202,
+    "end": 155.458
+  },
+  {
+    "text": "way",
+    "start": 155.516,
+    "end": 155.644
+  },
+  {
+    "text": "is",
+    "start": 155.69,
+    "end": 155.76
+  },
+  {
+    "text": "fine",
+    "start": 155.818,
+    "end": 156.027
+  },
+  {
+    "text": "with",
+    "start": 156.05,
+    "end": 156.19
+  },
+  {
+    "text": "me",
+    "start": 156.259,
+    "end": 156.666
+  },
+  {
+    "text": "became",
+    "start": 156.747,
+    "end": 157.084
+  },
+  {
+    "text": "our",
+    "start": 157.107,
+    "end": 157.2
+  },
+  {
+    "text": "compromise",
+    "start": 157.258,
+    "end": 157.827
+  },
+  {
+    "text": "phrase.",
+    "start": 157.861,
+    "end": 158.43
+  },
+  {
+    "text": "By",
+    "start": 158.755,
+    "end": 158.906
+  },
+  {
+    "text": "the",
+    "start": 158.953,
+    "end": 159.022
+  },
+  {
+    "text": "end,",
+    "start": 159.092,
+    "end": 159.255
+  },
+  {
+    "text": "we",
+    "start": 159.278,
+    "end": 159.359
+  },
+  {
+    "text": "were",
+    "start": 159.406,
+    "end": 159.522
+  },
+  {
+    "text": "on",
+    "start": 159.557,
+    "end": 159.615
+  },
+  {
+    "text": "the",
+    "start": 159.649,
+    "end": 159.719
+  },
+  {
+    "text": "same",
+    "start": 159.754,
+    "end": 159.963
+  },
+  {
+    "text": "page,",
+    "start": 159.998,
+    "end": 160.625
+  },
+  {
+    "text": "or",
+    "start": 160.868,
+    "end": 161.135
+  },
+  {
+    "text": "at",
+    "start": 161.217,
+    "end": 161.31
+  },
+  {
+    "text": "least",
+    "start": 161.344,
+    "end": 161.588
+  },
+  {
+    "text": "mostly",
+    "start": 161.762,
+    "end": 162.18
+  },
+  {
+    "text": "on",
+    "start": 162.238,
+    "end": 162.296
+  },
+  {
+    "text": "the",
+    "start": 162.331,
+    "end": 162.401
+  },
+  {
+    "text": "same",
+    "start": 162.436,
+    "end": 162.622
+  },
+  {
+    "text": "page.",
+    "start": 162.656,
+    "end": 163.156
+  },
+  {
+    "text": "If",
+    "start": 163.481,
+    "end": 163.585
+  },
+  {
+    "text": "we",
+    "start": 163.62,
+    "end": 163.678
+  },
+  {
+    "text": "don’t",
+    "start": 163.725,
+    "end": 163.899
+  },
+  {
+    "text": "fully",
+    "start": 163.945,
+    "end": 164.212
+  },
+  {
+    "text": "agree,",
+    "start": 164.27,
+    "end": 164.932
+  },
+  {
+    "text": "no",
+    "start": 165.141,
+    "end": 165.303
+  },
+  {
+    "text": "worries.",
+    "start": 165.362,
+    "end": 166.058
+  },
+  {
+    "text": "In",
+    "start": 166.383,
+    "end": 166.523
+  },
+  {
+    "text": "casual",
+    "start": 166.592,
+    "end": 167.022
+  },
+  {
+    "text": "American",
+    "start": 167.08,
+    "end": 167.486
+  },
+  {
+    "text": "English,",
+    "start": 167.556,
+    "end": 168.206
+  },
+  {
+    "text": "that",
+    "start": 168.38,
+    "end": 168.601
+  },
+  {
+    "text": "ending",
+    "start": 168.67,
+    "end": 168.937
+  },
+  {
+    "text": "matters.",
+    "start": 169.007,
+    "end": 169.657
+  },
+  {
+    "text": "You",
+    "start": 169.866,
+    "end": 169.994
+  },
+  {
+    "text": "can",
+    "start": 170.04,
+    "end": 170.145
+  },
+  {
+    "text": "disagree,",
+    "start": 170.191,
+    "end": 170.818
+  },
+  {
+    "text": "push",
+    "start": 170.876,
+    "end": 171.108
+  },
+  {
+    "text": "back,",
+    "start": 171.166,
+    "end": 171.538
+  },
+  {
+    "text": "clarify,",
+    "start": 171.619,
+    "end": 172.316
+  },
+  {
+    "text": "and",
+    "start": 172.362,
+    "end": 172.571
+  },
+  {
+    "text": "still",
+    "start": 172.722,
+    "end": 173.012
+  },
+  {
+    "text": "sound",
+    "start": 173.082,
+    "end": 173.302
+  },
+  {
+    "text": "friendly.",
+    "start": 173.36,
+    "end": 173.964
+  },
+  {
+    "text": "The",
+    "start": 174.568,
+    "end": 174.696
+  },
+  {
+    "text": "goal",
+    "start": 174.765,
+    "end": 175.044
+  },
+  {
+    "text": "is",
+    "start": 175.114,
+    "end": 175.218
+  },
+  {
+    "text": "not",
+    "start": 175.311,
+    "end": 175.59
+  },
+  {
+    "text": "to",
+    "start": 175.636,
+    "end": 175.717
+  },
+  {
+    "text": "win",
+    "start": 175.787,
+    "end": 176.019
+  },
+  {
+    "text": "every",
+    "start": 176.135,
+    "end": 176.391
+  },
+  {
+    "text": "point.",
+    "start": 176.46,
+    "end": 176.971
+  },
+  {
+    "text": "The",
+    "start": 177.296,
+    "end": 177.412
+  },
+  {
+    "text": "goal",
+    "start": 177.459,
+    "end": 177.621
+  },
+  {
+    "text": "is",
+    "start": 177.668,
+    "end": 177.737
+  },
+  {
+    "text": "to",
+    "start": 177.784,
+    "end": 177.83
+  },
+  {
+    "text": "keep",
+    "start": 177.888,
+    "end": 178.062
+  },
+  {
+    "text": "the",
+    "start": 178.097,
+    "end": 178.167
+  },
+  {
+    "text": "conversation",
+    "start": 178.202,
+    "end": 178.805
+  },
+  {
+    "text": "moving,",
+    "start": 178.864,
+    "end": 179.49
+  },
+  {
+    "text": "make",
+    "start": 179.699,
+    "end": 179.885
+  },
+  {
+    "text": "a",
+    "start": 179.908,
+    "end": 179.932
+  },
+  {
+    "text": "decision,",
+    "start": 179.978,
+    "end": 180.756
+  },
+  {
+    "text": "and",
+    "start": 180.965,
+    "end": 181.197
+  },
+  {
+    "text": "leave",
+    "start": 181.313,
+    "end": 181.534
+  },
+  {
+    "text": "people",
+    "start": 181.569,
+    "end": 181.871
+  },
+  {
+    "text": "feeling",
+    "start": 181.929,
+    "end": 182.277
+  },
+  {
+    "text": "respected.",
+    "start": 182.323,
+    "end": 183.252
+  }
+]
