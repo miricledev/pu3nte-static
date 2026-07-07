@@ -6,7 +6,24 @@ type TimedWord = {
   end: number;
 };
 
+type AlignmentPayload =
+  | TimedWord[]
+  | {
+      words?: Array<Partial<TimedWord> & { word?: string }>;
+    };
+
 const playbackRates = [0.5, 0.8, 1, 1.1, 1.25, 1.5];
+
+function normalizeTimedWords(payload: AlignmentPayload): TimedWord[] {
+  const rawWords: Array<Partial<TimedWord> & { word?: string }> = Array.isArray(payload) ? payload : payload.words ?? [];
+  return rawWords
+    .map((word) => ({
+      text: word.text ?? word.word ?? "",
+      start: Number(word.start),
+      end: Number(word.end),
+    }))
+    .filter((word) => word.text && Number.isFinite(word.start) && Number.isFinite(word.end));
+}
 
 export function SyncedReadingAudioPlayer({
   audioUrl,
@@ -40,10 +57,10 @@ export function SyncedReadingAudioPlayer({
     fetch(alignmentUrl)
       .then((response) => {
         if (!response.ok) throw new Error(`Could not load reading alignment: ${response.status}`);
-        return response.json() as Promise<TimedWord[]>;
+        return response.json() as Promise<AlignmentPayload>;
       })
-      .then((nextWords) => {
-        if (!cancelled) setWords(nextWords);
+      .then((payload) => {
+        if (!cancelled) setWords(normalizeTimedWords(payload));
       })
       .catch(() => {
         if (!cancelled) setLoadError(true);
