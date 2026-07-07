@@ -182,7 +182,7 @@ type SpecialCourse = {
   culturalGuardrails: string;
 };
 
-type SpecialCourseLevel = "B2" | "C1" | "C2";
+type SpecialCourseLevel = "B1" | "B2" | "C1" | "C2";
 
 type SpecialCourseTopic = {
   id: string;
@@ -321,6 +321,16 @@ function getSpecialCourses(): SpecialCourse[] {
 
 function getSpecialCourseTopics(): SpecialCourseTopic[] {
   const byLevel: Record<SpecialCourseLevel, Array<[string, string]>> = {
+    B1: [
+      ["Core sentence building with local flavour", "Build practical local sentences from a small word bank, adding grammar and vocabulary step by step."],
+      ["Introductions and small talk builder", "Build natural local sentences for introductions, basic small talk, and simple follow-up questions."],
+      ["Plans and invitations builder", "Build sentences for making plans, inviting someone, accepting, refusing softly, and suggesting alternatives."],
+      ["Food, shops, and prices builder", "Build sentences for ordering, asking prices, choosing items, paying, and reacting naturally."],
+      ["Transport and being late builder", "Build sentences for locations, delays, directions, transport problems, and being on the way."],
+      ["Work and daily routine builder", "Build sentences about work, study, daily routines, responsibilities, and simple problems."],
+      ["Opinions and preferences builder", "Build sentences for likes, dislikes, preferences, simple opinions, and polite agreement/disagreement."],
+      ["Complete B1 local sentence builder", "Combine introductions, plans, food, transport, work, opinions, and simple problem-solving in one cumulative speaking drill."],
+    ],
     B2: [
       ["Natural storytelling with local flavour", "Tell what happened, add reactions, use connectors, and include common local discourse markers."],
       ["Solving a problem calmly", "Explain a problem, ask for help, clarify what happened, and negotiate a practical solution."],
@@ -578,8 +588,8 @@ function getReadiness(script: LessonScript, timeline: LessonTimeline) {
     warnings.push("No countdown timers found. Add showTimer/responsePauseMs to prompt or repeat segments.");
   }
 
-  if ((script.durationGoalMinutes ?? 0) < 13 || (script.estimatedMinutes ?? 0) < 13) {
-    warnings.push("This script is configured below the current PU3NTE 15-minute target. Use estimatedMinutes: 15 and durationGoalMinutes: 15.");
+  if ((script.durationGoalMinutes ?? 0) < 9 || (script.estimatedMinutes ?? 0) < 9) {
+    warnings.push("This script is configured below the current PU3NTE minimum target. Use 10 minutes for sentence-builder speaking lessons or 15 minutes for standard listen-and-respond lessons.");
   }
 
   const riskyLocalNarratorSegments = timeline.segments.filter((segment) => {
@@ -1681,7 +1691,16 @@ function pageHtml(): string {
         </div>
 
         <div class="selector-field">
-          <label for="narratorModeSelect">2. Narrator voice mode</label>
+          <label for="speakingFormatSelect">2. Speaking lesson format</label>
+          <select id="speakingFormatSelect">
+            <option value="listen-respond">15-min Listen & Respond speaking drill</option>
+            <option value="sentence-builder">10-min Cumulative Sentence Builder speaking drill</option>
+          </select>
+          <p class="mini">Sentence Builder speaking lessons introduce words in chunks, repeat each word aloud, then build longer spoken sentences without typing.</p>
+        </div>
+
+        <div class="selector-field">
+          <label for="narratorModeSelect">3. Narrator voice mode</label>
           <select id="narratorModeSelect">
             <option value="local">Local TTS narrator - cheaper, usually 0 narrator credits</option>
             <option value="hybrid-intro">ElevenLabs intro only, then local TTS narrator</option>
@@ -1727,7 +1746,7 @@ function pageHtml(): string {
 
           <section id="specialSelectorControls" class="selector-controls hidden">
             <h3>Dialect / Accent Special Course</h3>
-            <p class="mini">Use this for B2, C1, and C2 country/accent courses with heavy local slang, sayings, idioms, and natural phrasing.</p>
+            <p class="mini">Use this for B2, C1, and C2 country/accent courses with heavy local slang, sayings, idioms, and natural phrasing. B1 appears only for the 10-min Sentence Builder speaking format.</p>
             <div class="topic-controls">
               <div class="selector-field">
                 <label for="specialCourseSelect">Course</label>
@@ -1737,6 +1756,7 @@ function pageHtml(): string {
                 <label for="specialLevelFilter">Level</label>
                 <select id="specialLevelFilter">
                   <option value="all">All levels</option>
+                  <option value="B1">B1 sentence-builder only</option>
                   <option value="B2">B2</option>
                   <option value="C1">C1</option>
                   <option value="C2">C2</option>
@@ -1778,6 +1798,7 @@ function pageHtml(): string {
       const specialCourses = ${JSON.stringify(getSpecialCourses())};
       const specialCourseTopics = ${JSON.stringify(getSpecialCourseTopics())};
       let activePromptKind = "none";
+      let speakingFormat = "listen-respond";
       let narratorMode = "local";
       let selectedTopicId = null;
       let selectedSpecialCourseId = specialCourses[0] ? specialCourses[0].id : null;
@@ -1829,6 +1850,72 @@ function pageHtml(): string {
           : "Local TTS narrator. Cheaper/free for narrator, but keep narrator lines mostly in the learner's native language.";
       }
 
+      function getSpeakingFormatLabel() {
+        return speakingFormat === "sentence-builder"
+          ? "10-min cumulative Sentence Builder speaking drill"
+          : "15-min Listen & Respond speaking drill";
+      }
+
+      function getSpeakingFormatPromptAppendix() {
+        if (speakingFormat !== "sentence-builder") {
+          return [
+            "",
+            "",
+            "SPEAKING LESSON FORMAT",
+            "Use the standard 15-minute Listen & Respond format described above.",
+            "Keep estimatedMinutes: 15 and durationGoalMinutes: 15.",
+            "Use prompt/answer/repeat/review/final_challenge flow with spaced recall."
+          ].join("\\n");
+        }
+
+        return [
+          "",
+          "",
+          "SPEAKING LESSON FORMAT OVERRIDE - CUMULATIVE SENTENCE BUILDER SPEAKING DRILL",
+          "This is NOT the standard 15-minute Listen & Respond lesson. Generate a 10-minute speaking lesson that feels like the PU3NTE Sentence Builder activity, but spoken out loud instead of typed.",
+          "Set estimatedMinutes: 10 and durationGoalMinutes: 10. Aim for a dry-run estimate of roughly 9-11 minutes.",
+          "Use the same valid JSON schema and existing segment types only. Do not invent new segment types.",
+          "",
+          "Core method:",
+          "- Choose about 20-22 target words/chunks total, appropriate to the selected topic, level, language direction, and special dialect/accent if selected.",
+          "- Start by introducing 4-5 useful target words/chunks one by one.",
+          "- For each new word/chunk: narrator gives a very short native-language meaning, target voice models it, learner repeats it out loud.",
+          "- After the first 4-5 words, start building short sentences using only those words/chunks plus necessary tiny grammar words.",
+          "- Ask: How do you say this? / ¿Cómo se dice esto? Then show the native-language prompt in showOnScreenText/nativePrompt and put the target sentence in targetAnswer.",
+          "- Learner answers out loud during a timer pause. Then the target-language ElevenLabs voice gives the answer. Then repeat/shadow it.",
+          "- Add another 2-3 words/chunks, repeat each one, then build new sentences using all available words.",
+          "- Keep adding 2-3 words/chunks per round and keep recombining older words with newer ones.",
+          "- By the final third, build longer sentences around 16-22 words long.",
+          "- End with a final challenge where the learner says a 20-22 word sentence or a two-sentence mini-response using the full word bank.",
+          "",
+          "Suggested 10-minute structure:",
+          "- 1 intro segment explaining this is a spoken sentence-building drill.",
+          "- Round 1: introduce 4-5 words/chunks; repeat each; build 3 short sentences.",
+          "- Round 2: add 3 words/chunks; repeat each; build 4 sentences mixing old + new material.",
+          "- Round 3: add 3 words/chunks; repeat each; build 4 medium sentences.",
+          "- Round 4: add 3 words/chunks; repeat each; build 3 longer sentences.",
+          "- Round 5: add 3-4 final words/chunks; build 2-3 long sentences around 18-22 words.",
+          "- 1 final challenge and 1 short outro.",
+          "",
+          "Timing rules for this format:",
+          "- Keep narrator explanations extremely short. The learner should speak constantly.",
+          "- Use prompt segments with showTimer: true for every sentence-building question.",
+          "- Usually omit responsePauseMs so PU3NTE dynamically scales the speaking pause from targetAnswer length.",
+          "- Use repeat/shadow segments often, especially after longer sentences.",
+          "- Do not create fake silence audio. Use pauseAfterMs/responsePauseMs only.",
+          "",
+          "Voice rules for this format:",
+          "- New target words/chunks and all target sentences must be pronounced by the target-language ElevenLabs voice, not the narrator.",
+          "- Narrator should speak only the learner's native language unless the selected narrator mode explicitly uses a bilingual ElevenLabs narrator.",
+          "- For dialect/accent special courses, target voices must use the selected local dialect/accent env voice IDs.",
+          "",
+          "Special-course B1 rule:",
+          "- If selected level is B1 in a dialect/accent special course, this sentence-builder speaking format is REQUIRED and allowed.",
+          "- B1 special-course lessons must teach practical local phrases gently: useful everyday words/chunks, local greetings/reactions, and simple sentence patterns. Do not overload B1 learners with C1/C2 slang density.",
+          "- B1 special-course lessons should still sound local, but explain register clearly and keep sentences manageable."
+        ].join("\\n");
+      }
+
       function getTopicDirection(topic) {
         if (!topic) {
           return "No topic selected yet. The prompt will ask ChatGPT to choose based on your written request.";
@@ -1872,9 +1959,13 @@ function pageHtml(): string {
           "Voice mapping to use:",
           voiceBlock,
           "",
-          "Generate exactly one complete 15-minute Listen & Respond lesson for this selected topic and level.",
+          speakingFormat === "sentence-builder"
+            ? "Generate exactly one complete 10-minute Cumulative Sentence Builder speaking lesson for this selected topic and level."
+            : "Generate exactly one complete 15-minute Listen & Respond lesson for this selected topic and level.",
           "The lesson title, subtitle, outputSlug, segment content, review prompts, final challenge, and examples must all match this selected topic.",
-          "Do not switch to another topic. Do not create a generic lesson. Do not make a 5-minute draft.",
+          speakingFormat === "sentence-builder"
+            ? "Do not switch to another topic. Do not create a generic lesson. Do not make a 5-minute draft or a 15-minute standard drill."
+            : "Do not switch to another topic. Do not create a generic lesson. Do not make a 5-minute draft.",
           narratorMode === "elevenlabs"
             ? "Because the narrator is ElevenLabs, choose a bilingual narrator voice ID in your env so occasional mixed English/Spanish narrator lines can be pronounced naturally."
             : narratorMode === "hybrid-intro"
@@ -1917,7 +2008,9 @@ function pageHtml(): string {
           "SELECTED DIALECT / ACCENT COURSE - USE THIS EXACT BRIEF",
           "Course: " + course.label,
           "Variety/accent: " + course.variety,
-          "Course design: 8 speaking lessons per advanced level, 24 total lessons for this variety/accent. Levels are B2, C1, and C2 only. No A1-A2 or B1 lessons: this course is intended for B2 upward learners who already know general basics.",
+          speakingFormat === "sentence-builder"
+            ? "Course design: B1 sentence-builder lessons are allowed only in this cumulative speaking-builder format. Standard dialect/accent lessons remain B2, C1, and C2."
+            : "Course design: 8 speaking lessons per advanced level, 24 total lessons for this variety/accent. Levels are B2, C1, and C2 only. No A1-A2 or B1 lessons: this course is intended for B2 upward learners who already know general basics.",
           "Selected lesson topic: " + topic.topic,
           "Selected level: " + topic.level,
           "Main speaking objective: " + topic.objective,
@@ -1939,9 +2032,13 @@ function pageHtml(): string {
           "Cultural guardrails: " + course.culturalGuardrails,
           "",
           "Content requirements for this selected course:",
-          "- Generate exactly one complete 15-minute Listen & Respond lesson for this selected topic and level.",
+          speakingFormat === "sentence-builder"
+            ? "- Generate exactly one complete 10-minute Cumulative Sentence Builder speaking lesson for this selected topic and level."
+            : "- Generate exactly one complete 15-minute Listen & Respond lesson for this selected topic and level.",
           "- Make the lesson heavily natural/local/informal, not generic standard textbook language.",
-          "- At least 75-85% of target-language prompts, answers, repeats, and dialogues should include local sayings, slang, idioms, greetings, reactions, discourse markers, politeness formulas, reductions, or phrasing that is strongly associated with " + course.variety + ".",
+          speakingFormat === "sentence-builder" && topic.level === "B1"
+            ? "- For B1 sentence-builder lessons, use local flavour gently: local greetings, reactions, common everyday chunks, and natural phrasing. Do not force dense slang into every sentence."
+            : "- At least 75-85% of target-language prompts, answers, repeats, and dialogues should include local sayings, slang, idioms, greetings, reactions, discourse markers, politeness formulas, reductions, or phrasing that is strongly associated with " + course.variety + ".",
           "- Every mini-dialogue should sound like real friends, coworkers, neighbours, classmates, drivers, shop staff, or voice-note conversations from the selected country/accent. Avoid stiff classroom dialogue.",
           "- Include local greetings/openers early in the lesson and reuse them later. Avoid generic greetings if a local opener would sound more natural.",
           "- Include at least one everyday situational saying or phrase for ordinary life, such as weather, traffic, food, money, time, plans, being late, being tired, being annoyed, or reacting to a story.",
@@ -1963,6 +2060,7 @@ function pageHtml(): string {
 
       function buildPrompt(basePrompt) {
         return basePrompt +
+          getSpeakingFormatPromptAppendix() +
           getTopicPromptAppendix(getActiveTopic()) +
           getSpecialCoursePromptAppendix(getActiveSpecialCourse(), getActiveSpecialTopic());
       }
@@ -1970,13 +2068,13 @@ function pageHtml(): string {
       function getPromptSelectionSummary() {
         const topic = getActiveTopic();
         if (topic) {
-          return "Normal lesson selected: " + topic.topic + " · " + topic.language + " · " + topic.level + " · " + getNarratorModeLabel();
+          return "Normal lesson selected: " + topic.topic + " · " + topic.language + " · " + topic.level + " · " + getSpeakingFormatLabel() + " · " + getNarratorModeLabel();
         }
 
         const course = getActiveSpecialCourse();
         const specialTopic = getActiveSpecialTopic();
         if (course && specialTopic) {
-          return "Dialect/accent course selected: " + course.label + " · " + specialTopic.level + " · " + specialTopic.topic + " · " + getNarratorModeLabel();
+          return "Dialect/accent course selected: " + course.label + " · " + specialTopic.level + " · " + specialTopic.topic + " · " + getSpeakingFormatLabel() + " · " + getNarratorModeLabel();
         }
 
         if (activePromptKind === "special" && course) {
@@ -1996,6 +2094,7 @@ function pageHtml(): string {
         document.getElementById("generalSelectorControls").classList.toggle("hidden", activePromptKind === "special");
         document.getElementById("specialSelectorControls").classList.toggle("hidden", activePromptKind !== "special");
         document.getElementById("selectorModeSelect").value = activePromptKind === "special" ? "special" : "general";
+        document.getElementById("speakingFormatSelect").value = speakingFormat;
         document.getElementById("narratorModeSelect").value = narratorMode;
         document.getElementById("detailedPromptText").textContent = buildPrompt(detailedChatGptPrompt);
       }
@@ -2081,6 +2180,7 @@ function pageHtml(): string {
 
         const filtered = specialCourseTopics.filter((topic) => {
           if (topic.courseId !== course.id) return false;
+          if (topic.level === "B1" && speakingFormat !== "sentence-builder") return false;
           if (level !== "all" && topic.level !== level) return false;
           if (search && !(topic.topic + " " + topic.objective + " " + topic.level + " " + course.label).toLowerCase().includes(search)) return false;
           return true;
@@ -2108,7 +2208,9 @@ function pageHtml(): string {
               '<div class="topic-objective">' + escapeHtml(topic.objective) + '</div>' +
             '</div>' +
           '</label>';
-        }).join("") || '<div class="note">No dialect/accent lessons match these filters.</div>';
+        }).join("") || (level === "B1" && speakingFormat !== "sentence-builder"
+          ? '<div class="note">B1 special-course lessons are only available when Speaking lesson format is set to 10-min Cumulative Sentence Builder speaking drill.</div>'
+          : '<div class="note">No dialect/accent lessons match these filters.</div>');
 
         list.querySelectorAll("input[data-special-topic-id]").forEach((checkbox) => {
           checkbox.addEventListener("change", (event) => {
@@ -2352,6 +2454,11 @@ function pageHtml(): string {
       });
       document.getElementById("selectorModeSelect").addEventListener("change", (event) => {
         setSelectorMode(event.target.value);
+      });
+      document.getElementById("speakingFormatSelect").addEventListener("change", (event) => {
+        speakingFormat = event.target.value;
+        renderSpecialTopics();
+        updatePromptPreview();
       });
       document.getElementById("narratorModeSelect").addEventListener("change", (event) => {
         narratorMode = event.target.value;
