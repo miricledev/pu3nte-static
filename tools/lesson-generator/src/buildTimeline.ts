@@ -15,13 +15,50 @@ const visualModeBySegmentType: Record<LessonSegment["type"], VisualMode> = {
   outro: "outro",
 };
 
-function getPauseDurationMs(script: LessonScript, segment: LessonSegment): number {
+const shortResponsePauseMs = 2_400;
+const minimumResponsePauseMs = 3_200;
+const maximumResponsePauseMs = 12_000;
+
+function countResponseUnits(text: string): number {
+  const words = text.trim().split(/\s+/).filter(Boolean).length;
+  const punctuationPauses = (text.match(/[,:;.!?¿¡]/g) ?? []).length;
+
+  return words + punctuationPauses * 0.45;
+}
+
+function getResponseText(segment: LessonSegment, previousSegment?: LessonSegment): string {
+  if (segment.targetAnswer?.trim()) return segment.targetAnswer;
+  if (segment.showOnScreenText?.trim()) return segment.showOnScreenText;
+
+  if (segment.type === "response_pause" && previousSegment) {
+    if (previousSegment.targetAnswer?.trim()) return previousSegment.targetAnswer;
+    if (previousSegment.showOnScreenText?.trim()) return previousSegment.showOnScreenText;
+    if (["answer", "repeat", "shadow"].includes(previousSegment.type)) return previousSegment.text;
+  }
+
+  return segment.text;
+}
+
+function getDynamicResponsePauseMs(segment: LessonSegment, previousSegment?: LessonSegment): number {
+  const responseText = getResponseText(segment, previousSegment);
+  const responseUnits = countResponseUnits(responseText);
+
+  if (responseUnits <= 3) {
+    return shortResponsePauseMs;
+  }
+
+  const baseMs = 1_200;
+  const perUnitMs = 620;
+  return Math.min(maximumResponsePauseMs, Math.max(minimumResponsePauseMs, Math.round(baseMs + responseUnits * perUnitMs)));
+}
+
+function getPauseDurationMs(script: LessonScript, segment: LessonSegment, previousSegment?: LessonSegment): number {
   if (segment.responsePauseMs !== undefined) {
     return segment.responsePauseMs;
   }
 
   if (segment.showTimer) {
-    return script.settings.defaultResponsePauseMs;
+    return getDynamicResponsePauseMs(segment, previousSegment);
   }
 
   return segment.pauseAfterMs ?? script.settings.defaultPauseAfterMs;
@@ -32,14 +69,15 @@ export function buildTimeline(script: LessonScript, clips: GeneratedAudioClip[])
   let cursorMs = 0;
   const segments: TimelineSegment[] = [];
 
-  for (const segment of script.segments) {
+  for (const [index, segment] of script.segments.entries()) {
     const clip = clipsBySegment.get(segment.id);
+    const previousSegment = index > 0 ? script.segments[index - 1] : undefined;
 
     if (!clip) {
       throw new Error(`Missing generated audio clip for segment ${segment.id}.`);
     }
 
-    const pauseDurationMs = getPauseDurationMs(script, segment);
+    const pauseDurationMs = getPauseDurationMs(script, segment, previousSegment);
     const audioStartMs = cursorMs;
     const audioEndMs = audioStartMs + clip.durationMs;
     const pauseStartMs = audioEndMs;

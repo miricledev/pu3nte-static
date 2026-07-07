@@ -196,13 +196,14 @@ Timeline per segment:
 spoken audio duration + pauseAfterMs or responsePauseMs
 ```
 
-When `showTimer` is true, the countdown appears during the pause portion. For example, `responsePauseMs: 5000` creates a five-second animated timer after the spoken prompt.
+When `showTimer` is true, the countdown appears during the pause portion. If `responsePauseMs` is set, that exact value is used. If `responsePauseMs` is omitted, the generator automatically scales the learner repeat time from `targetAnswer`, `showOnScreenText`, or the previous answer/repeat line.
 
-If pacing feels slow, reduce JSON pauses rather than editing audio manually. Good starting ranges:
+If pacing needs a manual override, edit JSON pauses rather than editing audio manually. Good starting ranges:
 
 - `defaultPauseAfterMs`: 500-900
-- short prompt `responsePauseMs`: 3000-4500
-- longer final challenge `responsePauseMs`: 6000-7000
+- short prompt `responsePauseMs`: 2400-3500
+- medium sentence `responsePauseMs`: 4500-7500
+- longer final challenge `responsePauseMs`: 8000-12000
 - answer/repeat `pauseAfterMs`: 600-1200
 
 ## Subtitles And Transcript
