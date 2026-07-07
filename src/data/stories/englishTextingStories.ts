@@ -16,6 +16,7 @@ type CheckSeed = {
   correct: string;
   explanation: string;
   skill: string;
+  afterMessageId?: string;
 };
 
 function highlights(seeds: HighlightSeed[]): Highlight[] {
@@ -61,7 +62,7 @@ function messages(storyId: string, title: string, seeds: MessageSeed[]): StoryMe
 function checks(seeds: CheckSeed[]): StoryComprehensionCheck[] {
   return seeds.map((seed, index) => ({
     id: `check-${index + 1}`,
-    afterMessageId: `m${(index + 1) * 3}`,
+    afterMessageId: seed.afterMessageId ?? `m${(index + 1) * 3}`,
     question: {
       id: `q-${index + 1}`,
       type: "multiple-choice",
@@ -167,11 +168,11 @@ export const englishTextingStories: WhatsAppStory[] = [
       { speakerId: "emily", text: "Anytime. See you soon, Carlos.", translation: "Cuando quieras. Nos vemos pronto, Carlos.", vocab: [["Anytime", "cuando quieras / de nada", "Respuesta cálida."], ["See you soon", "Nos vemos pronto", "Despedida común."]], grammar: [["See you", "Nos vemos.", "Frase fija, no traducción palabra por palabra."]] },
     ],
     checkSeeds: [
-      { question: "¿Por qué Carlos está nervioso?", options: ["Porque es su primer día de trabajo", "Porque perdió su teléfono", "Porque va al aeropuerto", "Porque no quiere trabajar"], correct: "Porque es su primer día de trabajo", explanation: "Carlos dice que está un poco nervioso y necesita ayuda para saber qué decir.", skill: "comprensión" },
+      { question: "¿Por qué Carlos está nervioso?", options: ["Porque es su primer día de trabajo", "Porque perdió su teléfono", "Porque va al aeropuerto", "Porque no quiere trabajar"], correct: "Porque es su primer día de trabajo", explanation: "Carlos dice que está un poco nervioso y Emily lo tranquiliza diciendo que los primeros días siempre son raros.", skill: "comprensión", afterMessageId: "m4" },
       { question: "¿Qué frase debe decir en recepción?", options: ["Hi, I'm Carlos.", "I lost my bus.", "Where is my food?", "I live here."], correct: "Hi, I'm Carlos.", explanation: "Emily le da una frase simple para presentarse.", skill: "frase útil" },
       { question: "¿Qué significa 'Can you help me?'", options: ["¿Puedes ayudarme?", "¿Puedes repetir?", "¿Dónde estás?", "Estoy listo"], correct: "¿Puedes ayudarme?", explanation: "Can you + verbo base se usa para pedir ayuda.", skill: "vocabulario" },
       { question: "¿Qué hace Carlos cuando Sarah habla muy rápido?", options: ["Pide que repita", "Se va a casa", "No dice nada", "Llama a Ben"], correct: "Pide que repita", explanation: "Emily le dice que use: Sorry, can you repeat, please?", skill: "estrategia" },
-      { question: "¿Qué significa 'I'm new here'?", options: ["Soy nuevo aquí", "Estoy perdido", "Trabajo aquí desde hace años", "Estoy ocupado"], correct: "Soy nuevo aquí", explanation: "Es una frase natural para explicar que acabas de llegar a un lugar.", skill: "vocabulario" },
+      { question: "¿Qué significa 'I'm new here'?", options: ["Soy nuevo aquí", "Estoy perdido", "Trabajo aquí desde hace años", "Estoy ocupado"], correct: "Soy nuevo aquí", explanation: "Es una frase natural para explicar que acabas de llegar a un lugar.", skill: "vocabulario", afterMessageId: "m16" },
       { question: "¿Qué estructura aparece en 'I work in support'?", options: ["work in + área", "can to + verbo", "be + pasado", "have + infinitivo"], correct: "work in + área", explanation: "En inglés se dice I work in + departamento o área.", skill: "gramática" },
       { question: "¿Cómo responde Carlos a 'How's your morning?'", options: ["Good, thanks. A little busy, but good.", "No, I can't.", "Where should I go?", "I'm on the wrong bus."], correct: "Good, thanks. A little busy, but good.", explanation: "Es una respuesta corta, natural y segura.", skill: "tono" },
       { question: "¿Cómo termina la historia?", options: ["Carlos se siente más seguro", "Carlos pierde el trabajo", "Emily se enfada", "Sarah no entiende nada"], correct: "Carlos se siente más seguro", explanation: "Carlos logra presentarse, pedir ayuda y seguir con su primer día.", skill: "resumen" },
@@ -225,7 +226,7 @@ export const englishTextingStories: WhatsAppStory[] = [
       { question: "¿Dónde debe esperar Lucía?", options: ["Junto a la estación", "En el aeropuerto", "Dentro del supermercado", "En su casa"], correct: "Junto a la estación", explanation: "Ben le dice: wait by the station.", skill: "direcciones" },
       { question: "¿Qué frase puede usar con la mujer?", options: ["I'm waiting for a friend.", "I work in support.", "I need a job.", "I'm on the wrong team."], correct: "I'm waiting for a friend.", explanation: "Ben le sugiere esta frase para explicar la situación.", skill: "frase útil" },
       { question: "¿Qué aprendió Lucía del error?", options: ["Que puede pedir ayuda", "Que no debe salir nunca", "Que Ben está enfadado", "Que el restaurante cerró"], correct: "Que puede pedir ayuda", explanation: "Lucía dice que cometió un error, pero pidió ayuda.", skill: "inferencia" },
-      { question: "¿Qué significa 'on foot'?", options: ["A pie", "En bus", "Muy lejos", "Con prisa"], correct: "A pie", explanation: "Ben dice que el restaurante está a dos minutos on foot.", skill: "vocabulario" },
+      { question: "¿Qué significa 'on foot'?", options: ["A pie", "En bus", "Muy lejos", "Con prisa"], correct: "A pie", explanation: "Ben dice que el restaurante está a dos minutos on foot.", skill: "vocabulario", afterMessageId: "m20" },
       { question: "¿Cómo encuentra Lucía a Ben?", options: ["Por su chaqueta azul", "Por una mochila roja", "Por su coche", "Por una llamada"], correct: "Por su chaqueta azul", explanation: "Lucía pregunta si lleva una blue jacket.", skill: "detalle" },
     ],
     learnedVocab: ["wrong bus", "Where are you?", "near", "Don't worry", "Get off", "next stop", "wait there", "I'm coming", "Is it far?", "I made a mistake"],
@@ -460,7 +461,7 @@ export const englishTextingStories: WhatsAppStory[] = [
       { question: "¿Por qué dice 'This isn't about blaming you'?", options: ["Para evitar que suene a ataque", "Para culpar más fuerte", "Para pedir trabajo", "Para cambiar el tema"], correct: "Para evitar que suene a ataque", explanation: "Delimita la intención de la conversación.", skill: "matiz" },
       { question: "¿Qué límite necesita Valentina?", options: ["Espacio para procesar", "Más trabajo", "Un presupuesto", "Una nueva entrevista"], correct: "Espacio para procesar", explanation: "Ella necesita space after this.", skill: "detalle" },
       { question: "¿Qué significa 'something is off'?", options: ["Algo no va bien", "Algo está apagado literalmente", "Todo está perfecto", "Alguien está lejos"], correct: "Algo no va bien", explanation: "Es una frase idiomática para sentir que algo está raro.", skill: "idioma" },
-      { question: "¿Cómo responde James?", options: ["Con comprensión y pide tiempo", "Atacando", "Con una broma", "Ignorando"], correct: "Con comprensión y pide tiempo", explanation: "Dice que necesita tiempo, pero entiende.", skill: "detalle" },
+      { question: "¿Cómo responde James?", options: ["Con comprensión y pide tiempo", "Atacando", "Con una broma", "Ignorando"], correct: "Con comprensión y pide tiempo", explanation: "Dice que necesita tiempo, pero entiende.", skill: "detalle", afterMessageId: "m28" },
       { question: "¿Cuál es la lección emocional?", options: ["Ser honesto con cuidado", "Evitar toda conversación", "Decir todo sin filtro", "Pedir consuelo"], correct: "Ser honesto con cuidado", explanation: "Nora dice que Valentina fue honesta sin convertir la honestidad en arma.", skill: "resumen" },
     ],
     learnedVocab: ["I don't want to hurt him", "At the same time", "I need to be honest", "I've been avoiding this conversation", "It wouldn't be fair", "set a boundary", "come across the wrong way", "The truth is", "where I'm coming from", "handled it with care"],

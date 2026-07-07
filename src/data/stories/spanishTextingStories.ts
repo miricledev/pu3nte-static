@@ -14,6 +14,7 @@ type CheckSeed = {
   correct: string;
   explanation: string;
   skill: string;
+  afterMessageId?: string;
 };
 
 function messages(storyId: string, title: string, seeds: MessageSeed[]): StoryMessage[] {
@@ -51,7 +52,7 @@ function messages(storyId: string, title: string, seeds: MessageSeed[]): StoryMe
 function checks(seeds: CheckSeed[]): StoryComprehensionCheck[] {
   return seeds.map((seed, index) => ({
     id: `check-${index + 1}`,
-    afterMessageId: `m${(index + 1) * 3}`,
+    afterMessageId: seed.afterMessageId ?? `m${(index + 1) * 3}`,
     question: {
       id: `q-${index + 1}`,
       type: "multiple-choice",
@@ -203,7 +204,7 @@ export const spanishTextingStories: WhatsAppStory[] = [
       { question: "What does Sofia tell him to do?", options: ["Speak slowly", "Write an essay", "Stop learning", "Call tomorrow"], correct: "Speak slowly", explanation: "She says: No te preocupes. Habla despacio.", skill: "detail" },
       { question: "What does contigo mean?", options: ["With you", "Against you", "Without you", "For me"], correct: "With you", explanation: "Sofia says she laughs with him, not at him.", skill: "vocabulary" },
       { question: "What happens when Jack starts recording?", options: ["He sends it perfectly", "He deletes everything", "He calls Sofia", "He switches to English"], correct: "He deletes everything", explanation: "He says: borre todo.", skill: "detail" },
-      { question: "What phrase means 'Can you repeat?'", options: ["¿Puedes repetir?", "¿Puedes correr?", "¿Puedes dormir?", "¿Puedes pagar?"], correct: "¿Puedes repetir?", explanation: "Sofia gives this phrase for when Jack does not understand.", skill: "vocabulary" },
+      { question: "What phrase means 'Can you repeat?'", options: ["¿Puedes repetir?", "¿Puedes correr?", "¿Puedes dormir?", "¿Puedes pagar?"], correct: "¿Puedes repetir?", explanation: "Sofia gives this phrase for when Jack does not understand.", skill: "vocabulary", afterMessageId: "m16" },
       { question: "What does sin pensar demasiado suggest?", options: ["Do not overthink", "Think for hours", "Translate every word", "Delete the message"], correct: "Do not overthink", explanation: "Sofia wants Jack to send the note without overthinking.", skill: "implied meaning" },
       { question: "How does Sofia react to the voice note?", options: ["She says it was good", "She ignores it", "She corrects every word", "She tells him to stop"], correct: "She says it was good", explanation: "She says: Muy bien, Jack.", skill: "detail" },
       { question: "What does Jack decide at the end?", options: ["To send another note tomorrow", "To never speak again", "To study French", "To delete WhatsApp"], correct: "To send another note tomorrow", explanation: "Jack says: mañana mando otra.", skill: "summary" },
