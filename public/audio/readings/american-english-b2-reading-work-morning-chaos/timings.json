@@ -1,0 +1,2130 @@
+{
+  "words": [
+    {
+      "word": "Hey,",
+      "start": 0,
+      "end": 0.29
+    },
+    {
+      "word": "what’s",
+      "start": 0.348,
+      "end": 0.627
+    },
+    {
+      "word": "up?",
+      "start": 0.697,
+      "end": 0.917
+    },
+    {
+      "word": "I",
+      "start": 0.975,
+      "end": 1.022
+    },
+    {
+      "word": "wanna",
+      "start": 1.091,
+      "end": 1.277
+    },
+    {
+      "word": "tell",
+      "start": 1.312,
+      "end": 1.451
+    },
+    {
+      "word": "you",
+      "start": 1.486,
+      "end": 1.556
+    },
+    {
+      "word": "real",
+      "start": 1.672,
+      "end": 1.892
+    },
+    {
+      "word": "quick",
+      "start": 1.962,
+      "end": 2.171
+    },
+    {
+      "word": "about",
+      "start": 2.218,
+      "end": 2.392
+    },
+    {
+      "word": "a",
+      "start": 2.415,
+      "end": 2.438
+    },
+    {
+      "word": "morning",
+      "start": 2.485,
+      "end": 2.717
+    },
+    {
+      "word": "that",
+      "start": 2.752,
+      "end": 2.856
+    },
+    {
+      "word": "still",
+      "start": 2.937,
+      "end": 3.332
+    },
+    {
+      "word": "makes",
+      "start": 3.379,
+      "end": 3.564
+    },
+    {
+      "word": "me",
+      "start": 3.599,
+      "end": 3.68
+    },
+    {
+      "word": "laugh.",
+      "start": 3.727,
+      "end": 4.214
+    },
+    {
+      "word": "So…",
+      "start": 4.598,
+      "end": 4.946
+    },
+    {
+      "word": "the",
+      "start": 5.329,
+      "end": 5.433
+    },
+    {
+      "word": "whole",
+      "start": 5.48,
+      "end": 5.666
+    },
+    {
+      "word": "morning",
+      "start": 5.7,
+      "end": 5.933
+    },
+    {
+      "word": "was",
+      "start": 5.968,
+      "end": 6.06
+    },
+    {
+      "word": "kind",
+      "start": 6.118,
+      "end": 6.281
+    },
+    {
+      "word": "of",
+      "start": 6.316,
+      "end": 6.374
+    },
+    {
+      "word": "a",
+      "start": 6.42,
+      "end": 6.444
+    },
+    {
+      "word": "mess.",
+      "start": 6.49,
+      "end": 6.978
+    },
+    {
+      "word": "Actually,",
+      "start": 7.581,
+      "end": 8.313
+    },
+    {
+      "word": "So,",
+      "start": 8.754,
+      "end": 9.067
+    },
+    {
+      "word": "here’s",
+      "start": 9.218,
+      "end": 9.497
+    },
+    {
+      "word": "what",
+      "start": 9.52,
+      "end": 9.648
+    },
+    {
+      "word": "happened:",
+      "start": 9.694,
+      "end": 10.321
+    },
+    {
+      "word": "I",
+      "start": 10.704,
+      "end": 10.786
+    },
+    {
+      "word": "was",
+      "start": 10.879,
+      "end": 11.006
+    },
+    {
+      "word": "about",
+      "start": 11.064,
+      "end": 11.355
+    },
+    {
+      "word": "to",
+      "start": 11.389,
+      "end": 11.447
+    },
+    {
+      "word": "head",
+      "start": 11.505,
+      "end": 11.656
+    },
+    {
+      "word": "out",
+      "start": 11.714,
+      "end": 11.877
+    },
+    {
+      "word": "because",
+      "start": 11.923,
+      "end": 12.179
+    },
+    {
+      "word": "I",
+      "start": 12.249,
+      "end": 12.295
+    },
+    {
+      "word": "had",
+      "start": 12.411,
+      "end": 12.527
+    },
+    {
+      "word": "to",
+      "start": 12.562,
+      "end": 12.608
+    },
+    {
+      "word": "run",
+      "start": 12.643,
+      "end": 12.783
+    },
+    {
+      "word": "a",
+      "start": 12.817,
+      "end": 12.841
+    },
+    {
+      "word": "couple",
+      "start": 12.887,
+      "end": 13.142
+    },
+    {
+      "word": "errands",
+      "start": 13.189,
+      "end": 13.468
+    },
+    {
+      "word": "before",
+      "start": 13.503,
+      "end": 13.781
+    },
+    {
+      "word": "work,",
+      "start": 13.816,
+      "end": 14.281
+    },
+    {
+      "word": "just",
+      "start": 14.455,
+      "end": 14.629
+    },
+    {
+      "word": "a",
+      "start": 14.664,
+      "end": 14.687
+    },
+    {
+      "word": "couple",
+      "start": 14.722,
+      "end": 14.977
+    },
+    {
+      "word": "errands,",
+      "start": 15.024,
+      "end": 15.418
+    },
+    {
+      "word": "nothing",
+      "start": 15.465,
+      "end": 15.732
+    },
+    {
+      "word": "dramatic.",
+      "start": 15.767,
+      "end": 16.463
+    },
+    {
+      "word": "Then,",
+      "start": 16.905,
+      "end": 17.218
+    },
+    {
+      "word": "oh",
+      "start": 17.276,
+      "end": 17.45
+    },
+    {
+      "word": "man,",
+      "start": 17.508,
+      "end": 17.81
+    },
+    {
+      "word": "my",
+      "start": 17.868,
+      "end": 17.961
+    },
+    {
+      "word": "car",
+      "start": 18.031,
+      "end": 18.182
+    },
+    {
+      "word": "wouldn’t",
+      "start": 18.228,
+      "end": 18.472
+    },
+    {
+      "word": "start.",
+      "start": 18.507,
+      "end": 19.064
+    },
+    {
+      "word": "Uh-oh.",
+      "start": 19.877,
+      "end": 20.84
+    },
+    {
+      "word": "I",
+      "start": 21.165,
+      "end": 21.223
+    },
+    {
+      "word": "knew",
+      "start": 21.305,
+      "end": 21.444
+    },
+    {
+      "word": "something",
+      "start": 21.49,
+      "end": 21.758
+    },
+    {
+      "word": "was",
+      "start": 21.804,
+      "end": 21.908
+    },
+    {
+      "word": "up",
+      "start": 21.967,
+      "end": 22.094
+    },
+    {
+      "word": "because",
+      "start": 22.152,
+      "end": 22.686
+    },
+    {
+      "word": "the",
+      "start": 22.86,
+      "end": 22.977
+    },
+    {
+      "word": "dashboard",
+      "start": 23.035,
+      "end": 23.487
+    },
+    {
+      "word": "was",
+      "start": 23.534,
+      "end": 23.627
+    },
+    {
+      "word": "blinking",
+      "start": 23.673,
+      "end": 24.103
+    },
+    {
+      "word": "in",
+      "start": 24.219,
+      "end": 24.312
+    },
+    {
+      "word": "a",
+      "start": 24.347,
+      "end": 24.37
+    },
+    {
+      "word": "weird",
+      "start": 24.416,
+      "end": 24.637
+    },
+    {
+      "word": "way.",
+      "start": 24.683,
+      "end": 25.159
+    },
+    {
+      "word": "Something",
+      "start": 25.6,
+      "end": 25.914
+    },
+    {
+      "word": "was",
+      "start": 25.949,
+      "end": 26.065
+    },
+    {
+      "word": "up,",
+      "start": 26.146,
+      "end": 26.355
+    },
+    {
+      "word": "and",
+      "start": 26.378,
+      "end": 26.645
+    },
+    {
+      "word": "I",
+      "start": 26.761,
+      "end": 26.819
+    },
+    {
+      "word": "was",
+      "start": 26.901,
+      "end": 27.017
+    },
+    {
+      "word": "already",
+      "start": 27.098,
+      "end": 27.481
+    },
+    {
+      "word": "running",
+      "start": 27.528,
+      "end": 27.76
+    },
+    {
+      "word": "late.",
+      "start": 27.818,
+      "end": 28.317
+    },
+    {
+      "word": "Okay,",
+      "start": 29.13,
+      "end": 29.455
+    },
+    {
+      "word": "so…",
+      "start": 29.502,
+      "end": 30.198
+    },
+    {
+      "word": "I",
+      "start": 30.349,
+      "end": 30.407
+    },
+    {
+      "word": "called",
+      "start": 30.477,
+      "end": 30.674
+    },
+    {
+      "word": "a",
+      "start": 30.709,
+      "end": 30.732
+    },
+    {
+      "word": "rideshare,",
+      "start": 30.779,
+      "end": 31.429
+    },
+    {
+      "word": "but",
+      "start": 31.58,
+      "end": 31.8
+    },
+    {
+      "word": "the",
+      "start": 31.917,
+      "end": 32.033
+    },
+    {
+      "word": "traffic",
+      "start": 32.079,
+      "end": 32.416
+    },
+    {
+      "word": "was",
+      "start": 32.462,
+      "end": 32.567
+    },
+    {
+      "word": "insane.",
+      "start": 32.625,
+      "end": 33.368
+    },
+    {
+      "word": "I",
+      "start": 33.972,
+      "end": 34.018
+    },
+    {
+      "word": "mean,",
+      "start": 34.111,
+      "end": 34.61
+    },
+    {
+      "word": "insane.",
+      "start": 34.935,
+      "end": 35.864
+    },
+    {
+      "word": "On",
+      "start": 36.189,
+      "end": 36.34
+    },
+    {
+      "word": "top",
+      "start": 36.386,
+      "end": 36.619
+    },
+    {
+      "word": "of",
+      "start": 36.677,
+      "end": 36.735
+    },
+    {
+      "word": "that,",
+      "start": 36.793,
+      "end": 37.327
+    },
+    {
+      "word": "it",
+      "start": 37.605,
+      "end": 37.733
+    },
+    {
+      "word": "started",
+      "start": 37.78,
+      "end": 38.105
+    },
+    {
+      "word": "pouring",
+      "start": 38.151,
+      "end": 38.453
+    },
+    {
+      "word": "out",
+      "start": 38.499,
+      "end": 38.592
+    },
+    {
+      "word": "of",
+      "start": 38.627,
+      "end": 38.685
+    },
+    {
+      "word": "nowhere.",
+      "start": 38.755,
+      "end": 39.312
+    },
+    {
+      "word": "It",
+      "start": 39.556,
+      "end": 39.695
+    },
+    {
+      "word": "started",
+      "start": 39.742,
+      "end": 40.055
+    },
+    {
+      "word": "pouring",
+      "start": 40.09,
+      "end": 40.369
+    },
+    {
+      "word": "right",
+      "start": 40.496,
+      "end": 40.879
+    },
+    {
+      "word": "when",
+      "start": 40.996,
+      "end": 41.181
+    },
+    {
+      "word": "I",
+      "start": 41.228,
+      "end": 41.251
+    },
+    {
+      "word": "stepped",
+      "start": 41.321,
+      "end": 41.576
+    },
+    {
+      "word": "outside,",
+      "start": 41.611,
+      "end": 42.377
+    },
+    {
+      "word": "and",
+      "start": 42.586,
+      "end": 42.737
+    },
+    {
+      "word": "suddenly",
+      "start": 42.818,
+      "end": 43.283
+    },
+    {
+      "word": "I",
+      "start": 43.376,
+      "end": 43.41
+    },
+    {
+      "word": "was",
+      "start": 43.492,
+      "end": 43.596
+    },
+    {
+      "word": "standing",
+      "start": 43.643,
+      "end": 44.037
+    },
+    {
+      "word": "there",
+      "start": 44.084,
+      "end": 44.281
+    },
+    {
+      "word": "with",
+      "start": 44.339,
+      "end": 44.49
+    },
+    {
+      "word": "my",
+      "start": 44.537,
+      "end": 44.606
+    },
+    {
+      "word": "laptop",
+      "start": 44.664,
+      "end": 45.059
+    },
+    {
+      "word": "bag,",
+      "start": 45.117,
+      "end": 45.523
+    },
+    {
+      "word": "my",
+      "start": 45.547,
+      "end": 45.628
+    },
+    {
+      "word": "jacket,",
+      "start": 45.697,
+      "end": 46.22
+    },
+    {
+      "word": "and",
+      "start": 46.255,
+      "end": 46.499
+    },
+    {
+      "word": "zero",
+      "start": 46.591,
+      "end": 46.893
+    },
+    {
+      "word": "patience.",
+      "start": 46.963,
+      "end": 47.729
+    },
+    {
+      "word": "I",
+      "start": 48.542,
+      "end": 48.6
+    },
+    {
+      "word": "was",
+      "start": 48.681,
+      "end": 48.786
+    },
+    {
+      "word": "like,",
+      "start": 48.844,
+      "end": 49.099
+    },
+    {
+      "word": "seriously?",
+      "start": 49.273,
+      "end": 50.283
+    },
+    {
+      "word": "That",
+      "start": 50.794,
+      "end": 50.98
+    },
+    {
+      "word": "always",
+      "start": 51.015,
+      "end": 51.247
+    },
+    {
+      "word": "happens",
+      "start": 51.282,
+      "end": 51.619
+    },
+    {
+      "word": "when",
+      "start": 51.653,
+      "end": 51.758
+    },
+    {
+      "word": "you’re",
+      "start": 51.781,
+      "end": 51.932
+    },
+    {
+      "word": "trying",
+      "start": 51.955,
+      "end": 52.129
+    },
+    {
+      "word": "to",
+      "start": 52.153,
+      "end": 52.199
+    },
+    {
+      "word": "be",
+      "start": 52.234,
+      "end": 52.315
+    },
+    {
+      "word": "responsible.",
+      "start": 52.373,
+      "end": 53.221
+    },
+    {
+      "word": "I",
+      "start": 53.824,
+      "end": 53.883
+    },
+    {
+      "word": "tried",
+      "start": 53.952,
+      "end": 54.138
+    },
+    {
+      "word": "to",
+      "start": 54.161,
+      "end": 54.208
+    },
+    {
+      "word": "keep",
+      "start": 54.242,
+      "end": 54.382
+    },
+    {
+      "word": "it",
+      "start": 54.417,
+      "end": 54.486
+    },
+    {
+      "word": "together,",
+      "start": 54.521,
+      "end": 55.136
+    },
+    {
+      "word": "but",
+      "start": 55.287,
+      "end": 55.52
+    },
+    {
+      "word": "honestly,",
+      "start": 55.601,
+      "end": 56.216
+    },
+    {
+      "word": "I",
+      "start": 56.263,
+      "end": 56.309
+    },
+    {
+      "word": "was",
+      "start": 56.39,
+      "end": 56.495
+    },
+    {
+      "word": "exhausted",
+      "start": 56.553,
+      "end": 57.052
+    },
+    {
+      "word": "before",
+      "start": 57.11,
+      "end": 57.366
+    },
+    {
+      "word": "I",
+      "start": 57.4,
+      "end": 57.435
+    },
+    {
+      "word": "even",
+      "start": 57.516,
+      "end": 57.691
+    },
+    {
+      "word": "got",
+      "start": 57.737,
+      "end": 57.876
+    },
+    {
+      "word": "to",
+      "start": 57.911,
+      "end": 57.958
+    },
+    {
+      "word": "the",
+      "start": 58.004,
+      "end": 58.074
+    },
+    {
+      "word": "office.",
+      "start": 58.143,
+      "end": 58.759
+    },
+    {
+      "word": "When",
+      "start": 59.084,
+      "end": 59.258
+    },
+    {
+      "word": "I",
+      "start": 59.293,
+      "end": 59.316
+    },
+    {
+      "word": "finally",
+      "start": 59.374,
+      "end": 59.653
+    },
+    {
+      "word": "got",
+      "start": 59.699,
+      "end": 59.885
+    },
+    {
+      "word": "there,",
+      "start": 59.931,
+      "end": 60.361
+    },
+    {
+      "word": "my",
+      "start": 60.686,
+      "end": 60.79
+    },
+    {
+      "word": "boss",
+      "start": 60.848,
+      "end": 61.092
+    },
+    {
+      "word": "called",
+      "start": 61.138,
+      "end": 61.347
+    },
+    {
+      "word": "me",
+      "start": 61.382,
+      "end": 61.452
+    },
+    {
+      "word": "over",
+      "start": 61.51,
+      "end": 61.707
+    },
+    {
+      "word": "and",
+      "start": 61.765,
+      "end": 61.847
+    },
+    {
+      "word": "said,",
+      "start": 61.916,
+      "end": 62.473
+    },
+    {
+      "word": "'Can",
+      "start": 62.915,
+      "end": 63.193
+    },
+    {
+      "word": "you",
+      "start": 63.251,
+      "end": 63.321
+    },
+    {
+      "word": "handle",
+      "start": 63.379,
+      "end": 63.658
+    },
+    {
+      "word": "one",
+      "start": 63.716,
+      "end": 63.867
+    },
+    {
+      "word": "quick",
+      "start": 63.913,
+      "end": 64.122
+    },
+    {
+      "word": "thing?'",
+      "start": 64.169,
+      "end": 64.865
+    },
+    {
+      "word": "And",
+      "start": 65.678,
+      "end": 65.875
+    },
+    {
+      "word": "you",
+      "start": 65.991,
+      "end": 66.119
+    },
+    {
+      "word": "know",
+      "start": 66.165,
+      "end": 66.282
+    },
+    {
+      "word": "how",
+      "start": 66.328,
+      "end": 66.421
+    },
+    {
+      "word": "that",
+      "start": 66.467,
+      "end": 66.595
+    },
+    {
+      "word": "goes:",
+      "start": 66.653,
+      "end": 67.338
+    },
+    {
+      "word": "one",
+      "start": 67.779,
+      "end": 68.011
+    },
+    {
+      "word": "quick",
+      "start": 68.069,
+      "end": 68.29
+    },
+    {
+      "word": "thing",
+      "start": 68.348,
+      "end": 68.604
+    },
+    {
+      "word": "is",
+      "start": 68.754,
+      "end": 68.998
+    },
+    {
+      "word": "never",
+      "start": 69.149,
+      "end": 69.556
+    },
+    {
+      "word": "one",
+      "start": 69.672,
+      "end": 69.892
+    },
+    {
+      "word": "quick",
+      "start": 69.939,
+      "end": 70.171
+    },
+    {
+      "word": "thing.",
+      "start": 70.229,
+      "end": 70.751
+    },
+    {
+      "word": "Basically,",
+      "start": 71.355,
+      "end": 71.924
+    },
+    {
+      "word": "it",
+      "start": 71.947,
+      "end": 72.063
+    },
+    {
+      "word": "turned",
+      "start": 72.098,
+      "end": 72.33
+    },
+    {
+      "word": "into",
+      "start": 72.377,
+      "end": 72.516
+    },
+    {
+      "word": "this",
+      "start": 72.586,
+      "end": 72.725
+    },
+    {
+      "word": "whole",
+      "start": 72.783,
+      "end": 73.12
+    },
+    {
+      "word": "thing",
+      "start": 73.155,
+      "end": 73.34
+    },
+    {
+      "word": "with",
+      "start": 73.387,
+      "end": 73.503
+    },
+    {
+      "word": "a",
+      "start": 73.549,
+      "end": 73.573
+    },
+    {
+      "word": "client",
+      "start": 73.619,
+      "end": 73.956
+    },
+    {
+      "word": "email,",
+      "start": 74.014,
+      "end": 74.525
+    },
+    {
+      "word": "a",
+      "start": 74.559,
+      "end": 74.617
+    },
+    {
+      "word": "spreadsheet,",
+      "start": 74.699,
+      "end": 75.291
+    },
+    {
+      "word": "and",
+      "start": 75.326,
+      "end": 75.477
+    },
+    {
+      "word": "three",
+      "start": 75.546,
+      "end": 75.79
+    },
+    {
+      "word": "people",
+      "start": 75.836,
+      "end": 76.127
+    },
+    {
+      "word": "asking",
+      "start": 76.173,
+      "end": 76.521
+    },
+    {
+      "word": "different",
+      "start": 76.579,
+      "end": 76.847
+    },
+    {
+      "word": "questions.",
+      "start": 76.881,
+      "end": 77.648
+    },
+    {
+      "word": "This",
+      "start": 77.891,
+      "end": 78.1
+    },
+    {
+      "word": "whole",
+      "start": 78.147,
+      "end": 78.333
+    },
+    {
+      "word": "thing",
+      "start": 78.356,
+      "end": 78.518
+    },
+    {
+      "word": "took",
+      "start": 78.576,
+      "end": 78.797
+    },
+    {
+      "word": "almost",
+      "start": 78.913,
+      "end": 79.528
+    },
+    {
+      "word": "forty",
+      "start": 79.61,
+      "end": 79.923
+    },
+    {
+      "word": "minutes.",
+      "start": 79.981,
+      "end": 80.597
+    },
+    {
+      "word": "Still,",
+      "start": 80.84,
+      "end": 81.409
+    },
+    {
+      "word": "I",
+      "start": 81.583,
+      "end": 81.641
+    },
+    {
+      "word": "made",
+      "start": 81.758,
+      "end": 81.967
+    },
+    {
+      "word": "it.",
+      "start": 82.013,
+      "end": 82.315
+    },
+    {
+      "word": "Barely.",
+      "start": 82.524,
+      "end": 83.186
+    },
+    {
+      "word": "I",
+      "start": 83.464,
+      "end": 83.522
+    },
+    {
+      "word": "made",
+      "start": 83.604,
+      "end": 83.778
+    },
+    {
+      "word": "it",
+      "start": 83.812,
+      "end": 83.871
+    },
+    {
+      "word": "just",
+      "start": 83.952,
+      "end": 84.23
+    },
+    {
+      "word": "in",
+      "start": 84.289,
+      "end": 84.37
+    },
+    {
+      "word": "time",
+      "start": 84.439,
+      "end": 84.706
+    },
+    {
+      "word": "for",
+      "start": 84.73,
+      "end": 84.823
+    },
+    {
+      "word": "the",
+      "start": 84.857,
+      "end": 84.927
+    },
+    {
+      "word": "client",
+      "start": 84.962,
+      "end": 85.264
+    },
+    {
+      "word": "call,",
+      "start": 85.299,
+      "end": 85.717
+    },
+    {
+      "word": "and",
+      "start": 85.786,
+      "end": 86.03
+    },
+    {
+      "word": "no",
+      "start": 86.146,
+      "end": 86.239
+    },
+    {
+      "word": "one",
+      "start": 86.309,
+      "end": 86.413
+    },
+    {
+      "word": "noticed",
+      "start": 86.448,
+      "end": 86.75
+    },
+    {
+      "word": "that",
+      "start": 86.773,
+      "end": 86.889
+    },
+    {
+      "word": "I",
+      "start": 86.97,
+      "end": 87.028
+    },
+    {
+      "word": "was",
+      "start": 87.145,
+      "end": 87.261
+    },
+    {
+      "word": "running",
+      "start": 87.319,
+      "end": 87.551
+    },
+    {
+      "word": "a",
+      "start": 87.597,
+      "end": 87.621
+    },
+    {
+      "word": "little",
+      "start": 87.655,
+      "end": 87.853
+    },
+    {
+      "word": "late.",
+      "start": 87.888,
+      "end": 88.352
+    },
+    {
+      "word": "After",
+      "start": 88.793,
+      "end": 89.095
+    },
+    {
+      "word": "the",
+      "start": 89.141,
+      "end": 89.211
+    },
+    {
+      "word": "call,",
+      "start": 89.258,
+      "end": 89.594
+    },
+    {
+      "word": "I",
+      "start": 89.641,
+      "end": 89.687
+    },
+    {
+      "word": "went",
+      "start": 89.768,
+      "end": 89.931
+    },
+    {
+      "word": "to",
+      "start": 89.966,
+      "end": 90.024
+    },
+    {
+      "word": "a",
+      "start": 90.14,
+      "end": 90.186
+    },
+    {
+      "word": "coffee",
+      "start": 90.302,
+      "end": 90.616
+    },
+    {
+      "word": "shop",
+      "start": 90.651,
+      "end": 90.941
+    },
+    {
+      "word": "because",
+      "start": 91.22,
+      "end": 91.498
+    },
+    {
+      "word": "at",
+      "start": 91.522,
+      "end": 91.58
+    },
+    {
+      "word": "least",
+      "start": 91.614,
+      "end": 91.8
+    },
+    {
+      "word": "I",
+      "start": 91.847,
+      "end": 91.87
+    },
+    {
+      "word": "deserved",
+      "start": 91.951,
+      "end": 92.299
+    },
+    {
+      "word": "caffeine.",
+      "start": 92.334,
+      "end": 93.1
+    },
+    {
+      "word": "I",
+      "start": 93.913,
+      "end": 93.971
+    },
+    {
+      "word": "grabbed",
+      "start": 94.064,
+      "end": 94.296
+    },
+    {
+      "word": "an",
+      "start": 94.32,
+      "end": 94.378
+    },
+    {
+      "word": "iced",
+      "start": 94.424,
+      "end": 94.575
+    },
+    {
+      "word": "coffee,",
+      "start": 94.61,
+      "end": 95.213
+    },
+    {
+      "word": "grabbed",
+      "start": 95.422,
+      "end": 95.701
+    },
+    {
+      "word": "a",
+      "start": 95.736,
+      "end": 95.759
+    },
+    {
+      "word": "seat",
+      "start": 95.806,
+      "end": 95.957
+    },
+    {
+      "word": "by",
+      "start": 95.991,
+      "end": 96.073
+    },
+    {
+      "word": "the",
+      "start": 96.119,
+      "end": 96.189
+    },
+    {
+      "word": "window,",
+      "start": 96.235,
+      "end": 96.804
+    },
+    {
+      "word": "and",
+      "start": 97.129,
+      "end": 97.315
+    },
+    {
+      "word": "I",
+      "start": 97.396,
+      "end": 97.419
+    },
+    {
+      "word": "sat",
+      "start": 97.512,
+      "end": 97.675
+    },
+    {
+      "word": "down",
+      "start": 97.721,
+      "end": 97.872
+    },
+    {
+      "word": "for",
+      "start": 97.907,
+      "end": 98
+    },
+    {
+      "word": "like",
+      "start": 98.046,
+      "end": 98.197
+    },
+    {
+      "word": "two",
+      "start": 98.232,
+      "end": 98.441
+    },
+    {
+      "word": "minutes.",
+      "start": 98.511,
+      "end": 99.114
+    },
+    {
+      "word": "For",
+      "start": 99.556,
+      "end": 99.683
+    },
+    {
+      "word": "like",
+      "start": 99.73,
+      "end": 99.892
+    },
+    {
+      "word": "two",
+      "start": 99.927,
+      "end": 100.09
+    },
+    {
+      "word": "minutes,",
+      "start": 100.148,
+      "end": 100.775
+    },
+    {
+      "word": "life",
+      "start": 101.216,
+      "end": 101.448
+    },
+    {
+      "word": "felt",
+      "start": 101.483,
+      "end": 101.657
+    },
+    {
+      "word": "normal.",
+      "start": 101.703,
+      "end": 102.249
+    },
+    {
+      "word": "Then",
+      "start": 102.76,
+      "end": 103.108
+    },
+    {
+      "word": "my",
+      "start": 103.317,
+      "end": 103.445
+    },
+    {
+      "word": "phone",
+      "start": 103.503,
+      "end": 103.747
+    },
+    {
+      "word": "buzzed:",
+      "start": 103.782,
+      "end": 104.385
+    },
+    {
+      "word": "my",
+      "start": 104.827,
+      "end": 104.943
+    },
+    {
+      "word": "friend",
+      "start": 105.036,
+      "end": 105.337
+    },
+    {
+      "word": "bailed.",
+      "start": 105.395,
+      "end": 106.034
+    },
+    {
+      "word": "No",
+      "start": 106.731,
+      "end": 106.893
+    },
+    {
+      "word": "way.",
+      "start": 106.951,
+      "end": 107.323
+    },
+    {
+      "word": "My",
+      "start": 107.439,
+      "end": 107.555
+    },
+    {
+      "word": "friend",
+      "start": 107.601,
+      "end": 107.787
+    },
+    {
+      "word": "bailed",
+      "start": 107.822,
+      "end": 108.066
+    },
+    {
+      "word": "last",
+      "start": 108.147,
+      "end": 108.449
+    },
+    {
+      "word": "minute.",
+      "start": 108.507,
+      "end": 108.902
+    },
+    {
+      "word": "He",
+      "start": 109.111,
+      "end": 109.308
+    },
+    {
+      "word": "said",
+      "start": 109.424,
+      "end": 109.703
+    },
+    {
+      "word": "he",
+      "start": 109.773,
+      "end": 109.877
+    },
+    {
+      "word": "was",
+      "start": 109.947,
+      "end": 110.109
+    },
+    {
+      "word": "too",
+      "start": 110.191,
+      "end": 110.446
+    },
+    {
+      "word": "tired.",
+      "start": 110.516,
+      "end": 111.328
+    },
+    {
+      "word": "I",
+      "start": 111.607,
+      "end": 111.653
+    },
+    {
+      "word": "thought,",
+      "start": 111.711,
+      "end": 111.932
+    },
+    {
+      "word": "dude,",
+      "start": 111.978,
+      "end": 112.35
+    },
+    {
+      "word": "that’s",
+      "start": 112.385,
+      "end": 112.605
+    },
+    {
+      "word": "rough,",
+      "start": 112.675,
+      "end": 113
+    },
+    {
+      "word": "but",
+      "start": 113.023,
+      "end": 113.209
+    },
+    {
+      "word": "that’s",
+      "start": 113.256,
+      "end": 113.499
+    },
+    {
+      "word": "annoying",
+      "start": 113.534,
+      "end": 113.848
+    },
+    {
+      "word": "too.",
+      "start": 113.906,
+      "end": 114.358
+    },
+    {
+      "word": "I",
+      "start": 114.684,
+      "end": 114.742
+    },
+    {
+      "word": "gotta",
+      "start": 114.823,
+      "end": 114.997
+    },
+    {
+      "word": "admit,",
+      "start": 115.02,
+      "end": 115.311
+    },
+    {
+      "word": "it",
+      "start": 115.334,
+      "end": 115.403
+    },
+    {
+      "word": "was",
+      "start": 115.438,
+      "end": 115.531
+    },
+    {
+      "word": "pretty",
+      "start": 115.578,
+      "end": 115.787
+    },
+    {
+      "word": "funny",
+      "start": 115.845,
+      "end": 116.1
+    },
+    {
+      "word": "in",
+      "start": 116.146,
+      "end": 116.204
+    },
+    {
+      "word": "a",
+      "start": 116.251,
+      "end": 116.274
+    },
+    {
+      "word": "pretty",
+      "start": 116.321,
+      "end": 116.553
+    },
+    {
+      "word": "typical",
+      "start": 116.622,
+      "end": 117.006
+    },
+    {
+      "word": "way.",
+      "start": 117.075,
+      "end": 117.482
+    },
+    {
+      "word": "Anyway,",
+      "start": 117.923,
+      "end": 118.608
+    },
+    {
+      "word": "I",
+      "start": 118.782,
+      "end": 118.84
+    },
+    {
+      "word": "texted",
+      "start": 118.933,
+      "end": 119.293
+    },
+    {
+      "word": "Ryan,",
+      "start": 119.339,
+      "end": 119.954
+    },
+    {
+      "word": "and",
+      "start": 120.047,
+      "end": 120.314
+    },
+    {
+      "word": "he",
+      "start": 120.396,
+      "end": 120.477
+    },
+    {
+      "word": "said,",
+      "start": 120.547,
+      "end": 120.999
+    },
+    {
+      "word": "'I’d",
+      "start": 121.208,
+      "end": 121.545
+    },
+    {
+      "word": "be",
+      "start": 121.58,
+      "end": 121.65
+    },
+    {
+      "word": "down",
+      "start": 121.696,
+      "end": 121.859
+    },
+    {
+      "word": "to",
+      "start": 121.893,
+      "end": 121.939
+    },
+    {
+      "word": "grab",
+      "start": 121.986,
+      "end": 122.172
+    },
+    {
+      "word": "coffee",
+      "start": 122.241,
+      "end": 122.555
+    },
+    {
+      "word": "instead.'",
+      "start": 122.59,
+      "end": 123.367
+    },
+    {
+      "word": "I",
+      "start": 123.646,
+      "end": 123.704
+    },
+    {
+      "word": "told",
+      "start": 123.82,
+      "end": 124.018
+    },
+    {
+      "word": "him,",
+      "start": 124.076,
+      "end": 124.447
+    },
+    {
+      "word": "'Sounds",
+      "start": 124.691,
+      "end": 125.155
+    },
+    {
+      "word": "good",
+      "start": 125.202,
+      "end": 125.376
+    },
+    {
+      "word": "to",
+      "start": 125.411,
+      "end": 125.48
+    },
+    {
+      "word": "me.'",
+      "start": 125.562,
+      "end": 126.107
+    },
+    {
+      "word": "In",
+      "start": 126.711,
+      "end": 126.862
+    },
+    {
+      "word": "the",
+      "start": 126.897,
+      "end": 126.978
+    },
+    {
+      "word": "end,",
+      "start": 127.048,
+      "end": 127.524
+    },
+    {
+      "word": "it",
+      "start": 127.733,
+      "end": 127.907
+    },
+    {
+      "word": "ended",
+      "start": 127.988,
+      "end": 128.255
+    },
+    {
+      "word": "up",
+      "start": 128.29,
+      "end": 128.371
+    },
+    {
+      "word": "being",
+      "start": 128.418,
+      "end": 128.627
+    },
+    {
+      "word": "fine.",
+      "start": 128.743,
+      "end": 129.474
+    },
+    {
+      "word": "It",
+      "start": 129.648,
+      "end": 129.811
+    },
+    {
+      "word": "all",
+      "start": 129.881,
+      "end": 130.194
+    },
+    {
+      "word": "worked",
+      "start": 130.252,
+      "end": 130.508
+    },
+    {
+      "word": "out.",
+      "start": 130.566,
+      "end": 131.042
+    },
+    {
+      "word": "Alright,",
+      "start": 131.552,
+      "end": 131.947
+    },
+    {
+      "word": "I’ll",
+      "start": 131.97,
+      "end": 132.121
+    },
+    {
+      "word": "catch",
+      "start": 132.156,
+      "end": 132.342
+    },
+    {
+      "word": "you",
+      "start": 132.377,
+      "end": 132.446
+    },
+    {
+      "word": "later",
+      "start": 132.516,
+      "end": 132.748
+    },
+    {
+      "word": "became",
+      "start": 132.795,
+      "end": 133.085
+    },
+    {
+      "word": "the",
+      "start": 133.12,
+      "end": 133.189
+    },
+    {
+      "word": "closing",
+      "start": 133.259,
+      "end": 133.735
+    },
+    {
+      "word": "line",
+      "start": 133.793,
+      "end": 133.967
+    },
+    {
+      "word": "of",
+      "start": 134.002,
+      "end": 134.049
+    },
+    {
+      "word": "the",
+      "start": 134.083,
+      "end": 134.153
+    },
+    {
+      "word": "day.",
+      "start": 134.188,
+      "end": 134.71
+    },
+    {
+      "word": "The",
+      "start": 135.094,
+      "end": 135.21
+    },
+    {
+      "word": "funny",
+      "start": 135.244,
+      "end": 135.442
+    },
+    {
+      "word": "thing",
+      "start": 135.477,
+      "end": 135.616
+    },
+    {
+      "word": "is",
+      "start": 135.674,
+      "end": 135.802
+    },
+    {
+      "word": "that",
+      "start": 135.871,
+      "end": 135.999
+    },
+    {
+      "word": "the",
+      "start": 136.046,
+      "end": 136.127
+    },
+    {
+      "word": "whole",
+      "start": 136.196,
+      "end": 136.475
+    },
+    {
+      "word": "story",
+      "start": 136.522,
+      "end": 136.87
+    },
+    {
+      "word": "taught",
+      "start": 136.928,
+      "end": 137.125
+    },
+    {
+      "word": "me",
+      "start": 137.16,
+      "end": 137.241
+    },
+    {
+      "word": "all",
+      "start": 137.299,
+      "end": 137.578
+    },
+    {
+      "word": "the",
+      "start": 137.636,
+      "end": 137.706
+    },
+    {
+      "word": "casual",
+      "start": 137.752,
+      "end": 138.159
+    },
+    {
+      "word": "verbs:",
+      "start": 138.217,
+      "end": 138.878
+    },
+    {
+      "word": "To",
+      "start": 139.204,
+      "end": 139.32
+    },
+    {
+      "word": "bail,",
+      "start": 139.389,
+      "end": 139.842
+    },
+    {
+      "word": "To",
+      "start": 139.877,
+      "end": 139.97
+    },
+    {
+      "word": "grab",
+      "start": 140.016,
+      "end": 140.202
+    },
+    {
+      "word": "coffee,",
+      "start": 140.283,
+      "end": 140.748
+    },
+    {
+      "word": "To",
+      "start": 140.782,
+      "end": 140.864
+    },
+    {
+      "word": "head",
+      "start": 140.933,
+      "end": 141.073
+    },
+    {
+      "word": "out,",
+      "start": 141.131,
+      "end": 141.398
+    },
+    {
+      "word": "To",
+      "start": 141.421,
+      "end": 141.502
+    },
+    {
+      "word": "run",
+      "start": 141.572,
+      "end": 141.723
+    },
+    {
+      "word": "late,",
+      "start": 141.781,
+      "end": 142.222
+    },
+    {
+      "word": "To",
+      "start": 142.338,
+      "end": 142.454
+    },
+    {
+      "word": "work",
+      "start": 142.524,
+      "end": 142.745
+    },
+    {
+      "word": "out,",
+      "start": 142.826,
+      "end": 143.046
+    },
+    {
+      "word": "To",
+      "start": 143.07,
+      "end": 143.151
+    },
+    {
+      "word": "keep",
+      "start": 143.209,
+      "end": 143.36
+    },
+    {
+      "word": "it",
+      "start": 143.395,
+      "end": 143.464
+    },
+    {
+      "word": "together,",
+      "start": 143.499,
+      "end": 144.149
+    },
+    {
+      "word": "To",
+      "start": 144.324,
+      "end": 144.44
+    },
+    {
+      "word": "turn",
+      "start": 144.498,
+      "end": 144.718
+    },
+    {
+      "word": "into",
+      "start": 144.765,
+      "end": 144.927
+    },
+    {
+      "word": "a",
+      "start": 145.043,
+      "end": 145.078
+    },
+    {
+      "word": "whole",
+      "start": 145.171,
+      "end": 145.473
+    },
+    {
+      "word": "thing,",
+      "start": 145.519,
+      "end": 146.146
+    },
+    {
+      "word": "To",
+      "start": 146.39,
+      "end": 146.495
+    },
+    {
+      "word": "be",
+      "start": 146.553,
+      "end": 146.646
+    },
+    {
+      "word": "down",
+      "start": 146.704,
+      "end": 146.947
+    },
+    {
+      "word": "for",
+      "start": 147.005,
+      "end": 147.11
+    },
+    {
+      "word": "something,",
+      "start": 147.168,
+      "end": 147.667
+    },
+    {
+      "word": "and",
+      "start": 147.69,
+      "end": 147.992
+    },
+    {
+      "word": "To",
+      "start": 148.375,
+      "end": 148.503
+    },
+    {
+      "word": "make",
+      "start": 148.584,
+      "end": 148.759
+    },
+    {
+      "word": "it",
+      "start": 148.793,
+      "end": 148.863
+    },
+    {
+      "word": "somewhere.",
+      "start": 148.909,
+      "end": 149.641
+    },
+    {
+      "word": "That’s",
+      "start": 150.024,
+      "end": 150.326
+    },
+    {
+      "word": "wild,",
+      "start": 150.407,
+      "end": 151.22
+    },
+    {
+      "word": "but",
+      "start": 151.371,
+      "end": 151.568
+    },
+    {
+      "word": "useful.",
+      "start": 151.649,
+      "end": 152.601
+    }
+  ],
+  "characters": 2261
+}
