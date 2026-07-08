@@ -1,0 +1,832 @@
+[
+  {
+    "text": "Hey,",
+    "start": 0,
+    "end": 0.279
+  },
+  {
+    "text": "real",
+    "start": 0.395,
+    "end": 0.557
+  },
+  {
+    "text": "quick,",
+    "start": 0.604,
+    "end": 0.871
+  },
+  {
+    "text": "I",
+    "start": 0.894,
+    "end": 0.929
+  },
+  {
+    "text": "gotta",
+    "start": 1.022,
+    "end": 1.184
+  },
+  {
+    "text": "get",
+    "start": 1.219,
+    "end": 1.312
+  },
+  {
+    "text": "to",
+    "start": 1.347,
+    "end": 1.393
+  },
+  {
+    "text": "work",
+    "start": 1.44,
+    "end": 1.591
+  },
+  {
+    "text": "early",
+    "start": 1.637,
+    "end": 1.869
+  },
+  {
+    "text": "today.",
+    "start": 1.927,
+    "end": 2.38
+  },
+  {
+    "text": "My",
+    "start": 2.821,
+    "end": 2.937
+  },
+  {
+    "text": "morning",
+    "start": 3.007,
+    "end": 3.286
+  },
+  {
+    "text": "is",
+    "start": 3.332,
+    "end": 3.402
+  },
+  {
+    "text": "simple,",
+    "start": 3.448,
+    "end": 3.82
+  },
+  {
+    "text": "but",
+    "start": 3.866,
+    "end": 4.04
+  },
+  {
+    "text": "busy.",
+    "start": 4.087,
+    "end": 4.632
+  },
+  {
+    "text": "First,",
+    "start": 5.074,
+    "end": 5.561
+  },
+  {
+    "text": "I",
+    "start": 5.677,
+    "end": 5.724
+  },
+  {
+    "text": "gotta",
+    "start": 5.84,
+    "end": 6.049
+  },
+  {
+    "text": "get",
+    "start": 6.084,
+    "end": 6.2
+  },
+  {
+    "text": "to",
+    "start": 6.235,
+    "end": 6.281
+  },
+  {
+    "text": "work.",
+    "start": 6.339,
+    "end": 6.78
+  },
+  {
+    "text": "After",
+    "start": 6.931,
+    "end": 7.221
+  },
+  {
+    "text": "that,",
+    "start": 7.268,
+    "end": 7.639
+  },
+  {
+    "text": "I",
+    "start": 7.755,
+    "end": 7.814
+  },
+  {
+    "text": "need",
+    "start": 7.906,
+    "end": 8.069
+  },
+  {
+    "text": "to",
+    "start": 8.104,
+    "end": 8.15
+  },
+  {
+    "text": "run",
+    "start": 8.208,
+    "end": 8.348
+  },
+  {
+    "text": "errands.",
+    "start": 8.406,
+    "end": 9.021
+  },
+  {
+    "text": "I",
+    "start": 9.346,
+    "end": 9.416
+  },
+  {
+    "text": "also",
+    "start": 9.532,
+    "end": 9.764
+  },
+  {
+    "text": "need",
+    "start": 9.822,
+    "end": 9.985
+  },
+  {
+    "text": "to",
+    "start": 10.008,
+    "end": 10.054
+  },
+  {
+    "text": "grab",
+    "start": 10.089,
+    "end": 10.275
+  },
+  {
+    "text": "coffee",
+    "start": 10.344,
+    "end": 10.635
+  },
+  {
+    "text": "before",
+    "start": 10.681,
+    "end": 10.971
+  },
+  {
+    "text": "work",
+    "start": 11.006,
+    "end": 11.227
+  },
+  {
+    "text": "because",
+    "start": 11.285,
+    "end": 11.552
+  },
+  {
+    "text": "I",
+    "start": 11.61,
+    "end": 11.645
+  },
+  {
+    "text": "have",
+    "start": 11.819,
+    "end": 12.225
+  },
+  {
+    "text": "a",
+    "start": 12.283,
+    "end": 12.365
+  },
+  {
+    "text": "long",
+    "start": 12.446,
+    "end": 12.701
+  },
+  {
+    "text": "day.",
+    "start": 12.771,
+    "end": 13.259
+  },
+  {
+    "text": "My",
+    "start": 13.769,
+    "end": 13.886
+  },
+  {
+    "text": "coworker",
+    "start": 13.955,
+    "end": 14.35
+  },
+  {
+    "text": "Jordan",
+    "start": 14.408,
+    "end": 14.698
+  },
+  {
+    "text": "texts",
+    "start": 14.756,
+    "end": 15.058
+  },
+  {
+    "text": "me:",
+    "start": 15.116,
+    "end": 15.523
+  },
+  {
+    "text": "Sounds",
+    "start": 16.033,
+    "end": 16.359
+  },
+  {
+    "text": "good.",
+    "start": 16.393,
+    "end": 16.742
+  },
+  {
+    "text": "Just",
+    "start": 16.951,
+    "end": 17.136
+  },
+  {
+    "text": "send",
+    "start": 17.171,
+    "end": 17.299
+  },
+  {
+    "text": "me",
+    "start": 17.345,
+    "end": 17.415
+  },
+  {
+    "text": "a",
+    "start": 17.461,
+    "end": 17.485
+  },
+  {
+    "text": "quick",
+    "start": 17.531,
+    "end": 17.705
+  },
+  {
+    "text": "text",
+    "start": 17.752,
+    "end": 18.019
+  },
+  {
+    "text": "if",
+    "start": 18.054,
+    "end": 18.123
+  },
+  {
+    "text": "anything",
+    "start": 18.17,
+    "end": 18.448
+  },
+  {
+    "text": "changes.",
+    "start": 18.495,
+    "end": 19.191
+  },
+  {
+    "text": "A",
+    "start": 19.795,
+    "end": 19.865
+  },
+  {
+    "text": "quick",
+    "start": 19.934,
+    "end": 20.109
+  },
+  {
+    "text": "text",
+    "start": 20.155,
+    "end": 20.468
+  },
+  {
+    "text": "is",
+    "start": 20.527,
+    "end": 20.643
+  },
+  {
+    "text": "easier",
+    "start": 20.735,
+    "end": 21.177
+  },
+  {
+    "text": "than",
+    "start": 21.235,
+    "end": 21.351
+  },
+  {
+    "text": "a",
+    "start": 21.397,
+    "end": 21.42
+  },
+  {
+    "text": "long",
+    "start": 21.467,
+    "end": 21.641
+  },
+  {
+    "text": "call",
+    "start": 21.688,
+    "end": 21.862
+  },
+  {
+    "text": "in",
+    "start": 21.908,
+    "end": 21.955
+  },
+  {
+    "text": "the",
+    "start": 21.989,
+    "end": 22.059
+  },
+  {
+    "text": "morning.",
+    "start": 22.094,
+    "end": 22.628
+  },
+  {
+    "text": "I",
+    "start": 23.232,
+    "end": 23.325
+  },
+  {
+    "text": "say,",
+    "start": 23.475,
+    "end": 24.044
+  },
+  {
+    "text": "No",
+    "start": 24.486,
+    "end": 24.625
+  },
+  {
+    "text": "worries,",
+    "start": 24.66,
+    "end": 25.008
+  },
+  {
+    "text": "I’m",
+    "start": 25.066,
+    "end": 25.24
+  },
+  {
+    "text": "gonna",
+    "start": 25.287,
+    "end": 25.496
+  },
+  {
+    "text": "work",
+    "start": 25.542,
+    "end": 25.716
+  },
+  {
+    "text": "from",
+    "start": 25.763,
+    "end": 25.89
+  },
+  {
+    "text": "home",
+    "start": 25.948,
+    "end": 26.134
+  },
+  {
+    "text": "by",
+    "start": 26.157,
+    "end": 26.239
+  },
+  {
+    "text": "the",
+    "start": 26.285,
+    "end": 26.355
+  },
+  {
+    "text": "end",
+    "start": 26.39,
+    "end": 26.471
+  },
+  {
+    "text": "of",
+    "start": 26.506,
+    "end": 26.564
+  },
+  {
+    "text": "the",
+    "start": 26.599,
+    "end": 26.668
+  },
+  {
+    "text": "day.",
+    "start": 26.703,
+    "end": 27.237
+  },
+  {
+    "text": "Then",
+    "start": 27.481,
+    "end": 27.818
+  },
+  {
+    "text": "the",
+    "start": 27.887,
+    "end": 27.957
+  },
+  {
+    "text": "morning",
+    "start": 28.003,
+    "end": 28.27
+  },
+  {
+    "text": "changes.",
+    "start": 28.328,
+    "end": 29.106
+  },
+  {
+    "text": "I’m",
+    "start": 29.187,
+    "end": 29.327
+  },
+  {
+    "text": "running",
+    "start": 29.362,
+    "end": 29.582
+  },
+  {
+    "text": "late",
+    "start": 29.629,
+    "end": 29.791
+  },
+  {
+    "text": "because",
+    "start": 29.826,
+    "end": 30.116
+  },
+  {
+    "text": "traffic",
+    "start": 30.174,
+    "end": 30.662
+  },
+  {
+    "text": "is",
+    "start": 30.72,
+    "end": 30.801
+  },
+  {
+    "text": "a",
+    "start": 30.848,
+    "end": 30.871
+  },
+  {
+    "text": "mess.",
+    "start": 30.929,
+    "end": 31.463
+  },
+  {
+    "text": "I",
+    "start": 31.742,
+    "end": 31.8
+  },
+  {
+    "text": "have",
+    "start": 31.881,
+    "end": 32.009
+  },
+  {
+    "text": "a",
+    "start": 32.032,
+    "end": 32.055
+  },
+  {
+    "text": "meeting",
+    "start": 32.113,
+    "end": 32.345
+  },
+  {
+    "text": "at",
+    "start": 32.392,
+    "end": 32.438
+  },
+  {
+    "text": "eight,",
+    "start": 32.473,
+    "end": 32.659
+  },
+  {
+    "text": "so",
+    "start": 32.682,
+    "end": 32.787
+  },
+  {
+    "text": "I",
+    "start": 32.868,
+    "end": 32.903
+  },
+  {
+    "text": "text",
+    "start": 32.995,
+    "end": 33.239
+  },
+  {
+    "text": "Jordan:",
+    "start": 33.286,
+    "end": 33.831
+  },
+  {
+    "text": "Can",
+    "start": 34.11,
+    "end": 34.238
+  },
+  {
+    "text": "you",
+    "start": 34.296,
+    "end": 34.365
+  },
+  {
+    "text": "cover",
+    "start": 34.4,
+    "end": 34.598
+  },
+  {
+    "text": "me?",
+    "start": 34.656,
+    "end": 34.934
+  },
+  {
+    "text": "I",
+    "start": 35.062,
+    "end": 35.12
+  },
+  {
+    "text": "have",
+    "start": 35.201,
+    "end": 35.317
+  },
+  {
+    "text": "a",
+    "start": 35.352,
+    "end": 35.376
+  },
+  {
+    "text": "meeting",
+    "start": 35.422,
+    "end": 35.643
+  },
+  {
+    "text": "at",
+    "start": 35.689,
+    "end": 35.759
+  },
+  {
+    "text": "eight.",
+    "start": 35.84,
+    "end": 36.27
+  },
+  {
+    "text": "He",
+    "start": 36.548,
+    "end": 36.676
+  },
+  {
+    "text": "says",
+    "start": 36.746,
+    "end": 36.92
+  },
+  {
+    "text": "he",
+    "start": 36.989,
+    "end": 37.059
+  },
+  {
+    "text": "is",
+    "start": 37.117,
+    "end": 37.21
+  },
+  {
+    "text": "down",
+    "start": 37.268,
+    "end": 37.431
+  },
+  {
+    "text": "to",
+    "start": 37.465,
+    "end": 37.512
+  },
+  {
+    "text": "help.",
+    "start": 37.57,
+    "end": 38.011
+  },
+  {
+    "text": "By",
+    "start": 38.162,
+    "end": 38.313
+  },
+  {
+    "text": "lunch,",
+    "start": 38.394,
+    "end": 38.661
+  },
+  {
+    "text": "I’m",
+    "start": 38.684,
+    "end": 38.8
+  },
+  {
+    "text": "wiped.",
+    "start": 38.917,
+    "end": 39.532
+  },
+  {
+    "text": "I",
+    "start": 39.66,
+    "end": 39.718
+  },
+  {
+    "text": "tell",
+    "start": 39.799,
+    "end": 39.938
+  },
+  {
+    "text": "Nina,",
+    "start": 39.996,
+    "end": 40.31
+  },
+  {
+    "text": "I’m",
+    "start": 40.345,
+    "end": 40.519
+  },
+  {
+    "text": "wiped,",
+    "start": 40.635,
+    "end": 41.273
+  },
+  {
+    "text": "but",
+    "start": 41.448,
+    "end": 41.68
+  },
+  {
+    "text": "I’m",
+    "start": 41.854,
+    "end": 42.016
+  },
+  {
+    "text": "down",
+    "start": 42.074,
+    "end": 42.26
+  },
+  {
+    "text": "to",
+    "start": 42.295,
+    "end": 42.353
+  },
+  {
+    "text": "take",
+    "start": 42.4,
+    "end": 42.551
+  },
+  {
+    "text": "a",
+    "start": 42.574,
+    "end": 42.597
+  },
+  {
+    "text": "break.",
+    "start": 42.632,
+    "end": 43.131
+  },
+  {
+    "text": "She",
+    "start": 43.514,
+    "end": 43.665
+  },
+  {
+    "text": "laughs",
+    "start": 43.747,
+    "end": 44.049
+  },
+  {
+    "text": "and",
+    "start": 44.083,
+    "end": 44.153
+  },
+  {
+    "text": "says,",
+    "start": 44.199,
+    "end": 44.757
+  },
+  {
+    "text": "No",
+    "start": 45.001,
+    "end": 45.14
+  },
+  {
+    "text": "worries.",
+    "start": 45.186,
+    "end": 45.697
+  },
+  {
+    "text": "Sounds",
+    "start": 45.941,
+    "end": 46.208
+  },
+  {
+    "text": "good.",
+    "start": 46.243,
+    "end": 46.568
+  },
+  {
+    "text": "We",
+    "start": 46.893,
+    "end": 47.021
+  },
+  {
+    "text": "can",
+    "start": 47.079,
+    "end": 47.195
+  },
+  {
+    "text": "grab",
+    "start": 47.241,
+    "end": 47.45
+  },
+  {
+    "text": "coffee",
+    "start": 47.508,
+    "end": 47.787
+  },
+  {
+    "text": "after",
+    "start": 47.833,
+    "end": 48.042
+  },
+  {
+    "text": "that.",
+    "start": 48.089,
+    "end": 48.495
+  },
+  {
+    "text": "I",
+    "start": 49.006,
+    "end": 49.076
+  },
+  {
+    "text": "say,",
+    "start": 49.192,
+    "end": 49.645
+  },
+  {
+    "text": "thanks",
+    "start": 49.854,
+    "end": 50.144
+  },
+  {
+    "text": "a",
+    "start": 50.179,
+    "end": 50.202
+  },
+  {
+    "text": "lot,",
+    "start": 50.26,
+    "end": 50.469
+  },
+  {
+    "text": "because",
+    "start": 50.492,
+    "end": 51.096
+  },
+  {
+    "text": "honestly,",
+    "start": 51.247,
+    "end": 51.839
+  },
+  {
+    "text": "I",
+    "start": 51.885,
+    "end": 51.932
+  },
+  {
+    "text": "need",
+    "start": 52.025,
+    "end": 52.199
+  },
+  {
+    "text": "the",
+    "start": 52.234,
+    "end": 52.303
+  },
+  {
+    "text": "break.",
+    "start": 52.338,
+    "end": 52.988
+  }
+]

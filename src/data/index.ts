@@ -43,6 +43,13 @@ import {
   americanEnglishC1EmotionalHonestyReading,
   americanEnglishC1EmotionalHonestyWhatsAppStory,
 } from "./americanEnglishC1EmotionalHonestyReinforcement";
+import {
+  americanEnglishB1WorkRoutineFlashcardDeck,
+  americanEnglishB1WorkRoutineQuiz,
+  americanEnglishB1WorkRoutineReading,
+  americanEnglishB1WorkRoutineSentenceBuilder,
+  americanEnglishB1WorkRoutineWhatsAppStory,
+} from "./americanEnglishB1WorkRoutineReinforcement";
 import type { ActivityType } from "../types";
 
 export const flashcardDecks = [
@@ -55,12 +62,13 @@ export const flashcardDecks = [
   americanEnglishB2FlashcardDeck,
   americanEnglishB2AgreementsFlashcardDeck,
   americanEnglishC1EmotionalHonestyFlashcardDeck,
+  americanEnglishB1WorkRoutineFlashcardDeck,
 ];
-export const sentenceBuilderLessons = [...demoSentenceBuilderLessons, ...englishSentenceBuilderLessons, ...spanishSentenceBuilderLessons];
+export const sentenceBuilderLessons = [...demoSentenceBuilderLessons, ...englishSentenceBuilderLessons, ...spanishSentenceBuilderLessons, americanEnglishB1WorkRoutineSentenceBuilder];
 export const verbTrainerSets = [...demoVerbSets];
-export const whatsappStories = [...demoStories, ...spanishTextingStories, ...englishTextingStories, colombianSpanishB2WhatsAppStory, colombianSpanishB2PracticalWhatsAppStory, americanEnglishB2WhatsAppStory, americanEnglishB2AgreementsWhatsAppStory, americanEnglishC1EmotionalHonestyWhatsAppStory];
-export const checkpointQuizzes = [...demoQuizzes, colombianSpanishB2Quiz, colombianSpanishB2PracticalQuiz, americanEnglishB2Quiz, americanEnglishB2AgreementsQuiz, americanEnglishC1EmotionalHonestyQuiz];
-export const readingComprehensions = [...demoReadings, colombianSpanishB2Reading, colombianSpanishB2PracticalReading, americanEnglishB2Reading, americanEnglishB2AgreementsReading, americanEnglishC1EmotionalHonestyReading];
+export const whatsappStories = [...demoStories, ...spanishTextingStories, ...englishTextingStories, colombianSpanishB2WhatsAppStory, colombianSpanishB2PracticalWhatsAppStory, americanEnglishB2WhatsAppStory, americanEnglishB2AgreementsWhatsAppStory, americanEnglishC1EmotionalHonestyWhatsAppStory, americanEnglishB1WorkRoutineWhatsAppStory];
+export const checkpointQuizzes = [...demoQuizzes, colombianSpanishB2Quiz, colombianSpanishB2PracticalQuiz, americanEnglishB2Quiz, americanEnglishB2AgreementsQuiz, americanEnglishC1EmotionalHonestyQuiz, americanEnglishB1WorkRoutineQuiz];
+export const readingComprehensions = [...demoReadings, colombianSpanishB2Reading, colombianSpanishB2PracticalReading, americanEnglishB2Reading, americanEnglishB2AgreementsReading, americanEnglishC1EmotionalHonestyReading, americanEnglishB1WorkRoutineReading];
 export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];
 
 export const allActivities = [
