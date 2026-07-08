@@ -192,6 +192,7 @@ export interface CheckpointQuestion {
   id: string;
   type: QuestionType;
   prompt: string;
+  nativePrompt?: string;
   options?: string[];
   pairs?: Array<{ left: string; right: string }>;
   wordBank?: string[];

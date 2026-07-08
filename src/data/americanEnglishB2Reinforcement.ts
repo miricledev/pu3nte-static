@@ -511,6 +511,7 @@ export const americanEnglishB2Quiz: CheckpointQuiz = {
         id: "american-quiz-context-4",
         type: "fill-blank",
         prompt: "Complete: My friend ______ last minute.",
+        nativePrompt: "Mi amigo canceló a última hora.",
         correctAnswer: "bailed",
         explanation: "Bailed means cancelled, left, or did not show up.",
         points: 1,

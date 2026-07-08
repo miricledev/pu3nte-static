@@ -500,6 +500,7 @@ export const colombianSpanishB2PracticalQuiz: CheckpointQuiz = {
         id: "practical-quiz-context-4",
         type: "fill-blank",
         prompt: "Complete: No quiero ______ problema.",
+        nativePrompt: "I don’t want to make a fuss / cause a problem.",
         correctAnswer: "armar",
         explanation: "No quiero armar problema means I don't want to make a fuss.",
         points: 1,

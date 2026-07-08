@@ -11,6 +11,7 @@ import { QuizQuestion } from "../components/quiz/QuizQuestion";
 import { QuizOption } from "../components/quiz/QuizOption";
 import { FillBlankInput } from "../components/quiz/FillBlankInput";
 import { MatchPairsQuestion } from "../components/quiz/MatchPairsQuestion";
+import { OrderWordsInput } from "../components/reading/OrderWordsInput";
 import { QuizResults } from "../components/quiz/QuizResults";
 import { MistakeReview } from "../components/quiz/MistakeReview";
 import { compareAnswers, getSpecialCharactersForLanguage, type AnswerComparison } from "../utils/answer";
@@ -65,6 +66,7 @@ export function QuizPage() {
   const specialCharacters = getSpecialCharactersForLanguage(quiz.languageTarget);
   const isTypedQuestion = question.type !== "match-pairs" && !question.options;
   const shuffledOptions = useShuffledOptions(question.options ?? [], question.id);
+  const selectedWordTiles = typed ? typed.split(/\s+/).filter(Boolean) : [];
 
   function answer(value: string) {
     const correctAnswer = question.correctAnswer ?? question.correctAnswers?.[0] ?? "";
@@ -131,6 +133,13 @@ export function QuizPage() {
               <div className="grid gap-3">
                 {shuffledOptions.map((option) => <QuizOption key={option} option={option} selected={selected === option} correct={option === question.correctAnswer} onClick={() => answer(option)} />)}
               </div>
+            ) : question.type === "order-words" ? (
+              <OrderWordsInput
+                words={question.wordBank ?? question.correctAnswer?.split(/\s+/) ?? []}
+                selectedWords={selectedWordTiles}
+                onChange={(words) => setTyped(words.join(" "))}
+                emptyLabel={copy.tapWordTiles}
+              />
             ) : (
               <FillBlankInput value={typed} onChange={setTyped} onSubmit={checkTypedAnswer} characters={specialCharacters} label={copy.answer} placeholder={copy.typeAnswer} />
             )}

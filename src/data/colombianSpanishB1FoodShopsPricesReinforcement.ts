@@ -14,6 +14,7 @@ type VocabItem = {
   id: string;
   term: string;
   meaning: string;
+  matchingMeaning?: string;
   note: string;
   example: string;
   translation: string;
@@ -21,14 +22,14 @@ type VocabItem = {
 };
 
 const colombianFoodVocab: VocabItem[] = [
-  { id: "que-mas", term: "¿Qué más?", meaning: "What’s up? / How’s it going?", note: "Very Colombian casual opener.", example: "¿Qué más? ¿Qué necesita?", translation: "What’s up? What do you need?", starred: true },
-  { id: "que-mas-parce", term: "¿Qué más, parce?", meaning: "What’s up, mate? / What’s up, bro?", note: "Friendly and informal.", example: "¿Qué más, parce? ¿Vamos por un tintico?", translation: "What’s up, bro? Shall we go for coffee?", starred: true },
-  { id: "parce", term: "parce", meaning: "mate / bro / dude", note: "Very Colombian, especially urban and informal.", example: "Parce, está cayendo un aguacero.", translation: "Bro, it’s pouring rain.", starred: true },
-  { id: "parcero", term: "parcero", meaning: "mate / buddy / friend", note: "Slightly fuller form of parce.", example: "Listo, parcero, de una.", translation: "Okay, buddy, for sure." },
+  { id: "que-mas", term: "¿Qué más?", meaning: "What’s up? / How’s it going?", matchingMeaning: "What’s up? / How’s it going? (basic greeting)", note: "Very Colombian casual opener.", example: "¿Qué más? ¿Qué necesita?", translation: "What’s up? What do you need?", starred: true },
+  { id: "que-mas-parce", term: "¿Qué más, parce?", meaning: "What’s up, mate? / What’s up, bro?", matchingMeaning: "What’s up, bro? (greeting with parce)", note: "Friendly and informal.", example: "¿Qué más, parce? ¿Vamos por un tintico?", translation: "What’s up, bro? Shall we go for coffee?", starred: true },
+  { id: "parce", term: "parce", meaning: "mate / bro / dude", matchingMeaning: "mate / bro / dude (short form)", note: "Very Colombian, especially urban and informal.", example: "Parce, está cayendo un aguacero.", translation: "Bro, it’s pouring rain.", starred: true },
+  { id: "parcero", term: "parcero", meaning: "mate / buddy / friend", matchingMeaning: "mate / buddy / friend (fuller form)", note: "Slightly fuller form of parce.", example: "Listo, parcero, de una.", translation: "Okay, buddy, for sure." },
   { id: "me-regala", term: "¿Me regala…?", meaning: "Can I get…? / Could you give me…?", note: "Very Colombian polite ordering phrase.", example: "¿Me regala un tintico?", translation: "Can I get a small black coffee?", starred: true },
   { id: "un-tintico", term: "un tintico", meaning: "a small black coffee", note: "Colombian way to refer to coffee.", example: "¿Me regala un tintico, porfa?", translation: "Can I get a little coffee, please?", starred: true },
-  { id: "cuanto-vale", term: "¿Cuánto vale?", meaning: "How much is it?", note: "Common for prices.", example: "¿Cuánto vale el pandebono?", translation: "How much is the pandebono?", starred: true },
-  { id: "cuanto-es", term: "¿Cuánto es?", meaning: "How much is it? / What’s the total?", note: "Common when paying.", example: "Listo, ¿cuánto es?", translation: "Okay, what’s the total?", starred: true },
+  { id: "cuanto-vale", term: "¿Cuánto vale?", meaning: "How much is it?", matchingMeaning: "How much is it? (asking the price of one item)", note: "Common for prices.", example: "¿Cuánto vale el pandebono?", translation: "How much is the pandebono?", starred: true },
+  { id: "cuanto-es", term: "¿Cuánto es?", meaning: "How much is it? / What’s the total?", matchingMeaning: "What’s the total? (when paying)", note: "Common when paying.", example: "Listo, ¿cuánto es?", translation: "Okay, what’s the total?", starred: true },
   { id: "listo", term: "listo", meaning: "okay / sorted / ready / done", note: "Super common Colombian filler/agreement word.", example: "Listo, le pago en efectivo.", translation: "Okay, I’ll pay in cash.", starred: true },
   { id: "pa-llevar", term: "pa’ llevar", meaning: "to take away / to go", note: "Spoken contraction of para llevar.", example: "¿Me lo regala pa’ llevar?", translation: "Can I get it to go?", starred: true },
   { id: "en-efectivo", term: "en efectivo", meaning: "in cash", note: "Payment phrase.", example: "Le pago en efectivo.", translation: "I’ll pay in cash." },
@@ -502,7 +503,7 @@ function pairQuestion(id: string, prompt: string, items: VocabItem[]): Checkpoin
     id,
     type: "match-pairs",
     prompt,
-    pairs: items.map((item) => ({ left: item.term, right: item.meaning })),
+    pairs: items.map((item) => ({ left: item.term, right: item.matchingMeaning ?? item.meaning })),
     explanation: "These phrases come directly from the Colombian B1 food, shops, and prices speaking lesson.",
     points: items.length,
     skillTag: "vocab-matching",
@@ -540,6 +541,7 @@ export const colombianSpanishB1FoodShopsPricesQuiz: CheckpointQuiz = {
         id: "colombian-b1-food-quiz-2",
         type: "fill-blank",
         prompt: "Complete: Le pago en ______.",
+        nativePrompt: "I’ll pay in cash.",
         correctAnswer: "efectivo",
         explanation: "Le pago en efectivo means I’ll pay in cash.",
         points: 1,
@@ -559,6 +561,7 @@ export const colombianSpanishB1FoodShopsPricesQuiz: CheckpointQuiz = {
         id: "colombian-b1-food-quiz-4",
         type: "order-words",
         prompt: "Order the words.",
+        nativePrompt: "It’s eight thousand.",
         wordBank: ["Son", "ocho", "mil"],
         correctAnswer: "Son ocho mil",
         explanation: "This is a common way to give a price.",
