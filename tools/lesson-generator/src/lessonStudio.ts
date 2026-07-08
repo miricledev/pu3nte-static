@@ -826,6 +826,7 @@ Useful optional segment fields:
 - showOnScreenText
 - targetAnswer
 - nativePrompt
+- speed
 
 Timing rules:
 - Prompt, review, and final_challenge segments with learner response time should have showTimer: true.
@@ -1022,6 +1023,7 @@ Useful optional fields:
 - "showOnScreenText"
 - "targetAnswer"
 - "nativePrompt"
+- "speed"
 
 VISUAL RULES
 - Use visualMode "your_turn" for prompts with timers.
@@ -1882,7 +1884,8 @@ function pageHtml(): string {
           "- For each new word/chunk: narrator gives a very short native-language meaning, target voice models it, learner repeats it out loud.",
           "- After the first 4-5 words, start building short sentences using only those words/chunks plus necessary tiny grammar words.",
           "- Ask: How do you say this? / ¿Cómo se dice esto? Then show the native-language prompt in showOnScreenText/nativePrompt and put the target sentence in targetAnswer.",
-          "- Learner answers out loud during a timer pause. Then the target-language ElevenLabs voice gives the answer. Then repeat/shadow it.",
+          "- Learner answers out loud during a timer pause. Then the target-language ElevenLabs voice gives the answer once at normal speed in an answer segment.",
+          "- Immediately after each answer segment, add a second native model as a repeat or shadow segment with the exact same target phrase, \"speed\": 0.75, \"showTimer\": true, \"timerLabel\": \"Repeat it\", and the same targetAnswer. This creates a slower second repetition plus a separate learner repeat pause after it.",
           "- Add another 2-3 words/chunks, repeat each one, then build new sentences using all available words.",
           "- Keep adding 2-3 words/chunks per round and keep recombining older words with newer ones.",
           "- By the final third, build longer sentences around 16-22 words long.",
@@ -1901,7 +1904,7 @@ function pageHtml(): string {
           "- Keep narrator explanations extremely short. The learner should speak constantly.",
           "- Use prompt segments with showTimer: true for every sentence-building question.",
           "- Usually omit responsePauseMs so PU3NTE dynamically scales the speaking pause from targetAnswer length.",
-          "- Use repeat/shadow segments often, especially after longer sentences.",
+          "- For sentence-building answers, use this pacing: answer segment at normal speed, then repeat/shadow segment at \"speed\": 0.75 with showTimer true so the learner gets a separate repeat timer.",
           "- Do not create fake silence audio. Use pauseAfterMs/responsePauseMs only.",
           "",
           "Voice rules for this format:",

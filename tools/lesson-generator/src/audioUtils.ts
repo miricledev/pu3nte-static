@@ -208,6 +208,61 @@ try {
   }
 }
 
+function buildAtempoFilter(speed: number): string {
+  const filters: number[] = [];
+  let remainingSpeed = speed;
+
+  while (remainingSpeed < 0.5) {
+    filters.push(0.5);
+    remainingSpeed /= 0.5;
+  }
+
+  while (remainingSpeed > 2) {
+    filters.push(2);
+    remainingSpeed /= 2;
+  }
+
+  filters.push(Number(remainingSpeed.toFixed(4)));
+
+  return filters.map((value) => `atempo=${value}`).join(",");
+}
+
+export async function adjustAudioSpeedMp3(inputPath: string, outputPath: string, speed: number): Promise<void> {
+  if (!Number.isFinite(speed) || speed <= 0) {
+    throw new Error(`Audio speed must be a positive number. Received ${speed}.`);
+  }
+
+  await ensureDir(path.dirname(outputPath));
+
+  if (Math.abs(speed - 1) < 0.001) {
+    if (inputPath !== outputPath) {
+      await fs.copyFile(inputPath, outputPath);
+    }
+    return;
+  }
+
+  const tempDirectory = await fs.mkdtemp(path.join(os.tmpdir(), "pu3nte-audio-speed-"));
+  const tempPath = path.join(tempDirectory, "speed-adjusted.mp3");
+
+  try {
+    await runCommand("ffmpeg", [
+      "-y",
+      "-i",
+      inputPath,
+      "-filter:a",
+      buildAtempoFilter(speed),
+      "-codec:a",
+      "libmp3lame",
+      "-b:a",
+      "128k",
+      tempPath,
+    ]);
+    await fs.copyFile(tempPath, outputPath);
+  } finally {
+    await fs.rm(tempDirectory, { recursive: true, force: true });
+  }
+}
+
 export async function concatenateMp3Files(inputFiles: string[], outputPath: string): Promise<void> {
   if (inputFiles.length === 0) {
     throw new Error("Cannot assemble final audio because no audio clips were provided.");

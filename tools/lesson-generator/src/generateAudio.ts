@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { audioCacheRoot, getElevenLabsModelId } from "./config";
 import { textToSpeechMp3 } from "./elevenLabsClient";
-import { createLocalTtsMp3, getDecodedAudioDurationMs } from "./audioUtils";
+import { adjustAudioSpeedMp3, createLocalTtsMp3, getDecodedAudioDurationMs } from "./audioUtils";
 import type { GeneratedAudioClip, GeneratorCallbacks, GeneratorOptions, VoiceSettings } from "./types";
 import type { LessonScript, LessonSegment } from "./validateScript";
 import { ensureDir, pathExists, resolveMaybeEnv, sha256Short } from "./utils";
@@ -38,6 +38,10 @@ function isLocalTtsVoice(voiceId: string): boolean {
   return voiceId.startsWith("local:");
 }
 
+function getSegmentSpeed(segment: LessonSegment): number {
+  return segment.speed ?? 1;
+}
+
 function getLocalTtsLanguage(voiceId: string, script: LessonScript): string {
   const localLanguage = voiceId.slice("local:".length);
 
@@ -52,7 +56,8 @@ export function getAudioCachePath(script: LessonScript, segment: LessonSegment):
   const voiceId = resolveVoiceId(script, segment);
   const modelId = isLocalTtsVoice(voiceId) ? "local-system-tts" : getElevenLabsModelId();
   const voiceSettings = getSegmentVoiceSettings(script, segment);
-  const hash = sha256Short(JSON.stringify({ text: segment.text, voiceId, modelId, voiceSettings }));
+  const speed = getSegmentSpeed(segment);
+  const hash = sha256Short(JSON.stringify({ text: segment.text, voiceId, modelId, voiceSettings, speed }));
 
   return path.join(audioCacheRoot, script.id, `${segment.id}-${hash}.mp3`);
 }
@@ -89,6 +94,10 @@ export async function generateAudioClips(
     }
 
     if (!exists || options.forceTts) {
+      const speed = getSegmentSpeed(segment);
+      const shouldAdjustSpeed = Math.abs(speed - 1) >= 0.001;
+      const speechOutputPath = shouldAdjustSpeed ? cachePath.replace(/\.mp3$/i, ".source.mp3") : cachePath;
+
       if (isLocalTtsVoice(voiceId)) {
         callbacks.onProgress?.({
           stage: "tts",
@@ -98,7 +107,7 @@ export async function generateAudioClips(
           total,
           raw: `[local-tts] ${segment.id} ${segment.role}: ${segment.text}`,
         });
-        await createLocalTtsMp3(segment.text, getLocalTtsLanguage(voiceId, script), cachePath);
+        await createLocalTtsMp3(segment.text, getLocalTtsLanguage(voiceId, script), speechOutputPath);
       } else {
         callbacks.onProgress?.({
           stage: "tts",
@@ -116,7 +125,23 @@ export async function generateAudioClips(
         });
 
         await ensureDir(path.dirname(cachePath));
-        await fs.writeFile(cachePath, Buffer.from(audio));
+        await fs.writeFile(speechOutputPath, Buffer.from(audio));
+      }
+
+      if (shouldAdjustSpeed) {
+        callbacks.onProgress?.({
+          stage: "tts",
+          message: `Adjusting clip speed to ${speed}x (${segment.id})`,
+          percent: 8 + (current / total) * 34,
+          current,
+          total,
+          raw: `[audio-speed] ${segment.id}: ${speed}x`,
+        });
+        try {
+          await adjustAudioSpeedMp3(speechOutputPath, cachePath, speed);
+        } finally {
+          await fs.rm(speechOutputPath, { force: true });
+        }
       }
     } else {
       callbacks.onProgress?.({
@@ -154,7 +179,7 @@ export function buildEstimatedAudioClips(script: LessonScript): GeneratedAudioCl
     segmentId: segment.id,
     voiceId: segment.voiceId ?? script.voices[segment.role] ?? segment.role,
     filePath: "",
-    durationMs: estimateSpokenDurationMs(segment.text),
+    durationMs: Math.round(estimateSpokenDurationMs(segment.text) / getSegmentSpeed(segment)),
     cacheHit: false,
   }));
 }

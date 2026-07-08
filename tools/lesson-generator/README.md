@@ -184,11 +184,13 @@ narrator, native_male, native_female, english_male, english_female,
 spanish_male, spanish_female, speaker_1, speaker_2
 ```
 
-Each segment requires `id`, `type`, `role`, and `text`. Optional fields include `voiceId`, `subtitle`, `visualTitle`, `visualSubtitle`, `visualMode`, `pauseAfterMs`, `responsePauseMs`, `showTimer`, `timerLabel`, `speakerName`, `showOnScreenText`, and `targetAnswer`. Use `voiceId` only for a per-segment override, such as ElevenLabs intro narration while the rest of the narrator role stays local TTS.
+Each segment requires `id`, `type`, `role`, and `text`. Optional fields include `voiceId`, `subtitle`, `visualTitle`, `visualSubtitle`, `visualMode`, `pauseAfterMs`, `responsePauseMs`, `showTimer`, `timerLabel`, `speakerName`, `showOnScreenText`, `targetAnswer`, `nativePrompt`, and `speed`. Use `voiceId` only for a per-segment override, such as ElevenLabs intro narration while the rest of the narrator role stays local TTS.
 
 ## Timing
 
 The generator never asks ElevenLabs to create long pauses. It generates each spoken segment as an MP3 clip, measures the clip with ffprobe, and inserts exact silence with FFmpeg.
+
+For 10-minute cumulative sentence-builder speaking lessons, model the answer once at normal speed, then add a `repeat` or `shadow` segment with the same `targetAnswer`, `speed: 0.75`, `showTimer: true`, and `timerLabel: "Repeat it"`. The generator slows that second audio clip with FFmpeg, measures the real slowed duration, then gives the learner a separate timer pause after it.
 
 Timeline per segment:
 
