@@ -9,18 +9,22 @@ import { PhoneFrame } from "../components/story/PhoneFrame";
 import { ChatBubble } from "../components/story/ChatBubble";
 import { StoryProgress } from "../components/story/StoryProgress";
 import { StorySummary } from "../components/story/StorySummary";
-import { TypedLanguageInput } from "../components/practice/TypedLanguageInput";
+import { OrderWordsInput } from "../components/reading/OrderWordsInput";
 import { getProgress, markCompleted, markOpened, saveProgress } from "../utils/progress";
 import { shuffleArray } from "../utils/study";
 import { canUseSpeech, primeSpeech, speakText, stopSpeech } from "../utils/speech";
 import { getUiLanguage, uiText } from "../utils/uiText";
-import { compareAnswers, getSpecialCharactersForLanguage } from "../utils/answer";
+import { compareAnswers } from "../utils/answer";
 import { NotFoundPage } from "./NotFoundPage";
 
 function getLearnerReadingDelay(text: string) {
   const words = text.trim().split(/\s+/).filter(Boolean).length;
   const punctuationPauses = (text.match(/[.,!?¿¡;]/g) ?? []).length * 350;
   return Math.min(14000, Math.max(3500, words * 850 + punctuationPauses + 1800));
+}
+
+function getQuestionWordBank(question: { correctAnswer?: string; correctAnswers?: string[]; wordBank?: string[] }) {
+  return question.wordBank ?? (question.correctAnswer || question.correctAnswers?.[0] || "").split(/\s+/).filter(Boolean);
 }
 
 export function StoryPage() {
@@ -172,7 +176,6 @@ export function StoryPage() {
   const copy = uiText(getUiLanguage(story.languageTarget, story.learnerNativeLanguage));
   const preparationDeck = flashcardDecks.find((deck) => deck.id === `${story.id}-flashcards` || deck.relatedCourse === story.id);
   const isEnglishForSpanishSpeakers = story.languageTarget === "english" && story.learnerNativeLanguage === "spanish";
-  const specialCharacters = getSpecialCharactersForLanguage(story.languageTarget);
 
   return (
     <PageContainer>
@@ -244,17 +247,14 @@ export function StoryPage() {
                     </div>
                   ) : (
                     <div className="mt-3">
-                      <TypedLanguageInput
-                        id={`story-check-answer-${activeCheck.id}`}
-                        label="Your answer"
-                        value={selectedCheckOption ?? ""}
-                        onChange={(value) => {
-                          setSelectedCheckOption(value);
+                      <OrderWordsInput
+                        words={getQuestionWordBank(activeCheck.question)}
+                        selectedWords={selectedCheckOption ? selectedCheckOption.split(/\s+/) : []}
+                        onChange={(words) => {
+                          setSelectedCheckOption(words.join(" "));
                           setCheckFeedback("");
                         }}
-                        onSubmit={() => selectedCheckOption?.trim() && answerCheck(selectedCheckOption)}
-                        characters={specialCharacters}
-                        placeholder="Type the phrase from the story..."
+                        emptyLabel={copy.tapWordTiles}
                       />
                     </div>
                   )}
