@@ -50,6 +50,13 @@ import {
   americanEnglishB1WorkRoutineSentenceBuilder,
   americanEnglishB1WorkRoutineWhatsAppStory,
 } from "./americanEnglishB1WorkRoutineReinforcement";
+import {
+  colombianSpanishB1FoodShopsPricesFlashcardDeck,
+  colombianSpanishB1FoodShopsPricesQuiz,
+  colombianSpanishB1FoodShopsPricesReading,
+  colombianSpanishB1FoodShopsPricesSentenceBuilder,
+  colombianSpanishB1FoodShopsPricesWhatsAppStory,
+} from "./colombianSpanishB1FoodShopsPricesReinforcement";
 import type { ActivityType } from "../types";
 
 export const flashcardDecks = [
@@ -63,12 +70,13 @@ export const flashcardDecks = [
   americanEnglishB2AgreementsFlashcardDeck,
   americanEnglishC1EmotionalHonestyFlashcardDeck,
   americanEnglishB1WorkRoutineFlashcardDeck,
+  colombianSpanishB1FoodShopsPricesFlashcardDeck,
 ];
-export const sentenceBuilderLessons = [...demoSentenceBuilderLessons, ...englishSentenceBuilderLessons, ...spanishSentenceBuilderLessons, americanEnglishB1WorkRoutineSentenceBuilder];
+export const sentenceBuilderLessons = [...demoSentenceBuilderLessons, ...englishSentenceBuilderLessons, ...spanishSentenceBuilderLessons, americanEnglishB1WorkRoutineSentenceBuilder, colombianSpanishB1FoodShopsPricesSentenceBuilder];
 export const verbTrainerSets = [...demoVerbSets];
-export const whatsappStories = [...demoStories, ...spanishTextingStories, ...englishTextingStories, colombianSpanishB2WhatsAppStory, colombianSpanishB2PracticalWhatsAppStory, americanEnglishB2WhatsAppStory, americanEnglishB2AgreementsWhatsAppStory, americanEnglishC1EmotionalHonestyWhatsAppStory, americanEnglishB1WorkRoutineWhatsAppStory];
-export const checkpointQuizzes = [...demoQuizzes, colombianSpanishB2Quiz, colombianSpanishB2PracticalQuiz, americanEnglishB2Quiz, americanEnglishB2AgreementsQuiz, americanEnglishC1EmotionalHonestyQuiz, americanEnglishB1WorkRoutineQuiz];
-export const readingComprehensions = [...demoReadings, colombianSpanishB2Reading, colombianSpanishB2PracticalReading, americanEnglishB2Reading, americanEnglishB2AgreementsReading, americanEnglishC1EmotionalHonestyReading, americanEnglishB1WorkRoutineReading];
+export const whatsappStories = [...demoStories, ...spanishTextingStories, ...englishTextingStories, colombianSpanishB2WhatsAppStory, colombianSpanishB2PracticalWhatsAppStory, americanEnglishB2WhatsAppStory, americanEnglishB2AgreementsWhatsAppStory, americanEnglishC1EmotionalHonestyWhatsAppStory, americanEnglishB1WorkRoutineWhatsAppStory, colombianSpanishB1FoodShopsPricesWhatsAppStory];
+export const checkpointQuizzes = [...demoQuizzes, colombianSpanishB2Quiz, colombianSpanishB2PracticalQuiz, americanEnglishB2Quiz, americanEnglishB2AgreementsQuiz, americanEnglishC1EmotionalHonestyQuiz, americanEnglishB1WorkRoutineQuiz, colombianSpanishB1FoodShopsPricesQuiz];
+export const readingComprehensions = [...demoReadings, colombianSpanishB2Reading, colombianSpanishB2PracticalReading, americanEnglishB2Reading, americanEnglishB2AgreementsReading, americanEnglishC1EmotionalHonestyReading, americanEnglishB1WorkRoutineReading, colombianSpanishB1FoodShopsPricesReading];
 export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];
 
 export const allActivities = [

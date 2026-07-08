@@ -1,0 +1,797 @@
+[
+  {
+    "text": "¿Qué",
+    "start": 0,
+    "end": 0.221
+  },
+  {
+    "text": "más?",
+    "start": 0.267,
+    "end": 0.859
+  },
+  {
+    "text": "I",
+    "start": 1.01,
+    "end": 1.126
+  },
+  {
+    "text": "walked",
+    "start": 1.3,
+    "end": 1.66
+  },
+  {
+    "text": "into",
+    "start": 1.707,
+    "end": 1.892
+  },
+  {
+    "text": "a",
+    "start": 1.962,
+    "end": 1.985
+  },
+  {
+    "text": "small",
+    "start": 2.02,
+    "end": 2.287
+  },
+  {
+    "text": "bakery",
+    "start": 2.345,
+    "end": 2.786
+  },
+  {
+    "text": "in",
+    "start": 2.833,
+    "end": 2.891
+  },
+  {
+    "text": "Bogotá",
+    "start": 2.961,
+    "end": 3.599
+  },
+  {
+    "text": "because",
+    "start": 3.68,
+    "end": 3.959
+  },
+  {
+    "text": "se",
+    "start": 3.982,
+    "end": 4.029
+  },
+  {
+    "text": "está",
+    "start": 4.087,
+    "end": 4.389
+  },
+  {
+    "text": "cayendo",
+    "start": 4.447,
+    "end": 4.772
+  },
+  {
+    "text": "un",
+    "start": 4.795,
+    "end": 4.841
+  },
+  {
+    "text": "aguacero",
+    "start": 4.899,
+    "end": 5.341
+  },
+  {
+    "text": "outside.",
+    "start": 5.375,
+    "end": 6.2
+  },
+  {
+    "text": "The",
+    "start": 6.444,
+    "end": 6.583
+  },
+  {
+    "text": "shopkeeper",
+    "start": 6.629,
+    "end": 7.152
+  },
+  {
+    "text": "smiled",
+    "start": 7.233,
+    "end": 7.721
+  },
+  {
+    "text": "and",
+    "start": 7.755,
+    "end": 7.837
+  },
+  {
+    "text": "said,",
+    "start": 7.906,
+    "end": 8.336
+  },
+  {
+    "text": "A",
+    "start": 8.661,
+    "end": 8.719
+  },
+  {
+    "text": "la",
+    "start": 8.847,
+    "end": 8.94
+  },
+  {
+    "text": "orden,",
+    "start": 9.021,
+    "end": 9.323
+  },
+  {
+    "text": "vecino.",
+    "start": 9.346,
+    "end": 10.008
+  },
+  {
+    "text": "¿Qué",
+    "start": 10.286,
+    "end": 10.577
+  },
+  {
+    "text": "necesita?",
+    "start": 10.646,
+    "end": 11.714
+  },
+  {
+    "text": "I",
+    "start": 12.04,
+    "end": 12.132
+  },
+  {
+    "text": "answered,",
+    "start": 12.283,
+    "end": 12.957
+  },
+  {
+    "text": "Qué",
+    "start": 13.201,
+    "end": 13.351
+  },
+  {
+    "text": "pena,",
+    "start": 13.421,
+    "end": 13.827
+  },
+  {
+    "text": "¿me",
+    "start": 14.002,
+    "end": 14.187
+  },
+  {
+    "text": "regala",
+    "start": 14.257,
+    "end": 14.501
+  },
+  {
+    "text": "un",
+    "start": 14.524,
+    "end": 14.571
+  },
+  {
+    "text": "tintico?",
+    "start": 14.629,
+    "end": 15.383
+  },
+  {
+    "text": "Then",
+    "start": 15.662,
+    "end": 15.859
+  },
+  {
+    "text": "I",
+    "start": 15.917,
+    "end": 15.94
+  },
+  {
+    "text": "saw",
+    "start": 15.987,
+    "end": 16.149
+  },
+  {
+    "text": "un",
+    "start": 16.184,
+    "end": 16.243
+  },
+  {
+    "text": "pandebono",
+    "start": 16.312,
+    "end": 17.148
+  },
+  {
+    "text": "and",
+    "start": 17.427,
+    "end": 17.601
+  },
+  {
+    "text": "un",
+    "start": 17.659,
+    "end": 17.706
+  },
+  {
+    "text": "juguito.",
+    "start": 17.741,
+    "end": 18.437
+  },
+  {
+    "text": "I",
+    "start": 18.681,
+    "end": 18.774
+  },
+  {
+    "text": "asked,",
+    "start": 18.925,
+    "end": 19.401
+  },
+  {
+    "text": "¿Tiene",
+    "start": 19.436,
+    "end": 19.946
+  },
+  {
+    "text": "pandebono?",
+    "start": 19.993,
+    "end": 20.724
+  },
+  {
+    "text": "¿Cuánto",
+    "start": 20.898,
+    "end": 21.305
+  },
+  {
+    "text": "vale?",
+    "start": 21.351,
+    "end": 21.804
+  },
+  {
+    "text": "She",
+    "start": 22.083,
+    "end": 22.245
+  },
+  {
+    "text": "said",
+    "start": 22.292,
+    "end": 22.454
+  },
+  {
+    "text": "the",
+    "start": 22.477,
+    "end": 22.547
+  },
+  {
+    "text": "juice",
+    "start": 22.617,
+    "end": 22.919
+  },
+  {
+    "text": "was",
+    "start": 22.953,
+    "end": 23.093
+  },
+  {
+    "text": "bacano,",
+    "start": 23.162,
+    "end": 23.789
+  },
+  {
+    "text": "but",
+    "start": 23.905,
+    "end": 24.103
+  },
+  {
+    "text": "está",
+    "start": 24.161,
+    "end": 24.323
+  },
+  {
+    "text": "carito",
+    "start": 24.381,
+    "end": 24.718
+  },
+  {
+    "text": "today.",
+    "start": 24.765,
+    "end": 25.322
+  },
+  {
+    "text": "I",
+    "start": 25.6,
+    "end": 25.682
+  },
+  {
+    "text": "checked",
+    "start": 25.798,
+    "end": 26.088
+  },
+  {
+    "text": "my",
+    "start": 26.123,
+    "end": 26.227
+  },
+  {
+    "text": "cash",
+    "start": 26.309,
+    "end": 26.761
+  },
+  {
+    "text": "and",
+    "start": 26.808,
+    "end": 26.901
+  },
+  {
+    "text": "thought,",
+    "start": 26.97,
+    "end": 27.423
+  },
+  {
+    "text": "no",
+    "start": 27.806,
+    "end": 27.934
+  },
+  {
+    "text": "me",
+    "start": 27.992,
+    "end": 28.062
+  },
+  {
+    "text": "alcanza,",
+    "start": 28.085,
+    "end": 28.816
+  },
+  {
+    "text": "so",
+    "start": 28.967,
+    "end": 29.13
+  },
+  {
+    "text": "I",
+    "start": 29.211,
+    "end": 29.246
+  },
+  {
+    "text": "chose",
+    "start": 29.339,
+    "end": 29.641
+  },
+  {
+    "text": "only",
+    "start": 29.687,
+    "end": 29.873
+  },
+  {
+    "text": "the",
+    "start": 29.919,
+    "end": 29.989
+  },
+  {
+    "text": "coffee",
+    "start": 30.059,
+    "end": 30.372
+  },
+  {
+    "text": "and",
+    "start": 30.395,
+    "end": 30.465
+  },
+  {
+    "text": "the",
+    "start": 30.488,
+    "end": 30.558
+  },
+  {
+    "text": "pandebono.",
+    "start": 30.604,
+    "end": 31.44
+  },
+  {
+    "text": "I",
+    "start": 31.684,
+    "end": 31.765
+  },
+  {
+    "text": "said,",
+    "start": 31.94,
+    "end": 32.474
+  },
+  {
+    "text": "listo,",
+    "start": 32.752,
+    "end": 33.066
+  },
+  {
+    "text": "¿me",
+    "start": 33.089,
+    "end": 33.17
+  },
+  {
+    "text": "lo",
+    "start": 33.205,
+    "end": 33.263
+  },
+  {
+    "text": "regala",
+    "start": 33.321,
+    "end": 33.577
+  },
+  {
+    "text": "pa’",
+    "start": 33.623,
+    "end": 33.739
+  },
+  {
+    "text": "llevar,",
+    "start": 33.763,
+    "end": 34.041
+  },
+  {
+    "text": "porfa?",
+    "start": 34.064,
+    "end": 34.622
+  },
+  {
+    "text": "She",
+    "start": 34.9,
+    "end": 35.063
+  },
+  {
+    "text": "answered,",
+    "start": 35.133,
+    "end": 35.632
+  },
+  {
+    "text": "claro,",
+    "start": 35.701,
+    "end": 36.05
+  },
+  {
+    "text": "con",
+    "start": 36.073,
+    "end": 36.201
+  },
+  {
+    "text": "gusto.",
+    "start": 36.259,
+    "end": 36.828
+  },
+  {
+    "text": "When",
+    "start": 36.897,
+    "end": 37.083
+  },
+  {
+    "text": "I",
+    "start": 37.129,
+    "end": 37.164
+  },
+  {
+    "text": "asked",
+    "start": 37.234,
+    "end": 37.478
+  },
+  {
+    "text": "¿cuánto",
+    "start": 37.501,
+    "end": 38.012
+  },
+  {
+    "text": "es?,",
+    "start": 38.128,
+    "end": 38.43
+  },
+  {
+    "text": "she",
+    "start": 38.499,
+    "end": 38.627
+  },
+  {
+    "text": "said,",
+    "start": 38.685,
+    "end": 38.906
+  },
+  {
+    "text": "son",
+    "start": 38.941,
+    "end": 39.196
+  },
+  {
+    "text": "ocho",
+    "start": 39.312,
+    "end": 39.533
+  },
+  {
+    "text": "mil.",
+    "start": 39.602,
+    "end": 40.009
+  },
+  {
+    "text": "I",
+    "start": 40.392,
+    "end": 40.462
+  },
+  {
+    "text": "replied,",
+    "start": 40.578,
+    "end": 41.17
+  },
+  {
+    "text": "listo,",
+    "start": 41.379,
+    "end": 41.866
+  },
+  {
+    "text": "le",
+    "start": 41.924,
+    "end": 41.994
+  },
+  {
+    "text": "pago",
+    "start": 42.041,
+    "end": 42.238
+  },
+  {
+    "text": "en",
+    "start": 42.261,
+    "end": 42.308
+  },
+  {
+    "text": "efectivo.",
+    "start": 42.342,
+    "end": 43.016
+  },
+  {
+    "text": "She",
+    "start": 43.399,
+    "end": 43.538
+  },
+  {
+    "text": "told",
+    "start": 43.596,
+    "end": 43.759
+  },
+  {
+    "text": "me",
+    "start": 43.805,
+    "end": 43.875
+  },
+  {
+    "text": "I",
+    "start": 43.921,
+    "end": 43.945
+  },
+  {
+    "text": "could",
+    "start": 44.003,
+    "end": 44.154
+  },
+  {
+    "text": "also",
+    "start": 44.177,
+    "end": 44.362
+  },
+  {
+    "text": "pay",
+    "start": 44.421,
+    "end": 44.537
+  },
+  {
+    "text": "con",
+    "start": 44.583,
+    "end": 44.711
+  },
+  {
+    "text": "tarjeta.",
+    "start": 44.757,
+    "end": 45.407
+  },
+  {
+    "text": "My",
+    "start": 45.849,
+    "end": 45.988
+  },
+  {
+    "text": "friend",
+    "start": 46.058,
+    "end": 46.278
+  },
+  {
+    "text": "texted,",
+    "start": 46.336,
+    "end": 46.905
+  },
+  {
+    "text": "¿Qué",
+    "start": 47.056,
+    "end": 47.52
+  },
+  {
+    "text": "más,",
+    "start": 47.637,
+    "end": 47.927
+  },
+  {
+    "text": "parce?",
+    "start": 47.985,
+    "end": 48.74
+  },
+  {
+    "text": "I",
+    "start": 49.065,
+    "end": 49.123
+  },
+  {
+    "text": "wrote",
+    "start": 49.216,
+    "end": 49.471
+  },
+  {
+    "text": "back,",
+    "start": 49.529,
+    "end": 49.843
+  },
+  {
+    "text": "de",
+    "start": 49.924,
+    "end": 50.005
+  },
+  {
+    "text": "una,",
+    "start": 50.063,
+    "end": 50.214
+  },
+  {
+    "text": "parcero,",
+    "start": 50.237,
+    "end": 50.69
+  },
+  {
+    "text": "I’m",
+    "start": 50.76,
+    "end": 51.015
+  },
+  {
+    "text": "coming.",
+    "start": 51.108,
+    "end": 51.84
+  },
+  {
+    "text": "The",
+    "start": 52.35,
+    "end": 52.478
+  },
+  {
+    "text": "order",
+    "start": 52.548,
+    "end": 52.757
+  },
+  {
+    "text": "was",
+    "start": 52.815,
+    "end": 52.943
+  },
+  {
+    "text": "simple,",
+    "start": 53.001,
+    "end": 53.477
+  },
+  {
+    "text": "but",
+    "start": 53.511,
+    "end": 53.651
+  },
+  {
+    "text": "it",
+    "start": 53.697,
+    "end": 53.778
+  },
+  {
+    "text": "sounded",
+    "start": 53.836,
+    "end": 54.243
+  },
+  {
+    "text": "very",
+    "start": 54.289,
+    "end": 54.521
+  },
+  {
+    "text": "Colombian:",
+    "start": 54.58,
+    "end": 55.369
+  },
+  {
+    "text": "qué",
+    "start": 55.694,
+    "end": 55.845
+  },
+  {
+    "text": "pena,",
+    "start": 56.019,
+    "end": 56.391
+  },
+  {
+    "text": "¿me",
+    "start": 56.414,
+    "end": 56.553
+  },
+  {
+    "text": "regala",
+    "start": 56.681,
+    "end": 56.96
+  },
+  {
+    "text": "un",
+    "start": 57.052,
+    "end": 57.145
+  },
+  {
+    "text": "tintico",
+    "start": 57.227,
+    "end": 57.9
+  },
+  {
+    "text": "y",
+    "start": 57.958,
+    "end": 57.981
+  },
+  {
+    "text": "un",
+    "start": 58.028,
+    "end": 58.086
+  },
+  {
+    "text": "pandebono",
+    "start": 58.179,
+    "end": 58.84
+  },
+  {
+    "text": "pa’",
+    "start": 58.91,
+    "end": 59.107
+  },
+  {
+    "text": "llevar?",
+    "start": 59.131,
+    "end": 59.862
+  },
+  {
+    "text": "Son",
+    "start": 60.187,
+    "end": 60.431
+  },
+  {
+    "text": "ocho",
+    "start": 60.501,
+    "end": 60.768
+  },
+  {
+    "text": "mil.",
+    "start": 60.837,
+    "end": 61.209
+  },
+  {
+    "text": "Le",
+    "start": 61.487,
+    "end": 61.604
+  },
+  {
+    "text": "pago",
+    "start": 61.662,
+    "end": 61.894
+  },
+  {
+    "text": "con",
+    "start": 61.94,
+    "end": 62.056
+  },
+  {
+    "text": "tarjeta.",
+    "start": 62.114,
+    "end": 62.974
+  }
+]

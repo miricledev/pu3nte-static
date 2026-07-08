@@ -39,13 +39,17 @@ export function SentenceBuilderPage() {
   const [retryMode, setRetryMode] = useState(false);
   const [retryPosition, setRetryPosition] = useState(0);
   const answerRef = useRef<HTMLTextAreaElement>(null);
+  const answerAudioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     if (lesson) markOpened(lesson.id, lesson.activityType, lesson.title);
   }, [lesson]);
 
   useEffect(() => {
-    return () => stopSpeech();
+    return () => {
+      stopSpeech();
+      answerAudioRef.current?.pause();
+    };
   }, []);
 
   if (!lesson) return <NotFoundPage />;
@@ -75,6 +79,21 @@ export function SentenceBuilderPage() {
 
   function speakAnswer() {
     const activeLesson = lesson!;
+    if (stage.audioUrl) {
+      stopSpeech();
+      answerAudioRef.current?.pause();
+      const audio = new Audio(stage.audioUrl);
+      answerAudioRef.current = audio;
+      audio.play().then(() => setAudioNotice("")).catch(() => {
+        setAudioNotice("Could not play the recorded audio here, so using browser text-to-speech instead.");
+        speakText(stage.targetAnswer, {
+          lang: activeLesson.languageTarget === "spanish" ? "es-ES" : "en-US",
+          rate: 0.82,
+        });
+      });
+      return;
+    }
+
     if (!canUseSpeech()) {
       setAudioNotice("This browser does not expose text-to-speech. Try Safari/Chrome, or enable speech/audio permissions.");
     } else {
