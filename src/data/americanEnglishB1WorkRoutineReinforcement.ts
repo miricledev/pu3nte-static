@@ -325,7 +325,10 @@ export const americanEnglishB1WorkRoutineSentenceBuilder: SentenceBuilderLesson 
           ["solo mándame un mensajito rápido", "Just send me a quick text"],
         ]),
       ),
-    ],
+    ].map((builderStage) => ({
+      ...builderStage,
+      audioUrl: `/audio/sentence-builder/american-english-b1-work-daily-routine/${builderStage.id}.mp3`,
+    })),
   },
 };
 
