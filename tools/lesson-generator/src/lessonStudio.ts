@@ -557,6 +557,14 @@ function hasLikelyQuotedOrColonTargetLanguage(text: string, language: "english" 
   );
 }
 
+function hasMojibake(text: string): boolean {
+  return /(?:Ã.|Â[¿¡]|�)/.test(text);
+}
+
+function isSentenceBuilderScript(script: LessonScript): boolean {
+  return /builder/i.test(`${script.id} ${script.title} ${script.outputSlug}`) && (script.durationGoalMinutes ?? 0) <= 11;
+}
+
 function getReadiness(script: LessonScript, timeline: LessonTimeline) {
   const warnings: string[] = [];
   const blockers: string[] = [];
@@ -571,6 +579,11 @@ function getReadiness(script: LessonScript, timeline: LessonTimeline) {
   const promptSegments = timeline.segments.filter(
     (segment) => segment.type === "prompt" || segment.type === "review" || segment.type === "final_challenge",
   ).length;
+  const mojibakeSegments = script.segments.filter((segment) =>
+    [segment.text, segment.subtitle, segment.showOnScreenText, segment.targetAnswer, segment.nativePrompt]
+      .filter(Boolean)
+      .some((value) => hasMojibake(value ?? "")),
+  );
 
   if (timeline.segments.length === 0) {
     blockers.push("The lesson has no segments.");
@@ -588,8 +601,29 @@ function getReadiness(script: LessonScript, timeline: LessonTimeline) {
     warnings.push("No countdown timers found. Add showTimer/responsePauseMs to prompt or repeat segments.");
   }
 
+  if (mojibakeSegments.length > 0) {
+    blockers.push(
+      `Text encoding looks broken in ${mojibakeSegments
+        .slice(0, 8)
+        .map((segment) => segment.id)
+        .join(", ")}. Fix characters like Ã±/Â¿ before generating, otherwise audio and subtitles will be wrong.`,
+    );
+  }
+
   if ((script.durationGoalMinutes ?? 0) < 9 || (script.estimatedMinutes ?? 0) < 9) {
     warnings.push("This script is configured below the current PU3NTE minimum target. Use 10 minutes for sentence-builder speaking lessons or 15 minutes for standard listen-and-respond lessons.");
+  }
+
+  if (isSentenceBuilderScript(script)) {
+    const slowRepeatSegments = script.segments.filter(
+      (segment) => (segment.type === "repeat" || segment.type === "shadow") && segment.speed === 0.75 && segment.showTimer,
+    );
+
+    if (slowRepeatSegments.length < 6) {
+      warnings.push(
+        "Sentence-builder pacing looks too fast: add repeat/shadow segments with speed 0.75 and showTimer true after answer segments so learners hear a slower model and get a separate repeat pause.",
+      );
+    }
   }
 
   const riskyLocalNarratorSegments = timeline.segments.filter((segment) => {
@@ -2030,6 +2064,9 @@ function pageHtml(): string {
           "Before generating the JSON, if web access is available, deeply research current natural " + course.variety + " everyday speech. Do not only research famous slang words. Research local greetings/openers, ways to say goodbye, reactions, weather sayings, food/drink words, transport words, money/time phrases, texting/voice-note phrases, filler phrases, discourse markers, idioms, informal contractions/reductions, politeness formulas, teasing/banter, softeners, pronunciation/intonation notes, and real-life register.",
           "Build a fresh internal phrase bank of at least 25 useful " + course.variety + " local expressions before writing the lesson. Use at least 15-20 of them naturally across prompts, answers, repeats, mini-dialogues, reviews, and the final challenge. Do not output the phrase bank separately; weave it into the JSON lesson.",
           "Important freshness rule: do not lean on example phrases, famous stereotype phrases, or vocabulary from previous PU3NTE lessons unless the selected topic genuinely requires them. Prefer newly researched local expressions that fit this exact topic and situation.",
+          course.id === "colombian-spanish"
+            ? "Colombian anti-repetition rule: do not default to the usual PU3NTE Colombian starter-pack vocabulary such as qué más, parce/parcero, listo, de una, qué pena, bacano, tinto, hacer una vuelta, me cogió la tarde, or se está cayendo un aguacero. You may use at most 2 of those if they are truly necessary for the selected topic. Do not use se está cayendo un aguacero unless the selected topic is specifically weather, rain, delays, or storytelling about rain."
+            : "",
           "For every selected country/accent, research broad local expression categories across many situations: greetings, reactions, softeners, shop/service language, weather, plans, food, transport, money, time, being late, being tired, being annoyed, flirting/banter, work, texting, reacting to stories, and casual problem-solving. Choose the expressions from your research, not from examples in this prompt.",
           "Use the research to make the lesson sound unmistakably local, informal, and alive. Do not cite sources in the JSON. Return only valid JSON.",
           "Research focus: " + course.researchFocus,
