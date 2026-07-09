@@ -47,6 +47,21 @@ type StudioResult = {
   files: GenerateLessonResult["files"];
 };
 
+class StudioJsonParseError extends Error {
+  constructor(
+    message: string,
+    readonly details: {
+      line?: number;
+      column?: number;
+      segmentId?: string;
+      snippet?: string;
+    },
+  ) {
+    super(message);
+    this.name = "StudioJsonParseError";
+  }
+}
+
 const host = "127.0.0.1";
 const port = Number.parseInt(process.env.LESSON_STUDIO_PORT ?? "4783", 10);
 const jobs = new Map<string, StudioJob>();
@@ -77,6 +92,119 @@ async function readRequestBody(request: http.IncomingMessage): Promise<string> {
   return Buffer.concat(chunks).toString("utf8");
 }
 
+function getLineColumnFromPosition(text: string, position: number): { line: number; column: number } {
+  const before = text.slice(0, position);
+  const lines = before.split(/\r\n|\r|\n/);
+  return {
+    line: lines.length,
+    column: lines.at(-1)!.length + 1,
+  };
+}
+
+function getSnippetAroundPosition(text: string, position: number, radius = 2): string {
+  const lines = text.split(/\r\n|\r|\n/);
+  const { line } = getLineColumnFromPosition(text, position);
+  const start = Math.max(0, line - 1 - radius);
+  const end = Math.min(lines.length, line + radius);
+
+  return lines
+    .slice(start, end)
+    .map((value, index) => `${String(start + index + 1).padStart(4, " ")} | ${value}`)
+    .join("\n");
+}
+
+function getNearestSegmentId(text: string, position: number): string | undefined {
+  const before = text.slice(0, position);
+  const matches = [...before.matchAll(/"id"\s*:\s*"([^"]+)"/g)];
+  return matches.at(-1)?.[1];
+}
+
+function getLineStartPosition(text: string, targetLine: number): number {
+  let position = 0;
+  const lines = text.split(/(\r\n|\r|\n)/);
+  let line = 1;
+
+  for (const part of lines) {
+    if (line === targetLine) {
+      return position;
+    }
+
+    position += part.length;
+
+    if (part === "\n" || part === "\r" || part === "\r\n") {
+      line += 1;
+    }
+  }
+
+  return Math.max(0, text.length - 1);
+}
+
+function findSuspiciousBareStringLine(text: string): { line: number; column: number; position: number } | null {
+  const lines = text.split(/\r\n|\r|\n/);
+
+  for (let index = 1; index < lines.length - 1; index += 1) {
+    const previousLine = lines[index - 1].trim();
+    const currentLine = lines[index].trim();
+    const nextLine = lines[index + 1].trim();
+
+    if (
+      /^"[^"]+"\s*,?$/.test(currentLine) &&
+      !previousLine.endsWith("[") &&
+      /^"[^"]+"\s*:/.test(nextLine)
+    ) {
+      const line = index + 1;
+      return {
+        line,
+        column: lines[index].indexOf("\"") + 1,
+        position: getLineStartPosition(text, line),
+      };
+    }
+  }
+
+  return null;
+}
+
+function parseStudioJson(scriptJson: string): unknown {
+  try {
+    return JSON.parse(scriptJson);
+  } catch (error) {
+    const message = (error as Error).message;
+    const positionMatch = message.match(/position\s+(\d+)/i);
+    const position = positionMatch ? Number.parseInt(positionMatch[1], 10) : null;
+
+    if (position !== null && Number.isFinite(position)) {
+      const { line, column } = getLineColumnFromPosition(scriptJson, position);
+      const segmentId = getNearestSegmentId(scriptJson, position);
+      const where = [`line ${line}`, `column ${column}`, segmentId ? `near segment "${segmentId}"` : ""]
+        .filter(Boolean)
+        .join(", ");
+      throw new StudioJsonParseError(`Invalid JSON at ${where}: ${message}`, {
+        line,
+        column,
+        segmentId,
+        snippet: getSnippetAroundPosition(scriptJson, position),
+      });
+    }
+
+    const suspicious = findSuspiciousBareStringLine(scriptJson);
+
+    if (suspicious) {
+      const segmentId = getNearestSegmentId(scriptJson, suspicious.position);
+      const where = [`line ${suspicious.line}`, `column ${suspicious.column}`, segmentId ? `near segment "${segmentId}"` : ""]
+        .filter(Boolean)
+        .join(", ");
+      throw new StudioJsonParseError(`Invalid JSON at ${where}: possible duplicated bare text line. Remove it or turn it into a "key": value property. Original parser said: ${message}`, {
+        line: suspicious.line,
+        column: suspicious.column,
+        segmentId,
+        snippet: getSnippetAroundPosition(scriptJson, suspicious.position),
+      });
+    }
+
+    throw new StudioJsonParseError(`Invalid JSON: ${message}`, {});
+  }
+}
+
 function getGeneratorOptions(requestBody: StudioRequest): Partial<GeneratorOptions> {
   return {
     dryRun: requestBody.mode === "dry-run",
@@ -92,7 +220,7 @@ async function saveStudioScript(scriptJson: string, outputSlug: string): Promise
   await ensureDir(directory);
 
   const scriptPath = path.join(directory, `${outputSlug}.json`);
-  await fs.writeFile(scriptPath, `${JSON.stringify(JSON.parse(scriptJson), null, 2)}\n`, "utf8");
+  await fs.writeFile(scriptPath, `${JSON.stringify(parseStudioJson(scriptJson), null, 2)}\n`, "utf8");
   return scriptPath;
 }
 
@@ -716,8 +844,25 @@ async function handleGenerate(request: http.IncomingMessage, response: http.Serv
     return;
   }
 
-  const parsed = JSON.parse(body.scriptJson);
-  const script = validateLessonScript(parsed);
+  let parsed: unknown;
+  let script: LessonScript;
+
+  try {
+    parsed = parseStudioJson(body.scriptJson);
+    script = validateLessonScript(parsed);
+  } catch (error) {
+    if (error instanceof StudioJsonParseError) {
+      jsonResponse(response, 400, {
+        ok: false,
+        error: error.message,
+        details: error.details,
+      });
+      return;
+    }
+
+    throw error;
+  }
+
   const scriptPath = await saveStudioScript(body.scriptJson, script.outputSlug);
   const job: StudioJob = {
     id: makeJobId(),
@@ -776,6 +921,7 @@ function getChatGptPrompt(): string {
   return `You are creating a PU3NTE local speaking lesson JSON script.
 
 Return ONLY valid JSON. Do not wrap it in markdown. Do not add comments.
+Before returning, parse your own output mentally as JSON. Every object entry must be "key": value. Never leave a standalone duplicated text line inside an object. Do not duplicate partial fields like "showTimer": true followed by a bare sentence.
 
 Purpose:
 - Generate a listen-and-respond speaking lesson for the local PU3NTE lesson generator.
@@ -903,6 +1049,7 @@ You are generating JSON for a local PU3NTE speaking lesson generator. The style 
 Before writing the JSON, if you have internet/web access, check publicly available descriptions of how Pimsleur-style audio language lessons are structured. Use the research only to understand the method: graduated interval recall, listen-and-respond prompts, native-speaker modeling, spaced review, short explanations, learner pauses, and cumulative phrase building. Do not copy proprietary scripts, exact wording, lesson content, trademarks, course titles, or branded phrasing. Do not mention Pimsleur in the lesson title, subtitles, transcript text, narrator text, or any JSON field intended for the learner.
 
 Return ONLY one valid JSON object. No markdown, no explanation, no comments, no trailing prose.
+Before returning, self-audit the JSON syntax: every object property must be "key": value, separated by commas. Never leave a standalone duplicated text string inside a segment object. Do not duplicate partial blocks such as "visualMode", "showTimer", or the answer text after "showTimer": true.
 
 The lesson must be around 15 minutes. Do not make a 5-minute lesson. Do not make a 30-minute lesson. Use "estimatedMinutes": 15 and "durationGoalMinutes": 15. If you are tempted to output 5, that is wrong.
 
@@ -1940,6 +2087,7 @@ function pageHtml(): string {
           "- Usually omit responsePauseMs so PU3NTE dynamically scales the speaking pause from targetAnswer length.",
           "- For sentence-building answers, use this pacing: answer segment at normal speed, then repeat/shadow segment with speed set to 0.75 and showTimer true so the learner gets a separate repeat timer.",
           "- Do not create fake silence audio. Use pauseAfterMs/responsePauseMs only.",
+          "- After writing each repeat/shadow segment, check it is valid JSON and contains only proper key-value fields. Do not accidentally paste the target sentence as a bare string after showTimer.",
           "",
           "Voice rules for this format:",
           "- New target words/chunks and all target sentences must be pronounced by the target-language ElevenLabs voice, not the narrator.",
@@ -2323,6 +2471,54 @@ function pageHtml(): string {
           .replaceAll("'", "&#039;");
       }
 
+      function getJsonErrorDetails(error, text) {
+        const message = error && error.message ? error.message : String(error);
+        const match = message.match(/position\\s+(\\d+)/i);
+
+        if (!match) {
+          const lines = text.split(/\\r\\n|\\r|\\n/);
+          for (let index = 1; index < lines.length - 1; index += 1) {
+            const previousLine = lines[index - 1].trim();
+            const currentLine = lines[index].trim();
+            const nextLine = lines[index + 1].trim();
+
+            if (/^"[^"]+"\\s*,?$/.test(currentLine) && !previousLine.endsWith("[") && /^"[^"]+"\\s*:/.test(nextLine)) {
+              const line = index + 1;
+              const start = Math.max(0, line - 3);
+              const end = Math.min(lines.length, line + 2);
+              const snippet = lines.slice(start, end).map((value, snippetIndex) => {
+                return String(start + snippetIndex + 1).padStart(4, " ") + " | " + value;
+              }).join("\\n");
+              const beforeLine = lines.slice(0, index).join("\\n");
+              const idMatches = Array.from(beforeLine.matchAll(/"id"\\s*:\\s*"([^"]+)"/g));
+              const segmentId = idMatches.length ? idMatches[idMatches.length - 1][1] : null;
+              return "Invalid JSON at line " + line +
+                (segmentId ? ", near segment \\"" + segmentId + "\\"" : "") +
+                ": possible duplicated bare text line. Remove it or turn it into a proper \\"key\\": value field.\\n\\n" + snippet;
+            }
+          }
+
+          return message;
+        }
+
+        const position = Number.parseInt(match[1], 10);
+        const before = text.slice(0, position);
+        const line = before.split(/\\r\\n|\\r|\\n/).length;
+        const column = before.split(/\\r\\n|\\r|\\n/).at(-1).length + 1;
+        const lines = text.split(/\\r\\n|\\r|\\n/);
+        const start = Math.max(0, line - 3);
+        const end = Math.min(lines.length, line + 2);
+        const snippet = lines.slice(start, end).map((value, index) => {
+          return String(start + index + 1).padStart(4, " ") + " | " + value;
+        }).join("\\n");
+        const idMatches = Array.from(text.slice(0, position).matchAll(/"id"\\s*:\\s*"([^"]+)"/g));
+        const segmentId = idMatches.length ? idMatches[idMatches.length - 1][1] : null;
+
+        return "Invalid JSON at line " + line + ", column " + column +
+          (segmentId ? ", near segment \\"" + segmentId + "\\"" : "") +
+          ": " + message + "\\n\\n" + snippet;
+      }
+
       function renderVisualResult(result) {
         const readiness = result.readiness;
 
@@ -2399,7 +2595,8 @@ function pageHtml(): string {
           const result = await response.json();
 
           if (!response.ok || !result.ok) {
-            throw new Error(result.error || "Generation failed.");
+            const detailText = result.details && result.details.snippet ? "\\n\\n" + result.details.snippet : "";
+            throw new Error((result.error || "Generation failed.") + detailText);
           }
 
           pollJob(result.jobId);
@@ -2573,7 +2770,7 @@ function pageHtml(): string {
           scriptBox.value = JSON.stringify(JSON.parse(scriptBox.value), null, 2);
           setStatus("JSON formatted.");
         } catch (error) {
-          setStatus(error.message, true);
+          setStatus(getJsonErrorDetails(error, scriptBox.value), true);
         }
       });
 
