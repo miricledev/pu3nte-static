@@ -27,6 +27,10 @@ function getQuestionWordBank(question: { correctAnswer?: string; correctAnswers?
   return question.wordBank ?? (question.correctAnswer || question.correctAnswers?.[0] || "").split(/\s+/).filter(Boolean);
 }
 
+function getPreparationDeckId(storyId: string) {
+  return storyId.startsWith("colombian-sayings-") ? "colombian-sayings-50-flashcards" : `${storyId}-flashcards`;
+}
+
 export function StoryPage() {
   const { storyId } = useParams();
   const navigate = useNavigate();
@@ -174,7 +178,8 @@ export function StoryPage() {
 
   if (!story) return <NotFoundPage />;
   const copy = uiText(getUiLanguage(story.languageTarget, story.learnerNativeLanguage));
-  const preparationDeck = flashcardDecks.find((deck) => deck.id === `${story.id}-flashcards` || deck.relatedCourse === story.id);
+  const preparationDeckId = getPreparationDeckId(story.id);
+  const preparationDeck = flashcardDecks.find((deck) => deck.id === preparationDeckId || deck.relatedCourse === story.id);
   const isEnglishForSpanishSpeakers = story.languageTarget === "english" && story.learnerNativeLanguage === "spanish";
 
   return (
@@ -316,7 +321,7 @@ export function StoryPage() {
               completionTask={story.data.completionTask}
               skoolReturnUrl={story.skoolReturnUrl}
               labels={copy}
-              onPracticeFlashcards={() => navigate(`/flashcards/${preparationDeck?.id ?? `${story.id}-flashcards`}`)}
+              onPracticeFlashcards={() => navigate(`/flashcards/${preparationDeck?.id ?? preparationDeckId}`)}
               onFinish={() => navigate(`/complete/${story.id}`)}
             />
           </div>
