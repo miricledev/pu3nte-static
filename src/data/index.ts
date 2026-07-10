@@ -9,7 +9,9 @@ import { spanishTextingStories } from "./stories/spanishTextingStories";
 import { neutralSpanishTextingStories } from "./stories/neutralSpanishTextingStories";
 import { neutralSpanishTextingStoriesBatch2 } from "./stories/neutralSpanishTextingStoriesBatch2";
 import { colombianSayingsTextingStories } from "./stories/colombianSayingsTextingStories";
+import { argentinianSayingsTextingStories } from "./stories/argentinianSayingsTextingStories";
 import { colombianSayingsUsageQuizzes } from "./quizzes/colombianSayingsUsageQuizzes";
+import { argentinianSayingsUsageQuizzes } from "./quizzes/argentinianSayingsUsageQuizzes";
 import { demoQuizzes } from "./demo/demoQuizzes";
 import { demoReadings } from "./demo/demoReadings";
 import { demoGrammarLessons } from "./demo/demoGrammar";
@@ -18,6 +20,7 @@ import { spanishGrammarLesson1VocabularyDeck } from "./flashcards/spanishGrammar
 import { englishTextingStoryFlashcards } from "./flashcards/englishTextingStoryFlashcards";
 import { spanishTextingStoryFlashcards } from "./flashcards/spanishTextingStoryFlashcards";
 import { colombianSayingsFlashcardDeck } from "./flashcards/colombianSayingsFlashcards";
+import { argentinianSayingsFlashcardDeck } from "./flashcards/argentinianSayingsFlashcards";
 import {
   colombianSpanishB2FlashcardDeck,
   colombianSpanishB2Quiz,
@@ -101,11 +104,12 @@ export const flashcardDecks = [
   colombianSpanishB1PlansInvitationsFlashcardDeck,
   argentinianSpanishB2NaturalStorytellingFlashcardDeck,
   colombianSayingsFlashcardDeck,
+  argentinianSayingsFlashcardDeck,
 ];
 export const sentenceBuilderLessons = [...demoSentenceBuilderLessons, ...englishSentenceBuilderLessons, ...spanishSentenceBuilderLessons, americanEnglishB1WorkRoutineSentenceBuilder, colombianSpanishB1FoodShopsPricesSentenceBuilder, colombianSpanishB1IntroductionsSmallTalkSentenceBuilder, colombianSpanishB1PlansInvitationsSentenceBuilder, argentinianSpanishB2NaturalStorytellingSentenceBuilder];
 export const verbTrainerSets = [...demoVerbSets];
-export const whatsappStories = [...demoStories, ...spanishTextingStories, ...neutralSpanishTextingStories, ...neutralSpanishTextingStoriesBatch2, ...colombianSayingsTextingStories, ...englishTextingStories, colombianSpanishB2WhatsAppStory, colombianSpanishB2PracticalWhatsAppStory, americanEnglishB2WhatsAppStory, americanEnglishB2AgreementsWhatsAppStory, americanEnglishC1EmotionalHonestyWhatsAppStory, americanEnglishB1WorkRoutineWhatsAppStory, colombianSpanishB1FoodShopsPricesWhatsAppStory, colombianSpanishB1IntroductionsSmallTalkWhatsAppStory, colombianSpanishB1PlansInvitationsWhatsAppStory, argentinianSpanishB2NaturalStorytellingWhatsAppStory];
-export const checkpointQuizzes = [...demoQuizzes, ...colombianSayingsUsageQuizzes, colombianSpanishB2Quiz, colombianSpanishB2PracticalQuiz, americanEnglishB2Quiz, americanEnglishB2AgreementsQuiz, americanEnglishC1EmotionalHonestyQuiz, americanEnglishB1WorkRoutineQuiz, colombianSpanishB1FoodShopsPricesQuiz, colombianSpanishB1IntroductionsSmallTalkQuiz, colombianSpanishB1PlansInvitationsQuiz, argentinianSpanishB2NaturalStorytellingQuiz];
+export const whatsappStories = [...demoStories, ...spanishTextingStories, ...neutralSpanishTextingStories, ...neutralSpanishTextingStoriesBatch2, ...colombianSayingsTextingStories, ...argentinianSayingsTextingStories, ...englishTextingStories, colombianSpanishB2WhatsAppStory, colombianSpanishB2PracticalWhatsAppStory, americanEnglishB2WhatsAppStory, americanEnglishB2AgreementsWhatsAppStory, americanEnglishC1EmotionalHonestyWhatsAppStory, americanEnglishB1WorkRoutineWhatsAppStory, colombianSpanishB1FoodShopsPricesWhatsAppStory, colombianSpanishB1IntroductionsSmallTalkWhatsAppStory, colombianSpanishB1PlansInvitationsWhatsAppStory, argentinianSpanishB2NaturalStorytellingWhatsAppStory];
+export const checkpointQuizzes = [...demoQuizzes, ...colombianSayingsUsageQuizzes, ...argentinianSayingsUsageQuizzes, colombianSpanishB2Quiz, colombianSpanishB2PracticalQuiz, americanEnglishB2Quiz, americanEnglishB2AgreementsQuiz, americanEnglishC1EmotionalHonestyQuiz, americanEnglishB1WorkRoutineQuiz, colombianSpanishB1FoodShopsPricesQuiz, colombianSpanishB1IntroductionsSmallTalkQuiz, colombianSpanishB1PlansInvitationsQuiz, argentinianSpanishB2NaturalStorytellingQuiz];
 export const readingComprehensions = [...demoReadings, colombianSpanishB2Reading, colombianSpanishB2PracticalReading, americanEnglishB2Reading, americanEnglishB2AgreementsReading, americanEnglishC1EmotionalHonestyReading, americanEnglishB1WorkRoutineReading, colombianSpanishB1FoodShopsPricesReading, colombianSpanishB1IntroductionsSmallTalkReading, colombianSpanishB1PlansInvitationsReading, argentinianSpanishB2NaturalStorytellingReading];
 export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];
 

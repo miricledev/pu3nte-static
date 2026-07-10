@@ -28,7 +28,9 @@ function getQuestionWordBank(question: { correctAnswer?: string; correctAnswers?
 }
 
 function getPreparationDeckId(storyId: string) {
-  return storyId.startsWith("colombian-sayings-") ? "colombian-sayings-50-flashcards" : `${storyId}-flashcards`;
+  if (storyId.startsWith("colombian-sayings-")) return "colombian-sayings-50-flashcards";
+  if (storyId.startsWith("argentinian-sayings-")) return "argentinian-sayings-50-flashcards";
+  return `${storyId}-flashcards`;
 }
 
 export function StoryPage() {
