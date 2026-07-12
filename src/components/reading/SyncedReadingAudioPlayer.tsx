@@ -30,7 +30,7 @@ export function SyncedReadingAudioPlayer({
   alignmentUrl,
 }: {
   audioUrl: string;
-  alignmentUrl: string;
+  alignmentUrl?: string;
 }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const activeWordRef = useRef<HTMLSpanElement | null>(null);
@@ -54,6 +54,14 @@ export function SyncedReadingAudioPlayer({
   useEffect(() => {
     let cancelled = false;
     setLoadError(false);
+    setWords([]);
+
+    if (!alignmentUrl) {
+      return () => {
+        cancelled = true;
+      };
+    }
+
     fetch(alignmentUrl)
       .then((response) => {
         if (!response.ok) throw new Error(`Could not load reading alignment: ${response.status}`);
@@ -119,8 +127,12 @@ export function SyncedReadingAudioPlayer({
     <div className="min-w-0 overflow-hidden rounded-2xl border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-3 shadow-inner sm:p-4">
       <div className="flex min-w-0 flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="min-w-0">
-          <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-cyan">Synced audio reading</p>
-          <h2 className="mt-1 break-words text-base font-black text-pu3nte-text sm:text-lg">Listen and follow the highlighted word</h2>
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-cyan">
+            {alignmentUrl ? "Synced audio reading" : "Audio reading"}
+          </p>
+          <h2 className="mt-1 break-words text-base font-black text-pu3nte-text sm:text-lg">
+            {alignmentUrl ? "Listen and follow the highlighted word" : "Listen to the full reading"}
+          </h2>
         </div>
         <div className="grid w-full min-w-0 grid-cols-3 gap-2 sm:flex sm:w-auto sm:flex-wrap sm:items-center">
           <button type="button" className="rounded-full border border-white/10 px-3 py-2 text-sm font-bold text-pu3nte-secondary transition hover:bg-white/[0.08] hover:text-pu3nte-text" onClick={() => jump(-5)}>
@@ -183,7 +195,11 @@ export function SyncedReadingAudioPlayer({
         </div>
       </div>
 
-      {loadError ? (
+      {!alignmentUrl ? (
+        <p className="mt-4 rounded-lg border border-white/10 bg-black/15 p-3 text-sm text-pu3nte-secondary">
+          Word-by-word timing is not available for this reading yet, but the full audio is ready.
+        </p>
+      ) : loadError ? (
         <p className="mt-4 rounded-lg border border-pu3nte-error/40 bg-pu3nte-error/10 p-3 text-sm text-pu3nte-secondary">
           Audio loaded, but the word timing file could not be loaded.
         </p>

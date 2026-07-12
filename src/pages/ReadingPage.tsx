@@ -70,7 +70,7 @@ export function ReadingPage() {
         <GlassCard className="min-w-0 space-y-5 overflow-hidden">
           <InstructionPanel title={copy.instructions} body={copy.readingGuide} />
           <ReadingSettings fontSize={fontSize} setFontSize={setFontSize} focus={focus} setFocus={setFocus} labels={{ focusMode: copy.focusMode }} />
-          {reading.data.audioUrl && reading.data.audioAlignmentUrl && (
+          {reading.data.audioUrl && (
             <SyncedReadingAudioPlayer audioUrl={reading.data.audioUrl} alignmentUrl={reading.data.audioAlignmentUrl} />
           )}
           <ReadingText paragraphs={reading.data.paragraphs} fontSize={fontSize} labels={{ showTranslation: copy.showTranslation, hideTranslation: copy.hideTranslation, shadow: copy.shadow }} />
