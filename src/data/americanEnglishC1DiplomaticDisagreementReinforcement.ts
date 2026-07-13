@@ -194,7 +194,7 @@ export const americanEnglishC1DiplomaticDisagreementSentenceBuilder: SentenceBui
         "Stage 1: Open softly",
         sentenceVocab.slice(0, 3),
         sentenceVocab.slice(0, 3),
-        "Say: Hey, quick thought. I hear you, and fair point.",
+        "Di: Oye, una idea rápida. Te entiendo, y buen punto.",
         "Hey, quick thought. I hear you, and fair point.",
         "This starts disagreement with rapport instead of confrontation.",
         breakdown([
@@ -208,7 +208,7 @@ export const americanEnglishC1DiplomaticDisagreementSentenceBuilder: SentenceBui
         "Stage 2: Disagree gently",
         sentenceVocab.slice(3, 6),
         sentenceVocab.slice(0, 6),
-        "Say: That said, I'm not totally sold, but I see where you're coming from.",
+        "Di: Dicho eso, no estoy del todo convencido, pero entiendo tu punto de vista.",
         "That said, I'm not totally sold, but I see where you're coming from.",
         "That said pivots into disagreement without erasing the other person's point.",
         breakdown([
@@ -222,7 +222,7 @@ export const americanEnglishC1DiplomaticDisagreementSentenceBuilder: SentenceBui
         "Stage 3: Suggest a softer option",
         sentenceVocab.slice(6, 8),
         sentenceVocab.slice(0, 8),
-        "Say: Could we maybe take a step back before we decide?",
+        "Di: ¿Podríamos quizá tomar distancia antes de decidir?",
         "Could we maybe take a step back before we decide?",
         "Could we maybe makes the suggestion collaborative rather than commanding.",
         breakdown([
@@ -236,7 +236,7 @@ export const americanEnglishC1DiplomaticDisagreementSentenceBuilder: SentenceBui
         "Stage 4: Name your intent",
         sentenceVocab.slice(8, 11),
         sentenceVocab.slice(0, 11),
-        "Say: I don't wanna push back just to push back. Let's pressure-test it, and I'm happy to be wrong.",
+        "Di: No quiero discrepar solo por discrepar. Pongámoslo a prueba, y acepto estar equivocado.",
         "I don't wanna push back just to push back. Let's pressure-test it, and I'm happy to be wrong.",
         "This frames disagreement as protecting the decision, not winning.",
         breakdown([
@@ -250,7 +250,7 @@ export const americanEnglishC1DiplomaticDisagreementSentenceBuilder: SentenceBui
         "Stage 5: Propose compromise",
         sentenceVocab.slice(11, 15),
         sentenceVocab.slice(0, 15),
-        "Say: Can we meet in the middle and test it with a smaller group first to lower the risk a bit?",
+        "Di: ¿Podemos llegar a un punto medio y probarlo primero con un grupo más pequeño para bajar un poco el riesgo?",
         "Can we meet in the middle and test it with a smaller group first to lower the risk a bit?",
         "This turns pushback into a constructive compromise.",
         breakdown([
@@ -264,7 +264,7 @@ export const americanEnglishC1DiplomaticDisagreementSentenceBuilder: SentenceBui
         "Stage 6: Close cleanly",
         sentenceVocab.slice(12, 16),
         sentenceVocab.slice(0, 16),
-        "Say: I don't wanna rush this. Let's test one option, lower the risk a bit, and call it a day.",
+        "Di: No quiero apresurar esto. Probemos una opción, bajemos un poco el riesgo y cerremos por hoy.",
         "I don't wanna rush this. Let's test one option, lower the risk a bit, and call it a day.",
         "This closes with a clear next step and keeps the tone calm.",
         breakdown([
