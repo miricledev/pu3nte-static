@@ -1,0 +1,1562 @@
+[
+  {
+    "text": "Llegar",
+    "start": 0,
+    "end": 0.313
+  },
+  {
+    "text": "tarde",
+    "start": 0.337,
+    "end": 0.627
+  },
+  {
+    "text": "en",
+    "start": 0.662,
+    "end": 0.731
+  },
+  {
+    "text": "Lima",
+    "start": 0.755,
+    "end": 1.091
+  },
+  {
+    "text": "no",
+    "start": 1.219,
+    "end": 1.405
+  },
+  {
+    "text": "siempre",
+    "start": 1.451,
+    "end": 1.753
+  },
+  {
+    "text": "significa",
+    "start": 1.776,
+    "end": 2.206
+  },
+  {
+    "text": "que",
+    "start": 2.264,
+    "end": 2.368
+  },
+  {
+    "text": "alguien",
+    "start": 2.403,
+    "end": 2.635
+  },
+  {
+    "text": "salió",
+    "start": 2.659,
+    "end": 2.902
+  },
+  {
+    "text": "con",
+    "start": 2.937,
+    "end": 3.065
+  },
+  {
+    "text": "mala",
+    "start": 3.1,
+    "end": 3.274
+  },
+  {
+    "text": "intención.",
+    "start": 3.297,
+    "end": 3.959
+  },
+  {
+    "text": "A",
+    "start": 4.075,
+    "end": 4.516
+  },
+  {
+    "text": "veces",
+    "start": 4.598,
+    "end": 4.946
+  },
+  {
+    "text": "el",
+    "start": 4.969,
+    "end": 5.085
+  },
+  {
+    "text": "tráfico",
+    "start": 5.108,
+    "end": 5.631
+  },
+  {
+    "text": "está",
+    "start": 5.724,
+    "end": 5.933
+  },
+  {
+    "text": "bravo,",
+    "start": 5.979,
+    "end": 6.722
+  },
+  {
+    "text": "el",
+    "start": 6.838,
+    "end": 7.024
+  },
+  {
+    "text": "Metropolitano",
+    "start": 7.047,
+    "end": 7.79
+  },
+  {
+    "text": "está",
+    "start": 7.814,
+    "end": 7.976
+  },
+  {
+    "text": "full",
+    "start": 8.022,
+    "end": 8.638
+  },
+  {
+    "text": "o",
+    "start": 8.731,
+    "end": 9.114
+  },
+  {
+    "text": "la",
+    "start": 9.195,
+    "end": 9.3
+  },
+  {
+    "text": "combi",
+    "start": 9.334,
+    "end": 9.694
+  },
+  {
+    "text": "te",
+    "start": 9.764,
+    "end": 9.845
+  },
+  {
+    "text": "deja.",
+    "start": 9.892,
+    "end": 10.263
+  },
+  {
+    "text": "Por",
+    "start": 10.379,
+    "end": 10.855
+  },
+  {
+    "text": "eso",
+    "start": 10.89,
+    "end": 11.029
+  },
+  {
+    "text": "una",
+    "start": 11.064,
+    "end": 11.192
+  },
+  {
+    "text": "conversación",
+    "start": 11.238,
+    "end": 11.819
+  },
+  {
+    "text": "real",
+    "start": 11.854,
+    "end": 12.156
+  },
+  {
+    "text": "empieza",
+    "start": 12.202,
+    "end": 12.527
+  },
+  {
+    "text": "rápido:",
+    "start": 12.574,
+    "end": 13.073
+  },
+  {
+    "text": "Oye,",
+    "start": 13.154,
+    "end": 13.711
+  },
+  {
+    "text": "causa,",
+    "start": 13.746,
+    "end": 14.269
+  },
+  {
+    "text": "¿dónde",
+    "start": 14.303,
+    "end": 14.571
+  },
+  {
+    "text": "estás?",
+    "start": 14.594,
+    "end": 15.012
+  },
+  {
+    "text": "La",
+    "start": 15.163,
+    "end": 15.836
+  },
+  {
+    "text": "respuesta",
+    "start": 15.883,
+    "end": 16.278
+  },
+  {
+    "text": "puede",
+    "start": 16.312,
+    "end": 16.498
+  },
+  {
+    "text": "ser",
+    "start": 16.521,
+    "end": 16.661
+  },
+  {
+    "text": "simple:",
+    "start": 16.696,
+    "end": 17.137
+  },
+  {
+    "text": "pucha,",
+    "start": 17.16,
+    "end": 17.532
+  },
+  {
+    "text": "se",
+    "start": 17.555,
+    "end": 17.613
+  },
+  {
+    "text": "me",
+    "start": 17.659,
+    "end": 17.764
+  },
+  {
+    "text": "hizo",
+    "start": 17.787,
+    "end": 17.938
+  },
+  {
+    "text": "tarde,",
+    "start": 17.984,
+    "end": 18.391
+  },
+  {
+    "text": "pero",
+    "start": 18.414,
+    "end": 18.634
+  },
+  {
+    "text": "ya",
+    "start": 18.669,
+    "end": 18.785
+  },
+  {
+    "text": "estoy",
+    "start": 18.82,
+    "end": 19.052
+  },
+  {
+    "text": "yendo.",
+    "start": 19.087,
+    "end": 19.552
+  },
+  {
+    "text": "Para",
+    "start": 19.981,
+    "end": 20.19
+  },
+  {
+    "text": "explicar",
+    "start": 20.213,
+    "end": 20.736
+  },
+  {
+    "text": "dónde",
+    "start": 20.806,
+    "end": 21.061
+  },
+  {
+    "text": "estás,",
+    "start": 21.084,
+    "end": 21.781
+  },
+  {
+    "text": "puedes",
+    "start": 21.99,
+    "end": 22.303
+  },
+  {
+    "text": "decir",
+    "start": 22.338,
+    "end": 22.663
+  },
+  {
+    "text": "estoy",
+    "start": 22.733,
+    "end": 22.988
+  },
+  {
+    "text": "por",
+    "start": 23.023,
+    "end": 23.139
+  },
+  {
+    "text": "el",
+    "start": 23.162,
+    "end": 23.22
+  },
+  {
+    "text": "paradero",
+    "start": 23.29,
+    "end": 23.836
+  },
+  {
+    "text": "o",
+    "start": 23.952,
+    "end": 24.022
+  },
+  {
+    "text": "ya",
+    "start": 24.08,
+    "end": 24.149
+  },
+  {
+    "text": "estoy",
+    "start": 24.172,
+    "end": 24.37
+  },
+  {
+    "text": "yendo",
+    "start": 24.405,
+    "end": 24.625
+  },
+  {
+    "text": "en",
+    "start": 24.648,
+    "end": 24.698
+  },
+  {
+    "text": "el",
+    "start": 24.753,
+    "end": 24.811
+  },
+  {
+    "text": "micro.",
+    "start": 24.869,
+    "end": 25.357
+  },
+  {
+    "text": "Si",
+    "start": 25.74,
+    "end": 25.879
+  },
+  {
+    "text": "usas",
+    "start": 25.914,
+    "end": 26.111
+  },
+  {
+    "text": "el",
+    "start": 26.169,
+    "end": 26.227
+  },
+  {
+    "text": "corredor,",
+    "start": 26.285,
+    "end": 26.738
+  },
+  {
+    "text": "puedes",
+    "start": 26.761,
+    "end": 26.982
+  },
+  {
+    "text": "decir",
+    "start": 27.028,
+    "end": 27.33
+  },
+  {
+    "text": "voy",
+    "start": 27.388,
+    "end": 27.551
+  },
+  {
+    "text": "en",
+    "start": 27.574,
+    "end": 27.624
+  },
+  {
+    "text": "el",
+    "start": 27.667,
+    "end": 27.725
+  },
+  {
+    "text": "corredor",
+    "start": 27.783,
+    "end": 28.224
+  },
+  {
+    "text": "y",
+    "start": 28.282,
+    "end": 28.332
+  },
+  {
+    "text": "me",
+    "start": 28.41,
+    "end": 28.48
+  },
+  {
+    "text": "bajo",
+    "start": 28.526,
+    "end": 28.747
+  },
+  {
+    "text": "en",
+    "start": 28.77,
+    "end": 28.82
+  },
+  {
+    "text": "Javier",
+    "start": 28.863,
+    "end": 29.107
+  },
+  {
+    "text": "Prado.",
+    "start": 29.188,
+    "end": 29.722
+  },
+  {
+    "text": "Estas",
+    "start": 30.163,
+    "end": 30.477
+  },
+  {
+    "text": "frases",
+    "start": 30.535,
+    "end": 30.86
+  },
+  {
+    "text": "son",
+    "start": 30.883,
+    "end": 31.034
+  },
+  {
+    "text": "prácticas",
+    "start": 31.092,
+    "end": 31.591
+  },
+  {
+    "text": "porque",
+    "start": 31.661,
+    "end": 31.87
+  },
+  {
+    "text": "le",
+    "start": 31.916,
+    "end": 31.998
+  },
+  {
+    "text": "dan",
+    "start": 32.033,
+    "end": 32.16
+  },
+  {
+    "text": "a",
+    "start": 32.218,
+    "end": 32.268
+  },
+  {
+    "text": "la",
+    "start": 32.288,
+    "end": 32.358
+  },
+  {
+    "text": "otra",
+    "start": 32.427,
+    "end": 32.625
+  },
+  {
+    "text": "persona",
+    "start": 32.671,
+    "end": 33.077
+  },
+  {
+    "text": "una",
+    "start": 33.159,
+    "end": 33.286
+  },
+  {
+    "text": "idea",
+    "start": 33.321,
+    "end": 33.623
+  },
+  {
+    "text": "clara",
+    "start": 33.693,
+    "end": 34.041
+  },
+  {
+    "text": "de",
+    "start": 34.076,
+    "end": 34.146
+  },
+  {
+    "text": "tu",
+    "start": 34.192,
+    "end": 34.273
+  },
+  {
+    "text": "ruta,",
+    "start": 34.331,
+    "end": 34.622
+  },
+  {
+    "text": "sin",
+    "start": 34.645,
+    "end": 34.784
+  },
+  {
+    "text": "explicar",
+    "start": 34.842,
+    "end": 35.225
+  },
+  {
+    "text": "demasiado.",
+    "start": 35.272,
+    "end": 35.945
+  },
+  {
+    "text": "Cuando",
+    "start": 36.618,
+    "end": 36.839
+  },
+  {
+    "text": "hay",
+    "start": 36.862,
+    "end": 36.99
+  },
+  {
+    "text": "confusión,",
+    "start": 37.025,
+    "end": 37.594
+  },
+  {
+    "text": "manyas",
+    "start": 37.64,
+    "end": 38.105
+  },
+  {
+    "text": "ayuda",
+    "start": 38.163,
+    "end": 38.522
+  },
+  {
+    "text": "en",
+    "start": 38.557,
+    "end": 38.627
+  },
+  {
+    "text": "preguntas",
+    "start": 38.662,
+    "end": 39.103
+  },
+  {
+    "text": "informales.",
+    "start": 39.126,
+    "end": 40.148
+  },
+  {
+    "text": "Oye,",
+    "start": 40.299,
+    "end": 40.995
+  },
+  {
+    "text": "¿manyas",
+    "start": 41.112,
+    "end": 41.68
+  },
+  {
+    "text": "dónde",
+    "start": 41.715,
+    "end": 41.913
+  },
+  {
+    "text": "está",
+    "start": 41.936,
+    "end": 42.087
+  },
+  {
+    "text": "el",
+    "start": 42.11,
+    "end": 42.203
+  },
+  {
+    "text": "paradero?",
+    "start": 42.249,
+    "end": 43.085
+  },
+  {
+    "text": "significa:",
+    "start": 43.155,
+    "end": 44.56
+  },
+  {
+    "text": "hey,",
+    "start": 44.629,
+    "end": 45.547
+  },
+  {
+    "text": "do",
+    "start": 45.605,
+    "end": 45.744
+  },
+  {
+    "text": "you",
+    "start": 45.767,
+    "end": 45.883
+  },
+  {
+    "text": "know",
+    "start": 45.918,
+    "end": 46.092
+  },
+  {
+    "text": "where",
+    "start": 46.115,
+    "end": 46.278
+  },
+  {
+    "text": "the",
+    "start": 46.301,
+    "end": 46.417
+  },
+  {
+    "text": "bus",
+    "start": 46.487,
+    "end": 46.684
+  },
+  {
+    "text": "stop",
+    "start": 46.731,
+    "end": 47.091
+  },
+  {
+    "text": "is?",
+    "start": 47.137,
+    "end": 47.845
+  },
+  {
+    "text": "La",
+    "start": 47.915,
+    "end": 48.019
+  },
+  {
+    "text": "respuesta",
+    "start": 48.054,
+    "end": 48.484
+  },
+  {
+    "text": "puede",
+    "start": 48.519,
+    "end": 48.693
+  },
+  {
+    "text": "usar",
+    "start": 48.728,
+    "end": 48.937
+  },
+  {
+    "text": "direcciones",
+    "start": 48.96,
+    "end": 49.494
+  },
+  {
+    "text": "simples:",
+    "start": 49.54,
+    "end": 50.4
+  },
+  {
+    "text": "sigue",
+    "start": 50.469,
+    "end": 50.678
+  },
+  {
+    "text": "de",
+    "start": 50.713,
+    "end": 50.829
+  },
+  {
+    "text": "frente,",
+    "start": 50.887,
+    "end": 51.746
+  },
+  {
+    "text": "cruzando",
+    "start": 51.816,
+    "end": 52.199
+  },
+  {
+    "text": "la",
+    "start": 52.234,
+    "end": 52.284
+  },
+  {
+    "text": "avenida,",
+    "start": 52.315,
+    "end": 53.511
+  },
+  {
+    "text": "o",
+    "start": 53.592,
+    "end": 53.642
+  },
+  {
+    "text": "el",
+    "start": 53.662,
+    "end": 53.755
+  },
+  {
+    "text": "paradero",
+    "start": 53.778,
+    "end": 54.15
+  },
+  {
+    "text": "está",
+    "start": 54.173,
+    "end": 54.324
+  },
+  {
+    "text": "a",
+    "start": 54.347,
+    "end": 54.397
+  },
+  {
+    "text": "la",
+    "start": 54.417,
+    "end": 54.498
+  },
+  {
+    "text": "vuelta.",
+    "start": 54.533,
+    "end": 55.345
+  },
+  {
+    "text": "Son",
+    "start": 55.427,
+    "end": 55.624
+  },
+  {
+    "text": "frases",
+    "start": 55.67,
+    "end": 56.042
+  },
+  {
+    "text": "cortas,",
+    "start": 56.077,
+    "end": 56.971
+  },
+  {
+    "text": "pero",
+    "start": 57.052,
+    "end": 57.923
+  },
+  {
+    "text": "resuelven",
+    "start": 57.992,
+    "end": 58.352
+  },
+  {
+    "text": "la",
+    "start": 58.376,
+    "end": 58.445
+  },
+  {
+    "text": "situación.",
+    "start": 58.48,
+    "end": 59.548
+  },
+  {
+    "text": "La",
+    "start": 59.664,
+    "end": 59.746
+  },
+  {
+    "text": "persona",
+    "start": 59.781,
+    "end": 60.106
+  },
+  {
+    "text": "que",
+    "start": 60.14,
+    "end": 60.21
+  },
+  {
+    "text": "espera",
+    "start": 60.28,
+    "end": 61.023
+  },
+  {
+    "text": "también",
+    "start": 61.104,
+    "end": 61.371
+  },
+  {
+    "text": "puede",
+    "start": 61.418,
+    "end": 61.58
+  },
+  {
+    "text": "hablar",
+    "start": 61.615,
+    "end": 61.894
+  },
+  {
+    "text": "con",
+    "start": 61.952,
+    "end": 62.091
+  },
+  {
+    "text": "calma.",
+    "start": 62.172,
+    "end": 62.776
+  },
+  {
+    "text": "Normal",
+    "start": 62.834,
+    "end": 63.124
+  },
+  {
+    "text": "nomás,",
+    "start": 63.205,
+    "end": 64.25
+  },
+  {
+    "text": "causa,",
+    "start": 64.343,
+    "end": 65.69
+  },
+  {
+    "text": "no",
+    "start": 65.736,
+    "end": 65.818
+  },
+  {
+    "text": "te",
+    "start": 65.841,
+    "end": 65.922
+  },
+  {
+    "text": "paltees",
+    "start": 65.992,
+    "end": 66.63
+  },
+  {
+    "text": "significa",
+    "start": 66.7,
+    "end": 67.78
+  },
+  {
+    "text": "que",
+    "start": 67.815,
+    "end": 67.942
+  },
+  {
+    "text": "no",
+    "start": 67.989,
+    "end": 68.039
+  },
+  {
+    "text": "hay",
+    "start": 68.058,
+    "end": 68.186
+  },
+  {
+    "text": "problema",
+    "start": 68.244,
+    "end": 68.848
+  },
+  {
+    "text": "y",
+    "start": 68.918,
+    "end": 68.968
+  },
+  {
+    "text": "que",
+    "start": 68.964,
+    "end": 69.08
+  },
+  {
+    "text": "la",
+    "start": 69.103,
+    "end": 69.185
+  },
+  {
+    "text": "otra",
+    "start": 69.231,
+    "end": 69.347
+  },
+  {
+    "text": "persona",
+    "start": 69.382,
+    "end": 69.765
+  },
+  {
+    "text": "no",
+    "start": 69.823,
+    "end": 69.904
+  },
+  {
+    "text": "debe",
+    "start": 69.962,
+    "end": 70.09
+  },
+  {
+    "text": "entrar",
+    "start": 70.137,
+    "end": 70.404
+  },
+  {
+    "text": "en",
+    "start": 70.427,
+    "end": 70.566
+  },
+  {
+    "text": "pánico.",
+    "start": 70.647,
+    "end": 71.449
+  },
+  {
+    "text": "Espera",
+    "start": 71.53,
+    "end": 71.832
+  },
+  {
+    "text": "nomás",
+    "start": 71.901,
+    "end": 72.76
+  },
+  {
+    "text": "o",
+    "start": 72.795,
+    "end": 72.853
+  },
+  {
+    "text": "espérame",
+    "start": 72.923,
+    "end": 73.411
+  },
+  {
+    "text": "nomás",
+    "start": 73.492,
+    "end": 74.374
+  },
+  {
+    "text": "en",
+    "start": 74.421,
+    "end": 74.56
+  },
+  {
+    "text": "el",
+    "start": 74.595,
+    "end": 74.699
+  },
+  {
+    "text": "paradero",
+    "start": 74.757,
+    "end": 75.686
+  },
+  {
+    "text": "suena",
+    "start": 75.756,
+    "end": 76.011
+  },
+  {
+    "text": "más",
+    "start": 76.069,
+    "end": 76.174
+  },
+  {
+    "text": "relajado",
+    "start": 76.255,
+    "end": 76.917
+  },
+  {
+    "text": "que",
+    "start": 76.952,
+    "end": 77.068
+  },
+  {
+    "text": "una",
+    "start": 77.126,
+    "end": 77.219
+  },
+  {
+    "text": "orden",
+    "start": 77.265,
+    "end": 77.544
+  },
+  {
+    "text": "fuerte.",
+    "start": 77.614,
+    "end": 78.357
+  },
+  {
+    "text": "Nomás",
+    "start": 78.438,
+    "end": 78.658
+  },
+  {
+    "text": "suaviza",
+    "start": 78.705,
+    "end": 79.053
+  },
+  {
+    "text": "la",
+    "start": 79.076,
+    "end": 79.126
+  },
+  {
+    "text": "instrucción.",
+    "start": 79.169,
+    "end": 80.052
+  },
+  {
+    "text": "A",
+    "start": 80.156,
+    "end": 80.237
+  },
+  {
+    "text": "veces",
+    "start": 80.284,
+    "end": 80.528
+  },
+  {
+    "text": "sí",
+    "start": 80.621,
+    "end": 80.76
+  },
+  {
+    "text": "toca",
+    "start": 80.841,
+    "end": 81.027
+  },
+  {
+    "text": "apurar",
+    "start": 81.108,
+    "end": 81.387
+  },
+  {
+    "text": "al",
+    "start": 81.445,
+    "end": 81.561
+  },
+  {
+    "text": "amigo.",
+    "start": 81.654,
+    "end": 82.559
+  },
+  {
+    "text": "Ya",
+    "start": 82.641,
+    "end": 82.966
+  },
+  {
+    "text": "pe,",
+    "start": 83.001,
+    "end": 83.256
+  },
+  {
+    "text": "ponte",
+    "start": 83.302,
+    "end": 83.523
+  },
+  {
+    "text": "las",
+    "start": 83.546,
+    "end": 83.755
+  },
+  {
+    "text": "pilas.",
+    "start": 83.825,
+    "end": 84.533
+  },
+  {
+    "text": "Ven",
+    "start": 84.556,
+    "end": 84.661
+  },
+  {
+    "text": "al",
+    "start": 84.719,
+    "end": 84.835
+  },
+  {
+    "text": "toque",
+    "start": 84.881,
+    "end": 85.102
+  },
+  {
+    "text": "no",
+    "start": 85.137,
+    "end": 85.187
+  },
+  {
+    "text": "es",
+    "start": 85.23,
+    "end": 85.311
+  },
+  {
+    "text": "formal,",
+    "start": 85.381,
+    "end": 85.706
+  },
+  {
+    "text": "pero",
+    "start": 85.752,
+    "end": 85.857
+  },
+  {
+    "text": "entre",
+    "start": 85.926,
+    "end": 86.135
+  },
+  {
+    "text": "amigos",
+    "start": 86.205,
+    "end": 86.495
+  },
+  {
+    "text": "puede",
+    "start": 86.53,
+    "end": 86.716
+  },
+  {
+    "text": "sonar",
+    "start": 86.774,
+    "end": 87.006
+  },
+  {
+    "text": "natural.",
+    "start": 87.064,
+    "end": 87.9
+  },
+  {
+    "text": "Ya",
+    "start": 87.981,
+    "end": 88.283
+  },
+  {
+    "text": "pe",
+    "start": 88.399,
+    "end": 88.585
+  },
+  {
+    "text": "empuja",
+    "start": 88.666,
+    "end": 89.003
+  },
+  {
+    "text": "la",
+    "start": 89.049,
+    "end": 89.119
+  },
+  {
+    "text": "conversación,",
+    "start": 89.177,
+    "end": 89.967
+  },
+  {
+    "text": "ponte",
+    "start": 90.013,
+    "end": 90.234
+  },
+  {
+    "text": "las",
+    "start": 90.268,
+    "end": 90.501
+  },
+  {
+    "text": "pilas",
+    "start": 90.593,
+    "end": 90.977
+  },
+  {
+    "text": "pide",
+    "start": 91.011,
+    "end": 91.185
+  },
+  {
+    "text": "acción",
+    "start": 91.266,
+    "end": 92.068
+  },
+  {
+    "text": "y",
+    "start": 92.114,
+    "end": 92.164
+  },
+  {
+    "text": "al",
+    "start": 92.23,
+    "end": 92.381
+  },
+  {
+    "text": "toque",
+    "start": 92.439,
+    "end": 92.752
+  },
+  {
+    "text": "marca",
+    "start": 92.822,
+    "end": 93.089
+  },
+  {
+    "text": "urgencia.",
+    "start": 93.159,
+    "end": 94.076
+  },
+  {
+    "text": "Si",
+    "start": 94.134,
+    "end": 94.192
+  },
+  {
+    "text": "la",
+    "start": 94.239,
+    "end": 94.297
+  },
+  {
+    "text": "persona",
+    "start": 94.331,
+    "end": 94.761
+  },
+  {
+    "text": "confirma,",
+    "start": 94.831,
+    "end": 95.318
+  },
+  {
+    "text": "puede",
+    "start": 95.365,
+    "end": 95.562
+  },
+  {
+    "text": "decir:",
+    "start": 95.62,
+    "end": 96.665
+  },
+  {
+    "text": "sí,",
+    "start": 96.746,
+    "end": 97.025
+  },
+  {
+    "text": "fijo,",
+    "start": 97.083,
+    "end": 97.315
+  },
+  {
+    "text": "ya",
+    "start": 97.338,
+    "end": 97.408
+  },
+  {
+    "text": "estoy",
+    "start": 97.478,
+    "end": 97.756
+  },
+  {
+    "text": "yendo",
+    "start": 97.803,
+    "end": 97.977
+  },
+  {
+    "text": "ahorita.",
+    "start": 98.012,
+    "end": 99.103
+  },
+  {
+    "text": "La",
+    "start": 99.208,
+    "end": 99.335
+  },
+  {
+    "text": "clave",
+    "start": 99.382,
+    "end": 99.556
+  },
+  {
+    "text": "de",
+    "start": 99.579,
+    "end": 99.672
+  },
+  {
+    "text": "esta",
+    "start": 99.718,
+    "end": 99.904
+  },
+  {
+    "text": "conversación",
+    "start": 99.939,
+    "end": 100.578
+  },
+  {
+    "text": "no",
+    "start": 100.601,
+    "end": 100.682
+  },
+  {
+    "text": "es",
+    "start": 100.705,
+    "end": 100.821
+  },
+  {
+    "text": "memorizar",
+    "start": 100.879,
+    "end": 101.297
+  },
+  {
+    "text": "una",
+    "start": 101.344,
+    "end": 101.53
+  },
+  {
+    "text": "ruta",
+    "start": 101.564,
+    "end": 101.785
+  },
+  {
+    "text": "perfecta.",
+    "start": 101.843,
+    "end": 102.644
+  },
+  {
+    "text": "La",
+    "start": 102.691,
+    "end": 102.818
+  },
+  {
+    "text": "clave",
+    "start": 102.865,
+    "end": 103.062
+  },
+  {
+    "text": "es",
+    "start": 103.097,
+    "end": 103.225
+  },
+  {
+    "text": "poder",
+    "start": 103.26,
+    "end": 103.492
+  },
+  {
+    "text": "decir",
+    "start": 103.585,
+    "end": 103.875
+  },
+  {
+    "text": "dónde",
+    "start": 103.945,
+    "end": 104.177
+  },
+  {
+    "text": "estás,",
+    "start": 104.293,
+    "end": 104.943
+  },
+  {
+    "text": "qué",
+    "start": 104.989,
+    "end": 105.117
+  },
+  {
+    "text": "transporte",
+    "start": 105.152,
+    "end": 105.628
+  },
+  {
+    "text": "estás",
+    "start": 105.698,
+    "end": 106.035
+  },
+  {
+    "text": "usando,",
+    "start": 106.093,
+    "end": 106.755
+  },
+  {
+    "text": "por",
+    "start": 106.801,
+    "end": 106.882
+  },
+  {
+    "text": "qué",
+    "start": 106.929,
+    "end": 107.022
+  },
+  {
+    "text": "te",
+    "start": 107.045,
+    "end": 107.149
+  },
+  {
+    "text": "demoraste",
+    "start": 107.207,
+    "end": 107.916
+  },
+  {
+    "text": "y",
+    "start": 107.985,
+    "end": 108.066
+  },
+  {
+    "text": "qué",
+    "start": 108.159,
+    "end": 108.322
+  },
+  {
+    "text": "debe",
+    "start": 108.357,
+    "end": 108.531
+  },
+  {
+    "text": "hacer",
+    "start": 108.589,
+    "end": 108.751
+  },
+  {
+    "text": "la",
+    "start": 108.786,
+    "end": 108.879
+  },
+  {
+    "text": "otra",
+    "start": 108.902,
+    "end": 109.053
+  },
+  {
+    "text": "persona.",
+    "start": 109.111,
+    "end": 109.97
+  },
+  {
+    "text": "Pasa",
+    "start": 110.017,
+    "end": 110.214
+  },
+  {
+    "text": "la",
+    "start": 110.261,
+    "end": 110.481
+  },
+  {
+    "text": "voz",
+    "start": 110.539,
+    "end": 110.644
+  },
+  {
+    "text": "cuando",
+    "start": 110.679,
+    "end": 111.085
+  },
+  {
+    "text": "llegues",
+    "start": 111.12,
+    "end": 111.515
+  },
+  {
+    "text": "o",
+    "start": 111.596,
+    "end": 111.654
+  },
+  {
+    "text": "pasa",
+    "start": 111.7,
+    "end": 111.863
+  },
+  {
+    "text": "la",
+    "start": 111.898,
+    "end": 112.037
+  },
+  {
+    "text": "voz",
+    "start": 112.083,
+    "end": 112.188
+  },
+  {
+    "text": "cuando",
+    "start": 112.234,
+    "end": 112.478
+  },
+  {
+    "text": "estés",
+    "start": 112.571,
+    "end": 112.803
+  },
+  {
+    "text": "cruzando",
+    "start": 112.873,
+    "end": 113.268
+  },
+  {
+    "text": "la",
+    "start": 113.303,
+    "end": 113.407
+  },
+  {
+    "text": "avenida",
+    "start": 113.477,
+    "end": 114.278
+  },
+  {
+    "text": "mantienen",
+    "start": 114.324,
+    "end": 114.707
+  },
+  {
+    "text": "la",
+    "start": 114.742,
+    "end": 114.8
+  },
+  {
+    "text": "coordinación",
+    "start": 114.835,
+    "end": 115.45
+  },
+  {
+    "text": "viva",
+    "start": 115.566,
+    "end": 115.81
+  },
+  {
+    "text": "hasta",
+    "start": 115.857,
+    "end": 116.008
+  },
+  {
+    "text": "que",
+    "start": 116.054,
+    "end": 116.205
+  },
+  {
+    "text": "todos",
+    "start": 116.263,
+    "end": 116.391
+  },
+  {
+    "text": "se",
+    "start": 116.426,
+    "end": 116.53
+  },
+  {
+    "text": "encuentren.",
+    "start": 116.588,
+    "end": 116.658
+  }
+]
