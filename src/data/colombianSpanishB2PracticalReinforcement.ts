@@ -271,9 +271,9 @@ export const colombianSpanishB2PracticalWhatsAppStory: WhatsAppStory = {
     ],
     comprehensionChecks: [
       { id: "practical-check-1", afterMessageId: "m5", question: storyQuestions[0] },
-      { id: "practical-check-2", afterMessageId: "m15", question: storyQuestions[1] },
-      { id: "practical-check-3", afterMessageId: "m32", question: storyQuestions[2] },
-      { id: "practical-check-4", afterMessageId: "m27", question: storyQuestions[3] },
+      { id: "practical-check-2", afterMessageId: "m8", question: storyQuestions[3] },
+      { id: "practical-check-3", afterMessageId: "m15", question: storyQuestions[1] },
+      { id: "practical-check-4", afterMessageId: "m32", question: storyQuestions[2] },
       { id: "practical-check-5", afterMessageId: "m38", question: storyQuestions[4] },
     ],
     endQuiz: storyQuestions,

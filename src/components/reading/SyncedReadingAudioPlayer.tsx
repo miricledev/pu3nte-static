@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import type { Highlight } from "../../types";
 
 type TimedWord = {
   text: string;
@@ -13,6 +14,7 @@ type AlignmentPayload =
     };
 
 const playbackRates = [0.5, 0.8, 1, 1.1, 1.25, 1.5];
+const edgePunctuationPattern = /^[“”"'‘’¿¡()[\]{}.,;:!?…]+|[“”"'‘’¿¡()[\]{}.,;:!?…]+$/g;
 
 function normalizeTimedWords(payload: AlignmentPayload): TimedWord[] {
   const rawWords: Array<Partial<TimedWord> & { word?: string }> = Array.isArray(payload) ? payload : payload.words ?? [];
@@ -25,12 +27,51 @@ function normalizeTimedWords(payload: AlignmentPayload): TimedWord[] {
     .filter((word) => word.text && Number.isFinite(word.start) && Number.isFinite(word.end));
 }
 
+function normalizeToken(text: string) {
+  return text
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(edgePunctuationPattern, "")
+    .toLocaleLowerCase();
+}
+
+function uniqueHighlightPhrases(highlights: Highlight[]) {
+  return Array.from(new Set(highlights.map((highlight) => highlight.phrase.trim()).filter(Boolean)));
+}
+
+function getQuoteBoundaries(words: TimedWord[], highlights: Highlight[]) {
+  const quoteStarts = new Set<number>();
+  const quoteEnds = new Set<number>();
+  const occupied = new Set<number>();
+  const normalizedWords = words.map((word) => normalizeToken(word.text));
+
+  uniqueHighlightPhrases(highlights)
+    .map((phrase) => ({ phrase, tokens: phrase.split(/\s+/).map(normalizeToken).filter(Boolean) }))
+    .filter((entry) => entry.tokens.length > 0)
+    .sort((first, second) => second.tokens.length - first.tokens.length)
+    .forEach(({ tokens }) => {
+      for (let index = 0; index <= normalizedWords.length - tokens.length; index += 1) {
+        const matches = tokens.every((token, tokenIndex) => normalizedWords[index + tokenIndex] === token);
+        if (!matches) continue;
+        const indices = tokens.map((_, tokenIndex) => index + tokenIndex);
+        if (indices.some((wordIndex) => occupied.has(wordIndex))) continue;
+        quoteStarts.add(index);
+        quoteEnds.add(index + tokens.length - 1);
+        indices.forEach((wordIndex) => occupied.add(wordIndex));
+      }
+    });
+
+  return { quoteStarts, quoteEnds };
+}
+
 export function SyncedReadingAudioPlayer({
   audioUrl,
   alignmentUrl,
+  highlights = [],
 }: {
   audioUrl: string;
   alignmentUrl?: string;
+  highlights?: Highlight[];
 }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const activeWordRef = useRef<HTMLSpanElement | null>(null);
@@ -50,6 +91,8 @@ export function SyncedReadingAudioPlayer({
     }
     return -1;
   }, [currentTime, words]);
+
+  const quoteBoundaries = useMemo(() => getQuoteBoundaries(words, highlights), [words, highlights]);
 
   useEffect(() => {
     let cancelled = false;
@@ -211,7 +254,9 @@ export function SyncedReadingAudioPlayer({
               ref={index === activeWordIndex ? activeWordRef : undefined}
               className={`mx-0.5 inline-block max-w-full break-words rounded-md px-1 transition ${index === activeWordIndex ? "bg-pu3nte-gold text-pu3nte-bg shadow-lg shadow-pu3nte-gold/20" : "text-pu3nte-secondary"}`}
             >
+              {quoteBoundaries.quoteStarts.has(index) && <span className={index === activeWordIndex ? "text-pu3nte-bg/70" : "text-pu3nte-gold"}>“</span>}
               {word.text}
+              {quoteBoundaries.quoteEnds.has(index) && <span className={index === activeWordIndex ? "text-pu3nte-bg/70" : "text-pu3nte-gold"}>”</span>}
             </span>
           ))}
           {!words.length && <span className="text-sm text-pu3nte-secondary">Loading synced transcript...</span>}

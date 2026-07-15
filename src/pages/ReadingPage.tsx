@@ -43,6 +43,7 @@ export function ReadingPage() {
   if (!reading) return <NotFoundPage />;
   const copy = uiText(getUiLanguage(reading.languageTarget, reading.learnerNativeLanguage));
   const specialCharacters = getSpecialCharactersForLanguage(reading.languageTarget);
+  const syncedAudioHighlights = reading.data.paragraphs.flatMap((paragraph) => paragraph.highlights ?? []);
 
   function check() {
     const activeReading = reading!;
@@ -71,7 +72,7 @@ export function ReadingPage() {
           <InstructionPanel title={copy.instructions} body={copy.readingGuide} />
           <ReadingSettings fontSize={fontSize} setFontSize={setFontSize} focus={focus} setFocus={setFocus} labels={{ focusMode: copy.focusMode }} />
           {reading.data.audioUrl && (
-            <SyncedReadingAudioPlayer audioUrl={reading.data.audioUrl} alignmentUrl={reading.data.audioAlignmentUrl} />
+            <SyncedReadingAudioPlayer audioUrl={reading.data.audioUrl} alignmentUrl={reading.data.audioAlignmentUrl} highlights={syncedAudioHighlights} />
           )}
           <ReadingText paragraphs={reading.data.paragraphs} fontSize={fontSize} labels={{ showTranslation: copy.showTranslation, hideTranslation: copy.hideTranslation, shadow: copy.shadow }} />
           <div className="min-w-0 rounded-lg border border-white/10 bg-white/[0.04] p-4">
