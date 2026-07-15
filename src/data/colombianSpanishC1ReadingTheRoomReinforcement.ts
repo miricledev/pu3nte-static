@@ -540,6 +540,7 @@ export const colombianSpanishC1ReadingTheRoomReading: ReadingComprehension = {
   data: {
     targetLanguage: "spanish",
     audioUrl: "/audio/readings/colombian-spanish-c1-reading-the-room/full.mp3",
+    audioAlignmentUrl: "/audio/readings/colombian-spanish-c1-reading-the-room/timings.json",
     paragraphs: readingParagraphs,
     glossary: readingRoomVocab.map((item) => ({ phrase: item.term, meaning: item.meaning, note: item.note })),
     questions: readingQuestions,
