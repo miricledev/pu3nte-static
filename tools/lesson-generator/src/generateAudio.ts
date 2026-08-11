@@ -3,6 +3,7 @@ import path from "node:path";
 import { audioCacheRoot, getElevenLabsModelId } from "./config";
 import { textToSpeechMp3 } from "./elevenLabsClient";
 import { adjustAudioSpeedMp3, createLocalTtsMp3, getDecodedAudioDurationMs } from "./audioUtils";
+import { getPronunciationContext } from "./ttsPronunciationContext";
 import type { GeneratedAudioClip, GeneratorCallbacks, GeneratorOptions, VoiceSettings } from "./types";
 import type { LessonScript, LessonSegment } from "./validateScript";
 import { ensureDir, pathExists, resolveMaybeEnv, sha256Short } from "./utils";
@@ -57,7 +58,12 @@ export function getAudioCachePath(script: LessonScript, segment: LessonSegment):
   const modelId = isLocalTtsVoice(voiceId) ? "local-system-tts" : getElevenLabsModelId();
   const voiceSettings = getSegmentVoiceSettings(script, segment);
   const speed = getSegmentSpeed(segment);
-  const hash = sha256Short(JSON.stringify({ text: segment.text, voiceId, modelId, voiceSettings, speed }));
+  const pronunciationContext = getPronunciationContext(script, segment);
+  const pronunciationContextCacheKey =
+    pronunciationContext.previousText || pronunciationContext.nextText ? pronunciationContext : undefined;
+  const hash = sha256Short(
+    JSON.stringify({ text: segment.text, voiceId, modelId, voiceSettings, speed, pronunciationContext: pronunciationContextCacheKey }),
+  );
 
   return path.join(audioCacheRoot, script.id, `${segment.id}-${hash}.mp3`);
 }
@@ -118,10 +124,13 @@ export async function generateAudioClips(
           raw: `[elevenlabs] ${segment.id} ${segment.role}: ${segment.text}`,
         });
         const voiceSettings = getSegmentVoiceSettings(script, segment);
+        const pronunciationContext = getPronunciationContext(script, segment);
         const audio = await textToSpeechMp3({
           text: segment.text,
           voiceId,
           voiceSettings,
+          previousText: pronunciationContext.previousText,
+          nextText: pronunciationContext.nextText,
         });
 
         await ensureDir(path.dirname(cachePath));

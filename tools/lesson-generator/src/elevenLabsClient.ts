@@ -6,6 +6,8 @@ type TextToSpeechOptions = {
   voiceId: string;
   voiceSettings?: VoiceSettings;
   modelId?: string;
+  previousText?: string;
+  nextText?: string;
 };
 
 export async function textToSpeechMp3({
@@ -13,6 +15,8 @@ export async function textToSpeechMp3({
   voiceId,
   voiceSettings,
   modelId = getElevenLabsModelId(),
+  previousText,
+  nextText,
 }: TextToSpeechOptions): Promise<ArrayBuffer> {
   const apiKey = requireElevenLabsApiKey();
   const url = new URL(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`);
@@ -28,6 +32,8 @@ export async function textToSpeechMp3({
     body: JSON.stringify({
       text,
       model_id: modelId,
+      previous_text: previousText,
+      next_text: nextText,
       voice_settings: voiceSettings
         ? {
             stability: voiceSettings.stability,
