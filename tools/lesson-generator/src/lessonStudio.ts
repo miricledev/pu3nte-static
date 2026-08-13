@@ -350,7 +350,7 @@ function getSpecialCourses(): SpecialCourse[] {
       narratorEnv: "ELEVENLABS_ENGLISH_NARRATOR_VOICE_ID",
       maleVoiceEnv: "ELEVENLABS_COLOMBIAN_SPANISH_MALE_VOICE_ID",
       femaleVoiceEnv: "ELEVENLABS_COLOMBIAN_SPANISH_FEMALE_VOICE_ID",
-      researchFocus: "Colombian everyday speech, friendly softening, parce, listo, dale, qué pena, bacano, de una, and natural regional phrasing without overdoing caricature.",
+      researchFocus: "Colombian everyday speech in the selected context: local discourse markers, softeners, idioms, register shifts, social subtext, service/plan/work/transport phrasing, humour, and natural regional rhythm. Use obvious Colombian basics only when the level and topic truly need them.",
       culturalGuardrails: "Prefer warm Colombian urban everyday Spanish. Avoid narco stereotypes, violent clichés, or treating one city as the whole country.",
     },
     {
@@ -363,7 +363,7 @@ function getSpecialCourses(): SpecialCourse[] {
       narratorEnv: "ELEVENLABS_ENGLISH_NARRATOR_VOICE_ID",
       maleVoiceEnv: "ELEVENLABS_ARGENTINIAN_SPANISH_MALE_VOICE_ID",
       femaleVoiceEnv: "ELEVENLABS_ARGENTINIAN_SPANISH_FEMALE_VOICE_ID",
-      researchFocus: "Argentinian everyday speech, voseo, che, boludo used carefully, re, laburo, quilombo, dale, posta, and natural Buenos Aires-style rhythm.",
+      researchFocus: "Argentinian everyday speech in the selected context: voseo, discourse markers, pragmatic softeners, idioms, register shifts, social subtext, humour, natural rhythm, and useful local phrasing beyond the obvious starter-pack expressions.",
       culturalGuardrails: "Teach voseo clearly and mark register. Avoid insults as default speech and avoid flattening Argentina to one stereotype.",
     },
     {
@@ -376,7 +376,7 @@ function getSpecialCourses(): SpecialCourse[] {
       narratorEnv: "ELEVENLABS_ENGLISH_NARRATOR_VOICE_ID",
       maleVoiceEnv: "ELEVENLABS_MEXICAN_SPANISH_MALE_VOICE_ID",
       femaleVoiceEnv: "ELEVENLABS_MEXICAN_SPANISH_FEMALE_VOICE_ID",
-      researchFocus: "Mexican everyday speech, qué padre, órale, ahorita, no manches, neta, chido, güey register warnings, and polite Mexican phrasing.",
+      researchFocus: "Mexican everyday speech in the selected context: local discourse markers, politeness formulas, idioms, register shifts, social subtext, humour, natural rhythm, and useful local phrasing beyond the obvious starter-pack expressions.",
       culturalGuardrails: "Explain register and avoid making the lesson sound like a meme. Keep phrases useful, respectful, and context-aware.",
     },
     {
@@ -389,7 +389,7 @@ function getSpecialCourses(): SpecialCourse[] {
       narratorEnv: "ELEVENLABS_ENGLISH_NARRATOR_VOICE_ID",
       maleVoiceEnv: "ELEVENLABS_DOMINICAN_SPANISH_MALE_VOICE_ID",
       femaleVoiceEnv: "ELEVENLABS_DOMINICAN_SPANISH_FEMALE_VOICE_ID",
-      researchFocus: "Dominican everyday speech, qué lo qué, vaina, coro, tigre, jevi, ahora/ahorita usage, fast Caribbean rhythm, and pronunciation awareness.",
+      researchFocus: "Dominican everyday speech in the selected context: local discourse markers, idioms, register shifts, fast Caribbean rhythm, social subtext, humour, pronunciation awareness, and useful local phrasing beyond the obvious starter-pack expressions.",
       culturalGuardrails: "Teach slang with context and respect. Avoid caricaturing accent or making everything extremely informal.",
     },
     {
@@ -402,7 +402,7 @@ function getSpecialCourses(): SpecialCourse[] {
       narratorEnv: "ELEVENLABS_ENGLISH_NARRATOR_VOICE_ID",
       maleVoiceEnv: "ELEVENLABS_PERUVIAN_SPANISH_MALE_VOICE_ID",
       femaleVoiceEnv: "ELEVENLABS_PERUVIAN_SPANISH_FEMALE_VOICE_ID",
-      researchFocus: "Peruvian everyday speech, oye, causa, pata, bacán, chela, chamba, al toque, manyas, pucha, normal nomás, and natural Lima-style informal phrasing with register notes.",
+      researchFocus: "Peruvian everyday speech in the selected context: local discourse markers, idioms, register shifts, social subtext, humour, natural Lima-style rhythm, informal contractions, and useful local phrasing beyond the obvious starter-pack expressions.",
       culturalGuardrails: "Prefer useful contemporary Peruvian Spanish and explain regional/register variation. Avoid reducing Peru to food/tourism stereotypes or overloading every line with slang.",
     },
     {
@@ -2199,6 +2199,30 @@ function pageHtml(): string {
           '  "' + roleMale + '": "env:' + course.maleVoiceEnv + '",\\n' +
           '  "' + roleFemale + '": "env:' + course.femaleVoiceEnv + '"\\n' +
           '}';
+        const starterPackExamplesByCourse = {
+          "colombian-spanish": "qué más, parce/parcero, listo, de una, qué pena, bacano, tinto, hacer una vuelta, me cogió la tarde, se está cayendo un aguacero",
+          "argentinian-spanish": "che, boludo, re, dale, posta, laburo, quilombo, bárbaro, buena onda",
+          "mexican-spanish": "qué padre, órale, no manches, neta, chido, güey, ahorita, híjole, va",
+          "dominican-spanish": "qué lo qué, vaina, coro, un chin, jevi, cuarto, tíguere, manito, de una",
+          "peruvian-spanish": "oye, causa, pata, bacán, chela, chamba, al toque, manyas, pucha, normal nomás",
+          "british-english": "cheers, mate, fancy, brilliant, gutted, knackered, sorted, queue, lift",
+          "american-english": "gonna, wanna, gotta, awesome, no worries, I'm down, sounds good, hang out",
+          "irish-english": "grand, craic, sound, no bother, cheers, fair play",
+          "australian-english": "no worries, mate, reckon, heaps, arvo, brekkie, keen, servo"
+        };
+        const starterPackExamples = starterPackExamplesByCourse[course.id] || "the obvious beginner starter-pack phrases for this variety/accent";
+        const advancedProgressionLines = [
+          "",
+          "LEVEL-SPECIFIC LOCAL VOCABULARY PROGRESSION RULE:",
+          "- First identify the obvious beginner starter-pack vocabulary for " + course.variety + " and avoid treating it as advanced. For this course, examples include: " + starterPackExamples + ".",
+          "- B1 = accessible local flavour: practical high-frequency chunks, gentle regional identity, short sentence patterns, and clear register warnings.",
+          "- B2 = practical everyday local speech: useful informal phrasing for real situations, more reductions, reactions, softeners, and common idioms, but still easy to explain.",
+          "- C1 = nuanced/idiomatic/register-heavy local speech: less-obvious expressions, interpersonal language, hedging, reactions, humour, figurative meanings, register shifts, and phrases with social subtext.",
+          "- C2 = near-native control: layered meanings, irony, double meanings, indirectness, emotionally precise phrasing, rare-but-natural idioms, social risk, and context-dependent interpretation.",
+          "- For C1 and C2, assume learners already know the famous/basic regional vocabulary normally found in beginner slang lists. Do NOT introduce starter-pack items as new target vocabulary. They may appear incidentally only if natural, but the target chunks must primarily go deeper.",
+          "- At least 80% of newly introduced C1/C2 target chunks must be expressions that would NOT normally appear in a basic '" + course.variety + " slang for beginners' list.",
+          "- Do not satisfy C1/C2 merely by putting basic regional words into longer sentences. The vocabulary itself must carry advanced nuance, idiomatic meaning, register sensitivity, subtext, humour, emotional precision, or social risk."
+        ];
 
         return [
           "",
@@ -2220,6 +2244,7 @@ function pageHtml(): string {
           "Narrator mode: " + getNarratorModeLabel(),
           "Voice mapping to use exactly:",
           voiceBlock,
+          ...advancedProgressionLines,
           "",
           "Research requirement:",
           "Before generating the JSON, if web access is available, actively research how real speakers from the selected course/dialect/accent speak in the selected context: " + course.variety + ". Do not research Colombian speakers unless the selected course is Colombian Spanish. If the selected course is Argentinian Spanish, research Argentinian speakers; if Mexican Spanish, research Mexican speakers; if Dominican Spanish, research Dominican speakers; if Peruvian Spanish, research Peruvian speakers; if American/British/Irish/Australian English, research speakers from that accent/community. Do not rely on memory, generic slang lists, or examples from this prompt. Look for natural speech from that selected community in interviews, podcasts, street interviews, TikTok/YouTube/Instagram clips, comments, informal explainers, comedians, musicians, artists, influencers, streamers, local creators, and everyday conversation transcripts where possible.",
@@ -2243,12 +2268,12 @@ function pageHtml(): string {
             ? "- For B1 sentence-builder lessons, use local flavour gently: local greetings, reactions, common everyday chunks, and natural phrasing. Do not force dense slang into every sentence."
             : "- At least 75-85% of target-language prompts, answers, repeats, and dialogues should include local sayings, slang, idioms, greetings, reactions, discourse markers, politeness formulas, reductions, or phrasing that is strongly associated with " + course.variety + ".",
           "- Every mini-dialogue should sound like real friends, coworkers, neighbours, classmates, drivers, shop staff, or voice-note conversations from the selected country/accent. Avoid stiff classroom dialogue.",
-          "- Include local greetings/openers early in the lesson and reuse them later. Avoid generic greetings if a local opener would sound more natural.",
+          "- Include local greetings/openers early only when they fit the selected level and situation. For C1/C2, do not make famous beginner greetings/openers target vocabulary; use them only incidentally if natural.",
           "- Include at least one everyday situational saying or phrase for ordinary life, such as weather, traffic, food, money, time, plans, being late, being tired, being annoyed, or reacting to a story.",
           "- Prefer informal, spoken phrasing over formal written phrasing unless the lesson explicitly teaches register contrast.",
           "- B2 should use practical everyday local expressions and informal phrasing, but explain them clearly and avoid overwhelming learners.",
-          "- C1 should be deeply local: greetings, sayings, slang, register shifts, diplomacy, idioms, humour, subtle tone, and when not to use certain expressions.",
-          "- C2 should aim for near-native control: layered slang, humour, double meanings, indirectness, subtext, social risk, regional nuance, and precise register choice.",
+          "- C1 should be deeply local in an advanced way: less-obvious sayings, idioms, register shifts, diplomacy, humour, subtle tone, social subtext, and when not to use certain expressions. Do not make C1 a recycled beginner slang list.",
+          "- C2 should aim for near-native control: layered slang, humour, double meanings, indirectness, subtext, social risk, regional nuance, emotionally precise phrasing, and precise register choice. Do not make C2 a recycled beginner slang list with harder grammar.",
           narratorMode === "elevenlabs"
             ? "- Narrator segments use role narrator with the selected ElevenLabs narrator env voice. The narrator voice ID should be bilingual because occasional mixed English/Spanish narrator lines may be needed."
             : narratorMode === "hybrid-intro"
