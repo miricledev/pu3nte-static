@@ -398,7 +398,7 @@ const readingParagraphs = [
   {
     id: "p1",
     text:
-      "¿Qué más? I walked into a small bakery in Bogotá because se está cayendo un aguacero outside. The shopkeeper smiled and said, A la orden, vecino. ¿Qué necesita? I answered, Qué pena, ¿me regala un tintico?",
+      "¿Qué más? Entré a una panadería pequeña en Bogotá porque afuera se está cayendo un aguacero. La señora sonrió y dijo: A la orden, vecino. ¿Qué necesita? Yo respondí: Qué pena, ¿me regala un tintico?",
     translation:
       "What’s up? I walked into a small bakery in Bogotá because it’s pouring rain outside. The shopkeeper smiled and said, At your service, neighbour/sir. What do you need? I answered, Excuse me, can I get a little coffee?",
     highlights: highlights(["¿Qué más?", "Se está cayendo un aguacero", "a la orden", "vecino", "¿Qué necesita?", "qué pena", "¿Me regala…?", "un tintico"]),
@@ -407,7 +407,7 @@ const readingParagraphs = [
   {
     id: "p2",
     text:
-      "Then I saw un pandebono and un juguito. I asked, ¿Tiene pandebono? ¿Cuánto vale? She said the juice was bacano, but está carito today. I checked my cash and thought, no me alcanza, so I chose only the coffee and the pandebono.",
+      "Después vi un pandebono y un juguito. Pregunté: ¿Tiene pandebono? ¿Cuánto vale? Ella dijo que el jugo estaba bacano, pero está carito hoy. Miré la plata que tenía y pensé: no me alcanza, entonces escogí solo el tintico y el pandebono.",
     translation:
       "Then I saw a pandebono and a little juice. I asked, Do you have pandebono? How much is it? She said the juice was nice, but a bit expensive today. I checked my cash and thought, I don’t have enough money, so I chose only the coffee and the pandebono.",
     highlights: highlights(["un pandebono", "un juguito", "¿Tiene…?", "¿Cuánto vale?", "bacano", "Está carito", "No me alcanza"]),
@@ -416,7 +416,7 @@ const readingParagraphs = [
   {
     id: "p3",
     text:
-      "I said, listo, ¿me lo regala pa’ llevar, porfa? She answered, claro, con gusto. When I asked ¿cuánto es?, she said, son ocho mil. I replied, listo, le pago en efectivo. She told me I could also pay con tarjeta.",
+      "Dije: listo, ¿me lo regala pa’ llevar, porfa? Ella respondió: claro, con gusto. Cuando pregunté ¿cuánto es?, me dijo: son ocho mil. Yo contesté: listo, le pago en efectivo. También me dijo que podía pagar con tarjeta.",
     translation:
       "I said, okay, can I get it to go, please? She answered, of course, my pleasure. When I asked what’s the total, she said, it’s eight thousand. I replied, okay, I’ll pay in cash. She told me I could also pay by card.",
     highlights: highlights(["listo", "¿Me lo regala pa’ llevar?", "pa’ llevar", "porfa", "Claro, con gusto", "con gusto", "¿Cuánto es?", "Son ocho mil", "le pago en efectivo", "en efectivo", "con tarjeta"]),
@@ -425,7 +425,7 @@ const readingParagraphs = [
   {
     id: "p4",
     text:
-      "My friend texted, ¿Qué más, parce? I wrote back, de una, parcero, I’m coming. The order was simple, but it sounded very Colombian: qué pena, ¿me regala un tintico y un pandebono pa’ llevar? Son ocho mil. Le pago con tarjeta.",
+      "Mi amigo escribió: ¿Qué más, parce? Yo le respondí: de una, parcero, ya voy. El pedido fue sencillo, pero sonó muy colombiano: qué pena, ¿me regala un tintico y un pandebono pa’ llevar? Son ocho mil. Le pago con tarjeta.",
     translation:
       "My friend texted, what’s up, bro? I wrote back, for sure, buddy, I’m coming. The order was simple, but it sounded very Colombian: excuse me, can I get a little coffee and a pandebono to go? It’s eight thousand. I’ll pay by card.",
     highlights: highlights(["¿Qué más, parce?", "parce", "de una", "parcero", "qué pena", "¿Me regala…?", "un tintico", "un pandebono", "pa’ llevar", "Son ocho mil", "le pago con tarjeta"]),

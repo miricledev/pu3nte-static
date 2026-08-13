@@ -462,7 +462,7 @@ const readingParagraphs = [
   {
     id: "p1",
     text:
-      "In informal Dominican Spanish, a plan can start with energy: “¿Qué lo qué?” or “¿Qué lo qué, manito?” These are friendly greetings, not formal Spanish. Then the real invitation can be short: “¿Tamo activo pa’ hacer coro?” In standard Spanish, this would be closer to “¿Estamos activos para pasar tiempo juntos?”, but in real casual speech it sounds much lighter.",
+      "En el español dominicano informal, un plan puede empezar con energía: “¿Qué lo qué?” o “¿Qué lo qué, manito?” Son saludos de confianza, no español formal. Después, la invitación puede ser corta: “¿Tamo activo pa’ hacer coro?” En una conversación real, eso suena ligero, cercano y muy de panas.",
     translation:
       "In informal Dominican Spanish, a plan can start with energy: What’s up? or What’s up, bro? These are friendly greetings, not formal Spanish. Then the real invitation can be short: Are we on to hang out? In standard Spanish, this would be closer to Are we ready to spend time together?, but in real casual speech it sounds much lighter.",
     highlights: highlights(["¿Qué lo qué?", "Manito", "¿Tamo activo?", "Tamo", "Pa’", "Hacer coro"]),
@@ -471,7 +471,7 @@ const readingParagraphs = [
   {
     id: "p2",
     text:
-      "If the plan sounds good, you can answer: “De una, me apunto.” You might also say: “Tá jevi.” Here, “tá” is a spoken shortening of “está,” and “jevi” means cool or nice. These phrases are useful when you want to accept without sounding stiff.",
+      "Si el plan te suena bien, puedes responder: “De una, me apunto.” También puedes decir: “Tá jevi.” Aquí, “tá” es una forma hablada de “está”, y “jevi” significa que algo está bueno, cool o agradable. Son frases útiles para aceptar sin sonar rígido.",
     translation:
       "If the plan sounds good, you can answer: For sure, I’m in. You might also say: Sounds good. Here, tá is a spoken shortening of está, and jevi means cool or nice. These phrases are useful when you want to accept without sounding stiff.",
     highlights: highlights(["De una", "Me apunto", "Tá jevi", "Tá", "Jevi"]),
@@ -480,7 +480,7 @@ const readingParagraphs = [
   {
     id: "p3",
     text:
-      "For coordination, Dominican friend talk can be very direct: “Tírame por WhatsApp,” “cae por aquí,” or “mándame tu ubicación.” These are practical phrases. They do not explain too much; they keep the plan moving.",
+      "Para coordinar, el habla dominicana entre amigos puede ser muy directa: “Tírame por WhatsApp”, “cae por aquí” o “mándame tu ubicación”. Son frases prácticas. No explican demasiado; mantienen el plan en movimiento.",
     translation:
       "For coordination, Dominican friend talk can be very direct: Hit me up on WhatsApp, come by here, or send me your location. These are practical phrases. They do not explain too much; they keep the plan moving.",
     highlights: highlights(["Tírame por WhatsApp", "Tírame", "Cae por aquí", "Mándame tu ubicación"]),
@@ -489,7 +489,7 @@ const readingParagraphs = [
   {
     id: "p4",
     text:
-      "When the plan changes, “vaina” becomes useful. It can mean thing, situation, stuff, or problem. If you say: “Tengo una vaina,” you are saying that something is going on. If you say: “Se me complicó una vaina,” you are explaining that something came up.",
+      "Cuando el plan cambia, “vaina” se vuelve útil. Puede significar cosa, situación, asunto o problema, según el contexto. Si dices: “Tengo una vaina”, estás diciendo que tienes algo pasando. Si dices: “Se me complicó una vaina”, explicas que algo se complicó.",
     translation:
       "When the plan changes, vaina becomes useful. It can mean thing, situation, stuff, or problem. If you say: I’ve got something going on, you are saying that something is happening. If you say: Something came up, you are explaining that something got complicated.",
     highlights: highlights(["Vaina", "Tengo una vaina", "Se me complicó una vaina", "Se me complicó"]),
@@ -498,7 +498,7 @@ const readingParagraphs = [
   {
     id: "p5",
     text:
-      "A good friend does not add pressure. “No cojas lucha” means don’t stress. If the plan cannot happen today, you can say: “No puedo hoy” or “Déjalo pa’ mañana.” Another soft alternative is: “¿Y si mejor hacemos coro mañana?”",
+      "Un buen amigo no mete presión de más. “No cojas lucha” significa que no te estreses. Si el plan no se puede hacer hoy, puedes decir: “No puedo hoy” o “Déjalo pa’ mañana.” Otra alternativa suave es: “¿Y si mejor hacemos coro mañana?”",
     translation:
       "A good friend does not add pressure. Don’t stress means don’t worry about it. If the plan cannot happen today, you can say: I can’t today or leave it for tomorrow. Another soft alternative is: What if we hang out tomorrow instead?",
     highlights: highlights(["No cojas lucha", "No puedo hoy", "Déjalo pa’ mañana", "Pa’", "¿Y si mejor…?", "Hacer coro"]),
@@ -507,7 +507,7 @@ const readingParagraphs = [
   {
     id: "p6",
     text:
-      "At the end of the plan, small timing phrases matter. “Ahorita te digo” keeps the answer open. “Espérame un chin” asks for a little patience. “Voy llegando” tells the other person you are almost there. These phrases make the conversation sound human, local, and relaxed.",
+      "Al final del plan, las frases pequeñas de tiempo importan mucho. “Ahorita te digo” deja la respuesta abierta. “Espérame un chin” pide un poquito de paciencia. “Voy llegando” le dice a la otra persona que ya estás cerca. Esas frases hacen que la conversación suene humana, local y relajada.",
     translation:
       "At the end of the plan, small timing phrases matter. I’ll tell you in a bit keeps the answer open. Wait for me a little bit asks for a little patience. I’m almost there tells the other person you are nearly arriving. These phrases make the conversation sound human, local, and relaxed.",
     highlights: highlights(["Ahorita te digo", "Espérame un chin", "Un chin", "Voy llegando"]),

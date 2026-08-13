@@ -1,1542 +1,1612 @@
 [
   {
-    "text": "Advanced",
+    "text": "El",
     "start": 0.035,
-    "end": 0.673
-  },
-  {
-    "text": "Dominican",
-    "start": 0.743,
-    "end": 1.358
+    "end": 0.221
   },
   {
     "text": "slang",
-    "start": 1.416,
-    "end": 1.881
+    "start": 0.313,
+    "end": 0.615
   },
   {
-    "text": "is",
-    "start": 1.997,
-    "end": 2.229
+    "text": "dominicano",
+    "start": 0.662,
+    "end": 1.37
   },
   {
-    "text": "not",
-    "start": 2.345,
-    "end": 2.589
+    "text": "avanzado",
+    "start": 1.393,
+    "end": 1.985
   },
   {
-    "text": "just",
-    "start": 2.647,
-    "end": 2.868
-  },
-  {
-    "text": "vocabulary;",
-    "start": 2.926,
-    "end": 3.878
-  },
-  {
-    "text": "it",
-    "start": 4.052,
-    "end": 4.226
-  },
-  {
-    "text": "is",
-    "start": 4.284,
-    "end": 4.365
-  },
-  {
-    "text": "social",
-    "start": 4.412,
-    "end": 4.783
-  },
-  {
-    "text": "judgment.",
-    "start": 4.853,
-    "end": 5.538
-  },
-  {
-    "text": "A",
-    "start": 6.037,
-    "end": 6.153
-  },
-  {
-    "text": "phrase",
-    "start": 6.246,
-    "end": 6.687
-  },
-  {
-    "text": "like",
-    "start": 6.745,
-    "end": 7.175
-  },
-  {
-    "text": "\"¿Qué",
-    "start": 7.21,
-    "end": 7.593
+    "text": "no",
+    "start": 2.067,
+    "end": 2.159
   },
   {
     "text": "es",
-    "start": 7.674,
-    "end": 7.79
+    "start": 2.206,
+    "end": 2.264
+  },
+  {
+    "text": "solo",
+    "start": 2.287,
+    "end": 2.519
+  },
+  {
+    "text": "vocabulario;",
+    "start": 2.554,
+    "end": 3.367
+  },
+  {
+    "text": "también",
+    "start": 3.425,
+    "end": 3.843
+  },
+  {
+    "text": "es",
+    "start": 3.901,
+    "end": 3.982
+  },
+  {
+    "text": "juicio",
+    "start": 4.017,
+    "end": 4.4
+  },
+  {
+    "text": "social.",
+    "start": 4.447,
+    "end": 5.016
+  },
+  {
+    "text": "Una",
+    "start": 5.259,
+    "end": 5.468
+  },
+  {
+    "text": "frase",
+    "start": 5.538,
+    "end": 5.886
+  },
+  {
+    "text": "como",
+    "start": 5.956,
+    "end": 6.374
+  },
+  {
+    "text": "\"¿Qué",
+    "start": 6.49,
+    "end": 6.815
+  },
+  {
+    "text": "es",
+    "start": 6.885,
+    "end": 6.954
   },
   {
     "text": "lo",
-    "start": 7.848,
-    "end": 7.941
+    "start": 7.012,
+    "end": 7.094
   },
   {
     "text": "que",
-    "start": 7.988,
-    "end": 8.069
+    "start": 7.152,
+    "end": 7.233
   },
   {
     "text": "se",
-    "start": 8.127,
-    "end": 8.231
+    "start": 7.279,
+    "end": 7.361
   },
   {
     "text": "mueve?\"",
-    "start": 8.29,
+    "start": 7.419,
+    "end": 7.988
+  },
+  {
+    "text": "puede",
+    "start": 8.197,
+    "end": 8.487
+  },
+  {
+    "text": "abrir",
+    "start": 8.533,
+    "end": 8.766
+  },
+  {
+    "text": "una",
+    "start": 8.824,
     "end": 8.951
   },
   {
-    "text": "can",
-    "start": 9.276,
-    "end": 9.497
+    "text": "conversación",
+    "start": 9.009,
+    "end": 9.601
   },
   {
-    "text": "open",
-    "start": 9.613,
-    "end": 9.973
+    "text": "casual,",
+    "start": 9.648,
+    "end": 10.24
   },
   {
-    "text": "a",
-    "start": 10.054,
-    "end": 10.112
-  },
-  {
-    "text": "casual",
-    "start": 10.205,
-    "end": 10.588
-  },
-  {
-    "text": "conversation,",
-    "start": 10.658,
-    "end": 11.656
-  },
-  {
-    "text": "but",
-    "start": 11.935,
-    "end": 12.19
+    "text": "pero",
+    "start": 10.333,
+    "end": 10.728
   },
   {
     "text": "\"no",
-    "start": 12.307,
-    "end": 12.713
+    "start": 10.844,
+    "end": 11.157
   },
   {
     "text": "aguanto",
-    "start": 12.806,
-    "end": 13.444
+    "start": 11.238,
+    "end": 11.656
   },
   {
     "text": "vaina\"",
-    "start": 13.514,
-    "end": 14.06
+    "start": 11.714,
+    "end": 12.307
   },
   {
-    "text": "is",
-    "start": 14.095,
-    "end": 14.292
+    "text": "es",
+    "start": 12.376,
+    "end": 12.539
   },
   {
-    "text": "much",
-    "start": 14.373,
-    "end": 14.582
+    "text": "mucho",
+    "start": 12.597,
+    "end": 12.887
   },
   {
-    "text": "stronger.",
-    "start": 14.629,
-    "end": 15.348
+    "text": "más",
+    "start": 12.934,
+    "end": 13.073
   },
   {
-    "text": "It",
-    "start": 15.615,
-    "end": 15.778
+    "text": "fuerte.",
+    "start": 13.131,
+    "end": 13.735
   },
   {
-    "text": "can",
-    "start": 15.836,
-    "end": 15.987
+    "text": "Según",
+    "start": 14.547,
+    "end": 14.884
   },
   {
-    "text": "sound",
-    "start": 16.057,
-    "end": 16.266
+    "text": "el",
+    "start": 14.93,
+    "end": 15
   },
   {
-    "text": "like",
-    "start": 16.324,
-    "end": 16.475
+    "text": "tono,",
+    "start": 15.07,
+    "end": 15.534
   },
   {
-    "text": "a",
-    "start": 16.509,
-    "end": 16.533
+    "text": "puede",
+    "start": 15.581,
+    "end": 15.825
   },
   {
-    "text": "hard",
-    "start": 16.602,
-    "end": 16.811
+    "text": "sonar",
+    "start": 15.871,
+    "end": 16.15
   },
   {
-    "text": "boundary,",
-    "start": 16.869,
-    "end": 17.636
+    "text": "como",
+    "start": 16.219,
+    "end": 16.428
   },
   {
-    "text": "frustration,",
-    "start": 17.798,
-    "end": 18.925
+    "text": "límite",
+    "start": 16.51,
+    "end": 16.916
   },
   {
-    "text": "or",
-    "start": 19.168,
-    "end": 19.343
+    "text": "duro,",
+    "start": 16.962,
+    "end": 17.438
   },
   {
-    "text": "a",
-    "start": 19.412,
-    "end": 19.447
+    "text": "frustración",
+    "start": 17.566,
+    "end": 18.472
   },
   {
-    "text": "warning,",
-    "start": 19.54,
-    "end": 20.248
+    "text": "o",
+    "start": 18.565,
+    "end": 18.657
   },
   {
-    "text": "depending",
-    "start": 20.422,
-    "end": 20.852
+    "text": "advertencia.",
+    "start": 18.704,
+    "end": 19.679
   },
   {
-    "text": "on",
-    "start": 20.91,
-    "end": 20.98
+    "text": "Algunas",
+    "start": 20.492,
+    "end": 20.933
   },
   {
-    "text": "tone.",
-    "start": 21.038,
-    "end": 21.583
+    "text": "frases",
+    "start": 20.991,
+    "end": 21.455
   },
   {
-    "text": "Some",
-    "start": 22.025,
-    "end": 22.315
+    "text": "describen",
+    "start": 21.514,
+    "end": 22.106
   },
   {
-    "text": "phrases",
-    "start": 22.361,
-    "end": 22.744
-  },
-  {
-    "text": "describe",
-    "start": 22.802,
-    "end": 23.22
-  },
-  {
-    "text": "pressure.",
-    "start": 23.267,
-    "end": 23.998
+    "text": "presión.",
+    "start": 22.164,
+    "end": 22.872
   },
   {
     "text": "\"Dar",
-    "start": 24.172,
-    "end": 24.59
+    "start": 23.383,
+    "end": 23.789
   },
   {
     "text": "carpeta\"",
-    "start": 24.672,
-    "end": 25.624
+    "start": 23.847,
+    "end": 24.637
   },
   {
-    "text": "means",
-    "start": 25.798,
-    "end": 26.076
+    "text": "significa",
+    "start": 24.695,
+    "end": 25.322
   },
   {
-    "text": "someone",
-    "start": 26.123,
-    "end": 26.61
+    "text": "que",
+    "start": 25.38,
+    "end": 25.484
   },
   {
-    "text": "keeps",
-    "start": 26.68,
-    "end": 26.97
+    "text": "alguien",
+    "start": 25.554,
+    "end": 25.832
   },
   {
-    "text": "hassling",
-    "start": 27.017,
-    "end": 27.481
+    "text": "te",
+    "start": 25.891,
+    "end": 25.983
   },
   {
-    "text": "you,",
-    "start": 27.539,
-    "end": 27.888
+    "text": "está",
+    "start": 26.041,
+    "end": 26.239
   },
   {
-    "text": "while",
-    "start": 28.097,
-    "end": 28.41
+    "text": "molestando",
+    "start": 26.297,
+    "end": 27.075
+  },
+  {
+    "text": "o",
+    "start": 27.191,
+    "end": 27.307
+  },
+  {
+    "text": "insistiendo",
+    "start": 27.377,
+    "end": 27.934
+  },
+  {
+    "text": "demasiado,",
+    "start": 27.98,
+    "end": 28.805
+  },
+  {
+    "text": "mientras",
+    "start": 28.897,
+    "end": 29.373
   },
   {
     "text": "\"plagosear\"",
-    "start": 28.445,
-    "end": 29.641
+    "start": 29.397,
+    "end": 30.372
   },
   {
-    "text": "means",
-    "start": 29.815,
-    "end": 30.093
+    "text": "es",
+    "start": 30.442,
+    "end": 30.593
   },
   {
-    "text": "pestering",
-    "start": 30.21,
-    "end": 31.034
+    "text": "pedir",
+    "start": 30.662,
+    "end": 31.022
   },
   {
-    "text": "or",
+    "text": "o",
+    "start": 31.069,
+    "end": 31.092
+  },
+  {
+    "text": "fastidiar",
     "start": 31.15,
-    "end": 31.324
+    "end": 31.765
   },
   {
-    "text": "begging",
-    "start": 31.44,
-    "end": 31.847
+    "text": "de",
+    "start": 31.823,
+    "end": 31.881
   },
   {
-    "text": "in",
-    "start": 31.916,
-    "end": 32.009
+    "text": "manera",
+    "start": 31.939,
+    "end": 32.276
   },
   {
-    "text": "an",
-    "start": 32.056,
-    "end": 32.114
+    "text": "cansona.",
+    "start": 32.334,
+    "end": 33.147
   },
   {
-    "text": "annoying",
-    "start": 32.16,
-    "end": 32.52
+    "text": "Si",
+    "start": 33.658,
+    "end": 33.809
   },
   {
-    "text": "way.",
-    "start": 32.59,
-    "end": 33.042
+    "text": "alguien",
+    "start": 33.867,
+    "end": 34.169
   },
   {
-    "text": "If",
-    "start": 33.217,
-    "end": 33.367
-  },
-  {
-    "text": "someone",
-    "start": 33.414,
-    "end": 33.704
-  },
-  {
-    "text": "says",
-    "start": 33.739,
-    "end": 33.913
+    "text": "dice",
+    "start": 34.227,
+    "end": 34.622
   },
   {
     "text": "\"no",
-    "start": 33.936,
-    "end": 34.18
+    "start": 34.68,
+    "end": 34.947
   },
   {
     "text": "me",
-    "start": 34.238,
-    "end": 34.319
+    "start": 35.005,
+    "end": 35.098
   },
   {
     "text": "vengas",
-    "start": 34.389,
-    "end": 34.714
+    "start": 35.144,
+    "end": 35.562
   },
   {
     "text": "a",
-    "start": 34.772,
-    "end": 34.795
+    "start": 35.632,
+    "end": 35.655
   },
   {
     "text": "plagosear\",",
-    "start": 34.865,
-    "end": 35.817
+    "start": 35.701,
+    "end": 36.642
   },
   {
-    "text": "the",
-    "start": 36.026,
-    "end": 36.142
+    "text": "la",
+    "start": 36.816,
+    "end": 36.897
   },
   {
-    "text": "relationship",
-    "start": 36.223,
-    "end": 36.931
+    "text": "relación",
+    "start": 36.955,
+    "end": 37.547
   },
   {
-    "text": "is",
-    "start": 36.978,
-    "end": 37.071
+    "text": "ya",
+    "start": 37.617,
+    "end": 37.722
   },
   {
-    "text": "already",
-    "start": 37.14,
-    "end": 37.512
+    "text": "está",
+    "start": 37.78,
+    "end": 37.977
   },
   {
-    "text": "tense,",
-    "start": 37.57,
-    "end": 38.104
+    "text": "tensa;",
+    "start": 38.07,
+    "end": 38.662
   },
   {
-    "text": "so",
-    "start": 38.278,
-    "end": 38.464
+    "text": "no",
+    "start": 38.987,
+    "end": 39.15
   },
   {
-    "text": "the",
-    "start": 38.534,
-    "end": 38.615
+    "text": "es",
+    "start": 39.219,
+    "end": 39.301
   },
   {
-    "text": "phrase",
-    "start": 38.673,
-    "end": 38.952
+    "text": "una",
+    "start": 39.417,
+    "end": 39.556
   },
   {
-    "text": "should",
-    "start": 38.975,
-    "end": 39.149
+    "text": "petición",
+    "start": 39.602,
+    "end": 40.113
   },
   {
-    "text": "not",
-    "start": 39.195,
-    "end": 39.323
+    "text": "neutral.",
+    "start": 40.16,
+    "end": 40.833
   },
   {
-    "text": "be",
-    "start": 39.381,
-    "end": 39.474
+    "text": "Otras",
+    "start": 41.344,
+    "end": 41.715
   },
   {
-    "text": "treated",
-    "start": 39.532,
-    "end": 39.915
+    "text": "frases",
+    "start": 41.773,
+    "end": 42.226
   },
   {
-    "text": "like",
-    "start": 39.973,
-    "end": 40.159
+    "text": "tienen",
+    "start": 42.319,
+    "end": 42.621
   },
   {
-    "text": "a",
-    "start": 40.194,
-    "end": 40.229
+    "text": "que",
+    "start": 42.667,
+    "end": 42.749
   },
   {
-    "text": "neutral",
-    "start": 40.322,
-    "end": 40.705
+    "text": "ver",
+    "start": 42.807,
+    "end": 42.969
   },
   {
-    "text": "request.",
-    "start": 40.786,
-    "end": 41.564
+    "text": "con",
+    "start": 43.051,
+    "end": 43.225
   },
   {
-    "text": "Other",
-    "start": 41.947,
-    "end": 42.237
+    "text": "control",
+    "start": 43.306,
+    "end": 43.782
   },
   {
-    "text": "phrases",
-    "start": 42.295,
-    "end": 42.76
-  },
-  {
-    "text": "are",
-    "start": 42.818,
-    "end": 42.992
-  },
-  {
-    "text": "about",
-    "start": 43.027,
-    "end": 43.352
-  },
-  {
-    "text": "emotional",
-    "start": 43.445,
-    "end": 44.164
-  },
-  {
-    "text": "control.",
-    "start": 44.246,
-    "end": 45.012
+    "text": "emocional.",
+    "start": 43.828,
+    "end": 44.606
   },
   {
     "text": "\"Coger",
-    "start": 45.256,
-    "end": 45.848
+    "start": 45.047,
+    "end": 45.523
   },
   {
     "text": "lucha\"",
-    "start": 45.941,
-    "end": 46.614
+    "start": 45.593,
+    "end": 46.127
   },
   {
-    "text": "is",
-    "start": 46.788,
-    "end": 46.951
+    "text": "es",
+    "start": 46.208,
+    "end": 46.359
   },
   {
-    "text": "stressing",
-    "start": 46.974,
-    "end": 47.45
+    "text": "complicarte",
+    "start": 46.417,
+    "end": 47.23
   },
   {
-    "text": "yourself",
-    "start": 47.508,
-    "end": 47.903
+    "text": "o",
+    "start": 47.323,
+    "end": 47.416
   },
   {
-    "text": "out",
-    "start": 47.984,
-    "end": 48.17
+    "text": "estresarte",
+    "start": 47.474,
+    "end": 48.147
   },
   {
-    "text": "unnecessarily.",
-    "start": 48.24,
-    "end": 49.308
+    "text": "sin",
+    "start": 48.194,
+    "end": 48.333
+  },
+  {
+    "text": "necesidad.",
+    "start": 48.368,
+    "end": 49.192
   },
   {
     "text": "\"Coger",
     "start": 49.517,
-    "end": 50.051
+    "end": 49.982
   },
   {
     "text": "cuerda\"",
-    "start": 50.132,
-    "end": 50.945
+    "start": 50.063,
+    "end": 50.643
   },
   {
-    "text": "is",
-    "start": 51.119,
-    "end": 51.27
+    "text": "es",
+    "start": 50.702,
+    "end": 50.887
   },
   {
-    "text": "taking",
-    "start": 51.351,
-    "end": 51.7
-  },
-  {
-    "text": "the",
-    "start": 51.758,
-    "end": 51.839
-  },
-  {
-    "text": "bait",
-    "start": 51.909,
-    "end": 52.152
-  },
-  {
-    "text": "when",
-    "start": 52.21,
-    "end": 52.373
-  },
-  {
-    "text": "someone",
-    "start": 52.431,
-    "end": 52.721
-  },
-  {
-    "text": "provokes",
-    "start": 52.756,
-    "end": 53.197
-  },
-  {
-    "text": "you.",
-    "start": 53.255,
-    "end": 53.58
-  },
-  {
-    "text": "Advice",
-    "start": 53.964,
-    "end": 54.532
-  },
-  {
-    "text": "like",
-    "start": 54.579,
-    "end": 54.857
-  },
-  {
-    "text": "\"no",
-    "start": 54.904,
-    "end": 55.264
-  },
-  {
-    "text": "cojas",
-    "start": 55.345,
-    "end": 55.659
-  },
-  {
-    "text": "lucha\"",
-    "start": 55.751,
-    "end": 56.274
-  },
-  {
-    "text": "and",
-    "start": 56.297,
-    "end": 56.46
-  },
-  {
-    "text": "\"no",
-    "start": 56.483,
-    "end": 56.692
-  },
-  {
-    "text": "cojas",
-    "start": 56.773,
-    "end": 57.087
-  },
-  {
-    "text": "cuerda\"",
-    "start": 57.145,
-    "end": 57.795
-  },
-  {
-    "text": "is",
-    "start": 57.969,
-    "end": 58.155
-  },
-  {
-    "text": "common",
-    "start": 58.236,
-    "end": 58.805
-  },
-  {
-    "text": "because",
-    "start": 59.084,
-    "end": 59.49
-  },
-  {
-    "text": "it",
-    "start": 59.536,
-    "end": 59.676
-  },
-  {
-    "text": "protects",
-    "start": 59.757,
-    "end": 60.291
-  },
-  {
-    "text": "your",
-    "start": 60.337,
-    "end": 60.488
-  },
-  {
-    "text": "image",
-    "start": 60.581,
-    "end": 61.057
-  },
-  {
-    "text": "as",
-    "start": 61.104,
-    "end": 61.266
-  },
-  {
-    "text": "much",
-    "start": 61.394,
-    "end": 61.673
-  },
-  {
-    "text": "as",
-    "start": 61.719,
-    "end": 61.847
-  },
-  {
-    "text": "your",
-    "start": 61.905,
-    "end": 62.044
-  },
-  {
-    "text": "peace.",
-    "start": 62.125,
-    "end": 62.822
-  },
-  {
-    "text": "Dominican",
-    "start": 63.774,
-    "end": 64.32
-  },
-  {
-    "text": "problem-solving",
-    "start": 64.378,
-    "end": 65.295
-  },
-  {
-    "text": "often",
-    "start": 65.411,
-    "end": 65.759
-  },
-  {
-    "text": "sounds",
-    "start": 65.817,
-    "end": 66.084
-  },
-  {
-    "text": "practical.",
-    "start": 66.142,
-    "end": 66.897
-  },
-  {
-    "text": "\"Resolver\"",
-    "start": 67.408,
-    "end": 68.627
-  },
-  {
-    "text": "means",
-    "start": 68.836,
-    "end": 69.103
-  },
-  {
-    "text": "making",
-    "start": 69.184,
-    "end": 69.498
-  },
-  {
-    "text": "it",
-    "start": 69.556,
-    "end": 69.637
-  },
-  {
-    "text": "work,",
-    "start": 69.707,
-    "end": 70.218
-  },
-  {
-    "text": "and",
-    "start": 70.659,
-    "end": 70.984
-  },
-  {
-    "text": "\"buscarle",
-    "start": 71.007,
-    "end": 71.518
-  },
-  {
-    "text": "el",
-    "start": 71.553,
-    "end": 71.634
-  },
-  {
-    "text": "bajadero\"",
-    "start": 71.692,
-    "end": 72.447
-  },
-  {
-    "text": "means",
-    "start": 72.621,
-    "end": 72.958
-  },
-  {
-    "text": "finding",
-    "start": 73.027,
-    "end": 73.434
-  },
-  {
-    "text": "a",
-    "start": 73.492,
-    "end": 73.526
-  },
-  {
-    "text": "practical",
-    "start": 73.608,
-    "end": 74.095
-  },
-  {
-    "text": "way",
-    "start": 74.165,
-    "end": 74.293
-  },
-  {
-    "text": "around",
-    "start": 74.339,
-    "end": 74.571
-  },
-  {
-    "text": "the",
-    "start": 74.618,
-    "end": 74.687
-  },
-  {
-    "text": "problem.",
-    "start": 74.734,
-    "end": 75.396
-  },
-  {
-    "text": "If",
-    "start": 75.779,
-    "end": 75.964
-  },
-  {
-    "text": "someone",
-    "start": 76.046,
-    "end": 76.475
-  },
-  {
-    "text": "says",
-    "start": 76.522,
-    "end": 76.87
-  },
-  {
-    "text": "\"le",
-    "start": 76.951,
-    "end": 77.16
-  },
-  {
-    "text": "busco",
-    "start": 77.242,
-    "end": 77.613
-  },
-  {
-    "text": "el",
-    "start": 77.66,
-    "end": 77.741
-  },
-  {
-    "text": "bajadero\",",
-    "start": 77.81,
-    "end": 78.646
-  },
-  {
-    "text": "they",
-    "start": 78.855,
-    "end": 79.03
-  },
-  {
-    "text": "are",
-    "start": 79.088,
-    "end": 79.227
-  },
-  {
-    "text": "not",
-    "start": 79.297,
-    "end": 79.471
-  },
-  {
-    "text": "promising",
-    "start": 79.517,
-    "end": 79.97
-  },
-  {
-    "text": "perfection;",
-    "start": 80.028,
-    "end": 80.806
-  },
-  {
-    "text": "they",
-    "start": 81.084,
-    "end": 81.247
-  },
-  {
-    "text": "are",
-    "start": 81.282,
-    "end": 81.398
-  },
-  {
-    "text": "promising",
-    "start": 81.444,
-    "end": 81.909
-  },
-  {
-    "text": "movement.",
-    "start": 81.978,
-    "end": 82.698
-  },
-  {
-    "text": "Money",
-    "start": 83.813,
-    "end": 84.15
-  },
-  {
-    "text": "and",
-    "start": 84.184,
-    "end": 84.266
-  },
-  {
-    "text": "loyalty",
-    "start": 84.335,
-    "end": 84.881
-  },
-  {
-    "text": "have",
-    "start": 84.951,
-    "end": 85.16
-  },
-  {
-    "text": "their",
-    "start": 85.206,
-    "end": 85.403
-  },
-  {
-    "text": "own",
-    "start": 85.484,
-    "end": 85.74
-  },
-  {
-    "text": "slang.",
-    "start": 85.809,
-    "end": 86.518
-  },
-  {
-    "text": "\"Hacer",
-    "start": 87.121,
-    "end": 87.69
-  },
-  {
-    "text": "un",
-    "start": 87.806,
-    "end": 87.911
-  },
-  {
-    "text": "serrucho\"",
-    "start": 87.969,
-    "end": 88.77
-  },
-  {
-    "text": "means",
-    "start": 88.909,
-    "end": 89.199
-  },
-  {
-    "text": "people",
-    "start": 89.269,
-    "end": 89.583
-  },
-  {
-    "text": "chip",
-    "start": 89.629,
-    "end": 89.826
-  },
-  {
-    "text": "in",
-    "start": 89.896,
-    "end": 89.989
-  },
-  {
-    "text": "together.",
-    "start": 90.047,
-    "end": 90.662
-  },
-  {
-    "text": "\"Boronear\"",
-    "start": 90.778,
-    "end": 91.788
-  },
-  {
-    "text": "or",
-    "start": 91.835,
-    "end": 92.056
-  },
-  {
-    "text": "\"andar",
-    "start": 92.206,
-    "end": 92.624
-  },
-  {
-    "text": "boroneando\"",
-    "start": 92.682,
-    "end": 93.588
-  },
-  {
-    "text": "means",
-    "start": 93.785,
-    "end": 94.076
-  },
-  {
-    "text": "doing",
-    "start": 94.169,
-    "end": 94.517
-  },
-  {
-    "text": "small",
-    "start": 94.586,
-    "end": 94.865
-  },
-  {
-    "text": "side",
-    "start": 94.935,
-    "end": 95.179
-  },
-  {
-    "text": "jobs",
-    "start": 95.213,
-    "end": 95.515
-  },
-  {
-    "text": "for",
-    "start": 95.573,
-    "end": 95.713
-  },
-  {
-    "text": "extra",
-    "start": 95.794,
-    "end": 96.107
-  },
-  {
-    "text": "cash.",
-    "start": 96.165,
-    "end": 96.769
-  },
-  {
-    "text": "\"Un",
-    "start": 97.338,
-    "end": 97.686
-  },
-  {
-    "text": "enllave\"",
-    "start": 97.744,
-    "end": 98.545
-  },
-  {
-    "text": "is",
-    "start": 98.743,
-    "end": 98.894
-  },
-  {
-    "text": "a",
-    "start": 98.952,
-    "end": 98.987
-  },
-  {
-    "text": "trusted",
-    "start": 99.056,
-    "end": 99.451
-  },
-  {
-    "text": "contact,",
-    "start": 99.509,
-    "end": 100.206
-  },
-  {
-    "text": "the",
-    "start": 100.403,
-    "end": 100.519
-  },
-  {
-    "text": "kind",
-    "start": 100.6,
-    "end": 100.821
-  },
-  {
-    "text": "of",
-    "start": 100.867,
-    "end": 100.937
-  },
-  {
-    "text": "person",
-    "start": 101.018,
-    "end": 101.332
-  },
-  {
-    "text": "who",
-    "start": 101.378,
-    "end": 101.471
-  },
-  {
-    "text": "can",
-    "start": 101.529,
-    "end": 101.657
-  },
-  {
-    "text": "connect",
-    "start": 101.727,
-    "end": 102.04
-  },
-  {
-    "text": "you",
-    "start": 102.075,
-    "end": 102.156
-  },
-  {
-    "text": "to",
-    "start": 102.214,
-    "end": 102.272
-  },
-  {
-    "text": "a",
-    "start": 102.354,
-    "end": 102.377
-  },
-  {
-    "text": "solution.",
-    "start": 102.412,
-    "end": 103.189
-  },
-  {
-    "text": "Boundary",
-    "start": 104.234,
-    "end": 104.675
-  },
-  {
-    "text": "phrases",
-    "start": 104.733,
-    "end": 105.314
-  },
-  {
-    "text": "are",
-    "start": 105.36,
-    "end": 105.534
-  },
-  {
-    "text": "powerful.",
-    "start": 105.569,
-    "end": 106.231
-  },
-  {
-    "text": "\"Sacar",
-    "start": 106.602,
-    "end": 107.183
-  },
-  {
-    "text": "los",
-    "start": 107.252,
-    "end": 107.427
-  },
-  {
-    "text": "pies\"",
-    "start": 107.485,
-    "end": 107.833
-  },
-  {
-    "text": "means",
-    "start": 107.891,
-    "end": 108.146
-  },
-  {
-    "text": "to",
-    "start": 108.193,
-    "end": 108.297
-  },
-  {
-    "text": "distance",
-    "start": 108.367,
-    "end": 108.75
-  },
-  {
-    "text": "yourself",
-    "start": 108.773,
-    "end": 109.133
-  },
-  {
-    "text": "or",
-    "start": 109.215,
-    "end": 109.331
-  },
-  {
-    "text": "abandon",
-    "start": 109.389,
-    "end": 109.772
-  },
-  {
-    "text": "someone.",
-    "start": 109.83,
-    "end": 110.422
-  },
-  {
-    "text": "\"Soltar",
-    "start": 110.666,
-    "end": 111.409
+    "text": "caer",
+    "start": 50.945,
+    "end": 51.282
   },
   {
     "text": "en",
-    "start": 111.49,
-    "end": 111.583
+    "start": 51.34,
+    "end": 51.387
   },
   {
-    "text": "banda\"",
-    "start": 111.653,
-    "end": 112.013
+    "text": "la",
+    "start": 51.456,
+    "end": 51.514
   },
   {
-    "text": "means",
-    "start": 112.059,
-    "end": 112.256
+    "text": "provocación",
+    "start": 51.572,
+    "end": 52.339
   },
   {
-    "text": "to",
-    "start": 112.303,
-    "end": 112.384
+    "text": "cuando",
+    "start": 52.42,
+    "end": 52.757
   },
   {
-    "text": "cut",
-    "start": 112.465,
-    "end": 112.674
+    "text": "alguien",
+    "start": 52.85,
+    "end": 53.209
   },
   {
-    "text": "someone",
-    "start": 112.721,
-    "end": 113.069
+    "text": "te",
+    "start": 53.268,
+    "end": 53.36
   },
   {
-    "text": "loose.",
-    "start": 113.116,
-    "end": 113.684
+    "text": "busca",
+    "start": 53.407,
+    "end": 53.744
   },
   {
-    "text": "\"Subir",
-    "start": 114.009,
-    "end": 114.671
+    "text": "la",
+    "start": 53.79,
+    "end": 53.86
   },
   {
-    "text": "los",
-    "start": 114.741,
-    "end": 114.915
+    "text": "reacción.",
+    "start": 53.929,
+    "end": 54.626
   },
   {
-    "text": "vidrios\"",
-    "start": 114.985,
-    "end": 115.693
+    "text": "Consejos",
+    "start": 55.439,
+    "end": 56.1
   },
   {
-    "text": "means",
-    "start": 115.763,
-    "end": 116.076
+    "text": "como",
+    "start": 56.17,
+    "end": 56.658
   },
   {
-    "text": "tuning",
-    "start": 116.123,
-    "end": 116.459
+    "text": "\"no",
+    "start": 56.751,
+    "end": 57.064
   },
   {
-    "text": "someone",
-    "start": 116.506,
-    "end": 116.773
+    "text": "cojas",
+    "start": 57.134,
+    "end": 57.482
   },
   {
-    "text": "out",
-    "start": 116.807,
-    "end": 116.935
+    "text": "lucha\"",
+    "start": 57.552,
+    "end": 58.132
   },
   {
-    "text": "completely.",
-    "start": 116.993,
-    "end": 117.771
+    "text": "y",
+    "start": 58.213,
+    "end": 58.329
   },
   {
-    "text": "These",
-    "start": 118.212,
-    "end": 118.421
+    "text": "\"no",
+    "start": 58.364,
+    "end": 58.55
   },
   {
-    "text": "are",
-    "start": 118.445,
-    "end": 118.561
+    "text": "cojas",
+    "start": 58.631,
+    "end": 59.003
   },
   {
-    "text": "not",
-    "start": 118.607,
-    "end": 118.746
+    "text": "cuerda\"",
+    "start": 59.061,
+    "end": 59.641
   },
   {
-    "text": "light",
-    "start": 118.828,
-    "end": 119.06
+    "text": "protegen",
+    "start": 59.711,
+    "end": 60.268
   },
   {
-    "text": "phrases;",
-    "start": 119.095,
-    "end": 119.838
+    "text": "tanto",
+    "start": 60.338,
+    "end": 60.651
   },
   {
-    "text": "they",
-    "start": 120.047,
-    "end": 120.21
+    "text": "tu",
+    "start": 60.71,
+    "end": 60.826
   },
   {
-    "text": "describe",
-    "start": 120.291,
-    "end": 120.744
+    "text": "paz",
+    "start": 60.919,
+    "end": 61.197
   },
   {
-    "text": "social",
-    "start": 120.79,
-    "end": 121.127
+    "text": "como",
+    "start": 61.267,
+    "end": 61.499
   },
   {
-    "text": "distance",
-    "start": 121.185,
-    "end": 121.556
+    "text": "tu",
+    "start": 61.557,
+    "end": 61.627
   },
   {
-    "text": "becoming",
-    "start": 121.591,
-    "end": 121.998
+    "text": "imagen.",
+    "start": 61.685,
+    "end": 62.323
   },
   {
-    "text": "real.",
-    "start": 122.067,
-    "end": 122.59
+    "text": "La",
+    "start": 62.927,
+    "end": 63.032
   },
   {
-    "text": "Finally,",
-    "start": 122.868,
-    "end": 123.507
+    "text": "forma",
+    "start": 63.09,
+    "end": 63.357
   },
   {
-    "text": "some",
-    "start": 123.542,
-    "end": 123.762
-  },
-  {
-    "text": "phrases",
-    "start": 123.797,
-    "end": 124.18
-  },
-  {
-    "text": "judge",
-    "start": 124.25,
-    "end": 124.494
-  },
-  {
-    "text": "behavior.",
-    "start": 124.54,
-    "end": 125.33
-  },
-  {
-    "text": "\"Pasarse",
-    "start": 125.573,
-    "end": 126.282
+    "text": "dominicana",
+    "start": 63.403,
+    "end": 64.134
   },
   {
     "text": "de",
-    "start": 126.34,
-    "end": 126.421
+    "start": 64.193,
+    "end": 64.262
   },
   {
-    "text": "contento\"",
-    "start": 126.479,
-    "end": 127.396
+    "text": "resolver",
+    "start": 64.332,
+    "end": 64.773
   },
   {
-    "text": "means",
-    "start": 127.605,
-    "end": 127.965
+    "text": "muchas",
+    "start": 64.843,
+    "end": 65.214
   },
   {
-    "text": "someone",
-    "start": 128.058,
-    "end": 128.441
+    "text": "veces",
+    "start": 65.272,
+    "end": 65.667
   },
   {
-    "text": "got",
-    "start": 128.476,
-    "end": 128.615
+    "text": "suena",
+    "start": 65.713,
+    "end": 66.015
   },
   {
-    "text": "carried",
-    "start": 128.673,
-    "end": 128.987
+    "text": "práctica.",
+    "start": 66.073,
+    "end": 66.793
   },
   {
-    "text": "away.",
-    "start": 129.033,
-    "end": 129.59
+    "text": "\"Resolver\"",
+    "start": 67.176,
+    "end": 68.093
   },
   {
-    "text": "\"Medalaganario\"",
-    "start": 129.974,
-    "end": 131.622
+    "text": "es",
+    "start": 68.221,
+    "end": 68.372
   },
   {
-    "text": "describes",
-    "start": 131.831,
-    "end": 132.539
+    "text": "hacer",
+    "start": 68.419,
+    "end": 68.651
   },
   {
-    "text": "arbitrary",
-    "start": 132.632,
-    "end": 133.248
+    "text": "que",
+    "start": 68.72,
+    "end": 68.825
   },
   {
-    "text": "behavior",
-    "start": 133.306,
-    "end": 133.828
+    "text": "algo",
+    "start": 68.895,
+    "end": 69.127
   },
   {
-    "text": "with",
-    "start": 133.909,
-    "end": 134.142
+    "text": "funcione,",
+    "start": 69.173,
+    "end": 69.893
+  },
+  {
+    "text": "y",
+    "start": 70.067,
+    "end": 70.346
+  },
+  {
+    "text": "\"buscarle",
+    "start": 70.416,
+    "end": 71.217
+  },
+  {
+    "text": "el",
+    "start": 71.263,
+    "end": 71.344
+  },
+  {
+    "text": "bajadero\"",
+    "start": 71.414,
+    "end": 72.145
+  },
+  {
+    "text": "es",
+    "start": 72.215,
+    "end": 72.366
+  },
+  {
+    "text": "encontrarle",
+    "start": 72.436,
+    "end": 73.086
+  },
+  {
+    "text": "una",
+    "start": 73.156,
+    "end": 73.318
+  },
+  {
+    "text": "salida",
+    "start": 73.376,
+    "end": 73.794
+  },
+  {
+    "text": "real",
+    "start": 73.887,
+    "end": 74.258
+  },
+  {
+    "text": "al",
+    "start": 74.317,
+    "end": 74.386
+  },
+  {
+    "text": "problema.",
+    "start": 74.456,
+    "end": 75.164
+  },
+  {
+    "text": "Si",
+    "start": 75.768,
+    "end": 75.942
+  },
+  {
+    "text": "alguien",
+    "start": 76.023,
+    "end": 76.383
+  },
+  {
+    "text": "dice",
+    "start": 76.441,
+    "end": 76.882
+  },
+  {
+    "text": "\"le",
+    "start": 76.998,
+    "end": 77.231
+  },
+  {
+    "text": "busco",
+    "start": 77.289,
+    "end": 77.66
+  },
+  {
+    "text": "el",
+    "start": 77.683,
+    "end": 77.73
+  },
+  {
+    "text": "bajadero\",",
+    "start": 77.788,
+    "end": 78.601
   },
   {
     "text": "no",
-    "start": 134.223,
-    "end": 134.42
+    "start": 78.81,
+    "end": 79.007
   },
   {
-    "text": "order",
-    "start": 134.513,
-    "end": 134.85
+    "text": "está",
+    "start": 79.053,
+    "end": 79.251
   },
   {
-    "text": "or",
-    "start": 134.931,
-    "end": 135.036
+    "text": "prometiendo",
+    "start": 79.309,
+    "end": 79.913
   },
   {
-    "text": "reason.",
-    "start": 135.105,
-    "end": 135.686
+    "text": "perfección;",
+    "start": 79.971,
+    "end": 80.783
   },
   {
-    "text": "\"Armar",
-    "start": 135.93,
-    "end": 136.533
+    "text": "está",
+    "start": 81.282,
+    "end": 81.526
+  },
+  {
+    "text": "prometiendo",
+    "start": 81.596,
+    "end": 82.258
+  },
+  {
+    "text": "moverse.",
+    "start": 82.327,
+    "end": 83.036
+  },
+  {
+    "text": "El",
+    "start": 83.477,
+    "end": 83.651
+  },
+  {
+    "text": "dinero",
+    "start": 83.697,
+    "end": 84.081
+  },
+  {
+    "text": "y",
+    "start": 84.104,
+    "end": 84.127
+  },
+  {
+    "text": "la",
+    "start": 84.173,
+    "end": 84.243
+  },
+  {
+    "text": "lealtad",
+    "start": 84.301,
+    "end": 84.893
+  },
+  {
+    "text": "tienen",
+    "start": 84.963,
+    "end": 85.3
+  },
+  {
+    "text": "su",
+    "start": 85.346,
+    "end": 85.45
+  },
+  {
+    "text": "propio",
+    "start": 85.509,
+    "end": 85.857
+  },
+  {
+    "text": "vocabulario.",
+    "start": 85.892,
+    "end": 86.774
+  },
+  {
+    "text": "\"Hacer",
+    "start": 88.051,
+    "end": 88.446
   },
   {
     "text": "un",
-    "start": 136.649,
-    "end": 136.754
+    "start": 88.516,
+    "end": 88.574
   },
   {
-    "text": "rebú\"",
-    "start": 136.847,
-    "end": 137.416
+    "text": "serrucho\"",
+    "start": 88.632,
+    "end": 89.409
   },
   {
-    "text": "means",
-    "start": 137.659,
-    "end": 138.066
+    "text": "significa",
+    "start": 89.584,
+    "end": 90.164
   },
   {
-    "text": "creating",
-    "start": 138.229,
-    "end": 138.797
+    "text": "que",
+    "start": 90.222,
+    "end": 90.303
+  },
+  {
+    "text": "varias",
+    "start": 90.35,
+    "end": 90.663
+  },
+  {
+    "text": "personas",
+    "start": 90.721,
+    "end": 91.221
+  },
+  {
+    "text": "ponen",
+    "start": 91.279,
+    "end": 91.581
+  },
+  {
+    "text": "dinero",
+    "start": 91.639,
+    "end": 92.033
+  },
+  {
+    "text": "entre",
+    "start": 92.068,
+    "end": 92.277
+  },
+  {
+    "text": "todos.",
+    "start": 92.335,
+    "end": 92.962
+  },
+  {
+    "text": "\"Boronear\"",
+    "start": 93.403,
+    "end": 94.367
+  },
+  {
+    "text": "o",
+    "start": 94.518,
+    "end": 94.727
+  },
+  {
+    "text": "\"andar",
+    "start": 94.797,
+    "end": 95.226
+  },
+  {
+    "text": "boroneando\"",
+    "start": 95.284,
+    "end": 96.19
+  },
+  {
+    "text": "es",
+    "start": 96.399,
+    "end": 96.561
+  },
+  {
+    "text": "hacer",
+    "start": 96.619,
+    "end": 96.851
+  },
+  {
+    "text": "trabajitos",
+    "start": 96.91,
+    "end": 97.629
+  },
+  {
+    "text": "para",
+    "start": 97.687,
+    "end": 97.862
+  },
+  {
+    "text": "conseguir",
+    "start": 97.908,
+    "end": 98.361
+  },
+  {
+    "text": "algo",
+    "start": 98.419,
+    "end": 98.628
+  },
+  {
+    "text": "de",
+    "start": 98.686,
+    "end": 98.756
+  },
+  {
+    "text": "efectivo.",
+    "start": 98.79,
+    "end": 99.545
+  },
+  {
+    "text": "\"Un",
+    "start": 99.986,
+    "end": 100.323
+  },
+  {
+    "text": "enllave\"",
+    "start": 100.393,
+    "end": 101.066
+  },
+  {
+    "text": "es",
+    "start": 101.124,
+    "end": 101.263
+  },
+  {
+    "text": "un",
+    "start": 101.356,
+    "end": 101.403
+  },
+  {
+    "text": "contacto",
+    "start": 101.461,
+    "end": 101.925
+  },
+  {
+    "text": "de",
+    "start": 101.983,
+    "end": 102.053
+  },
+  {
+    "text": "confianza,",
+    "start": 102.111,
+    "end": 102.935
+  },
+  {
+    "text": "alguien",
+    "start": 103.109,
+    "end": 103.446
+  },
+  {
+    "text": "que",
+    "start": 103.492,
+    "end": 103.562
+  },
+  {
+    "text": "te",
+    "start": 103.608,
+    "end": 103.69
+  },
+  {
+    "text": "puede",
+    "start": 103.736,
+    "end": 103.98
+  },
+  {
+    "text": "conectar",
+    "start": 104.026,
+    "end": 104.514
+  },
+  {
+    "text": "con",
+    "start": 104.572,
+    "end": 104.711
+  },
+  {
+    "text": "una",
+    "start": 104.793,
+    "end": 104.944
+  },
+  {
+    "text": "solución.",
+    "start": 105.002,
+    "end": 105.791
+  },
+  {
+    "text": "Las",
+    "start": 106.116,
+    "end": 106.279
+  },
+  {
+    "text": "frases",
+    "start": 106.337,
+    "end": 106.662
+  },
+  {
+    "text": "de",
+    "start": 106.708,
+    "end": 106.79
+  },
+  {
+    "text": "límite",
+    "start": 106.859,
+    "end": 107.37
+  },
+  {
+    "text": "son",
+    "start": 107.44,
+    "end": 107.637
+  },
+  {
+    "text": "poderosas.",
+    "start": 107.707,
+    "end": 108.659
+  },
+  {
+    "text": "\"Sacar",
+    "start": 109.042,
+    "end": 109.553
+  },
+  {
+    "text": "los",
+    "start": 109.599,
+    "end": 109.75
+  },
+  {
+    "text": "pies\"",
+    "start": 109.82,
+    "end": 110.296
+  },
+  {
+    "text": "significa",
+    "start": 110.342,
+    "end": 111.027
+  },
+  {
+    "text": "alejarse",
+    "start": 111.062,
+    "end": 111.817
+  },
+  {
+    "text": "o",
+    "start": 111.933,
+    "end": 112.049
+  },
+  {
+    "text": "dejar",
+    "start": 112.107,
+    "end": 112.444
   },
   {
     "text": "a",
-    "start": 138.855,
-    "end": 138.89
+    "start": 112.49,
+    "end": 112.513
   },
   {
-    "text": "messy",
-    "start": 138.972,
-    "end": 139.239
+    "text": "alguien",
+    "start": 112.595,
+    "end": 112.989
   },
   {
-    "text": "commotion.",
-    "start": 139.297,
-    "end": 140.063
+    "text": "solo.",
+    "start": 113.047,
+    "end": 113.558
   },
   {
-    "text": "At",
-    "start": 140.504,
-    "end": 140.69
+    "text": "\"Soltar",
+    "start": 113.999,
+    "end": 114.615
+  },
+  {
+    "text": "en",
+    "start": 114.673,
+    "end": 114.719
+  },
+  {
+    "text": "banda\"",
+    "start": 114.777,
+    "end": 115.276
+  },
+  {
+    "text": "es",
+    "start": 115.311,
+    "end": 115.462
+  },
+  {
+    "text": "cortar",
+    "start": 115.532,
+    "end": 115.927
+  },
+  {
+    "text": "con",
+    "start": 115.996,
+    "end": 116.182
+  },
+  {
+    "text": "alguien",
+    "start": 116.298,
+    "end": 116.693
+  },
+  {
+    "text": "o",
+    "start": 116.786,
+    "end": 116.879
+  },
+  {
+    "text": "dejar",
+    "start": 116.925,
+    "end": 117.227
+  },
+  {
+    "text": "de",
+    "start": 117.297,
+    "end": 117.355
+  },
+  {
+    "text": "bregar",
+    "start": 117.401,
+    "end": 117.749
+  },
+  {
+    "text": "con",
+    "start": 117.807,
+    "end": 117.947
+  },
+  {
+    "text": "esa",
+    "start": 118.005,
+    "end": 118.144
+  },
+  {
+    "text": "persona.",
+    "start": 118.214,
+    "end": 118.91
+  },
+  {
+    "text": "\"Subir",
+    "start": 119.235,
+    "end": 119.723
+  },
+  {
+    "text": "los",
+    "start": 119.781,
+    "end": 119.932
+  },
+  {
+    "text": "vidrios\"",
+    "start": 119.99,
+    "end": 120.641
+  },
+  {
+    "text": "es",
+    "start": 120.722,
+    "end": 120.861
+  },
+  {
+    "text": "ignorar",
+    "start": 120.954,
+    "end": 121.384
+  },
+  {
+    "text": "por",
+    "start": 121.442,
+    "end": 121.581
+  },
+  {
+    "text": "completo.",
+    "start": 121.639,
+    "end": 122.429
+  },
+  {
+    "text": "No",
+    "start": 123.032,
+    "end": 123.218
+  },
+  {
+    "text": "son",
+    "start": 123.276,
+    "end": 123.473
+  },
+  {
+    "text": "frases",
+    "start": 123.543,
+    "end": 123.903
+  },
+  {
+    "text": "ligeras;",
+    "start": 123.961,
+    "end": 124.623
+  },
+  {
+    "text": "describen",
+    "start": 124.785,
+    "end": 125.343
+  },
+  {
+    "text": "distancia",
+    "start": 125.378,
+    "end": 125.935
+  },
+  {
+    "text": "social",
+    "start": 125.981,
+    "end": 126.515
+  },
+  {
+    "text": "volviéndose",
+    "start": 126.573,
+    "end": 127.258
+  },
+  {
+    "text": "real.",
+    "start": 127.351,
+    "end": 127.897
+  },
+  {
+    "text": "Finalmente,",
+    "start": 128.686,
+    "end": 129.569
+  },
+  {
+    "text": "algunas",
+    "start": 129.638,
+    "end": 130.068
+  },
+  {
+    "text": "frases",
+    "start": 130.114,
+    "end": 130.521
+  },
+  {
+    "text": "juzgan",
+    "start": 130.59,
+    "end": 131.09
+  },
+  {
+    "text": "comportamientos.",
+    "start": 131.159,
+    "end": 132.332
+  },
+  {
+    "text": "\"Pasarse",
+    "start": 132.75,
+    "end": 133.33
+  },
+  {
+    "text": "de",
+    "start": 133.388,
+    "end": 133.47
+  },
+  {
+    "text": "contento\"",
+    "start": 133.539,
+    "end": 134.375
+  },
+  {
+    "text": "significa",
+    "start": 134.445,
+    "end": 135.06
+  },
+  {
+    "text": "que",
+    "start": 135.118,
+    "end": 135.223
+  },
+  {
+    "text": "alguien",
+    "start": 135.316,
+    "end": 135.629
+  },
+  {
+    "text": "se",
+    "start": 135.687,
+    "end": 135.757
+  },
+  {
+    "text": "emocionó",
+    "start": 135.78,
+    "end": 136.268
+  },
+  {
+    "text": "demasiado",
+    "start": 136.314,
+    "end": 136.953
+  },
+  {
+    "text": "y",
+    "start": 137.011,
+    "end": 137.046
+  },
+  {
+    "text": "cruzó",
+    "start": 137.104,
+    "end": 137.452
+  },
+  {
+    "text": "una",
+    "start": 137.522,
+    "end": 137.684
+  },
+  {
+    "text": "línea.",
+    "start": 137.742,
+    "end": 138.276
+  },
+  {
+    "text": "\"Medalaganario\"",
+    "start": 138.647,
+    "end": 140.017
+  },
+  {
+    "text": "describe",
+    "start": 140.168,
+    "end": 140.726
+  },
+  {
+    "text": "una",
+    "start": 140.819,
+    "end": 140.993
+  },
+  {
+    "text": "conducta",
+    "start": 141.051,
+    "end": 141.55
+  },
+  {
+    "text": "arbitraria,",
+    "start": 141.573,
+    "end": 142.386
+  },
+  {
+    "text": "sin",
+    "start": 142.514,
+    "end": 142.746
+  },
+  {
+    "text": "orden",
+    "start": 142.827,
+    "end": 143.117
+  },
+  {
+    "text": "ni",
+    "start": 143.141,
+    "end": 143.257
+  },
+  {
+    "text": "razón",
+    "start": 143.326,
+    "end": 143.675
+  },
+  {
+    "text": "clara.",
+    "start": 143.721,
+    "end": 144.232
+  },
+  {
+    "text": "\"Armar",
+    "start": 144.557,
+    "end": 145.137
+  },
+  {
+    "text": "un",
+    "start": 145.219,
+    "end": 145.277
+  },
+  {
+    "text": "rebú\"",
+    "start": 145.37,
+    "end": 145.846
+  },
+  {
+    "text": "es",
+    "start": 146.02,
+    "end": 146.206
+  },
+  {
+    "text": "crear",
+    "start": 146.252,
+    "end": 146.6
+  },
+  {
+    "text": "un",
+    "start": 146.682,
+    "end": 146.751
+  },
+  {
+    "text": "lío",
+    "start": 146.821,
+    "end": 147.216
+  },
+  {
+    "text": "o",
+    "start": 147.39,
+    "end": 147.541
+  },
+  {
+    "text": "una",
+    "start": 147.61,
+    "end": 147.796
+  },
+  {
+    "text": "conmoción.",
+    "start": 147.866,
+    "end": 148.737
+  },
+  {
+    "text": "En",
+    "start": 149.689,
+    "end": 149.851
   },
   {
     "text": "C1,",
-    "start": 140.748,
-    "end": 141.352
+    "start": 149.909,
+    "end": 150.443
   },
   {
-    "text": "the",
-    "start": 141.375,
-    "end": 141.468
+    "text": "la",
+    "start": 150.559,
+    "end": 150.675
   },
   {
-    "text": "goal",
-    "start": 141.526,
-    "end": 141.723
+    "text": "meta",
+    "start": 150.745,
+    "end": 151.059
   },
   {
-    "text": "is",
-    "start": 141.793,
-    "end": 141.897
+    "text": "no",
+    "start": 151.14,
+    "end": 151.267
   },
   {
-    "text": "not",
-    "start": 141.955,
-    "end": 142.129
+    "text": "es",
+    "start": 151.326,
+    "end": 151.395
   },
   {
-    "text": "to",
-    "start": 142.176,
-    "end": 142.234
+    "text": "usar",
+    "start": 151.465,
+    "end": 151.697
   },
   {
-    "text": "use",
-    "start": 142.315,
-    "end": 142.489
+    "text": "todo",
+    "start": 151.778,
+    "end": 152.103
   },
   {
-    "text": "every",
-    "start": 142.536,
-    "end": 142.78
+    "text": "en",
+    "start": 152.161,
+    "end": 152.22
   },
   {
-    "text": "phrase",
-    "start": 142.814,
-    "end": 143.093
+    "text": "todas",
+    "start": 152.278,
+    "end": 152.614
   },
   {
-    "text": "everywhere;",
-    "start": 143.14,
-    "end": 143.825
+    "text": "partes;",
+    "start": 152.672,
+    "end": 153.299
   },
   {
-    "text": "it",
-    "start": 144.103,
-    "end": 144.231
+    "text": "es",
+    "start": 153.508,
+    "end": 153.624
   },
   {
-    "text": "is",
-    "start": 144.277,
-    "end": 144.359
+    "text": "sentir",
+    "start": 153.648,
+    "end": 154.089
   },
   {
-    "text": "to",
-    "start": 144.417,
-    "end": 144.498
+    "text": "qué",
+    "start": 154.17,
+    "end": 154.286
   },
   {
-    "text": "feel",
-    "start": 144.579,
-    "end": 144.811
+    "text": "tan",
+    "start": 154.356,
+    "end": 154.507
   },
   {
-    "text": "how",
-    "start": 144.869,
-    "end": 145.02
+    "text": "fuerte",
+    "start": 154.576,
+    "end": 154.971
   },
   {
-    "text": "strong",
-    "start": 145.136,
-    "end": 145.671
+    "text": "suena",
+    "start": 155.041,
+    "end": 155.401
   },
   {
-    "text": "each",
-    "start": 145.752,
-    "end": 145.938
+    "text": "cada",
+    "start": 155.47,
+    "end": 155.749
   },
   {
-    "text": "phrase",
-    "start": 145.996,
-    "end": 146.332
-  },
-  {
-    "text": "is.",
-    "start": 146.39,
-    "end": 146.866
+    "text": "frase.",
+    "start": 155.807,
+    "end": 156.376
   }
 ]

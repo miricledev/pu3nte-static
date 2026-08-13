@@ -1,1412 +1,1342 @@
 [
   {
-    "text": "Making",
+    "text": "Hacer",
     "start": 0.046,
-    "end": 0.325
+    "end": 0.337
   },
   {
-    "text": "plans",
-    "start": 0.372,
-    "end": 0.685
-  },
-  {
-    "text": "with",
-    "start": 0.731,
-    "end": 0.882
-  },
-  {
-    "text": "friends",
-    "start": 0.952,
-    "end": 1.277
-  },
-  {
-    "text": "in",
-    "start": 1.335,
-    "end": 1.416
-  },
-  {
-    "text": "informal",
-    "start": 1.486,
-    "end": 1.834
-  },
-  {
-    "text": "Peruvian",
-    "start": 1.881,
-    "end": 2.183
-  },
-  {
-    "text": "Spanish",
-    "start": 2.229,
-    "end": 2.624
-  },
-  {
-    "text": "often",
-    "start": 2.74,
-    "end": 3.077
-  },
-  {
-    "text": "starts",
-    "start": 3.123,
-    "end": 3.425
-  },
-  {
-    "text": "lightly.",
-    "start": 3.506,
-    "end": 4.017
-  },
-  {
-    "text": "A",
-    "start": 4.4,
-    "end": 4.481
-  },
-  {
-    "text": "friend",
-    "start": 4.551,
-    "end": 4.737
-  },
-  {
-    "text": "might",
-    "start": 4.772,
-    "end": 4.934
-  },
-  {
-    "text": "say:",
-    "start": 4.969,
-    "end": 5.492
-  },
-  {
-    "text": "Habla,",
-    "start": 5.666,
-    "end": 6.084
-  },
-  {
-    "text": "causa.",
-    "start": 6.107,
-    "end": 6.618
-  },
-  {
-    "text": "¿Te",
-    "start": 6.943,
-    "end": 7.175
-  },
-  {
-    "text": "animas",
-    "start": 7.198,
-    "end": 7.454
-  },
-  {
-    "text": "este",
-    "start": 7.512,
-    "end": 7.639
-  },
-  {
-    "text": "sábado?",
-    "start": 7.674,
-    "end": 8.278
-  },
-  {
-    "text": "This",
-    "start": 8.882,
-    "end": 9.067
-  },
-  {
-    "text": "is",
-    "start": 9.125,
-    "end": 9.207
-  },
-  {
-    "text": "not",
-    "start": 9.276,
-    "end": 9.474
-  },
-  {
-    "text": "formal",
-    "start": 9.543,
-    "end": 9.868
-  },
-  {
-    "text": "Spanish.",
-    "start": 9.915,
-    "end": 10.588
-  },
-  {
-    "text": "It",
-    "start": 10.971,
-    "end": 11.111
-  },
-  {
-    "text": "sounds",
-    "start": 11.146,
-    "end": 11.378
-  },
-  {
-    "text": "friendly,",
-    "start": 11.436,
-    "end": 11.912
-  },
-  {
-    "text": "local,",
-    "start": 12.063,
-    "end": 12.492
-  },
-  {
-    "text": "and",
-    "start": 12.527,
-    "end": 12.62
-  },
-  {
-    "text": "relaxed.",
-    "start": 12.678,
-    "end": 13.363
-  },
-  {
-    "text": "If",
-    "start": 13.746,
-    "end": 13.886
-  },
-  {
-    "text": "the",
-    "start": 13.92,
-    "end": 13.99
-  },
-  {
-    "text": "plan",
-    "start": 14.025,
-    "end": 14.245
-  },
-  {
-    "text": "is",
-    "start": 14.303,
-    "end": 14.373
-  },
-  {
-    "text": "still",
-    "start": 14.396,
-    "end": 14.606
-  },
-  {
-    "text": "open,",
-    "start": 14.675,
-    "end": 15.117
-  },
-  {
-    "text": "de",
-    "start": 15.36,
-    "end": 15.639
-  },
-  {
-    "text": "repente",
-    "start": 15.709,
-    "end": 16.626
-  },
-  {
-    "text": "is",
-    "start": 16.951,
-    "end": 17.125
-  },
-  {
-    "text": "very",
-    "start": 17.195,
-    "end": 17.415
-  },
-  {
-    "text": "useful",
-    "start": 17.485,
-    "end": 17.81
-  },
-  {
-    "text": "because",
-    "start": 17.868,
-    "end": 18.182
-  },
-  {
-    "text": "it",
-    "start": 18.217,
-    "end": 18.286
-  },
-  {
-    "text": "means",
-    "start": 18.356,
-    "end": 18.646
-  },
-  {
-    "text": "maybe",
-    "start": 18.855,
-    "end": 19.598
-  },
-  {
-    "text": "in",
-    "start": 19.691,
-    "end": 19.807
-  },
-  {
-    "text": "this",
-    "start": 19.842,
-    "end": 19.97
-  },
-  {
-    "text": "context:",
-    "start": 20.028,
-    "end": 20.597
-  },
-  {
-    "text": "De",
-    "start": 20.771,
-    "end": 20.991
-  },
-  {
-    "text": "repente",
-    "start": 21.049,
-    "end": 21.363
-  },
-  {
-    "text": "podríamos",
-    "start": 21.398,
-    "end": 21.827
-  },
-  {
-    "text": "caer",
-    "start": 21.874,
-    "end": 22.094
-  },
-  {
-    "text": "a",
-    "start": 22.141,
-    "end": 22.164
-  },
-  {
-    "text": "mi",
-    "start": 22.21,
-    "end": 22.292
-  },
-  {
-    "text": "jato.",
-    "start": 22.338,
-    "end": 22.814
-  },
-  {
-    "text": "The",
-    "start": 23.197,
-    "end": 23.313
-  },
-  {
-    "text": "invitation",
-    "start": 23.36,
-    "end": 23.836
-  },
-  {
-    "text": "can",
-    "start": 23.894,
-    "end": 24.033
-  },
-  {
-    "text": "be",
-    "start": 24.091,
-    "end": 24.184
-  },
-  {
-    "text": "simple:",
-    "start": 24.23,
-    "end": 24.73
-  },
-  {
-    "text": "¿Te",
-    "start": 25.008,
-    "end": 25.299
-  },
-  {
-    "text": "animas",
-    "start": 25.322,
-    "end": 25.659
-  },
-  {
-    "text": "a",
-    "start": 25.728,
-    "end": 25.751
-  },
-  {
-    "text": "tomar",
-    "start": 25.809,
-    "end": 26.088
-  },
-  {
-    "text": "unas",
-    "start": 26.146,
-    "end": 26.355
-  },
-  {
-    "text": "chelas?",
-    "start": 26.436,
-    "end": 27.121
-  },
-  {
-    "text": "or",
-    "start": 27.446,
-    "end": 27.783
-  },
-  {
-    "text": "¿Te",
-    "start": 28.062,
-    "end": 28.41
-  },
-  {
-    "text": "animas",
-    "start": 28.433,
-    "end": 28.7
-  },
-  {
-    "text": "a",
-    "start": 28.758,
-    "end": 28.782
-  },
-  {
-    "text": "caer",
-    "start": 28.816,
-    "end": 29.014
-  },
-  {
-    "text": "a",
-    "start": 29.049,
-    "end": 29.072
-  },
-  {
-    "text": "mi",
-    "start": 29.118,
-    "end": 29.188
-  },
-  {
-    "text": "jato",
-    "start": 29.234,
-    "end": 29.455
+    "text": "planes",
+    "start": 0.453,
+    "end": 0.894
   },
   {
     "text": "con",
-    "start": 29.501,
-    "end": 29.606
+    "start": 0.975,
+    "end": 1.138
   },
   {
-    "text": "unos",
-    "start": 29.664,
-    "end": 29.85
+    "text": "amigos",
+    "start": 1.207,
+    "end": 1.649
   },
   {
-    "text": "patas?",
-    "start": 29.919,
-    "end": 30.616
+    "text": "en",
+    "start": 1.718,
+    "end": 1.776
   },
   {
-    "text": "These",
-    "start": 31.057,
-    "end": 31.278
+    "text": "español",
+    "start": 1.846,
+    "end": 2.403
   },
   {
-    "text": "phrases",
-    "start": 31.301,
-    "end": 31.754
+    "text": "peruano",
+    "start": 2.635,
+    "end": 3.274
   },
   {
-    "text": "are",
-    "start": 31.835,
-    "end": 31.974
+    "text": "informal",
+    "start": 3.332,
+    "end": 3.878
   },
   {
-    "text": "useful",
-    "start": 32.091,
-    "end": 32.462
+    "text": "suele",
+    "start": 4.203,
+    "end": 4.505
   },
   {
-    "text": "with",
-    "start": 32.52,
-    "end": 32.671
+    "text": "empezar",
+    "start": 4.54,
+    "end": 5.004
   },
   {
-    "text": "friends,",
-    "start": 32.752,
-    "end": 33.321
+    "text": "suave.",
+    "start": 5.074,
+    "end": 5.7
   },
   {
-    "text": "but",
-    "start": 33.565,
-    "end": 33.774
+    "text": "Un",
+    "start": 5.968,
+    "end": 6.142
   },
   {
-    "text": "they",
-    "start": 33.809,
-    "end": 33.948
+    "text": "amigo",
+    "start": 6.2,
+    "end": 6.594
   },
   {
-    "text": "are",
-    "start": 33.983,
-    "end": 34.087
+    "text": "puede",
+    "start": 6.676,
+    "end": 6.931
   },
   {
-    "text": "informal.",
-    "start": 34.134,
-    "end": 34.9
+    "text": "decir:",
+    "start": 6.978,
+    "end": 7.593
   },
   {
-    "text": "Chela,",
-    "start": 35.225,
-    "end": 36.026
+    "text": "\"Habla,",
+    "start": 7.825,
+    "end": 8.615
   },
   {
-    "text": "jato,",
-    "start": 36.305,
-    "end": 37.245
+    "text": "causa.",
+    "start": 8.766,
+    "end": 9.555
   },
   {
-    "text": "and",
-    "start": 37.327,
-    "end": 37.501
+    "text": "¿Te",
+    "start": 9.88,
+    "end": 10.147
   },
   {
-    "text": "pata",
-    "start": 37.536,
-    "end": 38.197
-  },
-  {
-    "text": "are",
-    "start": 38.581,
-    "end": 38.778
-  },
-  {
-    "text": "not",
-    "start": 38.813,
-    "end": 38.952
-  },
-  {
-    "text": "the",
-    "start": 38.987,
-    "end": 39.057
-  },
-  {
-    "text": "words",
-    "start": 39.103,
-    "end": 39.289
-  },
-  {
-    "text": "you",
-    "start": 39.324,
-    "end": 39.393
-  },
-  {
-    "text": "choose",
-    "start": 39.463,
-    "end": 39.718
-  },
-  {
-    "text": "in",
-    "start": 39.742,
-    "end": 39.8
-  },
-  {
-    "text": "a",
-    "start": 39.846,
-    "end": 39.869
-  },
-  {
-    "text": "formal",
-    "start": 39.916,
-    "end": 40.183
-  },
-  {
-    "text": "meeting.",
-    "start": 40.218,
-    "end": 40.705
-  },
-  {
-    "text": "To",
-    "start": 41.088,
-    "end": 41.239
-  },
-  {
-    "text": "accept,",
-    "start": 41.309,
-    "end": 41.982
-  },
-  {
-    "text": "you",
-    "start": 42.226,
-    "end": 42.331
-  },
-  {
-    "text": "can",
-    "start": 42.365,
-    "end": 42.481
-  },
-  {
-    "text": "sound",
-    "start": 42.528,
-    "end": 42.725
-  },
-  {
-    "text": "natural",
-    "start": 42.783,
-    "end": 43.132
-  },
-  {
-    "text": "without",
-    "start": 43.178,
-    "end": 43.445
-  },
-  {
-    "text": "saying",
-    "start": 43.48,
-    "end": 43.712
-  },
-  {
-    "text": "too",
-    "start": 43.759,
-    "end": 43.898
-  },
-  {
-    "text": "much:",
-    "start": 43.968,
-    "end": 44.409
-  },
-  {
-    "text": "Ya",
-    "start": 44.687,
-    "end": 45.024
-  },
-  {
-    "text": "pe,",
-    "start": 45.082,
-    "end": 45.593
-  },
-  {
-    "text": "bacán.",
-    "start": 45.767,
-    "end": 46.417
-  },
-  {
-    "text": "Caigo",
-    "start": 46.696,
-    "end": 47.009
-  },
-  {
-    "text": "a",
-    "start": 47.033,
-    "end": 47.056
-  },
-  {
-    "text": "tu",
-    "start": 47.091,
-    "end": 47.172
-  },
-  {
-    "text": "jato.",
-    "start": 47.207,
-    "end": 47.671
-  },
-  {
-    "text": "If",
-    "start": 48.112,
-    "end": 48.24
-  },
-  {
-    "text": "you",
-    "start": 48.275,
-    "end": 48.344
-  },
-  {
-    "text": "are",
-    "start": 48.379,
-    "end": 48.472
-  },
-  {
-    "text": "not",
-    "start": 48.519,
-    "end": 48.635
-  },
-  {
-    "text": "sure",
-    "start": 48.681,
-    "end": 48.913
-  },
-  {
-    "text": "yet,",
-    "start": 48.971,
-    "end": 49.331
-  },
-  {
-    "text": "te",
-    "start": 49.54,
-    "end": 49.819
-  },
-  {
-    "text": "paso",
-    "start": 49.935,
-    "end": 50.295
-  },
-  {
-    "text": "la",
-    "start": 50.353,
-    "end": 50.434
-  },
-  {
-    "text": "voz",
-    "start": 50.492,
-    "end": 50.69
-  },
-  {
-    "text": "al",
-    "start": 50.748,
-    "end": 50.829
-  },
-  {
-    "text": "toque",
-    "start": 50.922,
-    "end": 51.456
-  },
-  {
-    "text": "keeps",
-    "start": 51.781,
-    "end": 52.036
-  },
-  {
-    "text": "the",
-    "start": 52.06,
-    "end": 52.129
-  },
-  {
-    "text": "plan",
-    "start": 52.176,
-    "end": 52.431
-  },
-  {
-    "text": "open.",
-    "start": 52.489,
-    "end": 52.977
-  },
-  {
-    "text": "It",
-    "start": 53.255,
-    "end": 53.43
-  },
-  {
-    "text": "means",
-    "start": 53.476,
-    "end": 53.697
-  },
-  {
-    "text": "you",
-    "start": 53.731,
-    "end": 53.801
-  },
-  {
-    "text": "will",
-    "start": 53.836,
-    "end": 53.952
-  },
-  {
-    "text": "give",
-    "start": 53.987,
-    "end": 54.126
-  },
-  {
-    "text": "the",
-    "start": 54.149,
-    "end": 54.219
-  },
-  {
-    "text": "other",
-    "start": 54.254,
-    "end": 54.428
-  },
-  {
-    "text": "person",
-    "start": 54.498,
-    "end": 54.811
-  },
-  {
-    "text": "a",
-    "start": 54.869,
-    "end": 54.892
-  },
-  {
-    "text": "quick",
-    "start": 54.962,
-    "end": 55.159
-  },
-  {
-    "text": "heads-up.",
-    "start": 55.206,
-    "end": 55.856
-  },
-  {
-    "text": "A",
-    "start": 56.135,
-    "end": 56.216
-  },
-  {
-    "text": "soft",
-    "start": 56.297,
-    "end": 56.529
-  },
-  {
-    "text": "refusal",
-    "start": 56.576,
-    "end": 57.11
-  },
-  {
-    "text": "is",
-    "start": 57.18,
-    "end": 57.273
-  },
-  {
-    "text": "just",
-    "start": 57.354,
-    "end": 57.54
-  },
-  {
-    "text": "as",
-    "start": 57.586,
-    "end": 57.656
-  },
-  {
-    "text": "important",
-    "start": 57.714,
-    "end": 58.178
-  },
-  {
-    "text": "as",
-    "start": 58.225,
-    "end": 58.306
-  },
-  {
-    "text": "an",
-    "start": 58.352,
-    "end": 58.41
-  },
-  {
-    "text": "invitation.",
-    "start": 58.457,
-    "end": 59.2
-  },
-  {
-    "text": "Pucha,",
-    "start": 59.896,
-    "end": 60.883
+    "text": "animas",
+    "start": 10.17,
+    "end": 10.472
   },
   {
     "text": "este",
-    "start": 60.976,
-    "end": 61.29
+    "start": 10.542,
+    "end": 10.728
   },
   {
-    "text": "sábado",
-    "start": 61.382,
-    "end": 61.905
+    "text": "sábado?\"",
+    "start": 10.774,
+    "end": 11.447
   },
   {
-    "text": "se",
-    "start": 61.986,
-    "end": 62.079
+    "text": "No",
+    "start": 12.051,
+    "end": 12.179
   },
   {
-    "text": "me",
-    "start": 62.16,
-    "end": 62.242
+    "text": "suena",
+    "start": 12.225,
+    "end": 12.458
   },
   {
-    "text": "complica",
-    "start": 62.323,
-    "end": 62.891
+    "text": "formal;",
+    "start": 12.527,
+    "end": 13.247
   },
   {
-    "text": "porque",
-    "start": 62.973,
-    "end": 63.344
+    "text": "suena",
+    "start": 13.526,
+    "end": 13.781
   },
   {
-    "text": "tengo",
-    "start": 63.46,
-    "end": 64.122
+    "text": "cercano,",
+    "start": 13.816,
+    "end": 14.71
   },
   {
-    "text": "chamba",
-    "start": 64.563,
-    "end": 65.469
+    "text": "local",
+    "start": 14.768,
+    "end": 15.43
   },
   {
-    "text": "sounds",
-    "start": 65.91,
-    "end": 66.247
+    "text": "y",
+    "start": 15.499,
+    "end": 15.523
   },
   {
-    "text": "honest",
-    "start": 66.305,
-    "end": 66.665
-  },
-  {
-    "text": "but",
-    "start": 66.734,
-    "end": 66.92
-  },
-  {
-    "text": "not",
-    "start": 66.99,
-    "end": 67.175
-  },
-  {
-    "text": "rude.",
-    "start": 67.245,
-    "end": 67.756
-  },
-  {
-    "text": "Then",
-    "start": 68,
-    "end": 68.29
-  },
-  {
-    "text": "you",
-    "start": 68.371,
-    "end": 68.476
-  },
-  {
-    "text": "can",
-    "start": 68.522,
-    "end": 68.661
-  },
-  {
-    "text": "add",
-    "start": 68.719,
-    "end": 68.882
-  },
-  {
-    "text": "an",
-    "start": 68.917,
-    "end": 68.975
-  },
-  {
-    "text": "alternative:",
-    "start": 69.01,
-    "end": 69.788
-  },
-  {
-    "text": "pero",
-    "start": 69.904,
-    "end": 70.426
-  },
-  {
-    "text": "de",
-    "start": 70.484,
-    "end": 70.565
-  },
-  {
-    "text": "repente",
-    "start": 70.635,
-    "end": 71.239
-  },
-  {
-    "text": "podría",
-    "start": 71.309,
-    "end": 71.657
-  },
-  {
-    "text": "caer",
-    "start": 71.715,
-    "end": 71.97
-  },
-  {
-    "text": "más",
-    "start": 72.04,
-    "end": 72.202
-  },
-  {
-    "text": "tarde.",
-    "start": 72.272,
-    "end": 72.887
-  },
-  {
-    "text": "This",
-    "start": 73.329,
-    "end": 73.549
-  },
-  {
-    "text": "keeps",
-    "start": 73.619,
-    "end": 73.886
-  },
-  {
-    "text": "the",
-    "start": 73.921,
-    "end": 74.002
-  },
-  {
-    "text": "relationship",
-    "start": 74.06,
-    "end": 74.699
-  },
-  {
-    "text": "warm.",
-    "start": 74.78,
-    "end": 75.372
-  },
-  {
-    "text": "If",
-    "start": 75.651,
-    "end": 75.836
-  },
-  {
-    "text": "the",
-    "start": 75.894,
-    "end": 75.987
-  },
-  {
-    "text": "place",
-    "start": 76.057,
-    "end": 76.44
-  },
-  {
-    "text": "is",
-    "start": 76.487,
-    "end": 76.614
-  },
-  {
-    "text": "still",
-    "start": 76.649,
-    "end": 77.009
-  },
-  {
-    "text": "undecided,",
-    "start": 77.183,
-    "end": 78.089
-  },
-  {
-    "text": "one",
-    "start": 78.472,
-    "end": 78.762
-  },
-  {
-    "text": "friend",
-    "start": 78.832,
-    "end": 79.11
-  },
-  {
-    "text": "might",
-    "start": 79.18,
-    "end": 79.389
-  },
-  {
-    "text": "ask:",
-    "start": 79.435,
-    "end": 79.923
-  },
-  {
-    "text": "¿Manyas",
-    "start": 80.074,
-    "end": 80.805
-  },
-  {
-    "text": "ese",
-    "start": 80.887,
-    "end": 81.015
-  },
-  {
-    "text": "lugar?",
-    "start": 81.05,
-    "end": 81.607
-  },
-  {
-    "text": "Then",
-    "start": 82.118,
-    "end": 82.338
-  },
-  {
-    "text": "the",
-    "start": 82.385,
-    "end": 82.454
-  },
-  {
-    "text": "suggestion",
-    "start": 82.501,
-    "end": 83.139
-  },
-  {
-    "text": "can",
-    "start": 83.383,
-    "end": 83.581
-  },
-  {
-    "text": "become",
-    "start": 83.639,
-    "end": 84.091
-  },
-  {
-    "text": "more",
-    "start": 84.3,
-    "end": 84.556
-  },
-  {
-    "text": "collaborative:",
-    "start": 84.591,
-    "end": 85.357
-  },
-  {
-    "text": "¿Qué",
-    "start": 85.682,
-    "end": 85.926
-  },
-  {
-    "text": "te",
-    "start": 85.961,
-    "end": 86.019
-  },
-  {
-    "text": "parece",
-    "start": 86.065,
-    "end": 86.344
-  },
-  {
-    "text": "si",
-    "start": 86.379,
-    "end": 86.448
-  },
-  {
-    "text": "quedamos",
-    "start": 86.495,
-    "end": 86.797
-  },
-  {
-    "text": "ahí",
-    "start": 86.855,
-    "end": 86.982
-  },
-  {
-    "text": "más",
-    "start": 87.04,
-    "end": 87.168
-  },
-  {
-    "text": "tarde?",
-    "start": 87.226,
-    "end": 87.807
-  },
-  {
-    "text": "This",
-    "start": 88.318,
-    "end": 88.515
-  },
-  {
-    "text": "is",
-    "start": 88.573,
-    "end": 88.654
-  },
-  {
-    "text": "clearer",
-    "start": 88.724,
-    "end": 89.072
-  },
-  {
-    "text": "than",
-    "start": 89.119,
-    "end": 89.246
-  },
-  {
-    "text": "only",
-    "start": 89.304,
-    "end": 89.49
-  },
-  {
-    "text": "saying",
-    "start": 89.548,
-    "end": 89.838
-  },
-  {
-    "text": "vamos,",
-    "start": 90.047,
-    "end": 91.034
-  },
-  {
-    "text": "because",
-    "start": 91.359,
-    "end": 91.696
-  },
-  {
-    "text": "it",
-    "start": 91.731,
-    "end": 91.8
-  },
-  {
-    "text": "gives",
-    "start": 91.859,
-    "end": 92.114
-  },
-  {
-    "text": "a",
-    "start": 92.172,
-    "end": 92.207
-  },
-  {
-    "text": "place",
-    "start": 92.3,
-    "end": 92.683
-  },
-  {
-    "text": "and",
-    "start": 92.718,
-    "end": 92.799
-  },
-  {
-    "text": "a",
-    "start": 92.845,
-    "end": 92.869
-  },
-  {
-    "text": "time.",
-    "start": 92.938,
-    "end": 93.53
-  },
-  {
-    "text": "The",
-    "start": 93.914,
-    "end": 94.053
-  },
-  {
-    "text": "safest",
-    "start": 94.111,
-    "end": 94.494
-  },
-  {
-    "text": "phrase",
-    "start": 94.54,
-    "end": 94.9
-  },
-  {
-    "text": "for",
-    "start": 94.958,
-    "end": 95.098
-  },
-  {
-    "text": "low",
-    "start": 95.167,
-    "end": 95.307
-  },
-  {
-    "text": "pressure",
-    "start": 95.376,
-    "end": 95.771
-  },
-  {
-    "text": "is",
-    "start": 95.829,
-    "end": 95.992
+    "text": "relajado.",
+    "start": 15.604,
+    "end": 16.486
   },
   {
     "text": "Si",
-    "start": 96.166,
-    "end": 96.444
+    "start": 16.997,
+    "end": 17.113
   },
   {
-    "text": "no,",
-    "start": 96.514,
-    "end": 96.979
-  },
-  {
-    "text": "normal",
-    "start": 97.188,
-    "end": 97.49
-  },
-  {
-    "text": "nomás;",
-    "start": 97.536,
-    "end": 98.082
-  },
-  {
-    "text": "quedamos",
-    "start": 98.465,
-    "end": 99.034
-  },
-  {
-    "text": "otro",
-    "start": 99.208,
-    "end": 99.475
-  },
-  {
-    "text": "día.",
-    "start": 99.51,
-    "end": 100.032
-  },
-  {
-    "text": "It",
-    "start": 100.636,
-    "end": 100.787
-  },
-  {
-    "text": "tells",
-    "start": 100.81,
-    "end": 101.008
-  },
-  {
-    "text": "your",
-    "start": 101.042,
-    "end": 101.159
-  },
-  {
-    "text": "friend",
-    "start": 101.217,
-    "end": 101.53
-  },
-  {
-    "text": "that",
-    "start": 101.646,
-    "end": 101.948
-  },
-  {
-    "text": "the",
-    "start": 102.018,
-    "end": 102.111
+    "text": "el",
+    "start": 17.148,
+    "end": 17.194
   },
   {
     "text": "plan",
-    "start": 102.157,
-    "end": 102.575
+    "start": 17.241,
+    "end": 17.438
   },
   {
-    "text": "is",
-    "start": 102.726,
-    "end": 103.097
+    "text": "todavía",
+    "start": 17.485,
+    "end": 17.856
   },
   {
-    "text": "not",
-    "start": 103.272,
-    "end": 103.608
+    "text": "no",
+    "start": 17.914,
+    "end": 17.984
   },
   {
-    "text": "an",
-    "start": 103.666,
-    "end": 103.782
+    "text": "está",
+    "start": 18.007,
+    "end": 18.193
   },
   {
-    "text": "obligation.",
-    "start": 103.84,
-    "end": 104.642
+    "text": "fijo,",
+    "start": 18.262,
+    "end": 18.588
   },
   {
-    "text": "In",
-    "start": 105.083,
-    "end": 105.234
+    "text": "\"de",
+    "start": 18.611,
+    "end": 18.704
   },
   {
-    "text": "real",
-    "start": 105.28,
-    "end": 105.443
+    "text": "repente\"",
+    "start": 18.762,
+    "end": 19.261
   },
   {
-    "text": "conversations,",
-    "start": 105.489,
-    "end": 106.383
+    "text": "sirve",
+    "start": 19.284,
+    "end": 19.54
   },
   {
-    "text": "that",
-    "start": 106.464,
-    "end": 106.673
+    "text": "mucho",
+    "start": 19.598,
+    "end": 19.9
   },
   {
-    "text": "tone",
-    "start": 106.708,
+    "text": "porque",
+    "start": 19.958,
+    "end": 20.225
+  },
+  {
+    "text": "en",
+    "start": 20.271,
+    "end": 20.341
+  },
+  {
+    "text": "este",
+    "start": 20.399,
+    "end": 20.573
+  },
+  {
+    "text": "contexto",
+    "start": 20.631,
+    "end": 21.177
+  },
+  {
+    "text": "significa",
+    "start": 21.235,
+    "end": 21.722
+  },
+  {
+    "text": "quizás:",
+    "start": 21.769,
+    "end": 22.419
+  },
+  {
+    "text": "\"De",
+    "start": 22.744,
+    "end": 23.023
+  },
+  {
+    "text": "repente",
+    "start": 23.081,
+    "end": 23.58
+  },
+  {
+    "text": "podríamos",
+    "start": 23.65,
+    "end": 24.161
+  },
+  {
+    "text": "caer",
+    "start": 24.23,
+    "end": 24.52
+  },
+  {
+    "text": "a",
+    "start": 24.578,
+    "end": 24.602
+  },
+  {
+    "text": "mi",
+    "start": 24.66,
+    "end": 24.776
+  },
+  {
+    "text": "jato.\"",
+    "start": 24.834,
+    "end": 25.774
+  },
+  {
+    "text": "La",
+    "start": 26.378,
+    "end": 26.483
+  },
+  {
+    "text": "invitación",
+    "start": 26.506,
+    "end": 26.959
+  },
+  {
+    "text": "puede",
+    "start": 26.993,
+    "end": 27.144
+  },
+  {
+    "text": "ser",
+    "start": 27.179,
+    "end": 27.33
+  },
+  {
+    "text": "simple:",
+    "start": 27.376,
+    "end": 27.887
+  },
+  {
+    "text": "\"¿Te",
+    "start": 28.096,
+    "end": 28.294
+  },
+  {
+    "text": "animas",
+    "start": 28.317,
+    "end": 28.619
+  },
+  {
+    "text": "a",
+    "start": 28.688,
+    "end": 28.712
+  },
+  {
+    "text": "tomar",
+    "start": 28.758,
+    "end": 29.06
+  },
+  {
+    "text": "unas",
+    "start": 29.106,
+    "end": 29.35
+  },
+  {
+    "text": "chelas?\"",
+    "start": 29.431,
+    "end": 30.581
+  },
+  {
+    "text": "o",
+    "start": 31.022,
+    "end": 31.092
+  },
+  {
+    "text": "\"¿Te",
+    "start": 31.126,
+    "end": 31.266
+  },
+  {
+    "text": "animas",
+    "start": 31.301,
+    "end": 31.765
+  },
+  {
+    "text": "a",
+    "start": 31.846,
+    "end": 31.881
+  },
+  {
+    "text": "caer",
+    "start": 31.951,
+    "end": 32.346
+  },
+  {
+    "text": "a",
+    "start": 32.462,
+    "end": 32.578
+  },
+  {
+    "text": "mi",
+    "start": 32.647,
+    "end": 32.752
+  },
+  {
+    "text": "jato",
+    "start": 32.798,
+    "end": 33.1
+  },
+  {
+    "text": "con",
+    "start": 33.158,
+    "end": 33.286
+  },
+  {
+    "text": "unos",
+    "start": 33.344,
+    "end": 33.541
+  },
+  {
+    "text": "patas?\"",
+    "start": 33.634,
+    "end": 34.459
+  },
+  {
+    "text": "Son",
+    "start": 34.9,
+    "end": 35.097
+  },
+  {
+    "text": "frases",
+    "start": 35.144,
+    "end": 35.457
+  },
+  {
+    "text": "útiles",
+    "start": 35.527,
+    "end": 35.852
+  },
+  {
+    "text": "con",
+    "start": 35.898,
+    "end": 36.003
+  },
+  {
+    "text": "amigos,",
+    "start": 36.073,
+    "end": 36.421
+  },
+  {
+    "text": "pero",
+    "start": 36.444,
+    "end": 36.607
+  },
+  {
+    "text": "son",
+    "start": 36.641,
+    "end": 36.758
+  },
+  {
+    "text": "informales.",
+    "start": 36.827,
+    "end": 37.617
+  },
+  {
+    "text": "\"Chela\",",
+    "start": 37.942,
+    "end": 38.696
+  },
+  {
+    "text": "\"jato\"",
+    "start": 38.731,
+    "end": 39.358
+  },
+  {
+    "text": "y",
+    "start": 39.428,
+    "end": 39.637
+  },
+  {
+    "text": "\"pata\"",
+    "start": 39.753,
+    "end": 40.775
+  },
+  {
+    "text": "no",
+    "start": 41.587,
+    "end": 41.703
+  },
+  {
+    "text": "son",
+    "start": 41.75,
+    "end": 41.866
+  },
+  {
+    "text": "palabras",
+    "start": 41.924,
+    "end": 42.388
+  },
+  {
+    "text": "para",
+    "start": 42.47,
+    "end": 42.702
+  },
+  {
+    "text": "una",
+    "start": 42.795,
+    "end": 42.992
+  },
+  {
+    "text": "reunión",
+    "start": 43.073,
+    "end": 43.468
+  },
+  {
+    "text": "formal.",
+    "start": 43.538,
+    "end": 44.072
+  },
+  {
+    "text": "Para",
+    "start": 44.513,
+    "end": 44.757
+  },
+  {
+    "text": "aceptar,",
+    "start": 44.78,
+    "end": 45.291
+  },
+  {
+    "text": "puedes",
+    "start": 45.314,
+    "end": 45.511
+  },
+  {
+    "text": "sonar",
+    "start": 45.535,
+    "end": 45.813
+  },
+  {
+    "text": "natural",
+    "start": 45.871,
+    "end": 46.254
+  },
+  {
+    "text": "sin",
+    "start": 46.313,
+    "end": 46.44
+  },
+  {
+    "text": "decir",
+    "start": 46.475,
+    "end": 46.719
+  },
+  {
+    "text": "demasiado:",
+    "start": 46.777,
+    "end": 47.566
+  },
+  {
+    "text": "\"Ya",
+    "start": 48.008,
+    "end": 48.542
+  },
+  {
+    "text": "pe,",
+    "start": 48.658,
+    "end": 49.111
+  },
+  {
+    "text": "bacán.",
+    "start": 49.18,
+    "end": 49.946
+  },
+  {
+    "text": "Caigo",
+    "start": 50.33,
+    "end": 50.62
+  },
+  {
+    "text": "a",
+    "start": 50.655,
+    "end": 50.678
+  },
+  {
+    "text": "tu",
+    "start": 50.724,
+    "end": 50.817
+  },
+  {
+    "text": "jato.\"",
+    "start": 50.864,
+    "end": 51.467
+  },
+  {
+    "text": "Si",
+    "start": 51.909,
+    "end": 52.036
+  },
+  {
+    "text": "todavía",
+    "start": 52.083,
+    "end": 52.419
+  },
+  {
+    "text": "no",
+    "start": 52.466,
+    "end": 52.535
+  },
+  {
+    "text": "estás",
+    "start": 52.559,
+    "end": 52.756
+  },
+  {
+    "text": "seguro,",
+    "start": 52.779,
+    "end": 53.255
+  },
+  {
+    "text": "\"te",
+    "start": 53.279,
+    "end": 53.534
+  },
+  {
+    "text": "paso",
+    "start": 53.592,
+    "end": 53.812
+  },
+  {
+    "text": "la",
+    "start": 53.871,
+    "end": 53.929
+  },
+  {
+    "text": "voz",
+    "start": 53.963,
+    "end": 54.091
+  },
+  {
+    "text": "al",
+    "start": 54.149,
+    "end": 54.207
+  },
+  {
+    "text": "toque\"",
+    "start": 54.277,
+    "end": 54.753
+  },
+  {
+    "text": "deja",
+    "start": 55.136,
+    "end": 55.368
+  },
+  {
+    "text": "el",
+    "start": 55.391,
+    "end": 55.438
+  },
+  {
+    "text": "plan",
+    "start": 55.496,
+    "end": 55.682
+  },
+  {
+    "text": "abierto.",
+    "start": 55.74,
+    "end": 56.309
+  },
+  {
+    "text": "Significa",
+    "start": 56.692,
+    "end": 57.226
+  },
+  {
+    "text": "que",
+    "start": 57.284,
+    "end": 57.365
+  },
+  {
+    "text": "vas",
+    "start": 57.412,
+    "end": 57.574
+  },
+  {
+    "text": "a",
+    "start": 57.644,
+    "end": 57.667
+  },
+  {
+    "text": "avisar",
+    "start": 57.69,
+    "end": 58.085
+  },
+  {
+    "text": "rápido",
+    "start": 58.166,
+    "end": 58.526
+  },
+  {
+    "text": "cuando",
+    "start": 58.573,
+    "end": 58.758
+  },
+  {
+    "text": "ya",
+    "start": 58.828,
+    "end": 58.909
+  },
+  {
+    "text": "sepas.",
+    "start": 58.956,
+    "end": 59.536
+  },
+  {
+    "text": "Una",
+    "start": 59.977,
+    "end": 60.186
+  },
+  {
+    "text": "negativa",
+    "start": 60.233,
+    "end": 60.674
+  },
+  {
+    "text": "suave",
+    "start": 60.744,
+    "end": 61.231
+  },
+  {
+    "text": "es",
+    "start": 61.347,
+    "end": 61.521
+  },
+  {
+    "text": "tan",
+    "start": 61.638,
+    "end": 61.789
+  },
+  {
+    "text": "importante",
+    "start": 61.858,
+    "end": 62.474
+  },
+  {
+    "text": "como",
+    "start": 62.543,
+    "end": 62.752
+  },
+  {
+    "text": "una",
+    "start": 62.775,
+    "end": 62.88
+  },
+  {
+    "text": "invitación.",
+    "start": 62.915,
+    "end": 63.751
+  },
+  {
+    "text": "\"Pucha,",
+    "start": 64.134,
+    "end": 64.552
+  },
+  {
+    "text": "este",
+    "start": 64.761,
+    "end": 65.074
+  },
+  {
+    "text": "sábado",
+    "start": 65.132,
+    "end": 65.48
+  },
+  {
+    "text": "se",
+    "start": 65.539,
+    "end": 65.62
+  },
+  {
+    "text": "me",
+    "start": 65.678,
+    "end": 65.771
+  },
+  {
+    "text": "complica",
+    "start": 65.829,
+    "end": 66.444
+  },
+  {
+    "text": "porque",
+    "start": 66.537,
+    "end": 67.001
+  },
+  {
+    "text": "tengo",
+    "start": 67.117,
+    "end": 67.419
+  },
+  {
+    "text": "chamba\"",
+    "start": 67.489,
+    "end": 68.128
+  },
+  {
+    "text": "suena",
+    "start": 68.453,
+    "end": 68.731
+  },
+  {
+    "text": "honesto,",
+    "start": 68.755,
+    "end": 69.347
+  },
+  {
+    "text": "pero",
+    "start": 69.428,
+    "end": 69.637
+  },
+  {
+    "text": "no",
+    "start": 69.695,
+    "end": 69.765
+  },
+  {
+    "text": "grosero.",
+    "start": 69.811,
+    "end": 70.357
+  },
+  {
+    "text": "Después",
+    "start": 70.531,
+    "end": 70.844
+  },
+  {
+    "text": "puedes",
+    "start": 70.902,
+    "end": 71.1
+  },
+  {
+    "text": "añadir",
+    "start": 71.135,
+    "end": 71.471
+  },
+  {
+    "text": "una",
+    "start": 71.529,
+    "end": 71.657
+  },
+  {
+    "text": "alternativa:",
+    "start": 71.68,
+    "end": 72.458
+  },
+  {
+    "text": "\"pero",
+    "start": 72.667,
+    "end": 73.027
+  },
+  {
+    "text": "de",
+    "start": 73.085,
+    "end": 73.155
+  },
+  {
+    "text": "repente",
+    "start": 73.224,
+    "end": 73.793
+  },
+  {
+    "text": "podría",
+    "start": 73.863,
+    "end": 74.304
+  },
+  {
+    "text": "caer",
+    "start": 74.374,
+    "end": 74.687
+  },
+  {
+    "text": "más",
+    "start": 74.768,
+    "end": 74.966
+  },
+  {
+    "text": "tarde.\"",
+    "start": 75.024,
+    "end": 75.558
+  },
+  {
+    "text": "Así",
+    "start": 75.883,
+    "end": 76.15
+  },
+  {
+    "text": "mantienes",
+    "start": 76.208,
+    "end": 76.777
+  },
+  {
+    "text": "la",
+    "start": 76.893,
+    "end": 76.974
+  },
+  {
+    "text": "relación",
+    "start": 77.044,
+    "end": 77.474
+  },
+  {
+    "text": "en",
+    "start": 77.52,
+    "end": 77.578
+  },
+  {
+    "text": "buen",
+    "start": 77.636,
+    "end": 77.81
+  },
+  {
+    "text": "tono.",
+    "start": 77.892,
+    "end": 78.379
+  },
+  {
+    "text": "Si",
+    "start": 78.762,
+    "end": 78.878
+  },
+  {
+    "text": "el",
+    "start": 78.902,
+    "end": 78.948
+  },
+  {
+    "text": "lugar",
+    "start": 78.971,
+    "end": 79.25
+  },
+  {
+    "text": "todavía",
+    "start": 79.32,
+    "end": 79.842
+  },
+  {
+    "text": "no",
+    "start": 79.935,
+    "end": 80.039
+  },
+  {
+    "text": "está",
+    "start": 80.086,
+    "end": 80.318
+  },
+  {
+    "text": "decidido,",
+    "start": 80.388,
+    "end": 81.119
+  },
+  {
+    "text": "un",
+    "start": 81.27,
+    "end": 81.386
+  },
+  {
+    "text": "amigo",
+    "start": 81.444,
+    "end": 81.909
+  },
+  {
+    "text": "puede",
+    "start": 82.083,
+    "end": 82.327
+  },
+  {
+    "text": "preguntar:",
+    "start": 82.373,
+    "end": 82.965
+  },
+  {
+    "text": "\"¿Manyas",
+    "start": 83.209,
+    "end": 83.789
+  },
+  {
+    "text": "ese",
+    "start": 83.871,
+    "end": 84.022
+  },
+  {
+    "text": "lugar?\"",
+    "start": 84.068,
+    "end": 84.532
+  },
+  {
+    "text": "Luego",
+    "start": 84.974,
+    "end": 85.229
+  },
+  {
+    "text": "la",
+    "start": 85.287,
+    "end": 85.357
+  },
+  {
+    "text": "sugerencia",
+    "start": 85.403,
+    "end": 85.961
+  },
+  {
+    "text": "puede",
+    "start": 86.019,
+    "end": 86.193
+  },
+  {
+    "text": "sonar",
+    "start": 86.228,
+    "end": 86.495
+  },
+  {
+    "text": "más",
+    "start": 86.564,
+    "end": 86.715
+  },
+  {
+    "text": "colaborativa:",
+    "start": 86.75,
+    "end": 87.702
+  },
+  {
+    "text": "\"¿Qué",
+    "start": 87.911,
+    "end": 88.155
+  },
+  {
+    "text": "te",
+    "start": 88.19,
+    "end": 88.259
+  },
+  {
+    "text": "parece",
+    "start": 88.306,
+    "end": 88.596
+  },
+  {
+    "text": "si",
+    "start": 88.643,
+    "end": 88.724
+  },
+  {
+    "text": "quedamos",
+    "start": 88.77,
+    "end": 89.177
+  },
+  {
+    "text": "ahí",
+    "start": 89.246,
+    "end": 89.479
+  },
+  {
+    "text": "más",
+    "start": 89.56,
+    "end": 89.722
+  },
+  {
+    "text": "tarde?\"",
+    "start": 89.78,
+    "end": 90.291
+  },
+  {
+    "text": "Eso",
+    "start": 90.802,
+    "end": 91.139
+  },
+  {
+    "text": "es",
+    "start": 91.197,
+    "end": 91.266
+  },
+  {
+    "text": "más",
+    "start": 91.348,
+    "end": 91.522
+  },
+  {
+    "text": "claro",
+    "start": 91.568,
+    "end": 91.986
+  },
+  {
+    "text": "que",
+    "start": 92.068,
+    "end": 92.172
+  },
+  {
+    "text": "solo",
+    "start": 92.23,
+    "end": 92.451
+  },
+  {
+    "text": "decir",
+    "start": 92.497,
+    "end": 92.834
+  },
+  {
+    "text": "\"vamos\",",
+    "start": 93.008,
+    "end": 93.832
+  },
+  {
+    "text": "porque",
+    "start": 93.983,
+    "end": 94.262
+  },
+  {
+    "text": "da",
+    "start": 94.308,
+    "end": 94.39
+  },
+  {
+    "text": "lugar",
+    "start": 94.436,
+    "end": 94.773
+  },
+  {
+    "text": "y",
+    "start": 94.947,
+    "end": 95.04
+  },
+  {
+    "text": "hora.",
+    "start": 95.121,
+    "end": 95.516
+  },
+  {
+    "text": "La",
+    "start": 96.027,
+    "end": 96.154
+  },
+  {
+    "text": "frase",
+    "start": 96.201,
+    "end": 96.468
+  },
+  {
+    "text": "más",
+    "start": 96.526,
+    "end": 96.688
+  },
+  {
+    "text": "segura",
+    "start": 96.712,
+    "end": 97.095
+  },
+  {
+    "text": "para",
+    "start": 97.164,
+    "end": 97.362
+  },
+  {
+    "text": "no",
+    "start": 97.443,
+    "end": 97.547
+  },
+  {
+    "text": "presionar",
+    "start": 97.606,
+    "end": 98.14
+  },
+  {
+    "text": "es",
+    "start": 98.232,
+    "end": 98.407
+  },
+  {
+    "text": "\"Si",
+    "start": 98.685,
+    "end": 98.952
+  },
+  {
+    "text": "no,",
+    "start": 99.022,
+    "end": 99.277
+  },
+  {
+    "text": "normal",
+    "start": 99.335,
+    "end": 99.649
+  },
+  {
+    "text": "nomás;",
+    "start": 99.684,
+    "end": 100.125
+  },
+  {
+    "text": "quedamos",
+    "start": 100.206,
+    "end": 100.566
+  },
+  {
+    "text": "otro",
+    "start": 100.612,
+    "end": 100.787
+  },
+  {
+    "text": "día.\"",
+    "start": 100.822,
+    "end": 101.228
+  },
+  {
+    "text": "Le",
+    "start": 101.925,
+    "end": 102.041
+  },
+  {
+    "text": "muestra",
+    "start": 102.076,
+    "end": 102.331
+  },
+  {
+    "text": "a",
+    "start": 102.354,
+    "end": 102.377
+  },
+  {
+    "text": "tu",
+    "start": 102.424,
+    "end": 102.493
+  },
+  {
+    "text": "amigo",
+    "start": 102.528,
+    "end": 102.853
+  },
+  {
+    "text": "que",
+    "start": 102.923,
+    "end": 103.016
+  },
+  {
+    "text": "el",
+    "start": 103.051,
+    "end": 103.12
+  },
+  {
+    "text": "plan",
+    "start": 103.19,
+    "end": 103.515
+  },
+  {
+    "text": "no",
+    "start": 103.596,
+    "end": 103.678
+  },
+  {
+    "text": "es",
+    "start": 103.713,
+    "end": 103.759
+  },
+  {
+    "text": "una",
+    "start": 103.817,
+    "end": 103.922
+  },
+  {
+    "text": "obligación.",
+    "start": 103.945,
+    "end": 104.676
+  },
+  {
+    "text": "En",
+    "start": 105.117,
+    "end": 105.28
+  },
+  {
+    "text": "conversaciones",
+    "start": 105.338,
+    "end": 105.988
+  },
+  {
+    "text": "reales,",
+    "start": 106.058,
+    "end": 106.638
+  },
+  {
+    "text": "ese",
+    "start": 106.72,
     "end": 106.94
   },
   {
-    "text": "matters:",
-    "start": 106.964,
-    "end": 107.544
+    "text": "tono",
+    "start": 106.998,
+    "end": 107.288
   },
   {
-    "text": "you",
-    "start": 107.927,
-    "end": 108.032
+    "text": "importa:",
+    "start": 107.346,
+    "end": 107.811
   },
   {
-    "text": "invite,",
-    "start": 108.09,
-    "end": 108.74
+    "text": "invitas,",
+    "start": 108.02,
+    "end": 108.925
   },
   {
-    "text": "you",
-    "start": 108.949,
-    "end": 109.053
+    "text": "dejas",
+    "start": 108.972,
+    "end": 109.239
   },
   {
-    "text": "leave",
-    "start": 109.111,
-    "end": 109.286
-  },
-  {
-    "text": "space,",
+    "text": "espacio",
     "start": 109.309,
-    "end": 109.866
+    "end": 110.168
   },
   {
-    "text": "and",
-    "start": 110.145,
-    "end": 110.447
+    "text": "y",
+    "start": 110.551,
+    "end": 110.644
   },
   {
-    "text": "you",
-    "start": 110.539,
-    "end": 110.621
+    "text": "le",
+    "start": 110.725,
+    "end": 110.795
   },
   {
-    "text": "give",
-    "start": 110.679,
-    "end": 110.83
+    "text": "das",
+    "start": 110.841,
+    "end": 110.957
   },
   {
-    "text": "the",
-    "start": 110.853,
-    "end": 110.923
+    "text": "a",
+    "start": 111.027,
+    "end": 111.05
   },
   {
-    "text": "other",
-    "start": 110.957,
-    "end": 111.12
+    "text": "la",
+    "start": 111.096,
+    "end": 111.155
   },
   {
-    "text": "person",
-    "start": 111.178,
-    "end": 111.526
+    "text": "otra",
+    "start": 111.189,
+    "end": 111.364
   },
   {
-    "text": "an",
-    "start": 111.596,
-    "end": 111.689
+    "text": "persona",
+    "start": 111.41,
+    "end": 111.747
   },
   {
-    "text": "easy",
-    "start": 111.758,
-    "end": 111.991
+    "text": "una",
+    "start": 111.793,
+    "end": 111.909
   },
   {
-    "text": "way",
-    "start": 112.049,
-    "end": 112.223
+    "text": "forma",
+    "start": 111.967,
+    "end": 112.281
   },
   {
-    "text": "to",
-    "start": 112.281,
-    "end": 112.351
+    "text": "fácil",
+    "start": 112.362,
+    "end": 112.768
   },
   {
-    "text": "say",
-    "start": 112.409,
-    "end": 112.583
+    "text": "de",
+    "start": 112.803,
+    "end": 112.861
   },
   {
-    "text": "yes",
-    "start": 112.652,
-    "end": 112.931
+    "text": "decir",
+    "start": 112.908,
+    "end": 113.279
   },
   {
-    "text": "or",
-    "start": 113.105,
-    "end": 113.256
+    "text": "sí",
+    "start": 113.407,
+    "end": 113.732
+  },
+  {
+    "text": "o",
+    "start": 113.883,
+    "end": 113.964
   },
   {
     "text": "no.",
-    "start": 113.326,
-    "end": 113.639
+    "start": 114.034,
+    "end": 114.301
   }
 ]

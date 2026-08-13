@@ -482,7 +482,7 @@ const readingParagraphs = [
   {
     id: "p1",
     text:
-      "Making plans with friends in informal Peruvian Spanish often starts lightly. A friend might say: “Habla, causa. ¿Te animas este sábado?” This is not formal Spanish. It sounds friendly, local, and relaxed. If the plan is still open, “de repente” is very useful because it means “maybe” in this context: “De repente podríamos caer a mi jato.”",
+      "Hacer planes con amigos en español peruano informal suele empezar suave. Un amigo puede decir: “Habla, causa. ¿Te animas este sábado?” No suena formal; suena cercano, local y relajado. Si el plan todavía no está fijo, “de repente” sirve mucho porque en este contexto significa quizás: “De repente podríamos caer a mi jato.”",
     translation:
       "Making plans with friends in informal Peruvian Spanish often starts lightly. A friend might say: What’s up, mate. Are you up for it this Saturday? This is not formal Spanish. It sounds friendly, local, and relaxed. If the plan is still open, maybe is very useful because it means maybe in this context: Maybe we could drop by my place.",
     highlights: highlights(["Habla, causa", "¿Te animas este sábado?", "de repente", "de repente podríamos…", "caer a mi jato", "mi jato"]),
@@ -491,7 +491,7 @@ const readingParagraphs = [
   {
     id: "p2",
     text:
-      "The invitation can be simple: “¿Te animas a tomar unas chelas?” or “¿Te animas a caer a mi jato con unos patas?” These phrases are useful with friends, but they are informal. “Chela,” “jato,” and “pata” are not the words you choose in a formal meeting.",
+      "La invitación puede ser simple: “¿Te animas a tomar unas chelas?” o “¿Te animas a caer a mi jato con unos patas?” Son frases útiles con amigos, pero son informales. “Chela”, “jato” y “pata” no son palabras para una reunión formal.",
     translation:
       "The invitation can be simple: Are you up for having a few beers? or Are you up for dropping by my place with some friends? These phrases are useful with friends, but they are informal. Beer, place, and friend are not the words you choose in a formal meeting.",
     highlights: highlights(["¿Te animas a tomar unas chelas?", "¿Te animas a caer a mi jato?", "unas chelas", "jato", "pata", "con unos patas"]),
@@ -500,7 +500,7 @@ const readingParagraphs = [
   {
     id: "p3",
     text:
-      "To accept, you can sound natural without saying too much: “Ya pe, bacán. Caigo a tu jato.” If you are not sure yet, “te paso la voz al toque” keeps the plan open. It means you will give the other person a quick heads-up.",
+      "Para aceptar, puedes sonar natural sin decir demasiado: “Ya pe, bacán. Caigo a tu jato.” Si todavía no estás seguro, “te paso la voz al toque” deja el plan abierto. Significa que vas a avisar rápido cuando ya sepas.",
     translation:
       "To accept, you can sound natural without saying too much: Alright, cool. I’ll drop by your place. If you are not sure yet, I’ll let you know right away keeps the plan open. It means you will give the other person a quick heads-up.",
     highlights: highlights(["Ya pe, bacán", "caigo a tu jato", "tu jato", "te paso la voz al toque", "te paso la voz", "al toque"]),
@@ -509,7 +509,7 @@ const readingParagraphs = [
   {
     id: "p4",
     text:
-      "A soft refusal is just as important as an invitation. “Pucha, este sábado se me complica porque tengo chamba” sounds honest but not rude. Then you can add an alternative: “pero de repente podría caer más tarde.” This keeps the relationship warm.",
+      "Una negativa suave es tan importante como una invitación. “Pucha, este sábado se me complica porque tengo chamba” suena honesto, pero no grosero. Después puedes añadir una alternativa: “pero de repente podría caer más tarde.” Así mantienes la relación en buen tono.",
     translation:
       "A soft refusal is just as important as an invitation. Oh man, this Saturday is difficult because I have work sounds honest but not rude. Then you can add an alternative: but maybe I could drop by later. This keeps the relationship warm.",
     highlights: highlights(["Pucha, se me complica", "este sábado se me complica", "porque tengo chamba", "tengo chamba", "pero de repente…", "podría caer más tarde"]),
@@ -518,7 +518,7 @@ const readingParagraphs = [
   {
     id: "p5",
     text:
-      "If the place is still undecided, one friend might ask: “¿Manyas ese lugar?” Then the suggestion can become more collaborative: “¿Qué te parece si quedamos ahí más tarde?” This is clearer than only saying “vamos,” because it gives a place and a time.",
+      "Si el lugar todavía no está decidido, un amigo puede preguntar: “¿Manyas ese lugar?” Luego la sugerencia puede sonar más colaborativa: “¿Qué te parece si quedamos ahí más tarde?” Eso es más claro que solo decir “vamos”, porque da lugar y hora.",
     translation:
       "If the place is still undecided, one friend might ask: Do you know that place? Then the suggestion can become more collaborative: How about meeting there later? This is clearer than only saying let’s go, because it gives a place and a time.",
     highlights: highlights(["¿Manyas ese lugar?", "manyas", "ese lugar", "¿Qué te parece si quedamos ahí?", "quedar ahí", "más tarde", "ahí"]),
@@ -527,7 +527,7 @@ const readingParagraphs = [
   {
     id: "p6",
     text:
-      "The safest phrase for low pressure is “Si no, normal nomás; quedamos otro día.” It tells your friend that the plan is not an obligation. In real conversations, that tone matters: you invite, you leave space, and you give the other person an easy way to say yes or no.",
+      "La frase más segura para no presionar es “Si no, normal nomás; quedamos otro día.” Le muestra a tu amigo que el plan no es una obligación. En conversaciones reales, ese tono importa: invitas, dejas espacio y le das a la otra persona una forma fácil de decir sí o no.",
     translation:
       "The safest phrase for low pressure is: If not, no worries; we’ll meet another day. It tells your friend that the plan is not an obligation. In real conversations, that tone matters: you invite, you leave space, and you give the other person an easy way to say yes or no.",
     highlights: highlights(["Si no, normal nomás", "normal nomás", "quedamos", "quedar otro día", "otro día"]),

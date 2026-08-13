@@ -1,1262 +1,1392 @@
 [
   {
-    "text": "When",
-    "start": 0.035,
-    "end": 0.197
+    "text": "Cuando",
+    "start": 0.046,
+    "end": 0.36
   },
   {
-    "text": "you",
-    "start": 0.244,
-    "end": 0.325
-  },
-  {
-    "text": "enter",
-    "start": 0.406,
-    "end": 0.708
+    "text": "entras",
+    "start": 0.43,
+    "end": 0.789
   },
   {
     "text": "a",
-    "start": 0.778,
-    "end": 0.801
+    "start": 0.882,
+    "end": 0.917
   },
   {
-    "text": "Dominican",
-    "start": 0.871,
-    "end": 1.405
-  },
-  {
-    "text": "colmado,",
-    "start": 1.463,
-    "end": 2.159
-  },
-  {
-    "text": "a",
-    "start": 2.218,
-    "end": 2.287
-  },
-  {
-    "text": "simple",
-    "start": 2.38,
-    "end": 2.833
-  },
-  {
-    "text": "\"Buenas\"",
-    "start": 2.856,
-    "end": 3.773
-  },
-  {
-    "text": "sounds",
-    "start": 3.82,
-    "end": 4.203
-  },
-  {
-    "text": "natural.",
-    "start": 4.319,
-    "end": 5.062
-  },
-  {
-    "text": "Then",
-    "start": 5.306,
-    "end": 5.596
-  },
-  {
-    "text": "you",
-    "start": 5.677,
-    "end": 5.77
-  },
-  {
-    "text": "can",
-    "start": 5.828,
-    "end": 5.968
-  },
-  {
-    "text": "ask",
-    "start": 6.049,
-    "end": 6.397
-  },
-  {
-    "text": "\"¿Qué",
-    "start": 6.548,
-    "end": 6.769
-  },
-  {
-    "text": "tú",
-    "start": 6.827,
-    "end": 6.931
-  },
-  {
-    "text": "tienes",
-    "start": 7.001,
-    "end": 7.349
-  },
-  {
-    "text": "fresco?\"",
-    "start": 7.419,
-    "end": 8.104
-  },
-  {
-    "text": "if",
-    "start": 8.255,
-    "end": 8.394
-  },
-  {
-    "text": "you",
-    "start": 8.452,
-    "end": 8.533
-  },
-  {
-    "text": "want",
-    "start": 8.615,
-    "end": 8.835
-  },
-  {
-    "text": "fruit",
-    "start": 8.905,
-    "end": 9.276
-  },
-  {
-    "text": "or",
-    "start": 9.392,
-    "end": 9.543
-  },
-  {
-    "text": "produce.",
-    "start": 9.625,
-    "end": 10.368
-  },
-  {
-    "text": "A",
-    "start": 11.482,
-    "end": 11.598
+    "text": "un",
+    "start": 1.068,
+    "end": 1.184
   },
   {
     "text": "\"colmado\"",
-    "start": 11.622,
-    "end": 12.376
+    "start": 1.3,
+    "end": 2.113
   },
   {
-    "text": "is",
-    "start": 12.434,
-    "end": 12.597
+    "text": "dominicano,",
+    "start": 2.136,
+    "end": 3.158
   },
   {
-    "text": "a",
-    "start": 12.655,
-    "end": 12.678
+    "text": "un",
+    "start": 3.251,
+    "end": 3.39
   },
   {
-    "text": "neighborhood",
+    "text": "simple",
+    "start": 3.46,
+    "end": 4.005
+  },
+  {
+    "text": "\"Buenas\"",
+    "start": 4.087,
+    "end": 4.934
+  },
+  {
+    "text": "suena",
+    "start": 4.957,
+    "end": 5.341
+  },
+  {
+    "text": "natural.",
+    "start": 5.41,
+    "end": 6.095
+  },
+  {
+    "text": "Después",
+    "start": 6.699,
+    "end": 7.245
+  },
+  {
+    "text": "puedes",
+    "start": 7.326,
+    "end": 7.616
+  },
+  {
+    "text": "preguntar",
+    "start": 7.663,
+    "end": 8.278
+  },
+  {
+    "text": "\"¿Qué",
+    "start": 8.429,
+    "end": 8.766
+  },
+  {
+    "text": "tú",
+    "start": 8.824,
+    "end": 8.905
+  },
+  {
+    "text": "tienes",
+    "start": 8.963,
+    "end": 9.253
+  },
+  {
+    "text": "fresco?\"",
+    "start": 9.311,
+    "end": 9.88
+  },
+  {
+    "text": "si",
+    "start": 9.996,
+    "end": 10.136
+  },
+  {
+    "text": "quieres",
+    "start": 10.194,
+    "end": 10.472
+  },
+  {
+    "text": "fruta",
+    "start": 10.519,
+    "end": 10.983
+  },
+  {
+    "text": "o",
+    "start": 11.099,
+    "end": 11.146
+  },
+  {
+    "text": "algo",
+    "start": 11.215,
+    "end": 11.459
+  },
+  {
+    "text": "del",
+    "start": 11.517,
+    "end": 11.656
+  },
+  {
+    "text": "día.",
+    "start": 11.703,
+    "end": 12.144
+  },
+  {
+    "text": "El",
     "start": 12.748,
-    "end": 13.363
+    "end": 12.934
   },
   {
-    "text": "corner",
-    "start": 13.421,
-    "end": 13.827
+    "text": "\"colmado\"",
+    "start": 12.957,
+    "end": 13.758
   },
   {
-    "text": "shop,",
-    "start": 13.897,
-    "end": 14.292
+    "text": "no",
+    "start": 13.932,
+    "end": 14.083
   },
   {
-    "text": "and",
-    "start": 14.385,
-    "end": 14.547
+    "text": "es",
+    "start": 14.141,
+    "end": 14.211
   },
   {
-    "text": "it",
-    "start": 14.617,
-    "end": 14.687
+    "text": "solo",
+    "start": 14.234,
+    "end": 14.559
   },
   {
-    "text": "is",
-    "start": 14.745,
-    "end": 14.826
+    "text": "una",
+    "start": 14.605,
+    "end": 14.745
   },
   {
-    "text": "part",
-    "start": 14.896,
-    "end": 15.139
+    "text": "tiendita;",
+    "start": 14.803,
+    "end": 15.557
   },
   {
-    "text": "store,",
-    "start": 15.174,
-    "end": 15.743
+    "text": "muchas",
+    "start": 15.732,
+    "end": 16.08
   },
   {
-    "text": "part",
-    "start": 15.836,
-    "end": 16.138
+    "text": "veces",
+    "start": 16.138,
+    "end": 16.521
   },
   {
-    "text": "local",
-    "start": 16.254,
-    "end": 16.614
+    "text": "también",
+    "start": 16.614,
+    "end": 16.974
   },
   {
-    "text": "meeting",
-    "start": 16.695,
-    "end": 17.02
+    "text": "es",
+    "start": 17.02,
+    "end": 17.078
   },
   {
-    "text": "point.",
-    "start": 17.078,
-    "end": 17.636
+    "text": "un",
+    "start": 17.171,
+    "end": 17.229
   },
   {
-    "text": "To",
-    "start": 17.914,
-    "end": 18.03
+    "text": "punto",
+    "start": 17.287,
+    "end": 17.635
   },
   {
-    "text": "ask",
-    "start": 18.123,
-    "end": 18.344
+    "text": "del",
+    "start": 17.693,
+    "end": 17.81
   },
   {
-    "text": "price,",
-    "start": 18.437,
-    "end": 19.04
+    "text": "barrio",
+    "start": 17.879,
+    "end": 18.297
   },
   {
-    "text": "use",
-    "start": 19.156,
-    "end": 19.598
+    "text": "donde",
+    "start": 18.367,
+    "end": 18.611
+  },
+  {
+    "text": "la",
+    "start": 18.657,
+    "end": 18.738
+  },
+  {
+    "text": "gente",
+    "start": 18.785,
+    "end": 19.11
+  },
+  {
+    "text": "saluda,",
+    "start": 19.168,
+    "end": 19.772
+  },
+  {
+    "text": "pregunta",
+    "start": 19.841,
+    "end": 20.364
+  },
+  {
+    "text": "precios",
+    "start": 20.422,
+    "end": 20.991
+  },
+  {
+    "text": "y",
+    "start": 21.084,
+    "end": 21.13
+  },
+  {
+    "text": "resuelve",
+    "start": 21.246,
+    "end": 21.734
+  },
+  {
+    "text": "rápido.",
+    "start": 21.815,
+    "end": 22.442
+  },
+  {
+    "text": "Para",
+    "start": 23.231,
+    "end": 23.44
+  },
+  {
+    "text": "preguntar",
+    "start": 23.487,
+    "end": 23.974
+  },
+  {
+    "text": "el",
+    "start": 24.009,
+    "end": 24.067
+  },
+  {
+    "text": "precio,",
+    "start": 24.137,
+    "end": 24.729
+  },
+  {
+    "text": "di",
+    "start": 24.892,
+    "end": 25.159
   },
   {
     "text": "\"¿A",
-    "start": 19.679,
-    "end": 19.888
+    "start": 25.333,
+    "end": 25.553
   },
   {
     "text": "cómo",
-    "start": 20.004,
-    "end": 20.283
+    "start": 25.67,
+    "end": 25.89
   },
   {
     "text": "está?\"",
-    "start": 20.329,
-    "end": 20.828
+    "start": 25.925,
+    "end": 26.552
   },
   {
-    "text": "or",
-    "start": 20.979,
-    "end": 21.223
+    "text": "o",
+    "start": 27.051,
+    "end": 27.214
   },
   {
     "text": "\"¿A",
-    "start": 21.339,
-    "end": 21.513
+    "start": 27.341,
+    "end": 27.539
   },
   {
     "text": "cómo",
-    "start": 21.595,
-    "end": 21.896
+    "start": 27.655,
+    "end": 27.864
   },
   {
     "text": "está",
-    "start": 21.943,
-    "end": 22.175
+    "start": 27.887,
+    "end": 28.096
   },
   {
     "text": "eso?\"",
-    "start": 22.291,
-    "end": 22.767
+    "start": 28.212,
+    "end": 28.677
   },
   {
-    "text": "These",
-    "start": 23.197,
-    "end": 23.475
+    "text": "Son",
+    "start": 29.362,
+    "end": 29.559
   },
   {
-    "text": "phrases",
-    "start": 23.499,
-    "end": 24.044
+    "text": "frases",
+    "start": 29.617,
+    "end": 29.977
   },
   {
-    "text": "are",
-    "start": 24.114,
-    "end": 24.265
+    "text": "directas",
+    "start": 30.023,
+    "end": 30.592
   },
   {
-    "text": "practical",
-    "start": 24.311,
-    "end": 24.903
+    "text": "y",
+    "start": 30.639,
+    "end": 30.662
   },
   {
-    "text": "and",
-    "start": 24.961,
-    "end": 25.043
+    "text": "normales",
+    "start": 30.731,
+    "end": 31.254
   },
   {
-    "text": "direct.",
-    "start": 25.112,
-    "end": 25.797
+    "text": "en",
+    "start": 31.324,
+    "end": 31.37
   },
   {
-    "text": "If",
-    "start": 26.18,
-    "end": 26.32
+    "text": "una",
+    "start": 31.463,
+    "end": 31.614
   },
   {
-    "text": "the",
-    "start": 26.366,
-    "end": 26.436
+    "text": "compra.",
+    "start": 31.684,
+    "end": 32.229
   },
   {
-    "text": "price",
-    "start": 26.494,
-    "end": 26.854
+    "text": "Si",
+    "start": 32.601,
+    "end": 32.717
   },
   {
-    "text": "feels",
-    "start": 26.9,
-    "end": 27.272
+    "text": "el",
+    "start": 32.763,
+    "end": 32.821
   },
   {
-    "text": "high,",
-    "start": 27.353,
-    "end": 27.806
+    "text": "precio",
+    "start": 32.879,
+    "end": 33.181
   },
   {
-    "text": "\"Está",
-    "start": 27.945,
-    "end": 28.294
+    "text": "te",
+    "start": 33.216,
+    "end": 33.286
   },
   {
-    "text": "un",
-    "start": 28.398,
-    "end": 28.456
-  },
-  {
-    "text": "poco",
-    "start": 28.514,
-    "end": 28.793
-  },
-  {
-    "text": "caro\"",
-    "start": 28.851,
-    "end": 29.385
-  },
-  {
-    "text": "lets",
-    "start": 29.559,
-    "end": 29.78
-  },
-  {
-    "text": "you",
-    "start": 29.826,
-    "end": 29.896
-  },
-  {
-    "text": "negotiate",
-    "start": 29.954,
-    "end": 30.546
-  },
-  {
-    "text": "softly",
-    "start": 30.592,
-    "end": 31.103
-  },
-  {
-    "text": "without",
-    "start": 31.161,
-    "end": 31.475
-  },
-  {
-    "text": "sounding",
-    "start": 31.521,
-    "end": 31.904
-  },
-  {
-    "text": "rude.",
-    "start": 31.974,
-    "end": 32.403
-  },
-  {
-    "text": "Dominican",
-    "start": 32.775,
-    "end": 33.321
-  },
-  {
-    "text": "fruit",
-    "start": 33.39,
+    "text": "parece",
+    "start": 33.321,
     "end": 33.692
   },
   {
-    "text": "names",
+    "text": "alto,",
     "start": 33.773,
-    "end": 34.11
+    "end": 34.238
   },
   {
-    "text": "matter.",
-    "start": 34.215,
-    "end": 34.807
+    "text": "puedes",
+    "start": 34.284,
+    "end": 34.656
   },
   {
-    "text": "\"Chinola\"",
-    "start": 34.981,
-    "end": 35.829
+    "text": "decir",
+    "start": 34.702,
+    "end": 35.108
   },
   {
-    "text": "is",
-    "start": 35.875,
-    "end": 36.038
-  },
-  {
-    "text": "passion",
-    "start": 36.13,
-    "end": 36.514
-  },
-  {
-    "text": "fruit,",
-    "start": 36.583,
-    "end": 37.106
-  },
-  {
-    "text": "\"lechosa\"",
-    "start": 37.175,
-    "end": 38
-  },
-  {
-    "text": "is",
-    "start": 38.035,
-    "end": 38.162
-  },
-  {
-    "text": "papaya,",
-    "start": 38.232,
-    "end": 38.789
-  },
-  {
-    "text": "and",
-    "start": 38.894,
-    "end": 39.091
-  },
-  {
-    "text": "\"guineo\"",
-    "start": 39.137,
-    "end": 39.834
-  },
-  {
-    "text": "is",
-    "start": 39.88,
-    "end": 40.008
-  },
-  {
-    "text": "banana.",
-    "start": 40.066,
-    "end": 40.693
-  },
-  {
-    "text": "If",
-    "start": 41.378,
-    "end": 41.541
-  },
-  {
-    "text": "you",
-    "start": 41.587,
-    "end": 41.668
-  },
-  {
-    "text": "only",
-    "start": 41.761,
-    "end": 41.982
-  },
-  {
-    "text": "want",
-    "start": 42.04,
-    "end": 42.261
-  },
-  {
-    "text": "a",
-    "start": 42.295,
-    "end": 42.319
-  },
-  {
-    "text": "small",
-    "start": 42.353,
-    "end": 42.62
-  },
-  {
-    "text": "amount,",
-    "start": 42.667,
-    "end": 43.143
-  },
-  {
-    "text": "say",
-    "start": 43.213,
-    "end": 43.514
-  },
-  {
-    "text": "\"Dame",
-    "start": 43.654,
-    "end": 44.048
+    "text": "\"Está",
+    "start": 35.34,
+    "end": 35.851
   },
   {
     "text": "un",
-    "start": 44.095,
-    "end": 44.176
+    "start": 35.921,
+    "end": 35.979
   },
   {
-    "text": "chin",
-    "start": 44.246,
-    "end": 44.443
+    "text": "poco",
+    "start": 36.037,
+    "end": 36.292
   },
   {
-    "text": "de...\"",
-    "start": 44.501,
-    "end": 44.884
+    "text": "caro\"",
+    "start": 36.35,
+    "end": 36.815
   },
   {
-    "text": "because",
-    "start": 44.942,
-    "end": 45.302
+    "text": "y",
+    "start": 36.896,
+    "end": 36.966
   },
   {
-    "text": "\"un",
-    "start": 45.36,
-    "end": 45.593
+    "text": "negociar",
+    "start": 37.047,
+    "end": 37.534
   },
   {
-    "text": "chin\"",
-    "start": 45.662,
-    "end": 46.034
+    "text": "suave,",
+    "start": 37.604,
+    "end": 38.103
   },
   {
-    "text": "means",
-    "start": 46.103,
-    "end": 46.347
+    "text": "sin",
+    "start": 38.173,
+    "end": 38.405
   },
   {
-    "text": "a",
-    "start": 46.394,
-    "end": 46.405
+    "text": "sonar",
+    "start": 38.463,
+    "end": 38.858
   },
   {
-    "text": "little",
-    "start": 46.463,
-    "end": 46.707
+    "text": "agresivo.",
+    "start": 38.916,
+    "end": 39.706
   },
   {
-    "text": "bit.",
-    "start": 46.742,
-    "end": 47.148
+    "text": "En",
+    "start": 40.82,
+    "end": 40.936
   },
   {
-    "text": "For",
-    "start": 48.089,
-    "end": 48.251
+    "text": "República",
+    "start": 41.006,
+    "end": 41.517
   },
   {
-    "text": "staples,",
-    "start": 48.309,
-    "end": 48.878
-  },
-  {
-    "text": "you",
-    "start": 48.913,
-    "end": 48.983
-  },
-  {
-    "text": "might",
-    "start": 49.041,
-    "end": 49.227
-  },
-  {
-    "text": "hear",
-    "start": 49.296,
-    "end": 49.482
-  },
-  {
-    "text": "\"víveres\".",
-    "start": 49.552,
-    "end": 50.388
-  },
-  {
-    "text": "This",
-    "start": 50.887,
-    "end": 51.119
-  },
-  {
-    "text": "means",
-    "start": 51.189,
-    "end": 51.444
-  },
-  {
-    "text": "root",
-    "start": 51.502,
-    "end": 51.711
-  },
-  {
-    "text": "vegetables",
-    "start": 51.769,
-    "end": 52.361
-  },
-  {
-    "text": "and",
-    "start": 52.407,
-    "end": 52.535
-  },
-  {
-    "text": "starchy",
-    "start": 52.593,
-    "end": 52.976
-  },
-  {
-    "text": "foods",
-    "start": 53.046,
-    "end": 53.348
-  },
-  {
-    "text": "like",
-    "start": 53.406,
-    "end": 53.592
-  },
-  {
-    "text": "yuca,",
-    "start": 53.65,
-    "end": 54.161
-  },
-  {
-    "text": "plantain,",
-    "start": 54.219,
-    "end": 54.915
-  },
-  {
-    "text": "or",
-    "start": 54.996,
-    "end": 55.194
-  },
-  {
-    "text": "yautía.",
-    "start": 55.31,
-    "end": 56.146
-  },
-  {
-    "text": "You",
-    "start": 57.423,
-    "end": 57.551
-  },
-  {
-    "text": "can",
-    "start": 57.597,
-    "end": 57.725
-  },
-  {
-    "text": "say",
-    "start": 57.794,
-    "end": 58.061
-  },
-  {
-    "text": "\"Échame",
-    "start": 58.236,
-    "end": 58.863
-  },
-  {
-    "text": "una",
-    "start": 58.909,
-    "end": 59.083
-  },
-  {
-    "text": "funda",
-    "start": 59.153,
-    "end": 59.478
-  },
-  {
-    "text": "de",
-    "start": 59.536,
-    "end": 59.606
-  },
-  {
-    "text": "víveres\"",
-    "start": 59.664,
-    "end": 60.291
-  },
-  {
-    "text": "if",
-    "start": 60.325,
-    "end": 60.465
-  },
-  {
-    "text": "you",
-    "start": 60.511,
-    "end": 60.592
-  },
-  {
-    "text": "want",
-    "start": 60.662,
-    "end": 60.871
-  },
-  {
-    "text": "a",
-    "start": 60.918,
-    "end": 60.952
-  },
-  {
-    "text": "bag",
-    "start": 61.01,
-    "end": 61.243
-  },
-  {
-    "text": "of",
-    "start": 61.289,
-    "end": 61.359
-  },
-  {
-    "text": "those",
-    "start": 61.417,
-    "end": 61.626
-  },
-  {
-    "text": "foods.",
-    "start": 61.661,
-    "end": 62.264
-  },
-  {
-    "text": "Street",
-    "start": 62.856,
-    "end": 63.17
-  },
-  {
-    "text": "food",
-    "start": 63.216,
-    "end": 63.472
-  },
-  {
-    "text": "has",
-    "start": 63.518,
-    "end": 63.669
-  },
-  {
-    "text": "its",
-    "start": 63.727,
-    "end": 63.855
-  },
-  {
-    "text": "own",
-    "start": 63.913,
-    "end": 64.064
-  },
-  {
-    "text": "rhythm.",
-    "start": 64.134,
-    "end": 64.702
-  },
-  {
-    "text": "\"Dame",
-    "start": 65.979,
-    "end": 66.537
-  },
-  {
-    "text": "un",
-    "start": 66.583,
-    "end": 66.653
-  },
-  {
-    "text": "pica",
-    "start": 66.711,
-    "end": 66.943
-  },
-  {
-    "text": "pollo\"",
-    "start": 67.001,
-    "end": 67.651
-  },
-  {
-    "text": "orders",
-    "start": 68.034,
-    "end": 68.476
-  },
-  {
-    "text": "Dominican",
-    "start": 68.534,
-    "end": 69.045
-  },
-  {
-    "text": "fried",
-    "start": 69.114,
-    "end": 69.486
-  },
-  {
-    "text": "chicken.",
-    "start": 69.532,
-    "end": 70.194
-  },
-  {
-    "text": "\"Échame",
-    "start": 70.426,
-    "end": 71.065
-  },
-  {
-    "text": "un",
-    "start": 71.111,
-    "end": 71.181
-  },
-  {
-    "text": "chimi",
-    "start": 71.239,
-    "end": 71.483
-  },
-  {
-    "text": "con",
-    "start": 71.541,
-    "end": 71.692
-  },
-  {
-    "text": "to'\"",
-    "start": 71.75,
-    "end": 72.203
-  },
-  {
-    "text": "orders",
-    "start": 72.992,
-    "end": 73.468
-  },
-  {
-    "text": "a",
-    "start": 73.526,
-    "end": 73.549
-  },
-  {
-    "text": "Dominican",
-    "start": 73.619,
-    "end": 74.072
-  },
-  {
-    "text": "street",
-    "start": 74.13,
-    "end": 74.432
-  },
-  {
-    "text": "burger",
-    "start": 74.501,
-    "end": 74.873
-  },
-  {
-    "text": "with",
-    "start": 74.942,
-    "end": 75.117
-  },
-  {
-    "text": "everything.",
-    "start": 75.151,
-    "end": 75.848
-  },
-  {
-    "text": "If",
-    "start": 76.487,
-    "end": 76.614
-  },
-  {
-    "text": "you",
-    "start": 76.672,
-    "end": 76.742
-  },
-  {
-    "text": "want",
-    "start": 76.823,
-    "end": 77.055
-  },
-  {
-    "text": "less",
-    "start": 77.125,
-    "end": 77.334
-  },
-  {
-    "text": "sauce,",
-    "start": 77.369,
-    "end": 77.915
-  },
-  {
-    "text": "add",
-    "start": 78.054,
-    "end": 78.333
-  },
-  {
-    "text": "\"sin",
-    "start": 78.414,
-    "end": 78.797
-  },
-  {
-    "text": "mucha",
-    "start": 78.878,
-    "end": 79.18
-  },
-  {
-    "text": "salsa\".",
-    "start": 79.227,
-    "end": 79.935
-  },
-  {
-    "text": "Money",
-    "start": 80.689,
-    "end": 80.956
-  },
-  {
-    "text": "language",
-    "start": 81.014,
-    "end": 81.444
-  },
-  {
-    "text": "is",
-    "start": 81.479,
-    "end": 81.607
-  },
-  {
-    "text": "also",
-    "start": 81.653,
-    "end": 81.92
-  },
-  {
-    "text": "local.",
-    "start": 81.978,
-    "end": 82.582
-  },
-  {
-    "text": "\"Cuarto\"",
-    "start": 82.779,
-    "end": 83.65
-  },
-  {
-    "text": "means",
-    "start": 83.731,
-    "end": 83.975
-  },
-  {
-    "text": "money",
-    "start": 84.056,
-    "end": 84.428
-  },
-  {
-    "text": "or",
-    "start": 84.544,
-    "end": 84.695
-  },
-  {
-    "text": "cash,",
-    "start": 84.776,
-    "end": 85.264
-  },
-  {
-    "text": "and",
-    "start": 85.368,
-    "end": 85.624
-  },
-  {
-    "text": "\"no",
-    "start": 85.717,
-    "end": 86.03
-  },
-  {
-    "text": "ando",
-    "start": 86.134,
-    "end": 86.46
-  },
-  {
-    "text": "con",
-    "start": 86.518,
-    "end": 86.645
-  },
-  {
-    "text": "mucho",
-    "start": 86.692,
-    "end": 86.982
-  },
-  {
-    "text": "cuarto\"",
-    "start": 87.052,
-    "end": 87.702
-  },
-  {
-    "text": "means",
-    "start": 87.783,
-    "end": 88.039
-  },
-  {
-    "text": "you",
-    "start": 88.085,
-    "end": 88.166
-  },
-  {
-    "text": "do",
-    "start": 88.224,
-    "end": 88.282
-  },
-  {
-    "text": "not",
-    "start": 88.363,
-    "end": 88.503
-  },
-  {
-    "text": "have",
-    "start": 88.549,
-    "end": 88.712
-  },
-  {
-    "text": "much",
-    "start": 88.77,
-    "end": 88.967
-  },
-  {
-    "text": "money",
-    "start": 89.048,
-    "end": 89.292
-  },
-  {
-    "text": "on",
-    "start": 89.362,
-    "end": 89.478
-  },
-  {
-    "text": "you.",
-    "start": 89.536,
-    "end": 89.884
-  },
-  {
-    "text": "To",
-    "start": 90.627,
-    "end": 90.743
-  },
-  {
-    "text": "negotiate,",
-    "start": 90.813,
-    "end": 91.486
-  },
-  {
-    "text": "say",
-    "start": 91.521,
-    "end": 91.835
-  },
-  {
-    "text": "\"¿No",
-    "start": 91.951,
-    "end": 92.206
-  },
-  {
-    "text": "me",
-    "start": 92.276,
-    "end": 92.345
-  },
-  {
-    "text": "lo",
-    "start": 92.392,
-    "end": 92.473
-  },
-  {
-    "text": "deja",
-    "start": 92.531,
-    "end": 92.949
-  },
-  {
-    "text": "en...?\"",
-    "start": 93.042,
-    "end": 93.483
-  },
-  {
-    "text": "or",
-    "start": 93.599,
-    "end": 93.89
-  },
-  {
-    "text": "\"Déjamelo",
-    "start": 94.099,
-    "end": 94.958
-  },
-  {
-    "text": "en",
-    "start": 95.039,
-    "end": 95.132
-  },
-  {
-    "text": "quinientos\".",
-    "start": 95.225,
-    "end": 96.177
-  },
-  {
-    "text": "To",
-    "start": 96.978,
-    "end": 97.117
-  },
-  {
-    "text": "finish,",
-    "start": 97.187,
-    "end": 97.86
-  },
-  {
-    "text": "\"Me",
-    "start": 97.976,
-    "end": 98.197
-  },
-  {
-    "text": "lo",
-    "start": 98.243,
-    "end": 98.359
-  },
-  {
-    "text": "llevo\"",
-    "start": 98.383,
-    "end": 98.975
-  },
-  {
-    "text": "means",
-    "start": 99.068,
-    "end": 99.451
-  },
-  {
-    "text": "I'll",
-    "start": 99.567,
-    "end": 99.764
-  },
-  {
-    "text": "take",
-    "start": 99.834,
-    "end": 100.078
-  },
-  {
-    "text": "it,",
-    "start": 100.136,
-    "end": 100.472
-  },
-  {
-    "text": "while",
-    "start": 100.542,
-    "end": 100.983
-  },
-  {
-    "text": "\"Me",
-    "start": 101.076,
-    "end": 101.297
+    "text": "Dominicana,",
+    "start": 41.552,
+    "end": 42.422
   },
   {
     "text": "los",
-    "start": 101.355,
-    "end": 101.517
+    "start": 42.538,
+    "end": 42.713
   },
   {
-    "text": "llevo\"",
-    "start": 101.541,
-    "end": 102.109
+    "text": "nombres",
+    "start": 42.782,
+    "end": 43.107
   },
   {
-    "text": "means",
-    "start": 102.168,
-    "end": 102.539
+    "text": "de",
+    "start": 43.142,
+    "end": 43.2
   },
   {
-    "text": "I'll",
-    "start": 102.713,
-    "end": 102.922
+    "text": "las",
+    "start": 43.258,
+    "end": 43.374
   },
   {
-    "text": "take",
-    "start": 102.98,
-    "end": 103.189
+    "text": "frutas",
+    "start": 43.432,
+    "end": 43.815
   },
   {
-    "text": "them.",
-    "start": 103.224,
-    "end": 103.665
+    "text": "importan.",
+    "start": 43.897,
+    "end": 44.628
   },
   {
-    "text": "\"Dale\"",
-    "start": 104.35,
-    "end": 105.07
+    "text": "\"Chinola\"",
+    "start": 45.011,
+    "end": 45.824
   },
   {
-    "text": "confirms",
-    "start": 105.128,
-    "end": 105.639
+    "text": "es",
+    "start": 45.87,
+    "end": 46.021
   },
   {
-    "text": "the",
-    "start": 105.685,
-    "end": 105.778
+    "text": "la",
+    "start": 46.091,
+    "end": 46.161
   },
   {
-    "text": "deal.",
-    "start": 105.848,
-    "end": 106.405
+    "text": "fruta",
+    "start": 46.23,
+    "end": 46.532
   },
   {
-    "text": "Then",
-    "start": 106.916,
-    "end": 107.137
+    "text": "de",
+    "start": 46.567,
+    "end": 46.625
   },
   {
-    "text": "you",
-    "start": 107.195,
-    "end": 107.253
+    "text": "la",
+    "start": 46.672,
+    "end": 46.741
   },
   {
-    "text": "can",
-    "start": 107.299,
-    "end": 107.438
+    "text": "pasión,",
+    "start": 46.799,
+    "end": 47.496
   },
   {
-    "text": "ask",
-    "start": 107.497,
-    "end": 107.787
+    "text": "\"lechosa\"",
+    "start": 47.566,
+    "end": 48.39
   },
   {
-    "text": "\"Échamelo",
-    "start": 107.938,
-    "end": 108.507
+    "text": "es",
+    "start": 48.436,
+    "end": 48.564
   },
   {
-    "text": "en",
-    "start": 108.565,
-    "end": 108.634
+    "text": "papaya",
+    "start": 48.622,
+    "end": 49.307
   },
   {
-    "text": "una",
-    "start": 108.704,
-    "end": 108.843
+    "text": "y",
+    "start": 49.435,
+    "end": 49.562
   },
   {
-    "text": "funda\"",
-    "start": 108.901,
-    "end": 109.517
+    "text": "\"guineo\"",
+    "start": 49.609,
+    "end": 50.271
   },
   {
-    "text": "so",
-    "start": 109.575,
-    "end": 109.726
+    "text": "es",
+    "start": 50.317,
+    "end": 50.468
   },
   {
-    "text": "the",
-    "start": 109.784,
-    "end": 109.865
+    "text": "banana.",
+    "start": 50.526,
+    "end": 51.153
   },
   {
-    "text": "seller",
-    "start": 109.923,
-    "end": 110.236
+    "text": "Si",
+    "start": 51.362,
+    "end": 51.513
   },
   {
-    "text": "puts",
-    "start": 110.306,
-    "end": 110.527
+    "text": "quieres",
+    "start": 51.571,
+    "end": 51.826
   },
   {
-    "text": "it",
-    "start": 110.573,
-    "end": 110.654
+    "text": "poca",
+    "start": 51.884,
+    "end": 52.128
   },
   {
-    "text": "in",
-    "start": 110.701,
-    "end": 110.771
+    "text": "cantidad,",
+    "start": 52.175,
+    "end": 52.883
+  },
+  {
+    "text": "puedes",
+    "start": 52.953,
+    "end": 53.359
+  },
+  {
+    "text": "decir",
+    "start": 53.405,
+    "end": 53.823
+  },
+  {
+    "text": "\"Dame",
+    "start": 53.939,
+    "end": 54.45
+  },
+  {
+    "text": "un",
+    "start": 54.543,
+    "end": 54.671
+  },
+  {
+    "text": "chin",
+    "start": 54.741,
+    "end": 55.019
+  },
+  {
+    "text": "de...\"",
+    "start": 55.089,
+    "end": 55.565
+  },
+  {
+    "text": "porque",
+    "start": 55.774,
+    "end": 56.18
+  },
+  {
+    "text": "\"un",
+    "start": 56.227,
+    "end": 56.47
+  },
+  {
+    "text": "chin\"",
+    "start": 56.552,
+    "end": 56.993
+  },
+  {
+    "text": "significa",
+    "start": 57.028,
+    "end": 57.631
+  },
+  {
+    "text": "un",
+    "start": 57.678,
+    "end": 57.713
+  },
+  {
+    "text": "poquito.",
+    "start": 57.771,
+    "end": 58.398
+  },
+  {
+    "text": "Para",
+    "start": 58.85,
+    "end": 59.048
+  },
+  {
+    "text": "comida",
+    "start": 59.106,
+    "end": 59.443
+  },
+  {
+    "text": "de",
+    "start": 59.501,
+    "end": 59.559
+  },
+  {
+    "text": "base,",
+    "start": 59.617,
+    "end": 60.081
+  },
+  {
+    "text": "vas",
+    "start": 60.128,
+    "end": 60.348
   },
   {
     "text": "a",
-    "start": 110.829,
-    "end": 110.852
+    "start": 60.453,
+    "end": 60.476
   },
   {
-    "text": "bag.",
-    "start": 110.91,
-    "end": 111.374
+    "text": "oír",
+    "start": 60.546,
+    "end": 60.905
+  },
+  {
+    "text": "\"víveres\".",
+    "start": 60.952,
+    "end": 61.892
+  },
+  {
+    "text": "Ahí",
+    "start": 62.624,
+    "end": 62.868
+  },
+  {
+    "text": "entran",
+    "start": 62.926,
+    "end": 63.181
+  },
+  {
+    "text": "cosas",
+    "start": 63.239,
+    "end": 63.576
+  },
+  {
+    "text": "como",
+    "start": 63.622,
+    "end": 63.854
+  },
+  {
+    "text": "yuca,",
+    "start": 63.912,
+    "end": 64.412
+  },
+  {
+    "text": "plátano,",
+    "start": 64.47,
+    "end": 65.213
+  },
+  {
+    "text": "yautía",
+    "start": 65.294,
+    "end": 65.921
+  },
+  {
+    "text": "y",
+    "start": 66.072,
+    "end": 66.142
+  },
+  {
+    "text": "otros",
+    "start": 66.223,
+    "end": 66.467
+  },
+  {
+    "text": "alimentos",
+    "start": 66.525,
+    "end": 67.047
+  },
+  {
+    "text": "que",
+    "start": 67.105,
+    "end": 67.186
+  },
+  {
+    "text": "llenan.",
+    "start": 67.21,
+    "end": 67.744
+  },
+  {
+    "text": "Si",
+    "start": 68.278,
+    "end": 68.405
+  },
+  {
+    "text": "quieres",
+    "start": 68.464,
+    "end": 68.672
+  },
+  {
+    "text": "comprar",
+    "start": 68.731,
+    "end": 69.044
+  },
+  {
+    "text": "para",
+    "start": 69.09,
+    "end": 69.265
+  },
+  {
+    "text": "la",
+    "start": 69.311,
+    "end": 69.381
+  },
+  {
+    "text": "casa,",
+    "start": 69.427,
+    "end": 69.903
+  },
+  {
+    "text": "puedes",
+    "start": 69.938,
+    "end": 70.263
+  },
+  {
+    "text": "decir",
+    "start": 70.309,
+    "end": 70.658
+  },
+  {
+    "text": "\"Échame",
+    "start": 70.948,
+    "end": 71.517
+  },
+  {
+    "text": "una",
+    "start": 71.598,
+    "end": 71.761
+  },
+  {
+    "text": "funda",
+    "start": 71.819,
+    "end": 72.144
+  },
+  {
+    "text": "de",
+    "start": 72.202,
+    "end": 72.272
+  },
+  {
+    "text": "víveres\".",
+    "start": 72.318,
+    "end": 73.038
+  },
+  {
+    "text": "La",
+    "start": 73.99,
+    "end": 74.106
+  },
+  {
+    "text": "palabra",
+    "start": 74.152,
+    "end": 74.686
+  },
+  {
+    "text": "\"funda\"",
+    "start": 74.837,
+    "end": 75.627
+  },
+  {
+    "text": "es",
+    "start": 75.801,
+    "end": 75.987
+  },
+  {
+    "text": "la",
+    "start": 76.068,
+    "end": 76.149
+  },
+  {
+    "text": "bolsa.",
+    "start": 76.207,
+    "end": 76.765
+  },
+  {
+    "text": "La",
+    "start": 77.206,
+    "end": 77.322
+  },
+  {
+    "text": "comida",
+    "start": 77.368,
+    "end": 77.693
+  },
+  {
+    "text": "de",
+    "start": 77.74,
+    "end": 77.809
+  },
+  {
+    "text": "calle",
+    "start": 77.868,
+    "end": 78.204
+  },
+  {
+    "text": "tiene",
+    "start": 78.262,
+    "end": 78.494
+  },
+  {
+    "text": "su",
+    "start": 78.541,
+    "end": 78.645
+  },
+  {
+    "text": "propio",
+    "start": 78.703,
+    "end": 79.075
+  },
+  {
+    "text": "ritmo.",
+    "start": 79.133,
+    "end": 79.655
+  },
+  {
+    "text": "\"Dame",
+    "start": 79.806,
+    "end": 80.306
+  },
+  {
+    "text": "un",
+    "start": 80.364,
+    "end": 80.422
+  },
+  {
+    "text": "pica",
+    "start": 80.468,
+    "end": 80.712
+  },
+  {
+    "text": "pollo\"",
+    "start": 80.758,
+    "end": 81.304
+  },
+  {
+    "text": "sirve",
+    "start": 81.432,
+    "end": 81.745
+  },
+  {
+    "text": "para",
+    "start": 81.792,
+    "end": 81.966
+  },
+  {
+    "text": "pedir",
+    "start": 82.012,
+    "end": 82.291
+  },
+  {
+    "text": "pollo",
+    "start": 82.361,
+    "end": 82.651
+  },
+  {
+    "text": "frito",
+    "start": 82.709,
+    "end": 83.022
+  },
+  {
+    "text": "dominicano.",
+    "start": 83.069,
+    "end": 83.998
+  },
+  {
+    "text": "\"Échame",
+    "start": 84.079,
+    "end": 84.636
+  },
+  {
+    "text": "un",
+    "start": 84.694,
+    "end": 84.764
+  },
+  {
+    "text": "chimi",
+    "start": 84.822,
+    "end": 85.101
+  },
+  {
+    "text": "con",
+    "start": 85.159,
+    "end": 85.321
+  },
+  {
+    "text": "to'\"",
+    "start": 85.391,
+    "end": 85.867
+  },
+  {
+    "text": "pide",
+    "start": 86.192,
+    "end": 86.471
+  },
+  {
+    "text": "un",
+    "start": 86.54,
+    "end": 86.621
+  },
+  {
+    "text": "chimi",
+    "start": 86.679,
+    "end": 87.016
+  },
+  {
+    "text": "con",
+    "start": 87.086,
+    "end": 87.237
+  },
+  {
+    "text": "todos",
+    "start": 87.33,
+    "end": 87.701
+  },
+  {
+    "text": "los",
+    "start": 87.759,
+    "end": 87.899
+  },
+  {
+    "text": "ingredientes.",
+    "start": 87.98,
+    "end": 88.932
+  },
+  {
+    "text": "Si",
+    "start": 89.257,
+    "end": 89.397
+  },
+  {
+    "text": "no",
+    "start": 89.455,
+    "end": 89.536
+  },
+  {
+    "text": "quieres",
+    "start": 89.594,
+    "end": 89.849
+  },
+  {
+    "text": "tanto",
+    "start": 89.907,
+    "end": 90.209
+  },
+  {
+    "text": "aderezo,",
+    "start": 90.256,
+    "end": 90.952
+  },
+  {
+    "text": "añade",
+    "start": 90.999,
+    "end": 91.602
+  },
+  {
+    "text": "\"sin",
+    "start": 91.684,
+    "end": 91.962
+  },
+  {
+    "text": "mucha",
+    "start": 91.997,
+    "end": 92.357
+  },
+  {
+    "text": "salsa\".",
+    "start": 92.404,
+    "end": 93.077
+  },
+  {
+    "text": "El",
+    "start": 93.46,
+    "end": 93.623
+  },
+  {
+    "text": "dinero",
+    "start": 93.669,
+    "end": 94.017
+  },
+  {
+    "text": "también",
+    "start": 94.075,
+    "end": 94.493
+  },
+  {
+    "text": "suena",
+    "start": 94.551,
+    "end": 94.83
+  },
+  {
+    "text": "local.",
+    "start": 94.888,
+    "end": 95.48
+  },
+  {
+    "text": "\"Cuarto\"",
+    "start": 95.852,
+    "end": 96.583
+  },
+  {
+    "text": "significa",
+    "start": 96.618,
+    "end": 97.268
+  },
+  {
+    "text": "dinero",
+    "start": 97.326,
+    "end": 97.779
+  },
+  {
+    "text": "o",
+    "start": 97.872,
+    "end": 97.988
+  },
+  {
+    "text": "efectivo,",
+    "start": 98.023,
+    "end": 98.743
+  },
+  {
+    "text": "y",
+    "start": 98.859,
+    "end": 99.068
+  },
+  {
+    "text": "\"no",
+    "start": 99.126,
+    "end": 99.428
+  },
+  {
+    "text": "ando",
+    "start": 99.497,
+    "end": 99.718
+  },
+  {
+    "text": "con",
+    "start": 99.787,
+    "end": 99.95
+  },
+  {
+    "text": "mucho",
+    "start": 99.996,
+    "end": 100.275
+  },
+  {
+    "text": "cuarto\"",
+    "start": 100.322,
+    "end": 100.925
+  },
+  {
+    "text": "quiere",
+    "start": 101.018,
+    "end": 101.262
+  },
+  {
+    "text": "decir",
+    "start": 101.308,
+    "end": 101.657
+  },
+  {
+    "text": "que",
+    "start": 101.75,
+    "end": 101.842
+  },
+  {
+    "text": "no",
+    "start": 101.912,
+    "end": 101.993
+  },
+  {
+    "text": "llevas",
+    "start": 102.017,
+    "end": 102.33
+  },
+  {
+    "text": "mucho",
+    "start": 102.388,
+    "end": 102.678
+  },
+  {
+    "text": "dinero",
+    "start": 102.725,
+    "end": 103.038
+  },
+  {
+    "text": "encima.",
+    "start": 103.085,
+    "end": 103.7
+  },
+  {
+    "text": "Para",
+    "start": 104.385,
+    "end": 104.617
+  },
+  {
+    "text": "negociar,",
+    "start": 104.675,
+    "end": 105.337
+  },
+  {
+    "text": "puedes",
+    "start": 105.454,
+    "end": 105.802
+  },
+  {
+    "text": "decir",
+    "start": 105.837,
+    "end": 106.266
+  },
+  {
+    "text": "\"¿No",
+    "start": 106.51,
+    "end": 106.835
+  },
+  {
+    "text": "me",
+    "start": 106.893,
+    "end": 106.963
+  },
+  {
+    "text": "lo",
+    "start": 107.009,
+    "end": 107.102
+  },
+  {
+    "text": "deja",
+    "start": 107.172,
+    "end": 107.613
+  },
+  {
+    "text": "en...?\"",
+    "start": 107.729,
+    "end": 108.321
+  },
+  {
+    "text": "o",
+    "start": 108.832,
+    "end": 109.006
+  },
+  {
+    "text": "\"Déjamelo",
+    "start": 109.389,
+    "end": 110.214
+  },
+  {
+    "text": "en",
+    "start": 110.283,
+    "end": 110.341
+  },
+  {
+    "text": "quinientos\".",
+    "start": 110.399,
+    "end": 111.409
+  },
+  {
+    "text": "Para",
+    "start": 111.92,
+    "end": 112.164
+  },
+  {
+    "text": "cerrar",
+    "start": 112.211,
+    "end": 112.536
+  },
+  {
+    "text": "la",
+    "start": 112.594,
+    "end": 112.675
+  },
+  {
+    "text": "compra,",
+    "start": 112.745,
+    "end": 113.395
+  },
+  {
+    "text": "\"Me",
+    "start": 113.418,
+    "end": 113.604
+  },
+  {
+    "text": "lo",
+    "start": 113.65,
+    "end": 113.755
+  },
+  {
+    "text": "llevo\"",
+    "start": 113.778,
+    "end": 114.335
+  },
+  {
+    "text": "funciona",
+    "start": 114.393,
+    "end": 114.904
+  },
+  {
+    "text": "con",
+    "start": 114.962,
+    "end": 115.101
+  },
+  {
+    "text": "una",
+    "start": 115.183,
+    "end": 115.322
+  },
+  {
+    "text": "cosa",
+    "start": 115.392,
+    "end": 115.844
+  },
+  {
+    "text": "y",
+    "start": 115.995,
+    "end": 116.274
+  },
+  {
+    "text": "\"Me",
+    "start": 116.448,
+    "end": 116.634
+  },
+  {
+    "text": "los",
+    "start": 116.68,
+    "end": 116.831
+  },
+  {
+    "text": "llevo\"",
+    "start": 116.855,
+    "end": 117.365
+  },
+  {
+    "text": "con",
+    "start": 117.412,
+    "end": 117.598
+  },
+  {
+    "text": "varias.",
+    "start": 117.656,
+    "end": 118.341
+  },
+  {
+    "text": "\"Dale\"",
+    "start": 118.851,
+    "end": 119.594
+  },
+  {
+    "text": "confirma",
+    "start": 119.769,
+    "end": 120.396
+  },
+  {
+    "text": "el",
+    "start": 120.454,
+    "end": 120.535
+  },
+  {
+    "text": "trato.",
+    "start": 120.605,
+    "end": 121.255
+  },
+  {
+    "text": "Después",
+    "start": 122.067,
+    "end": 122.52
+  },
+  {
+    "text": "puedes",
+    "start": 122.578,
+    "end": 122.88
+  },
+  {
+    "text": "pedir",
+    "start": 122.927,
+    "end": 123.298
+  },
+  {
+    "text": "\"Échamelo",
+    "start": 123.472,
+    "end": 124.18
+  },
+  {
+    "text": "en",
+    "start": 124.238,
+    "end": 124.297
+  },
+  {
+    "text": "una",
+    "start": 124.378,
+    "end": 124.529
+  },
+  {
+    "text": "funda\"",
+    "start": 124.598,
+    "end": 125.109
+  },
+  {
+    "text": "para",
+    "start": 125.132,
+    "end": 125.365
+  },
+  {
+    "text": "que",
+    "start": 125.423,
+    "end": 125.492
+  },
+  {
+    "text": "te",
+    "start": 125.55,
+    "end": 125.62
+  },
+  {
+    "text": "lo",
+    "start": 125.667,
+    "end": 125.748
+  },
+  {
+    "text": "pongan",
+    "start": 125.806,
+    "end": 126.224
+  },
+  {
+    "text": "en",
+    "start": 126.282,
+    "end": 126.34
+  },
+  {
+    "text": "una",
+    "start": 126.41,
+    "end": 126.549
+  },
+  {
+    "text": "bolsa.",
+    "start": 126.607,
+    "end": 127.222
   }
 ]
