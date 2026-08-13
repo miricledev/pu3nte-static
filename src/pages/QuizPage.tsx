@@ -17,6 +17,7 @@ import { MistakeReview } from "../components/quiz/MistakeReview";
 import { compareAnswers, getSpecialCharactersForLanguage, type AnswerComparison } from "../utils/answer";
 import { getProgress, markCompleted, markOpened, saveProgress } from "../utils/progress";
 import { getUiLanguage, uiText } from "../utils/uiText";
+import { getQuestionOptions, isQuestionOptionCorrect } from "../utils/questionOptions";
 import { useShuffledOptions } from "../hooks/useShuffledOptions";
 import { NotFoundPage } from "./NotFoundPage";
 
@@ -64,11 +65,24 @@ export function QuizPage() {
   const passed = score >= quiz.data.passScore;
   const mistakes = quiz.data.questions.filter((item) => answers[item.id] === false);
   const specialCharacters = getSpecialCharactersForLanguage(quiz.languageTarget);
-  const isTypedQuestion = question.type !== "match-pairs" && !question.options;
-  const shuffledOptions = useShuffledOptions(question.options ?? [], question.id);
+  const questionOptions = getQuestionOptions(question);
+  const isTypedQuestion = question.type !== "match-pairs" && question.type !== "order-words" && !questionOptions.length;
+  const shuffledOptions = useShuffledOptions(questionOptions, question.id);
   const selectedWordTiles = typed ? typed.split(/\s+/).filter(Boolean) : [];
 
   function answer(value: string) {
+    if (question.type === "multiple-choice" || question.type === "true-false") {
+      const correct = isQuestionOptionCorrect(question, value);
+      setAnswers((previous) => ({ ...previous, [question.id]: correct }));
+      setSelected(value);
+      setQuizFeedback({
+        tone: correct ? "correct" : "incorrect",
+        title: correct ? copy.correct : copy.incorrect,
+        message: correct ? copy.niceMatch : copy.incorrectReviewAnswer,
+      });
+      return;
+    }
+
     const correctAnswer = question.correctAnswer ?? question.correctAnswers?.[0] ?? "";
     const result = compareAnswers(value, correctAnswer, { acceptedAnswers: question.correctAnswers, accentSensitive: "forgiving", punctuationSensitive: "ignore" });
     setAnswers((previous) => ({ ...previous, [question.id]: result.isCorrect || result.isAlmostCorrect }));
@@ -129,9 +143,9 @@ export function QuizPage() {
                 labels={{ guide: copy.matchPairsGuide, matched: copy.matched, complete: copy.allPairsMatched }}
                 onAnswer={answerBoolean}
               />
-            ) : question.options ? (
+            ) : questionOptions.length ? (
               <div className="grid gap-3">
-                {shuffledOptions.map((option) => <QuizOption key={option} option={option} selected={selected === option} correct={option === question.correctAnswer} onClick={() => answer(option)} />)}
+                {shuffledOptions.map((option) => <QuizOption key={option} option={option} selected={selected === option} correct={isQuestionOptionCorrect(question, option)} onClick={() => answer(option)} />)}
               </div>
             ) : question.type === "order-words" ? (
               <OrderWordsInput

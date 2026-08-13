@@ -15,6 +15,7 @@ import { shuffleArray } from "../utils/study";
 import { canUseSpeech, primeSpeech, speakText, stopSpeech } from "../utils/speech";
 import { getUiLanguage, uiText } from "../utils/uiText";
 import { compareAnswers } from "../utils/answer";
+import { getQuestionOptions, isQuestionOptionCorrect } from "../utils/questionOptions";
 import { NotFoundPage } from "./NotFoundPage";
 
 function getLearnerReadingDelay(text: string) {
@@ -68,7 +69,7 @@ export function StoryPage() {
     if (!activeCheck || shuffledCheckOptions[activeCheck.id]) return;
     setShuffledCheckOptions((options) => ({
       ...options,
-      [activeCheck.id]: shuffleArray(activeCheck.question.options ?? []),
+      [activeCheck.id]: shuffleArray(getQuestionOptions(activeCheck.question)),
     }));
   }, [activeCheck, shuffledCheckOptions]);
 
@@ -148,7 +149,7 @@ export function StoryPage() {
     if (!activeCheck) return;
     const correct =
       activeCheck.question.type === "multiple-choice" || activeCheck.question.type === "true-false"
-        ? option === activeCheck.question.correctAnswer
+        ? isQuestionOptionCorrect(activeCheck.question, option)
         : compareAnswers(option, activeCheck.question.correctAnswer ?? "", {
             acceptedAnswers: activeCheck.question.correctAnswers,
             accentSensitive: "ignore",
@@ -231,9 +232,9 @@ export function StoryPage() {
                   <h3 className="mt-2 font-bold">{activeCheck.question.prompt}</h3>
                   {activeCheck.question.type === "multiple-choice" || activeCheck.question.type === "true-false" ? (
                     <div className="mt-3 grid gap-2 sm:grid-cols-3">
-                      {(shuffledCheckOptions[activeCheck.id] ?? activeCheck.question.options ?? []).map((option) => {
+                      {(shuffledCheckOptions[activeCheck.id] ?? getQuestionOptions(activeCheck.question)).map((option) => {
                         const selected = selectedCheckOption === option;
-                        const correct = option === activeCheck.question.correctAnswer;
+                        const correct = isQuestionOptionCorrect(activeCheck.question, option);
                         return (
                           <button
                             key={option}

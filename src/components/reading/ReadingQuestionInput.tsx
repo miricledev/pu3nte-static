@@ -3,6 +3,7 @@ import { useShuffledOptions } from "../../hooks/useShuffledOptions";
 import { TypedLanguageInput } from "../practice/TypedLanguageInput";
 import { QuizOption } from "../quiz/QuizOption";
 import { OrderWordsInput } from "./OrderWordsInput";
+import { getQuestionOptions, isQuestionOptionCorrect } from "../../utils/questionOptions";
 
 export function ReadingQuestionInput({
   question,
@@ -21,7 +22,8 @@ export function ReadingQuestionInput({
   answerPlaceholder?: string;
   orderWordsEmptyLabel?: string;
 }) {
-  const shuffledOptions = useShuffledOptions(question.options ?? [], question.id);
+  const questionOptions = getQuestionOptions(question);
+  const shuffledOptions = useShuffledOptions(questionOptions, question.id);
 
   if (question.type === "multiple-choice" || question.type === "true-false") {
     return (
@@ -33,7 +35,7 @@ export function ReadingQuestionInput({
               key={option}
               option={option}
               selected={value === option}
-              correct={option === question.correctAnswer}
+              correct={isQuestionOptionCorrect(question, option)}
               onClick={() => onChange(option)}
             />
           ))}
