@@ -316,6 +316,7 @@ type SpecialCourseTopic = {
   id: string;
   courseId: string;
   level: SpecialCourseLevel;
+  generation: "gen1" | "gen2";
   topic: string;
   objective: string;
 };
@@ -461,7 +462,7 @@ function getSpecialCourses(): SpecialCourse[] {
 }
 
 function getSpecialCourseTopics(): SpecialCourseTopic[] {
-  const byLevel: Record<SpecialCourseLevel, Array<[string, string]>> = {
+  const gen1ByLevel: Record<SpecialCourseLevel, Array<[string, string]>> = {
     B1: [
       ["Core sentence building with local flavour", "Build practical local sentences from a small word bank, adding grammar and vocabulary step by step."],
       ["Introductions and small talk builder", "Build natural local sentences for introductions, basic small talk, and simple follow-up questions."],
@@ -504,15 +505,76 @@ function getSpecialCourseTopics(): SpecialCourseTopic[] {
     ],
   };
 
+  const gen2ByLevel: Record<SpecialCourseLevel, Array<[string, string]>> = {
+    B1: [
+      ["Casual voice-note check-ins builder", "Build friendly informal check-ins, quick updates, simple reactions, and short voice-note replies."],
+      ["Basic flirting and playful compliments builder", "Build respectful light flirting, simple compliments, interest checks, and graceful exits without pressure."],
+      ["Spontaneous plans with friends builder", "Build casual plans that happen today, with times, places, delays, and relaxed confirmations."],
+      ["Cancelling without sounding cold builder", "Build simple apologies, soft reasons, alternative plans, and warm follow-ups after cancelling."],
+      ["Asking for favours casually builder", "Build low-pressure requests, offers to help, thanks, and simple boundaries between friends."],
+      ["Tired, busy, and not available builder", "Build informal explanations for being tired, busy, short on time, or needing to rest."],
+      ["Reacting to gossip and funny stories builder", "Build casual reactions, surprise, disbelief, humour, and simple follow-up questions."],
+      ["Street food and late-night snacks builder", "Build informal ordering, choosing toppings, asking prices, and reacting to food with local flavour."],
+      ["Neighbourhood meetups and directions builder", "Build quick directions, meet-up points, landmarks, and messages when someone is nearby."],
+      ["Apologising after being late builder", "Build excuses, apologies, arrival updates, and friendly reassurance after making someone wait."],
+    ],
+    B2: [
+      ["Flirty banter and reading interest", "Practise playful but respectful flirting, teasing, compliments, mixed signals, and backing off smoothly."],
+      ["Group chat drama", "Discuss misunderstood messages, screenshots, side comments, gossip, and keeping peace in a friend group."],
+      ["Soft refusals and saving face", "Refuse plans, favours, dates, or pressure while protecting the relationship and sounding natural."],
+      ["Teasing without crossing the line", "Joke with friends, test tone, repair a joke, and notice when informal humour becomes too much."],
+      ["Complaining about service informally", "React to slow service, prices, delivery issues, or rude treatment without sounding formal or aggressive."],
+      ["Money, splitting bills, and awkward costs", "Talk casually about paying, being short, splitting fairly, borrowing, and avoiding embarrassment."],
+      ["Voice notes when plans change", "Handle changed plans, missed calls, location updates, and quick explanations through natural voice notes."],
+      ["Workplace casual favours", "Ask coworkers for informal help, swaps, cover, reminders, and quick clarifications without sounding demanding."],
+      ["Reacting to a bad decision", "Warn a friend, disagree softly, joke, show concern, and suggest a better move."],
+      ["Invitations with backup plans", "Make flexible plans, offer alternatives, keep things open, and manage uncertainty naturally."],
+    ],
+    C1: [
+      ["Advanced flirting: subtext, timing, and boundaries", "Handle attraction, ambiguity, humour, consent-aware signals, and elegant backing off with mature local tone."],
+      ["Reading the room at a party", "Interpret tone, tension, flirting, boredom, exclusion, and indirect cues in a lively social setting."],
+      ["Indirect disagreement with friends", "Push back through humour, hints, softeners, and register shifts without making the room tense."],
+      ["Calling out flaky behaviour", "Address cancelled plans, excuses, ghosting, and inconsistency without sounding needy or aggressive."],
+      ["Social pressure and not wanting to look bad", "Manage invitations, reputation, awkward obligations, and face-saving excuses in informal circles."],
+      ["Humour that almost crosses the line", "Use and repair risky jokes, sarcasm, teasing, and social calibration before things turn awkward."],
+      ["Repairing an awkward message", "Clarify intent, soften tone, apologise, reframe, and recover after a message lands badly."],
+      ["Persuading a friend without pressure", "Sell an idea, build enthusiasm, handle hesitation, and avoid sounding pushy or manipulative."],
+      ["Family register versus friend register", "Switch between respectful family speech and relaxed friend speech in the same situation."],
+      ["Jealousy, ego, and defensiveness", "Talk about pride, insecurity, jealousy, and hurt feelings with indirect but honest local phrasing."],
+    ],
+    C2: [
+      ["Advanced ethical attraction and seduction", "Use near-native romantic subtext, desire, consent, pacing, and ambiguity without coercion, pressure, or manipulation."],
+      ["High-stakes dating subtext", "Navigate mixed signals, exclusivity, timing, rejection risk, and dignity in emotionally charged dating conversations."],
+      ["De-escalating friend-group conflict", "Untangle blame, rumours, loyalty tests, indirect attacks, and face-saving in a tense group dynamic."],
+      ["Negotiating boundaries in close relationships", "Set limits, respond to guilt, protect intimacy, and stay warm during difficult personal boundaries."],
+      ["Indirect criticism with plausible deniability", "Understand and use veiled criticism, humour, understatement, and social risk without becoming cruel."],
+      ["Handling rejection gracefully", "React to rejection, save face, stay kind, and preserve dignity when attraction is not mutual."],
+      ["Emotional honesty without oversharing", "Share difficult feelings with restraint, precision, warmth, and context-sensitive self-control."],
+      ["Social power, status, and subtle persuasion", "Read status games, influence, resistance, insecurity, and strategic silence in informal social settings."],
+      ["Rebuilding trust after a messy misunderstanding", "Repair damaged trust, acknowledge harm, clarify intent, and negotiate a way forward."],
+      ["Near-native banter, irony, and double meanings", "Handle layered humour, playful attacks, implied meanings, and culturally specific ambiguity at speed."],
+    ],
+  };
+
+  const topicGroups: Array<["gen1" | "gen2", Record<SpecialCourseLevel, Array<[string, string]>>]> = [
+    ["gen1", gen1ByLevel],
+    ["gen2", gen2ByLevel],
+  ];
+
   return getSpecialCourses().flatMap((course) =>
-    (Object.entries(byLevel) as Array<[SpecialCourseLevel, Array<[string, string]>]>).flatMap(([level, topics]) =>
-      topics.map(([topic, objective], index) => ({
-        id: `${course.id}-${level.toLowerCase()}-${index + 1}-${slugText(topic)}`,
-        courseId: course.id,
-        level,
-        topic,
-        objective,
-      })),
+    topicGroups.flatMap(([generation, topicsByLevel]) =>
+      (Object.entries(topicsByLevel) as Array<[SpecialCourseLevel, Array<[string, string]>]>).flatMap(([level, topics]) =>
+        topics.map(([topic, objective], index) => ({
+          id: generation === "gen1"
+            ? `${course.id}-${level.toLowerCase()}-${index + 1}-${slugText(topic)}`
+            : `${course.id}-${generation}-${level.toLowerCase()}-${index + 1}-${slugText(topic)}`,
+          courseId: course.id,
+          level,
+          generation,
+          topic,
+          objective,
+        })),
+      ),
     ),
   );
 }
@@ -1637,6 +1699,25 @@ function pageHtml(): string {
         padding-right: 4px;
       }
 
+      .topic-generation-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0;
+      }
+
+      .topic-generation-tab {
+        border-color: rgba(56, 189, 248, 0.24);
+        background: rgba(255,255,255,0.06);
+        color: rgba(255,255,255,0.78);
+      }
+
+      .topic-generation-tab.active {
+        color: #06101f;
+        border-color: transparent;
+        background: linear-gradient(90deg, var(--yellow), var(--cyan));
+      }
+
       .topic-row {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -1959,6 +2040,10 @@ function pageHtml(): string {
                 </select>
               </div>
             </div>
+            <div class="topic-generation-tabs" role="tablist" aria-label="Special topic generation">
+              <button id="specialGen1Tab" class="topic-generation-tab active" type="button" data-special-generation="gen1">Gen 1</button>
+              <button id="specialGen2Tab" class="topic-generation-tab" type="button" data-special-generation="gen2">Gen 2 - informal</button>
+            </div>
             <div class="selector-field">
               <label for="specialTopicSearch">Search special lessons</label>
               <input id="specialTopicSearch" type="search" placeholder="Search dialect/accent lessons..." />
@@ -1999,6 +2084,7 @@ function pageHtml(): string {
       let selectedTopicId = null;
       let selectedSpecialCourseId = specialCourses[0] ? specialCourses[0].id : null;
       let selectedSpecialTopicId = null;
+      let selectedSpecialGeneration = "gen1";
       document.getElementById("detailedPromptText").textContent = detailedChatGptPrompt;
 
       function getSelectedTopic() {
@@ -2393,12 +2479,21 @@ function pageHtml(): string {
         select.value = selectedSpecialCourseId || "";
       }
 
+      function renderSpecialGenerationTabs() {
+        document.querySelectorAll("[data-special-generation]").forEach((button) => {
+          const isActive = button.getAttribute("data-special-generation") === selectedSpecialGeneration;
+          button.classList.toggle("active", isActive);
+          button.setAttribute("aria-selected", isActive ? "true" : "false");
+        });
+      }
+
       function renderSpecialTopics() {
         const course = getSelectedSpecialCourse();
         const level = document.getElementById("specialLevelFilter").value;
         const search = document.getElementById("specialTopicSearch").value.trim().toLowerCase();
         const select = document.getElementById("specialTopicSelect");
         const list = document.getElementById("specialTopicList");
+        renderSpecialGenerationTabs();
 
         if (!course) {
           select.innerHTML = '<option value="">Choose a course first</option>';
@@ -2408,6 +2503,7 @@ function pageHtml(): string {
 
         const filtered = specialCourseTopics.filter((topic) => {
           if (topic.courseId !== course.id) return false;
+          if ((topic.generation || "gen1") !== selectedSpecialGeneration) return false;
           if (topic.level === "B1" && speakingFormat !== "sentence-builder") return false;
           if (level !== "all" && topic.level !== level) return false;
           if (search && !(topic.topic + " " + topic.objective + " " + topic.level + " " + course.label).toLowerCase().includes(search)) return false;
@@ -2775,6 +2871,15 @@ function pageHtml(): string {
         activePromptKind = "special";
         renderSpecialTopics();
         updatePromptPreview();
+      });
+      document.querySelectorAll("[data-special-generation]").forEach((button) => {
+        button.addEventListener("click", () => {
+          selectedSpecialGeneration = button.getAttribute("data-special-generation") || "gen1";
+          selectedSpecialTopicId = null;
+          activePromptKind = "special";
+          renderSpecialTopics();
+          updatePromptPreview();
+        });
       });
       document.getElementById("specialLevelFilter").addEventListener("change", () => {
         renderSpecialTopics();
