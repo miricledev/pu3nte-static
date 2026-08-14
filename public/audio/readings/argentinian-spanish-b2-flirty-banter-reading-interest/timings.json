@@ -1,0 +1,2557 @@
+[
+  {
+    "word": "En",
+    "start": 0,
+    "end": 0.359
+  },
+  {
+    "word": "Argentina",
+    "start": 0.359,
+    "end": 0.718
+  },
+  {
+    "word": ",",
+    "start": 0.718,
+    "end": 1.077
+  },
+  {
+    "word": "decir",
+    "start": 1.077,
+    "end": 1.435
+  },
+  {
+    "word": "que",
+    "start": 1.435,
+    "end": 1.794
+  },
+  {
+    "word": "alguien",
+    "start": 1.794,
+    "end": 2.153
+  },
+  {
+    "word": "“",
+    "start": 2.153,
+    "end": 2.512
+  },
+  {
+    "word": "te",
+    "start": 2.512,
+    "end": 2.871
+  },
+  {
+    "word": "tira",
+    "start": 2.871,
+    "end": 3.23
+  },
+  {
+    "word": "onda",
+    "start": 3.23,
+    "end": 3.589
+  },
+  {
+    "word": "”",
+    "start": 3.589,
+    "end": 3.948
+  },
+  {
+    "word": "significa",
+    "start": 3.948,
+    "end": 4.306
+  },
+  {
+    "word": "que",
+    "start": 4.306,
+    "end": 4.665
+  },
+  {
+    "word": "está",
+    "start": 4.665,
+    "end": 5.024
+  },
+  {
+    "word": "mostrando",
+    "start": 5.024,
+    "end": 5.383
+  },
+  {
+    "word": "interés",
+    "start": 5.383,
+    "end": 5.742
+  },
+  {
+    "word": "o",
+    "start": 5.742,
+    "end": 6.101
+  },
+  {
+    "word": "coqueteando",
+    "start": 6.101,
+    "end": 6.46
+  },
+  {
+    "word": ".",
+    "start": 6.46,
+    "end": 6.818
+  },
+  {
+    "word": "No",
+    "start": 6.818,
+    "end": 7.177
+  },
+  {
+    "word": "siempre",
+    "start": 7.177,
+    "end": 7.536
+  },
+  {
+    "word": "es",
+    "start": 7.536,
+    "end": 7.895
+  },
+  {
+    "word": "obvio",
+    "start": 7.895,
+    "end": 8.254
+  },
+  {
+    "word": ":",
+    "start": 8.254,
+    "end": 8.613
+  },
+  {
+    "word": "puede",
+    "start": 8.613,
+    "end": 8.972
+  },
+  {
+    "word": "ser",
+    "start": 8.972,
+    "end": 9.33
+  },
+  {
+    "word": "una",
+    "start": 9.33,
+    "end": 9.689
+  },
+  {
+    "word": "mirada",
+    "start": 9.689,
+    "end": 10.048
+  },
+  {
+    "word": ",",
+    "start": 10.048,
+    "end": 10.407
+  },
+  {
+    "word": "un",
+    "start": 10.407,
+    "end": 10.766
+  },
+  {
+    "word": "chiste",
+    "start": 10.766,
+    "end": 11.125
+  },
+  {
+    "word": ",",
+    "start": 11.125,
+    "end": 11.484
+  },
+  {
+    "word": "una",
+    "start": 11.484,
+    "end": 11.843
+  },
+  {
+    "word": "pregunta",
+    "start": 11.843,
+    "end": 12.201
+  },
+  {
+    "word": "de",
+    "start": 12.201,
+    "end": 12.56
+  },
+  {
+    "word": "más",
+    "start": 12.56,
+    "end": 12.919
+  },
+  {
+    "word": "o",
+    "start": 12.919,
+    "end": 13.278
+  },
+  {
+    "word": "una",
+    "start": 13.278,
+    "end": 13.637
+  },
+  {
+    "word": "forma",
+    "start": 13.637,
+    "end": 13.996
+  },
+  {
+    "word": "especial",
+    "start": 13.996,
+    "end": 14.355
+  },
+  {
+    "word": "de",
+    "start": 14.355,
+    "end": 14.713
+  },
+  {
+    "word": "seguir",
+    "start": 14.713,
+    "end": 15.072
+  },
+  {
+    "word": "la",
+    "start": 15.072,
+    "end": 15.431
+  },
+  {
+    "word": "charla",
+    "start": 15.431,
+    "end": 15.79
+  },
+  {
+    "word": ".",
+    "start": 15.79,
+    "end": 16.149
+  },
+  {
+    "word": "Por",
+    "start": 16.149,
+    "end": 16.508
+  },
+  {
+    "word": "eso",
+    "start": 16.508,
+    "end": 16.867
+  },
+  {
+    "word": ",",
+    "start": 16.867,
+    "end": 17.225
+  },
+  {
+    "word": "para",
+    "start": 17.225,
+    "end": 17.584
+  },
+  {
+    "word": "leer",
+    "start": 17.584,
+    "end": 17.943
+  },
+  {
+    "word": "bien",
+    "start": 17.943,
+    "end": 18.302
+  },
+  {
+    "word": "la",
+    "start": 18.302,
+    "end": 18.661
+  },
+  {
+    "word": "situación",
+    "start": 18.661,
+    "end": 19.02
+  },
+  {
+    "word": ",",
+    "start": 19.02,
+    "end": 19.379
+  },
+  {
+    "word": "no",
+    "start": 19.379,
+    "end": 19.738
+  },
+  {
+    "word": "alcanza",
+    "start": 19.738,
+    "end": 20.096
+  },
+  {
+    "word": "con",
+    "start": 20.096,
+    "end": 20.455
+  },
+  {
+    "word": "una",
+    "start": 20.455,
+    "end": 20.814
+  },
+  {
+    "word": "sola",
+    "start": 20.814,
+    "end": 21.173
+  },
+  {
+    "word": "señal",
+    "start": 21.173,
+    "end": 21.532
+  },
+  {
+    "word": ".",
+    "start": 21.532,
+    "end": 21.891
+  },
+  {
+    "word": "“",
+    "start": 21.891,
+    "end": 22.25
+  },
+  {
+    "word": "Chamuyar",
+    "start": 22.25,
+    "end": 22.608
+  },
+  {
+    "word": "”",
+    "start": 22.608,
+    "end": 22.967
+  },
+  {
+    "word": "puede",
+    "start": 22.967,
+    "end": 23.326
+  },
+  {
+    "word": "ser",
+    "start": 23.326,
+    "end": 23.685
+  },
+  {
+    "word": "divertido",
+    "start": 23.685,
+    "end": 24.044
+  },
+  {
+    "word": ",",
+    "start": 24.044,
+    "end": 24.403
+  },
+  {
+    "word": "pero",
+    "start": 24.403,
+    "end": 24.762
+  },
+  {
+    "word": "también",
+    "start": 24.762,
+    "end": 25.12
+  },
+  {
+    "word": "puede",
+    "start": 25.12,
+    "end": 25.479
+  },
+  {
+    "word": "sonar",
+    "start": 25.479,
+    "end": 25.838
+  },
+  {
+    "word": "vacío",
+    "start": 25.838,
+    "end": 26.197
+  },
+  {
+    "word": "si",
+    "start": 26.197,
+    "end": 26.556
+  },
+  {
+    "word": "la",
+    "start": 26.556,
+    "end": 26.915
+  },
+  {
+    "word": "persona",
+    "start": 26.915,
+    "end": 27.274
+  },
+  {
+    "word": "solo",
+    "start": 27.274,
+    "end": 27.633
+  },
+  {
+    "word": "habla",
+    "start": 27.633,
+    "end": 27.991
+  },
+  {
+    "word": "lindo",
+    "start": 27.991,
+    "end": 28.35
+  },
+  {
+    "word": ".",
+    "start": 28.35,
+    "end": 28.709
+  },
+  {
+    "word": "La",
+    "start": 28.709,
+    "end": 29.068
+  },
+  {
+    "word": "diferencia",
+    "start": 29.068,
+    "end": 29.427
+  },
+  {
+    "word": "aparece",
+    "start": 29.427,
+    "end": 29.786
+  },
+  {
+    "word": "cuando",
+    "start": 29.786,
+    "end": 30.145
+  },
+  {
+    "word": "el",
+    "start": 30.145,
+    "end": 30.503
+  },
+  {
+    "word": "otro",
+    "start": 30.503,
+    "end": 30.862
+  },
+  {
+    "word": "también",
+    "start": 30.862,
+    "end": 31.221
+  },
+  {
+    "word": "“",
+    "start": 31.221,
+    "end": 31.58
+  },
+  {
+    "word": "da",
+    "start": 31.58,
+    "end": 31.939
+  },
+  {
+    "word": "bola",
+    "start": 31.939,
+    "end": 32.298
+  },
+  {
+    "word": "”",
+    "start": 32.298,
+    "end": 32.657
+  },
+  {
+    "word": ":",
+    "start": 32.657,
+    "end": 33.016
+  },
+  {
+    "word": "escucha",
+    "start": 33.016,
+    "end": 33.374
+  },
+  {
+    "word": ",",
+    "start": 33.374,
+    "end": 33.733
+  },
+  {
+    "word": "responde",
+    "start": 33.733,
+    "end": 34.092
+  },
+  {
+    "word": ",",
+    "start": 34.092,
+    "end": 34.451
+  },
+  {
+    "word": "vuelve",
+    "start": 34.451,
+    "end": 34.81
+  },
+  {
+    "word": "a",
+    "start": 34.81,
+    "end": 35.169
+  },
+  {
+    "word": "buscarte",
+    "start": 35.169,
+    "end": 35.528
+  },
+  {
+    "word": "y",
+    "start": 35.528,
+    "end": 35.886
+  },
+  {
+    "word": "no",
+    "start": 35.886,
+    "end": 36.245
+  },
+  {
+    "word": "deja",
+    "start": 36.245,
+    "end": 36.604
+  },
+  {
+    "word": "que",
+    "start": 36.604,
+    "end": 36.963
+  },
+  {
+    "word": "la",
+    "start": 36.963,
+    "end": 37.322
+  },
+  {
+    "word": "conversación",
+    "start": 37.322,
+    "end": 37.681
+  },
+  {
+    "word": "muera",
+    "start": 37.681,
+    "end": 38.04
+  },
+  {
+    "word": ".",
+    "start": 38.04,
+    "end": 38.398
+  },
+  {
+    "word": "Ahí",
+    "start": 38.398,
+    "end": 38.757
+  },
+  {
+    "word": "ya",
+    "start": 38.757,
+    "end": 39.116
+  },
+  {
+    "word": "no",
+    "start": 39.116,
+    "end": 39.475
+  },
+  {
+    "word": "es",
+    "start": 39.475,
+    "end": 39.834
+  },
+  {
+    "word": "solo",
+    "start": 39.834,
+    "end": 40.193
+  },
+  {
+    "word": "chamuyo",
+    "start": 40.193,
+    "end": 40.552
+  },
+  {
+    "word": ";",
+    "start": 40.552,
+    "end": 40.911
+  },
+  {
+    "word": "puede",
+    "start": 40.911,
+    "end": 41.269
+  },
+  {
+    "word": "haber",
+    "start": 41.269,
+    "end": 41.628
+  },
+  {
+    "word": "interés",
+    "start": 41.628,
+    "end": 41.987
+  },
+  {
+    "word": "real",
+    "start": 41.987,
+    "end": 42.346
+  },
+  {
+    "word": ".",
+    "start": 42.346,
+    "end": 42.705
+  },
+  {
+    "word": "Cuando",
+    "start": 42.705,
+    "end": 43.064
+  },
+  {
+    "word": "dos",
+    "start": 43.064,
+    "end": 43.423
+  },
+  {
+    "word": "personas",
+    "start": 43.423,
+    "end": 43.781
+  },
+  {
+    "word": "“",
+    "start": 43.781,
+    "end": 44.14
+  },
+  {
+    "word": "tienen",
+    "start": 44.14,
+    "end": 44.499
+  },
+  {
+    "word": "onda",
+    "start": 44.499,
+    "end": 44.858
+  },
+  {
+    "word": "”",
+    "start": 44.858,
+    "end": 45.217
+  },
+  {
+    "word": ",",
+    "start": 45.217,
+    "end": 45.576
+  },
+  {
+    "word": "la",
+    "start": 45.576,
+    "end": 45.935
+  },
+  {
+    "word": "charla",
+    "start": 45.935,
+    "end": 46.293
+  },
+  {
+    "word": "fluye",
+    "start": 46.293,
+    "end": 46.652
+  },
+  {
+    "word": "y",
+    "start": 46.652,
+    "end": 47.011
+  },
+  {
+    "word": "se",
+    "start": 47.011,
+    "end": 47.37
+  },
+  {
+    "word": "siente",
+    "start": 47.37,
+    "end": 47.729
+  },
+  {
+    "word": "natural",
+    "start": 47.729,
+    "end": 48.088
+  },
+  {
+    "word": ".",
+    "start": 48.088,
+    "end": 48.447
+  },
+  {
+    "word": "En",
+    "start": 48.447,
+    "end": 48.806
+  },
+  {
+    "word": "ese",
+    "start": 48.806,
+    "end": 49.164
+  },
+  {
+    "word": "caso",
+    "start": 49.164,
+    "end": 49.523
+  },
+  {
+    "word": ",",
+    "start": 49.523,
+    "end": 49.882
+  },
+  {
+    "word": "alguien",
+    "start": 49.882,
+    "end": 50.241
+  },
+  {
+    "word": "puede",
+    "start": 50.241,
+    "end": 50.6
+  },
+  {
+    "word": "decir",
+    "start": 50.6,
+    "end": 50.959
+  },
+  {
+    "word": "“",
+    "start": 50.959,
+    "end": 51.318
+  },
+  {
+    "word": "si",
+    "start": 51.318,
+    "end": 51.676
+  },
+  {
+    "word": "hay",
+    "start": 51.676,
+    "end": 52.035
+  },
+  {
+    "word": "onda",
+    "start": 52.035,
+    "end": 52.394
+  },
+  {
+    "word": ",",
+    "start": 52.394,
+    "end": 52.753
+  },
+  {
+    "word": "encarala",
+    "start": 52.753,
+    "end": 53.112
+  },
+  {
+    "word": "”",
+    "start": 53.112,
+    "end": 53.471
+  },
+  {
+    "word": ".",
+    "start": 53.471,
+    "end": 53.83
+  },
+  {
+    "word": "“",
+    "start": 53.83,
+    "end": 54.188
+  },
+  {
+    "word": "Encarar",
+    "start": 54.188,
+    "end": 54.547
+  },
+  {
+    "word": "”",
+    "start": 54.547,
+    "end": 54.906
+  },
+  {
+    "word": "es",
+    "start": 54.906,
+    "end": 55.265
+  },
+  {
+    "word": "animarse",
+    "start": 55.265,
+    "end": 55.624
+  },
+  {
+    "word": "a",
+    "start": 55.624,
+    "end": 55.983
+  },
+  {
+    "word": "acercarse",
+    "start": 55.983,
+    "end": 56.342
+  },
+  {
+    "word": "o",
+    "start": 56.342,
+    "end": 56.701
+  },
+  {
+    "word": "hacer",
+    "start": 56.701,
+    "end": 57.059
+  },
+  {
+    "word": "un",
+    "start": 57.059,
+    "end": 57.418
+  },
+  {
+    "word": "movimiento",
+    "start": 57.418,
+    "end": 57.777
+  },
+  {
+    "word": ",",
+    "start": 57.777,
+    "end": 58.136
+  },
+  {
+    "word": "pero",
+    "start": 58.136,
+    "end": 58.495
+  },
+  {
+    "word": "no",
+    "start": 58.495,
+    "end": 58.854
+  },
+  {
+    "word": "significa",
+    "start": 58.854,
+    "end": 59.213
+  },
+  {
+    "word": "presionar",
+    "start": 59.213,
+    "end": 59.571
+  },
+  {
+    "word": ".",
+    "start": 59.571,
+    "end": 59.93
+  },
+  {
+    "word": "Si",
+    "start": 59.93,
+    "end": 60.289
+  },
+  {
+    "word": "la",
+    "start": 60.289,
+    "end": 60.648
+  },
+  {
+    "word": "otra",
+    "start": 60.648,
+    "end": 61.007
+  },
+  {
+    "word": "persona",
+    "start": 61.007,
+    "end": 61.366
+  },
+  {
+    "word": "no",
+    "start": 61.366,
+    "end": 61.725
+  },
+  {
+    "word": "responde",
+    "start": 61.725,
+    "end": 62.084
+  },
+  {
+    "word": ",",
+    "start": 62.084,
+    "end": 62.442
+  },
+  {
+    "word": "insistir",
+    "start": 62.442,
+    "end": 62.801
+  },
+  {
+    "word": "demasiado",
+    "start": 62.801,
+    "end": 63.16
+  },
+  {
+    "word": "“",
+    "start": 63.16,
+    "end": 63.519
+  },
+  {
+    "word": "no",
+    "start": 63.519,
+    "end": 63.878
+  },
+  {
+    "word": "da",
+    "start": 63.878,
+    "end": 64.237
+  },
+  {
+    "word": "”",
+    "start": 64.237,
+    "end": 64.596
+  },
+  {
+    "word": ".",
+    "start": 64.596,
+    "end": 64.954
+  },
+  {
+    "word": "A",
+    "start": 64.954,
+    "end": 65.313
+  },
+  {
+    "word": "veces",
+    "start": 65.313,
+    "end": 65.672
+  },
+  {
+    "word": "el",
+    "start": 65.672,
+    "end": 66.031
+  },
+  {
+    "word": "problema",
+    "start": 66.031,
+    "end": 66.39
+  },
+  {
+    "word": "no",
+    "start": 66.39,
+    "end": 66.749
+  },
+  {
+    "word": "es",
+    "start": 66.749,
+    "end": 67.108
+  },
+  {
+    "word": "la",
+    "start": 67.108,
+    "end": 67.466
+  },
+  {
+    "word": "falta",
+    "start": 67.466,
+    "end": 67.825
+  },
+  {
+    "word": "de",
+    "start": 67.825,
+    "end": 68.184
+  },
+  {
+    "word": "interés",
+    "start": 68.184,
+    "end": 68.543
+  },
+  {
+    "word": ",",
+    "start": 68.543,
+    "end": 68.902
+  },
+  {
+    "word": "sino",
+    "start": 68.902,
+    "end": 69.261
+  },
+  {
+    "word": "las",
+    "start": 69.261,
+    "end": 69.62
+  },
+  {
+    "word": "señales",
+    "start": 69.62,
+    "end": 69.979
+  },
+  {
+    "word": "mezcladas",
+    "start": 69.979,
+    "end": 70.337
+  },
+  {
+    "word": ".",
+    "start": 70.337,
+    "end": 70.696
+  },
+  {
+    "word": "“",
+    "start": 70.696,
+    "end": 71.055
+  },
+  {
+    "word": "Hacerse",
+    "start": 71.055,
+    "end": 71.414
+  },
+  {
+    "word": "el",
+    "start": 71.414,
+    "end": 71.773
+  },
+  {
+    "word": "difícil",
+    "start": 71.773,
+    "end": 72.132
+  },
+  {
+    "word": "”",
+    "start": 72.132,
+    "end": 72.491
+  },
+  {
+    "word": "puede",
+    "start": 72.491,
+    "end": 72.849
+  },
+  {
+    "word": "ser",
+    "start": 72.849,
+    "end": 73.208
+  },
+  {
+    "word": "un",
+    "start": 73.208,
+    "end": 73.567
+  },
+  {
+    "word": "juego",
+    "start": 73.567,
+    "end": 73.926
+  },
+  {
+    "word": "suave",
+    "start": 73.926,
+    "end": 74.285
+  },
+  {
+    "word": ",",
+    "start": 74.285,
+    "end": 74.644
+  },
+  {
+    "word": "pero",
+    "start": 74.644,
+    "end": 75.003
+  },
+  {
+    "word": "“",
+    "start": 75.003,
+    "end": 75.361
+  },
+  {
+    "word": "histeriquear",
+    "start": 75.361,
+    "end": 75.72
+  },
+  {
+    "word": "”",
+    "start": 75.72,
+    "end": 76.079
+  },
+  {
+    "word": "ya",
+    "start": 76.079,
+    "end": 76.438
+  },
+  {
+    "word": "suena",
+    "start": 76.438,
+    "end": 76.797
+  },
+  {
+    "word": "más",
+    "start": 76.797,
+    "end": 77.156
+  },
+  {
+    "word": "cansador",
+    "start": 77.156,
+    "end": 77.515
+  },
+  {
+    "word": ":",
+    "start": 77.515,
+    "end": 77.874
+  },
+  {
+    "word": "aparecer",
+    "start": 77.874,
+    "end": 78.232
+  },
+  {
+    "word": ",",
+    "start": 78.232,
+    "end": 78.591
+  },
+  {
+    "word": "desaparecer",
+    "start": 78.591,
+    "end": 78.95
+  },
+  {
+    "word": ",",
+    "start": 78.95,
+    "end": 79.309
+  },
+  {
+    "word": "coquetear",
+    "start": 79.309,
+    "end": 79.668
+  },
+  {
+    "word": "y",
+    "start": 79.668,
+    "end": 80.027
+  },
+  {
+    "word": "hacer",
+    "start": 80.027,
+    "end": 80.386
+  },
+  {
+    "word": "que",
+    "start": 80.386,
+    "end": 80.744
+  },
+  {
+    "word": "el",
+    "start": 80.744,
+    "end": 81.103
+  },
+  {
+    "word": "otro",
+    "start": 81.103,
+    "end": 81.462
+  },
+  {
+    "word": "corra",
+    "start": 81.462,
+    "end": 81.821
+  },
+  {
+    "word": "atrás",
+    "start": 81.821,
+    "end": 82.18
+  },
+  {
+    "word": ".",
+    "start": 82.18,
+    "end": 82.539
+  },
+  {
+    "word": "Si",
+    "start": 82.539,
+    "end": 82.898
+  },
+  {
+    "word": "una",
+    "start": 82.898,
+    "end": 83.256
+  },
+  {
+    "word": "sola",
+    "start": 83.256,
+    "end": 83.615
+  },
+  {
+    "word": "persona",
+    "start": 83.615,
+    "end": 83.974
+  },
+  {
+    "word": "está",
+    "start": 83.974,
+    "end": 84.333
+  },
+  {
+    "word": "haciendo",
+    "start": 84.333,
+    "end": 84.692
+  },
+  {
+    "word": "todo",
+    "start": 84.692,
+    "end": 85.051
+  },
+  {
+    "word": "el",
+    "start": 85.051,
+    "end": 85.41
+  },
+  {
+    "word": "esfuerzo",
+    "start": 85.41,
+    "end": 85.769
+  },
+  {
+    "word": ",",
+    "start": 85.769,
+    "end": 86.127
+  },
+  {
+    "word": "se",
+    "start": 86.127,
+    "end": 86.486
+  },
+  {
+    "word": "dice",
+    "start": 86.486,
+    "end": 86.845
+  },
+  {
+    "word": "que",
+    "start": 86.845,
+    "end": 87.204
+  },
+  {
+    "word": "la",
+    "start": 87.204,
+    "end": 87.563
+  },
+  {
+    "word": "está",
+    "start": 87.563,
+    "end": 87.922
+  },
+  {
+    "word": "“",
+    "start": 87.922,
+    "end": 88.281
+  },
+  {
+    "word": "remando",
+    "start": 88.281,
+    "end": 88.639
+  },
+  {
+    "word": "”",
+    "start": 88.639,
+    "end": 88.998
+  },
+  {
+    "word": ".",
+    "start": 88.998,
+    "end": 89.357
+  },
+  {
+    "word": "Hay",
+    "start": 89.357,
+    "end": 89.716
+  },
+  {
+    "word": "frases",
+    "start": 89.716,
+    "end": 90.075
+  },
+  {
+    "word": "para",
+    "start": 90.075,
+    "end": 90.434
+  },
+  {
+    "word": "hablar",
+    "start": 90.434,
+    "end": 90.793
+  },
+  {
+    "word": "de",
+    "start": 90.793,
+    "end": 91.151
+  },
+  {
+    "word": "lo",
+    "start": 91.151,
+    "end": 91.51
+  },
+  {
+    "word": "que",
+    "start": 91.51,
+    "end": 91.869
+  },
+  {
+    "word": "pasa",
+    "start": 91.869,
+    "end": 92.228
+  },
+  {
+    "word": "después",
+    "start": 92.228,
+    "end": 92.587
+  },
+  {
+    "word": ".",
+    "start": 92.587,
+    "end": 92.946
+  },
+  {
+    "word": "Si",
+    "start": 92.946,
+    "end": 93.305
+  },
+  {
+    "word": "dos",
+    "start": 93.305,
+    "end": 93.664
+  },
+  {
+    "word": "personas",
+    "start": 93.664,
+    "end": 94.022
+  },
+  {
+    "word": "se",
+    "start": 94.022,
+    "end": 94.381
+  },
+  {
+    "word": "besan",
+    "start": 94.381,
+    "end": 94.74
+  },
+  {
+    "word": ",",
+    "start": 94.74,
+    "end": 95.099
+  },
+  {
+    "word": "se",
+    "start": 95.099,
+    "end": 95.458
+  },
+  {
+    "word": "puede",
+    "start": 95.458,
+    "end": 95.817
+  },
+  {
+    "word": "decir",
+    "start": 95.817,
+    "end": 96.176
+  },
+  {
+    "word": "que",
+    "start": 96.176,
+    "end": 96.534
+  },
+  {
+    "word": "“",
+    "start": 96.534,
+    "end": 96.893
+  },
+  {
+    "word": "chaparon",
+    "start": 96.893,
+    "end": 97.252
+  },
+  {
+    "word": "”",
+    "start": 97.252,
+    "end": 97.611
+  },
+  {
+    "word": ".",
+    "start": 97.611,
+    "end": 97.97
+  },
+  {
+    "word": "Si",
+    "start": 97.97,
+    "end": 98.329
+  },
+  {
+    "word": "todavía",
+    "start": 98.329,
+    "end": 98.688
+  },
+  {
+    "word": "no",
+    "start": 98.688,
+    "end": 99.047
+  },
+  {
+    "word": "son",
+    "start": 99.047,
+    "end": 99.405
+  },
+  {
+    "word": "pareja",
+    "start": 99.405,
+    "end": 99.764
+  },
+  {
+    "word": ",",
+    "start": 99.764,
+    "end": 100.123
+  },
+  {
+    "word": "pero",
+    "start": 100.123,
+    "end": 100.482
+  },
+  {
+    "word": "hay",
+    "start": 100.482,
+    "end": 100.841
+  },
+  {
+    "word": "algo",
+    "start": 100.841,
+    "end": 101.2
+  },
+  {
+    "word": "entre",
+    "start": 101.2,
+    "end": 101.559
+  },
+  {
+    "word": "ellos",
+    "start": 101.559,
+    "end": 101.917
+  },
+  {
+    "word": ",",
+    "start": 101.917,
+    "end": 102.276
+  },
+  {
+    "word": "se",
+    "start": 102.276,
+    "end": 102.635
+  },
+  {
+    "word": "dice",
+    "start": 102.635,
+    "end": 102.994
+  },
+  {
+    "word": "que",
+    "start": 102.994,
+    "end": 103.353
+  },
+  {
+    "word": "“",
+    "start": 103.353,
+    "end": 103.712
+  },
+  {
+    "word": "están",
+    "start": 103.712,
+    "end": 104.071
+  },
+  {
+    "word": "en",
+    "start": 104.071,
+    "end": 104.429
+  },
+  {
+    "word": "algo",
+    "start": 104.429,
+    "end": 104.788
+  },
+  {
+    "word": "”",
+    "start": 104.788,
+    "end": 105.147
+  },
+  {
+    "word": ".",
+    "start": 105.147,
+    "end": 105.506
+  },
+  {
+    "word": "Y",
+    "start": 105.506,
+    "end": 105.865
+  },
+  {
+    "word": "si",
+    "start": 105.865,
+    "end": 106.224
+  },
+  {
+    "word": "alguien",
+    "start": 106.224,
+    "end": 106.583
+  },
+  {
+    "word": "logra",
+    "start": 106.583,
+    "end": 106.942
+  },
+  {
+    "word": "conectar",
+    "start": 106.942,
+    "end": 107.3
+  },
+  {
+    "word": "con",
+    "start": 107.3,
+    "end": 107.659
+  },
+  {
+    "word": "otra",
+    "start": 107.659,
+    "end": 108.018
+  },
+  {
+    "word": "persona",
+    "start": 108.018,
+    "end": 108.377
+  },
+  {
+    "word": "en",
+    "start": 108.377,
+    "end": 108.736
+  },
+  {
+    "word": "una",
+    "start": 108.736,
+    "end": 109.095
+  },
+  {
+    "word": "salida",
+    "start": 109.095,
+    "end": 109.454
+  },
+  {
+    "word": ",",
+    "start": 109.454,
+    "end": 109.812
+  },
+  {
+    "word": "algunos",
+    "start": 109.812,
+    "end": 110.171
+  },
+  {
+    "word": "dicen",
+    "start": 110.171,
+    "end": 110.53
+  },
+  {
+    "word": "que",
+    "start": 110.53,
+    "end": 110.889
+  },
+  {
+    "word": "“",
+    "start": 110.889,
+    "end": 111.248
+  },
+  {
+    "word": "se",
+    "start": 111.248,
+    "end": 111.607
+  },
+  {
+    "word": "levantó",
+    "start": 111.607,
+    "end": 111.966
+  },
+  {
+    "word": "a",
+    "start": 111.966,
+    "end": 112.324
+  },
+  {
+    "word": "alguien",
+    "start": 112.324,
+    "end": 112.683
+  },
+  {
+    "word": "”",
+    "start": 112.683,
+    "end": 113.042
+  },
+  {
+    "word": ",",
+    "start": 113.042,
+    "end": 113.401
+  },
+  {
+    "word": "aunque",
+    "start": 113.401,
+    "end": 113.76
+  },
+  {
+    "word": "esa",
+    "start": 113.76,
+    "end": 114.119
+  },
+  {
+    "word": "frase",
+    "start": 114.119,
+    "end": 114.478
+  },
+  {
+    "word": "puede",
+    "start": 114.478,
+    "end": 114.837
+  },
+  {
+    "word": "sonar",
+    "start": 114.837,
+    "end": 115.195
+  },
+  {
+    "word": "un",
+    "start": 115.195,
+    "end": 115.554
+  },
+  {
+    "word": "poco",
+    "start": 115.554,
+    "end": 115.913
+  },
+  {
+    "word": "canchera",
+    "start": 115.913,
+    "end": 116.272
+  },
+  {
+    "word": ".",
+    "start": 116.272,
+    "end": 116.631
+  },
+  {
+    "word": "Para",
+    "start": 116.631,
+    "end": 116.99
+  },
+  {
+    "word": "expresar",
+    "start": 116.99,
+    "end": 117.349
+  },
+  {
+    "word": "interés",
+    "start": 117.349,
+    "end": 117.707
+  },
+  {
+    "word": "sin",
+    "start": 117.707,
+    "end": 118.066
+  },
+  {
+    "word": "ponerse",
+    "start": 118.066,
+    "end": 118.425
+  },
+  {
+    "word": "pesado",
+    "start": 118.425,
+    "end": 118.784
+  },
+  {
+    "word": ",",
+    "start": 118.784,
+    "end": 119.143
+  },
+  {
+    "word": "sirven",
+    "start": 119.143,
+    "end": 119.502
+  },
+  {
+    "word": "frases",
+    "start": 119.502,
+    "end": 119.861
+  },
+  {
+    "word": "como",
+    "start": 119.861,
+    "end": 120.219
+  },
+  {
+    "word": "“",
+    "start": 120.219,
+    "end": 120.578
+  },
+  {
+    "word": "me",
+    "start": 120.578,
+    "end": 120.937
+  },
+  {
+    "word": "copa",
+    "start": 120.937,
+    "end": 121.296
+  },
+  {
+    "word": "”",
+    "start": 121.296,
+    "end": 121.655
+  },
+  {
+    "word": "y",
+    "start": 121.655,
+    "end": 122.014
+  },
+  {
+    "word": "“",
+    "start": 122.014,
+    "end": 122.373
+  },
+  {
+    "word": "me",
+    "start": 122.373,
+    "end": 122.732
+  },
+  {
+    "word": "copás",
+    "start": 122.732,
+    "end": 123.09
+  },
+  {
+    "word": "”",
+    "start": 123.09,
+    "end": 123.449
+  },
+  {
+    "word": ".",
+    "start": 123.449,
+    "end": 123.808
+  },
+  {
+    "word": "La",
+    "start": 123.808,
+    "end": 124.167
+  },
+  {
+    "word": "primera",
+    "start": 124.167,
+    "end": 124.526
+  },
+  {
+    "word": "puede",
+    "start": 124.526,
+    "end": 124.885
+  },
+  {
+    "word": "hablar",
+    "start": 124.885,
+    "end": 125.244
+  },
+  {
+    "word": "de",
+    "start": 125.244,
+    "end": 125.602
+  },
+  {
+    "word": "un",
+    "start": 125.602,
+    "end": 125.961
+  },
+  {
+    "word": "plan",
+    "start": 125.961,
+    "end": 126.32
+  },
+  {
+    "word": ";",
+    "start": 126.32,
+    "end": 126.679
+  },
+  {
+    "word": "la",
+    "start": 126.679,
+    "end": 127.038
+  },
+  {
+    "word": "segunda",
+    "start": 127.038,
+    "end": 127.397
+  },
+  {
+    "word": "habla",
+    "start": 127.397,
+    "end": 127.756
+  },
+  {
+    "word": "de",
+    "start": 127.756,
+    "end": 128.115
+  },
+  {
+    "word": "una",
+    "start": 128.115,
+    "end": 128.473
+  },
+  {
+    "word": "persona",
+    "start": 128.473,
+    "end": 128.832
+  },
+  {
+    "word": ".",
+    "start": 128.832,
+    "end": 129.191
+  },
+  {
+    "word": "También",
+    "start": 129.191,
+    "end": 129.55
+  },
+  {
+    "word": "se",
+    "start": 129.55,
+    "end": 129.909
+  },
+  {
+    "word": "puede",
+    "start": 129.909,
+    "end": 130.268
+  },
+  {
+    "word": "decir",
+    "start": 130.268,
+    "end": 130.627
+  },
+  {
+    "word": "“",
+    "start": 130.627,
+    "end": 130.985
+  },
+  {
+    "word": "si",
+    "start": 130.985,
+    "end": 131.344
+  },
+  {
+    "word": "pinta",
+    "start": 131.344,
+    "end": 131.703
+  },
+  {
+    "word": "”",
+    "start": 131.703,
+    "end": 132.062
+  },
+  {
+    "word": "o",
+    "start": 132.062,
+    "end": 132.421
+  },
+  {
+    "word": "“",
+    "start": 132.421,
+    "end": 132.78
+  },
+  {
+    "word": "pintó",
+    "start": 132.78,
+    "end": 133.139
+  },
+  {
+    "word": "vernos",
+    "start": 133.139,
+    "end": 133.497
+  },
+  {
+    "word": "”",
+    "start": 133.497,
+    "end": 133.856
+  },
+  {
+    "word": "para",
+    "start": 133.856,
+    "end": 134.215
+  },
+  {
+    "word": "mostrar",
+    "start": 134.215,
+    "end": 134.574
+  },
+  {
+    "word": "que",
+    "start": 134.574,
+    "end": 134.933
+  },
+  {
+    "word": "algo",
+    "start": 134.933,
+    "end": 135.292
+  },
+  {
+    "word": "salió",
+    "start": 135.292,
+    "end": 135.651
+  },
+  {
+    "word": "de",
+    "start": 135.651,
+    "end": 136.01
+  },
+  {
+    "word": "manera",
+    "start": 136.01,
+    "end": 136.368
+  },
+  {
+    "word": "natural",
+    "start": 136.368,
+    "end": 136.727
+  },
+  {
+    "word": ",",
+    "start": 136.727,
+    "end": 137.086
+  },
+  {
+    "word": "sin",
+    "start": 137.086,
+    "end": 137.445
+  },
+  {
+    "word": "forzarlo",
+    "start": 137.445,
+    "end": 137.804
+  },
+  {
+    "word": ".",
+    "start": 137.804,
+    "end": 138.163
+  },
+  {
+    "word": "La",
+    "start": 138.163,
+    "end": 138.522
+  },
+  {
+    "word": "tensión",
+    "start": 138.522,
+    "end": 138.88
+  },
+  {
+    "word": "aparece",
+    "start": 138.88,
+    "end": 139.239
+  },
+  {
+    "word": "cuando",
+    "start": 139.239,
+    "end": 139.598
+  },
+  {
+    "word": "alguien",
+    "start": 139.598,
+    "end": 139.957
+  },
+  {
+    "word": "“",
+    "start": 139.957,
+    "end": 140.316
+  },
+  {
+    "word": "se",
+    "start": 140.316,
+    "end": 140.675
+  },
+  {
+    "word": "pone",
+    "start": 140.675,
+    "end": 141.034
+  },
+  {
+    "word": "denso",
+    "start": 141.034,
+    "end": 141.392
+  },
+  {
+    "word": "”",
+    "start": 141.392,
+    "end": 141.751
+  },
+  {
+    "word": ".",
+    "start": 141.751,
+    "end": 142.11
+  },
+  {
+    "word": "Eso",
+    "start": 142.11,
+    "end": 142.469
+  },
+  {
+    "word": "puede",
+    "start": 142.469,
+    "end": 142.828
+  },
+  {
+    "word": "pasar",
+    "start": 142.828,
+    "end": 143.187
+  },
+  {
+    "word": "por",
+    "start": 143.187,
+    "end": 143.546
+  },
+  {
+    "word": "insistir",
+    "start": 143.546,
+    "end": 143.905
+  },
+  {
+    "word": "mucho",
+    "start": 143.905,
+    "end": 144.263
+  },
+  {
+    "word": ",",
+    "start": 144.263,
+    "end": 144.622
+  },
+  {
+    "word": "mandar",
+    "start": 144.622,
+    "end": 144.981
+  },
+  {
+    "word": "demasiados",
+    "start": 144.981,
+    "end": 145.34
+  },
+  {
+    "word": "mensajes",
+    "start": 145.34,
+    "end": 145.699
+  },
+  {
+    "word": "o",
+    "start": 145.699,
+    "end": 146.058
+  },
+  {
+    "word": "leer",
+    "start": 146.058,
+    "end": 146.417
+  },
+  {
+    "word": "una",
+    "start": 146.417,
+    "end": 146.775
+  },
+  {
+    "word": "señal",
+    "start": 146.775,
+    "end": 147.134
+  },
+  {
+    "word": "mínima",
+    "start": 147.134,
+    "end": 147.493
+  },
+  {
+    "word": "como",
+    "start": 147.493,
+    "end": 147.852
+  },
+  {
+    "word": "si",
+    "start": 147.852,
+    "end": 148.211
+  },
+  {
+    "word": "fuera",
+    "start": 148.211,
+    "end": 148.57
+  },
+  {
+    "word": "una",
+    "start": 148.57,
+    "end": 148.929
+  },
+  {
+    "word": "promesa",
+    "start": 148.929,
+    "end": 149.287
+  },
+  {
+    "word": ".",
+    "start": 149.287,
+    "end": 149.646
+  },
+  {
+    "word": "En",
+    "start": 149.646,
+    "end": 150.005
+  },
+  {
+    "word": "ese",
+    "start": 150.005,
+    "end": 150.364
+  },
+  {
+    "word": "momento",
+    "start": 150.364,
+    "end": 150.723
+  },
+  {
+    "word": ",",
+    "start": 150.723,
+    "end": 151.082
+  },
+  {
+    "word": "“",
+    "start": 151.082,
+    "end": 151.441
+  },
+  {
+    "word": "bajá",
+    "start": 151.441,
+    "end": 151.8
+  },
+  {
+    "word": "un",
+    "start": 151.8,
+    "end": 152.158
+  },
+  {
+    "word": "cambio",
+    "start": 152.158,
+    "end": 152.517
+  },
+  {
+    "word": "”",
+    "start": 152.517,
+    "end": 152.876
+  },
+  {
+    "word": ",",
+    "start": 152.876,
+    "end": 153.235
+  },
+  {
+    "word": "“",
+    "start": 153.235,
+    "end": 153.594
+  },
+  {
+    "word": "no",
+    "start": 153.594,
+    "end": 153.953
+  },
+  {
+    "word": "flashees",
+    "start": 153.953,
+    "end": 154.312
+  },
+  {
+    "word": "”",
+    "start": 154.312,
+    "end": 154.67
+  },
+  {
+    "word": "y",
+    "start": 154.67,
+    "end": 155.029
+  },
+  {
+    "word": "“",
+    "start": 155.029,
+    "end": 155.388
+  },
+  {
+    "word": "no",
+    "start": 155.388,
+    "end": 155.747
+  },
+  {
+    "word": "te",
+    "start": 155.747,
+    "end": 156.106
+  },
+  {
+    "word": "hagas",
+    "start": 156.106,
+    "end": 156.465
+  },
+  {
+    "word": "la",
+    "start": 156.465,
+    "end": 156.824
+  },
+  {
+    "word": "película",
+    "start": 156.824,
+    "end": 157.183
+  },
+  {
+    "word": "”",
+    "start": 157.183,
+    "end": 157.541
+  },
+  {
+    "word": "son",
+    "start": 157.541,
+    "end": 157.9
+  },
+  {
+    "word": "frases",
+    "start": 157.9,
+    "end": 158.259
+  },
+  {
+    "word": "útiles",
+    "start": 158.259,
+    "end": 158.618
+  },
+  {
+    "word": "para",
+    "start": 158.618,
+    "end": 158.977
+  },
+  {
+    "word": "volver",
+    "start": 158.977,
+    "end": 159.336
+  },
+  {
+    "word": "a",
+    "start": 159.336,
+    "end": 159.695
+  },
+  {
+    "word": "la",
+    "start": 159.695,
+    "end": 160.053
+  },
+  {
+    "word": "realidad",
+    "start": 160.053,
+    "end": 160.412
+  },
+  {
+    "word": ".",
+    "start": 160.412,
+    "end": 160.771
+  },
+  {
+    "word": "El",
+    "start": 160.771,
+    "end": 161.13
+  },
+  {
+    "word": "mejor",
+    "start": 161.13,
+    "end": 161.489
+  },
+  {
+    "word": "coqueteo",
+    "start": 161.489,
+    "end": 161.848
+  },
+  {
+    "word": "no",
+    "start": 161.848,
+    "end": 162.207
+  },
+  {
+    "word": "necesita",
+    "start": 162.207,
+    "end": 162.565
+  },
+  {
+    "word": "drama",
+    "start": 162.565,
+    "end": 162.924
+  },
+  {
+    "word": ".",
+    "start": 162.924,
+    "end": 163.283
+  },
+  {
+    "word": "Si",
+    "start": 163.283,
+    "end": 163.642
+  },
+  {
+    "word": "alguien",
+    "start": 163.642,
+    "end": 164.001
+  },
+  {
+    "word": "“",
+    "start": 164.001,
+    "end": 164.36
+  },
+  {
+    "word": "corta",
+    "start": 164.36,
+    "end": 164.719
+  },
+  {
+    "word": "el",
+    "start": 164.719,
+    "end": 165.078
+  },
+  {
+    "word": "mambo",
+    "start": 165.078,
+    "end": 165.436
+  },
+  {
+    "word": "”",
+    "start": 165.436,
+    "end": 165.795
+  },
+  {
+    "word": ",",
+    "start": 165.795,
+    "end": 166.154
+  },
+  {
+    "word": "la",
+    "start": 166.154,
+    "end": 166.513
+  },
+  {
+    "word": "energía",
+    "start": 166.513,
+    "end": 166.872
+  },
+  {
+    "word": "se",
+    "start": 166.872,
+    "end": 167.231
+  },
+  {
+    "word": "enfría",
+    "start": 167.231,
+    "end": 167.59
+  },
+  {
+    "word": "y",
+    "start": 167.59,
+    "end": 167.948
+  },
+  {
+    "word": "listo",
+    "start": 167.948,
+    "end": 168.307
+  },
+  {
+    "word": ".",
+    "start": 168.307,
+    "end": 168.666
+  },
+  {
+    "word": "Si",
+    "start": 168.666,
+    "end": 169.025
+  },
+  {
+    "word": "no",
+    "start": 169.025,
+    "end": 169.384
+  },
+  {
+    "word": "hay",
+    "start": 169.384,
+    "end": 169.743
+  },
+  {
+    "word": "respuesta",
+    "start": 169.743,
+    "end": 170.102
+  },
+  {
+    "word": ",",
+    "start": 170.102,
+    "end": 170.46
+  },
+  {
+    "word": "“",
+    "start": 170.46,
+    "end": 170.819
+  },
+  {
+    "word": "todo",
+    "start": 170.819,
+    "end": 171.178
+  },
+  {
+    "word": "bien",
+    "start": 171.178,
+    "end": 171.537
+  },
+  {
+    "word": ",",
+    "start": 171.537,
+    "end": 171.896
+  },
+  {
+    "word": "cero",
+    "start": 171.896,
+    "end": 172.255
+  },
+  {
+    "word": "drama",
+    "start": 172.255,
+    "end": 172.614
+  },
+  {
+    "word": "”",
+    "start": 172.614,
+    "end": 172.973
+  },
+  {
+    "word": "mantiene",
+    "start": 172.973,
+    "end": 173.331
+  },
+  {
+    "word": "la",
+    "start": 173.331,
+    "end": 173.69
+  },
+  {
+    "word": "dignidad",
+    "start": 173.69,
+    "end": 174.049
+  },
+  {
+    "word": "y",
+    "start": 174.049,
+    "end": 174.408
+  },
+  {
+    "word": "baja",
+    "start": 174.408,
+    "end": 174.767
+  },
+  {
+    "word": "la",
+    "start": 174.767,
+    "end": 175.126
+  },
+  {
+    "word": "presión",
+    "start": 175.126,
+    "end": 175.485
+  },
+  {
+    "word": ".",
+    "start": 175.485,
+    "end": 175.843
+  },
+  {
+    "word": "Leer",
+    "start": 175.843,
+    "end": 176.202
+  },
+  {
+    "word": "interés",
+    "start": 176.202,
+    "end": 176.561
+  },
+  {
+    "word": "no",
+    "start": 176.561,
+    "end": 176.92
+  },
+  {
+    "word": "es",
+    "start": 176.92,
+    "end": 177.279
+  },
+  {
+    "word": "perseguir",
+    "start": 177.279,
+    "end": 177.638
+  },
+  {
+    "word": "a",
+    "start": 177.638,
+    "end": 177.997
+  },
+  {
+    "word": "nadie",
+    "start": 177.997,
+    "end": 178.355
+  },
+  {
+    "word": ":",
+    "start": 178.355,
+    "end": 178.714
+  },
+  {
+    "word": "es",
+    "start": 178.714,
+    "end": 179.073
+  },
+  {
+    "word": "notar",
+    "start": 179.073,
+    "end": 179.432
+  },
+  {
+    "word": "si",
+    "start": 179.432,
+    "end": 179.791
+  },
+  {
+    "word": "la",
+    "start": 179.791,
+    "end": 180.15
+  },
+  {
+    "word": "onda",
+    "start": 180.15,
+    "end": 180.509
+  },
+  {
+    "word": "va",
+    "start": 180.509,
+    "end": 180.868
+  },
+  {
+    "word": "y",
+    "start": 180.868,
+    "end": 181.226
+  },
+  {
+    "word": "vuelve",
+    "start": 181.226,
+    "end": 181.585
+  },
+  {
+    "word": "de",
+    "start": 181.585,
+    "end": 181.944
+  },
+  {
+    "word": "los",
+    "start": 181.944,
+    "end": 182.303
+  },
+  {
+    "word": "dos",
+    "start": 182.303,
+    "end": 182.662
+  },
+  {
+    "word": "lados",
+    "start": 182.662,
+    "end": 183.021
+  },
+  {
+    "word": ".",
+    "start": 183.021,
+    "end": 183.38
+  }
+]
