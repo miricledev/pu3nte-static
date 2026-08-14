@@ -10,7 +10,8 @@
     "generate:lesson": "tsx tools/lesson-generator/src/generateLesson.ts",
     "generate:lesson:sample:spanish": "tsx tools/lesson-generator/src/generateLesson.ts tools/lesson-generator/sample-lessons/spanish-a1-want-need-can.json",
     "generate:lesson:sample:english": "tsx tools/lesson-generator/src/generateLesson.ts tools/lesson-generator/sample-lessons/english-a1-want-need-can.json",
-    "lesson:studio": "tsx tools/lesson-generator/src/lessonStudio.ts"
+    "lesson:studio": "tsx tools/lesson-generator/src/lessonStudio.ts",
+    "align:readings": "tsx tools/lesson-generator/src/alignReadings.ts"
   },
   "dependencies": {
     "@remotion/bundler": "4.0.484",
