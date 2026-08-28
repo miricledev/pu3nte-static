@@ -184,6 +184,56 @@ export function StoryPage() {
   const preparationDeckId = getPreparationDeckId(story.id);
   const preparationDeck = flashcardDecks.find((deck) => deck.id === preparationDeckId || deck.relatedCourse === story.id);
   const isEnglishForSpanishSpeakers = story.languageTarget === "english" && story.learnerNativeLanguage === "spanish";
+  const activeCheckCard = activeCheck ? (
+    <div className="rounded-lg border border-pu3nte-cyan/30 bg-pu3nte-cyan/10 p-4">
+      <p className="text-xs font-bold uppercase tracking-[0.18em] text-pu3nte-cyan">{copy.comprehensionCheck}</p>
+      <h3 className="mt-2 font-bold">{activeCheck.question.prompt}</h3>
+      {activeCheck.question.type === "multiple-choice" || activeCheck.question.type === "true-false" ? (
+        <div className="mt-3 grid gap-2 sm:grid-cols-3">
+          {(shuffledCheckOptions[activeCheck.id] ?? getQuestionOptions(activeCheck.question)).map((option) => {
+            const selected = selectedCheckOption === option;
+            const correct = isQuestionOptionCorrect(activeCheck.question, option);
+            return (
+              <button
+                key={option}
+                type="button"
+                className={`rounded-md border px-3 py-2 text-sm font-bold transition ${
+                  selected
+                    ? correct
+                      ? "border-pu3nte-success bg-pu3nte-success/15"
+                      : "border-pu3nte-error bg-pu3nte-error/15"
+                    : "border-white/10 bg-white/[0.04] hover:border-pu3nte-cyan/40"
+                }`}
+                onClick={() => answerCheck(option)}
+              >
+                {option}
+              </button>
+            );
+          })}
+        </div>
+      ) : (
+        <div className="mt-3">
+          <OrderWordsInput
+            words={getQuestionWordBank(activeCheck.question)}
+            selectedWords={selectedCheckOption ? selectedCheckOption.split(/\s+/) : []}
+            onChange={(words) => {
+              setSelectedCheckOption(words.join(" "));
+              setCheckFeedback("");
+            }}
+            emptyLabel={copy.tapWordTiles}
+          />
+        </div>
+      )}
+      {checkFeedback && <p className="mt-3 text-sm text-pu3nte-secondary" aria-live="polite">{checkFeedback}</p>}
+      <GradientButton
+        className="mt-3 w-full"
+        disabled={!selectedCheckOption?.trim()}
+        onClick={() => (checkFeedback ? continueAfterCheck() : answerCheck(selectedCheckOption ?? ""))}
+      >
+        {checkFeedback ? copy.continueStory : "Check answer"}
+      </GradientButton>
+    </div>
+  ) : null;
 
   return (
     <PageContainer>
@@ -215,67 +265,21 @@ export function StoryPage() {
             <div className="mb-4"><StoryProgress visible={visible} total={story.data.messages.length} label={copy.messages} /></div>
             <div ref={scrollRef} className="min-h-0 flex-1 space-y-3 overflow-y-auto pr-2">
               {messages.map((message) => (
-                <ChatBubble
-                  key={message.id}
-                  message={message}
-                  character={story.data.characters.find((character) => character.id === message.speakerId)}
-                  showTranslation={translations}
-                  onSpeak={audioEnabled ? speak : undefined}
-                  audioLabel="Audio"
-                />
+                <div key={message.id} className="space-y-3">
+                  <ChatBubble
+                    message={message}
+                    character={story.data.characters.find((character) => character.id === message.speakerId)}
+                    showTranslation={translations}
+                    onSpeak={audioEnabled ? speak : undefined}
+                    audioLabel="Audio"
+                  />
+                  {activeCheck?.afterMessageId === message.id ? activeCheckCard : null}
+                </div>
               ))}
             </div>
-            <div className="mt-4 grid gap-2 border-t border-white/10 pt-4">
-              {activeCheck ? (
-                <div className="rounded-lg border border-pu3nte-cyan/30 bg-pu3nte-cyan/10 p-4">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-pu3nte-cyan">{copy.comprehensionCheck}</p>
-                  <h3 className="mt-2 font-bold">{activeCheck.question.prompt}</h3>
-                  {activeCheck.question.type === "multiple-choice" || activeCheck.question.type === "true-false" ? (
-                    <div className="mt-3 grid gap-2 sm:grid-cols-3">
-                      {(shuffledCheckOptions[activeCheck.id] ?? getQuestionOptions(activeCheck.question)).map((option) => {
-                        const selected = selectedCheckOption === option;
-                        const correct = isQuestionOptionCorrect(activeCheck.question, option);
-                        return (
-                          <button
-                            key={option}
-                            type="button"
-                            className={`rounded-md border px-3 py-2 text-sm font-bold transition ${
-                              selected
-                                ? correct
-                                  ? "border-pu3nte-success bg-pu3nte-success/15"
-                                  : "border-pu3nte-error bg-pu3nte-error/15"
-                                : "border-white/10 bg-white/[0.04] hover:border-pu3nte-cyan/40"
-                            }`}
-                            onClick={() => answerCheck(option)}
-                          >
-                            {option}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  ) : (
-                    <div className="mt-3">
-                      <OrderWordsInput
-                        words={getQuestionWordBank(activeCheck.question)}
-                        selectedWords={selectedCheckOption ? selectedCheckOption.split(/\s+/) : []}
-                        onChange={(words) => {
-                          setSelectedCheckOption(words.join(" "));
-                          setCheckFeedback("");
-                        }}
-                        emptyLabel={copy.tapWordTiles}
-                      />
-                    </div>
-                  )}
-                  {checkFeedback && <p className="mt-3 text-sm text-pu3nte-secondary" aria-live="polite">{checkFeedback}</p>}
-                  <GradientButton
-                    className="mt-3 w-full"
-                    disabled={!selectedCheckOption?.trim()}
-                    onClick={() => (checkFeedback ? continueAfterCheck() : answerCheck(selectedCheckOption ?? ""))}
-                  >
-                    {checkFeedback ? copy.continueStory : "Check answer"}
-                  </GradientButton>
-                </div>
-              ) : visible < story.data.messages.length ? (
+            {!activeCheck && (
+              <div className="mt-4 grid gap-2 border-t border-white/10 pt-4">
+                {visible < story.data.messages.length ? (
                 <GradientButton onClick={revealNext}>{copy.revealNextMessage}</GradientButton>
               ) : (
                 <div className="rounded-lg border border-pu3nte-success/30 bg-pu3nte-success/10 p-4">
@@ -289,7 +293,8 @@ export function StoryPage() {
                   </GradientButton>
                 </div>
               )}
-            </div>
+              </div>
+            )}
           </div>
         </PhoneFrame>
         <div className="glass-panel h-fit rounded-lg p-5">
