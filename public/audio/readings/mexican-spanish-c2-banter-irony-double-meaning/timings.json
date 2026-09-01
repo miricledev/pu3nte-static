@@ -1,0 +1,2014 @@
+{
+  "words": [
+    {
+      "text": "En",
+      "start": 0,
+      "end": 0.163
+    },
+    {
+      "text": "México,",
+      "start": 0.221,
+      "end": 0.824
+    },
+    {
+      "text": "el",
+      "start": 0.871,
+      "end": 0.975
+    },
+    {
+      "text": "relajo",
+      "start": 1.033,
+      "end": 1.416
+    },
+    {
+      "text": "puede",
+      "start": 1.463,
+      "end": 1.66
+    },
+    {
+      "text": "ser",
+      "start": 1.695,
+      "end": 1.823
+    },
+    {
+      "text": "una",
+      "start": 1.869,
+      "end": 1.985
+    },
+    {
+      "text": "forma",
+      "start": 2.043,
+      "end": 2.334
+    },
+    {
+      "text": "de",
+      "start": 2.368,
+      "end": 2.426
+    },
+    {
+      "text": "cariño,",
+      "start": 2.461,
+      "end": 3.042
+    },
+    {
+      "text": "pero",
+      "start": 3.251,
+      "end": 3.46
+    },
+    {
+      "text": "también",
+      "start": 3.506,
+      "end": 3.75
+    },
+    {
+      "text": "puede",
+      "start": 3.796,
+      "end": 4.005
+    },
+    {
+      "text": "convertirse",
+      "start": 4.063,
+      "end": 4.632
+    },
+    {
+      "text": "en",
+      "start": 4.667,
+      "end": 4.725
+    },
+    {
+      "text": "presión",
+      "start": 4.783,
+      "end": 5.132
+    },
+    {
+      "text": "social.",
+      "start": 5.166,
+      "end": 5.689
+    },
+    {
+      "text": "«Echar",
+      "start": 6.13,
+      "end": 6.571
+    },
+    {
+      "text": "relajo»",
+      "start": 6.629,
+      "end": 7.256
+    },
+    {
+      "text": "no",
+      "start": 7.43,
+      "end": 7.558
+    },
+    {
+      "text": "es",
+      "start": 7.616,
+      "end": 7.686
+    },
+    {
+      "text": "lo",
+      "start": 7.721,
+      "end": 7.779
+    },
+    {
+      "text": "mismo",
+      "start": 7.848,
+      "end": 8.127
+    },
+    {
+      "text": "que",
+      "start": 8.185,
+      "end": 8.348
+    },
+    {
+      "text": "«agarrar",
+      "start": 8.394,
+      "end": 9.091
+    },
+    {
+      "text": "de",
+      "start": 9.149,
+      "end": 9.207
+    },
+    {
+      "text": "botana»",
+      "start": 9.253,
+      "end": 9.822
+    },
+    {
+      "text": "a",
+      "start": 9.892,
+      "end": 9.938
+    },
+    {
+      "text": "alguien",
+      "start": 9.961,
+      "end": 10.31
+    },
+    {
+      "text": "toda",
+      "start": 10.391,
+      "end": 10.635
+    },
+    {
+      "text": "la",
+      "start": 10.681,
+      "end": 10.739
+    },
+    {
+      "text": "noche.",
+      "start": 10.786,
+      "end": 11.285
+    },
+    {
+      "text": "La",
+      "start": 11.668,
+      "end": 11.784
+    },
+    {
+      "text": "diferencia",
+      "start": 11.831,
+      "end": 12.341
+    },
+    {
+      "text": "está",
+      "start": 12.376,
+      "end": 12.55
+    },
+    {
+      "text": "en",
+      "start": 12.608,
+      "end": 12.666
+    },
+    {
+      "text": "la",
+      "start": 12.701,
+      "end": 12.748
+    },
+    {
+      "text": "repetición,",
+      "start": 12.794,
+      "end": 13.595
+    },
+    {
+      "text": "la",
+      "start": 13.769,
+      "end": 13.862
+    },
+    {
+      "text": "confianza",
+      "start": 13.92,
+      "end": 14.605
+    },
+    {
+      "text": "y",
+      "start": 14.722,
+      "end": 14.814
+    },
+    {
+      "text": "si",
+      "start": 14.884,
+      "end": 14.965
+    },
+    {
+      "text": "la",
+      "start": 15.023,
+      "end": 15.105
+    },
+    {
+      "text": "persona",
+      "start": 15.163,
+      "end": 15.488
+    },
+    {
+      "text": "todavía",
+      "start": 15.534,
+      "end": 16.092
+    },
+    {
+      "text": "se",
+      "start": 16.173,
+      "end": 16.277
+    },
+    {
+      "text": "está",
+      "start": 16.312,
+      "end": 16.521
+    },
+    {
+      "text": "riendo",
+      "start": 16.602,
+      "end": 17.044
+    },
+    {
+      "text": "o",
+      "start": 17.09,
+      "end": 17.136
+    },
+    {
+      "text": "ya",
+      "start": 17.206,
+      "end": 17.322
+    },
+    {
+      "text": "solo",
+      "start": 17.369,
+      "end": 17.636
+    },
+    {
+      "text": "está",
+      "start": 17.659,
+      "end": 17.833
+    },
+    {
+      "text": "aguantando.",
+      "start": 17.891,
+      "end": 18.588
+    },
+    {
+      "text": "Una",
+      "start": 19.099,
+      "end": 19.482
+    },
+    {
+      "text": "«pedrada»",
+      "start": 19.633,
+      "end": 20.527
+    },
+    {
+      "text": "es",
+      "start": 20.852,
+      "end": 20.991
+    },
+    {
+      "text": "una",
+      "start": 21.072,
+      "end": 21.2
+    },
+    {
+      "text": "indirecta",
+      "start": 21.223,
+      "end": 21.676
+    },
+    {
+      "text": "con",
+      "start": 21.722,
+      "end": 21.873
+    },
+    {
+      "text": "filo.",
+      "start": 21.92,
+      "end": 22.303
+    },
+    {
+      "text": "«Tirarle",
+      "start": 22.999,
+      "end": 23.615
+    },
+    {
+      "text": "una",
+      "start": 23.65,
+      "end": 23.777
+    },
+    {
+      "text": "pedrada",
+      "start": 23.824,
+      "end": 24.149
+    },
+    {
+      "text": "a",
+      "start": 24.207,
+      "end": 24.3
+    },
+    {
+      "text": "alguien»",
+      "start": 24.811,
+      "end": 25.403
+    },
+    {
+      "text": "permite",
+      "start": 25.914,
+      "end": 26.32
+    },
+    {
+      "text": "criticar",
+      "start": 26.355,
+      "end": 26.982
+    },
+    {
+      "text": "sin",
+      "start": 27.063,
+      "end": 27.272
+    },
+    {
+      "text": "nombrar",
+      "start": 27.295,
+      "end": 27.643
+    },
+    {
+      "text": "de",
+      "start": 27.702,
+      "end": 27.771
+    },
+    {
+      "text": "frente,",
+      "start": 27.829,
+      "end": 28.445
+    },
+    {
+      "text": "pero",
+      "start": 28.654,
+      "end": 28.851
+    },
+    {
+      "text": "todos",
+      "start": 28.897,
+      "end": 29.153
+    },
+    {
+      "text": "pueden",
+      "start": 29.199,
+      "end": 29.385
+    },
+    {
+      "text": "entender",
+      "start": 29.443,
+      "end": 29.838
+    },
+    {
+      "text": "a",
+      "start": 29.931,
+      "end": 29.989
+    },
+    {
+      "text": "quién",
+      "start": 30.082,
+      "end": 30.221
+    },
+    {
+      "text": "va",
+      "start": 30.267,
+      "end": 30.325
+    },
+    {
+      "text": "dirigida.",
+      "start": 30.371,
+      "end": 31.01
+    },
+    {
+      "text": "Si",
+      "start": 31.521,
+      "end": 31.695
+    },
+    {
+      "text": "además",
+      "start": 31.753,
+      "end": 32.113
+    },
+    {
+      "text": "el",
+      "start": 32.159,
+      "end": 32.217
+    },
+    {
+      "text": "comentario",
+      "start": 32.264,
+      "end": 32.902
+    },
+    {
+      "text": "«trae",
+      "start": 32.96,
+      "end": 33.448
+    },
+    {
+      "text": "doble",
+      "start": 33.471,
+      "end": 33.692
+    },
+    {
+      "text": "sentido»,",
+      "start": 33.738,
+      "end": 34.481
+    },
+    {
+      "text": "la",
+      "start": 34.656,
+      "end": 34.76
+    },
+    {
+      "text": "tensión",
+      "start": 34.818,
+      "end": 35.166
+    },
+    {
+      "text": "sube",
+      "start": 35.224,
+      "end": 35.584
+    },
+    {
+      "text": "porque",
+      "start": 35.619,
+      "end": 35.886
+    },
+    {
+      "text": "el",
+      "start": 35.909,
+      "end": 35.956
+    },
+    {
+      "text": "chiste",
+      "start": 36.014,
+      "end": 36.281
+    },
+    {
+      "text": "opera",
+      "start": 36.351,
+      "end": 36.676
+    },
+    {
+      "text": "en",
+      "start": 36.734,
+      "end": 36.815
+    },
+    {
+      "text": "dos",
+      "start": 36.861,
+      "end": 37.001
+    },
+    {
+      "text": "niveles",
+      "start": 37.059,
+      "end": 37.477
+    },
+    {
+      "text": "al",
+      "start": 37.593,
+      "end": 37.674
+    },
+    {
+      "text": "mismo",
+      "start": 37.721,
+      "end": 37.964
+    },
+    {
+      "text": "tiempo.",
+      "start": 38.011,
+      "end": 38.429
+    },
+    {
+      "text": "«Alburear»",
+      "start": 38.87,
+      "end": 39.799
+    },
+    {
+      "text": "pertenece",
+      "start": 39.973,
+      "end": 40.519
+    },
+    {
+      "text": "a",
+      "start": 40.565,
+      "end": 40.588
+    },
+    {
+      "text": "una",
+      "start": 40.635,
+      "end": 40.786
+    },
+    {
+      "text": "tradición",
+      "start": 40.82,
+      "end": 41.285
+    },
+    {
+      "text": "mexicana",
+      "start": 41.331,
+      "end": 41.935
+    },
+    {
+      "text": "de",
+      "start": 42.028,
+      "end": 42.121
+    },
+    {
+      "text": "doble",
+      "start": 42.167,
+      "end": 42.399
+    },
+    {
+      "text": "sentido,",
+      "start": 42.434,
+      "end": 43.05
+    },
+    {
+      "text": "muchas",
+      "start": 43.293,
+      "end": 43.63
+    },
+    {
+      "text": "veces",
+      "start": 43.676,
+      "end": 43.909
+    },
+    {
+      "text": "pícara.",
+      "start": 43.955,
+      "end": 44.443
+    },
+    {
+      "text": "En",
+      "start": 44.884,
+      "end": 45.023
+    },
+    {
+      "text": "una",
+      "start": 45.093,
+      "end": 45.232
+    },
+    {
+      "text": "clase",
+      "start": 45.267,
+      "end": 45.604
+    },
+    {
+      "text": "C2",
+      "start": 45.72,
+      "end": 46.022
+    },
+    {
+      "text": "no",
+      "start": 46.266,
+      "end": 46.382
+    },
+    {
+      "text": "hace",
+      "start": 46.405,
+      "end": 46.533
+    },
+    {
+      "text": "falta",
+      "start": 46.579,
+      "end": 46.823
+    },
+    {
+      "text": "repetir",
+      "start": 46.869,
+      "end": 47.287
+    },
+    {
+      "text": "chistes",
+      "start": 47.357,
+      "end": 47.822
+    },
+    {
+      "text": "explícitos;",
+      "start": 47.88,
+      "end": 48.82
+    },
+    {
+      "text": "lo",
+      "start": 49.029,
+      "end": 49.11
+    },
+    {
+      "text": "importante",
+      "start": 49.168,
+      "end": 49.621
+    },
+    {
+      "text": "es",
+      "start": 49.644,
+      "end": 49.702
+    },
+    {
+      "text": "reconocer",
+      "start": 49.749,
+      "end": 50.236
+    },
+    {
+      "text": "cuándo",
+      "start": 50.318,
+      "end": 50.608
+    },
+    {
+      "text": "alguien",
+      "start": 50.666,
+      "end": 50.887
+    },
+    {
+      "text": "está",
+      "start": 50.933,
+      "end": 51.096
+    },
+    {
+      "text": "jugando",
+      "start": 51.142,
+      "end": 51.548
+    },
+    {
+      "text": "con",
+      "start": 51.595,
+      "end": 51.711
+    },
+    {
+      "text": "ambigüedad.",
+      "start": 51.757,
+      "end": 52.431
+    },
+    {
+      "text": "Si",
+      "start": 52.756,
+      "end": 52.953
+    },
+    {
+      "text": "puedes",
+      "start": 53,
+      "end": 53.301
+    },
+    {
+      "text": "«cachar",
+      "start": 53.325,
+      "end": 53.847
+    },
+    {
+      "text": "el",
+      "start": 53.928,
+      "end": 54.056
+    },
+    {
+      "text": "doble",
+      "start": 54.114,
+      "end": 54.346
+    },
+    {
+      "text": "sentido»",
+      "start": 54.393,
+      "end": 55.008
+    },
+    {
+      "text": "«luego",
+      "start": 55.055,
+      "end": 55.554
+    },
+    {
+      "text": "luego»,",
+      "start": 55.6,
+      "end": 56.134
+    },
+    {
+      "text": "entiendes",
+      "start": 56.343,
+      "end": 56.808
+    },
+    {
+      "text": "no",
+      "start": 56.866,
+      "end": 56.947
+    },
+    {
+      "text": "solo",
+      "start": 56.993,
+      "end": 57.214
+    },
+    {
+      "text": "las",
+      "start": 57.26,
+      "end": 57.377
+    },
+    {
+      "text": "palabras,",
+      "start": 57.435,
+      "end": 58.073
+    },
+    {
+      "text": "sino",
+      "start": 58.224,
+      "end": 58.514
+    },
+    {
+      "text": "el",
+      "start": 58.549,
+      "end": 58.596
+    },
+    {
+      "text": "subtexto",
+      "start": 58.642,
+      "end": 59.188
+    },
+    {
+      "text": "social.",
+      "start": 59.234,
+      "end": 59.803
+    },
+    {
+      "text": "Hay",
+      "start": 60.128,
+      "end": 60.325
+    },
+    {
+      "text": "grupos",
+      "start": 60.372,
+      "end": 60.72
+    },
+    {
+      "text": "que",
+      "start": 60.767,
+      "end": 60.848
+    },
+    {
+      "text": "«se",
+      "start": 60.871,
+      "end": 61.01
+    },
+    {
+      "text": "llevan",
+      "start": 61.034,
+      "end": 61.324
+    },
+    {
+      "text": "pesado».",
+      "start": 61.382,
+      "end": 62.067
+    },
+    {
+      "text": "Eso",
+      "start": 62.45,
+      "end": 62.717
+    },
+    {
+      "text": "puede",
+      "start": 62.763,
+      "end": 62.949
+    },
+    {
+      "text": "funcionar",
+      "start": 62.984,
+      "end": 63.46
+    },
+    {
+      "text": "si",
+      "start": 63.518,
+      "end": 63.611
+    },
+    {
+      "text": "todos",
+      "start": 63.669,
+      "end": 63.936
+    },
+    {
+      "text": "tienen",
+      "start": 63.959,
+      "end": 64.261
+    },
+    {
+      "text": "la",
+      "start": 64.296,
+      "end": 64.354
+    },
+    {
+      "text": "misma",
+      "start": 64.412,
+      "end": 64.691
+    },
+    {
+      "text": "confianza.",
+      "start": 64.726,
+      "end": 65.376
+    },
+    {
+      "text": "El",
+      "start": 65.817,
+      "end": 65.991
+    },
+    {
+      "text": "problema",
+      "start": 66.037,
+      "end": 66.467
+    },
+    {
+      "text": "aparece",
+      "start": 66.525,
+      "end": 66.908
+    },
+    {
+      "text": "con",
+      "start": 66.955,
+      "end": 67.106
+    },
+    {
+      "text": "la",
+      "start": 67.129,
+      "end": 67.187
+    },
+    {
+      "text": "frase",
+      "start": 67.245,
+      "end": 67.686
+    },
+    {
+      "text": "«se",
+      "start": 67.802,
+      "end": 68.104
+    },
+    {
+      "text": "lleva",
+      "start": 68.127,
+      "end": 68.499
+    },
+    {
+      "text": "y",
+      "start": 68.568,
+      "end": 68.603
+    },
+    {
+      "text": "no",
+      "start": 68.685,
+      "end": 68.766
+    },
+    {
+      "text": "se",
+      "start": 68.824,
+      "end": 68.894
+    },
+    {
+      "text": "aguanta»:",
+      "start": 68.928,
+      "end": 69.52
+    },
+    {
+      "text": "alguien",
+      "start": 69.962,
+      "end": 70.252
+    },
+    {
+      "text": "empuja",
+      "start": 70.298,
+      "end": 70.67
+    },
+    {
+      "text": "la",
+      "start": 70.716,
+      "end": 70.786
+    },
+    {
+      "text": "broma,",
+      "start": 70.832,
+      "end": 71.25
+    },
+    {
+      "text": "pero",
+      "start": 71.459,
+      "end": 71.668
+    },
+    {
+      "text": "se",
+      "start": 71.715,
+      "end": 71.773
+    },
+    {
+      "text": "ofende",
+      "start": 71.808,
+      "end": 72.144
+    },
+    {
+      "text": "cuando",
+      "start": 72.191,
+      "end": 72.388
+    },
+    {
+      "text": "le",
+      "start": 72.423,
+      "end": 72.481
+    },
+    {
+      "text": "contestan.",
+      "start": 72.527,
+      "end": 73.27
+    },
+    {
+      "text": "Ahí",
+      "start": 73.654,
+      "end": 74.095
+    },
+    {
+      "text": "«aguantar",
+      "start": 74.176,
+      "end": 74.768
+    },
+    {
+      "text": "vara»",
+      "start": 74.827,
+      "end": 75.21
+    },
+    {
+      "text": "se",
+      "start": 75.326,
+      "end": 75.442
+    },
+    {
+      "text": "vuelve",
+      "start": 75.5,
+      "end": 75.72
+    },
+    {
+      "text": "una",
+      "start": 75.744,
+      "end": 75.86
+    },
+    {
+      "text": "regla",
+      "start": 75.929,
+      "end": 76.185
+    },
+    {
+      "text": "implícita,",
+      "start": 76.208,
+      "end": 76.974
+    },
+    {
+      "text": "y",
+      "start": 77.253,
+      "end": 77.334
+    },
+    {
+      "text": "no",
+      "start": 77.427,
+      "end": 77.52
+    },
+    {
+      "text": "siempre",
+      "start": 77.578,
+      "end": 77.915
+    },
+    {
+      "text": "es",
+      "start": 77.938,
+      "end": 78.008
+    },
+    {
+      "text": "justa.",
+      "start": 78.066,
+      "end": 78.553
+    },
+    {
+      "text": "Cuando",
+      "start": 78.995,
+      "end": 79.331
+    },
+    {
+      "text": "alguien",
+      "start": 79.412,
+      "end": 79.703
+    },
+    {
+      "text": "«anda",
+      "start": 79.796,
+      "end": 80.132
+    },
+    {
+      "text": "de",
+      "start": 80.179,
+      "end": 80.248
+    },
+    {
+      "text": "llevado»,",
+      "start": 80.272,
+      "end": 80.875
+    },
+    {
+      "text": "conviene",
+      "start": 80.991,
+      "end": 81.398
+    },
+    {
+      "text": "no",
+      "start": 81.456,
+      "end": 81.676
+    },
+    {
+      "text": "«darle",
+      "start": 81.793,
+      "end": 82.361
+    },
+    {
+      "text": "cuerda»",
+      "start": 82.419,
+      "end": 82.919
+    },
+    {
+      "text": "si",
+      "start": 82.954,
+      "end": 83.07
+    },
+    {
+      "text": "ya",
+      "start": 83.128,
+      "end": 83.209
+    },
+    {
+      "text": "está",
+      "start": 83.232,
+      "end": 83.395
+    },
+    {
+      "text": "pasando",
+      "start": 83.453,
+      "end": 83.789
+    },
+    {
+      "text": "el",
+      "start": 83.813,
+      "end": 83.859
+    },
+    {
+      "text": "límite.",
+      "start": 83.882,
+      "end": 84.428
+    },
+    {
+      "text": "A",
+      "start": 84.939,
+      "end": 85.02
+    },
+    {
+      "text": "veces",
+      "start": 85.136,
+      "end": 85.38
+    },
+    {
+      "text": "una",
+      "start": 85.461,
+      "end": 85.601
+    },
+    {
+      "text": "persona",
+      "start": 85.647,
+      "end": 86.053
+    },
+    {
+      "text": "se",
+      "start": 86.123,
+      "end": 86.344
+    },
+    {
+      "text": "«pone",
+      "start": 86.495,
+      "end": 87.017
+    },
+    {
+      "text": "de",
+      "start": 87.052,
+      "end": 87.121
+    },
+    {
+      "text": "pechito»",
+      "start": 87.168,
+      "end": 87.818
+    },
+    {
+      "text": "sin",
+      "start": 87.865,
+      "end": 88.062
+    },
+    {
+      "text": "querer",
+      "start": 88.108,
+      "end": 88.41
+    },
+    {
+      "text": "y",
+      "start": 88.654,
+      "end": 88.747
+    },
+    {
+      "text": "el",
+      "start": 88.805,
+      "end": 88.875
+    },
+    {
+      "text": "grupo",
+      "start": 88.921,
+      "end": 89.188
+    },
+    {
+      "text": "aprovecha.",
+      "start": 89.211,
+      "end": 89.815
+    },
+    {
+      "text": "Pero",
+      "start": 90.326,
+      "end": 90.616
+    },
+    {
+      "text": "que",
+      "start": 90.674,
+      "end": 90.802
+    },
+    {
+      "text": "alguien",
+      "start": 90.871,
+      "end": 91.231
+    },
+    {
+      "text": "dé",
+      "start": 91.405,
+      "end": 91.556
+    },
+    {
+      "text": "la",
+      "start": 91.603,
+      "end": 91.649
+    },
+    {
+      "text": "oportunidad",
+      "start": 91.672,
+      "end": 92.381
+    },
+    {
+      "text": "no",
+      "start": 92.45,
+      "end": 92.601
+    },
+    {
+      "text": "significa",
+      "start": 92.648,
+      "end": 93.182
+    },
+    {
+      "text": "que",
+      "start": 93.228,
+      "end": 93.309
+    },
+    {
+      "text": "el",
+      "start": 93.333,
+      "end": 93.379
+    },
+    {
+      "text": "grupo",
+      "start": 93.414,
+      "end": 93.751
+    },
+    {
+      "text": "tenga",
+      "start": 93.809,
+      "end": 94.064
+    },
+    {
+      "text": "que",
+      "start": 94.134,
+      "end": 94.215
+    },
+    {
+      "text": "exprimirla",
+      "start": 94.25,
+      "end": 94.923
+    },
+    {
+      "text": "hasta",
+      "start": 94.993,
+      "end": 95.248
+    },
+    {
+      "text": "balconearlo.",
+      "start": 95.283,
+      "end": 96.014
+    },
+    {
+      "text": "«Hacerla",
+      "start": 96.456,
+      "end": 97.036
+    },
+    {
+      "text": "de",
+      "start": 97.083,
+      "end": 97.129
+    },
+    {
+      "text": "emoción»",
+      "start": 97.164,
+      "end": 97.71
+    },
+    {
+      "text": "puede",
+      "start": 97.768,
+      "end": 97.977
+    },
+    {
+      "text": "ser",
+      "start": 98.011,
+      "end": 98.128
+    },
+    {
+      "text": "gracioso",
+      "start": 98.174,
+      "end": 98.58
+    },
+    {
+      "text": "cuando",
+      "start": 98.627,
+      "end": 98.801
+    },
+    {
+      "text": "se",
+      "start": 98.847,
+      "end": 98.929
+    },
+    {
+      "text": "trata",
+      "start": 98.975,
+      "end": 99.277
+    },
+    {
+      "text": "de",
+      "start": 99.323,
+      "end": 99.393
+    },
+    {
+      "text": "contar",
+      "start": 99.451,
+      "end": 99.834
+    },
+    {
+      "text": "una",
+      "start": 99.892,
+      "end": 100.02
+    },
+    {
+      "text": "historia,",
+      "start": 100.043,
+      "end": 100.612
+    },
+    {
+      "text": "pero",
+      "start": 100.995,
+      "end": 101.193
+    },
+    {
+      "text": "pesado",
+      "start": 101.239,
+      "end": 101.715
+    },
+    {
+      "text": "cuando",
+      "start": 101.796,
+      "end": 102.028
+    },
+    {
+      "text": "se",
+      "start": 102.075,
+      "end": 102.168
+    },
+    {
+      "text": "usa",
+      "start": 102.214,
+      "end": 102.412
+    },
+    {
+      "text": "para",
+      "start": 102.458,
+      "end": 102.586
+    },
+    {
+      "text": "exhibir",
+      "start": 102.609,
+      "end": 102.946
+    },
+    {
+      "text": "a",
+      "start": 102.992,
+      "end": 103.016
+    },
+    {
+      "text": "alguien.",
+      "start": 103.074,
+      "end": 103.515
+    },
+    {
+      "text": "Lo",
+      "start": 104.026,
+      "end": 104.165
+    },
+    {
+      "text": "mismo",
+      "start": 104.211,
+      "end": 104.478
+    },
+    {
+      "text": "pasa",
+      "start": 104.525,
+      "end": 104.769
+    },
+    {
+      "text": "con",
+      "start": 104.827,
+      "end": 105.001
+    },
+    {
+      "text": "«agarrar",
+      "start": 105.245,
+      "end": 105.93
+    },
+    {
+      "text": "de",
+      "start": 105.988,
+      "end": 106.046
+    },
+    {
+      "text": "bajada»",
+      "start": 106.081,
+      "end": 106.708
+    },
+    {
+      "text": "y",
+      "start": 106.824,
+      "end": 106.94
+    },
+    {
+      "text": "«agarrar",
+      "start": 107.184,
+      "end": 107.892
+    },
+    {
+      "text": "de",
+      "start": 107.95,
+      "end": 108.019
+    },
+    {
+      "text": "barco»:",
+      "start": 108.054,
+      "end": 108.542
+    },
+    {
+      "text": "ya",
+      "start": 108.983,
+      "end": 109.111
+    },
+    {
+      "text": "no",
+      "start": 109.169,
+      "end": 109.239
+    },
+    {
+      "text": "es",
+      "start": 109.262,
+      "end": 109.308
+    },
+    {
+      "text": "una",
+      "start": 109.401,
+      "end": 109.54
+    },
+    {
+      "text": "ocurrencia",
+      "start": 109.564,
+      "end": 110.04
+    },
+    {
+      "text": "aislada,",
+      "start": 110.063,
+      "end": 110.539
+    },
+    {
+      "text": "sino",
+      "start": 110.655,
+      "end": 110.957
+    },
+    {
+      "text": "una",
+      "start": 111.015,
+      "end": 111.177
+    },
+    {
+      "text": "dinámica",
+      "start": 111.212,
+      "end": 111.735
+    },
+    {
+      "text": "donde",
+      "start": 111.758,
+      "end": 111.978
+    },
+    {
+      "text": "alguien",
+      "start": 112.037,
+      "end": 112.269
+    },
+    {
+      "text": "queda",
+      "start": 112.338,
+      "end": 112.536
+    },
+    {
+      "text": "abajo",
+      "start": 112.559,
+      "end": 112.989
+    },
+    {
+      "text": "y",
+      "start": 113.105,
+      "end": 113.174
+    },
+    {
+      "text": "los",
+      "start": 113.256,
+      "end": 113.406
+    },
+    {
+      "text": "demás",
+      "start": 113.441,
+      "end": 113.72
+    },
+    {
+      "text": "se",
+      "start": 113.743,
+      "end": 113.813
+    },
+    {
+      "text": "divierten",
+      "start": 113.848,
+      "end": 114.289
+    },
+    {
+      "text": "desde",
+      "start": 114.312,
+      "end": 114.509
+    },
+    {
+      "text": "arriba.",
+      "start": 114.544,
+      "end": 115.009
+    },
+    {
+      "text": "La",
+      "start": 115.52,
+      "end": 115.612
+    },
+    {
+      "text": "inteligencia",
+      "start": 115.647,
+      "end": 116.309
+    },
+    {
+      "text": "del",
+      "start": 116.332,
+      "end": 116.437
+    },
+    {
+      "text": "relajo",
+      "start": 116.483,
+      "end": 117.017
+    },
+    {
+      "text": "está",
+      "start": 117.133,
+      "end": 117.4
+    },
+    {
+      "text": "en",
+      "start": 117.446,
+      "end": 117.493
+    },
+    {
+      "text": "saber",
+      "start": 117.539,
+      "end": 117.806
+    },
+    {
+      "text": "cuándo",
+      "start": 117.864,
+      "end": 118.317
+    },
+    {
+      "text": "una",
+      "start": 118.828,
+      "end": 118.979
+    },
+    {
+      "text": "«puntada»",
+      "start": 119.002,
+      "end": 119.676
+    },
+    {
+      "text": "suma",
+      "start": 119.745,
+      "end": 120.244
+    },
+    {
+      "text": "y",
+      "start": 120.686,
+      "end": 120.802
+    },
+    {
+      "text": "cuándo",
+      "start": 120.895,
+      "end": 121.208
+    },
+    {
+      "text": "alguien",
+      "start": 121.278,
+      "end": 121.614
+    },
+    {
+      "text": "«se",
+      "start": 121.789,
+      "end": 122.218
+    },
+    {
+      "text": "pasa",
+      "start": 122.288,
+      "end": 122.543
+    },
+    {
+      "text": "de",
+      "start": 122.59,
+      "end": 122.648
+    },
+    {
+      "text": "listo».",
+      "start": 122.694,
+      "end": 123.217
+    },
+    {
+      "text": "«Botarse",
+      "start": 123.82,
+      "end": 124.459
+    },
+    {
+      "text": "una",
+      "start": 124.494,
+      "end": 124.598
+    },
+    {
+      "text": "puntada»",
+      "start": 124.645,
+      "end": 125.353
+    },
+    {
+      "text": "puede",
+      "start": 125.678,
+      "end": 125.922
+    },
+    {
+      "text": "levantar",
+      "start": 125.957,
+      "end": 126.328
+    },
+    {
+      "text": "el",
+      "start": 126.375,
+      "end": 126.421
+    },
+    {
+      "text": "ambiente,",
+      "start": 126.479,
+      "end": 127.141
+    },
+    {
+      "text": "pero",
+      "start": 127.35,
+      "end": 127.594
+    },
+    {
+      "text": "«dejarla",
+      "start": 127.744,
+      "end": 128.406
+    },
+    {
+      "text": "botando»",
+      "start": 128.453,
+      "end": 129.242
+    },
+    {
+      "text": "o",
+      "start": 129.486,
+      "end": 129.567
+    },
+    {
+      "text": "decir",
+      "start": 129.625,
+      "end": 129.95
+    },
+    {
+      "text": "«te",
+      "start": 130.159,
+      "end": 130.496
+    },
+    {
+      "text": "la",
+      "start": 130.566,
+      "end": 130.647
+    },
+    {
+      "text": "dejaste",
+      "start": 130.693,
+      "end": 131.1
+    },
+    {
+      "text": "botando»",
+      "start": 131.146,
+      "end": 131.808
+    },
+    {
+      "text": "también",
+      "start": 132.412,
+      "end": 132.737
+    },
+    {
+      "text": "revela",
+      "start": 132.795,
+      "end": 133.236
+    },
+    {
+      "text": "cómo",
+      "start": 133.747,
+      "end": 134.014
+    },
+    {
+      "text": "una",
+      "start": 134.084,
+      "end": 134.223
+    },
+    {
+      "text": "persona",
+      "start": 134.281,
+      "end": 134.618
+    },
+    {
+      "text": "se",
+      "start": 134.664,
+      "end": 134.745
+    },
+    {
+      "text": "volvió",
+      "start": 134.792,
+      "end": 135.198
+    },
+    {
+      "text": "blanco",
+      "start": 135.314,
+      "end": 135.697
+    },
+    {
+      "text": "fácil.",
+      "start": 135.755,
+      "end": 136.22
+    },
+    {
+      "text": "Ser",
+      "start": 136.603,
+      "end": 136.823
+    },
+    {
+      "text": "rápido",
+      "start": 136.893,
+      "end": 137.357
+    },
+    {
+      "text": "no",
+      "start": 137.485,
+      "end": 137.624
+    },
+    {
+      "text": "siempre",
+      "start": 137.671,
+      "end": 137.973
+    },
+    {
+      "text": "significa",
+      "start": 138.008,
+      "end": 138.542
+    },
+    {
+      "text": "ser",
+      "start": 138.588,
+      "end": 138.727
+    },
+    {
+      "text": "fino.",
+      "start": 138.785,
+      "end": 139.227
+    },
+    {
+      "text": "Para",
+      "start": 139.61,
+      "end": 139.877
+    },
+    {
+      "text": "cerrar",
+      "start": 139.912,
+      "end": 140.213
+    },
+    {
+      "text": "bien,",
+      "start": 140.248,
+      "end": 140.655
+    },
+    {
+      "text": "hay",
+      "start": 140.806,
+      "end": 140.945
+    },
+    {
+      "text": "que",
+      "start": 141.003,
+      "end": 141.073
+    },
+    {
+      "text": "nombrar",
+      "start": 141.131,
+      "end": 141.421
+    },
+    {
+      "text": "lo",
+      "start": 141.467,
+      "end": 141.537
+    },
+    {
+      "text": "que",
+      "start": 141.583,
+      "end": 141.653
+    },
+    {
+      "text": "pasó:",
+      "start": 141.7,
+      "end": 142.199
+    },
+    {
+      "text": "«te",
+      "start": 142.373,
+      "end": 142.663
+    },
+    {
+      "text": "dieron",
+      "start": 142.71,
+      "end": 142.953
+    },
+    {
+      "text": "cuerda»,",
+      "start": 143.011,
+      "end": 143.638
+    },
+    {
+      "text": "«te",
+      "start": 143.754,
+      "end": 144.022
+    },
+    {
+      "text": "pusiste",
+      "start": 144.08,
+      "end": 144.463
+    },
+    {
+      "text": "de",
+      "start": 144.486,
+      "end": 144.544
+    },
+    {
+      "text": "pechito»,",
+      "start": 144.59,
+      "end": 145.38
+    },
+    {
+      "text": "«lo",
+      "start": 145.473,
+      "end": 145.74
+    },
+    {
+      "text": "agarraron",
+      "start": 145.786,
+      "end": 146.204
+    },
+    {
+      "text": "de",
+      "start": 146.239,
+      "end": 146.297
+    },
+    {
+      "text": "botana»,",
+      "start": 146.332,
+      "end": 147.005
+    },
+    {
+      "text": "«lo",
+      "start": 147.028,
+      "end": 147.319
+    },
+    {
+      "text": "balconearon»",
+      "start": 147.365,
+      "end": 148.143
+    },
+    {
+      "text": "o",
+      "start": 148.236,
+      "end": 148.445
+    },
+    {
+      "text": "«le",
+      "start": 148.654,
+      "end": 148.956
+    },
+    {
+      "text": "tiraron",
+      "start": 149.014,
+      "end": 149.327
+    },
+    {
+      "text": "una",
+      "start": 149.374,
+      "end": 149.501
+    },
+    {
+      "text": "pedrada».",
+      "start": 149.559,
+      "end": 150.117
+    },
+    {
+      "text": "Y",
+      "start": 150.442,
+      "end": 150.535
+    },
+    {
+      "text": "si",
+      "start": 150.651,
+      "end": 150.755
+    },
+    {
+      "text": "alguien",
+      "start": 150.848,
+      "end": 151.057
+    },
+    {
+      "text": "pretende",
+      "start": 151.092,
+      "end": 151.486
+    },
+    {
+      "text": "no",
+      "start": 151.545,
+      "end": 151.614
+    },
+    {
+      "text": "entender,",
+      "start": 151.637,
+      "end": 152.218
+    },
+    {
+      "text": "«no",
+      "start": 152.346,
+      "end": 152.682
+    },
+    {
+      "text": "te",
+      "start": 152.752,
+      "end": 152.856
+    },
+    {
+      "text": "hagas",
+      "start": 152.915,
+      "end": 153.147
+    },
+    {
+      "text": "pato»",
+      "start": 153.216,
+      "end": 153.727
+    },
+    {
+      "text": "ayuda",
+      "start": 154.052,
+      "end": 154.424
+    },
+    {
+      "text": "a",
+      "start": 154.482,
+      "end": 154.505
+    },
+    {
+      "text": "cortar",
+      "start": 154.563,
+      "end": 154.888
+    },
+    {
+      "text": "la",
+      "start": 154.946,
+      "end": 154.993
+    },
+    {
+      "text": "evasión.",
+      "start": 155.016,
+      "end": 155.562
+    },
+    {
+      "text": "C2",
+      "start": 155.887,
+      "end": 156.281
+    },
+    {
+      "text": "no",
+      "start": 156.456,
+      "end": 156.583
+    },
+    {
+      "text": "es",
+      "start": 156.641,
+      "end": 156.711
+    },
+    {
+      "text": "solo",
+      "start": 156.734,
+      "end": 156.966
+    },
+    {
+      "text": "entender",
+      "start": 156.99,
+      "end": 157.361
+    },
+    {
+      "text": "el",
+      "start": 157.419,
+      "end": 157.489
+    },
+    {
+      "text": "chiste;",
+      "start": 157.535,
+      "end": 158.104
+    },
+    {
+      "text": "es",
+      "start": 158.22,
+      "end": 158.371
+    },
+    {
+      "text": "entender",
+      "start": 158.441,
+      "end": 158.789
+    },
+    {
+      "text": "el",
+      "start": 158.836,
+      "end": 158.905
+    },
+    {
+      "text": "costo",
+      "start": 158.975,
+      "end": 159.277
+    },
+    {
+      "text": "social",
+      "start": 159.323,
+      "end": 159.637
+    },
+    {
+      "text": "del",
+      "start": 159.672,
+      "end": 159.799
+    },
+    {
+      "text": "chiste.",
+      "start": 159.846,
+      "end": 160.542
+    }
+  ]
+}
