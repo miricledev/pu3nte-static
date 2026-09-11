@@ -9,11 +9,21 @@ export function PronounSelector({
   onChange: (value: string) => void;
   label?: string;
 }) {
+  const labels: Record<string, string> = {
+    yo: "yo",
+    tu: "tú",
+    elEllaUsted: "él / ella / usted",
+    nosotros: "nosotros",
+    vosotros: "vosotros",
+    ellosEllasUstedes: "ellos / ellas / ustedes",
+    form: "form",
+  };
+
   return (
     <label className="text-sm text-pu3nte-secondary">
       {label}
       <select className="mt-1 w-full rounded-md border border-white/10 bg-pu3nte-card p-2" value={value} onChange={(event) => onChange(event.target.value)}>
-        {persons.map((person) => <option key={person}>{person}</option>)}
+        {persons.map((person) => <option key={person} value={person}>{labels[person] ?? person}</option>)}
       </select>
     </label>
   );

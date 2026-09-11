@@ -19,6 +19,31 @@ import { getUiLanguage, uiText } from "../utils/uiText";
 import { NotFoundPage } from "./NotFoundPage";
 import type { EnglishVerb, SpanishPerson, SpanishTense, SpanishVerb } from "../types";
 
+const tenseLabels: Record<string, string> = {
+  present: "Present",
+  preterite: "Preterite",
+  imperfect: "Imperfect",
+  future: "Future",
+  conditional: "Conditional",
+  presentPerfect: "Present perfect",
+  pastPerfect: "Past perfect",
+  presentSubjunctive: "Present subjunctive",
+  imperfectSubjunctive: "Imperfect subjunctive",
+  imperative: "Imperative",
+  gerund: "Gerund",
+  pastParticiple: "Past participle",
+};
+
+const personLabels: Record<string, string> = {
+  yo: "yo",
+  tu: "tú",
+  elEllaUsted: "él / ella / usted",
+  nosotros: "nosotros",
+  vosotros: "vosotros",
+  ellosEllasUstedes: "ellos / ellas / ustedes",
+  form: "form",
+};
+
 function getVerbName(verb: SpanishVerb | EnglishVerb) {
   return verb.language === "spanish" ? verb.infinitive : verb.base;
 }
@@ -60,6 +85,10 @@ export function VerbTrainerPage() {
     verb.language === "spanish"
       ? verb.conjugations[tense as SpanishTense]?.[person as SpanishPerson]
       : verb.tensePatterns[tense]?.[person as keyof EnglishVerb["tensePatterns"][string]];
+  const acceptedAlternatives =
+    verb.language === "spanish"
+      ? verb.acceptedAlternatives?.[`${tense}:${person}`] ?? []
+      : [];
 
   function submit() {
     const activeSet = set!;
@@ -69,8 +98,10 @@ export function VerbTrainerPage() {
       setWasCorrect(false);
       return;
     }
-    const result = compareAnswers(answer, expected, { accentSensitive: "forgiving", punctuationSensitive: "ignore" });
-    const correct = result.isCorrect || result.isAlmostCorrect;
+    const result = [expected, ...acceptedAlternatives]
+      .map((candidate) => compareAnswers(answer, candidate, { accentSensitive: "forgiving", punctuationSensitive: "ignore" }))
+      .find((candidateResult) => candidateResult.isCorrect || candidateResult.isAlmostCorrect);
+    const correct = Boolean(result);
     setFeedback(correct ? `${copy.correct} ${expected}` : `${copy.answer}: ${expected}`);
     setWasCorrect(correct);
     setStats((value) => ({ correct: value.correct + (correct ? 1 : 0), incorrect: value.incorrect + (correct ? 0 : 1) }));
@@ -104,7 +135,7 @@ export function VerbTrainerPage() {
             <TenseSelector tenses={set.data.tenses} value={tense} onChange={setTense} label={copy.tense} />
             <PronounSelector persons={set.data.persons} value={person} onChange={setPerson} label={copy.person} />
           </div>
-          <VerbPromptCard prompt={`${person} / ${getVerbName(verb)} / ${tense}`} meta={`${verb.language} · ${verb.regularity}`} />
+          <VerbPromptCard prompt={`${personLabels[person] ?? person} / ${getVerbName(verb)} / ${tenseLabels[tense] ?? tense}`} meta={`${verb.language} · ${verb.regularity}`} />
           <ConjugationInput
             value={answer}
             onChange={setAnswer}

@@ -67,7 +67,7 @@ export type SentenceBuilderLesson = ContentMeta<"sentence-builder", {
   finalChallenge: string;
 }>;
 
-export type SpanishPerson = "yo" | "tu" | "elEllaUsted" | "nosotros" | "vosotros" | "ellosEllasUstedes";
+export type SpanishPerson = "yo" | "tu" | "elEllaUsted" | "nosotros" | "vosotros" | "ellosEllasUstedes" | "form";
 export type SpanishTense =
   | "present"
   | "preterite"

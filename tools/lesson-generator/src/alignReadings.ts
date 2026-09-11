@@ -244,6 +244,7 @@ function inferReadingVoiceEnv(reading: ReadingComprehension): string {
   if (id.includes("dominican-spanish")) return "ELEVENLABS_DOMINICAN_SPANISH_FEMALE_VOICE_ID";
   if (id.includes("peruvian-spanish")) return "ELEVENLABS_PERUVIAN_SPANISH_FEMALE_VOICE_ID";
   if (id.includes("mexican-spanish")) return "ELEVENLABS_MEXICAN_SPANISH_FEMALE_VOICE_ID";
+  if (id.includes("cuban-spanish")) return "ELEVENLABS_CUBAN_SPANISH_FEMALE_VOICE_ID";
   if (id.includes("american-english")) return "ELEVENLABS_AMERICAN_ENGLISH_FEMALE_VOICE_ID";
   if (reading.languageTarget === "english") return "ELEVENLABS_ENGLISH_FEMALE_VOICE_ID";
 
