@@ -1,0 +1,752 @@
+[
+  {
+    "text": "Moverse",
+    "start": 0,
+    "end": 0.406
+  },
+  {
+    "text": "en",
+    "start": 0.43,
+    "end": 0.488
+  },
+  {
+    "text": "Cuba",
+    "start": 0.546,
+    "end": 0.859
+  },
+  {
+    "text": "puede",
+    "start": 0.917,
+    "end": 1.173
+  },
+  {
+    "text": "empezar",
+    "start": 1.196,
+    "end": 1.544
+  },
+  {
+    "text": "con",
+    "start": 1.602,
+    "end": 1.707
+  },
+  {
+    "text": "una",
+    "start": 1.73,
+    "end": 1.834
+  },
+  {
+    "text": "pregunta",
+    "start": 1.881,
+    "end": 2.276
+  },
+  {
+    "text": "simple:",
+    "start": 2.334,
+    "end": 2.937
+  },
+  {
+    "text": "“¿dónde",
+    "start": 3.007,
+    "end": 3.39
+  },
+  {
+    "text": "está",
+    "start": 3.413,
+    "end": 3.564
+  },
+  {
+    "text": "la",
+    "start": 3.622,
+    "end": 3.68
+  },
+  {
+    "text": "parada?”.",
+    "start": 3.738,
+    "end": 4.4
+  },
+  {
+    "text": "Si",
+    "start": 5.7,
+    "end": 5.828
+  },
+  {
+    "text": "vas",
+    "start": 5.875,
+    "end": 6.002
+  },
+  {
+    "text": "en",
+    "start": 6.084,
+    "end": 6.13
+  },
+  {
+    "text": "bus,",
+    "start": 6.188,
+    "end": 6.525
+  },
+  {
+    "text": "dices",
+    "start": 6.641,
+    "end": 6.931
+  },
+  {
+    "text": "“voy",
+    "start": 6.954,
+    "end": 7.082
+  },
+  {
+    "text": "para",
+    "start": 7.117,
+    "end": 7.279
+  },
+  {
+    "text": "La",
+    "start": 7.314,
+    "end": 7.361
+  },
+  {
+    "text": "Habana",
+    "start": 7.396,
+    "end": 7.651
+  },
+  {
+    "text": "Vieja”",
+    "start": 7.697,
+    "end": 8.173
+  },
+  {
+    "text": "y",
+    "start": 8.22,
+    "end": 8.301
+  },
+  {
+    "text": "preguntas",
+    "start": 8.359,
+    "end": 8.963
+  },
+  {
+    "text": "“¿me",
+    "start": 9.021,
+    "end": 9.253
+  },
+  {
+    "text": "sirve",
+    "start": 9.288,
+    "end": 9.52
+  },
+  {
+    "text": "esta",
+    "start": 9.543,
+    "end": 9.706
+  },
+  {
+    "text": "guagua?”.",
+    "start": 9.741,
+    "end": 10.356
+  },
+  {
+    "text": "Así",
+    "start": 10.681,
+    "end": 10.925
+  },
+  {
+    "text": "no",
+    "start": 10.983,
+    "end": 11.041
+  },
+  {
+    "text": "te",
+    "start": 11.088,
+    "end": 11.146
+  },
+  {
+    "text": "montas",
+    "start": 11.192,
+    "end": 11.471
+  },
+  {
+    "text": "en",
+    "start": 11.517,
+    "end": 11.575
+  },
+  {
+    "text": "una",
+    "start": 11.622,
+    "end": 11.761
+  },
+  {
+    "text": "guagua",
+    "start": 11.796,
+    "end": 12.179
+  },
+  {
+    "text": "que",
+    "start": 12.225,
+    "end": 12.295
+  },
+  {
+    "text": "no",
+    "start": 12.353,
+    "end": 12.423
+  },
+  {
+    "text": "pasa",
+    "start": 12.469,
+    "end": 12.666
+  },
+  {
+    "text": "por",
+    "start": 12.713,
+    "end": 12.829
+  },
+  {
+    "text": "donde",
+    "start": 12.864,
+    "end": 13.038
+  },
+  {
+    "text": "necesitas.",
+    "start": 13.084,
+    "end": 13.862
+  },
+  {
+    "text": "Cuando",
+    "start": 14.245,
+    "end": 14.513
+  },
+  {
+    "text": "no",
+    "start": 14.559,
+    "end": 14.617
+  },
+  {
+    "text": "conoces",
+    "start": 14.663,
+    "end": 14.989
+  },
+  {
+    "text": "la",
+    "start": 15.035,
+    "end": 15.093
+  },
+  {
+    "text": "ruta,",
+    "start": 15.163,
+    "end": 15.499
+  },
+  {
+    "text": "necesitas",
+    "start": 15.569,
+    "end": 16.091
+  },
+  {
+    "text": "dos",
+    "start": 16.138,
+    "end": 16.266
+  },
+  {
+    "text": "frases",
+    "start": 16.324,
+    "end": 16.626
+  },
+  {
+    "text": "muy",
+    "start": 16.684,
+    "end": 16.835
+  },
+  {
+    "text": "claras:",
+    "start": 16.858,
+    "end": 17.392
+  },
+  {
+    "text": "“¿hasta",
+    "start": 17.636,
+    "end": 17.949
+  },
+  {
+    "text": "dónde",
+    "start": 17.984,
+    "end": 18.216
+  },
+  {
+    "text": "llega?”",
+    "start": 18.239,
+    "end": 18.785
+  },
+  {
+    "text": "y",
+    "start": 18.994,
+    "end": 19.203
+  },
+  {
+    "text": "“¿en",
+    "start": 19.226,
+    "end": 19.389
+  },
+  {
+    "text": "qué",
+    "start": 19.447,
+    "end": 19.528
+  },
+  {
+    "text": "parada",
+    "start": 19.574,
+    "end": 19.841
+  },
+  {
+    "text": "me",
+    "start": 19.888,
+    "end": 19.958
+  },
+  {
+    "text": "bajo?”.",
+    "start": 20.004,
+    "end": 20.538
+  },
+  {
+    "text": "También",
+    "start": 20.817,
+    "end": 21.119
+  },
+  {
+    "text": "puedes",
+    "start": 21.165,
+    "end": 21.386
+  },
+  {
+    "text": "pedir",
+    "start": 21.432,
+    "end": 21.664
+  },
+  {
+    "text": "ayuda:",
+    "start": 21.699,
+    "end": 22.268
+  },
+  {
+    "text": "“me",
+    "start": 22.291,
+    "end": 22.512
+  },
+  {
+    "text": "avisa",
+    "start": 22.535,
+    "end": 22.779
+  },
+  {
+    "text": "cuando",
+    "start": 22.825,
+    "end": 23.046
+  },
+  {
+    "text": "lleguemos”.",
+    "start": 23.069,
+    "end": 23.8
+  },
+  {
+    "text": "Esa",
+    "start": 24.184,
+    "end": 24.416
+  },
+  {
+    "text": "frase",
+    "start": 24.474,
+    "end": 24.753
+  },
+  {
+    "text": "suena",
+    "start": 24.799,
+    "end": 25.031
+  },
+  {
+    "text": "sencilla,",
+    "start": 25.078,
+    "end": 25.681
+  },
+  {
+    "text": "amable",
+    "start": 25.751,
+    "end": 26.204
+  },
+  {
+    "text": "y",
+    "start": 26.25,
+    "end": 26.32
+  },
+  {
+    "text": "práctica.",
+    "start": 26.39,
+    "end": 27.04
+  },
+  {
+    "text": "A",
+    "start": 27.365,
+    "end": 27.435
+  },
+  {
+    "text": "veces",
+    "start": 27.504,
+    "end": 27.748
+  },
+  {
+    "text": "la",
+    "start": 27.795,
+    "end": 27.853
+  },
+  {
+    "text": "guagua",
+    "start": 27.899,
+    "end": 28.178
+  },
+  {
+    "text": "está",
+    "start": 28.201,
+    "end": 28.375
+  },
+  {
+    "text": "llena.",
+    "start": 28.41,
+    "end": 28.898
+  },
+  {
+    "text": "Si",
+    "start": 29.176,
+    "end": 29.315
+  },
+  {
+    "text": "“no",
+    "start": 29.339,
+    "end": 29.432
+  },
+  {
+    "text": "cabe",
+    "start": 29.478,
+    "end": 29.664
+  },
+  {
+    "text": "nadie",
+    "start": 29.699,
+    "end": 29.942
+  },
+  {
+    "text": "más”,",
+    "start": 30,
+    "end": 30.337
+  },
+  {
+    "text": "puedes",
+    "start": 30.407,
+    "end": 30.697
+  },
+  {
+    "text": "decir",
+    "start": 30.732,
+    "end": 31.115
+  },
+  {
+    "text": "“espero",
+    "start": 31.161,
+    "end": 31.545
+  },
+  {
+    "text": "el",
+    "start": 31.568,
+    "end": 31.614
+  },
+  {
+    "text": "próximo”.",
+    "start": 31.661,
+    "end": 32.299
+  },
+  {
+    "text": "Si",
+    "start": 32.45,
+    "end": 32.566
+  },
+  {
+    "text": "necesitas",
+    "start": 32.613,
+    "end": 33.019
+  },
+  {
+    "text": "otra",
+    "start": 33.077,
+    "end": 33.228
+  },
+  {
+    "text": "opción,",
+    "start": 33.251,
+    "end": 33.681
+  },
+  {
+    "text": "puedes",
+    "start": 33.716,
+    "end": 33.994
+  },
+  {
+    "text": "“coger",
+    "start": 34.018,
+    "end": 34.285
+  },
+  {
+    "text": "un",
+    "start": 34.343,
+    "end": 34.389
+  },
+  {
+    "text": "almendrón”.",
+    "start": 34.447,
+    "end": 35.109
+  },
+  {
+    "text": "Antes",
+    "start": 35.55,
+    "end": 35.875
+  },
+  {
+    "text": "de",
+    "start": 35.898,
+    "end": 35.945
+  },
+  {
+    "text": "montarte,",
+    "start": 35.991,
+    "end": 36.56
+  },
+  {
+    "text": "pregunta",
+    "start": 36.618,
+    "end": 37.233
+  },
+  {
+    "text": "“¿esto",
+    "start": 37.35,
+    "end": 37.768
+  },
+  {
+    "text": "va",
+    "start": 37.814,
+    "end": 37.907
+  },
+  {
+    "text": "para…?”",
+    "start": 37.953,
+    "end": 38.511
+  },
+  {
+    "text": "y",
+    "start": 38.754,
+    "end": 38.929
+  },
+  {
+    "text": "“¿cuánto",
+    "start": 38.987,
+    "end": 39.37
+  },
+  {
+    "text": "es",
+    "start": 39.393,
+    "end": 39.439
+  },
+  {
+    "text": "hasta…?”.",
+    "start": 39.497,
+    "end": 40.136
+  },
+  {
+    "text": "En",
+    "start": 40.577,
+    "end": 40.716
+  },
+  {
+    "text": "un",
+    "start": 40.786,
+    "end": 40.856
+  },
+  {
+    "text": "almendrón",
+    "start": 40.902,
+    "end": 41.401
+  },
+  {
+    "text": "o",
+    "start": 41.529,
+    "end": 41.61
+  },
+  {
+    "text": "una",
+    "start": 41.657,
+    "end": 41.808
+  },
+  {
+    "text": "guagua",
+    "start": 41.854,
+    "end": 42.145
+  },
+  {
+    "text": "llena,",
+    "start": 42.168,
+    "end": 42.586
+  },
+  {
+    "text": "el",
+    "start": 42.655,
+    "end": 42.795
+  },
+  {
+    "text": "espacio",
+    "start": 42.853,
+    "end": 43.189
+  },
+  {
+    "text": "puede",
+    "start": 43.224,
+    "end": 43.433
+  },
+  {
+    "text": "ser",
+    "start": 43.468,
+    "end": 43.584
+  },
+  {
+    "text": "pequeño.",
+    "start": 43.642,
+    "end": 44.258
+  },
+  {
+    "text": "Puedes",
+    "start": 44.583,
+    "end": 44.908
+  },
+  {
+    "text": "decir",
+    "start": 44.943,
+    "end": 45.291
+  },
+  {
+    "text": "“vamos",
+    "start": 45.326,
+    "end": 45.697
+  },
+  {
+    "text": "apretados”,",
+    "start": 45.755,
+    "end": 46.417
+  },
+  {
+    "text": "pero",
+    "start": 46.533,
+    "end": 46.719
+  },
+  {
+    "text": "cuando",
+    "start": 46.742,
+    "end": 46.951
+  },
+  {
+    "text": "llega",
+    "start": 46.974,
+    "end": 47.148
+  },
+  {
+    "text": "tu",
+    "start": 47.195,
+    "end": 47.265
+  },
+  {
+    "text": "lugar,",
+    "start": 47.311,
+    "end": 47.682
+  },
+  {
+    "text": "necesitas",
+    "start": 47.764,
+    "end": 48.24
+  },
+  {
+    "text": "hablar",
+    "start": 48.286,
+    "end": 48.518
+  },
+  {
+    "text": "claro:",
+    "start": 48.565,
+    "end": 49.064
+  },
+  {
+    "text": "“permiso,",
+    "start": 49.18,
+    "end": 49.923
+  },
+  {
+    "text": "que",
+    "start": 49.97,
+    "end": 50.063
+  },
+  {
+    "text": "me",
+    "start": 50.121,
+    "end": 50.202
+  },
+  {
+    "text": "bajo”.",
+    "start": 50.237,
+    "end": 50.724
+  },
+  {
+    "text": "Si",
+    "start": 51.328,
+    "end": 51.433
+  },
+  {
+    "text": "el",
+    "start": 51.467,
+    "end": 51.514
+  },
+  {
+    "text": "punto",
+    "start": 51.572,
+    "end": 51.804
+  },
+  {
+    "text": "exacto",
+    "start": 51.827,
+    "end": 52.199
+  },
+  {
+    "text": "es",
+    "start": 52.222,
+    "end": 52.268
+  },
+  {
+    "text": "ahí,",
+    "start": 52.35,
+    "end": 52.675
+  },
+  {
+    "text": "dices",
+    "start": 52.791,
+    "end": 53.209
+  },
+  {
+    "text": "“aquí",
+    "start": 53.244,
+    "end": 53.511
+  },
+  {
+    "text": "mismo",
+    "start": 53.569,
+    "end": 53.801
+  },
+  {
+    "text": "me",
+    "start": 53.847,
+    "end": 53.929
+  },
+  {
+    "text": "bajo”.",
+    "start": 53.975,
+    "end": 54.799
+  }
+]
