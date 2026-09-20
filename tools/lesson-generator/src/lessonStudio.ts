@@ -319,6 +319,7 @@ type SpecialCourseTopic = {
   generation: "gen1" | "gen2" | "gen3";
   topic: string;
   objective: string;
+  contextText?: string;
 };
 
 function topicId(language: LessonTopic["language"], level: LessonTopic["level"], index: number, topic: string): string {
@@ -337,6 +338,180 @@ function slugText(text: string): string {
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
+}
+
+type Gen3SituationContext = {
+  pattern: RegExp;
+  background: string;
+  socialStakes: string;
+  learnerLens: string;
+};
+
+const gen3SituationContexts: Gen3SituationContext[] = [
+  {
+    pattern: /coffee farm|coffee culture|tinto|cafecito|ventanita|ordering coffee|coffee habits/i,
+    background: "The cultural background here is coffee as a social ritual, not just a drink: quick check-ins, hospitality, taste, local pride, pauses in the day, and the difference between buying coffee and sharing a moment.",
+    socialStakes: "Coffee scenes can be casual, professional, touristic, or intimate depending on who is speaking. The learner needs to know how to ask, react, compare, and show interest without sounding like they are giving a review from outside the culture.",
+    learnerLens: "Frame this lesson around coffee as interaction: offering, accepting, asking about taste, showing appreciation, and using the pause to build connection.",
+  },
+  {
+    pattern: /beach|coast|coastal|malecón|malecón|luquillo|isla verde|costa del sol|beach day|beach trip|coast trip/i,
+    background: "The cultural background here is a beach or coastal plan as a group social event: transport, heat, food, music, money, safety, crowds, and different expectations about how relaxed or organised the day should be.",
+    socialStakes: "Beach plans often reveal group dynamics. Someone may be worried about cost, timing, parking, tourists, safety, or who is bringing what. The learner needs language for practical coordination without killing the mood.",
+    learnerLens: "Frame this lesson around planning a shared day out: agree on logistics, handle small problems, respect local norms, and keep the group feeling easy.",
+  },
+  {
+    pattern: /apartment|housing|rent|neighbourhood|neighborhood|barrio|district|living situation|where to live/i,
+    background: "The cultural background here is choosing where to live: neighbourhood reputation, safety, transport, noise, price, status, convenience, and what locals imply when they describe an area.",
+    socialStakes: "Housing talk can carry assumptions about class, security, lifestyle, and belonging. The learner needs to ask practical questions without sounding judgemental, naïve, or overly suspicious.",
+    learnerLens: "Frame this lesson around evaluating a place: ask about daily life, listen for implied warnings, compare trade-offs, and speak respectfully about neighbourhoods.",
+  },
+  {
+    pattern: /football|fútbol|baseball|basketball|match|rivalry|stadium|game|clásico|classic|watch-party|lucha libre|team/i,
+    background: "The cultural background here is sport as group identity: loyalty, teasing, superstition, dramatic reactions, snacks, family or friend rituals, and the emotional swing between celebration and frustration.",
+    socialStakes: "Sports conversations are playful but can heat up fast. The learner needs to read when banter is friendly, when rivalry is becoming personal, and how to react without sounding flat or accidentally disrespectful.",
+    learnerLens: "Frame this lesson around watching with others: joining the excitement, reacting naturally, teasing lightly, and backing off when the mood changes.",
+  },
+  {
+    pattern: /food|meal|restaurant|taco|arepa|tinto|fruit|market|stall|snack|coffee|mate|asado|milanesa|empanada|parrilla|pizza|panader|yape|colmado|fonda|chifa|ceviche|pisco|paladar|ventanita|tapas|jamón|bodega|lechón|mofongo|kiosko|kiosk|street[- ]?food|salsa|spicy/i,
+    background: "The cultural background here is everyday food culture: quick ordering, trusted recommendations, portion expectations, price checks, local pride, and the tiny bits of politeness that make a transaction feel human instead of touristy.",
+    socialStakes: "Food scenes often look simple, but they carry social signals. The learner has to know when to be direct, when to sound warm, how to react to a recommendation, and how to refuse or change an order without making the interaction cold.",
+    learnerLens: "Frame this lesson around the rhythm of the food situation: greeting, choosing, asking, reacting, paying, and leaving on good terms.",
+  },
+  {
+    pattern: /transmilenio|subte|metro|combi|corredor|metropolitano|guagua|almendrón|público|transport|traffic|delay|route|directions|train|bus|ride-share|station|getting around|subway|rainy afternoon|bike|bikes|ciclovía|parada|colectivo|pesero|micro|taxi|moto-concho|público/i,
+    background: "The cultural background here is movement through the city: crowds, timing, informal directions, last-minute changes, and the shared frustration of transport not always going smoothly.",
+    socialStakes: "Transport language is rarely just about geography. People need to explain delays without sounding careless, ask strangers for help without sounding stiff, and update friends in a way that feels natural under pressure.",
+    learnerLens: "Frame this lesson around the real sequence of getting somewhere: asking the route, confirming the stop, dealing with delay, updating someone, and recovering the plan.",
+  },
+  {
+    pattern: /carnaval|carnival|feria|semana santa|holy week|velitas|día de muertos|christmas|parranda|festival|fiestas patronales|street party|celebration|new year|quinceañera|holiday/i,
+    background: "The cultural background here is a public or family celebration where language is tied to belonging: invitations, noise, food, clothing, music, crowds, emotion, and the pressure to participate correctly.",
+    socialStakes: "Celebrations create social obligations. The learner needs to understand how people invite, include, tease, excuse themselves, show respect, and avoid behaving like a spectator at something that matters to others.",
+    learnerLens: "Frame this lesson around joining the event respectfully: making plans, asking what is expected, reacting to the atmosphere, and knowing when to step back.",
+  },
+  {
+    pattern: /family|familia|family lunch|family dinner|family gathering|holiday gathering|grandparent|abuela|sunday pasta lunch|comida familiar|pressure from relatives|family pressure/i,
+    background: "The cultural background here is family closeness: food, advice, teasing, repeated questions, pressure to stay longer, and the expectation that warmth matters even when someone needs a boundary.",
+    socialStakes: "Family conversations can switch quickly between affection and pressure. The learner needs phrases that sound respectful, not robotic, especially when accepting food, refusing more, answering personal questions, or leaving without seeming rude.",
+    learnerLens: "Frame this lesson around navigating closeness: greet warmly, respond to attention, handle pressure, soften refusals, and preserve the relationship.",
+  },
+  {
+    pattern: /money|bill|bills|split|splitting|price|prices|\bcosts?\b|rent|tip|propina|pay|payment|yape|cash|card|bargain|negotia|budget|debt|owe|loan|lana|feria|lucas|cuarto|chancha|vaquita/i,
+    background: "The cultural background here is money as a social topic, not just a practical one: who pays, who is short, who offers, who feels embarrassed, and how people protect dignity while solving the cost.",
+    socialStakes: "Money talk can easily sound rude, cheap, pushy, or entitled. The learner needs to practise soft directness: naming the problem, proposing a fair fix, accepting help, and closing the topic without awkwardness.",
+    learnerLens: "Frame this lesson around fairness and face-saving: explain the cost, suggest a split, ask for help carefully, and confirm that everyone is okay.",
+  },
+  {
+    pattern: /music|salsa|bachata|merengue|reggaetón|reggaeton|flamenco|peña|karaoke|dance|dancing|cumbia|champeta|concierto|concert|tango|vallenato|son|timba|bomba|plena/i,
+    background: "The cultural background here is music as social language: taste, identity, memory, dancing, invitations, flirtation, and the difference between enjoying the scene and pretending to understand it.",
+    socialStakes: "Music situations test confidence. The learner may need to accept or refuse a dance, comment on a song, show curiosity, handle teasing, or talk about emotion without turning the moment into a classroom explanation.",
+    learnerLens: "Frame this lesson around participation: react to the music, ask naturally, join if invited, refuse kindly, and understand the social meaning around the song or dance.",
+  },
+  {
+    pattern: /accent|identity|diaspora|class|status|regional|stereotype|pride|prejudice|indirect|subtext|register|code-switch|spanglish|room|socially|boundary|expectation|foreignness|belonging|outsider|local|privilege|signals/i,
+    background: "The cultural background here is social interpretation: people are not only listening to words, but also accent, register, neighbourhood references, humour, confidence, and whether someone sounds respectful or unaware.",
+    socialStakes: "These topics are sensitive because a small phrase can sound curious, judgemental, naïve, classist, or too familiar. The learner needs to practise humility, precision, and restraint rather than collecting colourful phrases.",
+    learnerLens: "Frame this lesson around reading the room: notice who is speaking, what relationship they have, what is implied, and what should not be said too directly.",
+  },
+  {
+    pattern: /dating|flirt|flirting|jealousy|friend group|jealous|compliment|attraction|romantic|party|seduction|consent|signals|desire/i,
+    background: "The cultural background here is attraction inside a real social setting: friends watching, indirect signals, teasing, uncertainty, reputation, and the need to keep dignity on both sides.",
+    socialStakes: "Romantic language is risky because confidence can become pressure. The learner needs to practise interest, humour, refusal, consent, and backing off gracefully when the other person is not clearly comfortable.",
+    learnerLens: "Frame this lesson around ethical social reading: notice signals, avoid assumptions, ask clearly when needed, and keep the interaction easy to exit.",
+  },
+  {
+    pattern: /office|work|coworker|professional|client|workplace|service complaint|complaint|bureaucracy|paperwork|delivery|service|app order|hierarchy|networking|persuading|objection/i,
+    background: "The cultural background here is practical pressure in work or service situations: people need results, but they also need tone, relationship management, and a way to push without sounding aggressive.",
+    socialStakes: "A complaint, negotiation, or professional ask can fail if it is too blunt or too vague. The learner needs phrases for polite pressure, clear limits, follow-up, and repair when something goes wrong.",
+    learnerLens: "Frame this lesson around getting something done: state the issue, protect the relationship, clarify responsibility, and agree on the next step.",
+  },
+  {
+    pattern: /safety|security|risk|caution|paranoid|hurricane|outage|power|limited supplies|scarcity|daily obstacles|public-service failure|crisis/i,
+    background: "The cultural background here is everyday risk management: people share advice, warnings, workarounds, and emotional reactions while trying not to sound dramatic or naïve.",
+    socialStakes: "These conversations require balance. The learner needs to talk about precautions, inconvenience, fear, fatigue, and practical action without exaggerating, judging locals, or making the topic heavier than the situation requires.",
+    learnerLens: "Frame this lesson around practical realism: describe the problem, ask local advice, show empathy, and move toward a workable plan.",
+  },
+  {
+    pattern: /politic|disagreement|debate|tension|conflict|repair|slight|heated|argument|drama|gossip|rumour|rumor|group chat|public embarrassment|de-escalating|blame/i,
+    background: "The cultural background here is conflict inside a relationship or group: people manage pride, witnesses, indirect comments, alliances, silence, apology, and the need to return to normal afterwards.",
+    socialStakes: "Conflict language is not only about being correct. The learner needs to recognise when directness helps, when it humiliates someone, when humour is unsafe, and how to repair without making the situation bigger.",
+    learnerLens: "Frame this lesson around de-escalation: identify the real issue, lower the temperature, avoid public shaming, and offer a way back to trust.",
+  },
+  {
+    pattern: /tourism|tourist|visitor|beach|coast|housing|gentrification|local frustration|migration|return|abroad|distance|diaspora family|island|mainland/i,
+    background: "The cultural background here is place, belonging, and the tension between visitors, locals, family, money, opportunity, and identity.",
+    socialStakes: "These conversations can become sensitive because people may hear judgement, privilege, nostalgia, or outsider assumptions. The learner needs to ask carefully, avoid flattening the issue, and let local experience lead.",
+    learnerLens: "Frame this lesson around respectful curiosity: listen first, avoid stereotypes, name uncertainty, and talk about place without acting like an expert.",
+  },
+  {
+    pattern: /humour|humor|banter|irony|teasing|joking|joke|sarcasm|double meaning|albur|carrilla|chacota|recocha|provocation|crosses the line|near the line/i,
+    background: "The cultural background here is humour as social bonding: jokes can show closeness, test confidence, hide criticism, or expose someone depending on timing and relationship.",
+    socialStakes: "Humour is one of the easiest places for learners to misread the room. They need to know when to play along, when to soften, when to apologise, and when a joke has stopped being harmless.",
+    learnerLens: "Frame this lesson around calibration: notice who is laughing, who is uncomfortable, how public the joke is, and what repair phrase keeps dignity intact.",
+  },
+  {
+    pattern: /story|storytelling|chaotic|suspense|callbacks|punchlines|digressions|reflective story/i,
+    background: "The cultural background here is storytelling as performance: pacing, exaggeration, callbacks, reactions, pauses, and emotional colour matter as much as the facts.",
+    socialStakes: "A good story has to fit the room. The learner needs to know how to build suspense, signal the point, include local reactions, and avoid overexplaining every cultural detail.",
+    learnerLens: "Frame this lesson around narrative rhythm: set the scene, build the problem, react naturally, land the point, and leave space for others to respond.",
+  },
+];
+
+function getGen3SituationContext(topic: string, objective: string): Gen3SituationContext {
+  const searchableText = `${topic} ${objective}`;
+  const priorityMatches: Array<[RegExp, string]> = [
+    [/family|familia|family lunch|family dinner|family gathering|holiday gathering|grandparent|abuela|sunday pasta lunch|comida familiar|pressure from relatives|family pressure/i, "family|familia"],
+    [/dating|flirt|flirting|jealousy|friend group|jealous|compliment|attraction|romantic|seduction|consent|signals|desire/i, "dating|flirt"],
+    [/politic|disagreement|debate|tension|conflict|repair|slight|heated|argument|drama|gossip|rumour|rumor|group chat|public embarrassment|de-escalating|blame/i, "politic|disagreement"],
+    [/humour|humor|banter|irony|teasing|joking|joke|sarcasm|double meaning|albur|carrilla|chacota|recocha|provocation|crosses the line|near the line/i, "humour|humor"],
+    [/tourism|tourist|visitor|housing|gentrification|local frustration|migration|return|abroad|distance|diaspora family|island|mainland/i, "tourism|tourist"],
+  ];
+
+  for (const [pattern, sourceNeedle] of priorityMatches) {
+    if (pattern.test(searchableText)) {
+      const context = gen3SituationContexts.find((situationContext) => situationContext.pattern.source.includes(sourceNeedle));
+
+      if (context) {
+        return context;
+      }
+    }
+  }
+
+  return gen3SituationContexts.find((context) => context.pattern.test(searchableText)) ?? {
+    pattern: /.*/i,
+    background: "The cultural background here is the specific social scene named in the lesson: what people are doing, what relationship they have, what pressure exists, and what would make the interaction feel natural instead of scripted.",
+    socialStakes: "The learner should understand the situation before learning the phrases. That means noticing the setting, the stakes, the expected behaviour, and the difference between sounding fluent and sounding socially aware.",
+    learnerLens: "Frame this lesson around the exact situation: what starts the interaction, what can go wrong, what tone protects the relationship, and what the learner should be able to do by the end.",
+  };
+}
+
+function getGen3LevelFrame(level: SpecialCourseLevel): string {
+  const levelFrames: Record<SpecialCourseLevel, string> = {
+    B1: "At B1, keep the context practical and concrete: who is speaking, where they are, what they need, and which simple phrases help them participate without freezing.",
+    B2: "At B2, add the social layer: expectations, inconvenience, mild pressure, preferences, and the difference between a technically correct sentence and a natural one.",
+    C1: "At C1, focus on nuance: indirect meaning, register, embarrassment, hierarchy, humour, and the moments where a literal translation would sound socially wrong.",
+    C2: "At C2, focus on near-native judgement: subtext, social risk, dignity, timing, double meanings, and how to manage tension without flattening the culture.",
+  };
+
+  return levelFrames[level];
+}
+
+function getGen3ContextText(course: SpecialCourse, level: SpecialCourseLevel, topic: string, objective: string): string {
+  const cleanObjective = objective.replace(/[.。]+\s*$/, "");
+  const lowerObjective = cleanObjective.charAt(0).toLowerCase() + cleanObjective.slice(1);
+  const situationContext = getGen3SituationContext(topic, objective);
+  const levelFrame = getGen3LevelFrame(level);
+
+  return [
+    `[CONTEXT] ${level} | ${topic}`,
+    "",
+    `This context page is for **${topic}** in ${course.label}. It should not explain ${course.label} in general; it should prepare learners for this exact situation. ${situationContext.background} In this lesson, the speaking activity helps learners ${lowerObjective}.`,
+    "",
+    `${situationContext.socialStakes} ${levelFrame}`,
+    "",
+    `${situationContext.learnerLens} Before starting, tell students to watch three things: the relationship between the speakers, the pressure in the scene, and the tone that keeps the interaction culturally appropriate. The goal is not to memorise trivia; it is to understand the background well enough to speak naturally when this situation happens in real life.`,
+  ].join("\n");
 }
 
 function getSpecialCourses(): SpecialCourse[] {
@@ -1024,13 +1199,14 @@ function getSpecialCourseTopics(): SpecialCourseTopic[] {
       ? (Object.entries(gen3TopicsByLevel) as Array<[SpecialCourseLevel, Array<[string, string]>]>).flatMap(([level, topics]) =>
           topics.map(([topic, objective], index) => ({
             id: `${course.id}-gen3-${level.toLowerCase()}-${index + 1}-${slugText(topic)}`,
-            courseId: course.id,
-            level,
-            generation: "gen3" as const,
-            topic,
-            objective,
-          })),
-        )
+          courseId: course.id,
+          level,
+          generation: "gen3" as const,
+          topic,
+          objective,
+          contextText: getGen3ContextText(course, level, topic, objective),
+        })),
+      )
       : [];
 
     return [...sharedTopics, ...cultureTopics];
@@ -1982,6 +2158,19 @@ function pageHtml(): string {
         margin-top: 12px;
       }
 
+      select {
+        appearance: none;
+        color-scheme: dark;
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+      }
+
+      select option,
+      select optgroup {
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+      }
+
       pre {
         margin: 0;
         padding: 16px;
@@ -2196,9 +2385,34 @@ function pageHtml(): string {
         margin-top: 4px;
       }
 
+      .topic-content {
+        min-width: 0;
+      }
+
+      .topic-title-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
       .topic-title {
         font-weight: 800;
         color: var(--text);
+      }
+
+      .copy-context-button {
+        flex: 0 0 auto;
+        border-color: rgba(0, 200, 255, 0.38);
+        background: rgba(0, 200, 255, 0.1);
+        color: #e9f8ff;
+        padding: 7px 9px;
+        font-size: 12px;
+        line-height: 1;
+      }
+
+      .copy-context-button:hover {
+        background: rgba(0, 200, 255, 0.18);
       }
 
       .topic-meta {
@@ -2999,14 +3213,20 @@ function pageHtml(): string {
 
         list.innerHTML = filtered.map((topic) => {
           const checked = topic.id === selectedSpecialTopicId ? " checked" : "";
-          return '<label class="topic-row">' +
-            '<input type="checkbox" data-special-topic-id="' + escapeHtml(topic.id) + '"' + checked + ' />' +
-            '<div>' +
-              '<div class="topic-title">' + escapeHtml(topic.topic) + '</div>' +
+          const copyButton = topic.contextText
+            ? '<button type="button" class="copy-context-button" data-context-topic-id="' + escapeHtml(topic.id) + '">Copy context</button>'
+            : "";
+          return '<div class="topic-row">' +
+            '<input type="checkbox" aria-label="Select ' + escapeHtml(topic.topic) + '" data-special-topic-id="' + escapeHtml(topic.id) + '"' + checked + ' />' +
+            '<div class="topic-content">' +
+              '<div class="topic-title-row">' +
+                '<div class="topic-title">' + escapeHtml(topic.topic) + '</div>' +
+                copyButton +
+              '</div>' +
               '<div class="topic-meta">' + escapeHtml(course.label + " · " + topic.level) + '</div>' +
               '<div class="topic-objective">' + escapeHtml(topic.objective) + '</div>' +
             '</div>' +
-          '</label>';
+          '</div>';
         }).join("") || (level === "B1" && speakingFormat !== "sentence-builder"
           ? '<div class="note">B1 special-course lessons are only available when Speaking lesson format is set to 10-min Cumulative Sentence Builder speaking drill.</div>'
           : '<div class="note">No dialect/accent lessons match these filters.</div>');
@@ -3024,6 +3244,21 @@ function pageHtml(): string {
             renderTopics();
             renderSpecialTopics();
             updatePromptPreview();
+          });
+        });
+
+        list.querySelectorAll("button[data-context-topic-id]").forEach((button) => {
+          button.addEventListener("click", async (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            const topic = specialCourseTopics.find((item) => item.id === event.currentTarget.getAttribute("data-context-topic-id"));
+            if (!topic || !topic.contextText) return;
+            await navigator.clipboard.writeText(topic.contextText);
+            event.currentTarget.textContent = "Copied";
+            setTimeout(() => {
+              event.currentTarget.textContent = "Copy context";
+            }, 1400);
+            setStatus("Copied context page for: " + topic.level + " · " + topic.topic);
           });
         });
       }
@@ -3464,11 +3699,45 @@ async function handleRequest(request: http.IncomingMessage, response: http.Serve
 
 loadLocalEnv();
 
-const server = http.createServer((request, response) => {
-  void handleRequest(request, response);
-});
+if (process.env.LESSON_STUDIO_EXPORT_GEN3_CONTEXTS === "1") {
+  const lines = [
+    "# Gen 3 Culture Topic Context Pages",
+    "",
+    "Copy each block into Skool as an extra page titled `[CONTEXT]` before the matching lesson. No tables are used, so the text should paste cleanly into Skool.",
+    "",
+    "━━━━━━━━━━━━━━━━━━━━",
+    "",
+  ];
+  const topics = getSpecialCourseTopics().filter((topic) => topic.generation === "gen3" && topic.contextText);
+  let currentCourseId = "";
+  let currentLevel = "";
 
-server.listen(port, host, () => {
-  console.log(`PU3NTE Lesson Studio running at http://${host}:${port}`);
-  console.log("Keep this terminal open while generating lessons.");
-});
+  for (const topic of topics) {
+    const course = getSpecialCourses().find((specialCourse) => specialCourse.id === topic.courseId);
+
+    if (course && course.id !== currentCourseId) {
+      currentCourseId = course.id;
+      currentLevel = "";
+      lines.push(`# ${course.label} — Gen 3 Culture Context Pages`, "");
+    }
+
+    if (topic.level !== currentLevel) {
+      currentLevel = topic.level;
+      lines.push(`## ${topic.level}`, "");
+    }
+
+    lines.push(`### ${topic.contextText ?? ""}`, "");
+  }
+
+  console.log(lines.join("\n"));
+  process.exit(0);
+} else {
+  const server = http.createServer((request, response) => {
+    void handleRequest(request, response);
+  });
+
+  server.listen(port, host, () => {
+    console.log(`PU3NTE Lesson Studio running at http://${host}:${port}`);
+    console.log("Keep this terminal open while generating lessons.");
+  });
+}
