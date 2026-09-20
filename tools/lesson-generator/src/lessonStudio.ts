@@ -2149,6 +2149,11 @@ function pageHtml(): string {
         color: var(--text);
       }
 
+      .topic-controls select option {
+        background: #0f172a;
+        color: #f8fafc;
+      }
+
       .topic-list {
         max-height: 420px;
         overflow: auto;
@@ -2278,6 +2283,11 @@ function pageHtml(): string {
         padding: 12px;
         background: rgba(255,255,255,0.075);
         color: var(--text);
+      }
+
+      .selector-field select option {
+        background: #0f172a;
+        color: #f8fafc;
       }
 
       .selector-controls {
