@@ -2747,7 +2747,6 @@ function pageHtml(): string {
           <select id="selectorModeSelect">
             <option value="general">Normal speaking lesson topic</option>
             <option value="special">Dialect / accent special course</option>
-            <option value="darija-andalusian">Darija → Andalusian Spanish course</option>
           </select>
         </div>
 
@@ -2756,8 +2755,9 @@ function pageHtml(): string {
           <select id="speakingFormatSelect">
             <option value="listen-respond">15-min Listen & Respond speaking drill</option>
             <option value="sentence-builder">10-min Cumulative Sentence Builder speaking drill</option>
+            <option value="darija-andalusian">30-min Darija → Andalusian Spanish audio course</option>
           </select>
-          <p class="mini">Sentence Builder speaking lessons introduce words in chunks, repeat each word aloud, then build longer spoken sentences without typing.</p>
+          <p class="mini">Choose Darija → Andalusian here to load the Moroccan learner course automatically. Sentence Builder introduces chunks, repeats aloud, then builds longer spoken sentences without typing.</p>
         </div>
 
         <div class="selector-field">
@@ -2924,7 +2924,7 @@ function pageHtml(): string {
       }
 
       function getSpeakingFormatLabel() {
-        if (getActiveSpecialCourse() && getActiveSpecialCourse().id === darijaAndalusianCourseId) {
+        if (speakingFormat === "darija-andalusian") {
           return "30-min Darija → Andalusian conversation-first audio lesson";
         }
 
@@ -2934,6 +2934,17 @@ function pageHtml(): string {
       }
 
       function getSpeakingFormatPromptAppendix() {
+        if (speakingFormat === "darija-andalusian") {
+          return [
+            "",
+            "",
+            "SPEAKING LESSON FORMAT OVERRIDE - 30-MIN DARIJA → ANDALUSIAN SPANISH AUDIO COURSE",
+            "This format automatically uses the Moroccan Darija → Andalusian Spanish special course.",
+            "Do not use the normal 15-minute Listen & Respond duration and do not use the 10-minute Sentence Builder duration.",
+            "Use the Darija → Andalusian special-course appendix below as the controlling brief for duration, title language, voices, structure, and method."
+          ].join("\\n");
+        }
+
         if (speakingFormat !== "sentence-builder") {
           return [
             "",
@@ -3258,8 +3269,8 @@ function pageHtml(): string {
         document.getElementById("generalSelectorControls").classList.toggle("hidden", activePromptKind === "special");
         document.getElementById("specialSelectorControls").classList.toggle("hidden", activePromptKind !== "special");
         const selectedCourse = getSelectedSpecialCourse();
-        const isDarijaMode = activePromptKind === "special" && selectedCourse && selectedCourse.id === darijaAndalusianCourseId;
-        document.getElementById("selectorModeSelect").value = isDarijaMode ? "darija-andalusian" : activePromptKind === "special" ? "special" : "general";
+        const isDarijaMode = activePromptKind === "special" && speakingFormat === "darija-andalusian" && selectedCourse && selectedCourse.id === darijaAndalusianCourseId;
+        document.getElementById("selectorModeSelect").value = activePromptKind === "special" ? "special" : "general";
         document.getElementById("darijaCourseNotice").hidden = !isDarijaMode;
         document.getElementById("specialCourseSelect").closest(".selector-field").hidden = isDarijaMode;
         document.querySelector(".topic-generation-tabs").hidden = isDarijaMode;
@@ -3328,7 +3339,14 @@ function pageHtml(): string {
 
       function renderSpecialCourseOptions() {
         const select = document.getElementById("specialCourseSelect");
-        select.innerHTML = specialCourses.map((course) =>
+        const availableCourses = speakingFormat === "darija-andalusian"
+          ? specialCourses.filter((course) => course.id === darijaAndalusianCourseId)
+          : specialCourses.filter((course) => course.id !== darijaAndalusianCourseId);
+        if (!availableCourses.some((course) => course.id === selectedSpecialCourseId)) {
+          selectedSpecialCourseId = availableCourses[0] ? availableCourses[0].id : null;
+          selectedSpecialTopicId = null;
+        }
+        select.innerHTML = availableCourses.map((course) =>
           '<option value="' + escapeHtml(course.id) + '">' + escapeHtml(course.label) + '</option>'
         ).join("");
         select.value = selectedSpecialCourseId || "";
@@ -3449,30 +3467,14 @@ function pageHtml(): string {
       }
 
       function setSelectorMode(mode) {
-        if (mode === "darija-andalusian") {
-          activePromptKind = "special";
-          selectedTopicId = null;
-          selectedSpecialCourseId = darijaAndalusianCourseId;
-          selectedSpecialTopicId = null;
-          selectedSpecialGeneration = "gen1";
-          speakingFormat = "listen-respond";
-          renderSpecialCourseOptions();
-          renderTopics();
-          renderSpecialTopics();
-          updatePromptPreview();
-          return;
-        }
-
         activePromptKind = mode;
         if (mode === "general") {
           selectedSpecialTopicId = null;
+          if (speakingFormat === "darija-andalusian") {
+            speakingFormat = "listen-respond";
+          }
         } else if (mode === "special") {
           selectedTopicId = null;
-          if (selectedSpecialCourseId === darijaAndalusianCourseId) {
-            const firstNonDarijaCourse = specialCourses.find((course) => course.id !== darijaAndalusianCourseId);
-            selectedSpecialCourseId = firstNonDarijaCourse ? firstNonDarijaCourse.id : selectedSpecialCourseId;
-            selectedSpecialTopicId = null;
-          }
         }
         renderSpecialCourseOptions();
         renderTopics();
@@ -3726,6 +3728,20 @@ function pageHtml(): string {
       });
       document.getElementById("speakingFormatSelect").addEventListener("change", (event) => {
         speakingFormat = event.target.value;
+        if (speakingFormat === "darija-andalusian") {
+          activePromptKind = "special";
+          selectedTopicId = null;
+          selectedSpecialCourseId = darijaAndalusianCourseId;
+          selectedSpecialTopicId = null;
+          selectedSpecialGeneration = "gen1";
+          renderSpecialCourseOptions();
+        } else if (selectedSpecialCourseId === darijaAndalusianCourseId) {
+          const firstNonDarijaCourse = specialCourses.find((course) => course.id !== darijaAndalusianCourseId);
+          selectedSpecialCourseId = firstNonDarijaCourse ? firstNonDarijaCourse.id : selectedSpecialCourseId;
+          selectedSpecialTopicId = null;
+          renderSpecialCourseOptions();
+        }
+        renderTopics();
         renderSpecialTopics();
         updatePromptPreview();
       });
