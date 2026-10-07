@@ -3109,6 +3109,29 @@ function pageHtml(): string {
           "- At least 80% of newly introduced C1/C2 target chunks must be expressions that would NOT normally appear in a basic '" + course.variety + " slang for beginners' list.",
           "- Do not satisfy C1/C2 merely by putting basic regional words into longer sentences. The vocabulary itself must carry advanced nuance, idiomatic meaning, register sensitivity, subtext, humour, emotional precision, or social risk."
         ];
+        const darijaAndalusianMethodLines = [
+          "",
+          "MANDATORY DARIIJA → ANDALUSIAN SPANISH AUDIO-COURSE METHOD:",
+          "- IMPORTANT DURATION OVERRIDE: this Darija → Andalusian Spanish course is always a 30-minute lesson, not the normal 15-minute PU3NTE lesson. Ignore any earlier generic 15-minute duration rule for this course only.",
+          "- Set estimatedMinutes to exactly 30 and durationGoalMinutes to exactly 30. A Darija → Andalusian Spanish lesson under 25 minutes is invalid.",
+          "- Use the extra time for consolidation, not filler: slower phrase construction, more learner pauses, more spaced recall, more answer modeling, more dialogue replay, and more cumulative recombination.",
+          "- Aim for roughly 45-60 prompt/answer/repeat groups, 16-24 spaced review prompts, multiple dialogue checkpoints, one mid-lesson conversation replay, one final varied conversation replay, and one final challenge.",
+          "- This course must use a conversation-first, graduated-recall audio method. Do not make a lecture, vocabulary list, or ordinary topic drill.",
+          "- Do not copy proprietary scripts, wording, lesson content, course names, trademarks, or branded phrasing from any commercial audio course. Use the method principles only: dialogue preview, sentence-by-sentence breakdown, active recall, native-speaker modeling, spaced review, and cumulative recombination.",
+          "- At the very start, the Darija narrator tells the learner in Moroccan Darija that they will learn to understand a short Andalusian Spanish conversation.",
+          "- Immediately after that, include a natural mini-conversation between two Andalusian Spanish native speakers using native_male and native_female. The conversation should be short at A1/A2, richer at B1/B2, and nuanced at C1/C2.",
+          "- The learner should hear this opening conversation before the lesson explains it. Do not translate every line before the first listen.",
+          "- After the first listen, teach the conversation bit by bit through sentence building: isolate one useful sentence, explain the meaning in Darija, ask the learner to say it in Spanish, pause, model it with a native voice, and make them repeat.",
+          "- Build from small chunks into full sentences. Use back-chaining when useful: final phrase first, then add the beginning, then say the complete sentence.",
+          "- Recycle earlier chunks at increasing intervals. Bring back old phrases after 2-4 new items, then combine them with new words.",
+          "- Include occasional comprehension/response moments where a Spanish native speaker asks the learner a real question in Andalusian Spanish. The learner answers out loud in Spanish, then hears the model answer.",
+          "- Use Darija only for instructions, meaning, contrast, and grammar support. Spanish native voices must model all Spanish answers, questions, repeats, and mini-dialogues.",
+          "- Never make the Darija narrator pronounce long Spanish answers. Put the Spanish phrase in showOnScreenText/targetAnswer, then have native_male or native_female say it.",
+          "- End by replaying a version of the opening conversation or a slightly varied final dialogue so the learner can understand what felt difficult at the start.",
+          "- The final challenge should ask the learner, in Darija, to respond to part of the same situation using several Spanish phrases learned in the lesson.",
+          "- Segment order should usually be: Darija intro → full Spanish dialogue preview → Darija reassurance → sentence 1 breakdown → active recall → native model → repeat → sentence 2 breakdown → active recall → spaced review → Spanish question to learner → answer model → recombination → final dialogue replay → final challenge → outro.",
+          "- For A1/A2, keep Spanish short and survival-focused, but still start with a tiny real conversation. For C1/C2, keep the same method but use more subtext, register, and natural Andalusian pacing."
+        ];
 
         return [
           "",
@@ -3139,6 +3162,7 @@ function pageHtml(): string {
           "Voice mapping to use exactly:",
           voiceBlock,
           ...advancedProgressionLines,
+          ...(course.id === "moroccan-darija-andalusian-spanish" ? darijaAndalusianMethodLines : []),
           "",
           "Research requirement:",
           "Before generating the JSON, if web access is available, actively research how real speakers from the selected course/dialect/accent speak in the selected context: " + course.variety + ". Do not research Colombian speakers unless the selected course is Colombian Spanish. If the selected course is Argentinian Spanish, research Argentinian speakers; if Mexican Spanish, research Mexican speakers; if Dominican Spanish, research Dominican speakers; if Peruvian Spanish, research Peruvian speakers; if Cuban Spanish, research Cuban speakers; if Andalusian Spanish, research Andalusian speakers; if Moroccan Darija → Andalusian Spanish, research Andalusian speakers and common Moroccan learner needs in Andalusia; if Puerto Rican Spanish, research Puerto Rican speakers; if American/British/Irish/Australian English, research speakers from that accent/community. Do not rely on memory, generic slang lists, or examples from this prompt. Look for natural speech from that selected community in interviews, podcasts, street interviews, TikTok/YouTube/Instagram clips, comments, informal explainers, comedians, musicians, artists, influencers, streamers, local creators, and everyday conversation transcripts where possible.",
@@ -3154,7 +3178,9 @@ function pageHtml(): string {
           "Cultural guardrails: " + course.culturalGuardrails,
           "",
           "Content requirements for this selected course:",
-          speakingFormat === "sentence-builder"
+          course.id === "moroccan-darija-andalusian-spanish"
+            ? "- Generate exactly one complete 30-minute conversation-first cumulative sentence-building audio lesson. It must begin with a native Andalusian Spanish dialogue preview, then teach that dialogue piece by piece from Darija, include a mid-lesson dialogue replay, and finish with a final replay or variation-check near the end."
+            : speakingFormat === "sentence-builder"
             ? "- Generate exactly one complete 10-minute Cumulative Sentence Builder speaking lesson for this selected topic and level."
             : "- Generate exactly one complete 15-minute Listen & Respond lesson for this selected topic and level.",
           "- Make the lesson heavily natural/local/informal, not generic standard textbook language.",
