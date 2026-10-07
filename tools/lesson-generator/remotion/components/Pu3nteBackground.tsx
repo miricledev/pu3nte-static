@@ -21,7 +21,7 @@ export const Pu3nteBackground = ({ progress, backgroundImageSrc }: Pu3nteBackgro
           style={{
             position: "absolute",
             inset: "-2%",
-            backgroundImage: `linear-gradient(135deg, rgba(5,8,20,0.72), rgba(5,8,20,0.54)), url("${backgroundImageSrc}")`,
+            backgroundImage: `linear-gradient(135deg, rgba(5,8,20,0.82), rgba(5,8,20,0.66)), url("${backgroundImageSrc}")`,
             backgroundSize: "cover",
             backgroundPosition: `${50 + Math.sin(progress * Math.PI * 2) * 1.6}% ${50 + Math.cos(progress * Math.PI * 2) * 1.2}%`,
             filter: "saturate(1.08) contrast(1.08)",
@@ -30,6 +30,15 @@ export const Pu3nteBackground = ({ progress, backgroundImageSrc }: Pu3nteBackgro
           }}
         />
       ) : null}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background:
+            "radial-gradient(circle at 50% 44%, transparent 0%, rgba(2,6,23,0.18) 42%, rgba(2,6,23,0.68) 100%), linear-gradient(180deg, rgba(2,6,23,0.48), transparent 22%, transparent 68%, rgba(2,6,23,0.62))",
+          pointerEvents: "none",
+        }}
+      />
       <div
         style={{
           position: "absolute",

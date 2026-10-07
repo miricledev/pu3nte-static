@@ -12,6 +12,12 @@ export const LessonHeader = ({ timeline }: LessonHeaderProps) => {
         gridTemplateColumns: "auto 1fr auto",
         alignItems: "center",
         gap: 36,
+        padding: "18px 22px",
+        borderRadius: 22,
+        background: "linear-gradient(135deg, rgba(2,6,23,0.82), rgba(2,6,23,0.52))",
+        border: "1px solid rgba(255,255,255,0.12)",
+        boxShadow: "0 20px 70px rgba(0,0,0,0.34)",
+        backdropFilter: "blur(16px)",
       }}
     >
       {timeline.lesson.branding.showLogo ? (
@@ -29,8 +35,8 @@ export const LessonHeader = ({ timeline }: LessonHeaderProps) => {
         </div>
       ) : null}
       <div style={{ minWidth: 0 }}>
-        <div style={{ fontSize: 36, fontWeight: 800, lineHeight: 1.12 }}>{timeline.lesson.title}</div>
-        <div style={{ color: "rgba(255,255,255,0.62)", fontSize: 24, marginTop: 8 }}>{timeline.lesson.course}</div>
+        <div style={{ fontSize: 36, fontWeight: 800, lineHeight: 1.12, textShadow: "0 3px 18px rgba(0,0,0,0.78)" }}>{timeline.lesson.title}</div>
+        <div style={{ color: "rgba(255,255,255,0.72)", fontSize: 24, marginTop: 8, textShadow: "0 2px 12px rgba(0,0,0,0.74)" }}>{timeline.lesson.course}</div>
       </div>
       <div
         style={{

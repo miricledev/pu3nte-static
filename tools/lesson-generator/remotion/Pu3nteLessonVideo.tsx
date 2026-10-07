@@ -107,8 +107,9 @@ export const Pu3nteLessonVideo = ({ timeline, audioSrc, backgroundImageSrc }: Re
               border: "1px solid rgba(255,255,255,0.1)",
               borderRadius: 22,
               background:
-                "radial-gradient(circle at 50% 48%, rgba(0,186,242,0.18), transparent 38%), linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.025))",
-              boxShadow: "0 24px 80px rgba(0,0,0,0.26)",
+                "radial-gradient(circle at 50% 48%, rgba(0,186,242,0.18), transparent 38%), linear-gradient(135deg, rgba(2,6,23,0.76), rgba(2,6,23,0.54))",
+              boxShadow: "0 24px 90px rgba(0,0,0,0.42)",
+              backdropFilter: "blur(14px)",
               overflow: "hidden",
             }}
           >
@@ -128,9 +129,9 @@ export const Pu3nteLessonVideo = ({ timeline, audioSrc, backgroundImageSrc }: Re
               padding: "34px 52px",
               border: "1px solid rgba(255,255,255,0.14)",
               borderRadius: 18,
-              background: "linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.035))",
-              boxShadow: "0 28px 90px rgba(0,0,0,0.34)",
-              backdropFilter: "blur(18px)",
+              background: "linear-gradient(135deg, rgba(2,6,23,0.86), rgba(2,6,23,0.64))",
+              boxShadow: "0 30px 100px rgba(0,0,0,0.5)",
+              backdropFilter: "blur(20px)",
             }}
           >
             <ModeBadge mode={getModeLabel(activeSegment)} visualMode={activeSegment.visualMode} />
