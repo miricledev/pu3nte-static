@@ -46,7 +46,7 @@ function getDisplayText(segment: TimelineSegment): string {
   return segment.subtitle;
 }
 
-export const Pu3nteLessonVideo = ({ timeline, audioSrc }: RemotionLessonProps) => {
+export const Pu3nteLessonVideo = ({ timeline, audioSrc, backgroundImageSrc }: RemotionLessonProps) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const currentMs = (frame / fps) * 1000;
@@ -79,7 +79,7 @@ export const Pu3nteLessonVideo = ({ timeline, audioSrc }: RemotionLessonProps) =
   return (
     <AbsoluteFill style={{ backgroundColor: "#050814", color: "white", fontFamily: "Inter, Arial, sans-serif" }}>
       {audioSrc ? <Audio src={audioSrc} /> : null}
-      <Pu3nteBackground progress={overallProgress} />
+      <Pu3nteBackground progress={overallProgress} backgroundImageSrc={backgroundImageSrc} />
       <AbsoluteFill
         style={{
           padding: 72,

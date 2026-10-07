@@ -299,9 +299,9 @@ type LessonTopic = {
 type SpecialCourse = {
   id: string;
   label: string;
-  family: "spanish-dialect" | "english-accent";
+  family: "spanish-dialect" | "english-accent" | "spanish-from-darija";
   variety: string;
-  learnerNativeLanguage: "english" | "spanish";
+  learnerNativeLanguage: "english" | "spanish" | "darija";
   targetLanguage: "spanish" | "english";
   narratorEnv: string;
   maleVoiceEnv: string;
@@ -310,7 +310,7 @@ type SpecialCourse = {
   culturalGuardrails: string;
 };
 
-type SpecialCourseLevel = "B1" | "B2" | "C1" | "C2";
+type SpecialCourseLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
 
 type SpecialCourseTopic = {
   id: string;
@@ -608,6 +608,19 @@ function getSpecialCourses(): SpecialCourse[] {
       culturalGuardrails: "Teach Andalusian Spanish as a family of regional varieties. Avoid treating one city as all Andalusia, mocking aspiration/dropped sounds, or overdoing eye-dialect spelling.",
     },
     {
+      id: "moroccan-darija-andalusian-spanish",
+      label: "Moroccan Darija → Andalusian Spanish",
+      family: "spanish-from-darija",
+      variety: "Andalusian Spanish for Moroccan Darija speakers",
+      learnerNativeLanguage: "darija",
+      targetLanguage: "spanish",
+      narratorEnv: "ELEVENLABS_DARIJA_NARRATOR_VOICE_ID",
+      maleVoiceEnv: "ELEVENLABS_ANDALUSIAN_SPANISH_MALE_VOICE_ID",
+      femaleVoiceEnv: "ELEVENLABS_ANDALUSIAN_SPANISH_FEMALE_VOICE_ID",
+      researchFocus: "Andalusian Spanish taught from Moroccan Darija: practical Spain/Andalusia survival needs, ferry/airport arrival, paperwork, housing, work, neighbourhood life, cafés, shops, healthcare, school/family contexts, Moroccan-Spanish contact realities, false friends, pronunciation bridges, and Andalusian reductions explained respectfully for Darija-speaking learners.",
+      culturalGuardrails: "Teach for Moroccan learners with respect and usefulness. Avoid stereotypes about migration, religion, class, or accent. Explain Andalusian variation without mocking it, and use Darija as the learner support language rather than Modern Standard Arabic.",
+    },
+    {
       id: "puerto-rican-spanish",
       label: "Puerto Rican Spanish",
       family: "spanish-dialect",
@@ -676,7 +689,7 @@ function getSpecialCourses(): SpecialCourse[] {
 }
 
 function getSpecialCourseTopics(): SpecialCourseTopic[] {
-  const gen1ByLevel: Record<SpecialCourseLevel, Array<[string, string]>> = {
+  const gen1ByLevel: Partial<Record<SpecialCourseLevel, Array<[string, string]>>> = {
     B1: [
       ["Core sentence building with local flavour", "Build practical local sentences from a small word bank, adding grammar and vocabulary step by step."],
       ["Introductions and small talk builder", "Build natural local sentences for introductions, basic small talk, and simple follow-up questions."],
@@ -719,7 +732,7 @@ function getSpecialCourseTopics(): SpecialCourseTopic[] {
     ],
   };
 
-  const gen2ByLevel: Record<SpecialCourseLevel, Array<[string, string]>> = {
+  const gen2ByLevel: Partial<Record<SpecialCourseLevel, Array<[string, string]>>> = {
     B1: [
       ["Casual voice-note check-ins builder", "Build friendly informal check-ins, quick updates, simple reactions, and short voice-note replies."],
       ["Basic flirting and playful compliments builder", "Build respectful light flirting, simple compliments, interest checks, and graceful exits without pressure."],
@@ -770,7 +783,7 @@ function getSpecialCourseTopics(): SpecialCourseTopic[] {
     ],
   };
 
-  const gen3ByCourse: Record<string, Record<SpecialCourseLevel, Array<[string, string]>>> = {
+  const gen3ByCourse: Record<string, Partial<Record<SpecialCourseLevel, Array<[string, string]>>>> = {
     "colombian-spanish": {
       B1: [
         ["Ordering arepas and tinto at a neighbourhood stall", "Build simple phrases for ordering Colombian street snacks, coffee, prices, and friendly small talk."],
@@ -1173,12 +1186,100 @@ function getSpecialCourseTopics(): SpecialCourseTopic[] {
     },
   };
 
-  const topicGroups: Array<["gen1" | "gen2", Record<SpecialCourseLevel, Array<[string, string]>>]> = [
+  const darijaAndalusianTopicsByLevel: Record<SpecialCourseLevel, Array<[string, string]>> = {
+    A1: [
+      ["First greetings at the port or airport", "Greet, say you are Moroccan, ask for help, and understand simple Andalusian replies."],
+      ["Basic introductions in a neighbourhood", "Say your name, where you are from, where you live, and why you are learning Spanish."],
+      ["Numbers, prices, and simple payments", "Understand euros, ask prices, pay for small items, and check change."],
+      ["Ordering coffee and breakfast", "Ask for café, water, bread, churros, or a sandwich with simple polite phrases."],
+      ["Asking where something is", "Ask for the station, bus stop, bathroom, pharmacy, mosque, shop, or office."],
+      ["Basic transport: bus, train, and taxi", "Say where you are going, ask if it stops there, and understand simple directions."],
+      ["Buying a SIM card or phone credit", "Ask for a card, data, top-up, price, and basic help with the phone."],
+      ["Simple food shopping", "Ask for bread, fruit, meat, vegetables, quantity, freshness, and bags."],
+      ["Saying what you need today", "Build basic sentences for needing documents, help, work, time, and directions."],
+      ["Polite thanks, apologies, and repeats", "Ask people to repeat, slow down, explain again, and forgive misunderstandings."],
+    ],
+    A2: [
+      ["At the town hall or appointment desk", "Ask about appointments, documents, opening times, queues, and where to wait."],
+      ["Looking for a room or flat", "Ask about rent, deposit, bills, location, sharing, and viewing times."],
+      ["Talking to a landlord politely", "Explain who you are, what you need, when you can move in, and ask conditions."],
+      ["Daily work schedule basics", "Say when you start, finish, rest, change shifts, and need a day off."],
+      ["Doctor and pharmacy basics", "Explain pain, fever, allergies, medicine, appointment needs, and urgent help."],
+      ["School and children basics", "Ask about class times, forms, teachers, absences, and what a child needs."],
+      ["Neighbourhood small talk", "Talk about heat, rain, noise, shops, family, work, and greetings in the building."],
+      ["Food restrictions and halal questions", "Ask ingredients, pork, alcohol, halal options, and explain what you can eat."],
+      ["Explaining a simple problem", "Say something is lost, broken, delayed, closed, expensive, or not understood."],
+      ["Making simple plans with friends", "Invite someone, accept, refuse politely, agree on place, time, and transport."],
+    ],
+    B1: [
+      ["Understanding fast Andalusian reductions", "Recognise common dropped sounds, relaxed endings, and how to ask for repetition without embarrassment."],
+      ["Handling paperwork without panic", "Explain missing documents, appointments, copies, signatures, and what someone told you."],
+      ["Job search conversations", "Ask about work, experience, availability, pay, schedule, and next steps respectfully."],
+      ["Talking with Spanish coworkers", "Handle greetings, jokes, shift changes, favours, tiredness, and practical workplace phrases."],
+      ["Rent, bills, and household issues", "Discuss repairs, electricity, water, internet, noise, payment dates, and shared responsibilities."],
+      ["At a tapas bar with friends", "Order, share food, ask what things are, avoid ingredients, and split the bill."],
+      ["Explaining Moroccan background naturally", "Talk about Morocco, Darija, family, religion, food, and identity without overexplaining."],
+      ["Transport problems and being late", "Explain delays, missed buses, wrong stops, traffic, and how long you will take."],
+      ["Phone calls and WhatsApp voice notes", "Leave short updates, ask for location, clarify plans, and explain connection problems."],
+      ["Setting polite boundaries", "Say you cannot, you are busy, you need time, or you do not understand yet."],
+    ],
+    B2: [
+      ["Workplace misunderstandings and tone", "Clarify what you meant, respond to correction, manage jokes, and avoid sounding defensive."],
+      ["Negotiating pay, hours, and conditions", "Ask about contract, hours, overtime, trial periods, holidays, and what is agreed."],
+      ["Speaking to officials with confidence", "Explain your situation, ask what is missing, request clarification, and stay calm."],
+      ["Andalusian humour and friendly teasing", "Recognise joking, respond lightly, set limits, and avoid taking every comment literally."],
+      ["Finding community and making local friends", "Talk about invitations, sports, cafés, mosque/community spaces, and mixed friend groups."],
+      ["Talking about discrimination carefully", "Describe unfair treatment, assumptions, accent issues, and ask for respect without escalating."],
+      ["Family responsibilities across Morocco and Spain", "Discuss sending money, visits, calls, obligations, and pressure with nuance."],
+      ["Healthcare appointments in detail", "Explain symptoms, history, treatment, follow-up, prescriptions, and confusion about instructions."],
+      ["Repairing a mistake in Spanish", "Apologise, explain a misunderstanding, correct yourself, and keep dignity."],
+      ["Comparing life in Morocco and Andalusia", "Discuss pace, prices, work, family, food, religion, and public life naturally."],
+    ],
+    C1: [
+      ["Advanced register switching in Andalusia", "Move between friendly street Spanish, formal appointments, and workplace seriousness with control."],
+      ["Discussing accent, identity, and belonging", "Talk about Moroccan identity, Andalusian accent, integration, pride, and insecurity with nuance."],
+      ["Handling indirect rejection or vague answers", "Understand maybe, later, no rush, we’ll see, and what people may really mean."],
+      ["Professional self-presentation", "Explain your skills, background, goals, constraints, and value without sounding arrogant."],
+      ["Conflict with a landlord or employer", "Set limits, request fairness, document problems, and keep the conversation controlled."],
+      ["Social life during Ramadan in Andalusia", "Explain fasting, invitations, energy, family, work schedule, and respectful boundaries."],
+      ["Debating stereotypes without losing calm", "Respond to assumptions about Morocco, religion, language, or migration with precision."],
+      ["Building trust with Andalusian neighbours", "Manage favours, noise, greetings, gossip, and community expectations tactfully."],
+      ["Giving opinions on politics and society safely", "Express views on sensitive topics without sounding extreme or naïve."],
+      ["Storytelling across Darija and Andalusian Spanish", "Tell vivid migration, family, work, or neighbourhood stories with natural pacing."],
+    ],
+    C2: [
+      ["Near-native Andalusian subtext", "Decode irony, softened refusals, vague promises, pride, embarrassment, and social face."],
+      ["High-stakes legal or administrative conversation", "Explain complex situations, challenge errors, request accountability, and stay respectful."],
+      ["Identity, religion, and public perception", "Discuss layered identity, visibility, respect, prejudice, and belonging with emotional precision."],
+      ["Advanced workplace negotiation", "Handle promotion, contracts, unfair treatment, role boundaries, and strategic compromise."],
+      ["De-escalating intercultural conflict", "Repair misunderstanding between Moroccan and Spanish expectations without blaming either side."],
+      ["Humour that almost crosses the line", "Use, interpret, and repair joking around accent, origin, class, or religion safely."],
+      ["Arguing without burning bridges", "Disagree firmly with landlords, bosses, officials, or friends while protecting future relationship."],
+      ["Moroccan-Spanish family and relationship nuance", "Talk about expectations, marriage, visits, money, privacy, and generational pressure."],
+      ["Public services, dignity, and persistence", "Insist on help, ask for explanations, and defend yourself without sounding aggressive."],
+      ["Near-native storytelling in Andalusia", "Tell complex stories with local rhythm, humour, callbacks, emotion, and controlled register shifts."],
+    ],
+  };
+
+  const topicGroups: Array<["gen1" | "gen2", Partial<Record<SpecialCourseLevel, Array<[string, string]>>>]> = [
     ["gen1", gen1ByLevel],
     ["gen2", gen2ByLevel],
   ];
 
   return getSpecialCourses().flatMap((course) => {
+    if (course.id === "moroccan-darija-andalusian-spanish") {
+      return (Object.entries(darijaAndalusianTopicsByLevel) as Array<[SpecialCourseLevel, Array<[string, string]>]>).flatMap(([level, topics]) =>
+        topics.map(([topic, objective], index) => ({
+          id: `${course.id}-${level.toLowerCase()}-${index + 1}-${slugText(topic)}`,
+          courseId: course.id,
+          level,
+          generation: "gen1" as const,
+          topic,
+          objective,
+        })),
+      );
+    }
+
     const sharedTopics = topicGroups.flatMap(([generation, topicsByLevel]) =>
       (Object.entries(topicsByLevel) as Array<[SpecialCourseLevel, Array<[string, string]>]>).flatMap(([level, topics]) =>
         topics.map(([topic, objective], index) => ({
@@ -2705,7 +2806,7 @@ function pageHtml(): string {
 
           <section id="specialSelectorControls" class="selector-controls hidden">
             <h3>Dialect / Accent Special Course</h3>
-            <p class="mini">Use this for B2, C1, and C2 country/accent courses with heavy local slang, sayings, idioms, and natural phrasing. B1 appears only for the 10-min Sentence Builder speaking format.</p>
+            <p class="mini">Use this for country/accent courses with local slang, sayings, idioms, and natural phrasing. Most dialect courses start at B1/B2; the Moroccan Darija → Andalusian Spanish course runs from A1 to C2.</p>
             <div class="topic-controls">
               <div class="selector-field">
                 <label for="specialCourseSelect">Course</label>
@@ -2715,6 +2816,8 @@ function pageHtml(): string {
                 <label for="specialLevelFilter">Level</label>
                 <select id="specialLevelFilter">
                   <option value="all">All levels</option>
+                  <option value="A1">A1</option>
+                  <option value="A2">A2</option>
                   <option value="B1">B1 sentence-builder only</option>
                   <option value="B2">B2</option>
                   <option value="C1">C1</option>
@@ -2946,23 +3049,31 @@ function pageHtml(): string {
           return "Choose a course and lesson to add a dialect/accent brief to the prompt.";
         }
 
-        const direction = course.family === "spanish-dialect"
-          ? "Spanish dialect course for native English speakers"
-          : "English accent course for native Spanish speakers";
+        const direction = course.family === "spanish-from-darija"
+          ? "Andalusian Spanish course for Moroccan Darija speakers"
+          : course.family === "spanish-dialect"
+            ? "Spanish dialect course for native English speakers"
+            : "English accent course for native Spanish speakers";
         const topicLabel = topic ? " · selected lesson: " + topic.topic + " · " + topic.level : " · choose one lesson below";
         return course.label + " · " + direction + " · narrator env: " + course.narratorEnv + topicLabel;
       }
 
       function getSpecialCoursePromptAppendix(course, topic) {
         if (!course || !topic) return "";
-        const isSpanishDialect = course.family === "spanish-dialect";
-        const narratorLanguage = course.learnerNativeLanguage === "english" ? "English" : "Spanish";
-        const narratorVoice = narratorMode === "elevenlabs"
+        const isSpanishTargetCourse = course.family === "spanish-dialect" || course.family === "spanish-from-darija";
+        const narratorLanguage = course.learnerNativeLanguage === "darija"
+          ? "Moroccan Darija"
+          : course.learnerNativeLanguage === "english" ? "English" : "Spanish";
+        const narratorVoice = course.learnerNativeLanguage === "darija"
+          ? "env:" + course.narratorEnv
+          : narratorMode === "elevenlabs"
           ? "env:" + course.narratorEnv
           : getNarratorVoiceForLanguage(course.learnerNativeLanguage);
-        const introNarratorVoice = narratorMode === "hybrid-intro" ? "env:" + course.narratorEnv : null;
-        const roleMale = isSpanishDialect ? "native_male" : "english_male";
-        const roleFemale = isSpanishDialect ? "native_female" : "english_female";
+        const introNarratorVoice = course.learnerNativeLanguage === "darija"
+          ? null
+          : narratorMode === "hybrid-intro" ? "env:" + course.narratorEnv : null;
+        const roleMale = isSpanishTargetCourse ? "native_male" : "english_male";
+        const roleFemale = isSpanishTargetCourse ? "native_female" : "english_female";
         const voiceBlock = '{\\n' +
           '  "narrator": "' + narratorVoice + '",\\n' +
           '  "' + roleMale + '": "env:' + course.maleVoiceEnv + '",\\n' +
@@ -2977,6 +3088,7 @@ function pageHtml(): string {
           "cuban-spanish": "asere, qué bolá, yuma, guagua, pincha, dale, socio, compay, estar en talla",
           "andalusian-spanish": "illo/illa, quillo/quilla, mi arma, arte, no ni ná, pisha, compae, tapas, feria",
           "puerto-rican-spanish": "boricua, mano, brutal, chévere, janguear, corillo, guagua, chinchorro, bendito",
+          "moroccan-darija-andalusian-spanish": "hola, gracias, por favor, tapas, feria, illo/illa, mi arma, vale, no pasa nada, muy bien",
           "british-english": "cheers, mate, fancy, brilliant, gutted, knackered, sorted, queue, lift",
           "american-english": "gonna, wanna, gotta, awesome, no worries, I'm down, sounds good, hang out",
           "irish-english": "grand, craic, sound, no bother, cheers, fair play",
@@ -2987,6 +3099,8 @@ function pageHtml(): string {
           "",
           "LEVEL-SPECIFIC LOCAL VOCABULARY PROGRESSION RULE:",
           "- First identify the obvious beginner starter-pack vocabulary for " + course.variety + " and avoid treating it as advanced. For this course, examples include: " + starterPackExamples + ".",
+          "- A1 = absolute survival: greetings, identity, numbers, basic needs, locations, ordering, simple help, and pronunciation bridges from Darija to Spanish.",
+          "- A2 = daily-life control: appointments, housing, work basics, health, school/family needs, food restrictions, and simple problem explanations.",
           "- B1 = accessible local flavour: practical high-frequency chunks, gentle regional identity, short sentence patterns, and clear register warnings.",
           "- B2 = practical everyday local speech: useful informal phrasing for real situations, more reductions, reactions, softeners, and common idioms, but still easy to explain.",
           "- C1 = nuanced/idiomatic/register-heavy local speech: less-obvious expressions, interpersonal language, hedging, reactions, humour, figurative meanings, register shifts, and phrases with social subtext.",
@@ -3002,7 +3116,9 @@ function pageHtml(): string {
           "SELECTED DIALECT / ACCENT COURSE - USE THIS EXACT BRIEF",
           "Course: " + course.label,
           "Variety/accent: " + course.variety,
-          speakingFormat === "sentence-builder"
+          course.id === "moroccan-darija-andalusian-spanish"
+            ? "Course design: full A1 to C2 Andalusian Spanish pathway for Moroccan Darija speakers. The levels are sequential: A1 survival basics, A2 daily-life independence, B1 practical integration, B2 confident local interaction, C1 nuanced identity/work/social control, C2 near-native subtext and high-stakes communication."
+            : speakingFormat === "sentence-builder"
             ? "Course design: B1 sentence-builder lessons are allowed only in this cumulative speaking-builder format. Standard dialect/accent lessons remain B2, C1, and C2."
             : "Course design: 8 speaking lessons per advanced level, 24 total lessons for this variety/accent. Levels are B2, C1, and C2 only. No A1-A2 or B1 lessons: this course is intended for B2 upward learners who already know general basics.",
           "Selected lesson topic: " + topic.topic,
@@ -3017,12 +3133,15 @@ function pageHtml(): string {
           "Narrator voice: " + narratorVoice,
           introNarratorVoice ? "Intro narrator override: add voiceId \\\"" + introNarratorVoice + "\\\" only to the intro segment or intro segments." : "",
           "Narrator mode: " + getNarratorModeLabel(),
+          course.learnerNativeLanguage === "darija"
+            ? "Darija narrator rule: use Moroccan Darija as the learner-support language for narrator explanations and prompts. Prefer clear Moroccan Darija written in a learner-friendly Latinized style unless the user explicitly asks for Arabic script. Do not use Modern Standard Arabic as the default support language."
+            : "",
           "Voice mapping to use exactly:",
           voiceBlock,
           ...advancedProgressionLines,
           "",
           "Research requirement:",
-          "Before generating the JSON, if web access is available, actively research how real speakers from the selected course/dialect/accent speak in the selected context: " + course.variety + ". Do not research Colombian speakers unless the selected course is Colombian Spanish. If the selected course is Argentinian Spanish, research Argentinian speakers; if Mexican Spanish, research Mexican speakers; if Dominican Spanish, research Dominican speakers; if Peruvian Spanish, research Peruvian speakers; if Cuban Spanish, research Cuban speakers; if Andalusian Spanish, research Andalusian speakers; if Puerto Rican Spanish, research Puerto Rican speakers; if American/British/Irish/Australian English, research speakers from that accent/community. Do not rely on memory, generic slang lists, or examples from this prompt. Look for natural speech from that selected community in interviews, podcasts, street interviews, TikTok/YouTube/Instagram clips, comments, informal explainers, comedians, musicians, artists, influencers, streamers, local creators, and everyday conversation transcripts where possible.",
+          "Before generating the JSON, if web access is available, actively research how real speakers from the selected course/dialect/accent speak in the selected context: " + course.variety + ". Do not research Colombian speakers unless the selected course is Colombian Spanish. If the selected course is Argentinian Spanish, research Argentinian speakers; if Mexican Spanish, research Mexican speakers; if Dominican Spanish, research Dominican speakers; if Peruvian Spanish, research Peruvian speakers; if Cuban Spanish, research Cuban speakers; if Andalusian Spanish, research Andalusian speakers; if Moroccan Darija → Andalusian Spanish, research Andalusian speakers and common Moroccan learner needs in Andalusia; if Puerto Rican Spanish, research Puerto Rican speakers; if American/British/Irish/Australian English, research speakers from that accent/community. Do not rely on memory, generic slang lists, or examples from this prompt. Look for natural speech from that selected community in interviews, podcasts, street interviews, TikTok/YouTube/Instagram clips, comments, informal explainers, comedians, musicians, artists, influencers, streamers, local creators, and everyday conversation transcripts where possible.",
           "Analyse patterns from those sources: greetings/openers, ways to say goodbye, reactions, weather sayings, food/drink words, transport words, money/time phrases, texting/voice-note phrases, filler phrases, discourse markers, idioms, informal contractions/reductions, politeness formulas, teasing/banter, softeners, pronunciation/intonation notes, and real-life register.",
           "Build a fresh internal phrase bank of at least 25 useful " + course.variety + " local expressions from that research before writing the lesson. Use at least 15-20 of them naturally across prompts, answers, repeats, mini-dialogues, reviews, and the final challenge. Do not output the phrase bank separately; weave it into the JSON lesson.",
           "Important freshness rule: do not lean on example phrases, famous stereotype phrases, dictionary-style lists, or vocabulary from previous PU3NTE lessons unless the selected topic genuinely requires them. Prefer newly researched local expressions that fit this exact topic and situation.",
@@ -3039,6 +3158,9 @@ function pageHtml(): string {
             ? "- Generate exactly one complete 10-minute Cumulative Sentence Builder speaking lesson for this selected topic and level."
             : "- Generate exactly one complete 15-minute Listen & Respond lesson for this selected topic and level.",
           "- Make the lesson heavily natural/local/informal, not generic standard textbook language.",
+          course.id === "moroccan-darija-andalusian-spanish"
+            ? "- Because this course starts at A1, keep A1/A2 target Spanish simple and immediately useful. Use Darija explanations to make Spanish structure clear, and add Andalusian flavour gradually without overwhelming beginners."
+            : "",
           speakingFormat === "sentence-builder" && topic.level === "B1"
             ? "- For B1 sentence-builder lessons, use local flavour gently: local greetings, reactions, common everyday chunks, and natural phrasing. Do not force dense slang into every sentence."
             : "- At least 75-85% of target-language prompts, answers, repeats, and dialogues should include local sayings, slang, idioms, greetings, reactions, discourse markers, politeness formulas, reductions, or phrasing that is strongly associated with " + course.variety + ".",
@@ -3193,7 +3315,7 @@ function pageHtml(): string {
         const filtered = specialCourseTopics.filter((topic) => {
           if (topic.courseId !== course.id) return false;
           if ((topic.generation || "gen1") !== selectedSpecialGeneration) return false;
-          if (topic.level === "B1" && speakingFormat !== "sentence-builder") return false;
+          if (course.id !== "moroccan-darija-andalusian-spanish" && topic.level === "B1" && speakingFormat !== "sentence-builder") return false;
           if (level !== "all" && topic.level !== level) return false;
           if (search && !(topic.topic + " " + topic.objective + " " + topic.level + " " + course.label).toLowerCase().includes(search)) return false;
           return true;
@@ -3227,7 +3349,7 @@ function pageHtml(): string {
               '<div class="topic-objective">' + escapeHtml(topic.objective) + '</div>' +
             '</div>' +
           '</div>';
-        }).join("") || (level === "B1" && speakingFormat !== "sentence-builder"
+        }).join("") || (course.id !== "moroccan-darija-andalusian-spanish" && level === "B1" && speakingFormat !== "sentence-builder"
           ? '<div class="note">B1 special-course lessons are only available when Speaking lesson format is set to 10-min Cumulative Sentence Builder speaking drill.</div>'
           : '<div class="note">No dialect/accent lessons match these filters.</div>');
 

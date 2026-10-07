@@ -5,6 +5,7 @@ import type { LessonTimeline } from "../src/types";
 export type RemotionLessonProps = {
   timeline: LessonTimeline;
   audioSrc: string;
+  backgroundImageSrc?: string;
 };
 
 const fallbackTimeline: LessonTimeline = {
@@ -68,6 +69,7 @@ export const RemotionRoot = () => {
       defaultProps={{
         timeline,
         audioSrc: inputProps.audioSrc ?? "",
+        backgroundImageSrc: inputProps.backgroundImageSrc,
       }}
     />
   );
