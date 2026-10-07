@@ -2747,6 +2747,7 @@ function pageHtml(): string {
           <select id="selectorModeSelect">
             <option value="general">Normal speaking lesson topic</option>
             <option value="special">Dialect / accent special course</option>
+            <option value="darija-andalusian">Darija → Andalusian Spanish course</option>
           </select>
         </div>
 
@@ -2807,6 +2808,9 @@ function pageHtml(): string {
           <section id="specialSelectorControls" class="selector-controls hidden">
             <h3>Dialect / Accent Special Course</h3>
             <p class="mini">Use this for country/accent courses with local slang, sayings, idioms, and natural phrasing. Most dialect courses start at B1/B2; the Moroccan Darija → Andalusian Spanish course runs from A1 to C2.</p>
+            <div id="darijaCourseNotice" class="note block" hidden>
+              Darija → Andalusian mode is active. Pick the A1-C2 lesson below. The copied prompt will generate a 30-minute conversation-first lesson with Arabic-script Darija title/subtitle/description for Moroccan learners.
+            </div>
             <div class="topic-controls">
               <div class="selector-field">
                 <label for="specialCourseSelect">Course</label>
@@ -2871,6 +2875,7 @@ function pageHtml(): string {
       let selectedSpecialCourseId = specialCourses[0] ? specialCourses[0].id : null;
       let selectedSpecialTopicId = null;
       let selectedSpecialGeneration = "gen1";
+      const darijaAndalusianCourseId = "moroccan-darija-andalusian-spanish";
       document.getElementById("detailedPromptText").textContent = detailedChatGptPrompt;
 
       function getSelectedTopic() {
@@ -2919,6 +2924,10 @@ function pageHtml(): string {
       }
 
       function getSpeakingFormatLabel() {
+        if (getActiveSpecialCourse() && getActiveSpecialCourse().id === darijaAndalusianCourseId) {
+          return "30-min Darija → Andalusian conversation-first audio lesson";
+        }
+
         return speakingFormat === "sentence-builder"
           ? "10-min cumulative Sentence Builder speaking drill"
           : "15-min Listen & Respond speaking drill";
@@ -3228,11 +3237,12 @@ function pageHtml(): string {
         const course = getActiveSpecialCourse();
         const specialTopic = getActiveSpecialTopic();
         if (course && specialTopic) {
-          return "Dialect/accent course selected: " + course.label + " · " + specialTopic.level + " · " + specialTopic.topic + " · " + getSpeakingFormatLabel() + " · " + getNarratorModeLabel();
+          const prefix = course.id === darijaAndalusianCourseId ? "Darija → Andalusian course selected: " : "Dialect/accent course selected: ";
+          return prefix + course.label + " · " + specialTopic.level + " · " + specialTopic.topic + " · " + getSpeakingFormatLabel() + " · " + getNarratorModeLabel();
         }
 
         if (activePromptKind === "special" && course) {
-          return "Dialect/accent course mode: choose a " + course.label + " lesson to activate it.";
+          return (course.id === darijaAndalusianCourseId ? "Darija → Andalusian course mode: choose a " : "Dialect/accent course mode: choose a ") + course.label + " lesson to activate it.";
         }
 
         if (activePromptKind === "general") {
@@ -3247,7 +3257,12 @@ function pageHtml(): string {
         document.getElementById("selectorModeSummary").textContent = getPromptSelectionSummary();
         document.getElementById("generalSelectorControls").classList.toggle("hidden", activePromptKind === "special");
         document.getElementById("specialSelectorControls").classList.toggle("hidden", activePromptKind !== "special");
-        document.getElementById("selectorModeSelect").value = activePromptKind === "special" ? "special" : "general";
+        const selectedCourse = getSelectedSpecialCourse();
+        const isDarijaMode = activePromptKind === "special" && selectedCourse && selectedCourse.id === darijaAndalusianCourseId;
+        document.getElementById("selectorModeSelect").value = isDarijaMode ? "darija-andalusian" : activePromptKind === "special" ? "special" : "general";
+        document.getElementById("darijaCourseNotice").hidden = !isDarijaMode;
+        document.getElementById("specialCourseSelect").closest(".selector-field").hidden = isDarijaMode;
+        document.querySelector(".topic-generation-tabs").hidden = isDarijaMode;
         document.getElementById("speakingFormatSelect").value = speakingFormat;
         document.getElementById("narratorModeSelect").value = narratorMode;
         document.getElementById("detailedPromptText").textContent = buildPrompt(detailedChatGptPrompt);
@@ -3434,12 +3449,32 @@ function pageHtml(): string {
       }
 
       function setSelectorMode(mode) {
+        if (mode === "darija-andalusian") {
+          activePromptKind = "special";
+          selectedTopicId = null;
+          selectedSpecialCourseId = darijaAndalusianCourseId;
+          selectedSpecialTopicId = null;
+          selectedSpecialGeneration = "gen1";
+          speakingFormat = "listen-respond";
+          renderSpecialCourseOptions();
+          renderTopics();
+          renderSpecialTopics();
+          updatePromptPreview();
+          return;
+        }
+
         activePromptKind = mode;
         if (mode === "general") {
           selectedSpecialTopicId = null;
         } else if (mode === "special") {
           selectedTopicId = null;
+          if (selectedSpecialCourseId === darijaAndalusianCourseId) {
+            const firstNonDarijaCourse = specialCourses.find((course) => course.id !== darijaAndalusianCourseId);
+            selectedSpecialCourseId = firstNonDarijaCourse ? firstNonDarijaCourse.id : selectedSpecialCourseId;
+            selectedSpecialTopicId = null;
+          }
         }
+        renderSpecialCourseOptions();
         renderTopics();
         renderSpecialTopics();
         updatePromptPreview();
