@@ -299,10 +299,10 @@ type LessonTopic = {
 type SpecialCourse = {
   id: string;
   label: string;
-  family: "spanish-dialect" | "english-accent" | "spanish-from-darija";
+  family: "spanish-dialect" | "english-accent" | "spanish-from-darija" | "darija-from-english";
   variety: string;
   learnerNativeLanguage: "english" | "spanish" | "darija";
-  targetLanguage: "spanish" | "english";
+  targetLanguage: "spanish" | "english" | "darija";
   narratorEnv: string;
   maleVoiceEnv: string;
   femaleVoiceEnv: string;
@@ -619,6 +619,19 @@ function getSpecialCourses(): SpecialCourse[] {
       femaleVoiceEnv: "ELEVENLABS_ANDALUSIAN_SPANISH_FEMALE_VOICE_ID",
       researchFocus: "Andalusian Spanish taught from Moroccan Darija: practical Spain/Andalusia survival needs, ferry/airport arrival, paperwork, housing, work, neighbourhood life, cafés, shops, healthcare, school/family contexts, Moroccan-Spanish contact realities, false friends, pronunciation bridges, and Andalusian reductions explained respectfully for Darija-speaking learners.",
       culturalGuardrails: "Teach for Moroccan learners with respect and usefulness. Avoid stereotypes about migration, religion, class, or accent. Explain Andalusian variation without mocking it, and use Darija as the learner support language rather than Modern Standard Arabic.",
+    },
+    {
+      id: "british-english-to-moroccan-darija",
+      label: "British English → Moroccan Darija",
+      family: "darija-from-english",
+      variety: "Moroccan Darija for British English speakers",
+      learnerNativeLanguage: "english",
+      targetLanguage: "darija",
+      narratorEnv: "ELEVENLABS_ENGLISH_NARRATOR_VOICE_ID",
+      maleVoiceEnv: "ELEVENLABS_DARIJA_MALE_VOICE_ID",
+      femaleVoiceEnv: "ELEVENLABS_DARIJA_FEMALE_VOICE_ID",
+      researchFocus: "Moroccan Darija taught from British English: practical Morocco survival needs, greetings, cafés, taxis, souks, riads, food, bargaining, family hospitality, friendship, transport, phone/WhatsApp, safety, social warmth, Arabic-script recognition, Latin transliteration support, and real Moroccan rhythm without defaulting to Modern Standard Arabic.",
+      culturalGuardrails: "Teach Moroccan Darija as spoken Moroccan Arabic, not MSA. Use Arabic script plus learner-friendly Latin transliteration for every target chunk. Avoid stereotypes about Morocco, religion, bargaining, gender, class, or tourism. Explain register and politeness clearly.",
     },
     {
       id: "puerto-rican-spanish",
@@ -1261,6 +1274,81 @@ function getSpecialCourseTopics(): SpecialCourseTopic[] {
     ],
   };
 
+  const englishDarijaTopicsByLevel: Record<SpecialCourseLevel, Array<[string, string]>> = {
+    A1: [
+      ["First sounds and friendly greetings", "Recognise core Darija sounds, greet politely, say your name, and answer simple hello/how are you exchanges."],
+      ["Who you are and where you are from", "Say you are from Britain, ask someone’s name, and introduce yourself with simple Moroccan warmth."],
+      ["Please, thanks, sorry, and repeats", "Use polite survival phrases, ask people to repeat slowly, and recover when you do not understand."],
+      ["Numbers, prices, and basic money", "Understand small numbers, ask prices, hear dirham amounts, and pay for simple items."],
+      ["Ordering tea, coffee, and water", "Order Moroccan tea, coffee, water, bread, and simple snacks in cafés and small shops."],
+      ["Asking where things are", "Ask for the bathroom, hotel, taxi, station, pharmacy, cash machine, and simple directions."],
+      ["Taking a taxi or petit taxi", "Say where you are going, ask the price/meter, and understand simple driver replies."],
+      ["At the market for simple items", "Ask for fruit, bread, water, bags, quantity, and whether something is fresh or available."],
+      ["Saying what you need today", "Build basic sentences for needing help, food, water, directions, a phone, and time."],
+      ["Basic yes, no, maybe, and okay", "Use small response words naturally so you can participate even before full sentences feel easy."],
+    ],
+    A2: [
+      ["Hotel, riad, and check-in basics", "Ask about rooms, keys, breakfast, Wi-Fi, time, payment, and simple problems at accommodation."],
+      ["Food choices and dietary needs", "Ask about meat, fish, vegetables, spice, sugar, pork, alcohol, allergies, and what you can eat."],
+      ["Transport between cities", "Ask about train, bus, grand taxi, tickets, departure time, arrival time, and delays."],
+      ["Shopping without sounding rude", "Ask how much, say it is expensive, ask for a lower price politely, and close warmly."],
+      ["Meeting Moroccan friends", "Make simple plans, ask where to meet, suggest tea or food, and confirm time/location."],
+      ["Phone, SIM card, and WhatsApp basics", "Ask for data, top-up, number, location, voice note, and basic phone help."],
+      ["Simple health and pharmacy needs", "Explain headache, stomach pain, cold, fever, medicine, dosage, and urgent help."],
+      ["Family and hospitality basics", "Talk simply about family, accept tea/food, refuse more politely, and show appreciation."],
+      ["Weather, heat, and daily comfort", "Talk about hot, cold, tired, hungry, thirsty, rain, and needing rest or shade."],
+      ["Explaining simple problems", "Say something is lost, broken, closed, late, too expensive, too far, or not clear."],
+    ],
+    B1: [
+      ["Café conversations beyond ordering", "Hold a simple café chat about plans, work, travel, preferences, and local recommendations."],
+      ["Directions in a real Moroccan city", "Understand landmarks, left/right/straight, near/far, walking distance, taxi advice, and corrections."],
+      ["Bargaining with respect and humour", "Negotiate price lightly, react naturally, avoid sounding aggressive, and end on good terms."],
+      ["Being invited to someone’s home", "Accept or refuse politely, bring something, compliment food, and manage hospitality pressure."],
+      ["Talking about your trip naturally", "Say where you went, what you liked, what was difficult, and what you want to do next."],
+      ["Handling taxi or transport problems", "Explain wrong route, price confusion, traffic, waiting, and where you need to get off."],
+      ["Understanding common fast reductions", "Recognise natural Moroccan reductions, common particles, and how words link in speech."],
+      ["Making and changing plans", "Suggest plans, delay, cancel softly, offer another time, and confirm by WhatsApp."],
+      ["Small talk with neighbours or hosts", "Talk about family, work, weather, food, city life, and polite everyday check-ins."],
+      ["Safety and street confidence", "Ask for help, set a boundary, say no clearly, and keep interactions calm and respectful."],
+    ],
+    B2: [
+      ["Understanding warmth, teasing, and hospitality", "Read friendly teasing, repeated offers, compliments, and indirect pressure in social situations."],
+      ["Storytelling about a chaotic day", "Tell a simple but vivid story about taxis, markets, getting lost, delays, and funny misunderstandings."],
+      ["Talking about money and fairness", "Discuss prices, splitting costs, being short on cash, paying back, and avoiding awkwardness."],
+      ["Complaints without killing the relationship", "Explain a problem at a hotel, restaurant, shop, or taxi while staying calm and polite."],
+      ["Food, family, and guest etiquette", "Navigate more food, compliments, refusing politely, helping out, and showing respect in a home."],
+      ["Friendship, invitations, and social energy", "Accept plans, say you are tired, ask who is coming, and understand group-plan ambiguity."],
+      ["Discussing Morocco and Britain respectfully", "Compare daily life, prices, weather, family habits, food, and social style without sounding judgemental."],
+      ["Phone calls and voice notes", "Leave updates, ask someone to send location, clarify plans, and explain bad signal or confusion."],
+      ["Religion, Ramadan, and respectful questions", "Ask careful questions, talk about fasting schedules, greetings, food timing, and social sensitivity."],
+      ["Handling misunderstandings in Darija", "Clarify what you meant, apologise, rephrase, and ask if something sounded wrong."],
+    ],
+    C1: [
+      ["Register: street, family, and polite public Darija", "Switch between casual friend talk, respectful host talk, and service interactions with control."],
+      ["Reading indirect meaning in Moroccan conversation", "Understand soft refusals, vague answers, maybe/later, pride, embarrassment, and social face."],
+      ["Advanced market and service negotiation", "Push for clarity, discuss quality, price, time, mistakes, and solutions without sounding hostile."],
+      ["Moroccan humour and playful exaggeration", "Recognise joking, exaggeration, affectionate teasing, and when to laugh or back off."],
+      ["Talking about identity as a foreigner", "Discuss being British, learning Darija, mistakes, respect, belonging, and curiosity with nuance."],
+      ["Deeper hospitality boundaries", "Set limits around time, food, visits, gifts, and invitations without sounding cold."],
+      ["Discussing sensitive cultural topics safely", "Ask about traditions, religion, family, gender, politics, or class with humility and restraint."],
+      ["Conflict repair with friends or hosts", "Apologise properly, explain intent, lower tension, and keep dignity for both sides."],
+      ["Advanced Moroccan storytelling rhythm", "Use callbacks, reactions, emotional colour, and natural pacing in a longer spoken story."],
+      ["Understanding regional variation", "Notice differences between city, region, age, and formality without treating one Darija as the only Darija."],
+    ],
+    C2: [
+      ["Near-native Darija subtext", "Decode irony, pride, embarrassment, softened disagreement, hidden refusal, and what is left unsaid."],
+      ["High-stakes complaints and persistence", "Insist on a solution, document what happened, challenge unfairness, and stay socially controlled."],
+      ["Deep friendship and emotional honesty", "Talk about disappointment, loyalty, distance, hurt feelings, and repair with emotional precision."],
+      ["Advanced Moroccan banter and boundaries", "Handle rougher joking, playful provocation, and line-crossing without overreacting or freezing."],
+      ["Negotiating family and guest expectations", "Navigate long visits, family pressure, food, gifts, privacy, and obligations with tact."],
+      ["Public dignity and saving face", "Disagree, correct, refuse, or complain without humiliating the other person publicly."],
+      ["Layered stories with humour and reflection", "Tell complex stories with detours, punchlines, emotions, and a clear social point."],
+      ["Culture shock without sounding superior", "Discuss frustration, confusion, admiration, comparison, and adaptation with near-native humility."],
+      ["Romantic interest and respectful ambiguity", "Express interest, read signals, avoid pressure, and back off gracefully in Darija."],
+      ["Near-native mixed-register conversation", "Move between Darija, French loanwords, religious expressions, polite formulas, and casual slang with judgement."],
+    ],
+  };
+
   const topicGroups: Array<["gen1" | "gen2", Partial<Record<SpecialCourseLevel, Array<[string, string]>>>]> = [
     ["gen1", gen1ByLevel],
     ["gen2", gen2ByLevel],
@@ -1269,6 +1357,19 @@ function getSpecialCourseTopics(): SpecialCourseTopic[] {
   return getSpecialCourses().flatMap((course) => {
     if (course.id === "moroccan-darija-andalusian-spanish") {
       return (Object.entries(darijaAndalusianTopicsByLevel) as Array<[SpecialCourseLevel, Array<[string, string]>]>).flatMap(([level, topics]) =>
+        topics.map(([topic, objective], index) => ({
+          id: `${course.id}-${level.toLowerCase()}-${index + 1}-${slugText(topic)}`,
+          courseId: course.id,
+          level,
+          generation: "gen1" as const,
+          topic,
+          objective,
+        })),
+      );
+    }
+
+    if (course.id === "british-english-to-moroccan-darija") {
+      return (Object.entries(englishDarijaTopicsByLevel) as Array<[SpecialCourseLevel, Array<[string, string]>]>).flatMap(([level, topics]) =>
         topics.map(([topic, objective], index) => ({
           id: `${course.id}-${level.toLowerCase()}-${index + 1}-${slugText(topic)}`,
           courseId: course.id,
@@ -2756,8 +2857,9 @@ function pageHtml(): string {
             <option value="listen-respond">15-min Listen & Respond speaking drill</option>
             <option value="sentence-builder">10-min Cumulative Sentence Builder speaking drill</option>
             <option value="darija-andalusian">30-min Darija → Andalusian Spanish audio course</option>
+            <option value="english-darija">30-min British English → Moroccan Darija audio course</option>
           </select>
-          <p class="mini">Choose Darija → Andalusian here to load the Moroccan learner course automatically. Sentence Builder introduces chunks, repeats aloud, then builds longer spoken sentences without typing.</p>
+          <p class="mini">Choose either 30-min Darija bridge course here to load the correct course automatically. Sentence Builder introduces chunks, repeats aloud, then builds longer spoken sentences without typing.</p>
         </div>
 
         <div class="selector-field">
@@ -2809,7 +2911,7 @@ function pageHtml(): string {
             <h3>Dialect / Accent Special Course</h3>
             <p class="mini">Use this for country/accent courses with local slang, sayings, idioms, and natural phrasing. Most dialect courses start at B1/B2; the Moroccan Darija → Andalusian Spanish course runs from A1 to C2.</p>
             <div id="darijaCourseNotice" class="note block" hidden>
-              Darija → Andalusian mode is active. Pick the A1-C2 lesson below. The copied prompt will generate a 30-minute conversation-first lesson with Arabic-script Darija title/subtitle/description for Moroccan learners.
+              30-minute Darija bridge mode is active. Pick the A1-C2 lesson below. The copied prompt will generate a conversation-first lesson with the correct bridge-course rules.
             </div>
             <div class="topic-controls">
               <div class="selector-field">
@@ -2876,6 +2978,7 @@ function pageHtml(): string {
       let selectedSpecialTopicId = null;
       let selectedSpecialGeneration = "gen1";
       const darijaAndalusianCourseId = "moroccan-darija-andalusian-spanish";
+      const englishDarijaCourseId = "british-english-to-moroccan-darija";
       document.getElementById("detailedPromptText").textContent = detailedChatGptPrompt;
 
       function getSelectedTopic() {
@@ -2928,6 +3031,10 @@ function pageHtml(): string {
           return "30-min Darija → Andalusian conversation-first audio lesson";
         }
 
+        if (speakingFormat === "english-darija") {
+          return "30-min British English → Moroccan Darija conversation-first audio lesson";
+        }
+
         return speakingFormat === "sentence-builder"
           ? "10-min cumulative Sentence Builder speaking drill"
           : "15-min Listen & Respond speaking drill";
@@ -2942,6 +3049,17 @@ function pageHtml(): string {
             "This format automatically uses the Moroccan Darija → Andalusian Spanish special course.",
             "Do not use the normal 15-minute Listen & Respond duration and do not use the 10-minute Sentence Builder duration.",
             "Use the Darija → Andalusian special-course appendix below as the controlling brief for duration, title language, voices, structure, and method."
+          ].join("\\n");
+        }
+
+        if (speakingFormat === "english-darija") {
+          return [
+            "",
+            "",
+            "SPEAKING LESSON FORMAT OVERRIDE - 30-MIN BRITISH ENGLISH → MOROCCAN DARIJA AUDIO COURSE",
+            "This format automatically uses the British English → Moroccan Darija special course.",
+            "Do not use the normal 15-minute Listen & Respond duration and do not use the 10-minute Sentence Builder duration.",
+            "Use the English → Darija special-course appendix below as the controlling brief for duration, Arabic script, Latin transliteration, voices, structure, and method."
           ].join("\\n");
         }
 
@@ -3071,6 +3189,8 @@ function pageHtml(): string {
 
         const direction = course.family === "spanish-from-darija"
           ? "Andalusian Spanish course for Moroccan Darija speakers"
+          : course.family === "darija-from-english"
+            ? "Moroccan Darija course for British English speakers"
           : course.family === "spanish-dialect"
             ? "Spanish dialect course for native English speakers"
             : "English accent course for native Spanish speakers";
@@ -3080,7 +3200,7 @@ function pageHtml(): string {
 
       function getSpecialCoursePromptAppendix(course, topic) {
         if (!course || !topic) return "";
-        const isSpanishTargetCourse = course.family === "spanish-dialect" || course.family === "spanish-from-darija";
+        const usesNativeTargetRoles = course.family === "spanish-dialect" || course.family === "spanish-from-darija" || course.family === "darija-from-english";
         const narratorLanguage = course.learnerNativeLanguage === "darija"
           ? "Moroccan Darija"
           : course.learnerNativeLanguage === "english" ? "English" : "Spanish";
@@ -3092,8 +3212,8 @@ function pageHtml(): string {
         const introNarratorVoice = course.learnerNativeLanguage === "darija"
           ? null
           : narratorMode === "hybrid-intro" ? "env:" + course.narratorEnv : null;
-        const roleMale = isSpanishTargetCourse ? "native_male" : "english_male";
-        const roleFemale = isSpanishTargetCourse ? "native_female" : "english_female";
+        const roleMale = usesNativeTargetRoles ? "native_male" : "english_male";
+        const roleFemale = usesNativeTargetRoles ? "native_female" : "english_female";
         const voiceBlock = '{\\n' +
           '  "narrator": "' + narratorVoice + '",\\n' +
           '  "' + roleMale + '": "env:' + course.maleVoiceEnv + '",\\n' +
@@ -3109,6 +3229,7 @@ function pageHtml(): string {
           "andalusian-spanish": "illo/illa, quillo/quilla, mi arma, arte, no ni ná, pisha, compae, tapas, feria",
           "puerto-rican-spanish": "boricua, mano, brutal, chévere, janguear, corillo, guagua, chinchorro, bendito",
           "moroccan-darija-andalusian-spanish": "hola, gracias, por favor, tapas, feria, illo/illa, mi arma, vale, no pasa nada, muy bien",
+          "british-english-to-moroccan-darija": "salam, labas, bikhir, shukran, afak, la, iyeh, bghit, fin, shhal, daba, mzyan",
           "british-english": "cheers, mate, fancy, brilliant, gutted, knackered, sorted, queue, lift",
           "american-english": "gonna, wanna, gotta, awesome, no worries, I'm down, sounds good, hang out",
           "irish-english": "grand, craic, sound, no bother, cheers, fair play",
@@ -3119,7 +3240,7 @@ function pageHtml(): string {
           "",
           "LEVEL-SPECIFIC LOCAL VOCABULARY PROGRESSION RULE:",
           "- First identify the obvious beginner starter-pack vocabulary for " + course.variety + " and avoid treating it as advanced. For this course, examples include: " + starterPackExamples + ".",
-          "- A1 = absolute survival: greetings, identity, numbers, basic needs, locations, ordering, simple help, and pronunciation bridges from Darija to Spanish.",
+          "- A1 = absolute survival: greetings, identity, numbers, basic needs, locations, ordering, simple help, and pronunciation bridges for this course direction.",
           "- A2 = daily-life control: appointments, housing, work basics, health, school/family needs, food restrictions, and simple problem explanations.",
           "- B1 = accessible local flavour: practical high-frequency chunks, gentle regional identity, short sentence patterns, and clear register warnings.",
           "- B2 = practical everyday local speech: useful informal phrasing for real situations, more reductions, reactions, softeners, and common idioms, but still easy to explain.",
@@ -3139,6 +3260,9 @@ function pageHtml(): string {
           "- Metadata language rule: the selected topic title shown in this studio is an English admin label for the course creator only. The JSON lesson title, subtitle, and any learner-facing description/summary must be written for Moroccan learners in Moroccan Darija using Arabic script.",
           "- Do not write the learner-facing title/subtitle in English, Spanish, or Latinized Darija. Use natural Moroccan Darija Arabic script, while keeping the outputSlug in safe lowercase English/Latin characters.",
           "- If a clear Darija title is hard, use a simple Arabic-script Darija title that names the practical situation, then use the subtitle to explain the goal in Darija.",
+          "- Learner-facing UI language rule: all screen instructions for the learner must be Moroccan Darija in Arabic script. This includes visualTitle, visualSubtitle, subtitle on narrator segments, showOnScreenText instructions, nativePrompt instructions, timerLabel, final challenge instructions, and outro instructions.",
+          "- Do not show English UI labels like 'Repeat it', 'Your turn', 'Say it', 'Listen', 'Answer', or 'Final challenge' in this course. Use Arabic-script Darija equivalents, for example: 'عاودها', 'نوبتك', 'قولها بالإسبانية', 'سمع مزيان', 'جاوب بالإسبانية', 'التحدي الأخير'.",
+          "- All Darija narrator text must be in Arabic script for this course. Do not use Latinized Darija for the Darija narrator or learner-facing Darija UI. Latin transliteration is only for English speakers learning Darija, not for Moroccan Darija speakers learning Andalusian Spanish.",
           "- This course must use a conversation-first, graduated-recall audio method. Do not make a lecture, vocabulary list, or ordinary topic drill.",
           "- Do not copy proprietary scripts, wording, lesson content, course names, trademarks, or branded phrasing from any commercial audio course. Use the method principles only: dialogue preview, sentence-by-sentence breakdown, active recall, native-speaker modeling, spaced review, and cumulative recombination.",
           "- At the very start, the Darija narrator tells the learner in Moroccan Darija that they will learn to understand a short Andalusian Spanish conversation.",
@@ -3155,6 +3279,34 @@ function pageHtml(): string {
           "- Segment order should usually be: Darija intro → full Spanish dialogue preview → Darija reassurance → sentence 1 breakdown → active recall → native model → repeat → sentence 2 breakdown → active recall → spaced review → Spanish question to learner → answer model → recombination → final dialogue replay → final challenge → outro.",
           "- For A1/A2, keep Spanish short and survival-focused, but still start with a tiny real conversation. For C1/C2, keep the same method but use more subtext, register, and natural Andalusian pacing."
         ];
+        const englishDarijaMethodLines = [
+          "",
+          "MANDATORY BRITISH ENGLISH → MOROCCAN DARIJA AUDIO-COURSE METHOD:",
+          "- IMPORTANT DURATION OVERRIDE: this British English → Moroccan Darija course is always a 30-minute lesson, not the normal 15-minute PU3NTE lesson. Ignore any earlier generic 15-minute duration rule for this course only.",
+          "- Set estimatedMinutes to exactly 30 and durationGoalMinutes to exactly 30. A British English → Moroccan Darija lesson under 25 minutes is invalid.",
+          "- Use the extra time for consolidation, not filler: slower phrase construction, more learner pauses, more spaced recall, more answer modeling, more dialogue replay, and more cumulative recombination.",
+          "- Aim for roughly 45-60 prompt/answer/repeat groups, 16-24 spaced review prompts, multiple dialogue checkpoints, one mid-lesson conversation replay, one final varied conversation replay, and one final challenge.",
+          "- Metadata language rule: the selected topic title shown in this studio is an English admin label. The JSON lesson title/subtitle may be in English for British learners, but whenever a Darija phrase appears in metadata or learner-facing text, include Arabic script plus Latin transliteration.",
+          "- This course must use a conversation-first, graduated-recall audio method. Do not make a lecture, vocabulary list, tourist phrasebook, or ordinary topic drill.",
+          "- Do not copy proprietary scripts, wording, lesson content, course names, trademarks, or branded phrasing from any commercial audio course. Use the method principles only: dialogue preview, sentence-by-sentence breakdown, active recall, native-speaker modeling, spaced review, and cumulative recombination.",
+          "- At the very start, the English narrator tells the learner in natural British English that they will learn to understand a short Moroccan Darija conversation.",
+          "- Immediately after that, include a natural mini-conversation between two Moroccan Darija native speakers using native_male and native_female. The conversation should be short at A1/A2, richer at B1/B2, and nuanced at C1/C2.",
+          "- The learner should hear this opening conversation before the lesson explains it. Do not translate every line before the first listen.",
+          "- After the first listen, teach the conversation bit by bit through sentence building: isolate one useful Darija sentence, explain the meaning in British English, ask the learner to say it in Darija, pause, model it with a native Darija voice, and make them repeat.",
+          "- Build from small chunks into full sentences. Use back-chaining when useful: final phrase first, then add the beginning, then say the complete sentence.",
+          "- Recycle earlier chunks at increasing intervals. Bring back old phrases after 2-4 new items, then combine them with new words.",
+          "- Include occasional comprehension/response moments where a Moroccan Darija native speaker asks the learner a real question in Darija. The learner answers out loud in Darija, then hears the model answer.",
+          "- Use English only for instructions, meaning, contrast, and grammar/culture support. Moroccan Darija native voices must model all Darija answers, questions, repeats, and mini-dialogues.",
+          "- Never make the English narrator pronounce long Darija answers. Put the Darija phrase in showOnScreenText/targetAnswer, then have native_male or native_female say it.",
+          "- Every target Darija chunk shown on screen must include Arabic script plus a learner-friendly Latin transliteration. Use this format consistently: Arabic script — Latin transliteration — English meaning.",
+          "- For targetAnswer, include Arabic script first, then Latin transliteration in parentheses, for example: السلام عليكم (s-salam 3likum).",
+          "- For showOnScreenText/nativePrompt, show the English prompt plus the Darija answer support where useful: English meaning → Arabic script → Latin transliteration.",
+          "- Do not default to Modern Standard Arabic. Teach Moroccan Darija as spoken Moroccan Arabic. Use Arabic script for literacy exposure, but always include Latin transliteration for learners who cannot read Arabic yet.",
+          "- End by replaying a version of the opening conversation or a slightly varied final dialogue so the learner can understand what felt difficult at the start.",
+          "- The final challenge should ask the learner, in English, to respond to part of the same situation using several Darija phrases learned in the lesson.",
+          "- Segment order should usually be: English intro → full Darija dialogue preview → English reassurance → sentence 1 breakdown → active recall → native Darija model → repeat → sentence 2 breakdown → active recall → spaced review → Darija question to learner → answer model → recombination → final dialogue replay → final challenge → outro.",
+          "- For A1/A2, keep Darija short and survival-focused, but still start with a tiny real conversation. For C1/C2, keep the same method but use more subtext, register, humour, natural Moroccan rhythm, and cultural judgement."
+        ];
 
         return [
           "",
@@ -3164,6 +3316,8 @@ function pageHtml(): string {
           "Variety/accent: " + course.variety,
           course.id === "moroccan-darija-andalusian-spanish"
             ? "Course design: full A1 to C2 Andalusian Spanish pathway for Moroccan Darija speakers. The levels are sequential: A1 survival basics, A2 daily-life independence, B1 practical integration, B2 confident local interaction, C1 nuanced identity/work/social control, C2 near-native subtext and high-stakes communication."
+            : course.id === "british-english-to-moroccan-darija"
+            ? "Course design: full A1 to C2 Moroccan Darija pathway for British English speakers. The levels are sequential: A1 survival basics, A2 daily-life independence in Morocco, B1 practical social control, B2 confident everyday interaction, C1 nuanced culture/register control, C2 near-native subtext and high-stakes communication."
             : speakingFormat === "sentence-builder"
             ? "Course design: B1 sentence-builder lessons are allowed only in this cumulative speaking-builder format. Standard dialect/accent lessons remain B2, C1, and C2."
             : "Course design: 8 speaking lessons per advanced level, 24 total lessons for this variety/accent. Levels are B2, C1, and C2 only. No A1-A2 or B1 lessons: this course is intended for B2 upward learners who already know general basics.",
@@ -3180,15 +3334,16 @@ function pageHtml(): string {
           introNarratorVoice ? "Intro narrator override: add voiceId \\\"" + introNarratorVoice + "\\\" only to the intro segment or intro segments." : "",
           "Narrator mode: " + getNarratorModeLabel(),
           course.learnerNativeLanguage === "darija"
-            ? "Darija narrator rule: use Moroccan Darija as the learner-support language for narrator explanations and prompts. Prefer clear Moroccan Darija written in a learner-friendly Latinized style unless the user explicitly asks for Arabic script. Do not use Modern Standard Arabic as the default support language."
+            ? "Darija narrator rule: use Moroccan Darija in Arabic script as the learner-support language for narrator explanations, prompts, subtitles, screen instructions, timer labels, and learner-facing metadata. Do not use Modern Standard Arabic as the default support language, and do not use Latinized Darija for this Darija-native course."
             : "",
           "Voice mapping to use exactly:",
           voiceBlock,
           ...advancedProgressionLines,
           ...(course.id === "moroccan-darija-andalusian-spanish" ? darijaAndalusianMethodLines : []),
+          ...(course.id === "british-english-to-moroccan-darija" ? englishDarijaMethodLines : []),
           "",
           "Research requirement:",
-          "Before generating the JSON, if web access is available, actively research how real speakers from the selected course/dialect/accent speak in the selected context: " + course.variety + ". Do not research Colombian speakers unless the selected course is Colombian Spanish. If the selected course is Argentinian Spanish, research Argentinian speakers; if Mexican Spanish, research Mexican speakers; if Dominican Spanish, research Dominican speakers; if Peruvian Spanish, research Peruvian speakers; if Cuban Spanish, research Cuban speakers; if Andalusian Spanish, research Andalusian speakers; if Moroccan Darija → Andalusian Spanish, research Andalusian speakers and common Moroccan learner needs in Andalusia; if Puerto Rican Spanish, research Puerto Rican speakers; if American/British/Irish/Australian English, research speakers from that accent/community. Do not rely on memory, generic slang lists, or examples from this prompt. Look for natural speech from that selected community in interviews, podcasts, street interviews, TikTok/YouTube/Instagram clips, comments, informal explainers, comedians, musicians, artists, influencers, streamers, local creators, and everyday conversation transcripts where possible.",
+          "Before generating the JSON, if web access is available, actively research how real speakers from the selected course/dialect/accent speak in the selected context: " + course.variety + ". Do not research Colombian speakers unless the selected course is Colombian Spanish. If the selected course is Argentinian Spanish, research Argentinian speakers; if Mexican Spanish, research Mexican speakers; if Dominican Spanish, research Dominican speakers; if Peruvian Spanish, research Peruvian speakers; if Cuban Spanish, research Cuban speakers; if Andalusian Spanish, research Andalusian speakers; if Moroccan Darija → Andalusian Spanish, research Andalusian speakers and common Moroccan learner needs in Andalusia; if British English → Moroccan Darija, research Moroccan Darija speakers and common English-speaking learner needs in Morocco; if Puerto Rican Spanish, research Puerto Rican speakers; if American/British/Irish/Australian English, research speakers from that accent/community. Do not rely on memory, generic slang lists, or examples from this prompt. Look for natural speech from that selected community in interviews, podcasts, street interviews, TikTok/YouTube/Instagram clips, comments, informal explainers, comedians, musicians, artists, influencers, streamers, local creators, and everyday conversation transcripts where possible.",
           "Analyse patterns from those sources: greetings/openers, ways to say goodbye, reactions, weather sayings, food/drink words, transport words, money/time phrases, texting/voice-note phrases, filler phrases, discourse markers, idioms, informal contractions/reductions, politeness formulas, teasing/banter, softeners, pronunciation/intonation notes, and real-life register.",
           "Build a fresh internal phrase bank of at least 25 useful " + course.variety + " local expressions from that research before writing the lesson. Use at least 15-20 of them naturally across prompts, answers, repeats, mini-dialogues, reviews, and the final challenge. Do not output the phrase bank separately; weave it into the JSON lesson.",
           "Important freshness rule: do not lean on example phrases, famous stereotype phrases, dictionary-style lists, or vocabulary from previous PU3NTE lessons unless the selected topic genuinely requires them. Prefer newly researched local expressions that fit this exact topic and situation.",
@@ -3203,12 +3358,16 @@ function pageHtml(): string {
           "Content requirements for this selected course:",
           course.id === "moroccan-darija-andalusian-spanish"
             ? "- Generate exactly one complete 30-minute conversation-first cumulative sentence-building audio lesson. It must begin with a native Andalusian Spanish dialogue preview, then teach that dialogue piece by piece from Darija, include a mid-lesson dialogue replay, and finish with a final replay or variation-check near the end."
+            : course.id === "british-english-to-moroccan-darija"
+            ? "- Generate exactly one complete 30-minute conversation-first cumulative sentence-building audio lesson. It must begin with a native Moroccan Darija dialogue preview, then teach that dialogue piece by piece from British English, include a mid-lesson dialogue replay, and finish with a final replay or variation-check near the end."
             : speakingFormat === "sentence-builder"
             ? "- Generate exactly one complete 10-minute Cumulative Sentence Builder speaking lesson for this selected topic and level."
             : "- Generate exactly one complete 15-minute Listen & Respond lesson for this selected topic and level.",
           "- Make the lesson heavily natural/local/informal, not generic standard textbook language.",
           course.id === "moroccan-darija-andalusian-spanish"
             ? "- Because this course starts at A1, keep A1/A2 target Spanish simple and immediately useful. Use Darija explanations to make Spanish structure clear, and add Andalusian flavour gradually without overwhelming beginners."
+            : course.id === "british-english-to-moroccan-darija"
+            ? "- Because this course starts at A1, keep A1/A2 target Darija simple and immediately useful. Use British English explanations to make Darija structure clear, and show Arabic script plus Latin transliteration from the beginning without overwhelming beginners."
             : "",
           speakingFormat === "sentence-builder" && topic.level === "B1"
             ? "- For B1 sentence-builder lessons, use local flavour gently: local greetings, reactions, common everyday chunks, and natural phrasing. Do not force dense slang into every sentence."
@@ -3248,12 +3407,20 @@ function pageHtml(): string {
         const course = getActiveSpecialCourse();
         const specialTopic = getActiveSpecialTopic();
         if (course && specialTopic) {
-          const prefix = course.id === darijaAndalusianCourseId ? "Darija → Andalusian course selected: " : "Dialect/accent course selected: ";
+          const prefix = course.id === darijaAndalusianCourseId
+            ? "Darija → Andalusian course selected: "
+            : course.id === englishDarijaCourseId
+            ? "British English → Darija course selected: "
+            : "Dialect/accent course selected: ";
           return prefix + course.label + " · " + specialTopic.level + " · " + specialTopic.topic + " · " + getSpeakingFormatLabel() + " · " + getNarratorModeLabel();
         }
 
         if (activePromptKind === "special" && course) {
-          return (course.id === darijaAndalusianCourseId ? "Darija → Andalusian course mode: choose a " : "Dialect/accent course mode: choose a ") + course.label + " lesson to activate it.";
+          return (course.id === darijaAndalusianCourseId
+            ? "Darija → Andalusian course mode: choose a "
+            : course.id === englishDarijaCourseId
+            ? "British English → Darija course mode: choose a "
+            : "Dialect/accent course mode: choose a ") + course.label + " lesson to activate it.";
         }
 
         if (activePromptKind === "general") {
@@ -3269,7 +3436,7 @@ function pageHtml(): string {
         document.getElementById("generalSelectorControls").classList.toggle("hidden", activePromptKind === "special");
         document.getElementById("specialSelectorControls").classList.toggle("hidden", activePromptKind !== "special");
         const selectedCourse = getSelectedSpecialCourse();
-        const isDarijaMode = activePromptKind === "special" && speakingFormat === "darija-andalusian" && selectedCourse && selectedCourse.id === darijaAndalusianCourseId;
+        const isDarijaMode = activePromptKind === "special" && (speakingFormat === "darija-andalusian" || speakingFormat === "english-darija") && selectedCourse && (selectedCourse.id === darijaAndalusianCourseId || selectedCourse.id === englishDarijaCourseId);
         document.getElementById("selectorModeSelect").value = activePromptKind === "special" ? "special" : "general";
         document.getElementById("darijaCourseNotice").hidden = !isDarijaMode;
         document.getElementById("specialCourseSelect").closest(".selector-field").hidden = isDarijaMode;
@@ -3341,7 +3508,9 @@ function pageHtml(): string {
         const select = document.getElementById("specialCourseSelect");
         const availableCourses = speakingFormat === "darija-andalusian"
           ? specialCourses.filter((course) => course.id === darijaAndalusianCourseId)
-          : specialCourses.filter((course) => course.id !== darijaAndalusianCourseId);
+          : speakingFormat === "english-darija"
+          ? specialCourses.filter((course) => course.id === englishDarijaCourseId)
+          : specialCourses.filter((course) => course.id !== darijaAndalusianCourseId && course.id !== englishDarijaCourseId);
         if (!availableCourses.some((course) => course.id === selectedSpecialCourseId)) {
           selectedSpecialCourseId = availableCourses[0] ? availableCourses[0].id : null;
           selectedSpecialTopicId = null;
@@ -3377,7 +3546,7 @@ function pageHtml(): string {
         const filtered = specialCourseTopics.filter((topic) => {
           if (topic.courseId !== course.id) return false;
           if ((topic.generation || "gen1") !== selectedSpecialGeneration) return false;
-          if (course.id !== "moroccan-darija-andalusian-spanish" && topic.level === "B1" && speakingFormat !== "sentence-builder") return false;
+          if (course.id !== "moroccan-darija-andalusian-spanish" && course.id !== "british-english-to-moroccan-darija" && topic.level === "B1" && speakingFormat !== "sentence-builder") return false;
           if (level !== "all" && topic.level !== level) return false;
           if (search && !(topic.topic + " " + topic.objective + " " + topic.level + " " + course.label).toLowerCase().includes(search)) return false;
           return true;
@@ -3411,7 +3580,7 @@ function pageHtml(): string {
               '<div class="topic-objective">' + escapeHtml(topic.objective) + '</div>' +
             '</div>' +
           '</div>';
-        }).join("") || (course.id !== "moroccan-darija-andalusian-spanish" && level === "B1" && speakingFormat !== "sentence-builder"
+        }).join("") || (course.id !== "moroccan-darija-andalusian-spanish" && course.id !== "british-english-to-moroccan-darija" && level === "B1" && speakingFormat !== "sentence-builder"
           ? '<div class="note">B1 special-course lessons are only available when Speaking lesson format is set to 10-min Cumulative Sentence Builder speaking drill.</div>'
           : '<div class="note">No dialect/accent lessons match these filters.</div>');
 
@@ -3470,7 +3639,7 @@ function pageHtml(): string {
         activePromptKind = mode;
         if (mode === "general") {
           selectedSpecialTopicId = null;
-          if (speakingFormat === "darija-andalusian") {
+          if (speakingFormat === "darija-andalusian" || speakingFormat === "english-darija") {
             speakingFormat = "listen-respond";
           }
         } else if (mode === "special") {
@@ -3735,8 +3904,15 @@ function pageHtml(): string {
           selectedSpecialTopicId = null;
           selectedSpecialGeneration = "gen1";
           renderSpecialCourseOptions();
-        } else if (selectedSpecialCourseId === darijaAndalusianCourseId) {
-          const firstNonDarijaCourse = specialCourses.find((course) => course.id !== darijaAndalusianCourseId);
+        } else if (speakingFormat === "english-darija") {
+          activePromptKind = "special";
+          selectedTopicId = null;
+          selectedSpecialCourseId = englishDarijaCourseId;
+          selectedSpecialTopicId = null;
+          selectedSpecialGeneration = "gen1";
+          renderSpecialCourseOptions();
+        } else if (selectedSpecialCourseId === darijaAndalusianCourseId || selectedSpecialCourseId === englishDarijaCourseId) {
+          const firstNonDarijaCourse = specialCourses.find((course) => course.id !== darijaAndalusianCourseId && course.id !== englishDarijaCourseId);
           selectedSpecialCourseId = firstNonDarijaCourse ? firstNonDarijaCourse.id : selectedSpecialCourseId;
           selectedSpecialTopicId = null;
           renderSpecialCourseOptions();
