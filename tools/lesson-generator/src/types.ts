@@ -1,4 +1,5 @@
 import type { LessonScript, SegmentRole, SegmentType, VisualMode } from "./validateScript";
+import type { GrammarBoard } from "./grammarSchema";
 
 export type VoiceSettings = {
   stability?: number;
@@ -40,6 +41,7 @@ export type TimelineSegment = {
   showOnScreenText?: string;
   targetAnswer?: string;
   nativePrompt?: string;
+  grammarBoard?: GrammarBoard;
 };
 
 export type LessonTimeline = {
@@ -55,6 +57,7 @@ export type LessonTimeline = {
     | "estimatedMinutes"
     | "outputSlug"
     | "branding"
+    | "lessonFormat"
   >;
   totalDurationMs: number;
   fps: number;

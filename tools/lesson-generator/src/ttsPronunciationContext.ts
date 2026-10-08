@@ -22,6 +22,13 @@ const contextualExamples: Array<{ pattern: RegExp; sentence: string }> = [
   { pattern: /^wey[.!?]?$/i, sentence: "Oye, wey, ven acá." },
   { pattern: /^che[.!?]?$/i, sentence: "Che, ¿cómo estás?" },
   { pattern: /^boludo[.!?]?$/i, sentence: "Che, boludo, escuchame." },
+  { pattern: /^salam[.!?]?$/i, sentence: "Salam, labas?" },
+  { pattern: /^labas[.!?]?$/i, sentence: "Salam, labas 3lik?" },
+  { pattern: /^bikhir[.!?]?$/i, sentence: "Ana bikhir, shukran." },
+  { pattern: /^shukran[.!?]?$/i, sentence: "Shukran bzaf." },
+  { pattern: /^afak[.!?]?$/i, sentence: "Afak, fin taxi?" },
+  { pattern: /^mzyan[.!?]?$/i, sentence: "Hadshi mzyan." },
+  { pattern: /^bghit[.!?]?$/i, sentence: "Bghit atay, afak." },
 ];
 
 function cleanForCounting(text: string): string {
@@ -70,6 +77,10 @@ function getLanguageContext(script: LessonScript): string {
     return `Natural ${course || "English"} pronunciation in a real conversation:`;
   }
 
+  if (/darija|moroccan/i.test(`${targetLanguage} ${course}`)) {
+    return `Natural Moroccan Darija pronunciation in a real conversation:`;
+  }
+
   return `Natural ${targetLanguage || course} pronunciation in a real conversation:`;
 }
 
@@ -83,12 +94,24 @@ function getFallbackExample(script: LessonScript, text: string): string {
     return `Natural example: ${text.trim()} in a conversational sentence.`;
   }
 
+  if (/darija|moroccan/i.test(`${script.targetLanguage} ${script.course}`)) {
+    return `Natural Darija example: ${text.trim()} in a Moroccan conversational sentence.`;
+  }
+
   return `Ejemplo natural: ${text.trim()} en una frase conversacional.`;
 }
 
 export function getPronunciationContext(script: LessonScript, segment: LessonSegment): TtsContext {
   if (!isTargetLanguageClip(segment) || !isShortPronunciationRisk(segment.text)) {
     return {};
+  }
+
+  if (script.lessonFormat === "grammar") {
+    const index = script.segments.findIndex((candidate) => candidate.id === segment.id);
+    return {
+      previousText: script.segments.slice(0, index).reverse().find(isTargetLanguageClip)?.text,
+      nextText: script.segments.slice(index + 1).find(isTargetLanguageClip)?.text,
+    };
   }
 
   const example = getContextualExample(segment.text);

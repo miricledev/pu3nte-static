@@ -9,6 +9,7 @@ import { SpeakerLabel } from "./components/SpeakerLabel";
 import { SubtitleBlock } from "./components/SubtitleBlock";
 import type { RemotionLessonProps } from "./Root";
 import type { TimelineSegment } from "../src/types";
+import { GrammarLessonVideo } from "./GrammarLessonVideo";
 
 function findActiveSegment(segments: TimelineSegment[], currentMs: number): TimelineSegment {
   return (
@@ -75,6 +76,10 @@ export const Pu3nteLessonVideo = ({ timeline, audioSrc, backgroundImageSrc }: Re
   const displayTimerLabel = timerIsVisible ? activeSegment.timerLabel ?? "Respond out loud" : getModeLabel(activeSegment);
   const overallProgress = currentMs / timeline.totalDurationMs;
   const visualIntensity = timerIsVisible ? 1 : activeSegment.visualMode === "answer" || activeSegment.visualMode === "repeat" ? 0.84 : 0.52;
+
+  if (timeline.lesson.lessonFormat === "grammar") {
+    return <GrammarLessonVideo timeline={timeline} audioSrc={audioSrc} backgroundImageSrc={backgroundImageSrc} segment={activeSegment} currentMs={currentMs} />;
+  }
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#050814", color: "white", fontFamily: "Inter, Arial, sans-serif" }}>

@@ -6,6 +6,20 @@ The project is a static React/Vite learning site. The user usually creates the m
 
 ## Core Mental Model
 
+### Grammar video mode
+
+Lesson Studio now has **Speaking / grammar lesson format → 10-min Grammar lab**. This is separate from the 15-minute drills and 30-minute Darija bridge courses. It supports English → Spanish, Moroccan Darija → Andalusian Spanish, and British English → Moroccan Darija, with eight ordered topics per level A1–C2 and an optional custom focus.
+
+Read `tools/lesson-generator/README.md`, section “Ten-minute grammar videos”, before editing this mode. Its standalone prompts come from `src/grammarLessons.ts` and embed the actual script schema. Do not append legacy speaking prompt rules to grammar prompts. Use `lessonFormat: "grammar"`, both duration fields set to 10, and `grammarBoard` on every segment. Boards support tables, patterns, contrasts, timelines and examples; they are passed through the timeline to the dedicated Remotion grammar renderer.
+
+The key pronunciation rule: `text` is spoken, `grammarBoard` is display-only. Put affixes such as `-as`, grammatical formulas and transliteration on the board. Explain them in full natural words, then model complete target-language sentences with native voices. Never have the narrator switch languages to read target examples. English → Darija displays Arabic + Latin + meaning; Moroccan learners receive Arabic-script Darija narration and screen instructions. Use the existing configured voice env names; never invent or overwrite real voice IDs.
+
+At least six timed attempts must each be followed immediately by a separate answer segment. Answer text must remain hidden until the response pause finishes. Alternate explanation, meaningful examples and application. Script checks reject unsafe notation, invalid boards and missing practice pairs. Estimated duration is checked before paid generation and measured duration before video rendering; nine to eleven minutes is the accepted window. Audio is retained if measured duration needs revision. No prompt can guarantee perfect generated JSON, grammar or pronunciation: validate, dry-run and review output.
+
+Preserve active Studio/MP4 jobs. Use a separate temporary Studio port when testing changed server code; do not kill the user's existing process. A static preview or schema check is not a completed MP4/audio audition.
+
+### Reinforcement packs
+
 Each new topic usually needs a complete reinforcement pack:
 
 1. Flashcards

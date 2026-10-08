@@ -11,3 +11,5 @@ tools/lesson-generator/cache/audio/*
 !tools/lesson-generator/cache/audio/.gitkeep
 tools/lesson-generator/sample-lessons/studio-generated/*
 !tools/lesson-generator/sample-lessons/studio-generated/.gitkeep
+
+.vercel

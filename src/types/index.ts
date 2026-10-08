@@ -1,5 +1,5 @@
 export type LanguageTarget = "spanish" | "english";
-export type LearnerNativeLanguage = "spanish" | "english" | "mixed";
+export type LearnerNativeLanguage = "spanish" | "english" | "darija" | "mixed";
 export type Level = "beginner" | "elementary" | "intermediate" | "upper-intermediate" | "advanced";
 export type ActivityType = "flashcards" | "sentence-builder" | "verb-trainer" | "story" | "quiz" | "reading" | "grammar";
 

@@ -32,8 +32,8 @@ export function ActivityHeader({
           {copy.activity}: {activityType.replace("-", " ")} · {estimatedMinutes} {copy.minutes}
         </span>
       </div>
-      <h1 className="mt-3 text-xl font-extrabold uppercase tracking-[0.04em] sm:mt-4 sm:text-4xl sm:tracking-[0.06em]">{title}</h1>
-      <p className="mt-2 max-w-3xl text-sm text-pu3nte-secondary sm:mt-3 sm:text-base">{subtitle}</p>
+      <h1 dir="auto" className="mt-3 text-xl font-extrabold uppercase tracking-[0.04em] sm:mt-4 sm:text-4xl sm:tracking-[0.06em]">{title}</h1>
+      <p dir="auto" className="mt-2 max-w-3xl text-sm text-pu3nte-secondary sm:mt-3 sm:text-base">{subtitle}</p>
       <div className="hidden sm:block">
         <BridgeDivider />
       </div>

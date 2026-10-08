@@ -111,6 +111,7 @@ export function buildTimeline(script: LessonScript, clips: GeneratedAudioClip[])
       showOnScreenText: segment.showOnScreenText,
       targetAnswer: segment.targetAnswer,
       nativePrompt: segment.nativePrompt,
+      grammarBoard: segment.grammarBoard,
     });
 
     cursorMs = pauseEndMs;
@@ -128,6 +129,7 @@ export function buildTimeline(script: LessonScript, clips: GeneratedAudioClip[])
       estimatedMinutes: script.estimatedMinutes,
       outputSlug: script.outputSlug,
       branding: script.branding,
+      lessonFormat: script.lessonFormat,
     },
     totalDurationMs: cursorMs,
     fps: script.settings.fps,

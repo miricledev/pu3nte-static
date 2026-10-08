@@ -184,6 +184,7 @@ export function StoryPage() {
   const preparationDeckId = getPreparationDeckId(story.id);
   const preparationDeck = flashcardDecks.find((deck) => deck.id === preparationDeckId || deck.relatedCourse === story.id);
   const isEnglishForSpanishSpeakers = story.languageTarget === "english" && story.learnerNativeLanguage === "spanish";
+  const isSpanishForDarijaSpeakers = story.languageTarget === "spanish" && story.learnerNativeLanguage === "darija";
   const activeCheckCard = activeCheck ? (
     <div className="rounded-lg border border-pu3nte-cyan/30 bg-pu3nte-cyan/10 p-4">
       <p className="text-xs font-bold uppercase tracking-[0.18em] text-pu3nte-cyan">{copy.comprehensionCheck}</p>
@@ -230,7 +231,7 @@ export function StoryPage() {
         disabled={!selectedCheckOption?.trim()}
         onClick={() => (checkFeedback ? continueAfterCheck() : answerCheck(selectedCheckOption ?? ""))}
       >
-        {checkFeedback ? copy.continueStory : "Check answer"}
+        {checkFeedback ? copy.continueStory : copy.check}
       </GradientButton>
     </div>
   ) : null;
@@ -244,18 +245,28 @@ export function StoryPage() {
       {preparationDeck && (
         <div className="mb-5 rounded-lg border border-pu3nte-gold/30 bg-pu3nte-gold/10 p-5">
           <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-gold">
-            {isEnglishForSpanishSpeakers ? "Historias por Chat en Inglés — A1 a C2" : "Vocabulary Prep"}
+            {isEnglishForSpanishSpeakers
+              ? "Historias por Chat en Inglés — A1 a C2"
+              : isSpanishForDarijaSpeakers
+                ? "حضّر الكلمات قبل القصة"
+                : "Vocabulary Prep"}
           </p>
           <h2 className="mt-2 text-xl font-bold">
-            {isEnglishForSpanishSpeakers ? "Paso 1: Prepara el vocabulario" : "Step 1: Prepare the vocabulary"}
+            {isEnglishForSpanishSpeakers
+              ? "Paso 1: Prepara el vocabulario"
+              : isSpanishForDarijaSpeakers
+                ? "المرحلة 1: راجع الكلمات"
+                : "Step 1: Prepare the vocabulary"}
           </h2>
           <p className="mt-2 text-sm text-pu3nte-secondary">
             {isEnglishForSpanishSpeakers
               ? "Haz estas flashcards antes de leer la historia. No necesitas memorizar todo perfecto, pero intenta reconocer el vocabulario principal. Después verás estas frases dentro de la conversación."
-              : "Practice these flashcards before reading the story so the key phrases feel familiar in context."}
+              : isSpanishForDarijaSpeakers
+                ? "راجع هاد البطاقات قبل ما تقرا القصة. ما خاصكش تحفظ كلشي دابا، غير حاول تتعرّف على العبارات الرئيسية باش تفهمها ملي تبان فالمحادثة."
+                : "Practice these flashcards before reading the story so the key phrases feel familiar in context."}
           </p>
           <GradientButton className="mt-4" onClick={() => navigate(`/flashcards/${preparationDeck.id}`)}>
-            {isEnglishForSpanishSpeakers ? "Abrir flashcards" : "Open flashcards"}
+            {isEnglishForSpanishSpeakers ? "Abrir flashcards" : isSpanishForDarijaSpeakers ? "حلّ البطاقات" : "Open flashcards"}
           </GradientButton>
         </div>
       )}

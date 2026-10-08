@@ -10,6 +10,24 @@ export const outputRoot = path.join(generatorRoot, "output");
 export const audioCacheRoot = path.join(generatorRoot, "cache", "audio");
 export const remotionEntry = path.join(generatorRoot, "remotion", "index.tsx");
 
+function parseEnvFileIgnoringBlankOverrides(envFile: string): Record<string, string> {
+  const values: Record<string, string> = {};
+  const lines = fs.readFileSync(envFile, "utf8").split(/\r?\n/);
+
+  for (const line of lines) {
+    const parsed = dotenv.parse(line);
+
+    for (const [key, value] of Object.entries(parsed)) {
+      if (!value.trim()) continue;
+      if (!values[key]) {
+        values[key] = value;
+      }
+    }
+  }
+
+  return values;
+}
+
 export function loadLocalEnv(): void {
   const envFiles = [
     path.join(projectRoot, ".env"),
@@ -21,7 +39,13 @@ export function loadLocalEnv(): void {
 
   for (const envFile of envFiles) {
     if (fs.existsSync(envFile)) {
-      dotenv.config({ path: envFile, override: false });
+      const parsed = parseEnvFileIgnoringBlankOverrides(envFile);
+
+      for (const [key, value] of Object.entries(parsed)) {
+        if (!process.env[key]) {
+          process.env[key] = value;
+        }
+      }
     }
   }
 }

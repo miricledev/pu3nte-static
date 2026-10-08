@@ -19,6 +19,7 @@ import { renderLessonVideo } from "./renderVideo";
 import type { GeneratedAudioClip, GeneratorCallbacks, GeneratorOptions, LessonTimeline } from "./types";
 import { validateLessonScript, type LessonScript } from "./validateScript";
 import { ensureDir, formatDuration } from "./utils";
+import { getGrammarDurationIssue } from "./grammarSchema";
 
 const defaultGeneratorOptions: GeneratorOptions = {
   dryRun: false,
@@ -262,6 +263,10 @@ export async function generateLessonFromScript(
   if (options.videoOnly) {
     callbacks.onProgress?.({ stage: "video", message: "Loading existing timeline for video-only render", percent: 55 });
     const timeline = JSON.parse(await fs.readFile(timelinePath, "utf8")) as LessonTimeline;
+    if (timeline.lesson.lessonFormat === "grammar") {
+      const issue = getGrammarDurationIssue(timeline.totalDurationMs);
+      if (issue) throw new Error(issue);
+    }
     await renderLessonVideo(timeline, finalAudioPath, finalVideoPath, callbacks);
     console.log(`Video written to ${finalVideoPath}`);
     callbacks.onProgress?.({ stage: "done", message: `Video written to ${finalVideoPath}`, percent: 100 });
@@ -280,6 +285,10 @@ export async function generateLessonFromScript(
     };
   }
 
+  if (script.lessonFormat === "grammar") {
+    const issue = getGrammarDurationIssue(buildTimeline(script, buildEstimatedAudioClips(script)).totalDurationMs);
+    if (issue) throw new Error(issue);
+  }
   const clips: GeneratedAudioClip[] = await generateAudioClips(script, options, callbacks);
   callbacks.onProgress?.({ stage: "timeline", message: "Building synced timeline", percent: 45 });
   const timeline = buildTimeline(script, clips);
@@ -293,6 +302,10 @@ export async function generateLessonFromScript(
   await writeMetadata(script, timeline, clips, metadataPath);
 
   warnAboutDuration(script, timeline);
+  if (script.lessonFormat === "grammar") {
+    const issue = getGrammarDurationIssue(timeline.totalDurationMs);
+    if (issue) throw new Error(`${issue} Audio and timeline have been saved; unchanged clips will be reused after you revise the script.`);
+  }
   console.log(`Audio written to ${assembledAudioPath}`);
   callbacks.onProgress?.({ stage: "audio", message: `Audio written to ${assembledAudioPath}`, percent: 58 });
 

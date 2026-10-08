@@ -7,6 +7,8 @@ import { validateLessonScript, type LessonScript } from "./validateScript";
 import type { GenerateLessonResult } from "./generateLesson";
 import type { GeneratorOptions, GeneratorProgressEvent, LessonTimeline } from "./types";
 import { ensureDir, formatDuration } from "./utils";
+import { grammarCourses, getGrammarTopics, getGrammarPrompt } from "./grammarLessons";
+import { getGrammarDurationIssue } from "./grammarSchema";
 
 type StudioRequest = {
   scriptJson: string;
@@ -1607,6 +1609,10 @@ function isSentenceBuilderScript(script: LessonScript): boolean {
 function getReadiness(script: LessonScript, timeline: LessonTimeline) {
   const warnings: string[] = [];
   const blockers: string[] = [];
+  if (script.lessonFormat === "grammar") {
+    const issue = getGrammarDurationIssue(timeline.totalDurationMs);
+    if (issue) blockers.push(issue);
+  }
   const elevenLabsSegments = timeline.segments.filter((segment) => !segment.voiceId.startsWith("local:"));
   const localSegments = timeline.segments.length - elevenLabsSegments.length;
   const paidCharacterCount = elevenLabsSegments.reduce((total, segment) => total + segment.text.length, 0);
@@ -1948,6 +1954,39 @@ Content rules:
 - Keep the target language natural, beginner-appropriate, and useful.
 - Set outputSlug equal to id.
 - Return only the JSON object.`;
+}
+
+function getThirtyMinuteBridgePrompt(): string {
+  return getChatGptPrompt()
+    .replace('"estimatedMinutes": 15,', '"estimatedMinutes": 30,')
+    .replace('"durationGoalMinutes": 15,', '"durationGoalMinutes": 30,')
+    .replace(
+      /Hard duration requirements:[\s\S]*?Allowed segment types:/,
+      `Hard duration requirements:
+- This must be a real 30-minute conversation-first bridge-course lesson. 5, 10, or 15 minutes is invalid for this selected format.
+- estimatedMinutes MUST be exactly 30.
+- durationGoalMinutes MUST be exactly 30.
+- Do not use estimatedMinutes: 5, 10, or 15.
+- Do not use durationGoalMinutes: 5, 10, or 15.
+- The generated timeline should dry-run around 26-32 minutes. If your draft would be under 25 minutes, add more prompt/answer/repeat groups, spaced review, dialogue checkpoints, and cumulative recombination before returning JSON.
+- Include enough content for 30 minutes: usually 45-60 prompt/answer/repeat groups, 16-24 spaced review prompts, multiple dialogue checkpoints, 1 mid-lesson dialogue replay, 1 final varied dialogue replay, 1 final challenge, and 1 outro.
+
+Allowed segment types:`,
+    )
+    .replace(
+      /Content rules:[\s\S]*?Return only the JSON object\./,
+      `Content rules:
+- Make it a serious PU3NTE 30-minute bridge-course audio lesson.
+- Use a conversation-first method: full native dialogue preview, guided breakdown, active recall, native model, repeat, spaced review, recombination, mid-lesson replay, and final varied dialogue replay.
+- Use clear prompt -> pause -> answer -> repeat flows.
+- Create a focused 30-minute lesson, not a 5-minute, 10-minute, or 15-minute lesson.
+- Include intro, opening dialogue preview, 45-60 prompt/answer/repeat groups, 16-24 spaced review prompts, mid-lesson dialogue replay, final dialogue replay, final_challenge, and outro.
+- Before returning JSON, do a mental duration check. If the lesson has fewer than about 150 total segments, it is probably too short for 30 minutes.
+- Keep the target language natural, beginner-appropriate, and useful for the selected level.
+- The selected bridge-course appendix below controls the exact target language, learner language, voice mapping, writing system, and learner-facing UI language.
+- Set outputSlug equal to id.
+- Return only the JSON object.`,
+    );
 }
 
 function getDetailedChatGptPrompt(): string {
@@ -2717,6 +2756,10 @@ function pageHtml(): string {
         display: none;
       }
 
+      .selector-field[hidden], .selector-controls[hidden] {
+        display: none !important;
+      }
+
       @media (max-width: 980px) {
         .grid {
           grid-template-columns: 1fr;
@@ -2825,7 +2868,7 @@ function pageHtml(): string {
         <div class="toolbar">
           <div>
             <h2>Detailed Prompt For A New ChatGPT Chat</h2>
-            <p>Copy this when you want a contextless ChatGPT chat to generate a 15-minute PU3NTE speaking lesson JSON in the exact format.</p>
+            <p>Copy this when you want a contextless ChatGPT chat to generate a PU3NTE speaking lesson JSON in the selected format.</p>
           </div>
           <button id="copyDetailedPrompt">Copy Detailed Prompt</button>
         </div>
@@ -2852,15 +2895,28 @@ function pageHtml(): string {
         </div>
 
         <div class="selector-field">
-          <label for="speakingFormatSelect">2. Speaking lesson format</label>
+          <label for="speakingFormatSelect">2. Speaking / grammar lesson format</label>
           <select id="speakingFormatSelect">
             <option value="listen-respond">15-min Listen & Respond speaking drill</option>
             <option value="sentence-builder">10-min Cumulative Sentence Builder speaking drill</option>
             <option value="darija-andalusian">30-min Darija → Andalusian Spanish audio course</option>
             <option value="english-darija">30-min British English → Moroccan Darija audio course</option>
+            <option value="grammar">10-min Grammar lab — explain, see it, try it</option>
           </select>
-          <p class="mini">Choose either 30-min Darija bridge course here to load the correct course automatically. Sentence Builder introduces chunks, repeats aloud, then builds longer spoken sentences without typing.</p>
+          <p class="mini">Choose a 30-min speaking course, a sentence-building drill, or the 10-min Grammar Lab with visual explanations and timed practice.</p>
         </div>
+
+        <section id="grammarSelectorControls" class="selector-controls" hidden>
+          <h3>10-minute Grammar Lab</h3>
+          <p class="mini">Choose a course, level and grammar focus. Lessons use narrated tables, sentence patterns, comparisons and timelines, with timed practice and separate answer reveals. All three courses use their configured ElevenLabs voices.</p>
+          <div class="topic-controls">
+            <div class="selector-field"><label for="grammarCourseSelect">Course</label><select id="grammarCourseSelect">${grammarCourses.map((course) => `<option value="${course.id}">${course.label}</option>`).join("")}</select></div>
+            <div class="selector-field"><label for="grammarLevelSelect">Level</label><select id="grammarLevelSelect">${["A1", "A2", "B1", "B2", "C1", "C2"].map((level) => `<option>${level}</option>`).join("")}</select></div>
+          </div>
+          <div class="selector-field"><label for="grammarTopicSelect">Grammar topic (in learning order)</label><select id="grammarTopicSelect"></select></div>
+          <div class="selector-field"><label for="grammarCustomTopic">Optional: replace with your own grammar focus</label><input id="grammarCustomTopic" type="text" maxlength="240" placeholder="For example: choosing ser or estar when describing a person" /></div>
+          <p class="mini">English topic labels are for you. Darija → Spanish videos display explanations and instructions in Arabic-script Darija. English → Darija videos display Arabic, transliteration and English meanings.</p>
+        </section>
 
         <div class="selector-field">
           <label for="narratorModeSelect">3. Narrator voice mode</label>
@@ -2967,6 +3023,10 @@ function pageHtml(): string {
 
       const chatGptPrompt = ${JSON.stringify(getChatGptPrompt())};
       const detailedChatGptPrompt = ${JSON.stringify(getDetailedChatGptPrompt())};
+      const thirtyMinuteBridgePrompt = ${JSON.stringify(getThirtyMinuteBridgePrompt())};
+      const grammarCourses = ${JSON.stringify(grammarCourses)};
+      const grammarTopics = ${JSON.stringify({ spanish: getGrammarTopics("spanish"), darija: getGrammarTopics("darija") })};
+      const grammarPrompts = ${JSON.stringify(Object.fromEntries(grammarCourses.map((course) => [course.id, getGrammarPrompt(course.id)])))};
       const topicMap = ${JSON.stringify(getTopicMap())};
       const specialCourses = ${JSON.stringify(getSpecialCourses())};
       const specialCourseTopics = ${JSON.stringify(getSpecialCourseTopics())};
@@ -3026,6 +3086,14 @@ function pageHtml(): string {
           : "Local TTS narrator. Cheaper/free for narrator, but keep narrator lines mostly in the learner's native language.";
       }
 
+      function getEffectiveNarratorModeLabel(course) {
+        if (course && course.learnerNativeLanguage === "darija") {
+          return "ElevenLabs Moroccan Darija narrator required. Use the Darija narrator env voice for all narrator explanations, prompts, subtitles, screen instructions, timer labels, and learner-facing metadata.";
+        }
+
+        return getNarratorModeLabel();
+      }
+
       function getSpeakingFormatLabel() {
         if (speakingFormat === "darija-andalusian") {
           return "30-min Darija → Andalusian conversation-first audio lesson";
@@ -3038,6 +3106,10 @@ function pageHtml(): string {
         return speakingFormat === "sentence-builder"
           ? "10-min cumulative Sentence Builder speaking drill"
           : "15-min Listen & Respond speaking drill";
+      }
+
+      function isThirtyMinuteBridgeFormat() {
+        return speakingFormat === "darija-andalusian" || speakingFormat === "english-darija";
       }
 
       function getSpeakingFormatPromptAppendix() {
@@ -3332,7 +3404,7 @@ function pageHtml(): string {
           "Narrator language: " + narratorLanguage,
           "Narrator voice: " + narratorVoice,
           introNarratorVoice ? "Intro narrator override: add voiceId \\\"" + introNarratorVoice + "\\\" only to the intro segment or intro segments." : "",
-          "Narrator mode: " + getNarratorModeLabel(),
+          "Narrator mode: " + getEffectiveNarratorModeLabel(course),
           course.learnerNativeLanguage === "darija"
             ? "Darija narrator rule: use Moroccan Darija in Arabic script as the learner-support language for narrator explanations, prompts, subtitles, screen instructions, timer labels, and learner-facing metadata. Do not use Modern Standard Arabic as the default support language, and do not use Latinized Darija for this Darija-native course."
             : "",
@@ -3379,7 +3451,9 @@ function pageHtml(): string {
           "- B2 should use practical everyday local expressions and informal phrasing, but explain them clearly and avoid overwhelming learners.",
           "- C1 should be deeply local in an advanced way: less-obvious sayings, idioms, register shifts, diplomacy, humour, subtle tone, social subtext, and when not to use certain expressions. Do not make C1 a recycled beginner slang list.",
           "- C2 should aim for near-native control: layered slang, humour, double meanings, indirectness, subtext, social risk, regional nuance, emotionally precise phrasing, and precise register choice. Do not make C2 a recycled beginner slang list with harder grammar.",
-          narratorMode === "elevenlabs"
+          course.learnerNativeLanguage === "darija"
+            ? "- Narrator segments use role narrator with env:" + course.narratorEnv + ". Do not use local TTS for Moroccan Darija narrator text. All narrator explanations, prompts, subtitles, screen instructions, timer labels, and learner-facing metadata must be Moroccan Darija in Arabic script."
+            : narratorMode === "elevenlabs"
             ? "- Narrator segments use role narrator with the selected ElevenLabs narrator env voice. The narrator voice ID should be bilingual because occasional mixed English/Spanish narrator lines may be needed."
             : narratorMode === "hybrid-intro"
               ? "- Narrator segments use local TTS by default to save credits. Only type intro segment(s) should include voiceId \\\"" + introNarratorVoice + "\\\" for a polished bilingual ElevenLabs opening. Do not add voiceId to later narrator explanations, prompts, reviews, final_challenge, or outro."
@@ -3392,13 +3466,26 @@ function pageHtml(): string {
       }
 
       function buildPrompt(basePrompt) {
-        return basePrompt +
+        if (speakingFormat === "grammar") {
+          const courseId = document.getElementById("grammarCourseSelect").value;
+          const topicSelect = document.getElementById("grammarTopicSelect");
+          const title = document.getElementById("grammarCustomTopic").value.trim() || topicSelect.options[topicSelect.selectedIndex].text;
+          return grammarPrompts[courseId] + "\\nSELECTED LESSON\\nLevel: " + document.getElementById("grammarLevelSelect").value + "\\nTopic: " + title;
+        }
+        const selectedBasePrompt = isThirtyMinuteBridgeFormat() ? thirtyMinuteBridgePrompt : basePrompt;
+
+        return selectedBasePrompt +
           getSpeakingFormatPromptAppendix() +
           getTopicPromptAppendix(getActiveTopic()) +
           getSpecialCoursePromptAppendix(getActiveSpecialCourse(), getActiveSpecialTopic());
       }
 
       function getPromptSelectionSummary() {
+        if (speakingFormat === "grammar") {
+          const course = grammarCourses.find((entry) => entry.id === document.getElementById("grammarCourseSelect").value);
+          const select = document.getElementById("grammarTopicSelect");
+          return "Grammar Lab · 10 min · " + course.label + " · " + document.getElementById("grammarLevelSelect").value + " · " + (document.getElementById("grammarCustomTopic").value.trim() || select.options[select.selectedIndex].text);
+        }
         const topic = getActiveTopic();
         if (topic) {
           return "Normal lesson selected: " + topic.topic + " · " + topic.language + " · " + topic.level + " · " + getSpeakingFormatLabel() + " · " + getNarratorModeLabel();
@@ -3412,7 +3499,7 @@ function pageHtml(): string {
             : course.id === englishDarijaCourseId
             ? "British English → Darija course selected: "
             : "Dialect/accent course selected: ";
-          return prefix + course.label + " · " + specialTopic.level + " · " + specialTopic.topic + " · " + getSpeakingFormatLabel() + " · " + getNarratorModeLabel();
+          return prefix + course.label + " · " + specialTopic.level + " · " + specialTopic.topic + " · " + getSpeakingFormatLabel() + " · " + getEffectiveNarratorModeLabel(course);
         }
 
         if (activePromptKind === "special" && course) {
@@ -3433,8 +3520,12 @@ function pageHtml(): string {
       function updatePromptPreview() {
         document.getElementById("selectedPromptSummary").textContent = getPromptSelectionSummary();
         document.getElementById("selectorModeSummary").textContent = getPromptSelectionSummary();
-        document.getElementById("generalSelectorControls").classList.toggle("hidden", activePromptKind === "special");
-        document.getElementById("specialSelectorControls").classList.toggle("hidden", activePromptKind !== "special");
+        const grammarMode = speakingFormat === "grammar";
+        document.getElementById("grammarSelectorControls").hidden = !grammarMode;
+        document.getElementById("selectorModeSelect").closest(".selector-field").hidden = grammarMode;
+        document.getElementById("narratorModeSelect").closest(".selector-field").hidden = grammarMode;
+        document.getElementById("generalSelectorControls").classList.toggle("hidden", grammarMode || activePromptKind === "special");
+        document.getElementById("specialSelectorControls").classList.toggle("hidden", grammarMode || activePromptKind !== "special");
         const selectedCourse = getSelectedSpecialCourse();
         const isDarijaMode = activePromptKind === "special" && (speakingFormat === "darija-andalusian" || speakingFormat === "english-darija") && selectedCourse && (selectedCourse.id === darijaAndalusianCourseId || selectedCourse.id === englishDarijaCourseId);
         document.getElementById("selectorModeSelect").value = activePromptKind === "special" ? "special" : "general";
@@ -3502,6 +3593,13 @@ function pageHtml(): string {
             updatePromptPreview();
           });
         });
+      }
+
+      function renderGrammarTopics() {
+        const course = grammarCourses.find((entry) => entry.id === document.getElementById("grammarCourseSelect").value);
+        const level = document.getElementById("grammarLevelSelect").value;
+        const select = document.getElementById("grammarTopicSelect");
+        select.innerHTML = grammarTopics[course.target].filter((topic) => topic.level === level).map((topic, index) => '<option value="' + topic.id + '">' + (index + 1) + '. ' + escapeHtml(topic.title) + '</option>').join("");
       }
 
       function renderSpecialCourseOptions() {
@@ -3627,6 +3725,8 @@ function pageHtml(): string {
       }
 
       function clearLessonSelection() {
+        document.getElementById("grammarCustomTopic").value = "";
+        renderGrammarTopics();
         activePromptKind = "none";
         selectedTopicId = null;
         selectedSpecialTopicId = null;
@@ -3879,7 +3979,7 @@ function pageHtml(): string {
 
       document.getElementById("copyDetailedPrompt").addEventListener("click", async () => {
         await navigator.clipboard.writeText(buildPrompt(detailedChatGptPrompt));
-        setStatus(getActiveTopic() || getActiveSpecialTopic() ? "Copied the detailed 15-minute prompt with: " + getPromptSelectionSummary() : "Copied the detailed 15-minute speaking lesson prompt.");
+        setStatus(getActiveTopic() || getActiveSpecialTopic() ? "Copied the detailed prompt with: " + getPromptSelectionSummary() : "Copied the detailed speaking lesson prompt.");
       });
 
       document.getElementById("openLessonSelector").addEventListener("click", openLessonSelector);
@@ -3921,6 +4021,17 @@ function pageHtml(): string {
         renderSpecialTopics();
         updatePromptPreview();
       });
+      ["grammarCourseSelect", "grammarLevelSelect"].forEach((id) => {
+        document.getElementById(id).addEventListener("change", () => {
+          document.getElementById("grammarCustomTopic").value = "";
+          renderGrammarTopics();
+          updatePromptPreview();
+        });
+      });
+      ["grammarTopicSelect", "grammarCustomTopic"].forEach((id) => {
+        document.getElementById(id).addEventListener("input", updatePromptPreview);
+      });
+      renderGrammarTopics();
       document.getElementById("narratorModeSelect").addEventListener("change", (event) => {
         narratorMode = event.target.value;
         updatePromptPreview();

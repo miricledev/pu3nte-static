@@ -4,7 +4,45 @@ This is a local-only content production tool for generating PU3NTE listen-and-re
 
 It is intentionally separate from the public static site. Do not deploy this folder or put API keys in frontend code.
 
-## Outputs
+## Ten-minute grammar videos
+
+In the prompt selector, choose **Speaking / grammar lesson format → 10-min Grammar lab**. This opens a dedicated course, level and topic selector:
+
+- English → Spanish: English explanation, native Spanish examples.
+- Moroccan Darija → Andalusian Spanish: Arabic-script Darija explanation and instructions, Andalusian Spanish examples.
+- British English → Moroccan Darija: English explanation, Arabic-script Darija examples with visible Latin transliteration and English meaning.
+
+Each course has eight ordered grammar focuses per level, A1–C2 (48 per course). The two Spanish courses share grammar focuses but have different narration, instructions and voices. You can replace the selected topic with a custom focus. Both copy-prompt buttons use the same standalone grammar contract; they do not append the 15- or 30-minute speaking rules. Topic labels in the admin remain English.
+
+Workflow: select a topic, copy the prompt to ChatGPT, paste the complete JSON into Studio, run **Dry Run**, resolve any blockers, then generate MP4 + Audio. No new voice variables are needed beyond the existing English narrator, Spanish pair, Darija narrator/pair and Andalusian pair. Grammar uses ElevenLabs narration throughout; it does not use the speaking-mode local/hybrid narrator selector.
+
+The teaching sequence is a practical hook, noticing a pattern, worked examples, guided retrieval, a useful exception, independent practice and a recap. Aim at ten minutes; estimated and measured duration must fall between nine and eleven minutes. Before TTS, an out-of-range estimate stops generation. If measured speech pushes the result outside the window, audio/timeline files are retained, video rendering is stopped, and unchanged clips can be reused after script revision. A duration field alone cannot control actual audio length.
+
+### Speech and visual notation
+
+`text` contains only natural spoken sentences. `grammarBoard` is display-only. To teach an ending, show `-as` on the board, have the English narrator explain “Add the letters a and s”, then use a separate native segment to model “Tú hablas español.” Do not send isolated endings, formulas, phoneme tags, slash alternatives or Latin Darija transliterations to TTS. Arabic-script Darija instruction is required for Moroccan learners.
+
+This follows ElevenLabs' guidance to use natural contextualised text and avoid confusing languages within one clip. Pronunciation cannot be guaranteed; listen to generated audio before publication. References: [TTS best practices](https://elevenlabs.io/docs/overview/capabilities/text-to-speech/best-practices) and [language and accent selection](https://elevenlabs.io/docs/help-center/product/core-capabilities/text-to-speech/how-do-i-select-the-language-and-accent).
+
+### Script contract
+
+Set `lessonFormat: "grammar"`, `estimatedMinutes: 10`, and `durationGoalMinutes: 10`. Every segment has a board from these layouts:
+
+- `table`: `columns` (2–3 strings), `rows` (up to six arrays of plain phrase objects; up to four when cells include transliterations or meanings), optional zero-based `highlightRow`.
+- `pattern`: `parts` (2–5 phrases), optional `result`, optional `highlightPart`.
+- `contrast`: exactly two `cards`, each with `label` and `phrase`.
+- `timeline`: 2–3 chronological `events`, each with `label` and `phrase`, optional `highlightEvent`.
+- `example`: one `phrase`, optional `choices` (2–3 phrases).
+
+All boards have `kind`, `title`, optional `note`. A phrase has `text`, optional `latin`, optional `meaning`. For English → Darija, every Arabic target phrase needs both support fields. Keep table cells concise: 45 characters for text, 50 for transliteration, 60 for meaning. Split large tables. Use successive segments to highlight different rows alongside the relevant spoken explanation. Arrays preserve column and timeline order; Arabic phrases use automatic text direction and Arabic sentence patterns flow right-to-left.
+
+Include at least six `prompt` or `final_challenge` segments, each with an `example` board, `showTimer: true`, and `responsePauseMs` of 6000–20000. The next segment must be `answer`. Only unanswered questions or unmarked choices appear before the answer. Do not leak the solution through captions or board notes. The countdown begins after the prompt audio; the answer begins after the countdown. These are prerecorded pauses, not speech recognition or automatic grading.
+
+The schema validates malformed boards, missing answer pairs, unsafe speech notation, script requirements, and important language constraints. Generated prompts embed the actual JSON schema from `validateScript.ts`; keep prose constraints aligned with it. Validation does not replace reviewing grammar accuracy, natural dialect usage, pronunciation or final visual layout. Existing speaking scripts omit `lessonFormat` and keep the original renderer.
+
+Implementation: `src/grammarLessons.ts` (topics and prompts), `src/grammarSchema.ts` (boards and speech checks), `src/validateScript.ts`, `src/buildTimeline.ts`, and `remotion/GrammarLessonVideo.tsx` with `remotion/components/GrammarBoard.tsx`.
+
+## Output files
 
 For a lesson with `outputSlug: "spanish-a1-want-need-can"`, files are written to:
 
