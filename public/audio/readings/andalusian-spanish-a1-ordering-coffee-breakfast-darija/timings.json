@@ -1,0 +1,902 @@
+[
+  {
+    "text": "Youssef",
+    "start": 0,
+    "end": 0.36
+  },
+  {
+    "text": "entra",
+    "start": 0.453,
+    "end": 0.801
+  },
+  {
+    "text": "en",
+    "start": 0.871,
+    "end": 0.964
+  },
+  {
+    "text": "una",
+    "start": 1.033,
+    "end": 1.149
+  },
+  {
+    "text": "cafetería",
+    "start": 1.196,
+    "end": 1.672
+  },
+  {
+    "text": "temprano.",
+    "start": 1.707,
+    "end": 2.357
+  },
+  {
+    "text": "Carmen",
+    "start": 2.856,
+    "end": 3.204
+  },
+  {
+    "text": "lo",
+    "start": 3.239,
+    "end": 3.309
+  },
+  {
+    "text": "saluda",
+    "start": 3.355,
+    "end": 3.727
+  },
+  {
+    "text": "y",
+    "start": 3.82,
+    "end": 3.901
+  },
+  {
+    "text": "pregunta:",
+    "start": 3.971,
+    "end": 4.737
+  },
+  {
+    "text": "“¿Qué",
+    "start": 5.062,
+    "end": 5.41
+  },
+  {
+    "text": "te",
+    "start": 5.457,
+    "end": 5.515
+  },
+  {
+    "text": "pongo?”.",
+    "start": 5.573,
+    "end": 6.13
+  },
+  {
+    "text": "Él",
+    "start": 6.92,
+    "end": 7.105
+  },
+  {
+    "text": "responde:",
+    "start": 7.175,
+    "end": 7.848
+  },
+  {
+    "text": "“Ponme",
+    "start": 8.22,
+    "end": 8.673
+  },
+  {
+    "text": "un",
+    "start": 8.731,
+    "end": 8.789
+  },
+  {
+    "text": "café",
+    "start": 8.847,
+    "end": 9.079
+  },
+  {
+    "text": "con",
+    "start": 9.137,
+    "end": 9.253
+  },
+  {
+    "text": "leche,",
+    "start": 9.3,
+    "end": 9.718
+  },
+  {
+    "text": "porfa,",
+    "start": 9.845,
+    "end": 10.379
+  },
+  {
+    "text": "y",
+    "start": 10.519,
+    "end": 10.565
+  },
+  {
+    "text": "un",
+    "start": 10.67,
+    "end": 10.728
+  },
+  {
+    "text": "vaso",
+    "start": 10.786,
+    "end": 11.006
+  },
+  {
+    "text": "de",
+    "start": 11.064,
+    "end": 11.122
+  },
+  {
+    "text": "agua”.",
+    "start": 11.18,
+    "end": 11.738
+  },
+  {
+    "text": "Para",
+    "start": 12.411,
+    "end": 12.632
+  },
+  {
+    "text": "desayunar,",
+    "start": 12.678,
+    "end": 13.456
+  },
+  {
+    "text": "Youssef",
+    "start": 13.607,
+    "end": 14.002
+  },
+  {
+    "text": "pide:",
+    "start": 14.06,
+    "end": 14.617
+  },
+  {
+    "text": "“Media",
+    "start": 15.279,
+    "end": 15.743
+  },
+  {
+    "text": "tostada",
+    "start": 15.79,
+    "end": 16.173
+  },
+  {
+    "text": "con",
+    "start": 16.242,
+    "end": 16.382
+  },
+  {
+    "text": "aceite",
+    "start": 16.44,
+    "end": 16.893
+  },
+  {
+    "text": "y",
+    "start": 16.951,
+    "end": 17.043
+  },
+  {
+    "text": "tomate”.",
+    "start": 17.113,
+    "end": 17.833
+  },
+  {
+    "text": "Carmen",
+    "start": 18.611,
+    "end": 18.959
+  },
+  {
+    "text": "también",
+    "start": 19.017,
+    "end": 19.33
+  },
+  {
+    "text": "le",
+    "start": 19.388,
+    "end": 19.435
+  },
+  {
+    "text": "ofrece",
+    "start": 19.458,
+    "end": 19.853
+  },
+  {
+    "text": "unos",
+    "start": 19.98,
+    "end": 20.224
+  },
+  {
+    "text": "churros,",
+    "start": 20.294,
+    "end": 20.932
+  },
+  {
+    "text": "un",
+    "start": 21.292,
+    "end": 21.408
+  },
+  {
+    "text": "mollete",
+    "start": 21.455,
+    "end": 21.931
+  },
+  {
+    "text": "y",
+    "start": 22.279,
+    "end": 22.337
+  },
+  {
+    "text": "un",
+    "start": 22.43,
+    "end": 22.511
+  },
+  {
+    "text": "zumo",
+    "start": 22.569,
+    "end": 22.871
+  },
+  {
+    "text": "de",
+    "start": 22.964,
+    "end": 23.045
+  },
+  {
+    "text": "naranja.",
+    "start": 23.103,
+    "end": 23.695
+  },
+  {
+    "text": "Carmen",
+    "start": 24.183,
+    "end": 24.485
+  },
+  {
+    "text": "pregunta:",
+    "start": 24.531,
+    "end": 25.17
+  },
+  {
+    "text": "“¿Entera",
+    "start": 25.658,
+    "end": 26.319
+  },
+  {
+    "text": "o",
+    "start": 26.389,
+    "end": 26.459
+  },
+  {
+    "text": "media?”.",
+    "start": 26.505,
+    "end": 27.051
+  },
+  {
+    "text": "Youssef",
+    "start": 27.817,
+    "end": 28.2
+  },
+  {
+    "text": "confirma:",
+    "start": 28.258,
+    "end": 28.955
+  },
+  {
+    "text": "“Media,",
+    "start": 29.175,
+    "end": 29.675
+  },
+  {
+    "text": "porfa”.",
+    "start": 29.698,
+    "end": 30.22
+  },
+  {
+    "text": "Después",
+    "start": 30.534,
+    "end": 30.847
+  },
+  {
+    "text": "aclara",
+    "start": 30.952,
+    "end": 31.277
+  },
+  {
+    "text": "que",
+    "start": 31.323,
+    "end": 31.393
+  },
+  {
+    "text": "quiere",
+    "start": 31.451,
+    "end": 31.648
+  },
+  {
+    "text": "el",
+    "start": 31.672,
+    "end": 31.73
+  },
+  {
+    "text": "café",
+    "start": 31.788,
+    "end": 32.066
+  },
+  {
+    "text": "sin",
+    "start": 32.124,
+    "end": 32.287
+  },
+  {
+    "text": "azúcar.",
+    "start": 32.333,
+    "end": 32.867
+  },
+  {
+    "text": "Youssef",
+    "start": 33.285,
+    "end": 33.68
+  },
+  {
+    "text": "necesita",
+    "start": 33.773,
+    "end": 34.214
+  },
+  {
+    "text": "un",
+    "start": 34.272,
+    "end": 34.33
+  },
+  {
+    "text": "bocadillo",
+    "start": 34.377,
+    "end": 34.887
+  },
+  {
+    "text": "para",
+    "start": 34.969,
+    "end": 35.143
+  },
+  {
+    "text": "más",
+    "start": 35.178,
+    "end": 35.317
+  },
+  {
+    "text": "tarde.",
+    "start": 35.363,
+    "end": 35.828
+  },
+  {
+    "text": "Carmen",
+    "start": 36.316,
+    "end": 36.618
+  },
+  {
+    "text": "pregunta:",
+    "start": 36.652,
+    "end": 37.303
+  },
+  {
+    "text": "“¿Aquí",
+    "start": 37.651,
+    "end": 38.173
+  },
+  {
+    "text": "o",
+    "start": 38.266,
+    "end": 38.347
+  },
+  {
+    "text": "pa'",
+    "start": 38.394,
+    "end": 38.522
+  },
+  {
+    "text": "llevar?”.",
+    "start": 38.545,
+    "end": 39.079
+  },
+  {
+    "text": "Él",
+    "start": 40.043,
+    "end": 40.205
+  },
+  {
+    "text": "contesta:",
+    "start": 40.263,
+    "end": 40.936
+  },
+  {
+    "text": "“El",
+    "start": 41.064,
+    "end": 41.296
+  },
+  {
+    "text": "café",
+    "start": 41.343,
+    "end": 41.517
+  },
+  {
+    "text": "aquí",
+    "start": 41.529,
+    "end": 41.738
+  },
+  {
+    "text": "y",
+    "start": 41.83,
+    "end": 41.865
+  },
+  {
+    "text": "el",
+    "start": 41.923,
+    "end": 41.97
+  },
+  {
+    "text": "bocadillo",
+    "start": 42.016,
+    "end": 42.365
+  },
+  {
+    "text": "pa'",
+    "start": 42.423,
+    "end": 42.539
+  },
+  {
+    "text": "llevar”.",
+    "start": 42.55,
+    "end": 43.003
+  },
+  {
+    "text": "Cuando",
+    "start": 43.967,
+    "end": 44.211
+  },
+  {
+    "text": "Carmen",
+    "start": 44.245,
+    "end": 44.489
+  },
+  {
+    "text": "pregunta",
+    "start": 44.536,
+    "end": 44.988
+  },
+  {
+    "text": "“¿Algo",
+    "start": 45.499,
+    "end": 45.859
+  },
+  {
+    "text": "más?”,",
+    "start": 45.894,
+    "end": 46.823
+  },
+  {
+    "text": "Youssef",
+    "start": 46.916,
+    "end": 47.206
+  },
+  {
+    "text": "responde:",
+    "start": 47.252,
+    "end": 47.833
+  },
+  {
+    "text": "“No,",
+    "start": 47.961,
+    "end": 48.286
+  },
+  {
+    "text": "esto",
+    "start": 48.378,
+    "end": 48.564
+  },
+  {
+    "text": "na'",
+    "start": 48.611,
+    "end": 48.68
+  },
+  {
+    "text": "más”.",
+    "start": 48.704,
+    "end": 49.145
+  },
+  {
+    "text": "Ella",
+    "start": 49.969,
+    "end": 50.166
+  },
+  {
+    "text": "dice:",
+    "start": 50.201,
+    "end": 50.666
+  },
+  {
+    "text": "“Un",
+    "start": 50.7,
+    "end": 50.933
+  },
+  {
+    "text": "momentito.",
+    "start": 50.968,
+    "end": 51.618
+  },
+  {
+    "text": "Enseguida",
+    "start": 51.722,
+    "end": 52.152
+  },
+  {
+    "text": "te",
+    "start": 52.187,
+    "end": 52.245
+  },
+  {
+    "text": "lo",
+    "start": 52.279,
+    "end": 52.337
+  },
+  {
+    "text": "traigo”.",
+    "start": 52.372,
+    "end": 52.953
+  },
+  {
+    "text": "Carmen",
+    "start": 53.916,
+    "end": 54.277
+  },
+  {
+    "text": "sirve",
+    "start": 54.335,
+    "end": 54.567
+  },
+  {
+    "text": "el",
+    "start": 54.579,
+    "end": 54.637
+  },
+  {
+    "text": "desayuno",
+    "start": 54.683,
+    "end": 55.171
+  },
+  {
+    "text": "y",
+    "start": 55.368,
+    "end": 55.461
+  },
+  {
+    "text": "dice:",
+    "start": 55.531,
+    "end": 56.03
+  },
+  {
+    "text": "“Aquí",
+    "start": 56.355,
+    "end": 56.657
+  },
+  {
+    "text": "tienes.",
+    "start": 56.692,
+    "end": 57.144
+  },
+  {
+    "text": "Que",
+    "start": 57.319,
+    "end": 57.412
+  },
+  {
+    "text": "aproveche”.",
+    "start": 57.435,
+    "end": 58.027
+  },
+  {
+    "text": "Youssef",
+    "start": 58.967,
+    "end": 59.35
+  },
+  {
+    "text": "prueba",
+    "start": 59.455,
+    "end": 59.803
+  },
+  {
+    "text": "el",
+    "start": 59.873,
+    "end": 59.977
+  },
+  {
+    "text": "mollete",
+    "start": 60.024,
+    "end": 60.511
+  },
+  {
+    "text": "y",
+    "start": 60.883,
+    "end": 60.976
+  },
+  {
+    "text": "responde:",
+    "start": 61.127,
+    "end": 61.812
+  },
+  {
+    "text": "“Está",
+    "start": 62.508,
+    "end": 62.81
+  },
+  {
+    "text": "muy",
+    "start": 62.845,
+    "end": 62.949
+  },
+  {
+    "text": "bueno.",
+    "start": 62.984,
+    "end": 63.379
+  },
+  {
+    "text": "Un",
+    "start": 63.588,
+    "end": 63.693
+  },
+  {
+    "text": "poquito",
+    "start": 63.751,
+    "end": 64.076
+  },
+  {
+    "text": "más",
+    "start": 64.122,
+    "end": 64.238
+  },
+  {
+    "text": "de",
+    "start": 64.273,
+    "end": 64.331
+  },
+  {
+    "text": "tomate,",
+    "start": 64.366,
+    "end": 64.795
+  },
+  {
+    "text": "porfa”.",
+    "start": 64.865,
+    "end": 65.388
+  },
+  {
+    "text": "Al",
+    "start": 66.34,
+    "end": 66.479
+  },
+  {
+    "text": "terminar,",
+    "start": 66.549,
+    "end": 67.28
+  },
+  {
+    "text": "Youssef",
+    "start": 67.454,
+    "end": 67.872
+  },
+  {
+    "text": "pide:",
+    "start": 67.942,
+    "end": 68.441
+  },
+  {
+    "text": "“La",
+    "start": 69.033,
+    "end": 69.289
+  },
+  {
+    "text": "cuenta,",
+    "start": 69.335,
+    "end": 69.637
+  },
+  {
+    "text": "porfa.",
+    "start": 69.66,
+    "end": 70.171
+  },
+  {
+    "text": "¿Cuánto",
+    "start": 70.345,
+    "end": 70.763
+  },
+  {
+    "text": "es?",
+    "start": 70.867,
+    "end": 71.204
+  },
+  {
+    "text": "¿Puedo",
+    "start": 71.274,
+    "end": 71.622
+  },
+  {
+    "text": "pagar",
+    "start": 71.669,
+    "end": 71.901
+  },
+  {
+    "text": "con",
+    "start": 71.947,
+    "end": 72.063
+  },
+  {
+    "text": "tarjeta?”.",
+    "start": 72.098,
+    "end": 72.794
+  },
+  {
+    "text": "La",
+    "start": 73.746,
+    "end": 73.839
+  },
+  {
+    "text": "máquina",
+    "start": 73.886,
+    "end": 74.222
+  },
+  {
+    "text": "no",
+    "start": 74.327,
+    "end": 74.42
+  },
+  {
+    "text": "funciona,",
+    "start": 74.466,
+    "end": 75.186
+  },
+  {
+    "text": "así",
+    "start": 75.36,
+    "end": 75.639
+  },
+  {
+    "text": "que",
+    "start": 75.708,
+    "end": 75.801
+  },
+  {
+    "text": "dice:",
+    "start": 75.848,
+    "end": 76.405
+  },
+  {
+    "text": "“Pago",
+    "start": 76.73,
+    "end": 77.299
+  },
+  {
+    "text": "en",
+    "start": 77.357,
+    "end": 77.438
+  },
+  {
+    "text": "efectivo”.",
+    "start": 77.485,
+    "end": 78.251
+  },
+  {
+    "text": "Antes",
+    "start": 79.203,
+    "end": 79.691
+  },
+  {
+    "text": "de",
+    "start": 79.772,
+    "end": 79.853
+  },
+  {
+    "text": "salir,",
+    "start": 79.911,
+    "end": 80.573
+  },
+  {
+    "text": "Carmen",
+    "start": 80.782,
+    "end": 81.223
+  },
+  {
+    "text": "le",
+    "start": 81.281,
+    "end": 81.351
+  },
+  {
+    "text": "recuerda",
+    "start": 81.42,
+    "end": 81.885
+  },
+  {
+    "text": "la",
+    "start": 81.931,
+    "end": 82.001
+  },
+  {
+    "text": "botella",
+    "start": 82.047,
+    "end": 82.5
+  },
+  {
+    "text": "de",
+    "start": 82.558,
+    "end": 82.651
+  },
+  {
+    "text": "agua.",
+    "start": 82.721,
+    "end": 83.255
+  },
+  {
+    "text": "Youssef",
+    "start": 83.766,
+    "end": 84.288
+  },
+  {
+    "text": "dice:",
+    "start": 84.369,
+    "end": 84.985
+  },
+  {
+    "text": "“Muchas",
+    "start": 85.368,
+    "end": 85.972
+  },
+  {
+    "text": "gracias”.",
+    "start": 86.041,
+    "end": 86.773
+  },
+  {
+    "text": "Ella",
+    "start": 87.585,
+    "end": 87.899
+  },
+  {
+    "text": "responde:",
+    "start": 87.98,
+    "end": 88.781
+  },
+  {
+    "text": "“De",
+    "start": 89.025,
+    "end": 89.397
+  },
+  {
+    "text": "ná,",
+    "start": 89.513,
+    "end": 89.989
+  },
+  {
+    "text": "mi",
+    "start": 90.14,
+    "end": 90.29
+  },
+  {
+    "text": "arma.",
+    "start": 90.36,
+    "end": 90.917
+  },
+  {
+    "text": "Que",
+    "start": 91.126,
+    "end": 91.301
+  },
+  {
+    "text": "vaya",
+    "start": 91.359,
+    "end": 91.66
+  },
+  {
+    "text": "bien”.",
+    "start": 91.73,
+    "end": 92.508
+  }
+]

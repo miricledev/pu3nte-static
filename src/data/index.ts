@@ -450,6 +450,13 @@ import {
   andalusianSpanishA1NumbersPricesPaymentDarijaSentenceBuilder,
   andalusianSpanishA1NumbersPricesPaymentDarijaWhatsAppStory,
 } from "./andalusianSpanishA1NumbersPricesPaymentDarijaReinforcement";
+import {
+  andalusianSpanishA1OrderingCoffeeBreakfastDarijaFlashcardDeck,
+  andalusianSpanishA1OrderingCoffeeBreakfastDarijaQuiz,
+  andalusianSpanishA1OrderingCoffeeBreakfastDarijaReading,
+  andalusianSpanishA1OrderingCoffeeBreakfastDarijaSentenceBuilder,
+  andalusianSpanishA1OrderingCoffeeBreakfastDarijaWhatsAppStory,
+} from "./andalusianSpanishA1OrderingCoffeeBreakfastDarijaReinforcement";
 import type { ActivityType } from "../types";
 
 export const flashcardDecks = [
@@ -526,6 +533,11 @@ sentenceBuilderLessons.push(andalusianSpanishA1NumbersPricesPaymentDarijaSentenc
 whatsappStories.push(andalusianSpanishA1NumbersPricesPaymentDarijaWhatsAppStory);
 checkpointQuizzes.push(andalusianSpanishA1NumbersPricesPaymentDarijaQuiz);
 readingComprehensions.push(andalusianSpanishA1NumbersPricesPaymentDarijaReading);
+flashcardDecks.push(andalusianSpanishA1OrderingCoffeeBreakfastDarijaFlashcardDeck);
+sentenceBuilderLessons.push(andalusianSpanishA1OrderingCoffeeBreakfastDarijaSentenceBuilder);
+whatsappStories.push(andalusianSpanishA1OrderingCoffeeBreakfastDarijaWhatsAppStory);
+checkpointQuizzes.push(andalusianSpanishA1OrderingCoffeeBreakfastDarijaQuiz);
+readingComprehensions.push(andalusianSpanishA1OrderingCoffeeBreakfastDarijaReading);
 export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];
 
 export const allActivities = [
