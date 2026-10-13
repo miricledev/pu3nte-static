@@ -1,0 +1,1002 @@
+[
+  {
+    "text": "Amina",
+    "start": 0,
+    "end": 0.441
+  },
+  {
+    "text": "tiene",
+    "start": 0.511,
+    "end": 0.755
+  },
+  {
+    "text": "que",
+    "start": 0.801,
+    "end": 0.871
+  },
+  {
+    "text": "coger",
+    "start": 0.929,
+    "end": 1.184
+  },
+  {
+    "text": "un",
+    "start": 1.242,
+    "end": 1.312
+  },
+  {
+    "text": "tren,",
+    "start": 1.347,
+    "end": 1.846
+  },
+  {
+    "text": "pero",
+    "start": 2.136,
+    "end": 2.368
+  },
+  {
+    "text": "no",
+    "start": 2.415,
+    "end": 2.496
+  },
+  {
+    "text": "conoce",
+    "start": 2.566,
+    "end": 2.949
+  },
+  {
+    "text": "bien",
+    "start": 3.019,
+    "end": 3.228
+  },
+  {
+    "text": "el",
+    "start": 3.274,
+    "end": 3.344
+  },
+  {
+    "text": "barrio.",
+    "start": 3.402,
+    "end": 3.947
+  },
+  {
+    "text": "Se",
+    "start": 4.493,
+    "end": 4.632
+  },
+  {
+    "text": "acerca",
+    "start": 4.69,
+    "end": 5.155
+  },
+  {
+    "text": "a",
+    "start": 5.178,
+    "end": 5.201
+  },
+  {
+    "text": "Pablo",
+    "start": 5.259,
+    "end": 5.631
+  },
+  {
+    "text": "y",
+    "start": 5.7,
+    "end": 5.747
+  },
+  {
+    "text": "dice:",
+    "start": 5.817,
+    "end": 6.385
+  },
+  {
+    "text": "“Perdona,",
+    "start": 6.78,
+    "end": 7.558
+  },
+  {
+    "text": "¿sabes",
+    "start": 7.605,
+    "end": 8.115
+  },
+  {
+    "text": "dónde",
+    "start": 8.185,
+    "end": 8.429
+  },
+  {
+    "text": "está",
+    "start": 8.464,
+    "end": 8.649
+  },
+  {
+    "text": "la",
+    "start": 8.719,
+    "end": 8.777
+  },
+  {
+    "text": "estación?”.",
+    "start": 8.824,
+    "end": 9.613
+  },
+  {
+    "text": "Pablo",
+    "start": 10.159,
+    "end": 10.612
+  },
+  {
+    "text": "le",
+    "start": 10.832,
+    "end": 10.983
+  },
+  {
+    "text": "explica",
+    "start": 11.088,
+    "end": 11.761
+  },
+  {
+    "text": "que",
+    "start": 12.016,
+    "end": 12.156
+  },
+  {
+    "text": "la",
+    "start": 12.225,
+    "end": 12.283
+  },
+  {
+    "text": "estación",
+    "start": 12.33,
+    "end": 12.864
+  },
+  {
+    "text": "“está",
+    "start": 12.968,
+    "end": 13.386
+  },
+  {
+    "text": "cerca”",
+    "start": 13.433,
+    "end": 14.083
+  },
+  {
+    "text": "y",
+    "start": 14.28,
+    "end": 14.489
+  },
+  {
+    "text": "“está",
+    "start": 14.71,
+    "end": 15.151
+  },
+  {
+    "text": "a",
+    "start": 15.174,
+    "end": 15.197
+  },
+  {
+    "text": "cinco",
+    "start": 15.232,
+    "end": 15.534
+  },
+  {
+    "text": "minutos",
+    "start": 15.581,
+    "end": 15.964
+  },
+  {
+    "text": "andando”.",
+    "start": 16.033,
+    "end": 16.8
+  },
+  {
+    "text": "Amina",
+    "start": 17.334,
+    "end": 17.752
+  },
+  {
+    "text": "pregunta:",
+    "start": 17.81,
+    "end": 18.565
+  },
+  {
+    "text": "“¿Se",
+    "start": 18.959,
+    "end": 19.261
+  },
+  {
+    "text": "puede",
+    "start": 19.308,
+    "end": 19.575
+  },
+  {
+    "text": "ir",
+    "start": 19.644,
+    "end": 19.76
+  },
+  {
+    "text": "andando?”,",
+    "start": 19.795,
+    "end": 20.515
+  },
+  {
+    "text": "y",
+    "start": 20.805,
+    "end": 20.875
+  },
+  {
+    "text": "él",
+    "start": 20.956,
+    "end": 21.061
+  },
+  {
+    "text": "confirma",
+    "start": 21.13,
+    "end": 21.537
+  },
+  {
+    "text": "que",
+    "start": 21.572,
+    "end": 21.653
+  },
+  {
+    "text": "sí.",
+    "start": 21.711,
+    "end": 22.094
+  },
+  {
+    "text": "La",
+    "start": 22.709,
+    "end": 22.802
+  },
+  {
+    "text": "primera",
+    "start": 22.849,
+    "end": 23.139
+  },
+  {
+    "text": "instrucción",
+    "start": 23.162,
+    "end": 23.673
+  },
+  {
+    "text": "es:",
+    "start": 23.777,
+    "end": 24.126
+  },
+  {
+    "text": "“Tira",
+    "start": 24.219,
+    "end": 24.66
+  },
+  {
+    "text": "todo",
+    "start": 24.729,
+    "end": 24.95
+  },
+  {
+    "text": "recto",
+    "start": 25.055,
+    "end": 25.414
+  },
+  {
+    "text": "hasta",
+    "start": 25.554,
+    "end": 25.809
+  },
+  {
+    "text": "el",
+    "start": 25.844,
+    "end": 25.902
+  },
+  {
+    "text": "semáforo”.",
+    "start": 25.948,
+    "end": 26.622
+  },
+  {
+    "text": "Después,",
+    "start": 27.075,
+    "end": 27.562
+  },
+  {
+    "text": "Amina",
+    "start": 27.725,
+    "end": 28.131
+  },
+  {
+    "text": "tiene",
+    "start": 28.189,
+    "end": 28.421
+  },
+  {
+    "text": "que",
+    "start": 28.479,
+    "end": 28.665
+  },
+  {
+    "text": "“girar",
+    "start": 29.002,
+    "end": 29.466
+  },
+  {
+    "text": "a",
+    "start": 29.524,
+    "end": 29.536
+  },
+  {
+    "text": "la",
+    "start": 29.582,
+    "end": 29.64
+  },
+  {
+    "text": "derecha”",
+    "start": 29.687,
+    "end": 30.291
+  },
+  {
+    "text": "y",
+    "start": 30.569,
+    "end": 30.639
+  },
+  {
+    "text": "“cruzar",
+    "start": 30.697,
+    "end": 31.057
+  },
+  {
+    "text": "la",
+    "start": 31.092,
+    "end": 31.161
+  },
+  {
+    "text": "calle”.",
+    "start": 31.219,
+    "end": 31.73
+  },
+  {
+    "text": "Pablo",
+    "start": 32.171,
+    "end": 32.543
+  },
+  {
+    "text": "usa",
+    "start": 32.613,
+    "end": 32.833
+  },
+  {
+    "text": "una",
+    "start": 32.891,
+    "end": 33.019
+  },
+  {
+    "text": "farmacia",
+    "start": 33.077,
+    "end": 33.553
+  },
+  {
+    "text": "como",
+    "start": 33.623,
+    "end": 33.913
+  },
+  {
+    "text": "referencia.",
+    "start": 33.994,
+    "end": 34.784
+  },
+  {
+    "text": "Dice:",
+    "start": 35.318,
+    "end": 35.852
+  },
+  {
+    "text": "“La",
+    "start": 36.247,
+    "end": 36.479
+  },
+  {
+    "text": "farmacia",
+    "start": 36.525,
+    "end": 36.978
+  },
+  {
+    "text": "está",
+    "start": 37.048,
+    "end": 37.233
+  },
+  {
+    "text": "en",
+    "start": 37.292,
+    "end": 37.326
+  },
+  {
+    "text": "la",
+    "start": 37.373,
+    "end": 37.408
+  },
+  {
+    "text": "esquina”",
+    "start": 37.431,
+    "end": 38
+  },
+  {
+    "text": "y",
+    "start": 38.453,
+    "end": 38.603
+  },
+  {
+    "text": "“la",
+    "start": 38.894,
+    "end": 39.126
+  },
+  {
+    "text": "estación",
+    "start": 39.161,
+    "end": 39.579
+  },
+  {
+    "text": "está",
+    "start": 39.706,
+    "end": 39.962
+  },
+  {
+    "text": "enfrente",
+    "start": 40.008,
+    "end": 40.391
+  },
+  {
+    "text": "de",
+    "start": 40.438,
+    "end": 40.484
+  },
+  {
+    "text": "la",
+    "start": 40.519,
+    "end": 40.566
+  },
+  {
+    "text": "farmacia”.",
+    "start": 40.612,
+    "end": 41.227
+  },
+  {
+    "text": "Así,",
+    "start": 42.052,
+    "end": 42.574
+  },
+  {
+    "text": "Amina",
+    "start": 42.748,
+    "end": 43.097
+  },
+  {
+    "text": "sabe",
+    "start": 43.143,
+    "end": 43.433
+  },
+  {
+    "text": "qué",
+    "start": 43.584,
+    "end": 43.747
+  },
+  {
+    "text": "edificio",
+    "start": 43.77,
+    "end": 44.258
+  },
+  {
+    "text": "debe",
+    "start": 44.292,
+    "end": 44.49
+  },
+  {
+    "text": "buscar.",
+    "start": 44.525,
+    "end": 45.047
+  },
+  {
+    "text": "Amina",
+    "start": 45.488,
+    "end": 45.825
+  },
+  {
+    "text": "quiere",
+    "start": 45.895,
+    "end": 46.092
+  },
+  {
+    "text": "comprobar",
+    "start": 46.15,
+    "end": 46.591
+  },
+  {
+    "text": "la",
+    "start": 46.661,
+    "end": 46.73
+  },
+  {
+    "text": "ruta",
+    "start": 46.777,
+    "end": 47.114
+  },
+  {
+    "text": "y",
+    "start": 47.241,
+    "end": 47.346
+  },
+  {
+    "text": "pregunta:",
+    "start": 47.415,
+    "end": 48.089
+  },
+  {
+    "text": "“¿Voy",
+    "start": 48.472,
+    "end": 48.82
+  },
+  {
+    "text": "bien",
+    "start": 48.832,
+    "end": 48.971
+  },
+  {
+    "text": "para",
+    "start": 49.018,
+    "end": 49.157
+  },
+  {
+    "text": "la",
+    "start": 49.192,
+    "end": 49.227
+  },
+  {
+    "text": "estación?”.",
+    "start": 49.25,
+    "end": 49.83
+  },
+  {
+    "text": "Pablo",
+    "start": 50.434,
+    "end": 50.806
+  },
+  {
+    "text": "responde:",
+    "start": 50.875,
+    "end": 51.502
+  },
+  {
+    "text": "“Vas",
+    "start": 51.885,
+    "end": 52.187
+  },
+  {
+    "text": "bien.",
+    "start": 52.257,
+    "end": 52.663
+  },
+  {
+    "text": "Sigue",
+    "start": 53.104,
+    "end": 53.406
+  },
+  {
+    "text": "todo",
+    "start": 53.476,
+    "end": 53.673
+  },
+  {
+    "text": "recto.",
+    "start": 53.742,
+    "end": 54.242
+  },
+  {
+    "text": "No",
+    "start": 54.393,
+    "end": 54.52
+  },
+  {
+    "text": "tiene",
+    "start": 54.567,
+    "end": 54.776
+  },
+  {
+    "text": "pérdida”.",
+    "start": 54.822,
+    "end": 55.391
+  },
+  {
+    "text": "Al",
+    "start": 56.215,
+    "end": 56.366
+  },
+  {
+    "text": "llegar",
+    "start": 56.39,
+    "end": 56.749
+  },
+  {
+    "text": "al",
+    "start": 56.842,
+    "end": 56.947
+  },
+  {
+    "text": "semáforo,",
+    "start": 57.005,
+    "end": 57.62
+  },
+  {
+    "text": "Pablo",
+    "start": 57.748,
+    "end": 58.085
+  },
+  {
+    "text": "le",
+    "start": 58.119,
+    "end": 58.178
+  },
+  {
+    "text": "dice:",
+    "start": 58.224,
+    "end": 58.712
+  },
+  {
+    "text": "“Un",
+    "start": 58.99,
+    "end": 59.246
+  },
+  {
+    "text": "poquito",
+    "start": 59.292,
+    "end": 59.629
+  },
+  {
+    "text": "más",
+    "start": 59.722,
+    "end": 59.849
+  },
+  {
+    "text": "adelante”.",
+    "start": 59.907,
+    "end": 60.592
+  },
+  {
+    "text": "Sin",
+    "start": 61.405,
+    "end": 61.602
+  },
+  {
+    "text": "embargo,",
+    "start": 61.649,
+    "end": 62.241
+  },
+  {
+    "text": "Amina",
+    "start": 62.392,
+    "end": 62.821
+  },
+  {
+    "text": "camina",
+    "start": 62.926,
+    "end": 63.309
+  },
+  {
+    "text": "demasiado",
+    "start": 63.344,
+    "end": 63.901
+  },
+  {
+    "text": "y",
+    "start": 64.18,
+    "end": 64.308
+  },
+  {
+    "text": "él",
+    "start": 64.4,
+    "end": 64.528
+  },
+  {
+    "text": "tiene",
+    "start": 64.598,
+    "end": 64.818
+  },
+  {
+    "text": "que",
+    "start": 64.865,
+    "end": 64.935
+  },
+  {
+    "text": "avisarle:",
+    "start": 64.981,
+    "end": 65.701
+  },
+  {
+    "text": "“Te",
+    "start": 66.072,
+    "end": 66.328
+  },
+  {
+    "text": "has",
+    "start": 66.374,
+    "end": 66.444
+  },
+  {
+    "text": "pasado”.",
+    "start": 66.502,
+    "end": 67.129
+  },
+  {
+    "text": "Para",
+    "start": 67.814,
+    "end": 68.034
+  },
+  {
+    "text": "corregir",
+    "start": 68.081,
+    "end": 68.487
+  },
+  {
+    "text": "el",
+    "start": 68.51,
+    "end": 68.557
+  },
+  {
+    "text": "camino,",
+    "start": 68.603,
+    "end": 69.195
+  },
+  {
+    "text": "Amina",
+    "start": 69.335,
+    "end": 69.718
+  },
+  {
+    "text": "vuelve",
+    "start": 69.787,
+    "end": 70.136
+  },
+  {
+    "text": "a",
+    "start": 70.182,
+    "end": 70.194
+  },
+  {
+    "text": "la",
+    "start": 70.252,
+    "end": 70.31
+  },
+  {
+    "text": "esquina",
+    "start": 70.356,
+    "end": 70.774
+  },
+  {
+    "text": "y",
+    "start": 70.983,
+    "end": 71.111
+  },
+  {
+    "text": "gira",
+    "start": 71.181,
+    "end": 71.483
+  },
+  {
+    "text": "a",
+    "start": 71.575,
+    "end": 71.633
+  },
+  {
+    "text": "la",
+    "start": 71.679,
+    "end": 71.738
+  },
+  {
+    "text": "izquierda.",
+    "start": 71.796,
+    "end": 72.481
+  },
+  {
+    "text": "Pablo",
+    "start": 73.084,
+    "end": 73.409
+  },
+  {
+    "text": "aclara:",
+    "start": 73.479,
+    "end": 74.06
+  },
+  {
+    "text": "“La",
+    "start": 74.745,
+    "end": 75.035
+  },
+  {
+    "text": "estación",
+    "start": 75.116,
+    "end": 75.638
+  },
+  {
+    "text": "está",
+    "start": 75.72,
+    "end": 75.94
+  },
+  {
+    "text": "al",
+    "start": 75.964,
+    "end": 76.022
+  },
+  {
+    "text": "final",
+    "start": 76.091,
+    "end": 76.382
+  },
+  {
+    "text": "de",
+    "start": 76.428,
+    "end": 76.486
+  },
+  {
+    "text": "la",
+    "start": 76.544,
+    "end": 76.625
+  },
+  {
+    "text": "calle.",
+    "start": 76.672,
+    "end": 77.183
+  },
+  {
+    "text": "Está",
+    "start": 77.543,
+    "end": 77.844
+  },
+  {
+    "text": "ahí",
+    "start": 77.868,
+    "end": 78.053
+  },
+  {
+    "text": "mismo”.",
+    "start": 78.1,
+    "end": 78.622
+  },
+  {
+    "text": "Amina",
+    "start": 79.702,
+    "end": 80.259
+  },
+  {
+    "text": "llega",
+    "start": 80.433,
+    "end": 80.886
+  },
+  {
+    "text": "a",
+    "start": 80.909,
+    "end": 80.933
+  },
+  {
+    "text": "tiempo",
+    "start": 81.002,
+    "end": 81.49
+  },
+  {
+    "text": "y",
+    "start": 81.803,
+    "end": 81.908
+  },
+  {
+    "text": "pregunta",
+    "start": 82.001,
+    "end": 82.488
+  },
+  {
+    "text": "también:",
+    "start": 82.535,
+    "end": 83.208
+  },
+  {
+    "text": "“¿Dónde",
+    "start": 83.626,
+    "end": 84.16
+  },
+  {
+    "text": "está",
+    "start": 84.195,
+    "end": 84.381
+  },
+  {
+    "text": "el",
+    "start": 84.427,
+    "end": 84.485
+  },
+  {
+    "text": "baño?”.",
+    "start": 84.567,
+    "end": 85.24
+  },
+  {
+    "text": "El",
+    "start": 86.32,
+    "end": 86.494
+  },
+  {
+    "text": "baño",
+    "start": 86.563,
+    "end": 86.935
+  },
+  {
+    "text": "está",
+    "start": 87.086,
+    "end": 87.365
+  },
+  {
+    "text": "detrás",
+    "start": 87.423,
+    "end": 87.759
+  },
+  {
+    "text": "de",
+    "start": 87.829,
+    "end": 87.91
+  },
+  {
+    "text": "la",
+    "start": 87.968,
+    "end": 88.015
+  },
+  {
+    "text": "oficina.",
+    "start": 88.061,
+    "end": 88.851
+  },
+  {
+    "text": "Ella",
+    "start": 89.431,
+    "end": 89.733
+  },
+  {
+    "text": "termina",
+    "start": 89.803,
+    "end": 90.255
+  },
+  {
+    "text": "con",
+    "start": 90.325,
+    "end": 90.592
+  },
+  {
+    "text": "“Muchas",
+    "start": 90.964,
+    "end": 91.521
+  },
+  {
+    "text": "gracias”,",
+    "start": 91.579,
+    "end": 92.357
+  },
+  {
+    "text": "y",
+    "start": 92.67,
+    "end": 92.752
+  },
+  {
+    "text": "Pablo",
+    "start": 92.868,
+    "end": 93.228
+  },
+  {
+    "text": "responde:",
+    "start": 93.297,
+    "end": 94.029
+  },
+  {
+    "text": "“De",
+    "start": 94.331,
+    "end": 94.609
+  },
+  {
+    "text": "nada”.",
+    "start": 94.679,
+    "end": 95.294
+  }
+]
