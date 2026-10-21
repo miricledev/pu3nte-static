@@ -416,6 +416,13 @@ import {
   argentinianSpanishB1TransportBeingLateWhatsAppStory,
 } from "./argentinianSpanishB1TransportBeingLateReinforcement";
 import {
+  argentinianSpanishB1PlansInvitationsFlashcardDeck,
+  argentinianSpanishB1PlansInvitationsQuiz,
+  argentinianSpanishB1PlansInvitationsReading,
+  argentinianSpanishB1PlansInvitationsSentenceBuilder,
+  argentinianSpanishB1PlansInvitationsWhatsAppStory,
+} from "./argentinianSpanishB1PlansInvitationsReinforcement";
+import {
   argentinianSpanishC1ReadingTheRoomSociallyFlashcardDeck,
   argentinianSpanishC1ReadingTheRoomSociallyQuiz,
   argentinianSpanishC1ReadingTheRoomSociallyReading,
@@ -550,6 +557,11 @@ sentenceBuilderLessons.push(andalusianSpanishA1AskingWhereDarijaSentenceBuilder)
 whatsappStories.push(andalusianSpanishA1AskingWhereDarijaWhatsAppStory);
 checkpointQuizzes.push(andalusianSpanishA1AskingWhereDarijaQuiz);
 readingComprehensions.push(andalusianSpanishA1AskingWhereDarijaReading);
+flashcardDecks.push(argentinianSpanishB1PlansInvitationsFlashcardDeck);
+sentenceBuilderLessons.push(argentinianSpanishB1PlansInvitationsSentenceBuilder);
+whatsappStories.push(argentinianSpanishB1PlansInvitationsWhatsAppStory);
+checkpointQuizzes.push(argentinianSpanishB1PlansInvitationsQuiz);
+readingComprehensions.push(argentinianSpanishB1PlansInvitationsReading);
 export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];
 
 export const allActivities = [
