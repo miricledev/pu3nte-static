@@ -409,6 +409,13 @@ import {
   argentinianSpanishB2FlirtyBanterReadingInterestWhatsAppStory,
 } from "./argentinianSpanishB2FlirtyBanterReadingInterestReinforcement";
 import {
+  argentinianSpanishB2PhoneCallsVoiceNotesFlashcardDeck,
+  argentinianSpanishB2PhoneCallsVoiceNotesQuiz,
+  argentinianSpanishB2PhoneCallsVoiceNotesReading,
+  argentinianSpanishB2PhoneCallsVoiceNotesSentenceBuilder,
+  argentinianSpanishB2PhoneCallsVoiceNotesWhatsAppStory,
+} from "./argentinianSpanishB2PhoneCallsVoiceNotesReinforcement";
+import {
   argentinianSpanishB1TransportBeingLateFlashcardDeck,
   argentinianSpanishB1TransportBeingLateQuiz,
   argentinianSpanishB1TransportBeingLateReading,
@@ -586,6 +593,11 @@ sentenceBuilderLessons.push(argentinianSpanishC1AdvancedSlangNuanceRegisterSente
 whatsappStories.push(argentinianSpanishC1AdvancedSlangNuanceRegisterWhatsAppStory);
 checkpointQuizzes.push(argentinianSpanishC1AdvancedSlangNuanceRegisterQuiz);
 readingComprehensions.push(argentinianSpanishC1AdvancedSlangNuanceRegisterReading);
+flashcardDecks.push(argentinianSpanishB2PhoneCallsVoiceNotesFlashcardDeck);
+sentenceBuilderLessons.push(argentinianSpanishB2PhoneCallsVoiceNotesSentenceBuilder);
+whatsappStories.push(argentinianSpanishB2PhoneCallsVoiceNotesWhatsAppStory);
+checkpointQuizzes.push(argentinianSpanishB2PhoneCallsVoiceNotesQuiz);
+readingComprehensions.push(argentinianSpanishB2PhoneCallsVoiceNotesReading);
 export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];
 
 export const allActivities = [
