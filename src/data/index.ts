@@ -416,6 +416,13 @@ import {
   argentinianSpanishB2PhoneCallsVoiceNotesWhatsAppStory,
 } from "./argentinianSpanishB2PhoneCallsVoiceNotesReinforcement";
 import {
+  argentinianSpanishB2BolichePlansLateNightTimingFlashcardDeck,
+  argentinianSpanishB2BolichePlansLateNightTimingQuiz,
+  argentinianSpanishB2BolichePlansLateNightTimingReading,
+  argentinianSpanishB2BolichePlansLateNightTimingSentenceBuilder,
+  argentinianSpanishB2BolichePlansLateNightTimingWhatsAppStory,
+} from "./argentinianSpanishB2BolichePlansLateNightTimingReinforcement";
+import {
   argentinianSpanishB1TransportBeingLateFlashcardDeck,
   argentinianSpanishB1TransportBeingLateQuiz,
   argentinianSpanishB1TransportBeingLateReading,
@@ -436,6 +443,13 @@ import {
   argentinianSpanishB1OpinionsPreferencesSentenceBuilder,
   argentinianSpanishB1OpinionsPreferencesWhatsAppStory,
 } from "./argentinianSpanishB1OpinionsPreferencesReinforcement";
+import {
+  argentinianSpanishB1SharingMateFirstTimeFlashcardDeck,
+  argentinianSpanishB1SharingMateFirstTimeQuiz,
+  argentinianSpanishB1SharingMateFirstTimeReading,
+  argentinianSpanishB1SharingMateFirstTimeSentenceBuilder,
+  argentinianSpanishB1SharingMateFirstTimeWhatsAppStory,
+} from "./argentinianSpanishB1SharingMateFirstTimeReinforcement";
 import {
   argentinianSpanishC1AdvancedSlangNuanceRegisterFlashcardDeck,
   argentinianSpanishC1AdvancedSlangNuanceRegisterQuiz,
@@ -598,6 +612,16 @@ sentenceBuilderLessons.push(argentinianSpanishB2PhoneCallsVoiceNotesSentenceBuil
 whatsappStories.push(argentinianSpanishB2PhoneCallsVoiceNotesWhatsAppStory);
 checkpointQuizzes.push(argentinianSpanishB2PhoneCallsVoiceNotesQuiz);
 readingComprehensions.push(argentinianSpanishB2PhoneCallsVoiceNotesReading);
+flashcardDecks.push(argentinianSpanishB1SharingMateFirstTimeFlashcardDeck);
+sentenceBuilderLessons.push(argentinianSpanishB1SharingMateFirstTimeSentenceBuilder);
+whatsappStories.push(argentinianSpanishB1SharingMateFirstTimeWhatsAppStory);
+checkpointQuizzes.push(argentinianSpanishB1SharingMateFirstTimeQuiz);
+readingComprehensions.push(argentinianSpanishB1SharingMateFirstTimeReading);
+flashcardDecks.push(argentinianSpanishB2BolichePlansLateNightTimingFlashcardDeck);
+sentenceBuilderLessons.push(argentinianSpanishB2BolichePlansLateNightTimingSentenceBuilder);
+whatsappStories.push(argentinianSpanishB2BolichePlansLateNightTimingWhatsAppStory);
+checkpointQuizzes.push(argentinianSpanishB2BolichePlansLateNightTimingQuiz);
+readingComprehensions.push(argentinianSpanishB2BolichePlansLateNightTimingReading);
 export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];
 
 export const allActivities = [
