@@ -458,6 +458,13 @@ import {
   argentinianSpanishC1AdvancedSlangNuanceRegisterWhatsAppStory,
 } from "./argentinianSpanishC1AdvancedSlangNuanceRegisterReinforcement";
 import {
+  argentinianSpanishC1MoneyEconomicUncertaintyFlashcardDeck,
+  argentinianSpanishC1MoneyEconomicUncertaintyQuiz,
+  argentinianSpanishC1MoneyEconomicUncertaintyReading,
+  argentinianSpanishC1MoneyEconomicUncertaintySentenceBuilder,
+  argentinianSpanishC1MoneyEconomicUncertaintyWhatsAppStory,
+} from "./argentinianSpanishC1MoneyEconomicUncertaintyReinforcement";
+import {
   argentinianSpanishC1ReadingTheRoomSociallyFlashcardDeck,
   argentinianSpanishC1ReadingTheRoomSociallyQuiz,
   argentinianSpanishC1ReadingTheRoomSociallyReading,
@@ -622,6 +629,11 @@ sentenceBuilderLessons.push(argentinianSpanishB2BolichePlansLateNightTimingSente
 whatsappStories.push(argentinianSpanishB2BolichePlansLateNightTimingWhatsAppStory);
 checkpointQuizzes.push(argentinianSpanishB2BolichePlansLateNightTimingQuiz);
 readingComprehensions.push(argentinianSpanishB2BolichePlansLateNightTimingReading);
+flashcardDecks.push(argentinianSpanishC1MoneyEconomicUncertaintyFlashcardDeck);
+sentenceBuilderLessons.push(argentinianSpanishC1MoneyEconomicUncertaintySentenceBuilder);
+whatsappStories.push(argentinianSpanishC1MoneyEconomicUncertaintyWhatsAppStory);
+checkpointQuizzes.push(argentinianSpanishC1MoneyEconomicUncertaintyQuiz);
+readingComprehensions.push(argentinianSpanishC1MoneyEconomicUncertaintyReading);
 export const grammarMasteryLessons = [...demoGrammarLessons, spanishGrammarLesson1MasculineFeminine];
 
 export const allActivities = [
