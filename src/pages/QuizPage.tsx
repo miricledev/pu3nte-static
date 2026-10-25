@@ -68,7 +68,12 @@ export function QuizPage() {
   const questionOptions = getQuestionOptions(question);
   const isTypedQuestion = question.type !== "match-pairs" && question.type !== "order-words" && !questionOptions.length;
   const shuffledOptions = useShuffledOptions(questionOptions, question.id);
+  const orderWords = question.wordBank ?? question.correctAnswer?.split(/\s+/) ?? [];
   const selectedWordTiles = typed ? typed.split(/\s+/).filter(Boolean) : [];
+  const requiresManualCheck = isTypedQuestion || question.type === "order-words";
+  const canCheckAnswer = question.type === "order-words"
+    ? selectedWordTiles.length === orderWords.length
+    : Boolean(typed.trim());
 
   function answer(value: string) {
     if (question.type === "multiple-choice" || question.type === "true-false") {
@@ -149,7 +154,7 @@ export function QuizPage() {
               </div>
             ) : question.type === "order-words" ? (
               <OrderWordsInput
-                words={question.wordBank ?? question.correctAnswer?.split(/\s+/) ?? []}
+                words={orderWords}
                 selectedWords={selectedWordTiles}
                 onChange={(words) => setTyped(words.join(" "))}
                 emptyLabel={copy.tapWordTiles}
@@ -173,8 +178,8 @@ export function QuizPage() {
                 <p className="mt-2 text-pu3nte-secondary">{question.explanation}</p>
               </div>
             )}
-            {isTypedQuestion && !selected ? (
-              <GradientButton disabled={!typed.trim()} onClick={checkTypedAnswer}>{copy.check}</GradientButton>
+            {requiresManualCheck && !selected ? (
+              <GradientButton disabled={!canCheckAnswer} onClick={checkTypedAnswer}>{copy.check}</GradientButton>
             ) : (
               <GradientButton disabled={!selected} onClick={next}>{index === quiz.data.questions.length - 1 ? copy.finishQuiz : copy.next}</GradientButton>
             )}

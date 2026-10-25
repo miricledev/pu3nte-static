@@ -155,7 +155,7 @@ export function ChatBubble({
   return (
     <div className={`flex min-w-0 max-w-full items-end gap-2 ${mine ? "justify-end" : "justify-start"}`}>
       {!mine && <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-full text-xs font-extrabold ${styles.avatar}`}>{character?.initials}</span>}
-      <div className={`min-w-0 overflow-hidden break-words rounded-2xl border px-2.5 py-3 [overflow-wrap:anywhere] sm:px-4 ${bubbleWidth} ${styles.bubble} ${mine ? "rounded-br-sm" : "rounded-bl-sm"}`}>
+      <div className={`min-w-0 overflow-visible break-words rounded-2xl border px-2.5 py-3 [overflow-wrap:anywhere] sm:px-4 ${bubbleWidth} ${styles.bubble} ${mine ? "rounded-br-sm" : "rounded-bl-sm"}`}>
         <div className="mb-1 flex min-w-0 items-center justify-between gap-2 sm:gap-3">
           <p className={`min-w-0 break-words text-xs font-extrabold ${styles.name}`}>{character?.name}</p>
           {onSpeak && !isVoiceNote && (
@@ -177,14 +177,14 @@ export function ChatBubble({
                 {isPlayingVoiceNote ? "Ⅱ" : "▶"}
               </button>
               <div className="min-w-0 flex-1">
-                <div className="flex h-11 min-w-0 max-w-full items-center gap-[2px] overflow-hidden rounded-full border border-white/10 bg-white/[0.06] px-2 sm:h-12 sm:gap-[3px] sm:px-3">
+                <div className="grid h-11 min-w-0 max-w-full grid-flow-col auto-cols-fr items-center gap-[2px] overflow-hidden rounded-full border border-white/10 bg-white/[0.06] px-2 sm:h-12 sm:gap-[3px] sm:px-3">
                   {waveformBars.map((height, index) => {
                     const isPlayed = index / waveformBars.length <= voiceNoteProgress;
                     const pulseHeight = isPlayingVoiceNote ? height + ((index % 3) - 1) * 4 : height;
                     return (
                       <span
                         key={`${message.id}-wave-${index}`}
-                        className={`min-w-0 flex-1 rounded-full transition-all duration-200 ${index >= 14 ? "hidden sm:block" : ""} ${isPlayed ? "bg-pu3nte-cyan" : "bg-white/30"}`}
+                        className={`w-full min-w-px rounded-full transition-all duration-200 ${index >= 14 ? "hidden sm:block" : ""} ${isPlayed ? "bg-pu3nte-cyan" : "bg-white/30"}`}
                         style={{ height: `${Math.max(6, pulseHeight)}px` }}
                       />
                     );
