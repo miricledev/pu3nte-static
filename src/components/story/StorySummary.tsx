@@ -25,7 +25,7 @@ export function StorySummary({
   labels?: Record<string, string>;
 }) {
   return (
-    <div className="rounded-lg border border-pu3nte-success/30 bg-pu3nte-success/10 p-4">
+    <div className="min-w-0 overflow-hidden break-words rounded-lg border border-pu3nte-success/30 bg-pu3nte-success/10 p-4 [overflow-wrap:anywhere]">
       <h3 className="font-bold">{labels?.storyComplete ?? "Story Complete"}</h3>
       <p className="mt-2 text-sm text-pu3nte-secondary">{labels?.learnedPhrases ?? "Learned phrases"}: {learnedVocab.join(", ") || (labels?.addVocabularyLater ?? "Add vocabulary later.")}</p>
       {finalReview && (
@@ -54,9 +54,9 @@ export function StorySummary({
           <p className="mt-1 text-pu3nte-secondary">{completionTask.instructions}</p>
         </div>
       )}
-      <div className="mt-4 grid gap-2">
-        <GradientButton variant="ghost" onClick={onPracticeFlashcards}>{labels?.practiceStoryFlashcards ?? "Practice flashcards from this story"}</GradientButton>
-        <GradientButton onClick={onFinish}>{labels?.finishReturnSkool ?? "Finish and return to Skool"}</GradientButton>
+      <div className="mt-4 grid min-w-0 gap-2">
+        <GradientButton className="min-w-0 whitespace-normal text-center" variant="ghost" onClick={onPracticeFlashcards}>{labels?.practiceStoryFlashcards ?? "Practice flashcards from this story"}</GradientButton>
+        <GradientButton className="min-w-0 whitespace-normal text-center" onClick={onFinish}>{labels?.finishReturnSkool ?? "Finish and return to Skool"}</GradientButton>
         {skoolReturnUrl && (
           <a className="inline-flex justify-center rounded-md border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-bold text-pu3nte-text transition hover:bg-white/[0.08]" href={skoolReturnUrl} target="_blank" rel="noreferrer">
             Volver a Skool

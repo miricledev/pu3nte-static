@@ -34,15 +34,15 @@ export function OrderWordsInput({
   }
 
   return (
-    <div className="space-y-3">
-      <div className="min-h-16 rounded-lg border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-3">
+    <div className="min-w-0 max-w-full space-y-3 overflow-hidden">
+      <div className="min-h-16 min-w-0 max-w-full overflow-hidden rounded-lg border border-pu3nte-cyan/25 bg-pu3nte-cyan/10 p-3">
         {selectedWords.length ? (
-          <div className="flex flex-wrap gap-2">
+          <div className="flex min-w-0 max-w-full flex-wrap gap-2">
             {selectedWords.map((word, index) => (
               <button
                 key={`${word}-${index}`}
                 type="button"
-                className="rounded-md border border-pu3nte-cyan/40 bg-pu3nte-cyan/15 px-3 py-2 text-sm font-bold"
+                className="max-w-full whitespace-normal break-words rounded-md border border-pu3nte-cyan/40 bg-pu3nte-cyan/15 px-3 py-2 text-sm font-bold [overflow-wrap:anywhere]"
                 onClick={() => removeAt(index)}
               >
                 {word}
@@ -53,7 +53,7 @@ export function OrderWordsInput({
           <p className="text-sm text-pu3nte-secondary">{emptyLabel}</p>
         )}
       </div>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex min-w-0 max-w-full flex-wrap gap-2 overflow-hidden">
         {shuffledWords.map((word, index) => {
           const used = (usedCounts[word] ?? 0) >= (wordCounts[word] ?? 0);
           return (
@@ -61,7 +61,7 @@ export function OrderWordsInput({
               key={`${word}-${index}`}
               type="button"
               disabled={used}
-              className="rounded-md border border-white/10 bg-white/[0.05] px-3 py-2 text-sm font-bold disabled:cursor-not-allowed disabled:opacity-35"
+              className="max-w-full whitespace-normal break-words rounded-md border border-white/10 bg-white/[0.05] px-3 py-2 text-sm font-bold [overflow-wrap:anywhere] disabled:cursor-not-allowed disabled:opacity-35"
               onClick={() => addWord(word)}
             >
               {word}

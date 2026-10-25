@@ -186,11 +186,11 @@ export function StoryPage() {
   const isEnglishForSpanishSpeakers = story.languageTarget === "english" && story.learnerNativeLanguage === "spanish";
   const isSpanishForDarijaSpeakers = story.languageTarget === "spanish" && story.learnerNativeLanguage === "darija";
   const activeCheckCard = activeCheck ? (
-    <div className="rounded-lg border border-pu3nte-cyan/30 bg-pu3nte-cyan/10 p-4">
+    <div className="min-w-0 overflow-hidden break-words rounded-lg border border-pu3nte-cyan/30 bg-pu3nte-cyan/10 p-3 [overflow-wrap:anywhere] sm:p-4">
       <p className="text-xs font-bold uppercase tracking-[0.18em] text-pu3nte-cyan">{copy.comprehensionCheck}</p>
-      <h3 className="mt-2 font-bold">{activeCheck.question.prompt}</h3>
+      <h3 className="mt-2 max-w-full break-words font-bold [overflow-wrap:anywhere]">{activeCheck.question.prompt}</h3>
       {activeCheck.question.type === "multiple-choice" || activeCheck.question.type === "true-false" ? (
-        <div className="mt-3 grid gap-2 sm:grid-cols-3">
+        <div className="mt-3 grid min-w-0 max-w-full gap-2 sm:grid-cols-3">
           {(shuffledCheckOptions[activeCheck.id] ?? getQuestionOptions(activeCheck.question)).map((option) => {
             const selected = selectedCheckOption === option;
             const correct = isQuestionOptionCorrect(activeCheck.question, option);
@@ -198,7 +198,7 @@ export function StoryPage() {
               <button
                 key={option}
                 type="button"
-                className={`rounded-md border px-3 py-2 text-sm font-bold transition ${
+                className={`min-w-0 w-full max-w-full whitespace-normal break-words rounded-md border px-3 py-2 text-sm font-bold transition [overflow-wrap:anywhere] ${
                   selected
                     ? correct
                       ? "border-pu3nte-success bg-pu3nte-success/15"
@@ -213,7 +213,7 @@ export function StoryPage() {
           })}
         </div>
       ) : (
-        <div className="mt-3">
+        <div className="mt-3 min-w-0 max-w-full overflow-hidden">
           <OrderWordsInput
             words={getQuestionWordBank(activeCheck.question)}
             selectedWords={selectedCheckOption ? selectedCheckOption.split(/\s+/) : []}
@@ -225,7 +225,7 @@ export function StoryPage() {
           />
         </div>
       )}
-      {checkFeedback && <p className="mt-3 text-sm text-pu3nte-secondary" aria-live="polite">{checkFeedback}</p>}
+      {checkFeedback && <p className="mt-3 max-w-full break-words text-sm text-pu3nte-secondary [overflow-wrap:anywhere]" aria-live="polite">{checkFeedback}</p>}
       <GradientButton
         className="mt-3 w-full"
         disabled={!selectedCheckOption?.trim()}
@@ -237,13 +237,13 @@ export function StoryPage() {
   ) : null;
 
   return (
-    <PageContainer>
+    <PageContainer className="min-w-0 overflow-x-hidden">
       <ActivityHeader {...story} />
       <div className="mb-5">
         <InstructionPanel title={copy.instructions} body={copy.storyGuide} />
       </div>
       {preparationDeck && (
-        <div className="mb-5 rounded-lg border border-pu3nte-gold/30 bg-pu3nte-gold/10 p-5">
+        <div className="mb-5 min-w-0 overflow-hidden break-words rounded-lg border border-pu3nte-gold/30 bg-pu3nte-gold/10 p-4 [overflow-wrap:anywhere] sm:p-5">
           <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-gold">
             {isEnglishForSpanishSpeakers
               ? "Historias por Chat en Inglés — A1 a C2"
@@ -270,13 +270,14 @@ export function StoryPage() {
           </GradientButton>
         </div>
       )}
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_360px]">
+      <div className="grid min-w-0 gap-6 xl:grid-cols-[minmax(0,1fr)_360px]">
+        <div className="min-w-0 max-w-full">
         <PhoneFrame>
-          <div className="flex h-full flex-col">
+          <div className="flex h-full min-w-0 flex-col">
             <div className="mb-4"><StoryProgress visible={visible} total={story.data.messages.length} label={copy.messages} /></div>
-            <div ref={scrollRef} className="min-h-0 flex-1 space-y-3 overflow-y-auto pr-2">
+            <div ref={scrollRef} className="min-h-0 min-w-0 flex-1 space-y-3 overflow-x-hidden overflow-y-auto pr-0 sm:pr-2">
               {messages.map((message) => (
-                <div key={message.id} className="space-y-3">
+                <div key={message.id} className="min-w-0 max-w-full space-y-3">
                   <ChatBubble
                     message={message}
                     character={story.data.characters.find((character) => character.id === message.speakerId)}
@@ -308,7 +309,8 @@ export function StoryPage() {
             )}
           </div>
         </PhoneFrame>
-        <div className="glass-panel h-fit rounded-lg p-5">
+        </div>
+        <div className="glass-panel min-w-0 h-fit overflow-hidden rounded-lg p-4 sm:p-5">
           <h2 className="font-bold">{copy.storyControls}</h2>
           <label className="mt-4 flex items-center gap-2 text-sm text-pu3nte-secondary"><input type="checkbox" checked={translations} onChange={(event) => setTranslations(event.target.checked)} /> {copy.showTranslations}</label>
           <label className="mt-3 flex items-center gap-2 text-sm text-pu3nte-secondary"><input type="checkbox" checked={autoPlay} onChange={(event) => setAutoPlay(event.target.checked)} /> {copy.autoplay}</label>
@@ -319,7 +321,7 @@ export function StoryPage() {
       </div>
       {storyComplete && summaryOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-pu3nte-bg/85 p-3 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="story-summary-title">
-          <div className="max-h-[88dvh] w-full max-w-3xl overflow-y-auto rounded-2xl border border-white/10 bg-pu3nte-card p-4 shadow-2xl sm:p-6">
+          <div className="max-h-[88dvh] min-w-0 w-full max-w-3xl overflow-x-hidden overflow-y-auto rounded-2xl border border-white/10 bg-pu3nte-card p-4 shadow-2xl sm:p-6">
             <div className="mb-4 flex items-center justify-between gap-4">
               <div>
                 <p className="text-xs font-black uppercase tracking-[0.18em] text-pu3nte-success">100% complete</p>

@@ -56,7 +56,7 @@ export function HighlightedPhrase({ text, highlights, quoteHighlights = false, c
           <button
             key={`${highlight.phrase}-${matchIndex}-${cursor}`}
             type="button"
-            className={`relative font-bold text-pu3nte-cyan underline decoration-pu3nte-cyan/40 ${quoteHighlights ? "rounded-md bg-pu3nte-cyan/5 px-0.5" : ""}`}
+            className={`relative max-w-full whitespace-normal break-words text-left align-baseline font-bold text-pu3nte-cyan underline decoration-pu3nte-cyan/40 [overflow-wrap:anywhere] ${quoteHighlights ? "rounded-md bg-pu3nte-cyan/5 px-0.5" : ""}`}
             onClick={() => setOpen(open === highlight.phrase ? null : highlight.phrase)}
           >
             {renderHighlightedText(matchedText, shouldQuote)}
