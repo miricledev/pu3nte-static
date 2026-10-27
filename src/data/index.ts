@@ -569,6 +569,13 @@ import {
   andalusianSpanishB1BeachDayCostaDelSolSentenceBuilder,
   andalusianSpanishB1BeachDayCostaDelSolWhatsAppStory,
 } from "./andalusianSpanishB1BeachDayCostaDelSolReinforcement";
+import {
+  andalusianSpanishB1BuyingChurrosCoffeeFlashcardDeck,
+  andalusianSpanishB1BuyingChurrosCoffeeQuiz,
+  andalusianSpanishB1BuyingChurrosCoffeeReading,
+  andalusianSpanishB1BuyingChurrosCoffeeSentenceBuilder,
+  andalusianSpanishB1BuyingChurrosCoffeeWhatsAppStory,
+} from "./andalusianSpanishB1BuyingChurrosCoffeeReinforcement";
 import type { ActivityType } from "../types";
 
 export const flashcardDecks = [
@@ -675,6 +682,11 @@ sentenceBuilderLessons.push(andalusianSpanishB1BeachDayCostaDelSolSentenceBuilde
 whatsappStories.push(andalusianSpanishB1BeachDayCostaDelSolWhatsAppStory);
 checkpointQuizzes.push(andalusianSpanishB1BeachDayCostaDelSolQuiz);
 readingComprehensions.push(andalusianSpanishB1BeachDayCostaDelSolReading);
+flashcardDecks.push(andalusianSpanishB1BuyingChurrosCoffeeFlashcardDeck);
+sentenceBuilderLessons.push(andalusianSpanishB1BuyingChurrosCoffeeSentenceBuilder);
+whatsappStories.push(andalusianSpanishB1BuyingChurrosCoffeeWhatsAppStory);
+checkpointQuizzes.push(andalusianSpanishB1BuyingChurrosCoffeeQuiz);
+readingComprehensions.push(andalusianSpanishB1BuyingChurrosCoffeeReading);
 flashcardDecks.push(argentinianSpanishB1PlansInvitationsFlashcardDeck);
 sentenceBuilderLessons.push(argentinianSpanishB1PlansInvitationsSentenceBuilder);
 whatsappStories.push(argentinianSpanishB1PlansInvitationsWhatsAppStory);
