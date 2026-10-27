@@ -562,6 +562,13 @@ import {
   andalusianSpanishB1SemanaSantaStreetBasicsSentenceBuilder,
   andalusianSpanishB1SemanaSantaStreetBasicsWhatsAppStory,
 } from "./andalusianSpanishB1SemanaSantaStreetBasicsReinforcement";
+import {
+  andalusianSpanishB1BeachDayCostaDelSolFlashcardDeck,
+  andalusianSpanishB1BeachDayCostaDelSolQuiz,
+  andalusianSpanishB1BeachDayCostaDelSolReading,
+  andalusianSpanishB1BeachDayCostaDelSolSentenceBuilder,
+  andalusianSpanishB1BeachDayCostaDelSolWhatsAppStory,
+} from "./andalusianSpanishB1BeachDayCostaDelSolReinforcement";
 import type { ActivityType } from "../types";
 
 export const flashcardDecks = [
@@ -663,6 +670,11 @@ sentenceBuilderLessons.push(andalusianSpanishB1SemanaSantaStreetBasicsSentenceBu
 whatsappStories.push(andalusianSpanishB1SemanaSantaStreetBasicsWhatsAppStory);
 checkpointQuizzes.push(andalusianSpanishB1SemanaSantaStreetBasicsQuiz);
 readingComprehensions.push(andalusianSpanishB1SemanaSantaStreetBasicsReading);
+flashcardDecks.push(andalusianSpanishB1BeachDayCostaDelSolFlashcardDeck);
+sentenceBuilderLessons.push(andalusianSpanishB1BeachDayCostaDelSolSentenceBuilder);
+whatsappStories.push(andalusianSpanishB1BeachDayCostaDelSolWhatsAppStory);
+checkpointQuizzes.push(andalusianSpanishB1BeachDayCostaDelSolQuiz);
+readingComprehensions.push(andalusianSpanishB1BeachDayCostaDelSolReading);
 flashcardDecks.push(argentinianSpanishB1PlansInvitationsFlashcardDeck);
 sentenceBuilderLessons.push(argentinianSpanishB1PlansInvitationsSentenceBuilder);
 whatsappStories.push(argentinianSpanishB1PlansInvitationsWhatsAppStory);
