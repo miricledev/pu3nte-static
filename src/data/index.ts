@@ -548,6 +548,20 @@ import {
   andalusianSpanishB1OrderingTapasSevilleSentenceBuilder,
   andalusianSpanishB1OrderingTapasSevilleWhatsAppStory,
 } from "./andalusianSpanishB1OrderingTapasSevilleReinforcement";
+import {
+  andalusianSpanishB1MakingPlansFeriaFlashcardDeck,
+  andalusianSpanishB1MakingPlansFeriaQuiz,
+  andalusianSpanishB1MakingPlansFeriaReading,
+  andalusianSpanishB1MakingPlansFeriaSentenceBuilder,
+  andalusianSpanishB1MakingPlansFeriaWhatsAppStory,
+} from "./andalusianSpanishB1MakingPlansFeriaReinforcement";
+import {
+  andalusianSpanishB1SemanaSantaStreetBasicsFlashcardDeck,
+  andalusianSpanishB1SemanaSantaStreetBasicsQuiz,
+  andalusianSpanishB1SemanaSantaStreetBasicsReading,
+  andalusianSpanishB1SemanaSantaStreetBasicsSentenceBuilder,
+  andalusianSpanishB1SemanaSantaStreetBasicsWhatsAppStory,
+} from "./andalusianSpanishB1SemanaSantaStreetBasicsReinforcement";
 import type { ActivityType } from "../types";
 
 export const flashcardDecks = [
@@ -639,6 +653,16 @@ sentenceBuilderLessons.push(andalusianSpanishB1OrderingTapasSevilleSentenceBuild
 whatsappStories.push(andalusianSpanishB1OrderingTapasSevilleWhatsAppStory);
 checkpointQuizzes.push(andalusianSpanishB1OrderingTapasSevilleQuiz);
 readingComprehensions.push(andalusianSpanishB1OrderingTapasSevilleReading);
+flashcardDecks.push(andalusianSpanishB1MakingPlansFeriaFlashcardDeck);
+sentenceBuilderLessons.push(andalusianSpanishB1MakingPlansFeriaSentenceBuilder);
+whatsappStories.push(andalusianSpanishB1MakingPlansFeriaWhatsAppStory);
+checkpointQuizzes.push(andalusianSpanishB1MakingPlansFeriaQuiz);
+readingComprehensions.push(andalusianSpanishB1MakingPlansFeriaReading);
+flashcardDecks.push(andalusianSpanishB1SemanaSantaStreetBasicsFlashcardDeck);
+sentenceBuilderLessons.push(andalusianSpanishB1SemanaSantaStreetBasicsSentenceBuilder);
+whatsappStories.push(andalusianSpanishB1SemanaSantaStreetBasicsWhatsAppStory);
+checkpointQuizzes.push(andalusianSpanishB1SemanaSantaStreetBasicsQuiz);
+readingComprehensions.push(andalusianSpanishB1SemanaSantaStreetBasicsReading);
 flashcardDecks.push(argentinianSpanishB1PlansInvitationsFlashcardDeck);
 sentenceBuilderLessons.push(argentinianSpanishB1PlansInvitationsSentenceBuilder);
 whatsappStories.push(argentinianSpanishB1PlansInvitationsWhatsAppStory);
