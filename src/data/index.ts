@@ -541,6 +541,13 @@ import {
   andalusianSpanishA1AskingWhereDarijaSentenceBuilder,
   andalusianSpanishA1AskingWhereDarijaWhatsAppStory,
 } from "./andalusianSpanishA1AskingWhereDarijaReinforcement";
+import {
+  andalusianSpanishB1OrderingTapasSevilleFlashcardDeck,
+  andalusianSpanishB1OrderingTapasSevilleQuiz,
+  andalusianSpanishB1OrderingTapasSevilleReading,
+  andalusianSpanishB1OrderingTapasSevilleSentenceBuilder,
+  andalusianSpanishB1OrderingTapasSevilleWhatsAppStory,
+} from "./andalusianSpanishB1OrderingTapasSevilleReinforcement";
 import type { ActivityType } from "../types";
 
 export const flashcardDecks = [
@@ -627,6 +634,11 @@ sentenceBuilderLessons.push(andalusianSpanishA1AskingWhereDarijaSentenceBuilder)
 whatsappStories.push(andalusianSpanishA1AskingWhereDarijaWhatsAppStory);
 checkpointQuizzes.push(andalusianSpanishA1AskingWhereDarijaQuiz);
 readingComprehensions.push(andalusianSpanishA1AskingWhereDarijaReading);
+flashcardDecks.push(andalusianSpanishB1OrderingTapasSevilleFlashcardDeck);
+sentenceBuilderLessons.push(andalusianSpanishB1OrderingTapasSevilleSentenceBuilder);
+whatsappStories.push(andalusianSpanishB1OrderingTapasSevilleWhatsAppStory);
+checkpointQuizzes.push(andalusianSpanishB1OrderingTapasSevilleQuiz);
+readingComprehensions.push(andalusianSpanishB1OrderingTapasSevilleReading);
 flashcardDecks.push(argentinianSpanishB1PlansInvitationsFlashcardDeck);
 sentenceBuilderLessons.push(argentinianSpanishB1PlansInvitationsSentenceBuilder);
 whatsappStories.push(argentinianSpanishB1PlansInvitationsWhatsAppStory);
